@@ -1,72 +1,64 @@
-当前源码模块依赖核查（2026-11-13）
+Source import audit (recorded 2026-11-13)
 
-结论：本项目确实使用了现有 goldbach-lean 仓库里的公共数学基础。
-该仓库也实现了 Chen 1+2 与 Li–Liu 1+1.9，但本项目的导入闭包没有
-Goldbach.OnePlusOneNine、Goldbach.Theorem 或任何 Goldbach.* 模块，
-也没有导入独立的 liu-wang-ternary-goldbach-lean 三素数项目。
-“使用既有 1+1.9 仓库中的基础代码”与“调用 1+1.9 定理”需要区分。
+Chinese version: dependencies-imports.zh.txt
 
-正式入口：formalization/LiLiuGoldbach.lean。
-递归读取当前源码 import（去除嵌套注释、限定为真正的文件头），
-共解析 11,731 个模块，未解析模块为 0。与另一个审计从已编译 Lean
-环境导出的 env.header.moduleNames 比较，模块集合完全一致。
-源码哈希、导入行号、完整边和模块清单在 dependencies-imports.json。
+Entry point: formalization/ConditionalGoldbach.lean.
 
-一、Lake 包与来源
+The source import traversal resolved 11,731 modules. Its module set exactly
+matched the independent list exported from Lean's compiled environment.
+Source hashes, import locations, edges, and the complete module list are in
+dependencies-imports.json.
 
-直接外部 Lake 包是 goldbach，发布配置已固定 Git 提交：
+1. Packages and provenance
+
+The external mathematical Lake package is goldbach, pinned to:
 https://github.com/subfish-zhou/goldbach-lean.git
-24490c2ab7787238f816d771c9176411dcbda503。
-此次检查读取该提交的干净本地工作区 /home/azureuser/goldbach-lean。
+24490c2ab7787238f816d771c9176411dcbda503
 
-goldbach 内含三个本项目实际加载的数学源码层：
-- MathlibNt：10 模块，4,565 物理行，3,764 去空行及注释行。
-- AnalyticNumberTheory：33 模块，7,252 物理行，4,819 去空行及注释行。
-- PrimeNumberTheoremAnd：14 模块，10,467 物理行，8,101 去空行及注释行。
-合计 57 模块、22,284 物理行、16,684 去空行及注释行。
-这是被加载的源文件量，不是主定理实际调用全部声明的证明量。
+The audit used a clean local checkout of that revision. Its imported
+mathematical directories contain:
 
-来源记录 /home/azureuser/goldbach-lean/docs/PROVENANCE.md:76–83 说明：
-Chen/共享基础源自 UyNewNas/chen-theorem-lean 及后续开发；通用解析
-数论源自 UyNewNas/analytic-number-theory-lean 及后续开发。
-同文件:90–103 说明 PrimeNumberTheoremAnd 是已适配并打包的
-AlexKontorovich/PrimeNumberTheoremAnd 最小闭包；上游 v4.32.2，
-commit 6a380f0c4658c04a420a9eb00b1ed62a1e3fde01。
-这些是仓库内的已打包数学来源，不是新增的独立 Lake require。
+Directory                 Modules  Physical lines  Excluding blanks/comments
+MathlibNt                      10           4,565                     3,764
+AnalyticNumberTheory            33           7,252                     4,819
+PrimeNumberTheoremAnd           14          10,467                     8,101
+Total                          57          22,284                    16,684
 
-LeanArchitect 是单独的工具包；实际加载 Architect 等 9 个模块。
-它由 PrimeNumberTheoremAnd/{MellinCalculus,Rectangle,SmoothExistence,
-ZetaConj}.lean 的第 3 行进入，用于形式化工具支持。
-另有 Mathlib 及其常规支持包 batteries、aesop、Qq、proofwidgets、
-importGraph、LeanSearchClient、plausible。Cli 在 Lake manifest 内，
-但本入口的 Lean 模块集合没有加载 Cli 源码。Lean/Lake 核心属于工具链。
+The package's docs/PROVENANCE.md records shared foundations from
+UyNewNas/chen-theorem-lean and UyNewNas/analytic-number-theory-lean, with
+subsequent development. The adapted PrimeNumberTheoremAnd closure comes
+from AlexKontorovich/PrimeNumberTheoremAnd, upstream v4.32.2, revision
+6a380f0c4658c04a420a9eb00b1ed62a1e3fde01.
 
-二、四个直接的非 Mathlib 数学模块导入
+Nine LeanArchitect tooling modules enter through the PNT sources. Other
+support packages include Mathlib, batteries, aesop, Qq, proofwidgets,
+importGraph, LeanSearchClient, and plausible. Lean/Lake belong to the toolchain.
 
-1. formalization/LiLiuGoldbach/BaseDefinitions.lean:2
-   MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries
-2. formalization/LiLiuGoldbach/Proofs/TotientLogLog.lean:2
-   MathlibNt.SieveTheory.Arithmetic.MertensTheorem
-3. formalization/LiLiuGoldbach/Proofs/CharacterGrowthFoundation.lean:2
-   MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries
-4. formalization/LiLiuGoldbach/Proofs/CharacterGrowthFoundation.lean:3
-   MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds
+2. Four direct mathematical imports beyond Mathlib
 
-其 goldbach 包内传递闭包分别含 3、52、12、1 个模块，彼此有重叠；
-合并去重后是 57 个。MertensTheorem.lean:9 导入 AnalyticNumberTheory
-总模块，所以会连带加载大筛、分布等基础模块。完整清单见 JSON。
+formalization/ConditionalGoldbach/BaseDefinitions.lean:2
+  MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries
+formalization/ConditionalGoldbach/Proofs/TotientLogLog.lean:2
+  MathlibNt.SieveTheory.Arithmetic.MertensTheorem
+formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean:2
+  MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries
+formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean:3
+  MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds
 
-三、真正借用的数学结果
+Their overlapping goldbach-package closures have 3, 52, 12, and 1 modules
+respectively, with 57 distinct modules in total. MertensTheorem imports the
+AnalyticNumberTheory umbrella module, bringing additional foundations into
+the compiled environment.
 
-源码可见：BaseDefinitions.lean:31、34 使用奇异级数和通用乘积定义；
-TotientLogLog.lean:102 使用 Mertens primeProduct_lower_bound；
-CharacterGrowthFoundation.lean:14–19 使用 Dirichlet L 级数逼近与
-LFunction 识别，:45 使用 tsum_nat_rpow_neg_le。
-声明级审计另行核查了实际证明引用：Mertens 路径还会用到移植的
-MediumPNT 素数定理，而主 theorem_1_1 / theorem_1_2 的声明闭包更小。
-应以 declaration-audit 的逐声明记录区分“加载”与“实际证明依赖”。
+3. Actual proof references
 
-未加载的现有结论包括 Goldbach.OnePlusOneNine 及其下层
-MathlibNt.SieveTheory.LiLiuGoldbachOneNineUnconditional。这里不能把
-名字中带 BombieriVinogradov 的分布工具误认为“三素数定理”。
-此次模块检查和声明检查均没有出现独立三素数项目。
+BaseDefinitions uses the singular series and universal Euler product.
+TotientLogLog uses Mertens primeProduct_lower_bound for N/phi(N).
+CharacterGrowthFoundation uses ordered L-series approximation and equality
+with LFunction, plus the elementary tsum_nat_rpow_neg_le bound.
+
+The declaration audit follows proof terms separately from imported modules.
+The three main results reach five external mathematical modules; the full
+102 reviewed statements reach 22. The reviewed statement lemma_4_3_uniform
+reaches the Mertens/MediumPNT chain. See declaration-audit/report.md and its
+machine-readable reference paths for the detailed closure.

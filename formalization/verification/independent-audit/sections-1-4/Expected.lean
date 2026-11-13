@@ -1,16 +1,16 @@
-import LiLiuGoldbach
+import ConditionalGoldbach
 
 /-!
 Independent TeX audit, sections 1--4.  This file was reconstructed from the
 TeX formulas and their quantifier scopes, not from reference/Reviewed.lean.
 The `expect_*` declarations are propositions, not assumed theorems.
-Names from LiLiuGoldbach16 not rebuilt below are audited in coverage.json;
+Names from ConditionalGoldbach not rebuilt below are audited in coverage.json;
 using their names does not by itself certify their intended mathematical meaning.
 -/
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex LiLiuGoldbach16
+open MeasureTheory Filter Set Complex ConditionalGoldbach
 namespace TexAudit14
 attribute [local instance] Classical.propDecidable conductorNeZero
 

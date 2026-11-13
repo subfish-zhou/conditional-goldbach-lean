@@ -29,7 +29,7 @@
   "statements": [
     {
       "expected": "TexAudit14.expect_singularSeries_eq_existing",
-      "actual": "LiLiuGoldbach16.singularSeries_eq_existing",
+      "actual": "ConditionalGoldbach.singularSeries_eq_existing",
       "tex_lines": [
         1055,
         1059
@@ -40,7 +40,7 @@
     },
     {
       "expected": "TexAudit14.expect_theorem_1_1",
-      "actual": "LiLiuGoldbach16.theorem_1_1",
+      "actual": "ConditionalGoldbach.theorem_1_1",
       "tex_lines": [
         289,
         298
@@ -51,7 +51,7 @@
     },
     {
       "expected": "TexAudit14.expect_theorem_1_1_weight_exists",
-      "actual": "LiLiuGoldbach16.theorem_1_1_weight_exists",
+      "actual": "ConditionalGoldbach.theorem_1_1_weight_exists",
       "tex_lines": [
         151,
         154
@@ -62,7 +62,7 @@
     },
     {
       "expected": "TexAudit14.expect_theorem_1_2",
-      "actual": "LiLiuGoldbach16.theorem_1_2",
+      "actual": "ConditionalGoldbach.theorem_1_2",
       "tex_lines": [
         315,
         323
@@ -73,7 +73,7 @@
     },
     {
       "expected": "TexAudit14.expect_theorem_1_2_hypothesisR_implies_S",
-      "actual": "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S",
+      "actual": "ConditionalGoldbach.theorem_1_2_hypothesisR_implies_S",
       "tex_lines": [
         306,
         313
@@ -84,7 +84,7 @@
     },
     {
       "expected": "TexAudit14.expect_primePair_consequence",
-      "actual": "LiLiuGoldbach16.primePair_consequence",
+      "actual": "ConditionalGoldbach.primePair_consequence",
       "tex_lines": [
         325,
         328
@@ -95,7 +95,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_1",
-      "actual": "LiLiuGoldbach16.lemma_3_1",
+      "actual": "ConditionalGoldbach.lemma_3_1",
       "tex_lines": [
         1090,
         1100
@@ -106,7 +106,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_1_odd_orthogonality",
-      "actual": "LiLiuGoldbach16.lemma_3_1_odd_orthogonality",
+      "actual": "ConditionalGoldbach.lemma_3_1_odd_orthogonality",
       "tex_lines": [
         1102,
         1117
@@ -117,7 +117,7 @@
     },
     {
       "expected": "TexAudit14.expect_proposition_3_2",
-      "actual": "LiLiuGoldbach16.proposition_3_2",
+      "actual": "ConditionalGoldbach.proposition_3_2",
       "tex_lines": [
         1180,
         1200
@@ -128,7 +128,7 @@
     },
     {
       "expected": "TexAudit14.expect_proposition_3_2_finite_rank",
-      "actual": "LiLiuGoldbach16.proposition_3_2_finite_rank",
+      "actual": "ConditionalGoldbach.proposition_3_2_finite_rank",
       "tex_lines": [
         1198,
         1199
@@ -139,7 +139,7 @@
     },
     {
       "expected": "TexAudit14.expect_proposition_3_2_joint_meromorphic",
-      "actual": "LiLiuGoldbach16.proposition_3_2_joint_meromorphic",
+      "actual": "ConditionalGoldbach.proposition_3_2_joint_meromorphic",
       "tex_lines": [
         1190,
         1193
@@ -150,7 +150,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_3",
-      "actual": "LiLiuGoldbach16.lemma_3_3",
+      "actual": "ConditionalGoldbach.lemma_3_3",
       "tex_lines": [
         1247,
         1260
@@ -161,7 +161,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_4",
-      "actual": "LiLiuGoldbach16.lemma_3_4",
+      "actual": "ConditionalGoldbach.lemma_3_4",
       "tex_lines": [
         1274,
         1290
@@ -172,7 +172,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_4_normal_convergence",
-      "actual": "LiLiuGoldbach16.lemma_3_4_normal_convergence",
+      "actual": "ConditionalGoldbach.lemma_3_4_normal_convergence",
       "tex_lines": [
         1274,
         1276
@@ -183,7 +183,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_4_paired_zero_sum",
-      "actual": "LiLiuGoldbach16.lemma_3_4_paired_zero_sum",
+      "actual": "ConditionalGoldbach.lemma_3_4_paired_zero_sum",
       "tex_lines": [
         1262,
         1283
@@ -194,7 +194,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_5",
-      "actual": "LiLiuGoldbach16.lemma_3_5",
+      "actual": "ConditionalGoldbach.lemma_3_5",
       "tex_lines": [
         1365,
         1380
@@ -205,7 +205,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_5_absolute_convergence",
-      "actual": "LiLiuGoldbach16.lemma_3_5_absolute_convergence",
+      "actual": "ConditionalGoldbach.lemma_3_5_absolute_convergence",
       "tex_lines": [
         1365,
         1402
@@ -216,7 +216,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_5_small_sigma",
-      "actual": "LiLiuGoldbach16.lemma_3_5_small_sigma",
+      "actual": "ConditionalGoldbach.lemma_3_5_small_sigma",
       "tex_lines": [
         1365,
         1376
@@ -227,7 +227,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_3_5_weight_support",
-      "actual": "LiLiuGoldbach16.lemma_3_5_weight_support",
+      "actual": "ConditionalGoldbach.lemma_3_5_weight_support",
       "tex_lines": [
         1377,
         1409
@@ -238,7 +238,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_1",
-      "actual": "LiLiuGoldbach16.lemma_4_1",
+      "actual": "ConditionalGoldbach.lemma_4_1",
       "tex_lines": [
         1480,
         1497
@@ -249,7 +249,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_1_absolute_convergence",
-      "actual": "LiLiuGoldbach16.lemma_4_1_absolute_convergence",
+      "actual": "ConditionalGoldbach.lemma_4_1_absolute_convergence",
       "tex_lines": [
         1480,
         1492
@@ -260,7 +260,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_1_signed_model",
-      "actual": "LiLiuGoldbach16.lemma_4_1_signed_model",
+      "actual": "ConditionalGoldbach.lemma_4_1_signed_model",
       "tex_lines": [
         1493,
         1497
@@ -271,7 +271,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_1_local_density",
-      "actual": "LiLiuGoldbach16.lemma_4_1_local_density",
+      "actual": "ConditionalGoldbach.lemma_4_1_local_density",
       "tex_lines": [
         1499,
         1513
@@ -282,7 +282,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_2",
-      "actual": "LiLiuGoldbach16.lemma_4_2",
+      "actual": "ConditionalGoldbach.lemma_4_2",
       "tex_lines": [
         1538,
         1551
@@ -293,7 +293,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_2_meromorphic",
-      "actual": "LiLiuGoldbach16.lemma_4_2_meromorphic",
+      "actual": "ConditionalGoldbach.lemma_4_2_meromorphic",
       "tex_lines": [
         1545,
         1551
@@ -304,7 +304,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_3",
-      "actual": "LiLiuGoldbach16.lemma_4_3",
+      "actual": "ConditionalGoldbach.lemma_4_3",
       "tex_lines": [
         1611,
         1630
@@ -315,7 +315,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_3_uniform",
-      "actual": "LiLiuGoldbach16.lemma_4_3_uniform",
+      "actual": "ConditionalGoldbach.lemma_4_3_uniform",
       "tex_lines": [
         1619,
         1628
@@ -326,7 +326,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_3_density_convergence",
-      "actual": "LiLiuGoldbach16.lemma_4_3_density_convergence",
+      "actual": "ConditionalGoldbach.lemma_4_3_density_convergence",
       "tex_lines": [
         1580,
         1618
@@ -337,7 +337,7 @@
     },
     {
       "expected": "TexAudit14.expect_lemma_4_3_euler_product_convergence",
-      "actual": "LiLiuGoldbach16.lemma_4_3_euler_product_convergence",
+      "actual": "ConditionalGoldbach.lemma_4_3_euler_product_convergence",
       "tex_lines": [
         1642,
         1648
@@ -348,7 +348,7 @@
     },
     {
       "expected": "TexAudit14.expect_proposition_4_4",
-      "actual": "LiLiuGoldbach16.proposition_4_4",
+      "actual": "ConditionalGoldbach.proposition_4_4",
       "tex_lines": [
         1704,
         1710
@@ -359,7 +359,7 @@
     },
     {
       "expected": "TexAudit14.expect_proposition_4_5",
-      "actual": "LiLiuGoldbach16.proposition_4_5",
+      "actual": "ConditionalGoldbach.proposition_4_5",
       "tex_lines": [
         1760,
         1768
@@ -370,7 +370,7 @@
     },
     {
       "expected": "TexAudit57.Expected_5_1",
-      "actual": "LiLiuGoldbach16.proposition_5_1",
+      "actual": "ConditionalGoldbach.proposition_5_1",
       "label": "Proposition 5.1",
       "tex_lines": [
         [
@@ -391,7 +391,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_5_1_fueter_equation",
-      "actual": "LiLiuGoldbach16.proposition_5_1_fueter_equation",
+      "actual": "ConditionalGoldbach.proposition_5_1_fueter_equation",
       "label": "Proposition 5.1 / proposition_5_1_fueter_equation",
       "tex_lines": [
         [
@@ -412,7 +412,7 @@
     },
     {
       "expected": "TexAudit57.Expected_5_2",
-      "actual": "LiLiuGoldbach16.lemma_5_2",
+      "actual": "ConditionalGoldbach.lemma_5_2",
       "label": "Lemma 5.2",
       "tex_lines": [
         [
@@ -425,7 +425,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_5_2_closed_trace_space",
-      "actual": "LiLiuGoldbach16.lemma_5_2_closed_trace_space",
+      "actual": "ConditionalGoldbach.lemma_5_2_closed_trace_space",
       "label": "Lemma 5.2 / lemma_5_2_closed_trace_space",
       "tex_lines": [
         [
@@ -438,7 +438,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_5_2_representation_spec",
-      "actual": "LiLiuGoldbach16.lemma_5_2_representation_spec",
+      "actual": "ConditionalGoldbach.lemma_5_2_representation_spec",
       "label": "Lemma 5.2 / lemma_5_2_representation_spec",
       "tex_lines": [
         [
@@ -451,7 +451,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_5_2_boundary_inner",
-      "actual": "LiLiuGoldbach16.lemma_5_2_boundary_inner",
+      "actual": "ConditionalGoldbach.lemma_5_2_boundary_inner",
       "label": "Lemma 5.2 / lemma_5_2_boundary_inner",
       "tex_lines": [
         [
@@ -464,7 +464,7 @@
     },
     {
       "expected": "TexAudit57.Expected_5_3",
-      "actual": "LiLiuGoldbach16.proposition_5_3",
+      "actual": "ConditionalGoldbach.proposition_5_3",
       "label": "Proposition 5.3",
       "tex_lines": [
         [
@@ -485,7 +485,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_5_3_kernel_integrability",
-      "actual": "LiLiuGoldbach16.proposition_5_3_kernel_integrability",
+      "actual": "ConditionalGoldbach.proposition_5_3_kernel_integrability",
       "label": "Proposition 5.3 / proposition_5_3_kernel_integrability",
       "tex_lines": [
         [
@@ -506,7 +506,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_5_3_hs_basis_independent",
-      "actual": "LiLiuGoldbach16.proposition_5_3_hs_basis_independent",
+      "actual": "ConditionalGoldbach.proposition_5_3_hs_basis_independent",
       "label": "Proposition 5.3 / proposition_5_3_hs_basis_independent",
       "tex_lines": [
         [
@@ -530,7 +530,7 @@
     },
     {
       "expected": "TexAudit57.Expected_5_4",
-      "actual": "LiLiuGoldbach16.proposition_5_4",
+      "actual": "ConditionalGoldbach.proposition_5_4",
       "label": "Proposition 5.4",
       "tex_lines": [
         [
@@ -551,7 +551,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_5_4_exact_norm",
-      "actual": "LiLiuGoldbach16.proposition_5_4_exact_norm",
+      "actual": "ConditionalGoldbach.proposition_5_4_exact_norm",
       "label": "Proposition 5.4 / proposition_5_4_exact_norm",
       "tex_lines": [
         [
@@ -572,7 +572,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_5_4_kernel_pairing",
-      "actual": "LiLiuGoldbach16.proposition_5_4_kernel_pairing",
+      "actual": "ConditionalGoldbach.proposition_5_4_kernel_pairing",
       "label": "Proposition 5.4 / proposition_5_4_kernel_pairing",
       "tex_lines": [
         [
@@ -593,7 +593,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_5_4_fixed_contour",
-      "actual": "LiLiuGoldbach16.proposition_5_4_fixed_contour",
+      "actual": "ConditionalGoldbach.proposition_5_4_fixed_contour",
       "label": "Proposition 5.4 / proposition_5_4_fixed_contour",
       "tex_lines": [
         [
@@ -614,7 +614,7 @@
     },
     {
       "expected": "TexAudit57.Expected_6_1_product",
-      "actual": "LiLiuGoldbach16.proposition_6_1",
+      "actual": "ConditionalGoldbach.proposition_6_1",
       "label": "Proposition 6.1",
       "tex_lines": [
         [
@@ -635,7 +635,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_1_enumeration",
-      "actual": "LiLiuGoldbach16.proposition_6_1_enumeration",
+      "actual": "ConditionalGoldbach.proposition_6_1_enumeration",
       "label": "Proposition 6.1 / proposition_6_1_enumeration",
       "tex_lines": [
         [
@@ -656,7 +656,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_1_complex_slice",
-      "actual": "LiLiuGoldbach16.proposition_6_1_complex_slice",
+      "actual": "ConditionalGoldbach.proposition_6_1_complex_slice",
       "label": "Proposition 6.1 / proposition_6_1_complex_slice",
       "tex_lines": [
         [
@@ -677,7 +677,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_1_positive_fredholm_spec",
-      "actual": "LiLiuGoldbach16.proposition_6_1_positive_fredholm_spec",
+      "actual": "ConditionalGoldbach.proposition_6_1_positive_fredholm_spec",
       "label": "Proposition 6.1 / proposition_6_1_positive_fredholm_spec",
       "tex_lines": [
         [
@@ -701,7 +701,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_1_square_determinant",
-      "actual": "LiLiuGoldbach16.proposition_6_1_square_determinant",
+      "actual": "ConditionalGoldbach.proposition_6_1_square_determinant",
       "label": "Proposition 6.1 / proposition_6_1_square_determinant",
       "tex_lines": [
         [
@@ -722,7 +722,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_1_all_slices",
-      "actual": "LiLiuGoldbach16.proposition_6_1_all_slices",
+      "actual": "ConditionalGoldbach.proposition_6_1_all_slices",
       "label": "Proposition 6.1 / proposition_6_1_all_slices",
       "tex_lines": [
         [
@@ -743,7 +743,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_1_spectral_choice_independent",
-      "actual": "LiLiuGoldbach16.proposition_6_1_spectral_choice_independent",
+      "actual": "ConditionalGoldbach.proposition_6_1_spectral_choice_independent",
       "label": "Proposition 6.1 / proposition_6_1_spectral_choice_independent",
       "tex_lines": [
         [
@@ -767,7 +767,7 @@
     },
     {
       "expected": "TexAudit57.Expected_6_2_symmetries",
-      "actual": "LiLiuGoldbach16.proposition_6_2",
+      "actual": "ConditionalGoldbach.proposition_6_2",
       "label": "Proposition 6.2",
       "tex_lines": [
         [
@@ -788,7 +788,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_2_centered_product",
-      "actual": "LiLiuGoldbach16.proposition_6_2_centered_product",
+      "actual": "ConditionalGoldbach.proposition_6_2_centered_product",
       "label": "Proposition 6.2 / proposition_6_2_centered_product",
       "tex_lines": [
         [
@@ -809,7 +809,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_2_critical_values",
-      "actual": "LiLiuGoldbach16.proposition_6_2_critical_values",
+      "actual": "ConditionalGoldbach.proposition_6_2_critical_values",
       "label": "Proposition 6.2 / proposition_6_2_critical_values",
       "tex_lines": [
         [
@@ -830,7 +830,7 @@
     },
     {
       "expected": "TexAudit57.Expected_6_3_zeros",
-      "actual": "LiLiuGoldbach16.proposition_6_3",
+      "actual": "ConditionalGoldbach.proposition_6_3",
       "label": "Proposition 6.3",
       "tex_lines": [
         [
@@ -851,7 +851,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_3_three_cases",
-      "actual": "LiLiuGoldbach16.proposition_6_3_three_cases",
+      "actual": "ConditionalGoldbach.proposition_6_3_three_cases",
       "label": "Proposition 6.3 / proposition_6_3_three_cases",
       "tex_lines": [
         [
@@ -872,7 +872,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_3_factor_central_order",
-      "actual": "LiLiuGoldbach16.proposition_6_3_factor_central_order",
+      "actual": "ConditionalGoldbach.proposition_6_3_factor_central_order",
       "label": "Proposition 6.3 / proposition_6_3_factor_central_order",
       "tex_lines": [
         [
@@ -893,7 +893,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_3_multiplicities",
-      "actual": "LiLiuGoldbach16.proposition_6_3_multiplicities",
+      "actual": "ConditionalGoldbach.proposition_6_3_multiplicities",
       "label": "Proposition 6.3 / proposition_6_3_multiplicities",
       "tex_lines": [
         [
@@ -914,7 +914,7 @@
     },
     {
       "expected": "TexAudit57.Expected_6_1_dictionary",
-      "actual": "LiLiuGoldbach16.theorem_6_1",
+      "actual": "ConditionalGoldbach.theorem_6_1",
       "label": "Theorem 6.1",
       "tex_lines": [
         [
@@ -935,7 +935,7 @@
     },
     {
       "expected": "TexAudit57.expect_theorem_6_1_abstract_dictionary",
-      "actual": "LiLiuGoldbach16.theorem_6_1_abstract_dictionary",
+      "actual": "ConditionalGoldbach.theorem_6_1_abstract_dictionary",
       "label": "Theorem 6.1 / theorem_6_1_abstract_dictionary",
       "tex_lines": [
         [
@@ -959,7 +959,7 @@
     },
     {
       "expected": "TexAudit57.expect_theorem_6_1_width_comparison",
-      "actual": "LiLiuGoldbach16.theorem_6_1_width_comparison",
+      "actual": "ConditionalGoldbach.theorem_6_1_width_comparison",
       "label": "Theorem 6.1 / theorem_6_1_width_comparison",
       "tex_lines": [
         [
@@ -980,7 +980,7 @@
     },
     {
       "expected": "TexAudit57.Expected_6_2_baseline",
-      "actual": "LiLiuGoldbach16.theorem_6_2",
+      "actual": "ConditionalGoldbach.theorem_6_2",
       "label": "Theorem 6.2",
       "tex_lines": [
         [
@@ -1001,7 +1001,7 @@
     },
     {
       "expected": "TexAudit57.Expected_6_4",
-      "actual": "LiLiuGoldbach16.lemma_6_4",
+      "actual": "ConditionalGoldbach.lemma_6_4",
       "label": "Lemma 6.4",
       "tex_lines": [
         [
@@ -1030,7 +1030,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_6_4_zero_poisson_convergence",
-      "actual": "LiLiuGoldbach16.lemma_6_4_zero_poisson_convergence",
+      "actual": "ConditionalGoldbach.lemma_6_4_zero_poisson_convergence",
       "label": "Lemma 6.4 / lemma_6_4_zero_poisson_convergence",
       "tex_lines": [
         [
@@ -1059,7 +1059,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_6_4_perron_residue",
-      "actual": "LiLiuGoldbach16.lemma_6_4_perron_residue",
+      "actual": "ConditionalGoldbach.lemma_6_4_perron_residue",
       "label": "Lemma 6.4 / lemma_6_4_perron_residue",
       "tex_lines": [
         [
@@ -1088,7 +1088,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_6_4_poisson_action_spec",
-      "actual": "LiLiuGoldbach16.lemma_6_4_poisson_action_spec",
+      "actual": "ConditionalGoldbach.lemma_6_4_poisson_action_spec",
       "label": "Lemma 6.4 / lemma_6_4_poisson_action_spec",
       "tex_lines": [
         [
@@ -1117,7 +1117,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_6_4_poisson_convolution",
-      "actual": "LiLiuGoldbach16.lemma_6_4_poisson_convolution",
+      "actual": "ConditionalGoldbach.lemma_6_4_poisson_convolution",
       "label": "Lemma 6.4 / lemma_6_4_poisson_convolution",
       "tex_lines": [
         [
@@ -1146,7 +1146,7 @@
     },
     {
       "expected": "TexAudit57.Expected_6_5",
-      "actual": "LiLiuGoldbach16.proposition_6_5",
+      "actual": "ConditionalGoldbach.proposition_6_5",
       "label": "Proposition 6.5",
       "tex_lines": [
         [
@@ -1167,7 +1167,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_5_components_spec",
-      "actual": "LiLiuGoldbach16.proposition_6_5_components_spec",
+      "actual": "ConditionalGoldbach.proposition_6_5_components_spec",
       "label": "Proposition 6.5 / proposition_6_5_components_spec",
       "tex_lines": [
         [
@@ -1188,7 +1188,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_6_5_diagonal_vector_spec",
-      "actual": "LiLiuGoldbach16.proposition_6_5_diagonal_vector_spec",
+      "actual": "ConditionalGoldbach.proposition_6_5_diagonal_vector_spec",
       "label": "Proposition 6.5 / proposition_6_5_diagonal_vector_spec",
       "tex_lines": [
         [
@@ -1209,7 +1209,7 @@
     },
     {
       "expected": "TexAudit57.Expected_7_1_mellin",
-      "actual": "LiLiuGoldbach16.lemma_7_1",
+      "actual": "ConditionalGoldbach.lemma_7_1",
       "label": "Lemma 7.1",
       "tex_lines": [
         [
@@ -1222,7 +1222,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_7_1_absolute_convergence",
-      "actual": "LiLiuGoldbach16.lemma_7_1_absolute_convergence",
+      "actual": "ConditionalGoldbach.lemma_7_1_absolute_convergence",
       "label": "Lemma 7.1 / lemma_7_1_absolute_convergence",
       "tex_lines": [
         [
@@ -1235,7 +1235,7 @@
     },
     {
       "expected": "TexAudit57.Expected_7_2",
-      "actual": "LiLiuGoldbach16.lemma_7_2",
+      "actual": "ConditionalGoldbach.lemma_7_2",
       "label": "Lemma 7.2",
       "tex_lines": [
         [
@@ -1248,7 +1248,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_7_2_absolute_convergence",
-      "actual": "LiLiuGoldbach16.lemma_7_2_absolute_convergence",
+      "actual": "ConditionalGoldbach.lemma_7_2_absolute_convergence",
       "label": "Lemma 7.2 / lemma_7_2_absolute_convergence",
       "tex_lines": [
         [
@@ -1261,7 +1261,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_7_2_convolutions",
-      "actual": "LiLiuGoldbach16.lemma_7_2_convolutions",
+      "actual": "ConditionalGoldbach.lemma_7_2_convolutions",
       "label": "Lemma 7.2 / lemma_7_2_convolutions",
       "tex_lines": [
         [
@@ -1274,7 +1274,7 @@
     },
     {
       "expected": "TexAudit57.Expected_7_3",
-      "actual": "LiLiuGoldbach16.proposition_7_3",
+      "actual": "ConditionalGoldbach.proposition_7_3",
       "label": "Proposition 7.3",
       "tex_lines": [
         [
@@ -1287,7 +1287,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_7_3_absolute_convergence",
-      "actual": "LiLiuGoldbach16.proposition_7_3_absolute_convergence",
+      "actual": "ConditionalGoldbach.proposition_7_3_absolute_convergence",
       "label": "Proposition 7.3 / proposition_7_3_absolute_convergence",
       "tex_lines": [
         [
@@ -1300,7 +1300,7 @@
     },
     {
       "expected": "TexAudit57.Expected_7_4",
-      "actual": "LiLiuGoldbach16.proposition_7_4",
+      "actual": "ConditionalGoldbach.proposition_7_4",
       "label": "Proposition 7.4",
       "tex_lines": [
         [
@@ -1313,7 +1313,7 @@
     },
     {
       "expected": "TexAudit57.expect_proposition_7_4_norm_integrals",
-      "actual": "LiLiuGoldbach16.proposition_7_4_norm_integrals",
+      "actual": "ConditionalGoldbach.proposition_7_4_norm_integrals",
       "label": "Proposition 7.4 / proposition_7_4_norm_integrals",
       "tex_lines": [
         [
@@ -1326,7 +1326,7 @@
     },
     {
       "expected": "TexAudit57.Expected_7_1_quadratic",
-      "actual": "LiLiuGoldbach16.theorem_7_1",
+      "actual": "ConditionalGoldbach.theorem_7_1",
       "label": "Theorem 7.1",
       "tex_lines": [
         [
@@ -1339,7 +1339,7 @@
     },
     {
       "expected": "TexAudit57.expect_theorem_7_1_uniform",
-      "actual": "LiLiuGoldbach16.theorem_7_1_uniform",
+      "actual": "ConditionalGoldbach.theorem_7_1_uniform",
       "label": "Theorem 7.1 / theorem_7_1_uniform",
       "tex_lines": [
         [
@@ -1352,7 +1352,7 @@
     },
     {
       "expected": "TexAudit57.Expected_7_5",
-      "actual": "LiLiuGoldbach16.lemma_7_5",
+      "actual": "ConditionalGoldbach.lemma_7_5",
       "label": "Lemma 7.5",
       "tex_lines": [
         [
@@ -1365,7 +1365,7 @@
     },
     {
       "expected": "TexAudit57.expect_lemma_7_5_asymptotic",
-      "actual": "LiLiuGoldbach16.lemma_7_5_asymptotic",
+      "actual": "ConditionalGoldbach.lemma_7_5_asymptotic",
       "label": "Lemma 7.5 / lemma_7_5_asymptotic",
       "tex_lines": [
         [
@@ -1378,7 +1378,7 @@
     },
     {
       "expected": "TexAudit57.expect_interiorLine_memLp",
-      "actual": "LiLiuGoldbach16.interiorLine_memLp",
+      "actual": "ConditionalGoldbach.interiorLine_memLp",
       "label": "Lemma 5.2 / interiorLine_memLp",
       "tex_lines": [
         [
@@ -1395,7 +1395,7 @@
     },
     {
       "expected": "TexAudit57.expect_boundaryTraces_exist",
-      "actual": "LiLiuGoldbach16.boundaryTraces_exist",
+      "actual": "ConditionalGoldbach.boundaryTraces_exist",
       "label": "Lemma 5.2 / boundaryTraces_exist",
       "tex_lines": [
         [
@@ -1412,7 +1412,7 @@
     },
     {
       "expected": "TexAuditAB.A1",
-      "actual": "LiLiuGoldbach16.proposition_A_1",
+      "actual": "ConditionalGoldbach.proposition_A_1",
       "tex_lines": [
         3949,
         3989
@@ -1425,7 +1425,7 @@
       "findings": "已检查：c不随N变化；固定c的常数容许依赖φ,c；c=1由默认参数定义化归。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableQuadratic.lean",
         "line": 55
       },
       "assignment_typecheck": "passed",
@@ -1434,7 +1434,7 @@
     },
     {
       "expected": "TexAuditAB.A1_operator",
-      "actual": "LiLiuGoldbach16.proposition_A_1_operator_spec",
+      "actual": "ConditionalGoldbach.proposition_A_1_operator_spec",
       "tex_lines": [
         3954,
         4004
@@ -1447,7 +1447,7 @@
       "findings": "命名命题的构造/算子补充；已检查无额外算术假设。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableStripOperators.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableStripOperators.lean",
         "line": 151
       },
       "assignment_typecheck": "passed",
@@ -1456,7 +1456,7 @@
     },
     {
       "expected": "TexAuditAB.A2",
-      "actual": "LiLiuGoldbach16.proposition_A_2",
+      "actual": "ConditionalGoldbach.proposition_A_2",
       "tex_lines": [
         4018,
         4100
@@ -1469,7 +1469,7 @@
       "findings": "已检查开边界严格性、η∈(0,1/2)、S宽≤1/4与h>0；φ无关算子常数另由A2_uniform补足。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableConsequences.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableConsequences.lean",
         "line": 19
       },
       "assignment_typecheck": "passed",
@@ -1478,7 +1478,7 @@
     },
     {
       "expected": "TexAuditAB.A2_pointwise",
-      "actual": "LiLiuGoldbach16.proposition_A_2_pointwise",
+      "actual": "ConditionalGoldbach.proposition_A_2_pointwise",
       "tex_lines": [
         4058,
         4068
@@ -1491,7 +1491,7 @@
       "findings": "比eventual版更强的逐点误差保证；不要求h先验发散也可在单点使用。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableQuadratic.lean",
         "line": 116
       },
       "assignment_typecheck": "passed",
@@ -1500,7 +1500,7 @@
     },
     {
       "expected": "TexAuditAB.A2_uniform",
-      "actual": "LiLiuGoldbach16.variable_uniform_spectral_bound",
+      "actual": "ConditionalGoldbach.variable_uniform_spectral_bound",
       "tex_lines": [
         4053,
         4056
@@ -1513,7 +1513,7 @@
       "findings": "补上主命题类型中φ先于常数量词的依赖歧义；宽度是所供给的宽度，不是最大零自由宽度。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
         "line": 72
       },
       "assignment_typecheck": "passed",
@@ -1522,7 +1522,7 @@
     },
     {
       "expected": "TexAuditAB.A3",
-      "actual": "LiLiuGoldbach16.lemma_A_3",
+      "actual": "ConditionalGoldbach.lemma_A_3",
       "tex_lines": [
         4110,
         4134
@@ -1535,7 +1535,7 @@
       "findings": "主声明C依赖φ的表面歧义由独立绝对算子界消除。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
         "line": 53
       },
       "assignment_typecheck": "passed",
@@ -1544,7 +1544,7 @@
     },
     {
       "expected": "TexAuditAB.A3_absolute",
-      "actual": "LiLiuGoldbach16.lemma_A_3_absolute_operator_bound",
+      "actual": "ConditionalGoldbach.lemma_A_3_absolute_operator_bound",
       "tex_lines": [
         4112,
         4119
@@ -1557,7 +1557,7 @@
       "findings": "已检查绝对性，不仅靠主lemma的依赖φ常数。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
         "line": 42
       },
       "assignment_typecheck": "passed",
@@ -1566,7 +1566,7 @@
     },
     {
       "expected": "TexAuditAB.A3_balance",
-      "actual": "LiLiuGoldbach16.lemma_A_3_balance",
+      "actual": "ConditionalGoldbach.lemma_A_3_balance",
       "tex_lines": [
         4119,
         4134
@@ -1579,7 +1579,7 @@
       "findings": "C为A3_absolute的绝对常数时恢复TeX的≍φ；并未假设对无约束c及固定N有效。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BalanceBounds.lean",
         "line": 36
       },
       "assignment_typecheck": "passed",
@@ -1588,7 +1588,7 @@
     },
     {
       "expected": "TexAuditAB.A3_widths",
-      "actual": "LiLiuGoldbach16.lemma_A_3_width_ratio",
+      "actual": "ConditionalGoldbach.lemma_A_3_width_ratio",
       "tex_lines": [
         4127,
         4159
@@ -1601,7 +1601,7 @@
       "findings": "δ<requiredNorm,suppliedNorm与正δ是反函数有效域；在正范数且宽≤1/4时不是额外算术条件。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BalanceBounds.lean",
         "line": 95
       },
       "assignment_typecheck": "passed",
@@ -1610,7 +1610,7 @@
     },
     {
       "expected": "TexAuditAB.A4",
-      "actual": "LiLiuGoldbach16.proposition_A_4",
+      "actual": "ConditionalGoldbach.proposition_A_4",
       "tex_lines": [
         4181,
         4208
@@ -1623,7 +1623,7 @@
       "findings": "已检查系数2、平方重数、分母1+γ²、liminf ε量词、小c与固定N顺序；NeZero/ha为类型良定义条件。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleObstruction.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PoleObstruction.lean",
         "line": 11
       },
       "assignment_typecheck": "passed",
@@ -1632,7 +1632,7 @@
     },
     {
       "expected": "TexAuditAB.A4_regular",
-      "actual": "LiLiuGoldbach16.proposition_A_4_baseline_product",
+      "actual": "ConditionalGoldbach.proposition_A_4_baseline_product",
       "tex_lines": [
         4221,
         4229
@@ -1645,7 +1645,7 @@
       "findings": "该补充本身不声称Euler因子分解P=ζR；该恒等式在支持定理另行建立。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BaselineEuler.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BaselineEuler.lean",
         "line": 123
       },
       "assignment_typecheck": "passed",
@@ -1654,7 +1654,7 @@
     },
     {
       "expected": "TexAuditAB.B1",
-      "actual": "LiLiuGoldbach16.proposition_B_1",
+      "actual": "ConditionalGoldbach.proposition_B_1",
       "tex_lines": [
         4286,
         4327
@@ -1667,7 +1667,7 @@
       "findings": "已检查proper powers按有序对求和、至少一指数≥2、(pq,N)=1、分母kℓ和边缘校正只计无序素数对。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WidePrimePowerCount.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WidePrimePowerCount.lean",
         "line": 143
       },
       "assignment_typecheck": "passed",
@@ -1676,7 +1676,7 @@
     },
     {
       "expected": "TexAuditAB.B2",
-      "actual": "LiLiuGoldbach16.lemma_B_2",
+      "actual": "ConditionalGoldbach.lemma_B_2",
       "tex_lines": [
         4351,
         4378
@@ -1689,7 +1689,7 @@
       "findings": "logDerivative χ s= L′/L(1/2+s)确认在3/2线上；range包含0但该项为0；χ(−1)取实部与其±1值相容。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMoments.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMoments.lean",
         "line": 84
       },
       "assignment_typecheck": "passed",
@@ -1698,7 +1698,7 @@
     },
     {
       "expected": "TexAuditAB.B3",
-      "actual": "LiLiuGoldbach16.lemma_B_3",
+      "actual": "ConditionalGoldbach.lemma_B_3",
       "tex_lines": [
         4443,
         4463
@@ -1711,7 +1711,7 @@
       "findings": "无GRH；包含整数性。不能据此宣称实际数值误差输入已验证。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideError.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideError.lean",
         "line": 11
       },
       "assignment_typecheck": "passed",
@@ -1720,7 +1720,7 @@
     },
     {
       "expected": "TexAuditAB.B3_main",
-      "actual": "LiLiuGoldbach16.lemma_B_3_main_integral",
+      "actual": "ConditionalGoldbach.lemma_B_3_main_integral",
       "tex_lines": [
         4413,
         4428
@@ -1733,7 +1733,7 @@
       "findings": "cross mass用∫f(u)f(1−u)，不是∫f²。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMainIntegral.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMainIntegral.lean",
         "line": 65
       },
       "assignment_typecheck": "passed",
@@ -1742,7 +1742,7 @@
     },
     {
       "expected": "TexAuditAB.B4",
-      "actual": "LiLiuGoldbach16.proposition_B_4",
+      "actual": "ConditionalGoldbach.proposition_B_4",
       "tex_lines": [
         4501,
         4520
@@ -1755,7 +1755,7 @@
       "findings": "已检查实际Riesz关系与有界线性泛函同列结论；无HypothesisR；使用同一残差核。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMellinResidual.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMellinResidual.lean",
         "line": 58
       },
       "assignment_typecheck": "passed",
@@ -1764,7 +1764,7 @@
     },
     {
       "expected": "TexAuditAB.B4_weight",
-      "actual": "LiLiuGoldbach16.proposition_B_4_weight",
+      "actual": "ConditionalGoldbach.proposition_B_4_weight",
       "tex_lines": [
         4522,
         4530
@@ -1777,7 +1777,7 @@
       "findings": "FiniteModelWeight只要求C6及支撑内含(0,1)；modelMass为cross mass。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideWeight.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideWeight.lean",
         "line": 163
       },
       "assignment_typecheck": "passed",
@@ -1786,7 +1786,7 @@
     },
     {
       "expected": "TexAuditAB.B5",
-      "actual": "LiLiuGoldbach16.proposition_B_5",
+      "actual": "ConditionalGoldbach.proposition_B_5",
       "tex_lines": [
         4533,
         4561
@@ -1799,7 +1799,7 @@
       "findings": "已检查两√w、核分母、复共轭和Euclidean算子范数；未把有限矩阵等同无限Hardy算子。",
       "mechanical_status": "pending_root_external_comparator",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteExperimentSpectrum.lean",
         "line": 141
       },
       "assignment_typecheck": "passed",
@@ -1810,7 +1810,7 @@
   "definitions": [
     {
       "expected": "TexAudit14.Weight",
-      "actual": "LiLiuGoldbach16.IsWeight",
+      "actual": "ConditionalGoldbach.IsWeight",
       "tex_lines": [
         151,
         154
@@ -1820,7 +1820,7 @@
     },
     {
       "expected": "TexAudit14.Mass",
-      "actual": "LiLiuGoldbach16.weightMass",
+      "actual": "ConditionalGoldbach.weightMass",
       "tex_lines": [
         160,
         164
@@ -1830,7 +1830,7 @@
     },
     {
       "expected": "TexAudit14.Goldbach",
-      "actual": "LiLiuGoldbach16.goldbach",
+      "actual": "ConditionalGoldbach.goldbach",
       "tex_lines": [
         154,
         164
@@ -1840,7 +1840,7 @@
     },
     {
       "expected": "TexAudit14.GRHExpected",
-      "actual": "LiLiuGoldbach16.GRH",
+      "actual": "ConditionalGoldbach.GRH",
       "tex_lines": [
         182,
         185
@@ -1850,7 +1850,7 @@
     },
     {
       "expected": "TexAudit14.EventuallyEven",
-      "actual": "LiLiuGoldbach16.EvenEventually",
+      "actual": "ConditionalGoldbach.EvenEventually",
       "tex_lines": [
         345,
         346
@@ -1860,7 +1860,7 @@
     },
     {
       "expected": "TexAudit14.TendsToInfinityEven",
-      "actual": "LiLiuGoldbach16.EvenTendstoInfinity",
+      "actual": "ConditionalGoldbach.EvenTendstoInfinity",
       "tex_lines": [
         273,
         278
@@ -1870,7 +1870,7 @@
     },
     {
       "expected": "TexAudit14.AsymptoticEven",
-      "actual": "LiLiuGoldbach16.EvenAsymptotic",
+      "actual": "ConditionalGoldbach.EvenAsymptotic",
       "tex_lines": [
         289,
         298
@@ -1880,7 +1880,7 @@
     },
     {
       "expected": "TexAudit14.Width",
-      "actual": "LiLiuGoldbach16.zeroFreeWidth",
+      "actual": "ConditionalGoldbach.zeroFreeWidth",
       "tex_lines": [
         273,
         278
@@ -1890,7 +1890,7 @@
     },
     {
       "expected": "TexAudit14.Admissible",
-      "actual": "LiLiuGoldbach16.IsAdmissible",
+      "actual": "ConditionalGoldbach.IsAdmissible",
       "tex_lines": [
         273,
         282
@@ -1900,7 +1900,7 @@
     },
     {
       "expected": "TexAudit14.S",
-      "actual": "LiLiuGoldbach16.HypothesisS",
+      "actual": "ConditionalGoldbach.HypothesisS",
       "tex_lines": [
         273,
         282
@@ -1910,7 +1910,7 @@
     },
     {
       "expected": "TexAudit14.R",
-      "actual": "LiLiuGoldbach16.HypothesisR",
+      "actual": "ConditionalGoldbach.HypothesisR",
       "tex_lines": [
         306,
         310
@@ -1920,7 +1920,7 @@
     },
     {
       "expected": "TexAudit14.Scale",
-      "actual": "LiLiuGoldbach16.spectralScale",
+      "actual": "ConditionalGoldbach.spectralScale",
       "tex_lines": [
         229,
         233
@@ -1930,7 +1930,7 @@
     },
     {
       "expected": "TexAudit14.PrimeCount",
-      "actual": "LiLiuGoldbach16.PrimePairCount",
+      "actual": "ConditionalGoldbach.PrimePairCount",
       "tex_lines": [
         325,
         328
@@ -1940,7 +1940,7 @@
     },
     {
       "expected": "TexAudit14.BetaRegion",
-      "actual": "LiLiuGoldbach16.betaDomain",
+      "actual": "ConditionalGoldbach.betaDomain",
       "tex_lines": [
         1480,
         1482
@@ -1950,7 +1950,7 @@
     },
     {
       "expected": "TexAudit14.Omega",
-      "actual": "LiLiuGoldbach16.analyticDomain",
+      "actual": "ConditionalGoldbach.analyticDomain",
       "tex_lines": [
         1704,
         1709
@@ -1960,7 +1960,7 @@
     },
     {
       "expected": "TexAudit14.BetaSigned",
-      "actual": "LiLiuGoldbach16.betaKernel",
+      "actual": "ConditionalGoldbach.betaKernel",
       "tex_lines": [
         1461,
         1466
@@ -1970,7 +1970,7 @@
     },
     {
       "expected": "TexAudit14.GammaRatio",
-      "actual": "LiLiuGoldbach16.gammaQuotient",
+      "actual": "ConditionalGoldbach.gammaQuotient",
       "tex_lines": [
         1532,
         1535
@@ -1980,7 +1980,7 @@
     },
     {
       "expected": "TexAudit14.DensityProduct",
-      "actual": "LiLiuGoldbach16.densityEulerProduct",
+      "actual": "ConditionalGoldbach.densityEulerProduct",
       "tex_lines": [
         1598,
         1604
@@ -1990,7 +1990,7 @@
     },
     {
       "expected": "TexAudit14.ContinuedDensity",
-      "actual": "LiLiuGoldbach16.continuedDensity",
+      "actual": "ConditionalGoldbach.continuedDensity",
       "tex_lines": [
         1593,
         1604
@@ -2000,7 +2000,7 @@
     },
     {
       "expected": "TexAudit14.Model",
-      "actual": "LiLiuGoldbach16.betaModel",
+      "actual": "ConditionalGoldbach.betaModel",
       "tex_lines": [
         1690,
         1699
@@ -2010,7 +2010,7 @@
     },
     {
       "expected": "TexAudit14.ContinuedModel",
-      "actual": "LiLiuGoldbach16.continuedModel",
+      "actual": "ConditionalGoldbach.continuedModel",
       "tex_lines": [
         1695,
         1709
@@ -2020,7 +2020,7 @@
     },
     {
       "expected": "TexAudit14.Residual",
-      "actual": "LiLiuGoldbach16.residual",
+      "actual": "ConditionalGoldbach.residual",
       "tex_lines": [
         1732,
         1747
@@ -2030,7 +2030,7 @@
     },
     {
       "expected": "TexAudit57.RawHardy",
-      "actual": "LiLiuGoldbach16.IsRawHardy",
+      "actual": "ConditionalGoldbach.IsRawHardy",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "RawHardy = IsRawHardy",
@@ -2039,7 +2039,7 @@
     },
     {
       "expected": "TexAudit57.RawNormSquared",
-      "actual": "LiLiuGoldbach16.rawHardyNormSq",
+      "actual": "ConditionalGoldbach.rawHardyNormSq",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "RawNormSquared = rawHardyNormSq",
@@ -2048,7 +2048,7 @@
     },
     {
       "expected": "TexAudit57.PW",
-      "actual": "LiLiuGoldbach16.fourierLaplace",
+      "actual": "ConditionalGoldbach.fourierLaplace",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "PW = fourierLaplace",
@@ -2057,7 +2057,7 @@
     },
     {
       "expected": "TexAudit57.TracePair",
-      "actual": "LiLiuGoldbach16.IsBoundaryTrace",
+      "actual": "ConditionalGoldbach.IsBoundaryTrace",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "TracePair = IsBoundaryTrace",
@@ -2066,7 +2066,7 @@
     },
     {
       "expected": "TexAudit57.WeightedResidual",
-      "actual": "LiLiuGoldbach16.weightedKernel",
+      "actual": "ConditionalGoldbach.weightedKernel",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "WeightedResidual = weightedKernel",
@@ -2075,7 +2075,7 @@
     },
     {
       "expected": "TexAudit57.Reproducer",
-      "actual": "LiLiuGoldbach16.reproducingKernel",
+      "actual": "ConditionalGoldbach.reproducingKernel",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Reproducer = reproducingKernel",
@@ -2084,7 +2084,7 @@
     },
     {
       "expected": "TexAudit57.Distance",
-      "actual": "LiLiuGoldbach16.pointDistance",
+      "actual": "ConditionalGoldbach.pointDistance",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Distance = pointDistance",
@@ -2093,7 +2093,7 @@
     },
     {
       "expected": "TexAudit57.RootRatio",
-      "actual": "LiLiuGoldbach16.spectralRootParameter",
+      "actual": "ConditionalGoldbach.spectralRootParameter",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "RootRatio = spectralRootParameter",
@@ -2102,7 +2102,7 @@
     },
     {
       "expected": "TexAudit57.Slice",
-      "actual": "LiLiuGoldbach16.quaternionSlice",
+      "actual": "ConditionalGoldbach.quaternionSlice",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Slice = quaternionSlice",
@@ -2111,7 +2111,7 @@
     },
     {
       "expected": "TexAudit57.SliceEntire",
-      "actual": "LiLiuGoldbach16.IntrinsicEntire",
+      "actual": "ConditionalGoldbach.IntrinsicEntire",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "SliceEntire = IntrinsicEntire",
@@ -2120,7 +2120,7 @@
     },
     {
       "expected": "TexAudit57.ZeroSum",
-      "actual": "LiLiuGoldbach16.zeroPoisson",
+      "actual": "ConditionalGoldbach.zeroPoisson",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "ZeroSum = zeroPoisson",
@@ -2129,7 +2129,7 @@
     },
     {
       "expected": "TexAudit57.Energy",
-      "actual": "LiLiuGoldbach16.logDerivativeEnergy",
+      "actual": "ConditionalGoldbach.logDerivativeEnergy",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Energy = logDerivativeEnergy",
@@ -2138,7 +2138,7 @@
     },
     {
       "expected": "TexAudit57.AverageEnergy",
-      "actual": "LiLiuGoldbach16.averagedLogDerivative",
+      "actual": "ConditionalGoldbach.averagedLogDerivative",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "AverageEnergy = averagedLogDerivative",
@@ -2147,7 +2147,7 @@
     },
     {
       "expected": "TexAudit57.ReferenceLine",
-      "actual": "LiLiuGoldbach16.referenceLine",
+      "actual": "ConditionalGoldbach.referenceLine",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "ReferenceLine = referenceLine",
@@ -2156,7 +2156,7 @@
     },
     {
       "expected": "TexAudit57.Cutoff",
-      "actual": "LiLiuGoldbach16.smoothedPerronWeight",
+      "actual": "ConditionalGoldbach.smoothedPerronWeight",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Cutoff = smoothedPerronWeight",
@@ -2165,7 +2165,7 @@
     },
     {
       "expected": "TexAudit57.Perron",
-      "actual": "LiLiuGoldbach16.smoothedPerronKernel",
+      "actual": "ConditionalGoldbach.smoothedPerronKernel",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Perron = smoothedPerronKernel",
@@ -2174,7 +2174,7 @@
     },
     {
       "expected": "TexAudit57.Poisson",
-      "actual": "LiLiuGoldbach16.poissonKernelReal",
+      "actual": "ConditionalGoldbach.poissonKernelReal",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Poisson = poissonKernelReal",
@@ -2183,7 +2183,7 @@
     },
     {
       "expected": "TexAudit57.Convolution",
-      "actual": "LiLiuGoldbach16.realConvolution",
+      "actual": "ConditionalGoldbach.realConvolution",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Convolution = realConvolution",
@@ -2192,7 +2192,7 @@
     },
     {
       "expected": "TexAudit57.DiagonalVector",
-      "actual": "LiLiuGoldbach16.diagonalVector",
+      "actual": "ConditionalGoldbach.diagonalVector",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "DiagonalVector = diagonalVector",
@@ -2201,7 +2201,7 @@
     },
     {
       "expected": "TexAudit57.Difference",
-      "actual": "LiLiuGoldbach16.differenceConvolution",
+      "actual": "ConditionalGoldbach.differenceConvolution",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Difference = differenceConvolution",
@@ -2210,7 +2210,7 @@
     },
     {
       "expected": "TexAudit57.SumOnPositiveHalfLine",
-      "actual": "LiLiuGoldbach16.sumConvolution",
+      "actual": "ConditionalGoldbach.sumConvolution",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "SumOnPositiveHalfLine = sumConvolution",
@@ -2219,7 +2219,7 @@
     },
     {
       "expected": "TexAudit57.Signed",
-      "actual": "LiLiuGoldbach16.signedConvolution",
+      "actual": "ConditionalGoldbach.signedConvolution",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Signed = signedConvolution",
@@ -2228,7 +2228,7 @@
     },
     {
       "expected": "TexAudit57.V",
-      "actual": "LiLiuGoldbach16.derivativeWeight",
+      "actual": "ConditionalGoldbach.derivativeWeight",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "V = derivativeWeight",
@@ -2237,7 +2237,7 @@
     },
     {
       "expected": "TexAudit57.Q",
-      "actual": "LiLiuGoldbach16.normFunctional",
+      "actual": "ConditionalGoldbach.normFunctional",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Q = normFunctional",
@@ -2246,7 +2246,7 @@
     },
     {
       "expected": "TexAudit57.EnergyV",
-      "actual": "LiLiuGoldbach16.weightEnergy",
+      "actual": "ConditionalGoldbach.weightEnergy",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "EnergyV = weightEnergy",
@@ -2255,7 +2255,7 @@
     },
     {
       "expected": "TexAudit57.Psi",
-      "actual": "LiLiuGoldbach16.functionalIntegrand",
+      "actual": "ConditionalGoldbach.functionalIntegrand",
       "universe_params": [],
       "comparison_kind": "definition_body",
       "label": "Psi = functionalIntegrand",
@@ -2264,7 +2264,7 @@
     },
     {
       "expected": "TexAuditAB.variableStrip",
-      "actual": "LiLiuGoldbach16.strip",
+      "actual": "ConditionalGoldbach.strip",
       "tex_lines": [
         3954,
         3958
@@ -2273,7 +2273,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
         "line": 113
       },
       "audit_group": "appendices",
@@ -2281,7 +2281,7 @@
     },
     {
       "expected": "TexAuditAB.variableHardySpace",
-      "actual": "LiLiuGoldbach16.HardySpace",
+      "actual": "ConditionalGoldbach.HardySpace",
       "tex_lines": [
         3954,
         3958
@@ -2290,7 +2290,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
         "line": 144
       },
       "audit_group": "appendices",
@@ -2298,7 +2298,7 @@
     },
     {
       "expected": "TexAuditAB.variableBoundary",
-      "actual": "LiLiuGoldbach16.boundaryPoint",
+      "actual": "ConditionalGoldbach.boundaryPoint",
       "tex_lines": [
         3954,
         3958
@@ -2307,7 +2307,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 361
       },
       "audit_group": "appendices",
@@ -2315,7 +2315,7 @@
     },
     {
       "expected": "TexAuditAB.variableOperator",
-      "actual": "LiLiuGoldbach16.residualOperator",
+      "actual": "ConditionalGoldbach.residualOperator",
       "tex_lines": [
         3954,
         3958
@@ -2324,7 +2324,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 55
       },
       "audit_group": "appendices",
@@ -2332,7 +2332,7 @@
     },
     {
       "expected": "TexAuditAB.variableFunctional",
-      "actual": "LiLiuGoldbach16.functionalValue",
+      "actual": "ConditionalGoldbach.functionalValue",
       "tex_lines": [
         3954,
         3958
@@ -2341,7 +2341,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 125
       },
       "audit_group": "appendices",
@@ -2349,7 +2349,7 @@
     },
     {
       "expected": "TexAuditAB.variableVector",
-      "actual": "LiLiuGoldbach16.rieszVector",
+      "actual": "ConditionalGoldbach.rieszVector",
       "tex_lines": [
         3954,
         3958
@@ -2358,7 +2358,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 129
       },
       "audit_group": "appendices",
@@ -2366,7 +2366,7 @@
     },
     {
       "expected": "TexAuditAB.variableFunctionalNorm",
-      "actual": "LiLiuGoldbach16.normFunctional",
+      "actual": "ConditionalGoldbach.normFunctional",
       "tex_lines": [
         3970,
         3977
@@ -2375,7 +2375,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 117
       },
       "audit_group": "appendices",
@@ -2383,7 +2383,7 @@
     },
     {
       "expected": "TexAuditAB.variableComplexProduct",
-      "actual": "LiLiuGoldbach16.spectralComplex",
+      "actual": "ConditionalGoldbach.spectralComplex",
       "tex_lines": [
         4020,
         4024
@@ -2392,7 +2392,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 100
       },
       "audit_group": "appendices",
@@ -2400,7 +2400,7 @@
     },
     {
       "expected": "TexAuditAB.variableQuaternionProduct",
-      "actual": "LiLiuGoldbach16.spectralQuaternion",
+      "actual": "ConditionalGoldbach.spectralQuaternion",
       "tex_lines": [
         4020,
         4024
@@ -2409,7 +2409,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 109
       },
       "audit_group": "appendices",
@@ -2417,7 +2417,7 @@
     },
     {
       "expected": "TexAuditAB.pointwiseR",
-      "actual": "LiLiuGoldbach16.SpectralR",
+      "actual": "ConditionalGoldbach.SpectralR",
       "tex_lines": [
         4024,
         4031
@@ -2426,7 +2426,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 156
       },
       "audit_group": "appendices",
@@ -2434,7 +2434,7 @@
     },
     {
       "expected": "TexAuditAB.pointwiseZeroFree",
-      "actual": "LiLiuGoldbach16.SpectralZeroFree",
+      "actual": "ConditionalGoldbach.SpectralZeroFree",
       "tex_lines": [
         4024,
         4031
@@ -2443,7 +2443,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 159
       },
       "audit_group": "appendices",
@@ -2451,7 +2451,7 @@
     },
     {
       "expected": "TexAuditAB.boundaryParameter",
-      "actual": "LiLiuGoldbach16.alpha",
+      "actual": "ConditionalGoldbach.alpha",
       "tex_lines": [
         3949,
         3953
@@ -2460,7 +2460,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
         "line": 105
       },
       "audit_group": "appendices",
@@ -2468,7 +2468,7 @@
     },
     {
       "expected": "TexAuditAB.eventualR",
-      "actual": "LiLiuGoldbach16.HypothesisRAt",
+      "actual": "ConditionalGoldbach.HypothesisRAt",
       "tex_lines": [
         4093,
         4100
@@ -2477,7 +2477,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 250
       },
       "audit_group": "appendices",
@@ -2485,7 +2485,7 @@
     },
     {
       "expected": "TexAuditAB.eventualS",
-      "actual": "LiLiuGoldbach16.HypothesisSAt",
+      "actual": "ConditionalGoldbach.HypothesisSAt",
       "tex_lines": [
         4025,
         4031
@@ -2494,7 +2494,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 253
       },
       "audit_group": "appendices",
@@ -2502,7 +2502,7 @@
     },
     {
       "expected": "TexAuditAB.poleOrder",
-      "actual": "LiLiuGoldbach16.zeroMultiplicity",
+      "actual": "ConditionalGoldbach.zeroMultiplicity",
       "tex_lines": [
         4184,
         4186
@@ -2511,7 +2511,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 380
       },
       "audit_group": "appendices",
@@ -2519,7 +2519,7 @@
     },
     {
       "expected": "TexAuditAB.poleMass",
-      "actual": "LiLiuGoldbach16.poleCoefficient",
+      "actual": "ConditionalGoldbach.poleCoefficient",
       "tex_lines": [
         4187,
         4191
@@ -2528,7 +2528,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 261
       },
       "audit_group": "appendices",
@@ -2536,7 +2536,7 @@
     },
     {
       "expected": "TexAuditAB.regularEulerFactor",
-      "actual": "LiLiuGoldbach16.baselineProductR",
+      "actual": "ConditionalGoldbach.baselineProductR",
       "tex_lines": [
         4221,
         4229
@@ -2545,7 +2545,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 432
       },
       "audit_group": "appendices",
@@ -2553,7 +2553,7 @@
     },
     {
       "expected": "TexAuditAB.operatorMajorant",
-      "actual": "LiLiuGoldbach16.baselineBound",
+      "actual": "ConditionalGoldbach.baselineBound",
       "tex_lines": [
         4114,
         4117
@@ -2562,7 +2562,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 257
       },
       "audit_group": "appendices",
@@ -2570,7 +2570,7 @@
     },
     {
       "expected": "TexAuditAB.boundaryCost",
-      "actual": "LiLiuGoldbach16.balanceFactor",
+      "actual": "ConditionalGoldbach.balanceFactor",
       "tex_lines": [
         4119,
         4126
@@ -2579,7 +2579,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 259
       },
       "audit_group": "appendices",
@@ -2587,7 +2587,7 @@
     },
     {
       "expected": "TexAuditAB.numericalN",
-      "actual": "LiLiuGoldbach16.experimentN",
+      "actual": "ConditionalGoldbach.experimentN",
       "tex_lines": [
         4281,
         4284
@@ -2596,7 +2596,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 265
       },
       "audit_group": "appendices",
@@ -2604,7 +2604,7 @@
     },
     {
       "expected": "TexAuditAB.P",
-      "actual": "LiLiuGoldbach16.cutoffPolynomial",
+      "actual": "ConditionalGoldbach.cutoffPolynomial",
       "tex_lines": [
         4292,
         4300
@@ -2613,7 +2613,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 267
       },
       "audit_group": "appendices",
@@ -2621,7 +2621,7 @@
     },
     {
       "expected": "TexAuditAB.eta",
-      "actual": "LiLiuGoldbach16.wideCutoff",
+      "actual": "ConditionalGoldbach.wideCutoff",
       "tex_lines": [
         4291,
         4295
@@ -2630,7 +2630,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 271
       },
       "audit_group": "appendices",
@@ -2638,7 +2638,7 @@
     },
     {
       "expected": "TexAuditAB.W",
-      "actual": "LiLiuGoldbach16.wideCompanion",
+      "actual": "ConditionalGoldbach.wideCompanion",
       "tex_lines": [
         4301,
         4305
@@ -2647,7 +2647,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 275
       },
       "audit_group": "appendices",
@@ -2655,7 +2655,7 @@
     },
     {
       "expected": "TexAuditAB.f",
-      "actual": "LiLiuGoldbach16.wideWeight",
+      "actual": "ConditionalGoldbach.wideWeight",
       "tex_lines": [
         4303,
         4305
@@ -2664,7 +2664,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 280
       },
       "audit_group": "appendices",
@@ -2672,7 +2672,7 @@
     },
     {
       "expected": "TexAuditAB.J",
-      "actual": "LiLiuGoldbach16.wideCorrelation",
+      "actual": "ConditionalGoldbach.wideCorrelation",
       "tex_lines": [
         4306,
         4310
@@ -2681,7 +2681,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 282
       },
       "audit_group": "appendices",
@@ -2689,7 +2689,7 @@
     },
     {
       "expected": "TexAuditAB.primePairCount",
-      "actual": "LiLiuGoldbach16.unorderedPrimePairs",
+      "actual": "ConditionalGoldbach.unorderedPrimePairs",
       "tex_lines": [
         4311,
         4311
@@ -2698,7 +2698,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 284
       },
       "audit_group": "appendices",
@@ -2706,7 +2706,7 @@
     },
     {
       "expected": "TexAuditAB.edge",
-      "actual": "LiLiuGoldbach16.edgeCorrection",
+      "actual": "ConditionalGoldbach.edgeCorrection",
       "tex_lines": [
         4311,
         4312
@@ -2715,7 +2715,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 287
       },
       "audit_group": "appendices",
@@ -2723,7 +2723,7 @@
     },
     {
       "expected": "TexAuditAB.properPowers",
-      "actual": "LiLiuGoldbach16.primePowerCorrection",
+      "actual": "ConditionalGoldbach.primePowerCorrection",
       "tex_lines": [
         4312,
         4314
@@ -2732,7 +2732,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 291
       },
       "audit_group": "appendices",
@@ -2740,7 +2740,7 @@
     },
     {
       "expected": "TexAuditAB.coefficient",
-      "actual": "LiLiuGoldbach16.countingCoefficient",
+      "actual": "ConditionalGoldbach.countingCoefficient",
       "tex_lines": [
         4361,
         4363
@@ -2749,7 +2749,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 298
       },
       "audit_group": "appendices",
@@ -2757,7 +2757,7 @@
     },
     {
       "expected": "TexAuditAB.integralI",
-      "actual": "LiLiuGoldbach16.countingIntegral",
+      "actual": "ConditionalGoldbach.countingIntegral",
       "tex_lines": [
         4351,
         4355
@@ -2766,7 +2766,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 300
       },
       "audit_group": "appendices",
@@ -2774,7 +2774,7 @@
     },
     {
       "expected": "TexAuditAB.diagonalD",
-      "actual": "LiLiuGoldbach16.diagonalCountingMoment",
+      "actual": "ConditionalGoldbach.diagonalCountingMoment",
       "tex_lines": [
         4357,
         4360
@@ -2783,7 +2783,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 304
       },
       "audit_group": "appendices",
@@ -2791,7 +2791,7 @@
     },
     {
       "expected": "TexAuditAB.signedJhat",
-      "actual": "LiLiuGoldbach16.approxSignedMoment",
+      "actual": "ConditionalGoldbach.approxSignedMoment",
       "tex_lines": [
         4445,
         4446
@@ -2800,7 +2800,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 307
       },
       "audit_group": "appendices",
@@ -2808,7 +2808,7 @@
     },
     {
       "expected": "TexAuditAB.diagonalDhat",
-      "actual": "LiLiuGoldbach16.approxDiagonalMoment",
+      "actual": "ConditionalGoldbach.approxDiagonalMoment",
       "tex_lines": [
         4445,
         4446
@@ -2817,7 +2817,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 310
       },
       "audit_group": "appendices",
@@ -2825,7 +2825,7 @@
     },
     {
       "expected": "TexAuditAB.crossMass",
-      "actual": "LiLiuGoldbach16.wideModelMass",
+      "actual": "ConditionalGoldbach.wideModelMass",
       "tex_lines": [
         4422,
         4422
@@ -2834,7 +2834,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 313
       },
       "audit_group": "appendices",
@@ -2842,7 +2842,7 @@
     },
     {
       "expected": "TexAuditAB.mainIntegral",
-      "actual": "LiLiuGoldbach16.wideMainIntegral",
+      "actual": "ConditionalGoldbach.wideMainIntegral",
       "tex_lines": [
         4413,
         4415
@@ -2851,7 +2851,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 438
       },
       "audit_group": "appendices",
@@ -2859,7 +2859,7 @@
     },
     {
       "expected": "TexAuditAB.residualB",
-      "actual": "LiLiuGoldbach16.wideResidual",
+      "actual": "ConditionalGoldbach.wideResidual",
       "tex_lines": [
         4422,
         4424
@@ -2868,7 +2868,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 315
       },
       "audit_group": "appendices",
@@ -2876,7 +2876,7 @@
     },
     {
       "expected": "TexAuditAB.momentError",
-      "actual": "LiLiuGoldbach16.HasMomentError",
+      "actual": "ConditionalGoldbach.HasMomentError",
       "tex_lines": [
         4447,
         4448
@@ -2885,7 +2885,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 442
       },
       "audit_group": "appendices",
@@ -2893,7 +2893,7 @@
     },
     {
       "expected": "TexAuditAB.countCentre",
-      "actual": "LiLiuGoldbach16.approxPrimeCount",
+      "actual": "ConditionalGoldbach.approxPrimeCount",
       "tex_lines": [
         4453,
         4456
@@ -2902,7 +2902,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 317
       },
       "audit_group": "appendices",
@@ -2910,7 +2910,7 @@
     },
     {
       "expected": "TexAuditAB.countRadius",
-      "actual": "LiLiuGoldbach16.countError",
+      "actual": "ConditionalGoldbach.countError",
       "tex_lines": [
         4457,
         4459
@@ -2919,7 +2919,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 320
       },
       "audit_group": "appendices",
@@ -2927,7 +2927,7 @@
     },
     {
       "expected": "TexAuditAB.ellW",
-      "actual": "LiLiuGoldbach16.wideFunctional",
+      "actual": "ConditionalGoldbach.wideFunctional",
       "tex_lines": [
         4514,
         4519
@@ -2936,7 +2936,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 323
       },
       "audit_group": "appendices",
@@ -2944,7 +2944,7 @@
     },
     {
       "expected": "TexAuditAB.vectorW",
-      "actual": "LiLiuGoldbach16.wideRieszVector",
+      "actual": "ConditionalGoldbach.wideRieszVector",
       "tex_lines": [
         4512,
         4514
@@ -2953,7 +2953,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 327
       },
       "audit_group": "appendices",
@@ -2961,7 +2961,7 @@
     },
     {
       "expected": "TexAuditAB.node",
-      "actual": "LiLiuGoldbach16.spectralNode",
+      "actual": "ConditionalGoldbach.spectralNode",
       "tex_lines": [
         4533,
         4535
@@ -2970,7 +2970,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 331
       },
       "audit_group": "appendices",
@@ -2978,7 +2978,7 @@
     },
     {
       "expected": "TexAuditAB.nodeWeight",
-      "actual": "LiLiuGoldbach16.trapezoidWeight",
+      "actual": "ConditionalGoldbach.trapezoidWeight",
       "tex_lines": [
         4534,
         4535
@@ -2987,7 +2987,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 334
       },
       "audit_group": "appendices",
@@ -2995,7 +2995,7 @@
     },
     {
       "expected": "TexAuditAB.matrixC",
-      "actual": "LiLiuGoldbach16.finiteSpectralMatrix",
+      "actual": "ConditionalGoldbach.finiteSpectralMatrix",
       "tex_lines": [
         4544,
         4549
@@ -3004,7 +3004,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 337
       },
       "audit_group": "appendices",
@@ -3012,7 +3012,7 @@
     },
     {
       "expected": "TexAuditAB.finiteX",
-      "actual": "LiLiuGoldbach16.finiteSpectralFunction",
+      "actual": "ConditionalGoldbach.finiteSpectralFunction",
       "tex_lines": [
         4536,
         4541
@@ -3021,7 +3021,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 341
       },
       "audit_group": "appendices",
@@ -3029,7 +3029,7 @@
     },
     {
       "expected": "TexAuditAB.finiteSpectrum",
-      "actual": "LiLiuGoldbach16.IsFiniteSpectrum",
+      "actual": "ConditionalGoldbach.IsFiniteSpectrum",
       "tex_lines": [
         4553,
         4560
@@ -3038,7 +3038,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 345
       },
       "audit_group": "appendices",
@@ -3046,7 +3046,7 @@
     },
     {
       "expected": "TexAuditAB.eigenvalueList",
-      "actual": "LiLiuGoldbach16.finiteEigenvalues",
+      "actual": "ConditionalGoldbach.finiteEigenvalues",
       "tex_lines": [
         4553,
         4553
@@ -3055,7 +3055,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 350
       },
       "audit_group": "appendices",
@@ -3063,7 +3063,7 @@
     },
     {
       "expected": "TexAuditAB.matrixNorm",
-      "actual": "LiLiuGoldbach16.finiteMatrixOpNorm",
+      "actual": "ConditionalGoldbach.finiteMatrixOpNorm",
       "tex_lines": [
         4560,
         4561
@@ -3072,7 +3072,7 @@
       "semantic_status": "independently_reviewed",
       "mechanical_status": "passed_kernel_checked_rfl_bridge",
       "live_source": {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
         "line": 353
       },
       "audit_group": "appendices",
@@ -3080,17 +3080,17 @@
     }
   ],
   "frozen_references": {
-    "sections-1-4/Expected.lean": "399d917f3c8ec13d005abaedc750e8333f520d150765af56b57f189799a5ab36",
-    "sections-1-4/comparison.json": "3016a0f78f1d2b70fb0e900827a1ec8a507a61e13ebc142c4264ea4d92c8e9eb",
-    "sections-1-4/definitions-comparison.json": "ba0f0858cf9116fcb27d3c4b60f9e91ef030bac1b84392767de54ba2fd2356ec",
-    "sections-1-4/Bridges.lean": "1d216a8e3d217986fa9f5618621a7e96c6573856347f8cbcbb7f4a9330172368",
-    "sections-5-7/Reference.lean": "f27a70fc9cc68944a1e2099722f397104340d7d14c2fab4dd2e7a55117da5010",
-    "sections-5-7/comparison.json": "0211652d49dcf31aff73ab52754161d60991b9372aeac3daa2caff57904126bb",
-    "sections-5-7/definitions-comparison.json": "e8531ccfa87cf80e10ceca59db56305a22adf701e73e19e113cd3244312e7d59",
-    "sections-5-7/Bridges.lean": "83f5767c4792345de381ea532b78f13687be1505c62886aec5d5bd3a89e00b39",
-    "appendices/Reference.lean": "6be27e81044dca6dd2ee92ba114b0eb4709801b47e80cdfae1324de90c3877b1",
-    "appendices/comparison.json": "875bb1dd8394a17bea29927d81c520cd7f97a77162f323540f584f266d792d8e",
-    "appendices/definitions-comparison.json": "aa9a9d735e9678f5d4cac3c7e131c578b8209a49ba0853b02d99324a8beb3c51",
-    "appendices/NumericCrossCheck.lean": "9afaafe5c299b53eae3db31dd68d19148d14bcdcf5276e1c805cf98f31933738"
+    "sections-1-4/Expected.lean": "7830c648d719bdf43c0771966f85df7647abc5848764b2c823bdfb592b37be1d",
+    "sections-1-4/comparison.json": "c3b35512219cf4f7ff67c896e6227e3866b5a327a34ca0b1ab880d315c467e63",
+    "sections-1-4/definitions-comparison.json": "08998bb0f8cfe8d220d0cc482814a520b2cf0c742d7504ab334a83ac183131c3",
+    "sections-1-4/Bridges.lean": "d135c1a20809f35a894e0b5d3833a5b7cc7bfe0f599e5cacff33db02c7dab40a",
+    "sections-5-7/Reference.lean": "210b9633bdc142579d132577f7ea5d22d56de4d32d13a0dbfef8ba8301983cb9",
+    "sections-5-7/comparison.json": "43a590967c57d395e5ca58570836afdd2324e265bfca4bfdadb03ed328082916",
+    "sections-5-7/definitions-comparison.json": "fa29d8e5f8c16a80b62926eb2f53d2050d1c65ffd762ecc7828ecaa2ca6bec9a",
+    "sections-5-7/Bridges.lean": "5cbd2f0066343dfa2b9d21460521aa98078b2afcf8d0d62c77d9cdb9dc6e2fce",
+    "appendices/Reference.lean": "682ac57356f00d936b958c1b307c11db8bc07250b3fbe71c2ac39f404a968cf3",
+    "appendices/comparison.json": "7657a007b483fe4392778f731c66c8d79fe4d1061bde5a49aaee827081ba1f49",
+    "appendices/definitions-comparison.json": "322317373554753571ed3d10e269781c57947a1adfb183993e0cd0654b64e98c",
+    "appendices/NumericCrossCheck.lean": "b9ae1ae33785a0444f9b5549476df5a322a6df6aa19d5159ff922e4c60803cba"
   }
 }

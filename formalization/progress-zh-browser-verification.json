@@ -1,0 +1,23 @@
+{
+  "language": "zh",
+  "errors": [],
+  "network": [],
+  "source_hashes_match": true,
+  "input_sha256": "047182b7e956e4aad2ecfd1ca750b7227e1d64a5adbab39af5bd08e58b780ac4",
+  "html_sha256": "717cca5769c5d908a83dc592433fabdc24beae20e2848b4d34ebdf0d859a12a3",
+  "initial_visible": 102,
+  "original_counts": [
+    "102",
+    "0",
+    "0"
+  ],
+  "warning": "102 条原审阅定理（含附录）的传递依赖均未检出 sorryAx；完整类型及原定义已核对。",
+  "types": "102 个原审阅定理的完整类型已通过 Lean 定义等同性检查；证明及其传递依赖也已全部核验。",
+  "math": 970,
+  "source_exact": true,
+  "closed_visible": 102,
+  "dependencies_pending_visible": 0,
+  "added_visible": 1252,
+  "definitions_visible": 231,
+  "mobile_width": 390
+}

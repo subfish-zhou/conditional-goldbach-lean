@@ -3,7 +3,7 @@ version = "0.1.0"
 defaultTargets = ["TexAuditComparator"]
 
 [[require]]
-name = "liLiuGoldbach"
+name = "conditionalGoldbach"
 path = "../../.."
 
 [[lean_lib]]

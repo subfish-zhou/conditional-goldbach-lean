@@ -2,13 +2,13 @@
 The snapshot namespace is renamed, then its local constants are mapped to current
 constants. Lean's definitional equality checks all 102 complete theorem types.
 Universe parameter names are alpha-renamed positionally before comparison, with equal arity required.
-This is a statement-preservation check, not a proof of the pending statements.
+This checks preservation of the complete reviewed theorem statements.
 """
 from pathlib import Path
 import json,subprocess
 ROOT=Path(__file__).resolve().parents[1];WORK=ROOT/'reference'
-source=(WORK/'Reviewed.lean').read_text().replace('LiLiuGoldbach16','ReviewBaseline')
-source='import LiLiuGoldbach\n'+source
+source=(WORK/'Reviewed.lean').read_text().replace('ConditionalGoldbach','ReviewBaseline')
+source='import ConditionalGoldbach\n'+source
 names=[n for n,r in json.loads((WORK/'declarations.json').read_text()).items() if r['kind']=='theorem']
 checks='\n'.join('    '+json.dumps(n)+',' for n in names)
 script=r'''
@@ -19,14 +19,14 @@ run_cmd do
   let mut rows : Array Json := #[]
   for s in names do
     let oldName := ("ReviewBaseline." ++ s).toName
-    let newName := ("LiLiuGoldbach16." ++ s).toName
+    let newName := ("ConditionalGoldbach." ++ s).toName
     let oldInfo := env.find? oldName |>.get!
     let newInfo := env.find? newName |>.get!
     let mapped := oldInfo.type.replace fun e =>
       match e with
       | .const n us =>
           if "ReviewBaseline.".isPrefixOf n.toString then
-            some (.const ((n.toString.replace "ReviewBaseline." "LiLiuGoldbach16.").toName) us)
+            some (.const ((n.toString.replace "ReviewBaseline." "ConditionalGoldbach.").toName) us)
           else none
       | _ => none
     unless oldInfo.levelParams.length == newInfo.levelParams.length do

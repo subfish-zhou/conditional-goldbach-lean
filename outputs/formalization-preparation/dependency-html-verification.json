@@ -45,5 +45,11 @@
     "121定义族可全文检索并展开高亮Lean，17结论含离线公式；所有包内链接相对。",
     "Lean图只显示声明引用，单个节点展示其精确声明代码，全部定理仍为sorry。"
   ],
-  "html_sha256": "3e28de5d4d33f0e6f4588b406e8ba0207024d86f06da66a16b4187845342d6aa"
+  "html_sha256": "3e28de5d4d33f0e6f4588b406e8ba0207024d86f06da66a16b4187845342d6aa",
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

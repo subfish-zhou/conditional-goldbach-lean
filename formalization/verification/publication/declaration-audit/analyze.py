@@ -40,7 +40,7 @@ def path_to(n, parents):
 
 
 scope_roots = {
-    **{n: ['LiLiuGoldbach16.' + n] for n in
+    **{n: ['ConditionalGoldbach.' + n] for n in
        ['theorem_1_1', 'theorem_1_2', 'primePair_consequence']},
     'reviewed_102': json.loads((HERE / 'reviewed-names.json').read_text()),
     'public_library': [n for n in graph['local_roots'] if not nodes[n]['private']],
@@ -55,7 +55,7 @@ for scope, roots in scope_roots.items():
         by_module[nodes[n]['module']].append(n)
     boundaries = []
     for source in sorted(parents):
-        if not nodes[source]['module'].startswith('LiLiuGoldbach'):
+        if not nodes[source]['module'].startswith('ConditionalGoldbach'):
             continue
         for edge_kind in ['type_refs', 'value_refs', 'constructor_refs']:
             for target in nodes[source][edge_kind]:

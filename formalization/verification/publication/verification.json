@@ -1,87 +1,69 @@
 {
-  "scope": "Portable Git dependency configuration, full independent type assignment, comparator transport and rejection controls; the previous 218-target full kernel audit is preserved separately.",
-  "time_utc": "2026-11-13T18:54:20.864276+00:00",
-  "steps": [
+  "scope": "Current renamed library, complete independent comparator, and external declaration/import dependencies.",
+  "time_utc": "2026-11-13T19:39:15.237144+00:00",
+  "build": {
+    "command": [
+      "flock",
+      "/tmp/liliu-build.lock",
+      "lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:11:50.142968+00:00",
+    "wall_seconds": 854.6831967234612,
+    "log": "verification/current-build.log",
+    "log_sha256": "27b371c227b113882953e2561ea378b3daf050decb019722adfde1cde8fd5a9b"
+  },
+  "dependency_audits": [
     {
-      "label": "portable-comparator-build",
+      "label": "dependency-graph",
       "command": [
         "lake",
-        "build",
-        "TexAuditComparator.CheckTypes",
-        "TexAuditComparator.Solution"
+        "env",
+        "lean",
+        "verification/publication/declaration-audit/DeclarationAudit.lean"
       ],
       "exit_code": 0,
-      "expected_exit_code": 0,
-      "wall_seconds": 11.405449770390987,
-      "log": "portable-comparator-build.log",
-      "log_sha256": "26baffe6e25f6b08a7b4d85239ea1cb124930090411b5156e2dad19579eb9823"
+      "start_utc": "2026-11-13T19:26:33.720749+00:00",
+      "wall_seconds": 24.946267265826464,
+      "log": "verification/publication/declaration-audit/compile.log",
+      "log_sha256": "c0c4d0a0505bb5b58826ebb3ac71cd68446124c5296eca4ef74bd0adbe8a6668"
     },
     {
-      "label": "portable-comparator-smoke",
+      "label": "dependency-analysis",
       "command": [
-        "lake",
-        "comparator",
-        "--config",
-        "../../publication/comparator-smoke.json"
+        "python3",
+        "verification/publication/declaration-audit/analyze.py"
       ],
       "exit_code": 0,
-      "expected_exit_code": 0,
-      "wall_seconds": 35.339922945946455,
-      "log": "portable-comparator-smoke.log",
-      "log_sha256": "43c0655f050bc54fa2e5ab37bf3ebf552c42a0770129306ab12d1833cb5bf1f7"
+      "start_utc": "2026-11-13T19:26:58.667522+00:00",
+      "wall_seconds": 6.08587047085166,
+      "log": "verification/publication/declaration-audit/analyze-recheck.log",
+      "log_sha256": "81c8e457dc991eb7ebf5530e59c6b36aa0fc238ae66a6113b46b5897fac967e4"
     },
     {
-      "label": "portable-control-condition",
+      "label": "dependency-imports",
       "command": [
-        "lake",
-        "comparator",
-        "--config",
-        "control-condition.json"
+        "python3",
+        "verification/publication/audit_imports.py"
       ],
-      "exit_code": 1,
-      "expected_exit_code": 1,
-      "wall_seconds": 6.205303870141506,
-      "log": "portable-control-condition.log",
-      "log_sha256": "8f9fb6fd42921a76414a36b19e1a135c1c63b8761d93fbbdc731ad732d9495ca"
-    },
-    {
-      "label": "portable-control-quantifier",
-      "command": [
-        "lake",
-        "comparator",
-        "--config",
-        "control-quantifier.json"
-      ],
-      "exit_code": 1,
-      "expected_exit_code": 1,
-      "wall_seconds": 6.409053858369589,
-      "log": "portable-control-quantifier.log",
-      "log_sha256": "7544401e2866e1845265bc899655d678f9f92aabc7a9f3c3ca7ce4c58b89edc7"
-    },
-    {
-      "label": "portable-control-definition",
-      "command": [
-        "lake",
-        "comparator",
-        "--config",
-        "control-definition.json"
-      ],
-      "exit_code": 1,
-      "expected_exit_code": 1,
-      "wall_seconds": 6.229032546281815,
-      "log": "portable-control-definition.log",
-      "log_sha256": "02e44430300335c7f3fe4f56f98b52c2847d7bd0dbe4377e83c83e33fe30788b"
+      "exit_code": 0,
+      "start_utc": "2026-11-13T19:27:04.753910+00:00",
+      "wall_seconds": 34.827970024198294,
+      "log": "verification/publication/imports-recheck.log",
+      "log_sha256": "a9b82b2d24b49706297e849988bc410ff8e7c79be3410d956e326d5b16e6e007"
     }
   ],
-  "frozen_mathematical_source_files_unchanged": 254,
+  "comparator_record": "../independent-audit/comparator-result.json",
+  "comparator_sha256": "049997b276e1071b33d1f516bec6abd2a420975237b49006465182e20ae15c32",
+  "comparator_targets": 218,
   "independent_full_types_passed": 103,
-  "main_build_passed": true,
-  "main_build_log_sha256": "11a1359fee60bb34bab76916785811cb82f4748449a1b8896341c3d571a40ed9",
+  "frozen_mathematical_source_files_unchanged": 254,
   "configuration_hashes": {
-    "lakefile.toml": "af6350523d8d40755191adbb5862efd7fa80b38c2d51f112f1606449c2d6426b",
-    "lake-manifest.json": "5525007a8a1045aac4129070b5eb3221a6347498cdff626281a9cf38ffb32723",
-    "verification/independent-audit/comparator-project/lakefile.toml": "81945561e7850fc4e5e0f128748abb3d74cef875b22fbea54010515aff469a3e",
-    "verification/independent-audit/comparator-project/lake-manifest.json": "27c06faf11642ea50f8cf3d3809fb3dac070759a183e93090da9e40176fb34b4",
+    "lakefile.toml": "25e7edc5782c52fb66e77d452a540f61e1179867b60532c0583b72e192304818",
+    "lake-manifest.json": "c6c9e13dc77d7e89b2c734894cc97d46ffd201827dc15d4935e8f83a81523919",
+    "verification/independent-audit/comparator-project/lakefile.toml": "202460450f1bcd521467bf51c7115782eda3fea9758feddf438107f72e6b7e27",
+    "verification/independent-audit/comparator-project/lake-manifest.json": "86917e0b1f6aee7f77d8be55053d1f7998b2d0f679dc53f2d515968d143e2975",
     "verification/independent-audit/bwrap_local_dependencies.py": "be9a4cf85fa4369af3aae49f6c3c4e99e20a9e46b970393a2b39b7f5f1c1c283"
   },
   "passed": true

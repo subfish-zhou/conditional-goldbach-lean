@@ -2,7 +2,6 @@
   "source_pdf_sha256": "998f35a787a2f568113fac12caf5a9a799f537e83a5e649be25f3a76ac81bc58",
   "display": "Images are embedded as data URLs in review.html; no external image files are required.",
   "verification": {
-    "source_pdf": "/home/azureuser/.codex/attachments/b084ec14-3014-4e90-bdad-233ea2be434c/LiLiuGoldbach16.pdf",
     "source_tex_available": false,
     "dpi": 150,
     "statement_count": 38,
@@ -20,7 +19,9 @@
       "Proposition 5.4 both pages 30 and 31, including formulas (5.6)–(5.9)",
       "Proposition 6.2 continuation on page 34, including (6.5), (6.6) and final sentences"
     ],
-    "previous_prop6_5_png_preserved": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/statement-excerpts/proposition-6-5-original.png"
+    "previous_prop6_5_png_preserved": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/statement-excerpts/proposition-6-5-original.png",
+    "source_attachment_id": "b084ec14-3014-4e90-bdad-233ea2be434c",
+    "source_format": "PDF"
   },
   "statements": [
     {

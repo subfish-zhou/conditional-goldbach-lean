@@ -14,7 +14,7 @@ GOLDBACH = (FORMAL / ".lake/packages/goldbach").resolve()
 LEAN = Path(subprocess.check_output(["lake", "env", "lean", "--print-prefix"], cwd=FORMAL, text=True).strip()) / "src/lean"
 OUT = Path(__file__).resolve().parent / "dependencies-imports.json"
 manifest = json.loads((FORMAL / "lake-manifest.json").read_text())
-roots = [("liLiuGoldbach", FORMAL), ("goldbach", GOLDBACH)]
+roots = [("conditionalGoldbach", FORMAL), ("goldbach", GOLDBACH)]
 for p in manifest["packages"]:
     if p["name"] != "goldbach":
         roots.append((p["name"], (FORMAL / ".lake/packages" / p["name"]).resolve()))
@@ -68,7 +68,7 @@ def remove_comments(source):
 
 modules = {}
 unresolved = set()
-pending = ["LiLiuGoldbach"]
+pending = ["ConditionalGoldbach"]
 while pending:
     name = pending.pop()
     if name in modules or name in unresolved:
@@ -109,10 +109,10 @@ for name, value in modules.items():
     by_package[value["package"]].append(name)
 
 direct = []
-for name in sorted(by_package["liLiuGoldbach"]):
+for name in sorted(by_package["conditionalGoldbach"]):
     value = modules[name]
     for item in value["imports"]:
-        if item["module"] in modules and modules[item["module"]]["package"] != "liLiuGoldbach":
+        if item["module"] in modules and modules[item["module"]]["package"] != "conditionalGoldbach":
             direct.append({"from_module": name, "from_file": value["path"],
                            "line": item["line"], "to_module": item["module"],
                            "to_package": modules[item["module"]]["package"]})
@@ -132,7 +132,7 @@ for pkg, names in sorted(by_package.items()):
 
 report = {
     "generated_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-    "entry_module": "LiLiuGoldbach",
+    "entry_module": "ConditionalGoldbach",
     "method": "Recursive traversal of current explicit Lean import headers, with nested block and line comments removed. Counts include the entry module. Implicit prelude imports are not added; reachable explicit imports are fully resolved. A module import does not establish that its theorems are used in a proof.",
     "line_count_definition": "physical_lines counts splitlines(); nonblank_noncomment_lines counts lines with text after removing nested Lean block comments and line comments, preserving string literals.",
     "scope": "Production entrypoint only; scratch files, scripts, reference files, and separate verification projects are excluded unless imported.",

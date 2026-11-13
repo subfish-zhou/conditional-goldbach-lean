@@ -1,0 +1,13 @@
+{
+  "command": [
+    "flock",
+    "/tmp/liliu-build.lock",
+    "lake",
+    "build"
+  ],
+  "exit_code": 0,
+  "start_utc": "2026-11-13T19:11:50.142968+00:00",
+  "wall_seconds": 854.6831967234612,
+  "log": "verification/current-build.log",
+  "log_sha256": "27b371c227b113882953e2561ea378b3daf050decb019722adfde1cde8fd5a9b"
+}

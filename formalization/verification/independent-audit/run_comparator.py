@@ -5,11 +5,11 @@ import datetime, fcntl, hashlib, json, os, subprocess, time
 audit = Path(__file__).resolve().parent
 project = audit.parents[1]
 cwd = audit/'comparator-project'
-lock = open('/tmp/liliu-build.lock','a')
+lock = open('/tmp/conditional-goldbach-build.lock','a')
 fcntl.flock(lock, fcntl.LOCK_EX)
 env=os.environ.copy()
 env['COMPARATOR_BWRAP']=str(audit/'bwrap_local_dependencies.py')
-results = dict(tool='Lean 4.35.0 built-in lake comparator', sandbox='bwrap enabled; extra read-only mounts for the two local Lake path dependencies',
+results = dict(tool='Lean 4.35.0 built-in lake comparator', sandbox='bwrap enabled; discovered dependency caches mounted read-only',
                sandbox_adapter_sha256=hashlib.sha256((audit/'bwrap_local_dependencies.py').read_bytes()).hexdigest(),
                permitted_axioms=['propext','Quot.sound','Classical.choice'], runs=[])
 

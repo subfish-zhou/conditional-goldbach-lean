@@ -1,7 +1,9 @@
 {
-  "html_sha256": "c3675bf4b78a857e807924b1e8d95583a01a3badbada0657e5df7e121b6d4165",
-  "bytes": 4888041,
+  "language": "en",
+  "html_sha256": "5a449f5fd28a16e205e995c006835e7ceb8ebaac1e35cc52e923a0e3406cbecf",
+  "bytes": 4798898,
   "statement_cards": 103,
-  "math_count": 981,
-  "math_errors": []
+  "math_count": 885,
+  "math_errors": [],
+  "current_build_sha256": "770b4ad5cc69e81ab2725272bffe067c5acb079691b6cc2253f0989346855f45"
 }

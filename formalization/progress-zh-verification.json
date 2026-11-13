@@ -1,0 +1,19 @@
+{
+  "language": "zh",
+  "input": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/proof-status.json",
+  "input_sha256": "047182b7e956e4aad2ecfd1ca750b7227e1d64a5adbab39af5bd08e58b780ac4",
+  "output": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/progress.zh.html",
+  "html_sha256": "717cca5769c5d908a83dc592433fabdc24beae20e2848b4d34ebdf0d859a12a3",
+  "html_bytes": 25609117,
+  "public_declarations": 1585,
+  "original_theorems": 102,
+  "all_public_theorems": 1354,
+  "formula_count": 245,
+  "formula_errors": [],
+  "woff2_fonts_embedded": 20,
+  "reviewed_types_verified": true,
+  "all_source_hashes_match": true,
+  "code_text_preserved_by_highlighting": true,
+  "proof_status_source": "Lean.collectAxioms transitively, not textual absence of sorry",
+  "no_remote_runtime_dependencies": true
+}

@@ -1,0 +1,1795 @@
+{
+  "base_commit": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+  "transform": "Module and namespace identifier replacements only; no mathematical expressions changed.",
+  "sources": [
+    {
+      "after": "formalization/ConditionalGoldbach.lean",
+      "before_sha256": "d07c44ea5c8feb492c2edba450798d85ebf7e40056647b18b20dc76c23542977",
+      "after_sha256": "df4063b4296b9637918127244f80de2fda6781a70df458d2e92bcefb922a96eb",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d510505835a9c1def009a79d2961e16d0aad83bb"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/AnalyticPrerequisites.lean",
+      "before_sha256": "b3c0e0ab13d433cc710ce112470f111ac4575867bb49e47647309d04c6f61686",
+      "after_sha256": "46638a8a800f2e7eb1003cf54935bf631d13b11dbe159b5b087d8588ec10b061",
+      "identifier_replacement_only": true,
+      "before_git_blob": "b956fe05db8114c735581eb7b33b9c40ea8cce7d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/BaseDefinitions.lean",
+      "before_sha256": "7f45907d31aa7d58864d78e347adba216010f3b0b850eedc152773166e2d0171",
+      "after_sha256": "344f1a7280ebe1db93096f46055fab5b65150e2ae86d84e8e5221a9ee66f4199",
+      "identifier_replacement_only": true,
+      "before_git_blob": "832a354018954fbbbf06913bd3dad0925c6ac6d9"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/CharacterEstimatePrerequisites.lean",
+      "before_sha256": "e50e4b8aaeb319ec26e09ab611735bfe545b3ea6fc750e3141d9241ef6a2ac45",
+      "after_sha256": "077871241fdca00bf3c85da88818d75de654bde20e3ca228d43432f2a2e25b42",
+      "identifier_replacement_only": true,
+      "before_git_blob": "15f1479095c7ee5ed4a7add1b44e626c80265eb3"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Definitions.lean",
+      "before_sha256": "db3a3d01a22a18d71a30aa9f7f36a3aea38a797ec805ae0b750fae5b237e4633",
+      "after_sha256": "e3f70244599e9a7c15b4e97ef16cf7919854aba1852b095325ddb0da7cd03fee",
+      "identifier_replacement_only": true,
+      "before_git_blob": "631c197717f2a98926e6d5e92b59edc8f5c0ef77"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/EarlyAnalyticPrerequisites.lean",
+      "before_sha256": "33c9324d06527ba12c6fc9d2d732f73468837c396e1bbedeb2fc748e214d0b54",
+      "after_sha256": "6c2df1178c4ff2b17f50813c2dd4046b8a066c8934c4452e13a58fd2459589c9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "fb63eb90f0b4d43c819b4ea0e20c1b3a89c25c90"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/ModelMellinPrerequisites.lean",
+      "before_sha256": "1bde1170be0a8ac44d86f08c7b26bc5ead34c51c0bf3925ba34e2a60d66b39a2",
+      "after_sha256": "62aa6b44bd36c52876ee346f96cb210f11e7c879185c75ad8cd4fa03fa7aeebc",
+      "identifier_replacement_only": true,
+      "before_git_blob": "849a337aefdbf12b75e9a02955434f8546a61ca1"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/ArithmeticComponentOperators.lean",
+      "before_sha256": "011bc62aea3c19afb971abd69786ee7627bb7dd02ec39e04b27d796401776501",
+      "after_sha256": "cfe8dab5cc50f2418dba4c663039cc265546e8882fcdc511abc9a8a18ce0a667",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9cb1f051cda95a9f2f72b414e33b87e734aa1fda"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/ArithmeticKernelRealization.lean",
+      "before_sha256": "9bed5798666132a08f5b60e6a0a9d8c0492b9e2fc34e0685bf0352a47647bf40",
+      "after_sha256": "bf8d53d517f976bc90d8edd1a17b92675b6214643eadc49d3a14b3b2ac9243c3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3b89695af4d74b256b7a5ceaeabe2c9a4fbcd6b9"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/Asymptotics.lean",
+      "before_sha256": "24ecf9e3fa5c8ea8e31c0ad813435379044df8d1ad3a89ac61148df81695900b",
+      "after_sha256": "5b9542cb47ca788883327eb60830ac62e5ab9a47ffc56b76fe3c3f06a00b01ea",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3378596cac12048d44cae7fd8648e6589b3782a9"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/BalanceBounds.lean",
+      "before_sha256": "ebacf3a2262e45a281a560e273995fd020f6ad7cda9b1ba131e3278268747f30",
+      "after_sha256": "4858f4b5ca7e72488f8dd7fafd5c98d27fe941b90f67771ef39d9580db232e6f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "071f3bc29600a2051b85a6ed30ebd6c87dcd0a15"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/BalanceLimits.lean",
+      "before_sha256": "29d7ed703b73531437a5a7c52c972e8567ae54d10c74a0fad2d083d43f4a350e",
+      "after_sha256": "95cba38ca0250a4ea00d18bb294c8c7765bb92bcd4be632619eabdd8dab6e2cd",
+      "identifier_replacement_only": true,
+      "before_git_blob": "973213ee76ef96d02c13bdae2c6871a58a9c0a41"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/BaselineEuler.lean",
+      "before_sha256": "887b05ffddc9febb10f2b207c66b68a61e0f63c0ca408a7ab22d92a0f219f3e2",
+      "after_sha256": "634ad2a15d5bf11ccc41265047089540ed74d4a55dcfccb069d22c1d1766b3be",
+      "identifier_replacement_only": true,
+      "before_git_blob": "001d60bacd3b89339be337eaf09b4ec9efd2492c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/BaselineProductLink.lean",
+      "before_sha256": "484a53bb82a7b9373f69fd198e5749b42c8120a0b0842861639049c8537482e6",
+      "after_sha256": "ffd67f78f815c760d95f4ed5ed67e6fff709aa33c566dbddf2cbe4ec3386bf49",
+      "identifier_replacement_only": true,
+      "before_git_blob": "8258cc7e0f5a9553b978b143d39ef4137c698b99"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/BetaIdentity.lean",
+      "before_sha256": "8425bca33448ae3bfcae4be66ca2e1842b5e6603f161ba833cab2b6f3a499b29",
+      "after_sha256": "2419fe4d6db0979a7cb7dcf8229a39c7e5fddb1d3513c50bd8116b5763cad21c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9886034328047f87c1db3a321113b80f537e1b6f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
+      "before_sha256": "26f8ad10324bd8eed77044841f5767ec28bdea6376e0c3147de160aee228ba68",
+      "after_sha256": "175b07d8830c4ee2df8b5e7bf569e2de234bf39153ce01ada9ff43df8d960fb5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "bc1103717c89be6d0126410b65b2895d234fa454"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/BetaMeromorphic.lean",
+      "before_sha256": "05a0afda7f756aed825d1d2c52898e503e3b6387a8edea1f89aa3cf1a1ba0388",
+      "after_sha256": "1e11dba712ec92fb1ff2a128b6e56d6531b5566a249875ab9c3ae688605b4db4",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c05c7f9d8f67d0a622ad89ba33ae5d6e3b567a03"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CauchyBoundedLimit.lean",
+      "before_sha256": "b4b8b5837e8727a1753b37b1b90f3a6f524230d097945d331a6e728393b11ae5",
+      "after_sha256": "0988daff095fbf07901e6537e43588290a7df961f023bfac82372b20d16ec82b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e201d950f73ffbe2ed0cdbe0e9f584cb0edddea7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterAnalytic.lean",
+      "before_sha256": "b954298c048a8804823e229bfc915676d03ec1c24569fc678358d8c3593cdca6",
+      "after_sha256": "9fb4b2a1deb35fc4fc4edbf869636a9452a4a7eb8ee5231436ad2fab1c6ba580",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7f42db8773b50660ba75dcfab50e5075aa834f98"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterAverage.lean",
+      "before_sha256": "89c0f44b3bc9c4b4f861e5996b3cc5c7651f58ebbdc111b0d07f64b29c83712d",
+      "after_sha256": "4c0347da3f2f23170a17b18ee9c7f56e8cae38f7b66b3b0fe3e32dea33522647",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3466df5d95f328b6d0f4bcf02567a923deed2b60"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterAverageAssembly.lean",
+      "before_sha256": "458f072aaa054dc5d5e63fa94adef10efca873f14b8a6a824bf1fad537a84b91",
+      "after_sha256": "4b19d426e36ac2f464677f348b8278e98cb34eff2f11b647353ac4d527a92f7e",
+      "identifier_replacement_only": true,
+      "before_git_blob": "fa9f9a2e542496a0c3d7673aebc493fe754362fa"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterEulerBounds.lean",
+      "before_sha256": "e8dd696280b4cd2a92581d75cb351c3a4eb9ebc2b4e669289aad4a4dc25621d0",
+      "after_sha256": "0db4ebac759a4c5b7a3b25e4c9b3b6c74e8f1a44cb15ba922fd156ac6b2f9dd6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "59240d83b336d46565f0f6a685a9ce9bb3c4a991"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterEulerCorrection.lean",
+      "before_sha256": "d68ef3ed11b93fc96ec7c149c37f1cc0a7ce1fc131b22c9038d6ba544e34ce73",
+      "after_sha256": "a762f936efa0636a8ebaffe22af7458a01641e524179c80a9d47626cb9277c14",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4fa1c8929e30bff8f27f332903cbf16cc7f89e0e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterGammaFactor.lean",
+      "before_sha256": "56809487be62cbb0a4ec77a2233a6b06fbc4672d3b01a05e606deaae857647a4",
+      "after_sha256": "0b3acffe942a710d8a3e25fb8528f1a561c3f3313e08c2c4962849c6399b4652",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3170de2e4c43707d953f0952ac4cf605963f01bb"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterGramOperator.lean",
+      "before_sha256": "1c6387eb5f6c7f16c1e7f2ff73013bcb8a04687d5433284c31578174ffdde02f",
+      "after_sha256": "7e510337459bc8a8ea1cccc5ceefabe774136845fb4b7348e3d6d21cb5e64377",
+      "identifier_replacement_only": true,
+      "before_git_blob": "bb78e309561f59e498dff776dc4eb2f7f32e8a66"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterGrowth.lean",
+      "before_sha256": "f7077508722c6bb8372d6e479c83f49b786701a9f1e721dd2bfcad98b8760fa1",
+      "after_sha256": "7b37cae96caa6993ef773b77dea9a92da8042a43d66b1f7ef752f6054d0c5b13",
+      "identifier_replacement_only": true,
+      "before_git_blob": "1319f6cf55d79e91c9b007e619a013ddcce59c57"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean",
+      "before_sha256": "9f5bdee3b794b28886acf4b416579eb4c60cc2eac14b7402ae1553c5022f6c00",
+      "after_sha256": "9bc50230fd96ae42bcd5abefdc5d7a39d10a01d276f11dd62e97d6337a2da7ee",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9594e2c51b111d8ee082eebc6711b99b257d247e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterHalfPlane.lean",
+      "before_sha256": "3986472cc67227c99b665e1efe85a6bddbc523716d48930af72a25b0121f5132",
+      "after_sha256": "e170b13cb335b2b8a8e79660ae56239a0de98506b8897a4ce1cce14438ee2645",
+      "identifier_replacement_only": true,
+      "before_git_blob": "805ccff386ac1049f8193dbbb3ac67bed391fb75"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterHardyVectors.lean",
+      "before_sha256": "e95e715a327d327a8361776bd2ebece01ad548d18946853760022b24f80f4895",
+      "after_sha256": "1d94e6df3381ec86260e190bf1da5efd4fd387c955eccc8e8c69b46a9bd171de",
+      "identifier_replacement_only": true,
+      "before_git_blob": "188d1e2a00541afed99806bcd1fa1850ce97012f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterJoint.lean",
+      "before_sha256": "e2abef709cd492e2e589071628ffc5ac83538b1b68cf148caca65c8be328084a",
+      "after_sha256": "7ad212620cf6bc47383b1ed265fd77992603ac481c85be5b76a4045a94a9e58f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c2411a6af387bc5c3332335b53b010dbd6219afa"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterPoissonAnchor.lean",
+      "before_sha256": "f38106b905cb7af1390fba5696d7dd699eab3262276cb09d48e36c8496ba36bb",
+      "after_sha256": "ec18609795d7dbaeaf3b782bb7e12402a44daf544b4ef1a3228a0c1b7ff91337",
+      "identifier_replacement_only": true,
+      "before_git_blob": "1e80c207d5fe4b0bb76768ce34dc4bc808d64c81"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterPoissonComparison.lean",
+      "before_sha256": "84e4bd64e48ef30073d7d9a0fbf74327648190153f7649d37924750131bcd13d",
+      "after_sha256": "ce777ef5f19e853ca0b764f9f00d9af9dbf0eaed2f3cba8ca3ee312d8a1eccce",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7614d4764cc6859f7708c8998ca1fd849caf0068"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterPoissonIdentity.lean",
+      "before_sha256": "9b184b2629a6b04db8f2402d860bac09f2d1d706d040209a790790df140b7995",
+      "after_sha256": "aa088d2b156d3de8eb2f63dc226c309982b1244b09aeae91d257b5ac04c88da3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "6539fa2731add81ed049e62c95ca845744b03759"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterReferenceEnergy.lean",
+      "before_sha256": "2c01d73ec85aec6d6b52706f7fab70bd0ffd3ee8cd65aa806f06d87684e02b91",
+      "after_sha256": "e896a625fa5abd96b1e5c22455b75ba95a6ad95da899e6b48d943cdf770e41b6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9185b4c6438c71cdeb2e1033a88ba5a39a4272b0"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterReferencePolynomial.lean",
+      "before_sha256": "d605f6b5a60f1038d87097191832df594c907a6724bf34633582d63d3e17577e",
+      "after_sha256": "56542642e1f1b451c7536baa35b343a9f2df6531f741a4386cf311b130b02efe",
+      "identifier_replacement_only": true,
+      "before_git_blob": "79b0d3dddc883b2adb0920ceb81f31d2d0cb56d8"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterSeries.lean",
+      "before_sha256": "a00daafc89b09b73a4a132a22bb7f10cd4276ede89f823ed7c22cd178f7e5859",
+      "after_sha256": "ca53664f9c1da0a22a43a7c5a7e3b972d339f72be40383bdab764aae4b09331c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "1bc10b648463779e8ee1f2963199c969cf6dd9c2"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterShortPolynomial.lean",
+      "before_sha256": "64cbdaa734f262364de597f5e5db8801c4da61c9f9866add7e5d8ea3f03fd8bb",
+      "after_sha256": "3027c353d2bb56715679645bc69f357204d1a3d5000be8765bb6d78c142e7bde",
+      "identifier_replacement_only": true,
+      "before_git_blob": "189046242fea1d9faf857c20870df82db05ad36d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterStripTrace.lean",
+      "before_sha256": "a7029fcce490be4fe0cc50668a813ef01557e7fdc717a4f5f6e617851319edc9",
+      "after_sha256": "c14c8e4379ca4c5ed12a05d2a8638f07cb9c88fb3440c29175d7c09069cc82fe",
+      "identifier_replacement_only": true,
+      "before_git_blob": "51fbb494be9fc7d60cb7a8db095c098ad8867b16"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterTraceBounds.lean",
+      "before_sha256": "d8f9ceec63ca5ee765af32a89493d71e10665a9a2efc80189f2949fe390cb803",
+      "after_sha256": "609afd42b000ee57721568752eb345c0589b6607ae8b415820eae007841f443d",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d541d4f5702d0082e5ce013d43710ce32d013299"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroCompactSets.lean",
+      "before_sha256": "eb3c0bad4fd66f621f8850ef057d461a29b2f1f795ef57afaddfba999438b4f3",
+      "after_sha256": "7b1e15e9da0ff6583e899724afca00549ae0492f6e0ab64fe78d24cae2bf3619",
+      "identifier_replacement_only": true,
+      "before_git_blob": "8c1134539593c46a0b5eb93479507266b0ca5876"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroCounting.lean",
+      "before_sha256": "84d2f7371a247db454896c2aaa2dec101b6a43ff688fa5976d3632534662868c",
+      "after_sha256": "b8e31a81d612056dc3b7f5c3a00dbfb96a77cd66fff7ca294f1dd97cf74961ae",
+      "identifier_replacement_only": true,
+      "before_git_blob": "f2bf538b076e10f705e4a925bbe483f186f40ecc"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroExpansion.lean",
+      "before_sha256": "4115374fff7935546c2e8cb725f3d095e72ceb1163b63ed5109009c36d39b1cb",
+      "after_sha256": "eae54ffea92ef1c830d9dc4d3d71664fb2ac960d33f0716a6db2a750c2bb3a24",
+      "identifier_replacement_only": true,
+      "before_git_blob": "162db77ce2620de1c015647151521ffbfe6c8b3c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroLocalBounds.lean",
+      "before_sha256": "491fca9b85ecc2ce56ce9b6de428e6305d403e0f7822627dead91a39280f0ac1",
+      "after_sha256": "77693194a48795cb9aaeb2e199174fb04e8932c3ab7811171c89cd7ef287e3e4",
+      "identifier_replacement_only": true,
+      "before_git_blob": "cb6adc693354fb5fd26072459523736f099f5c05"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroMultiplicity.lean",
+      "before_sha256": "162d736998eb9a2a681ffe773c5fdbbc277e37ed2d9faa739b0b341f3c5f6c00",
+      "after_sha256": "27ba1a48e97b154b31f60431b0559e0e92c74748fa3c815d565aa96ab3d5e4ca",
+      "identifier_replacement_only": true,
+      "before_git_blob": "b1b5a7aad78f5066f8bedc3d6edab658bd95c7b4"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroNormal.lean",
+      "before_sha256": "f3dfc672e26c47e49cdf469c542708e9c71c74d9550eb3273c1f71020a2dd1ad",
+      "after_sha256": "f64448cc103a60cf3de3348e439bfc05772b536da228bd506b8ced20dc7483a8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "09a0b1a7a9a9e1b8be63bc2a683df1bfd64a72f5"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroReflection.lean",
+      "before_sha256": "c7e9e8182dce0ef4c2543bde37d21c378b6297fd6800e59d0dd55ca62f0c9737",
+      "after_sha256": "2743c19410af613c8fd96d9b8015e78a1527fdd3e42f7adeea90c40c4052d791",
+      "identifier_replacement_only": true,
+      "before_git_blob": "fd46c6f168d0acc7db7244953908ec13dcd614e0"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroShiftNormal.lean",
+      "before_sha256": "c87a9ebca827e4fc94171925ddc87339eab9a90d58b79324717d93b73dee6e1a",
+      "after_sha256": "5e2fc52ba6f5094da7b6979690866005558622908ad16b885bb93bca7d1f48f6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7146429c637e610b493c6c128d0380cc7caef019"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZeroSummability.lean",
+      "before_sha256": "12bcdd6affd859234e77c8ea958152fb944a6bc148919016fe69b0e7ee4517f5",
+      "after_sha256": "d6fa7b42ed183fa06823826840a0669f951c2bf77157ffc2758f52bfc41cf31f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ebf4cc79521e219879a227375c09c1f1387ec67f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CharacterZerosCompact.lean",
+      "before_sha256": "2849dad93ab1135a7be1ded299fdd16be156ad70ebb03478683737d26513debd",
+      "after_sha256": "ce0e9133f87b37d11b0891b39eb17c11871b1388be1aaa226c518177ad2023e6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9586df3bb21ac0e2cee72304bf07b5d7fef3cb79"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/Characters.lean",
+      "before_sha256": "4c4dcff045659f42e229125614dc5775346e9e2959487c15d618c6c9cf0b5fef",
+      "after_sha256": "71f729581a0a2cb4729a8d39ff5f2f50893ec1fd29953103a848287a9de29860",
+      "identifier_replacement_only": true,
+      "before_git_blob": "bdd5ba1bdc7187a078acf1033cc48c382366969d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CompletedLZeros.lean",
+      "before_sha256": "960d80224f000038883a02644c8d43632ef9b390bcb846ea10f617dd43ae493b",
+      "after_sha256": "2499ba7ce92ab24af4d9c06a8ea87b24519c69ad667f495ad717de5b7ee97f9a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "37b533b486f61ced62ecca9b83f2ffcd1b115ffc"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/ComponentNormBounds.lean",
+      "before_sha256": "c16244abcfc83bd5fe2f16d19941abcd4c94ec79829e1b05c1f8844ecab00854",
+      "after_sha256": "eaa64557ca833b7e0e8660387b1b9069b78e45def2e9002ea6b8cbc27d7b6995",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c331fccf073bee9735518b2a152514ddc2820855"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/CutoffSmooth.lean",
+      "before_sha256": "4687f2bbe42e2120c272afee56ac864c4f962e81ca910ae133020810accb9c45",
+      "after_sha256": "b2fe19caa2829cee8afd50cd2c9f941bdf12ef8bd19100d41f271f1801b788b0",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ab083c92dee637ce91694ad5d5f38affa6381be7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/DensityArithmetic.lean",
+      "before_sha256": "4094723e5aa21123125397fce1b7442f9d41928fecce512a19868ccf2faa2abb",
+      "after_sha256": "2bfeb45613fed178c4caf87c1d0ffc694c71d165b7345ad75b582869d5914cbf",
+      "identifier_replacement_only": true,
+      "before_git_blob": "75dc62c504b91de544eacaa12524697c244aba01"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/DensityConvergence.lean",
+      "before_sha256": "93e507fe1851c146f156d9ada5b30790d8fc17441ad63ed5f1f28dda2695e56a",
+      "after_sha256": "47eae3861f0e61f606014d9b07f2633e6053b816c57b958af5fd00aa1d53f5e6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "5514e8eef29faa4c1dbbcc0ad58852b09aa5471c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/DensityEuler.lean",
+      "before_sha256": "413ae9d351705d784460aec05f87537b7631d365836906fc4b3ae42f78abf346",
+      "after_sha256": "d6903379ec4a309f4dfd6ee29a5f1373f8138e7d0a20cabd396a9ffd5482e1ce",
+      "identifier_replacement_only": true,
+      "before_git_blob": "019e795af25764f52cc0337e31764f6915d9329b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/DensityEulerIdentity.lean",
+      "before_sha256": "47eed5142303e114d4540db42ba84a058d50ffeaac822a41fb1a0942eef36268",
+      "after_sha256": "5b803ca7d56916c4c3332c36d52f694197221d47ed98e3f496eedbb6cb152f9b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "251d0a3967e02e27b2f3b58499bec1efc907f37e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/DensityResidue.lean",
+      "before_sha256": "b88b2d04cabe862f31b75413ec78f479ead1ac517abb304a5785287a04867d2d",
+      "after_sha256": "77c7313d1b19150be8cd743424aa90f6e3572b5fe48457042f53096eba8fb5ff",
+      "identifier_replacement_only": true,
+      "before_git_blob": "728da53cc5b4d732ecbf4fe71d77541d2ab7e827"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/DensitySeries.lean",
+      "before_sha256": "2c624af49fb62582edff6bed4ef74c0a79218d2d309cf689c713eab3a60567ef",
+      "after_sha256": "222c1053fa6f29cf9f633795a3cfe81bcdf98497a05eae6a8497348ab706537a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "79c8e72341c88ec65e5c3bc6692d336443ea95ba"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/DictionaryApplication.lean",
+      "before_sha256": "28f9aca77153f2070f067b520ea7095e2233afcc957d1d7dc457cd9c89bbd68e",
+      "after_sha256": "1c747c2459785cad1cc51ffbdd3356b0ce947a0acd3adfe6979e18916d2976f9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "02b5dff62f2a2fab1779126eb1495c0d3f4934a6"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/Elementary.lean",
+      "before_sha256": "88f42921a0f23d18e571f942a2ef0dddd1321f50e96a164753df18c75f686858",
+      "after_sha256": "25205dda6100839099f9bd59621e102b1b3d0a7523b1f5191b30e07ef7fb6c09",
+      "identifier_replacement_only": true,
+      "before_git_blob": "66a564497dffdd034118cdbafa3378a84db9cede"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteCharacterMoments.lean",
+      "before_sha256": "5f72ca247b4dba223c72560ebe0314292fe9960336cb9dec44ef11678ace6df7",
+      "after_sha256": "01a7d90f8c38060edaa309212cd306e1179d485fd98ea5370de4febc9132de99",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9b09a0919ff1131baed8e91cde272bc15db5f307"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteCharacterShift.lean",
+      "before_sha256": "6ae8efa9327006ad0e6e6a55139e079f09ef2fd3ad3cb992195dff79238a1172",
+      "after_sha256": "cfe1a432c2bae18869c0fd2da91625cc3042f68387afca91e9a9ea38d667f4e8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0b15d0224fac42be7822171fcabb5df655ff39e3"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteExperimentSpectrum.lean",
+      "before_sha256": "e3a9f6c26734f41ff1eb4cc72e9dcdeb71565ee0bf5287f57a05af4beb0f0c77",
+      "after_sha256": "ca04a0630b65a2811071f84886964a33ddaf99894f5101693b7a117ee6806568",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3d3b7bf8737354df8de2c5f75c97a3f790aa87f1"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteFunctional.lean",
+      "before_sha256": "f45fd96ce8a297865c6752b04115e2cebd76cfe0e937fbaa5b8a6c4fe24f7360",
+      "after_sha256": "a62c55091fd682b36889735946c2850ff82753bdcc8b8721be02db0ce0e77f6c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "085f66a28a789e015410b00686b93a752e800f05"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteMellin.lean",
+      "before_sha256": "b543e4cb348c3cf38869dfac081de727c62768230ced09315d90173316fedb86",
+      "after_sha256": "0344de8310659dc176efb66513b14241af66c4faa38bdff4b2d296f66438aba5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9a29bbfc3a0b06cfb9a885ca1bf96edc3c75ed21"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteMellinDouble.lean",
+      "before_sha256": "d0edf80cff76ba723acfc60ec506d11c6837770234562af2a06ddc3ce7af2fd0",
+      "after_sha256": "6a828181077e4c4c81de8e8cd1400ab0b7b0576eee79cb8c7e18f760306c2953",
+      "identifier_replacement_only": true,
+      "before_git_blob": "632a5d660d5ea83de6403b6b432691faccdf0ac8"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteMellinProjection.lean",
+      "before_sha256": "b805f4baac497ab9f3987f8d45ca6fec372a7d133dd2d40be0ce2916bef59e65",
+      "after_sha256": "adc05aab0f4c432b3f45ab7570a1e5a9459e687ab2ca2aa7be7908713370084d",
+      "identifier_replacement_only": true,
+      "before_git_blob": "5d56b597c9f42d84396827e9117313d848bf05e2"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelBasic.lean",
+      "before_sha256": "c4d935ba4987066f8ab9ab0a0657d8f2822044a7ea627c2c659f3cfa027ed671",
+      "after_sha256": "3e713cd486dcd2687371d7c95d61fa6261ec70daae921fc964ecfe03f1cf147b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "5edbcfd8dbf42ad52a851ed21e8ea469a88b30cf"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelBetaConvolution.lean",
+      "before_sha256": "2f022e28555f7e7d8f68733bc04b9a410cbea95863288ed71a5b807ffecde9c7",
+      "after_sha256": "322a4125efa32c0ca6465cf7b2ccac8a582104d1a18b7ef03b63640a9d4e54a1",
+      "identifier_replacement_only": true,
+      "before_git_blob": "54cd0e34fec9866be8a09ef26ddad9d84a91330b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelBetaPairing.lean",
+      "before_sha256": "7f9962cf70bf697cab975be2e4d071cd8db16b49952cfebf33faab1538e99b21",
+      "after_sha256": "e9d8ad9fd029e3b840c81d16287a6998063f601cf6648e9b1e2664c7a08bca41",
+      "identifier_replacement_only": true,
+      "before_git_blob": "cf49757e09f1468f2c4486efaffa680607c4a02f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelBetaRelation.lean",
+      "before_sha256": "0cb8535688e1bf56593fec7fe7ba80ccd836481eb1539915cf5ce526506f9dba",
+      "after_sha256": "afb1e649e0bdf8cff94d19ae4a9dc629f2b654ecd536a2327f8890c3d7fa679e",
+      "identifier_replacement_only": true,
+      "before_git_blob": "bac69c90f86586850ff687788e6847be2c509871"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelBetaTransform.lean",
+      "before_sha256": "511faf4915ebaa9665da5e6be3fcdbae98ab2e3d05a0b1962a1ef44ba8e10ace",
+      "after_sha256": "97cd02672f3fd290df85056daa7c273851eaa2f5916c2d32a77acca5382137ed",
+      "identifier_replacement_only": true,
+      "before_git_blob": "a3fa51fa412909ecfca03ea8a8765f9337f82bee"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelBound.lean",
+      "before_sha256": "206f394c31516afb768f854271d71d2a6e14c7d2224ece8c56255bc38d207998",
+      "after_sha256": "c54a947fa9d100a831b66ff6c9ab0eb2d460d88c6262c5b96ca065b855173e68",
+      "identifier_replacement_only": true,
+      "before_git_blob": "daaa4473d8a0dcd90a52075403c45a36e1dd1103"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelConvolution.lean",
+      "before_sha256": "d7de01b62599ae52b2f7cc3f3fa67fbac9da07a9918c62c7f58e6f3f0a63242f",
+      "after_sha256": "0cadde951ab0d2490c8a04031aeacabd4ef6c8600ff3d23de6f2599ae376dbc6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e585c605edd5360a6d430fc4e7f4a9dc9a7e428e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelDouble.lean",
+      "before_sha256": "57cab8257c2d8412977f1f6e9bf6ef0a6a9b7d5134c5343e427f31caa4726d43",
+      "after_sha256": "1a37ea6d83db211a5eaa0ea68b2e72589b65c146e52f10d609c449b3046ced28",
+      "identifier_replacement_only": true,
+      "before_git_blob": "36146e3620ad6f826becf45f1ccb90bc86f024a7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelRemovable.lean",
+      "before_sha256": "bb3bd9fbc57a236e47354cf0e5735ee16418a2fa8a99d3016978e550658fe3a2",
+      "after_sha256": "cd2a5fdfaa3455c3ee657ef2b7dea84c338a06c371b2451129a83da85de0744d",
+      "identifier_replacement_only": true,
+      "before_git_blob": "6784f09418f940fe170a3b4cba33b96b3c35d61e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelSampling.lean",
+      "before_sha256": "9504d202f41a18c873a077927008482b4a8b59530a2bcbcab2ecbe6c2e17dfcc",
+      "after_sha256": "d96f941a57d762a0608977791c8d597d2f9a82e5ab976cdf7b6f6bcba3313599",
+      "identifier_replacement_only": true,
+      "before_git_blob": "60faa5a892614c007cde57d07d6890a302d6da5c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelShift.lean",
+      "before_sha256": "24780e4bfac08e27c5ee33afd1209875a98b3304159a09916bc51903e2322cd5",
+      "after_sha256": "080b0426317ac94e5f766964710da7b8383f6c01ff81bce69e1b48700fde863c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "55bec191bc135f4afa9727882c7c0592295e7ffd"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteModelSingle.lean",
+      "before_sha256": "d79e8d26032690fd8da9d88b09a630ca57e7fed94b46ecd8cc3831ceca39bda2",
+      "after_sha256": "b2a2bb49ce650067f29ca10c8e714249f27e73bccdc2efbccd85f2fb632bef94",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7b75ec4d63ecb3383fd57fb24894e1cc1db338b9"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/FiniteQuadratic.lean",
+      "before_sha256": "e5f239c7d74938c288b731210b1f2aeca222f06ea7c3ef4a21c02651d54143c0",
+      "after_sha256": "f702af44842825e0edc313f39ff6ce9d149b11e974068ba8423b88936c72f5cf",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3891632f71e3c2eac1a4faf5b9de99565f31dcd1"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/GammaDerivativeLimit.lean",
+      "before_sha256": "4dba8b0ff79753ad355d8ca0e8967c3f92cfc02e06108c7443d764c9aa15e957",
+      "after_sha256": "7c5558c3743c63de02940746c03a802be9eac6af2898244796d5445e5fc0f189",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d179d20ce810ecb5266b6a1b68d1f167fe6aea3a"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/GammaDifference.lean",
+      "before_sha256": "c6f3ae1f2280be16fcf0233c7521f123a903f0739b92b7b4fb8a99bd9cd07b7d",
+      "after_sha256": "9ae408e5330ba0011c2b19cc3d385eca666fc808422bd0c08bffca104606557f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3778703f4e906fa6c112885d809a6bc6ca458b88"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/GammaQuotientBound.lean",
+      "before_sha256": "ba8edc2df3803bb6e58e0e72e920fb9c2589572d0d01def9f27cf6442be3c99d",
+      "after_sha256": "fafebeefab6c2122f81139b8c8c014df7446b45a28f6b244aeea99ceefbbe3f4",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d56f0ddbe1a4d75a055813742b2ecfaf8ab2c4ae"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/GammaResolventBounds.lean",
+      "before_sha256": "fbccaecd3809278c6208220c3aebbb6c1bbb0ab166c11babc5a21ebb6f033b7b",
+      "after_sha256": "323a39d76bf23b34caa85765ab21ec813012c76dd9451dc0813fcdeebfaac8d1",
+      "identifier_replacement_only": true,
+      "before_git_blob": "59f1d04c3aa94285a1965663e2765938ef8793d7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/GammaSequenceBounds.lean",
+      "before_sha256": "f3f761c236f49ccf6ffa9c02506c33e4058bfca51e1811b00d663030fdd5b424",
+      "after_sha256": "11f024dbda2247c6ab50deb761a6f049385def158152f9aaa893cbe3d5fd2370",
+      "identifier_replacement_only": true,
+      "before_git_blob": "82f14c78cef0e544948f2351cecd0277eef80529"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HadamardApproximation.lean",
+      "before_sha256": "4112e2da109bc9026ff16aaac7d417762cf62d3da4227a717308aff9882b4bf2",
+      "after_sha256": "09a482d88063cf89176e44f2cf2603ddf73596b043fbb4a5905d25e063bb88bd",
+      "identifier_replacement_only": true,
+      "before_git_blob": "449a419ae1e045fa041b4e73bd7f2570d7d2dc50"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HadamardDiskFactor.lean",
+      "before_sha256": "07d6af3418dcf87d97063fff198bb5113b2bb8e2763d2cc27bff194e8a7f5959",
+      "after_sha256": "a552982b204c7fa4f60d1d8161741e207b51c0b26bd7e63db9a9d6ce2d2c672f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "28da75c5dc739e713f35e1e284a85cf2031637b2"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HadamardFactors.lean",
+      "before_sha256": "4d7b6509e17e13a766a7a1e0a0634ad8cc646c2b116ae54f7499743eddcfb780",
+      "after_sha256": "b69162a47c3323ce2fe3735baffb1463916c290c3fe2c88bc5620a568e0d1f99",
+      "identifier_replacement_only": true,
+      "before_git_blob": "664151f1ee724a4421a29c2ab429cbb1b4796634"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HadamardLimit.lean",
+      "before_sha256": "5c61dcd7fd59d82598ec8f82d7ddcadfae384898b0e462fe123595018cec3633",
+      "after_sha256": "0826a6d6b3d269011fdb73928dafd812410049d09427beefcbcfb2769e910f76",
+      "identifier_replacement_only": true,
+      "before_git_blob": "574993cfdaeaef30d3156c80a487eea9a009540b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HadamardLog.lean",
+      "before_sha256": "ddb23112b4188a2ceb86892a35adf254df5885767e9ced33f004cc1b564003f7",
+      "after_sha256": "6c0250c32f5e6a438e20413de8d63310cd83121233a2f36b3b655c898010e781",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0548ad60b57f2cbaf658a80bc2d08dff62436697"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HalfPlanePoisson.lean",
+      "before_sha256": "e0b380b7661ee0cccfc4a07caccb630a9ae25c62dc22419cd3ab28fa8a08dcfb",
+      "after_sha256": "dd1a219aff0007e98e8041781d500e7e5d3211f17a290f4e6b9dbb71f9c86d61",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d153db6395de2af2bfc41ae2e1b780289a7f78fd"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HalfPlaneWeightedCauchy.lean",
+      "before_sha256": "8c01a7c99c97677966d378db0de92bf5e79f3bd4fb4066abc756ccb88b5b3693",
+      "after_sha256": "dda7a228afb561314fdabc61716fcfcdf70840b8a99c22120780c4fbd6557033",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c4113a191dabb47ba3aecf15217dc516815b3912"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "before_sha256": "0dd90718b84b8aeef068103900bf86a084682962c0f1a8d98cc9486bdc49221b",
+      "after_sha256": "e261764c1e615f469a8890b0fa4689f405c8f743a3a5bb4b4e782053c7e14d7a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "63797d48488465739dd7b44feebedcff34281e21"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyBoundary.lean",
+      "before_sha256": "7f2c2ae31ab1b9c534419034825b2524d9cdd4460ffb81ca18903a6156e70a05",
+      "after_sha256": "802137caf81f6ee8ae311f5e81434386578c00949055bf367f8e046e36fd44c3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "333c348a4bf9ce585aec7658f24d50b2eb38ab06"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyContinuousBoundary.lean",
+      "before_sha256": "3027e5a858fe02d4e378e0e99104d3cad5d1eb6d27582218d761005409a2aa6d",
+      "after_sha256": "ccf607bc5e4743b78f0d15d45e2b0e12f2d09e866bc0ad1a58a6e46dbe974476",
+      "identifier_replacement_only": true,
+      "before_git_blob": "8eda0be39e963716609bc13642381815c319b4fb"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyContourShift.lean",
+      "before_sha256": "95cad80fe48b173d88764bf9d529044c75d08d9615e4f68bec2bb68bfa16fca8",
+      "after_sha256": "31d7d0c8bff2b8cfb85017c1a66aca1aefd9ac9df6a6c6e6741efcd392dde976",
+      "identifier_replacement_only": true,
+      "before_git_blob": "1ac2bbd798f8914701f3f328008d7c5bd4e48ae3"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyConverse.lean",
+      "before_sha256": "15af84ebc301556270ebe3aef98c65d439263195ca1cf321dd83a3054938a765",
+      "after_sha256": "6cb56601733df1ac98fd1f5a462f9a2886c834e32ffe354f4f00eb6817a7eb01",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ce066014e8460ea027fe05f05b2a76a2acebb572"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyEvaluation.lean",
+      "before_sha256": "e83e7393b5e1439f3f14d80251b5dce4422a842eca71691f224581faadd4866d",
+      "after_sha256": "b4c263c4186641a3caf9dc851abdff7579899af744793503344f09c19a21e7e6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e3c3cc1a3d0451d54308f72362cad0699e80a077"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyFiniteGram.lean",
+      "before_sha256": "5d95e624b3e46f59a46a37554a7896cab2604f884ec04cdbd5f0507ce09e3a3d",
+      "after_sha256": "6aeedb86fdfbfb5e1be562c1bd888da2b1b76781ef3b6d49a6807aeec161c661",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3f94f57cef839e19f8e7983f040eaab30ed45222"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyFourier.lean",
+      "before_sha256": "896c38d33d1d5d654b322df03d7b7056568d06427bbb0c57763f580411316da5",
+      "after_sha256": "e3422c3ff35906f8520cf4943f1ed6d95718aeba50675dbc863d952987eac417",
+      "identifier_replacement_only": true,
+      "before_git_blob": "39cfcb81c67522a5229c2bcd628ccac110936ace"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyGaussian.lean",
+      "before_sha256": "c374a1e17f4462f7b0aca4596ae07cb08266effb070c6b178b1f009821e4d311",
+      "after_sha256": "77906ea6148cbcfb4923edd834285e77f8955995c3a64acd7789524ba5cfbade",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ce635de96bd2a1f798b67a94d9daac8098bb357a"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyGaussianDensity.lean",
+      "before_sha256": "a4245180235a02facb9fda1e38f0dc7f47d040f2b2bb2aedffb865a75a912792",
+      "after_sha256": "38e59d654ee0dc0de9ccd8b75a44d28f9570358e2587555422ba8fb21d9e5164",
+      "identifier_replacement_only": true,
+      "before_git_blob": "23ca2f83eaee8a627e48f5001ea17c0e3e654140"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyGaussianRepresentation.lean",
+      "before_sha256": "18bb66b6115f09189e1bc28e5bdcf78fe9980679a430899184c3841d2666e70c",
+      "after_sha256": "1b69c03791af5ebff43b687202112ed8f701a1555fa0d03f611b3546d939bee9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "b36269c2b56bc710978c6e475ea6fa18687d89ea"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyGaussianSpace.lean",
+      "before_sha256": "f1c0c379beba054ea7b8706a888e0a714283b6d25cab016ac2f71dca59cd3b59",
+      "after_sha256": "691af79b34fb06c6f1c64625ed748012e5ac685cffbac1a06a69faef25e46ff1",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c35ef953233f24f57108bc4d37f28b8dd9a64e20"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyHolomorphic.lean",
+      "before_sha256": "4ad0433c7190f9ffba95609c65e9b06c09369826762a605e68eaa3536f20cbde",
+      "after_sha256": "a8ff87564d3c680ef9b018b65da3d59106b9f5a935c25c00ef14042a03f7fe14",
+      "identifier_replacement_only": true,
+      "before_git_blob": "118bbd2bf795ebe97082b941fb4f9c1bfc94f41d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyInterior.lean",
+      "before_sha256": "4dd6a1cd49873520c26535db6e6c75ebba65697588fe4a89fcf88db7a0bf920b",
+      "after_sha256": "5e8b452052ea47d1ed1f99984deb777b33524364d2061259811a36e0d7a8b797",
+      "identifier_replacement_only": true,
+      "before_git_blob": "94194167a6e75486adeb5ca57e05fce14f73b2f1"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyKernelColumns.lean",
+      "before_sha256": "8f42229565f616a1628cfa80325f869f8555e973ba2e6f900733577c8d4d0a08",
+      "after_sha256": "46f1e74e7d0e882df2a687dcc67b9222ed3f0cc7269a077051a3e6e33c76e363",
+      "identifier_replacement_only": true,
+      "before_git_blob": "a0bec0216cc568b239ff373baf152e8476cb8e8e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyKernelMajorant.lean",
+      "before_sha256": "a790b9a948c4ac2fca82d4563a8f8b4615216990651907f29f88621dc8c33fe9",
+      "after_sha256": "9a2b51955c6466ef47622d4ed43c534e736c5b321a3e13bec9a2f0fddc3d2fe0",
+      "identifier_replacement_only": true,
+      "before_git_blob": "443bc1a28e213de705ac958ba7574da738f3e833"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyKernelOperator.lean",
+      "before_sha256": "b3a3728fc1a964f29c9bef98a830e9a8b568575c138305e1c7251200031b755f",
+      "after_sha256": "92730f2907182ce63665bb1ae6435bd54ba3c54ceb2cd2a198ae2f904789d039",
+      "identifier_replacement_only": true,
+      "before_git_blob": "b3d29f89621263fa515a3bd8d33ed60ad2a17c67"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyKernelPairing.lean",
+      "before_sha256": "6c044816790a1e7e1f1ec9bb9742e0e9610534fbbdfb4af7ab6f36968bb2d1c3",
+      "after_sha256": "869287198208bdbf4b9f39caa75bb2f00d7e78d5a9b98211c8cf2bbbaab42c6b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "424b2a8b7f895c89b4f1bc419c148674f593d03a"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyKernelResidual.lean",
+      "before_sha256": "96a5cf540f9cc10119c46196f31c6ca2c148b3e5801ec5c2628e9a62735f36fb",
+      "after_sha256": "f5be2d62ede91de3165d346ffb7cdcf1d1f2bdc36d6652f81d3e2356ef0ab764",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4a63f33ccd4a0956a96c609859b0825abeee4d7c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyRawLines.lean",
+      "before_sha256": "f3ee12d4e888bb1acb2d9eac8fa6d21cdf750438a5f6013a7abb89b6790374ae",
+      "after_sha256": "5ee828ac543fe453461c99dd9b819d2170ef7196335280237fcbe47836bf77c4",
+      "identifier_replacement_only": true,
+      "before_git_blob": "32eb7dd13abde940dd3f056ef3a06997c8b67b2f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyRawNorm.lean",
+      "before_sha256": "3a7f8e5e87ef64e334df88fcb29965fb40eb7ea1020ade33835b83b282677f7a",
+      "after_sha256": "54547fc272e8356500f96a5cb71239e6b373285dcddb4ba498f741d2d34558ca",
+      "identifier_replacement_only": true,
+      "before_git_blob": "05847bd90843c660adb3cd55456a2dfa4ab85474"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyReproducing.lean",
+      "before_sha256": "bac4cbfcca4a11b6885eb9c2986e0f294e533188778cc3f21410e6fa0946da2a",
+      "after_sha256": "d334621889ecc42f92da093d8c893e5e049e1df9e4c706819be26e9b9e902127",
+      "identifier_replacement_only": true,
+      "before_git_blob": "f6d689b1758c5b7a5822aafb467afe99e305a2e7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "before_sha256": "d5d9b772b68da4f949303d727074cd2bbf890da4c4911a3d1fb0f50884049803",
+      "after_sha256": "5db648c6dc2badd7f3ff05eada47c49e0fb0473ab97a23cfeed320a643bf6f1d",
+      "identifier_replacement_only": true,
+      "before_git_blob": "41331f06a17e207cc8bbe67d9bbcf76cc8ea8cca"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyWeakLimit.lean",
+      "before_sha256": "ebcc90c9bbbbf7d371ddd5853f9698e13ce542c04bd99a63de6d1c1083aef57f",
+      "after_sha256": "843397b260719db6ebb7edb3ae2b70c048166626b6efbf036348a3bc080e9386",
+      "identifier_replacement_only": true,
+      "before_git_blob": "02e26d1c3b4e141497800d37f39c84f37ff97365"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HardyWeights.lean",
+      "before_sha256": "a1c8d9a9028a4a672216db5c9995df909d8c7550105c1cb3f271fc6f24895f3e",
+      "after_sha256": "43c8a3d8c5974d69c71c2bdbdabfa4e2b43080707d1595f53475fe41f73b40f9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "59086665a9fb7079b03784b91ce3a5a611101ab1"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/HilbertSchmidtTriangle.lean",
+      "before_sha256": "8a3b6a6605c695f6a9a79304153bc7571407f786bc62c5777f067c94ff648f13",
+      "after_sha256": "6eb3e529d21e64cc5cc7d2f0deaaa84ff3890c8c1817055f4b1b97033ce9056f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9eaa99f0e83afb977a4aee4bca2d0056b16e55be"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/KernelAlgebra.lean",
+      "before_sha256": "372820e04e962b2e92abf318e8253f2ba2385c401381de2c27f15f0f6cccac16",
+      "after_sha256": "05ba5d95dae57eb68372921565f1d5f2aaac47a71872a0db5ad3e7e77830b6ca",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d4662c3bf3f10c8821fdfaed04f20c9b101ecd2a"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/KernelGrowthBounds.lean",
+      "before_sha256": "2df5bf563c5378f6f93edb479647969f06d8008eab6bc2c4e5edaacc1c1b83ce",
+      "after_sha256": "7c23e01a5a26b46bf91df0dade55b3063d12c70445d7b2bec10cd4ffe80ccd9c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "5ed7ddbd835913068a804b17945d39a63abcb6bc"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/KernelRegularity.lean",
+      "before_sha256": "d1bc95de141ae2db0239d51bd043458199de6ab79b3bdd31efcb8135fc576b19",
+      "after_sha256": "3ce59703e60e6e195c84b3fd9495ce074641dcc85d2162c0fe703a8935abd964",
+      "identifier_replacement_only": true,
+      "before_git_blob": "70b8cf1ad40c3bc029669f68a29287a487fdedeb"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/LFunctionDomain.lean",
+      "before_sha256": "4c11a4ddbfb720e558f8559b174e757776d285398078f8192ce8d5a98eb939d3",
+      "after_sha256": "0f6c6d1f537f683bd17ef078b523b52339b7970dbf85a33023ec92e72e9389eb",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9157263b7038dabdd0a5e3b2f9d6369b3bb8e98c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/LogDerivativeDisk.lean",
+      "before_sha256": "23328b1a1a7e5320dc6ba5c389e544f641e301a554bb6d0d222b6c1d4dbbccc8",
+      "after_sha256": "47eec4e7adb123821db656a161da64a923f4904b26aa7291c79c20273b946e0e",
+      "identifier_replacement_only": true,
+      "before_git_blob": "367f87375ae59df789a1bcc5d0a900bb8e981251"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/Main.lean",
+      "before_sha256": "123300a87a2a5c71a2e2dea1e35bd517e70b4bd585a1fcdbee4ffa58bdce7182",
+      "after_sha256": "26f0d29f3400725f74958628888504bc3b8491abbeea0d055c2fa5392025ad5d",
+      "identifier_replacement_only": true,
+      "before_git_blob": "2da9418e7dd3a9f392d4520e484dc556f45040bb"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinBasic.lean",
+      "before_sha256": "52622498db96cb45f8195e0485274e0a18cf50f4bbf08c8078d1c133ce5eb07f",
+      "after_sha256": "e2ff3cf7c139220e409afa7b5c7ec58a6385d59cdbdb893ad3d62641f8011932",
+      "identifier_replacement_only": true,
+      "before_git_blob": "13806449751d29dd4151d29c5c8b219a015e2341"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinBetaConvolution.lean",
+      "before_sha256": "55a7325ad996bbfa3da462a56334501f145e77b46fddeb91a8bdc1b58d05398d",
+      "after_sha256": "621bed0f55f884d2f24b1aa74dcc94f0cd580849e9ed8b628ef7cbbb1b372db6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4e8b41c6fdbd2bac9f72c16a41ef3198024a5e6a"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinBetaInner.lean",
+      "before_sha256": "fe3862c3ccc51dc727e6d5e3b97e69f7b7cf15dc5aa6d01c29fa8386c90dfdb9",
+      "after_sha256": "620089ca7055b2b4df9be40e20a42ac7bf62de1e7a353642f63b7e38f9fb0c19",
+      "identifier_replacement_only": true,
+      "before_git_blob": "43360df7d6bd1ff3c6f298f1154e6ed428a7a151"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinBetaPairing.lean",
+      "before_sha256": "66eb7e586ad44babe4492b812dfdad205921c1d141deaf283f0bad03f67b3732",
+      "after_sha256": "b3bea9635c0ca8f0ca06774f2596260a37b90253eefb91a7ec801fe08d8d89ec",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3b9bbcd9d8af72c888dad395dbcf863043adc651"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinBetaRelation.lean",
+      "before_sha256": "1abe5724d5b3a29e56c1f7dd812e5b9e04e500bd7ee225ae8121e705d78fc049",
+      "after_sha256": "47f5f503510c4744afae58f64572f4b1d31870e4c8e69007bb64fb655cd3c0cd",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ea420c4c6c431a79ecf2245ec42d88688472bb1f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinCharacterShift.lean",
+      "before_sha256": "985b34f94d0786ca3c20d580e763b0f5bf26afd504570f881b7f7498fa9543bd",
+      "after_sha256": "62fb675edbe5a085e257a861795ca6f082e63cd7780199040ac59a68433871f7",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7390854580fd08ad9dda409af4e6942466a9050e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinCompactPositive.lean",
+      "before_sha256": "98b36d890cb580db5160ba10d83951d88e24544c9a95dc38a757a138a3e855f9",
+      "after_sha256": "c247704b464e4b980dd843d2d81c985c2530d4ef31768bb520f4cf4946a3b62e",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0e4d2e6840a6527999b4b2ba2a173efb0882c862"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinContourShift.lean",
+      "before_sha256": "d3209f8b8229ba20e11bb9e8bd1c0458792efe6a5692dc393bf941ba2c553a06",
+      "after_sha256": "24b6f0241232f7bfcfa1ae6ee06edb2d9d3863721ad735d45c0a2e3ad9a5d554",
+      "identifier_replacement_only": true,
+      "before_git_blob": "807e568ee5bff69b3519ece39ddd0039e5a60e46"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinConvolution.lean",
+      "before_sha256": "e333c02ff34c6333b3a8f512a7fe68e6470b8b2abfe4cd9af87ee729439ab323",
+      "after_sha256": "44b2b959714e44f59a12709698aaf3b87a7e73ae386ada6da88960a17a7a83f2",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ace9c28a9aab878be28d13ba165573935a801854"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinConvolutionTransform.lean",
+      "before_sha256": "8c04fad2b705286f5376a069084974b23cf9d695109f5eecdb850d7a08b78fed",
+      "after_sha256": "7275514d0b886f95668f212d94908152b49cf6e6317980589d4548dbcd2b8f3c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "2d48fe390ec968ea249fac795c8fefeb17071ace"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinDiagonal.lean",
+      "before_sha256": "967688a11f5f0d9e404121fc37f2af410d2c70db10a0052a2db063fb81b506f0",
+      "after_sha256": "6cc3b1841b613951824e3179dd772b82c27784ff8ccd79ea9eaf3b3c98af46c5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4c02ab171d95ac6865fca4a9ca3247a6075bb276"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinDifferentiation.lean",
+      "before_sha256": "22741818a23a41e57ee6acaeced91aefdb02ba8ec3af72fd4f6acf95f624139c",
+      "after_sha256": "5c54ed2aae8a204962c9c8fb4adb216ad316e0c2b5841a09cd99526d830b59e5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d5c16a0207be20f5852913e8c7d55aa0598d6c3c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinDoubleSeries.lean",
+      "before_sha256": "2053778fc63179b2cb39e80d8750e04bad29da624e9960d8756feed313e83952",
+      "after_sha256": "f726ca2b5723ce70fc248b70ebad8a39bf73322d99bc56d7d82c09970cfac7e9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e925ca27a6be4178ca8013cdd57bbe471b61272f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinModelBound.lean",
+      "before_sha256": "c2f09e998c8e8c8f812cbfeed17ad5408a06f74c5e9862b959c3e1b21a610cd1",
+      "after_sha256": "edbc8f0e2a85dab50ecd21e0add4a18d5854ee2842844a9049ef4c2325e6b871",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e1a9603fce654d0249b7ccab349b5aa3852707de"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinModelDouble.lean",
+      "before_sha256": "efdf7ed5837060586416198b64e6a9739ca45bdff135470d0a9f441db61cc8eb",
+      "after_sha256": "48fcc76de4e01ee765747107d0e27c4b7e8679653b84b8599a881d934b3b6045",
+      "identifier_replacement_only": true,
+      "before_git_blob": "21fa21ede0f98ac7eed1a02e88e3aea00a3ca206"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinModelRemovable.lean",
+      "before_sha256": "fd5fb07bc9089a3b2be28ab5ce3accfd0b3a8be44758bb30405dfab4e8e47636",
+      "after_sha256": "c9d53d1df1026f071d9631c114a8bd9ce99522feb2840565bfa85cfdd32fa4fc",
+      "identifier_replacement_only": true,
+      "before_git_blob": "f597ca9112029c9682c0ab802b7c98f29a77aaf1"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinModelSampling.lean",
+      "before_sha256": "d0087f0752c53321d1689e78f43bccff25571f5773fc30c3f7f601e87fd808fd",
+      "after_sha256": "c043493968ecb5c6ba1f25dccd78a38f3cc5204b8786a44a2af719e6730e671e",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e64a9504df0958f1cd71192ca8cb16744370cf52"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinModelShift.lean",
+      "before_sha256": "3a2728867418b3f187a5d240d0a5b10d1d00ae17bbf5bdf477b6adbeceae4edd",
+      "after_sha256": "f25fa1e3250cbdcc7db39d849cd08ab5eea24be8648ea8cb9863738d263e5b14",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3667fdaeeb333f7aadcfe3809c6d21f6cf5f645f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinModelSingle.lean",
+      "before_sha256": "c5ec46b3da59f89ac28fd8d51c5ccacc75ede40f28c6258f96a0e64ef9b2b7e2",
+      "after_sha256": "8ee44401b23a8d6fcd00d5b679746a926b7d78f556b67626daea8495ca9006cc",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7ccd1118647a0b2be8c9c9b361ea075120dc8599"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinMoment.lean",
+      "before_sha256": "e2f36b37753c96639b0ca636555641aca5e0760d8f47037f8dbbb51337102c5c",
+      "after_sha256": "4d0375ad55dbf9d3ae9aa4237dec21f7d47588d51f55db115b5ee3ae4b87343b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "8145bfece13fcdf560b703599a437a9e64a43641"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinMomentComplete.lean",
+      "before_sha256": "d157978c8902d5677667d181dab1b572871b7c172b615b361509119b99de75e8",
+      "after_sha256": "c619d2935e500024fee2b640a7010581f9cc4030e6eb1be340fbbb436e1fe20f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "64ad4b8c3ce6a5a2773db55e73cf6883a2fc8a74"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinProjection.lean",
+      "before_sha256": "c9111099edb0a3de7ab7121af481459f22f9382c3fc6cad7619092a28df1b7b9",
+      "after_sha256": "eb34918f51f8a47d9ed4bfc106758f17935c4d7911cfe0fe2409e551c4a5d06f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "97d83398c652281641270458489e803b6837a5bd"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinResidual.lean",
+      "before_sha256": "77a5b589168595b8951405141c66f55192d39d3a8f00588e6ad907dff372f825",
+      "after_sha256": "68703a4fe1bafcc6696d100080a686eec82baca2c006a4aafe6d972b532f7f31",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0d6107ec9954e1a84c37bca2f5b9bf90aee48614"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MellinTestInversion.lean",
+      "before_sha256": "2ac1077dcea40007a3ccae61d2dbed6e6819bbd6a097ba6015a14b6d8023c5a0",
+      "after_sha256": "1c9b4ace8cb0ded166982c086785dd94dd6ae4cdbe958b26682a6ebd7aa16a07",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3d413c0a3cff8040c6ef9a47ce781b28ac02aa71"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/ModelContinuation.lean",
+      "before_sha256": "2c977b98cac57fd6ad4bab74c298ba9263db637620b8f5cc4a96c6c397229d47",
+      "after_sha256": "89474cd81059247a05ad167cd68a2aa31818c9e693daeeba3109ad127c6eb6b0",
+      "identifier_replacement_only": true,
+      "before_git_blob": "1efc997de537fcab3168366483c6779241ec6b0c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/MomentError.lean",
+      "before_sha256": "518ca630d3e8d95a6778e3b2984650c0d991e12e08801c2f1c20ef07f241fae3",
+      "after_sha256": "aeb7150d0cd2b7463f8645af11de3254a472ffc0a29d416e9fb6413840ea9353",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7f40ef26e258d419f74e6339442b00f899b340e9"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoissonWeightedEnergy.lean",
+      "before_sha256": "d6ffe2a4a462dda828e5f5dd1682c75596bbc8d7b35508ad46decf65a5849257",
+      "after_sha256": "9f9af34d5d71de4b4302038dfc1fc6120a13e498e21bc8850d148f03a2ac746b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "581367f180410e66b5a7d568cdb8c99f51ac974e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleCharacterKernel.lean",
+      "before_sha256": "e01b9a87e0654ad0ade05511995fbdea12bfac418b4fcacd1095067f252b86dd",
+      "after_sha256": "ec05e499dff48cdc74ebefcd7460a2946c9146ca98e5447c3d399f8aca4f4c10",
+      "identifier_replacement_only": true,
+      "before_git_blob": "2e6506aeea69a9dade9a3ffa456ab0c70158d1f7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleDiagonalComparison.lean",
+      "before_sha256": "261c3d56b8f85788c6dcc8b40cae048467a8847ce20d49c9f3abb3f44dd5a41e",
+      "after_sha256": "0c21ac5576fda22ea960c8a4b266a8498a32b8c8d4537c1f2868ca97f867a2f8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e9b20919aa35d77828e87a9c93c9b86b7d1ed608"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleLogDerivative.lean",
+      "before_sha256": "7d1691187474d948cc5e21698b9f511f95e2649640004c280f83f51b842ca939",
+      "after_sha256": "03d8112e7b5292e754e7ca873d4bdfbec85209e41d558f47b8fa208f1e06e081",
+      "identifier_replacement_only": true,
+      "before_git_blob": "6190a0d4737035610d7c19741dfde9dd233f119e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleLowerBound.lean",
+      "before_sha256": "73f85ac3cf85c8d469a3eae161db591559dfe5d4636893b363aaa9527b5ff219",
+      "after_sha256": "fa9bff3d5a2559228c2e12f2471e871b6e7c385757ff66a991307fa838ded8d5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "53f651b3e6cc4a2166bb889f9994b43343deaae0"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleModel.lean",
+      "before_sha256": "4fe7e27d832b5b4198c6f6cd04916a6e7b8e11ceab2a6ae4528325c9f329f871",
+      "after_sha256": "f9be4f4122964ac200134b63fdcb3cbffe805a46af28523595cf2eb9e7aa866d",
+      "identifier_replacement_only": true,
+      "before_git_blob": "7f68f9c971968ab6a71574b2dccb607662135237"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleObstruction.lean",
+      "before_sha256": "65e85f93cfa7196e3641c09919e0b4caf09506e0fdacbed6f81ac0cdab64b213",
+      "after_sha256": "511c5843215f91885afad232c29c6aace789dfc6c030bb9a8ca21ef117fc1026",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d837092830fb4c8ce1a19e92e1941b9f592e27dc"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleSpectralObstruction.lean",
+      "before_sha256": "bffbdedb3de9a8c89290d97f6dc466e6abbd2a2d43ebbe16ec83801c342f7507",
+      "after_sha256": "e32117e892e7f0f4bd424b11b10597cd806f49328f9e8f7c2833d5ba445e9e51",
+      "identifier_replacement_only": true,
+      "before_git_blob": "23d2d55d9e4bdff096040a0f633d3a17d9cc5922"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PoleZeta.lean",
+      "before_sha256": "349f48bf9450e29009f9bf441673b90fe25df5fe5d8a4ad7248f5b0201d77e1d",
+      "after_sha256": "8c7b3ff8cac4c18bafff98453aa9b6999471773ad7306cb067cd790db209e45f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ad259d44995293eeea8b1d35c5d5d6dfc18fbe1f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PrimePairs.lean",
+      "before_sha256": "1516af3f6c2f03efd8a70634285f6da42c5cb1c5330512e2547c34c740970958",
+      "after_sha256": "0285eaaea869cceaebd717c8aa69a60a52f60779c6b767e8b6517025e1a06d47",
+      "identifier_replacement_only": true,
+      "before_git_blob": "37eb0cc75d83b0370fbf52a782616b263c7f0e94"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PrimePowerDouble.lean",
+      "before_sha256": "d4adc3eb5279ea7f04e0b346611b8947aa5cce483e317754108f9472f10a224a",
+      "after_sha256": "037b8d46c6c2a9c8a6c4d8826a7687370a111965c689d618d9395607cc7777fd",
+      "identifier_replacement_only": true,
+      "before_git_blob": "8567824fd50b2481297e10c077e5271670386d16"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PrimePowerReindex.lean",
+      "before_sha256": "9956fb0b4591b8bf31d2abb0177dff0aa5e3312cd8b61aa7ee993206aa66ba99",
+      "after_sha256": "b79a2ad12f873eed0ae7bd97a4acfda79fa2ab753965feafb524157458fdc876",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4012ab523c85d3d0ef54720d423aeed04c0cfd6b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/PrimePowers.lean",
+      "before_sha256": "3730b96d5dfebe81af62c541ef684430b2b35aee4139029ce07a1bb4b3734753",
+      "after_sha256": "3f27126cb32ffd72018e5483522e30ea39a5d752050c1219d11b21361d622152",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9ab16cc44a9af9e857574db5d96ef4327d3bde3f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuadraticAsymptotic.lean",
+      "before_sha256": "c8c00776a0af811f25c35d43a931c7b81c7b3f1c0194f39ddd9d03d48ccc0597",
+      "after_sha256": "b77590bf50dbe3471605799f88dba371e891479762684a076b1345d00f048103",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ce632d45c9e1120a7817bdf4bd911a7104139233"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuadraticDensity.lean",
+      "before_sha256": "dc7a30736079bec2832516f82699916da3345d09afd16ecead95c9625a150af1",
+      "after_sha256": "708611a232d4c3eae8313977862f682d6aa822b1a64932e7b4c926f7b15e51dc",
+      "identifier_replacement_only": true,
+      "before_git_blob": "6106d91f9b843697e2e20ba8f6bf4250c556cd6e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuadraticEstimates.lean",
+      "before_sha256": "e5cde112df8302d7b7cdd158a10674df190ae4ff9ae3e0846ed87d03ff9d4406",
+      "after_sha256": "449d674c5d7e0a5cbc61319b46e89bf4e919c333dc772643131b44679d3bece9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0ee1e9ada695bf1de4033c3c0c2e3bdd692049ac"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuadraticFunctional.lean",
+      "before_sha256": "e3d9467b4a82d8ae72cc6cf098d9996f74a8cb69f72a72f5a53dd47de69eac37",
+      "after_sha256": "dff4e06303d46d3e9333196c370b6e5504fa0bf48e0dfa42027411a328104799",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d46aae3a84fd24e6a420d0606e8d4f4cbd023566"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuadraticIdentity.lean",
+      "before_sha256": "356d3311434ed5dd7383e340c04d8de2da028cd55a3bb55813cdaa1d56cc6877",
+      "after_sha256": "9f17c9952f5e3b094269e9a392b1856473affff6f6ff44358f337dfae6391077",
+      "identifier_replacement_only": true,
+      "before_git_blob": "fb85837edf5d018a9f59a4da1946f24d6ec493a8"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuadraticNormChange.lean",
+      "before_sha256": "5304b182a2971c6704c2104c2b851d7053aa56cf9e78387428a206df2f92a02b",
+      "after_sha256": "600cfdefecdc2846657f7cfabf840364988ffe0a66a2303be8faea65a695224f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e6f43df3883e205bdb86bf2f74f75610e0344c87"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuadraticRiesz.lean",
+      "before_sha256": "4f8a115d028301af0c4e38d1133b4d37bc856877558661fb929030cf2d8e87f6",
+      "after_sha256": "770d9576a2eae59863bab1042c4746995f64d435ffba9cbe3a203434cbed20c5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ac33bbe9fd2bac019bd59e3fdf05991313b30e0b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
+      "before_sha256": "e98868d83e92bffcc8cb2493b9a02f0a1a252047e65977b3042a2d5a5301d6c5",
+      "after_sha256": "7bfba73030e050e5e1d36f0f2e63226cbdd169fe429f63bb3a80869fd34d0efe",
+      "identifier_replacement_only": true,
+      "before_git_blob": "5cfce5cb745ccbc6adc392dc30a97b7b56aaa223"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/ResidualAnalytic.lean",
+      "before_sha256": "4656eece2bcc4580c914b7795aa9be147a5172a217d599e83edeb718980d4118",
+      "after_sha256": "7892effdc0bc5e80133b67a1da09982d12263f4e9b1478c38607980cdc906bc5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "698350bd30027bbf7e289dc8c351f8a98b6dcb11"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SignedFamilies.lean",
+      "before_sha256": "f930c046e6b5a1412b54131e44459bbeaa438a4c27382e74b9c63baa8d4d6bde",
+      "after_sha256": "8ae7960a22dcf919b82d8b01bb3068cf0b283cde900c8bdc637d7980dbd8dbbb",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d75103fa45ae0a09f870bec1b65dd353c8b02c48"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SingularBounds.lean",
+      "before_sha256": "f835eb66888de4c140ee6ecd8f7f2ced0ffa2ca68ab19a25c9b9969e65b2974c",
+      "after_sha256": "27f95f9e0c456e6568a23594f430384ac4c319905de0acac6a451912ac7c91e8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e3cc84ed38583433da4dac762673488df5ba8e85"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SingularDensity.lean",
+      "before_sha256": "2aa923d3fe6f88becdb452a8192ba4fbb1d771620df9d2d61a52021426bf8655",
+      "after_sha256": "0827ec26cbaef1b5adb96d863bdaf35e829f20c27df3870a1eec36c764f048b9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0d4cb31c6904e49bddd54c0c8213e6c1eb2a6410"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SingularLower.lean",
+      "before_sha256": "c17ea82957db5638557e952fa41e4c93a007de7ebe94d491fc4827b3c5429617",
+      "after_sha256": "45fb21482e6a0af7e358a247717facf34a17224c70fb383c87026fc9e3378b0b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "b0335329b53e36089bcfa649b7f37df10291d30b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralAlgebra.lean",
+      "before_sha256": "5a9c972aa139d2b892944415df3a2e777c952cb1ca32876f7b6d17e3ea02c1c5",
+      "after_sha256": "9c3a70f6dcdbb6b977ccde1cc18c1b190d7e330e2b6f75590222f8f3addf3b60",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d2c38c85a0854fe5d3cd575a14d69298b8e12f8f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralBasisExistence.lean",
+      "before_sha256": "66de5d07a9534c43635e21e96f6da40a6b4be36fd82f98f1351f5234bc11f0f3",
+      "after_sha256": "8d5d3c08c77ac561286f719e8a1c6e8735fc143dad202c9d453c1f955be01b0b",
+      "identifier_replacement_only": true,
+      "before_git_blob": "09c1d42ecd86f178047c098128ac64a9cf2e095c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralBoundaryBlocks.lean",
+      "before_sha256": "b43365b2603509c6bc1ad867b7185d687aace67ab4a6de914441ff101e93f9e4",
+      "after_sha256": "8eec7c0b94d2621e19ba48f6e7636a7bafb0a14a5d6b5c47695d0959fd5f4c21",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d3fe181f2227387cd87f8f805533c6a3b8d5ed1f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletedLGrowth.lean",
+      "before_sha256": "10eb954de08b24f05d463a1bc990b21dab67ca2574d2f78bd68c1c7a87e706b7",
+      "after_sha256": "cfca2f0fd0def702862c118b01bd455e8f8d16fa3629e1c1cf39be26fe515811",
+      "identifier_replacement_only": true,
+      "before_git_blob": "975d1a0a239d14aaaa9a4495e4f77a9e4e1334cd"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletion.lean",
+      "before_sha256": "8044d0c2138f7e9928ee67656b7fd1caa8d345212cb30ddb3219486737d8a294",
+      "after_sha256": "a5c19167380007cf8fdac2146b9f240e8d4df80b752af614daf2864bdb56281f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c251836168f28a6c3cb7d133f9516c10a0e33c85"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletionChoice.lean",
+      "before_sha256": "0ab0f36bff2e8c6abdef06a9cf719904290e61ebe770806172f1a053ae4a596e",
+      "after_sha256": "684fd1a7dfd36202ad381773e197b928200ae91c13af28250bcff3f75f7215e1",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9181621ea7abf4fac42bc4628933b839463f826c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletionDeterminant.lean",
+      "before_sha256": "c6d8642bded9469b9524440811104292981469360c9e042910c2bc8609991445",
+      "after_sha256": "98f64160d42505a524d551d9b0b14369705874ac45649be89c03d2ddf7ebdb6a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4b108a7538d46fc1793a2b106fe9c82c34c60479"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "before_sha256": "28aa6c8f7b9e045d44b5151d406dc1211bc0bd3bd16c3b8a8a422693dac41607",
+      "after_sha256": "b12887dc0173b9e4bb24e0d63e8233abf19a4280b8ac991ae857e6df559c59fd",
+      "identifier_replacement_only": true,
+      "before_git_blob": "26a7216d4d6c4cc0727e9d22fda9f5f7b74d5b8f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletionMultiplicities.lean",
+      "before_sha256": "1316ca794f66f5bbc36d327efc99acea608e295c95d26660b75105d122c4e560",
+      "after_sha256": "8dd8c384a6bf42674b126a70cfb2160b534e0b6d70e93f42dcf356ae6913531e",
+      "identifier_replacement_only": true,
+      "before_git_blob": "645f317bc86a465a5d532d8cb5293072ff642175"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletionTrace.lean",
+      "before_sha256": "7365946104696c06b4f853a94b5e3eca26d42d8595dfe78736535a4008ef386e",
+      "after_sha256": "9eb9eefb77dbf3edebc9b20af32ce2f242ca8ff34997e096c7683b3be38b17fb",
+      "identifier_replacement_only": true,
+      "before_git_blob": "1ac55b021016dd189f3584151edc423a1d319a50"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletionUniform.lean",
+      "before_sha256": "79e874042e91334c65601584fe69d9be1a47131404752dea4610ce22cfac75dc",
+      "after_sha256": "20d498a059019cdf05709156af8c08624c370c2b2233898d29e61412207fdcf3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "53d174aca017cd4a0bc0ddfef8355e38e2061832"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompletionZeros.lean",
+      "before_sha256": "3dabbeb45f330efae9e8ff6ba7dc8a085cd9001532e9fec2e395463ef992d7cf",
+      "after_sha256": "d7bdf8ab0ae7e95f268640a64c566c29fc51951c2bf45501e2b00cf41b91066a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0b0e0fb7ec83f9916826a19360a43d69e92fe580"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralCompression.lean",
+      "before_sha256": "7f51cee595ad944d73e2586835002a7c027b5d9bab91aa6836137a4576590150",
+      "after_sha256": "48f3fc26addb52488bcb781994eeca11049c18f5c96c38ea147640df047d18de",
+      "identifier_replacement_only": true,
+      "before_git_blob": "f15ccc8bb34fe05b7b8be2d12a2c00d9f7d6567e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralConsequences.lean",
+      "before_sha256": "14041a38f2d39cbd1ac769ddbaa1cbac2ba6d8076585f5783e972e1d04508212",
+      "after_sha256": "671b4e6274eab607f9ff823c8e506acdade289d2049e6a4dbc79a52e8ae477e2",
+      "identifier_replacement_only": true,
+      "before_git_blob": "823f18f45eba1b26b9839c94225bd194c97f50df"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralDiagonalBound.lean",
+      "before_sha256": "190d73db144c6f08158d5de189faf0d6e05f7e79496dcd8885cdd2f38a4065b9",
+      "after_sha256": "023cc0c54926335e4542383f09a4c89084c50664f0496e2d2770aa7952085563",
+      "identifier_replacement_only": true,
+      "before_git_blob": "210c46838f25d99789a525cda16d065bbdf80733"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralDiagonalOperator.lean",
+      "before_sha256": "421152eb2eefb5f22c05cfed2d606371287fb04fdbe88967e99b3815c2b2a890",
+      "after_sha256": "7de3251de2df89dc113f95bc2ad78f9091bb420ee22281776a2286744b881e3f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4563873c416a8aaf31c194182b85df29334c65cb"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralDiagonalTrace.lean",
+      "before_sha256": "5b02abb2c111ad67615a442fa301d02eeb7baabc04e0124953b636c7c4275f1b",
+      "after_sha256": "5e7f27cd2e562df8b3d43a9ff2b9d21bfd21eb97420028bb66aa501f4e602c62",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e6ee7e5798bae9252e76a385658b7c98a910fb43"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralDiagonalVector.lean",
+      "before_sha256": "08bd705f2d59faa1c02e8f018ee987eeb757e2fb13d0f208f3af278baa875a4b",
+      "after_sha256": "49b114c2eb6c717313b1ff3f96ba3e794816c3b06c4eb8b1dc8653b85c7aa8f3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "10196f737bbd51481188cae346cfc90f2b3021e4"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralDictionary.lean",
+      "before_sha256": "25a7bafc495ec4038b0ded7c7537c4db14d283ba385300ffef54fe59acafef19",
+      "after_sha256": "4c6920c120ceefd346c048aaca4e842abc99e34483e01f8705983715135d53ce",
+      "identifier_replacement_only": true,
+      "before_git_blob": "981f6489f4f73ceba53bdd9cb2e6d5835666be4b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralHardyCompression.lean",
+      "before_sha256": "431f02f7c35e59a6fd3533d165c6782f97f2e3e1c05bf752863f18314080f9d3",
+      "after_sha256": "bb0912842cf3d73297604e0324bfb4973edb79f2f1be0efe84f22ec153360b88",
+      "identifier_replacement_only": true,
+      "before_git_blob": "b840141366e835f1a69b1ffaaa279eeef5bb5094"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralHardyRankSeries.lean",
+      "before_sha256": "4dfe3fee469f2774add0edcf8e1d0168d62cd187fae016135ff4d0a06dbd4bad",
+      "after_sha256": "e03f9aa05b340c18b1b4c30dc0cad2ded05f8baa887e6e8625c640fe81735dec",
+      "identifier_replacement_only": true,
+      "before_git_blob": "85580c2c1d721435f5e69fe98277eaa2d0cfeedd"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralHilbertSchmidt.lean",
+      "before_sha256": "61b9ac02710ec10a7336926d551858185ccb635fe4df59c06f0bb8c089da0407",
+      "after_sha256": "78a0d4987e9b3284aa8b0e27a174c57f2159d5e227a6edafb948132c040ef7b8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "76caa9c0a57e93a4004b296fdf7c3957dccaad9e"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralHilbertSchmidtCompact.lean",
+      "before_sha256": "e0ce53798988f4b25adb5874fc7674b63fb75428b9b03bd2ea60bc257324d7b1",
+      "after_sha256": "923953a7e56947c308b7ed22793edbae66b0a874d0cebf7a526487863c2614f0",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4bcab0aa7b40e326287547bfccec6bcc50e07304"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralL2BasisExistence.lean",
+      "before_sha256": "06d16fd83fd2ea9c02249ec38191239d219f5e7f86e8cdba9824f8095d9f2fe7",
+      "after_sha256": "9169746b7ed0d26be06f7dbd6096d9f8112cc6ae6294e41ed49588d0d5c1ad01",
+      "identifier_replacement_only": true,
+      "before_git_blob": "23c4c78b6d2703d6256fccaa3e326815c0abd325"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralL2Kernel.lean",
+      "before_sha256": "1531deff3afcac998581b5fde0e205fbfff9f3a2917f1d6e1f98863f1ad00cfa",
+      "after_sha256": "6dc91b1a710dc06f6ee71ecd385d3df9de92302adf343105e73a6ecf5e2a5fb3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "5224f6239d7be63d6a2d0ba7126bf7920e13483f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralL2KernelAdjoint.lean",
+      "before_sha256": "75b796187d7a3d4d22a14fa52d32c9158e170bf7e1a23b883181e8a1af914397",
+      "after_sha256": "d2d24e09fa05ee28527a2ca83c1a0710c58cbc7a349480537c766f1f20d80346",
+      "identifier_replacement_only": true,
+      "before_git_blob": "18ee20b351b0e8baa22b56de12d0ffc1d6eb1278"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralL2KernelBasis.lean",
+      "before_sha256": "dc79b1b3fd3738d7eb314ab4a03c99eab69863fc673b087c0efd42a9ba62bb98",
+      "after_sha256": "adb0572f5708632dcf1418dc979ab7a1821603b10921c009eaa8f4038bc69da3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "f047776d42717b3d306c41a934160c0e58b7392c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralModelBound.lean",
+      "before_sha256": "024a9deff4bb226f8fe6677af277498882f7e71f66ebb9e34d08f1cb01b62d50",
+      "after_sha256": "1590ee5877f713ffed9f68249a596d7236d77c3b5619e6cf3d90638a46b6cb84",
+      "identifier_replacement_only": true,
+      "before_git_blob": "35f6a1b825abfb38ccfb9adbe2b0248cf420d627"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralModelEuler.lean",
+      "before_sha256": "c1424f54b414b6648a98797cc26e6a0aeb5ab870b7fc431aaaefc0bbce1c8a36",
+      "after_sha256": "fce3aaa64b64403f1e161e4d69880adeb4bf511c04c44535adc5409df68e8248",
+      "identifier_replacement_only": true,
+      "before_git_blob": "402f586b5b8036ccc8a264e92cdd415b966e8718"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralModelGrowth.lean",
+      "before_sha256": "e5514ef6b17dbb330c0c2bf8a1c5dbc42f61cb3f5c071e15eefdf560715f2419",
+      "after_sha256": "a935af9db020a05f36e64a95c239ab903e448a6a208740777298bc19ac6c3cbb",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d9003b8ff7b85991b69bcfcf9e6713cdb77044d7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralModelOperator.lean",
+      "before_sha256": "e0e2781b6c485fcc07c13543969cfa6c9c4d1f5a3b5a618353009e3e3114dca5",
+      "after_sha256": "f4d5c5908d3d77afe443bc0e99e71169996270a66cd41250b165bcd4b63cc116",
+      "identifier_replacement_only": true,
+      "before_git_blob": "98df79ff8dab3d6bf663d491ff4b43d6989e46b4"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralNormAttainment.lean",
+      "before_sha256": "8f5d718a62eb581ebba24a00a04ad9305c8474e344221338b0ae875cc9aa61b4",
+      "after_sha256": "9a725d29537ac8c605def6adbce484e4f239410b25ae8172b14f8dea7fab01a1",
+      "identifier_replacement_only": true,
+      "before_git_blob": "8e6f28829a31e45462a7abb9a86baa50fd4af01d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronBounds.lean",
+      "before_sha256": "6f6e7f3dbc5136d2bc9349cd579acd9190af83ba9f027a2444f1d2c4b671e38e",
+      "after_sha256": "bbbc8c1e00a0fda9be90ce83bffc375ef44cdc124b4924f2bdeb03d0fe9dd123",
+      "identifier_replacement_only": true,
+      "before_git_blob": "bfd0280671c716a503ff9da917c5d6f42b6ba597"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronEuler.lean",
+      "before_sha256": "54c8cce3bca04ffd1055769a56d3077e03bb49f1bbfebd42d104336a9393558c",
+      "after_sha256": "66d751348bf0a268bb817920d35b3f54c6544514dc738cff242345ed1b61dbd8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "84ca611d1c0192e557e1da057c3ddbf563cf5807"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronFubini.lean",
+      "before_sha256": "2f412c9ee49cfd6ce740d05475a7b87e466e350ab81d0ec4b7517b1dd0b93037",
+      "after_sha256": "e271cef9db6d48af17824620042505cfc5b68fe3caa364c4703716129af505a1",
+      "identifier_replacement_only": true,
+      "before_git_blob": "79b9e1544eef5a5df12447442aaf44c4762df4da"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronGamma.lean",
+      "before_sha256": "d7d06e4ffb7070e6bd3d92546bbabd01c4248b444c7b288b44dfa25b0dd82134",
+      "after_sha256": "58833753ee67fe5638d76ba41eb3b0a882dd3c0be668b8dba686d07f96a37ae3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "67928665a9e216d055ae0f26293e6a4fcc7f6c70"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronIntegral.lean",
+      "before_sha256": "dcb4d156959a5587a558c36f0087391eab6fc72e1b733d03f54ef9000dcba835",
+      "after_sha256": "fa8fd453288e4319737b019eb030a7da044fca9da4d55b3e713ca71854723c18",
+      "identifier_replacement_only": true,
+      "before_git_blob": "12e59a017cfa131ea262d27c1b5ce88e24bc7679"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronPoleIntegral.lean",
+      "before_sha256": "bdc06b0996c3d717d0ae86326258fe9340b6d30c0a7e1b0986277d8f015d5617",
+      "after_sha256": "19de80297dcb3c07fd7dd55a9754545d80913c0291992b45aba1695aed3e1fb8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "a0a40f2a16a290f250a1afc62793a713224e12a7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronSeries.lean",
+      "before_sha256": "c374a33da104a93d2d013daf16aeba9baeb627b67eb65e50d3bed41f15dcc351",
+      "after_sha256": "2848c756447ea53037302ee235fb88b0a9fa8f650ddd63feb2a98052b32a0874",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3b3d532ca28f448d8c740c17a2c31df120116548"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPerronTruncation.lean",
+      "before_sha256": "51241252b5f9caec5df2a78dd6bbc4117c92551b5c3a5bfc6bb5a7a357b172ca",
+      "after_sha256": "a12ba69057c42a7ffb6c32e81f31d21bab7b1a0616e15a3b3874b64c5f817dcf",
+      "identifier_replacement_only": true,
+      "before_git_blob": "87add6ba19f10f19430321b51166b246ca6a763c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPoisson.lean",
+      "before_sha256": "01c5946c42199c45f4e48c9cb57a1d4d9e9ecb07a6fadd21b12ab20e298658a6",
+      "after_sha256": "b5f9d40c35adcc001841ae163502b69bef84a7d759a824d050d4bc00c153548c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "dbd2788fbba7de942be12ade8d1b57b53143d829"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPoissonConvolution.lean",
+      "before_sha256": "d8b28286d4e63a567b6a90866139ce1050a92a262c8c3dd1050315ca137062e3",
+      "after_sha256": "34077f2d0b530e214a7a0ddd9150501554bd1b95f26ed02d680e30824b852342",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ec8fc528ca91c002b920f8383ffb38a166cec70f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPositiveFredholm.lean",
+      "before_sha256": "3278b36c5d019d09c4bc1fee9e696fcafcafc8427a496f1e49fffc283cbfc04d",
+      "after_sha256": "b079238d539164a93e542ed6792a08be67bc4e7c2738d32ee8c10e93b1ac4aa7",
+      "identifier_replacement_only": true,
+      "before_git_blob": "993f387cfa8fe9c9128905466d4214e47ab4f802"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralPositiveTrace.lean",
+      "before_sha256": "fcc0ca32cce6dae0c68ed1d786e8ed81da01c65ebba760c4259e45161d1a6eb3",
+      "after_sha256": "6d5443576365a9ba8384e577acede0e7ce474402e5a2ceae5e2f47f38e60b4ca",
+      "identifier_replacement_only": true,
+      "before_git_blob": "47cc5def5e10e26d6acc3586152880f25031a74d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralProductBasis.lean",
+      "before_sha256": "c24e9fc1acb0f71194db545ac07b996f6d6b3e3cc81243796a5933897cc61144",
+      "after_sha256": "e281a7dc05906d024847a59b0e4938ede51530d933e0fbf18defa51dc13fc0ca",
+      "identifier_replacement_only": true,
+      "before_git_blob": "39cd3566060d9552c7a4ee7f7ce7f025a978db60"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralProducts.lean",
+      "before_sha256": "36f13f13150a9f0942d45bacb549f954f8caf93f41cdc899cae4428e16bdc315",
+      "after_sha256": "fbb08e227f524c981de02724ed4b713c831e503b2de8fb366500f7a86cac11cf",
+      "identifier_replacement_only": true,
+      "before_git_blob": "cebe43e4d64d1162ae1cb17dfd8e2b7c9b684bb5"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralQuantitative.lean",
+      "before_sha256": "ef8844fe3854c2828613380ec46e7d2c91e3dad853b2d4baa907b1053aab44be",
+      "after_sha256": "b0af6f764101cb237ef85355fe292a76886f5063170aa5e99c376bf3bb913cd4",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c7564a8ccde1a12553cd60c5e3281d446175c414"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralRankOneSeries.lean",
+      "before_sha256": "adb37f3f3d009ac7a2b65e8d77956b05d6a899936db8932dcd63a2134cffe987",
+      "after_sha256": "34c53c442621c03ebc1996a297abb820af86f8919fd63784a4124acdd9b8cd78",
+      "identifier_replacement_only": true,
+      "before_git_blob": "f99764fd71caa35d5aa8e3d5cbb12757b49bf948"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralTraceBounds.lean",
+      "before_sha256": "c99a562457859462cb611fd94d60ae31d48847b9df5ff7f4f54e6a8360ec049a",
+      "after_sha256": "a40b739281b7297ee91cbf6afd189644b6545933ee7578e96d6492d17236590c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "fe6a71da41e05543ac3dec94e2ce01087a263eaf"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/SpectralZeroPower.lean",
+      "before_sha256": "1dbde17190909a95d025d1d3944ea9614e7445c1e54de89a4eab0e463c91d6e4",
+      "after_sha256": "ab7690266c80e16371552f2ec39eb2948ed2d371009b2cc49df8aefb2763626a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "0525aaf8f08cab3677e9e1be4f7b7f87d1e8298f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/TotientLogLog.lean",
+      "before_sha256": "3681ab573363e2ee4711e531bec6372455aa239d684e60fb9f22033c032019a9",
+      "after_sha256": "6436a825562d7ffd8949723deb835bbc588e7946084557036a36e7d4c7621c5c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c8fe591d1bd3533857d77b1bc2a1b544d35c4b97"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/VariableComponentOperators.lean",
+      "before_sha256": "03d4067053cc5d9f846b1c1b55ca4248ad31646bc41b6c4c180dc4dbe01ca0a4",
+      "after_sha256": "00b4fdd4aff8b722a6ffdf3eac0e9d6c92839dcd229ad3416cea933b72f9dfd3",
+      "identifier_replacement_only": true,
+      "before_git_blob": "2df31509194fdb88c89954f126e6a328e81cfeca"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/VariableConsequences.lean",
+      "before_sha256": "234eb887cf8375d9435f6fb4be4c33478b24a519308074fe4003d530ebcfd98a",
+      "after_sha256": "aee67602aaab13c19699a8f36aaed3d19912e1472e60f9f22ebf42d800955d7d",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ee8acba7369dfb5d6781e78cef3594a5c4d40eb7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/VariableQuadratic.lean",
+      "before_sha256": "2099e564c5b2403ba9e2066c5395a029799521fa2665784ae4b65696525187b4",
+      "after_sha256": "25cb886d9d07adcf6930892869a51e6204bd658a355427d601685e57acb02a4e",
+      "identifier_replacement_only": true,
+      "before_git_blob": "2d2e4b05875d5eaad695b7786422ea7b05df9d03"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/VariableStripOperators.lean",
+      "before_sha256": "49398b57d2767f9e45ecbe9b486b6550798d32463acac06f7a71480a1b3db76f",
+      "after_sha256": "6ff77b9e08ec5a2f40fe6374b28937fffe98ffe19896b069fd0a491b35368ec7",
+      "identifier_replacement_only": true,
+      "before_git_blob": "bc7b2aaea8af4b1fbba9f56fc0316b1367a38d8f"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/VariableWeightAsymptotic.lean",
+      "before_sha256": "f9c19c3e1f38e688f5eec264cd13c7b84e4f8f539beede8f554cfe04f15629a2",
+      "after_sha256": "e04c37ec573759a7a62c9da9225380937d3d836441c697d89d2f101fbaf1c474",
+      "identifier_replacement_only": true,
+      "before_git_blob": "3eeddc04fa23afda5fbb22f705dfdb045354b9c6"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/VariableWeightNorm.lean",
+      "before_sha256": "6dc3cc0e41416a51a10858238c4b44692bec5103f5ae49a4e076467d8a418a01",
+      "after_sha256": "c493e0c3c8d64ef4970d7c287cbafe83c070969db81895c8b9e1365f30d37f40",
+      "identifier_replacement_only": true,
+      "before_git_blob": "c67267d9f634623d2145ca81fd09f0c176d40d97"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WeightNorm.lean",
+      "before_sha256": "fd0a23b6947c50e5bc9a00c0b4c9a74479e5c83032c222371f031c98f87bb486",
+      "after_sha256": "3b86155fb8b703a4d656b42b385edaa2d9b3219196d166c6bc53895feb82df0f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9f8a2c01dedafb9fff077c4b79b7644cfa15db2b"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WeightedComponentKernel.lean",
+      "before_sha256": "2c2f6b7c5c4a6b363aa2e5c663da5101b66c6b101dfc7feb48902b0a7eb56bd9",
+      "after_sha256": "9c36fc1a6a242c1581dd4087adfd7f4b1e2b6575956f3bdd5a2d74ab4125e1f0",
+      "identifier_replacement_only": true,
+      "before_git_blob": "959ac8e58f28cb1ccfc89e50827ace40d6bc4a5d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/Weights.lean",
+      "before_sha256": "0acc85245591c271c26b3b8203becdf41c1c3fe43056385bade69daaa6567c27",
+      "after_sha256": "cf1ddb727342ca1391bce9be4863ffede6674421acb67df4f24f892c0363afa8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "fd70650ef10749953261fa316f40f5c264593825"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideCounting.lean",
+      "before_sha256": "79330bdec3e067504efb924d2bbbe01a20c322c5248e223c09c50fb85d0b5ee9",
+      "after_sha256": "020bd7ccc4085921f2216f6674ef1ec2842fc681dffc76a56e1a811770fb7b2c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "d7797f2efaa87946b40a3daaca0f2446d80136e7"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideError.lean",
+      "before_sha256": "e435d8a0a5b64658c4c666c0872126c3fc6b95ec3e08b81be73ed52f9106dbf1",
+      "after_sha256": "912d94eccd64a5dd2ceb301dd15a88a105847abd0dd3bb5378ece74f7bb8de7a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "9906398d137a33e86770f926595f94c836e99114"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideFunctional.lean",
+      "before_sha256": "8058fba2f60fd441162203ae32b3bab13ab7476e14bb376b3053b3e289b8f61e",
+      "after_sha256": "26a18fe877a8fac7ea4b1678aec636b8cd6a4d80b56d21a508a1096aefe04039",
+      "identifier_replacement_only": true,
+      "before_git_blob": "4c18a75e7201b402a54b6f9e3924fa77d7809d32"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideMainIntegral.lean",
+      "before_sha256": "ac9f0df1d4d525467a5166dc50b1099a4d1c3fe85105af987422aa413b3b1241",
+      "after_sha256": "12549a242f043d5d1aa8cd967a4afa5cf0c8e138181e5d3e1386f654f1e95c9c",
+      "identifier_replacement_only": true,
+      "before_git_blob": "dc2a30c5249c18fa104bb1bc179209b5f49d0a24"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideMellinArithmetic.lean",
+      "before_sha256": "c88df357b9a7c28e1bdd0eacefd00165e62458eaa991f0641c2bdf60458c8ca8",
+      "after_sha256": "b670ea78f4457fb0cb1ba78101e3acff6398f42d49af9563f12f0d02f4b1e1e8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "84bab116dcf93e7ebda83ee159662d802135b802"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideMellinModel.lean",
+      "before_sha256": "767fecc9e211e46ba0ac0164b25bfbd37cbb34d922806b5e6be1b922aca6300f",
+      "after_sha256": "38fc8ed507fd450046776cba037c3b7b24d3485a918a1d9d53f329cfb7c64bf5",
+      "identifier_replacement_only": true,
+      "before_git_blob": "b31b17fa6c0a2b02e1027c851c95da49eeb0451c"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideMellinResidual.lean",
+      "before_sha256": "907cf8c8459fa8f9674343022b9d12e346a43572335c109b69e28487f8be78ae",
+      "after_sha256": "8d0b3e46de28cda5f6849b1664fd87f22b00122830a7090c8efa6f1d6a5ba792",
+      "identifier_replacement_only": true,
+      "before_git_blob": "67be13e6f8888f1a2e946986464dcd54d5a4dfce"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideModelData.lean",
+      "before_sha256": "30ea4c6ef61dc028b79db46003b5a4541c6cb48a7c855de30a2bb051a53b9c8e",
+      "after_sha256": "0a31e811ea1be1c1e3c2d7e099ed5af1cfc65c2d601184440291602f12313c2f",
+      "identifier_replacement_only": true,
+      "before_git_blob": "6ac924170189d57824087e64c2bb43d6b9e87e62"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideMoments.lean",
+      "before_sha256": "bbb88b54fd8f291b0bdfbd2ef1b4e3e34ffb530501bde7b18f576d4e0918154c",
+      "after_sha256": "f3be55b71f1f29c0d9041b159849c5cf6957dc1e7454f48d7bba136d376e7cd2",
+      "identifier_replacement_only": true,
+      "before_git_blob": "ed3408bcd8195ba6cffd5aba28c964f03d6dc9f8"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WidePrimePairs.lean",
+      "before_sha256": "f7ab0021a86f8fde17e86e56981488c9a2f927746d47b52ec548e88cbd5f52a8",
+      "after_sha256": "518309ce6807b47d48ab2eff13f1c56601bc3782da8621b02f58df760ccad841",
+      "identifier_replacement_only": true,
+      "before_git_blob": "70e22244fa8c07b8267e19e6c2f984f69ebba686"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WidePrimePowerCount.lean",
+      "before_sha256": "9c8261ac87223cdef2e06153de3c02be918ec35f4d21e7aa476d6b3c80d40aa2",
+      "after_sha256": "9088b0f0b77869b0ffcacbe17508886679a63224ecd943b317c30c672bbe6cd6",
+      "identifier_replacement_only": true,
+      "before_git_blob": "64f0995bd974e14b1e28ce6bff5d8423bfe7d7a0"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideQuadratic.lean",
+      "before_sha256": "ee3fad03592cbd72317e86fe1eb7a58f62b1d1fa06c8f3936c4d7d2b40cef0d7",
+      "after_sha256": "acd4e7f05a8bc91775cee8168f405c9f7306423295061ffcff5459a3ec2a3187",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e7b790a75014ac5a1e73142769e76002f2eba30d"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/WideWeight.lean",
+      "before_sha256": "5044f8b43074308d5eab6059081868e41c70e99518d098901456c3104fbe6abd",
+      "after_sha256": "3cb681f860e5cf2e2e72de3e3d94a445e544a7af92296da985555b19f90b0df8",
+      "identifier_replacement_only": true,
+      "before_git_blob": "8dda4756861f31c3d2adda3edee21706825ceacb"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/ZetaGrowth.lean",
+      "before_sha256": "a0c9a1259e6344eff38344c6141b4911bd4a925bfe0b225d63859cf6cb2c7dbe",
+      "after_sha256": "2fb821ce92fa170aa2ae8be716df363e06b4c2f522c77710f3a17bcb892387db",
+      "identifier_replacement_only": true,
+      "before_git_blob": "e7d90b0dc8b6f8bf821d9d0c411c680f7be27b23"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Proofs/ZetaTruncation.lean",
+      "before_sha256": "065b46435d0cd6b88100f8b10692c70c8c02af20cde506c5e50cd793217b14b6",
+      "after_sha256": "7e47501973fdcd4fcc1a3adcda9cb4dbce722d5e85f5e2cbf4467f41509f4525",
+      "identifier_replacement_only": true,
+      "before_git_blob": "bad0381365647ce0a328924605fa1cfdb8161019"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/Remaining.lean",
+      "before_sha256": "3bd766e9d910fc0364954d1b444087c4842b4038b002e1af29c9d4fa4d21efbd",
+      "after_sha256": "17d864e5dd44a2a4e3cb996a11cd5bc2d89cbd82a81965077ae3463c552f380a",
+      "identifier_replacement_only": true,
+      "before_git_blob": "32073ebb53261213cffb20ed97a7c0e97a98163a"
+    },
+    {
+      "after": "formalization/ConditionalGoldbach/ResidualMellinPrerequisites.lean",
+      "before_sha256": "a5cf3c2673424a97df93cd176d41905dd58ecd7c041d0d39b93aa0f28b4fc523",
+      "after_sha256": "cb7807ed67463381d07944ffb5ab4a41c7c1ec7b699a9c41f2b764cb3f46b3f9",
+      "identifier_replacement_only": true,
+      "before_git_blob": "26a71a816658566045387b16d97aaecd480aa767"
+    },
+    {
+      "after": "formalization/reference/Reviewed.lean",
+      "before_sha256": "bd3b94f0b7218b1675e5346ba36c05985ab161868f40e8524796912268f34261",
+      "after_sha256": "7fb43da75b14d806d7a7d1cc92437ac9a1a35819d6d0ac4497d7217935dfca24",
+      "identifier_replacement_only": true,
+      "before_git_blob": "dce88e15dc0b7d4252e8255643ee4ed44ba72b45"
+    }
+  ],
+  "identifier_mapping": [
+    "LiLiuGoldbach16",
+    "LiLiuGoldbach"
+  ]
+}

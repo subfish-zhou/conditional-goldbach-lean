@@ -1,7 +1,7 @@
 [
   {
     "expected": "TexAuditAB.A1",
-    "actual": "LiLiuGoldbach16.proposition_A_1",
+    "actual": "ConditionalGoldbach.proposition_A_1",
     "tex_lines": [
       3949,
       3989
@@ -14,14 +14,14 @@
     "findings": "已检查：c不随N变化；固定c的常数容许依赖φ,c；c=1由默认参数定义化归。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableQuadratic.lean",
       "line": 55
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A1_operator",
-    "actual": "LiLiuGoldbach16.proposition_A_1_operator_spec",
+    "actual": "ConditionalGoldbach.proposition_A_1_operator_spec",
     "tex_lines": [
       3954,
       4004
@@ -34,14 +34,14 @@
     "findings": "命名命题的构造/算子补充；已检查无额外算术假设。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableStripOperators.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableStripOperators.lean",
       "line": 151
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A2",
-    "actual": "LiLiuGoldbach16.proposition_A_2",
+    "actual": "ConditionalGoldbach.proposition_A_2",
     "tex_lines": [
       4018,
       4100
@@ -54,14 +54,14 @@
     "findings": "已检查开边界严格性、η∈(0,1/2)、S宽≤1/4与h>0；φ无关算子常数另由A2_uniform补足。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableConsequences.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableConsequences.lean",
       "line": 19
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A2_pointwise",
-    "actual": "LiLiuGoldbach16.proposition_A_2_pointwise",
+    "actual": "ConditionalGoldbach.proposition_A_2_pointwise",
     "tex_lines": [
       4058,
       4068
@@ -74,14 +74,14 @@
     "findings": "比eventual版更强的逐点误差保证；不要求h先验发散也可在单点使用。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableQuadratic.lean",
       "line": 116
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A2_uniform",
-    "actual": "LiLiuGoldbach16.variable_uniform_spectral_bound",
+    "actual": "ConditionalGoldbach.variable_uniform_spectral_bound",
     "tex_lines": [
       4053,
       4056
@@ -94,14 +94,14 @@
     "findings": "补上主命题类型中φ先于常数量词的依赖歧义；宽度是所供给的宽度，不是最大零自由宽度。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
       "line": 72
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A3",
-    "actual": "LiLiuGoldbach16.lemma_A_3",
+    "actual": "ConditionalGoldbach.lemma_A_3",
     "tex_lines": [
       4110,
       4134
@@ -114,14 +114,14 @@
     "findings": "主声明C依赖φ的表面歧义由独立绝对算子界消除。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
       "line": 53
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A3_absolute",
-    "actual": "LiLiuGoldbach16.lemma_A_3_absolute_operator_bound",
+    "actual": "ConditionalGoldbach.lemma_A_3_absolute_operator_bound",
     "tex_lines": [
       4112,
       4119
@@ -134,14 +134,14 @@
     "findings": "已检查绝对性，不仅靠主lemma的依赖φ常数。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
       "line": 42
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A3_balance",
-    "actual": "LiLiuGoldbach16.lemma_A_3_balance",
+    "actual": "ConditionalGoldbach.lemma_A_3_balance",
     "tex_lines": [
       4119,
       4134
@@ -154,14 +154,14 @@
     "findings": "C为A3_absolute的绝对常数时恢复TeX的≍φ；并未假设对无约束c及固定N有效。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BalanceBounds.lean",
       "line": 36
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A3_widths",
-    "actual": "LiLiuGoldbach16.lemma_A_3_width_ratio",
+    "actual": "ConditionalGoldbach.lemma_A_3_width_ratio",
     "tex_lines": [
       4127,
       4159
@@ -174,14 +174,14 @@
     "findings": "δ<requiredNorm,suppliedNorm与正δ是反函数有效域；在正范数且宽≤1/4时不是额外算术条件。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BalanceBounds.lean",
       "line": 95
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A4",
-    "actual": "LiLiuGoldbach16.proposition_A_4",
+    "actual": "ConditionalGoldbach.proposition_A_4",
     "tex_lines": [
       4181,
       4208
@@ -194,14 +194,14 @@
     "findings": "已检查系数2、平方重数、分母1+γ²、liminf ε量词、小c与固定N顺序；NeZero/ha为类型良定义条件。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleObstruction.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PoleObstruction.lean",
       "line": 11
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.A4_regular",
-    "actual": "LiLiuGoldbach16.proposition_A_4_baseline_product",
+    "actual": "ConditionalGoldbach.proposition_A_4_baseline_product",
     "tex_lines": [
       4221,
       4229
@@ -214,14 +214,14 @@
     "findings": "该补充本身不声称Euler因子分解P=ζR；该恒等式在支持定理另行建立。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BaselineEuler.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BaselineEuler.lean",
       "line": 123
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.B1",
-    "actual": "LiLiuGoldbach16.proposition_B_1",
+    "actual": "ConditionalGoldbach.proposition_B_1",
     "tex_lines": [
       4286,
       4327
@@ -234,14 +234,14 @@
     "findings": "已检查proper powers按有序对求和、至少一指数≥2、(pq,N)=1、分母kℓ和边缘校正只计无序素数对。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WidePrimePowerCount.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WidePrimePowerCount.lean",
       "line": 143
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.B2",
-    "actual": "LiLiuGoldbach16.lemma_B_2",
+    "actual": "ConditionalGoldbach.lemma_B_2",
     "tex_lines": [
       4351,
       4378
@@ -254,14 +254,14 @@
     "findings": "logDerivative χ s= L′/L(1/2+s)确认在3/2线上；range包含0但该项为0；χ(−1)取实部与其±1值相容。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMoments.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMoments.lean",
       "line": 84
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.B3",
-    "actual": "LiLiuGoldbach16.lemma_B_3",
+    "actual": "ConditionalGoldbach.lemma_B_3",
     "tex_lines": [
       4443,
       4463
@@ -274,14 +274,14 @@
     "findings": "无GRH；包含整数性。不能据此宣称实际数值误差输入已验证。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideError.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideError.lean",
       "line": 11
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.B3_main",
-    "actual": "LiLiuGoldbach16.lemma_B_3_main_integral",
+    "actual": "ConditionalGoldbach.lemma_B_3_main_integral",
     "tex_lines": [
       4413,
       4428
@@ -294,14 +294,14 @@
     "findings": "cross mass用∫f(u)f(1−u)，不是∫f²。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMainIntegral.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMainIntegral.lean",
       "line": 65
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.B4",
-    "actual": "LiLiuGoldbach16.proposition_B_4",
+    "actual": "ConditionalGoldbach.proposition_B_4",
     "tex_lines": [
       4501,
       4520
@@ -314,14 +314,14 @@
     "findings": "已检查实际Riesz关系与有界线性泛函同列结论；无HypothesisR；使用同一残差核。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMellinResidual.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMellinResidual.lean",
       "line": 58
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.B4_weight",
-    "actual": "LiLiuGoldbach16.proposition_B_4_weight",
+    "actual": "ConditionalGoldbach.proposition_B_4_weight",
     "tex_lines": [
       4522,
       4530
@@ -334,14 +334,14 @@
     "findings": "FiniteModelWeight只要求C6及支撑内含(0,1)；modelMass为cross mass。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideWeight.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideWeight.lean",
       "line": 163
     },
     "assignment_typecheck": "passed"
   },
   {
     "expected": "TexAuditAB.B5",
-    "actual": "LiLiuGoldbach16.proposition_B_5",
+    "actual": "ConditionalGoldbach.proposition_B_5",
     "tex_lines": [
       4533,
       4561
@@ -354,7 +354,7 @@
     "findings": "已检查两√w、核分母、复共轭和Euclidean算子范数；未把有限矩阵等同无限Hardy算子。",
     "mechanical_status": "pending_root_external_comparator",
     "live_source": {
-      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean",
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteExperimentSpectrum.lean",
       "line": 141
     },
     "assignment_typecheck": "passed"

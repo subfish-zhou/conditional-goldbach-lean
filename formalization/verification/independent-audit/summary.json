@@ -1,5 +1,9 @@
 {
-  "scope": "38 named results / 102 reviewed theorem statements, plus one uniform-constant theorem",
+  "generated_at_utc": "2026-11-13T19:38:40.349692+00:00",
+  "comparator_result_sha256": "049997b276e1071b33d1f516bec6abd2a420975237b49006465182e20ae15c32",
+  "comparator_manifest_sha256": "9b7f4dcac465652809cd7a5f99e081721b1ba269e1ee4cb2f014ad37dcd9f384",
+  "independent_full_types_sha256": "644ca199c61055bc9de2ae941b868c3161239740ce81e8377021959e7ca65b22",
+  "scope": "Reviewed theorem statements, independent definitions, semantic bridges, and the finite prime-count certificate.",
   "named_results": 38,
   "original_theorem_statements": 102,
   "independent_full_types": 103,
@@ -14,8 +18,8 @@
   "comparator_targets": 218,
   "comparator": {
     "tool": "Lean 4.35.0 built-in lake comparator",
-    "sandbox": "bwrap enabled; extra read-only mounts for the two local Lake path dependencies",
-    "sandbox_adapter_sha256": "7ec58c362ad99d23e72295b61d40cb7f20bcc43b891a04c262328b9bf78a18fd",
+    "sandbox": "bwrap enabled; discovered dependency caches mounted read-only",
+    "sandbox_adapter_sha256": "be9a4cf85fa4369af3aae49f6c3c4e99e20a9e46b970393a2b39b7f5f1c1c283",
     "permitted_axioms": [
       "propext",
       "Quot.sound",
@@ -31,10 +35,10 @@
           "TexAuditComparator.CheckTypes"
         ],
         "exit_code": 0,
-        "start_utc": "2026-11-13T18:26:49.773185+00:00",
-        "wall_seconds": 5.061341498047113,
+        "start_utc": "2026-11-13T19:27:39.719487+00:00",
+        "wall_seconds": 32.92037396505475,
         "log": "independent-full-types-build.log",
-        "log_sha256": "e6114a77e5d654a5bd56e3e0723b04966cf71c1d6347efc4ef60b61e9dbff98f"
+        "log_sha256": "455f17ae8e233211a56610b35c1b952c8aae7209122cf3dac961b3d43c65995d"
       },
       {
         "name": "comparator",
@@ -45,10 +49,10 @@
           "comparator.json"
         ],
         "exit_code": 0,
-        "start_utc": "2026-11-13T18:26:54.835396+00:00",
-        "wall_seconds": 557.291805960238,
+        "start_utc": "2026-11-13T19:28:12.640571+00:00",
+        "wall_seconds": 585.2013556957245,
         "log": "comparator.log",
-        "log_sha256": "fdb3030aa27a7688d03f4fe8c2d14d4248b381f6e469d28bdf035c16bb1cdc39"
+        "log_sha256": "044edd66aa7308bb80a1d8d8f013dd0de02fa630d6ea05941c16db48197c0963"
       },
       {
         "name": "control-condition",
@@ -59,10 +63,10 @@
           "control-condition.json"
         ],
         "exit_code": 1,
-        "start_utc": "2026-11-13T18:36:12.128089+00:00",
-        "wall_seconds": 4.571054354310036,
+        "start_utc": "2026-11-13T19:37:57.843613+00:00",
+        "wall_seconds": 5.125753439962864,
         "log": "control-condition.log",
-        "log_sha256": "9baf77427cae2851003223277e94a4d96ce06b489ddd8091736806e07b09e5c5"
+        "log_sha256": "8f9fb6fd42921a76414a36b19e1a135c1c63b8761d93fbbdc731ad732d9495ca"
       },
       {
         "name": "control-quantifier",
@@ -73,10 +77,10 @@
           "control-quantifier.json"
         ],
         "exit_code": 1,
-        "start_utc": "2026-11-13T18:36:16.699608+00:00",
-        "wall_seconds": 4.509090404957533,
+        "start_utc": "2026-11-13T19:38:02.969839+00:00",
+        "wall_seconds": 4.883600477129221,
         "log": "control-quantifier.log",
-        "log_sha256": "d858bfbdc2920cd54f7b6eae038c1e04b88edc235ec702ee2982d60a0009acee"
+        "log_sha256": "7544401e2866e1845265bc899655d678f9f92aabc7a9f3c3ca7ce4c58b89edc7"
       },
       {
         "name": "control-definition",
@@ -87,10 +91,10 @@
           "control-definition.json"
         ],
         "exit_code": 1,
-        "start_utc": "2026-11-13T18:36:21.209214+00:00",
-        "wall_seconds": 5.072135377675295,
+        "start_utc": "2026-11-13T19:38:07.853903+00:00",
+        "wall_seconds": 5.347425226122141,
         "log": "control-definition.log",
-        "log_sha256": "43214dbe9c91f11333750700724fcdc8f284549c8e28c9a81f63e3a32cebc532"
+        "log_sha256": "02e44430300335c7f3fe4f56f98b52c2847d7bd0dbe4377e83c83e33fe30788b"
       }
     ],
     "library_sources_unchanged": true,
@@ -100,74 +104,30 @@
     "semantic_bridge_count": 18,
     "comparator_target_count": 218,
     "all_independent_full_types_equal": true,
+    "staged_references_match_frozen_sources": true,
     "accepted": true,
-    "negative_controls_rejected": true,
-    "staged_references_match_frozen_sources": true
+    "negative_controls_rejected": true
+  },
+  "current_build": {
+    "command": [
+      "flock",
+      "/tmp/liliu-build.lock",
+      "lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:11:50.142968+00:00",
+    "wall_seconds": 854.6831967234612,
+    "log": "verification/current-build.log",
+    "log_sha256": "27b371c227b113882953e2561ea378b3daf050decb019722adfde1cde8fd5a9b"
   },
   "source_tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
-  "metrics": {
+  "source_metrics": {
     "library_files": 253,
-    "library_physical_lines": 29628,
-    "with_entry_files": 254,
-    "with_entry_physical_lines": 29629,
-    "nonblank_lines_with_entry": 27451,
-    "scope": "Actual import closure of LiLiuGoldbach; excludes mathlib/goldbach dependencies, review baselines, audit code and generated HTML.",
-    "elapsed_formalization_record": {
-      "basis": "Filesystem birth of the proof project toolchain file through the mtime of the completed verified archive. Not exact human prompt time or active CPU time. Excludes earlier PDF/TeX preparation and the present audit.",
-      "start_utc": "2026-11-13T12:30:28.643881+00:00",
-      "end_utc": "2026-11-13T17:55:48.862902+00:00",
-      "elapsed_seconds": 19520.219021,
-      "sources": [
-        "formalization/lean-toolchain",
-        "outputs/LiLiuGoldbach16-formalized.zip"
-      ]
-    },
-    "previous_final_incremental_build_seconds_from_file_timestamps": 30.266994033
+    "files_with_entry": 254,
+    "physical_lines_with_entry": 29629,
+    "nonblank_lines_with_entry": 27451
   },
-  "warm_build": {
-    "mode": "warm",
-    "command": [
-      "lake",
-      "--no-cache",
-      "build"
-    ],
-    "cwd": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization",
-    "start_utc": "2026-11-13T18:08:02.272165+00:00",
-    "wall_seconds": 4.7542091608047485,
-    "user_cpu_seconds": 5.895944,
-    "system_cpu_seconds": 3.498193,
-    "largest_child_maxrss_kib": 929968,
-    "queue_seconds_excluded": 6.361407682299614,
-    "exit_code": 0,
-    "cpu_count": 8,
-    "machine": "x86_64",
-    "lean_num_threads": "default",
-    "dependency_cache": "existing Mathlib and goldbach build artifacts reused",
-    "source_cache": "existing"
-  },
-  "project_clean_build": {
-    "mode": "project-clean",
-    "command": [
-      "lake",
-      "--no-cache",
-      "build"
-    ],
-    "cwd": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/benchmark-project",
-    "start_utc": "2026-11-13T18:09:13.069379+00:00",
-    "wall_seconds": 956.0893241427839,
-    "user_cpu_seconds": 1404.544842,
-    "system_cpu_seconds": 708.190292,
-    "largest_child_maxrss_kib": 7057020,
-    "queue_seconds_excluded": 5.182428661733866,
-    "exit_code": 0,
-    "cpu_count": 8,
-    "machine": "x86_64",
-    "lean_num_threads": "2",
-    "dependency_cache": "existing Mathlib and goldbach build artifacts reused",
-    "source_cache": "empty project build directory"
-  },
-  "human_semantic_verdict": "No unbridged mismatch found in the named theorem clusters on the paper domains. Model-contract distinctions are explicitly recorded.",
-  "scope_limitation": "Concrete numerical experiments and integral-error certificates in Appendix B are not all formalized. TeX-to-reference semantics are independently reviewed, not mechanically parsed or proved.",
   "numerical_claim_groups": [
     {
       "id": "B-number-01",
@@ -175,9 +135,9 @@
         4341,
         4345
       ],
-      "claim": "75个边缘素数对、26个无序真素数幂对；E=44.35776816334822525…，Cpp/2=10.16758713116445818…",
+      "claim": "75 edge prime pairs and 26 unordered proper-prime-power pairs; E = 44.35776816334822525… and Cpp/2 = 10.16758713116445818…",
       "status": "not_formalized",
-      "scope": "命名B1之外的具体算例；B1只给精确符号恒等式。"
+      "scope": "The exact symbolic identity is proved in B.1. These numerical values remain uncertified."
     },
     {
       "id": "B-number-02",
@@ -185,9 +145,9 @@
         4389,
         4403
       ],
-      "claim": "h=0.1,T=1600；2^20 FFT网格；24阶Euler–Maclaurin、32高度重置；积分输出Jhat≈0.05799599193959489,Dhat≈0.29331844084848136",
+      "claim": "h = 0.1, T = 1600, 2^20 FFT grid, 24 Euler–Maclaurin terms, height reset 32; Jhat ≈ 0.05799599193959489 and Dhat ≈ 0.29331844084848136",
       "status": "not_formalized",
-      "scope": "未见存储5760个Ihat值、数值积分实现或该输出的有理证书绑定实际integralI。"
+      "scope": "The 5760 approximate character integrals, numerical integration implementation, and rational certificates connecting these outputs to integralI remain to be formalized."
     },
     {
       "id": "B-number-03",
@@ -195,9 +155,9 @@
         4408,
         4419
       ],
-      "claim": "HL预测积分≈908.1405628685、宽权A≈851.831147718741；65位数值积分及C2加速算法参数",
+      "claim": "Hardy–Littlewood prediction ≈ 908.1405628685 and wide-weight A ≈ 851.831147718741; 65-digit integration and accelerated C2 parameters",
       "status": "not_formalized",
-      "scope": "wideMainIntegral有精确定义，未认证该近似；传统HL积分的具体数值也未认证。"
+      "scope": "wideMainIntegral has an exact definition. The displayed approximations and the numerical Hardy–Littlewood integral remain uncertified."
     },
     {
       "id": "B-number-04",
@@ -205,9 +165,9 @@
         4420,
         4421
       ],
-      "claim": "A−Cpp/2+E≈886.021328750925",
+      "claim": "A − Cpp/2 + E ≈ 886.021328750925",
       "status": "not_formalized",
-      "scope": "符号校正公式已覆盖；十进制数值未认证。"
+      "scope": "The symbolic correction identity is proved; this decimal value remains uncertified."
     },
     {
       "id": "B-number-05",
@@ -215,9 +175,9 @@
         4430,
         4437
       ],
-      "claim": "−N Bhat/2≈18.978671254276及rhat≈905.0000000052",
+      "claim": "−N Bhat/2 ≈ 18.978671254276 and rhat ≈ 905.0000000052",
       "status": "not_formalized",
-      "scope": "B3的Ihat为任意输入，尚无特定Ihat及该中心的证明。"
+      "scope": "B.3 accepts arbitrary approximate character integrals. A specific input array and this numerical center remain to be certified."
     },
     {
       "id": "B-number-06",
@@ -225,9 +185,9 @@
         4475,
         4486
       ],
-      "claim": "3280个非零a_n；有限变换有理包围证明RMS积分误差<1.68935×10^−5",
+      "claim": "3280 nonzero coefficients a_n; rational finite-transform enclosures give RMS integral error < 1.68935 × 10^−5",
       "status": "not_formalized",
-      "scope": "这是应用B3得905最关键的未填输入；HasMomentError仅是定义，lemma_B_3将该界作为假设。"
+      "scope": "This concrete error bound is an outstanding input to B.3. HasMomentError defines the condition, and lemma_B_3 assumes it."
     },
     {
       "id": "B-number-07",
@@ -235,9 +195,9 @@
         4487,
         4490
       ],
-      "claim": "εr≈0.274758682716，外舍入[904.725241,905.274759]∩Z={905}",
+      "claim": "Count error ≈ 0.274758682716; outward-rounded interval [904.725241, 905.274759] contains only the integer 905",
       "status": "not_formalized",
-      "scope": "没有在Lean中将真实积分误差传递到该具体区间；一般整数区间lemma不提供这项数值证书。"
+      "scope": "The general integer-enclosure theorem is proved. Propagating the actual numerical integration error into this particular interval remains to be certified."
     },
     {
       "id": "B-number-08",
@@ -245,10 +205,9 @@
         4491,
         4496
       ],
-      "claim": "精确905无序对、1810有序对；直接有理求和与独立素数枚举双重检验",
-      "status": "partially_certified_by_new_audit_supplement",
-      "scope": "原库没有905命题；本轮已另用内核枚举证明实际无序计数=905。原文通过积分误差获得905的认证路径、有理校正数值及其余数值展示仍未完成。",
-      "original_audit_status": "not_formalized_in_audited_library"
+      "claim": "Exactly 905 unordered prime pairs and 1810 ordered pairs; direct rational summation and independent prime enumeration",
+      "status": "direct_prime_enumeration_certified",
+      "scope": "The audit supplement certifies the unordered count 905 by Lean-kernel enumeration. The integral-error route to 905, rational correction values, and remaining numerical displays are still outstanding."
     },
     {
       "id": "B-number-09",
@@ -256,9 +215,9 @@
         4501,
         4505
       ],
-      "claim": "α30030≈0.09699366",
+      "claim": "α at N = 30030 ≈ 0.09699366",
       "status": "approximation_not_formalized",
-      "scope": "精确α及1/9在条带内的证明已存在；仅该十进制展示未认证，不影响B4。"
+      "scope": "The exact parameter and placement of 1/9 inside the strip are proved. The decimal display remains uncertified."
     },
     {
       "id": "B-number-10",
@@ -266,9 +225,9 @@
         4571,
         4580
       ],
-      "claim": "L′/L及Euler积数值实现、截止2×10^5；极端特征值≈−0.353421,0.357462；||C||/δ≈0.826864<1；δ≈0.432310239587548",
+      "claim": "Numerical L′/L and Euler products with prime cutoff 2 × 10^5; extreme eigenvalues ≈ −0.353421 and 0.357462; norm ratio ≈ 0.826864 < 1; δ ≈ 0.432310239587548",
       "status": "not_formalized",
-      "scope": "B5只证明若真实矩阵范数≤δ则零点在临界线；没有已认证的矩阵数值近似/范数上界。"
+      "scope": "B.5 proves the critical-line conclusion assuming the exact matrix norm is at most δ. A certified numerical matrix approximation and norm bound remain outstanding."
     },
     {
       "id": "B-number-11",
@@ -276,9 +235,9 @@
         4577,
         4599
       ],
-      "claim": "截止10^5加倍时端点变化<3×10^−8；显示零点与图形使用完整计算谱",
+      "claim": "Doubling the cutoff from 10^5 changes the extreme eigenvalues by < 3 × 10^−8; displayed zeros and figures use the full computed spectrum",
       "status": "not_formalized",
-      "scope": "图片和稳定性展示无形式数值证书；原文本身明确不认证无限算子R。"
+      "scope": "The figures and cutoff-stability calculations remain numerical evidence for the finite model. A bound for the infinite operator is outside this numerical certification."
     }
   ]
 }

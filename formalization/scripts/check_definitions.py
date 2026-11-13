@@ -6,7 +6,7 @@ from pathlib import Path
 import re,json,hashlib
 ROOT=Path(__file__).resolve().parents[1]
 base=json.loads((ROOT/'reference/declarations.json').read_text())
-source_paths=[ROOT/'LiLiuGoldbach/BaseDefinitions.lean',ROOT/'LiLiuGoldbach/Definitions.lean']
+source_paths=[ROOT/'ConditionalGoldbach/BaseDefinitions.lean',ROOT/'ConditionalGoldbach/Definitions.lean']
 lines=[]
 for source in source_paths:
  if source.exists():lines.extend(source.read_text().splitlines()+['end'])
@@ -33,7 +33,7 @@ for n,r in base.items():
  if r['kind']=='theorem':continue
  assert n in current,n
  equal=normal(r['code'])==normal(current[n]);assert equal,n
- rows.append({'name':'LiLiuGoldbach16.'+n,'reviewed_definition_preserved':equal,'normalized_sha256':hashlib.sha256(normal(current[n]).encode()).hexdigest()})
+ rows.append({'name':'ConditionalGoldbach.'+n,'reviewed_definition_preserved':equal,'normalized_sha256':hashlib.sha256(normal(current[n]).encode()).hexdigest()})
 assert len(rows)==171
 (ROOT/'reviewed-definitions.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
 print('All 171 reviewed definition bodies are unchanged (ignoring whitespace).')

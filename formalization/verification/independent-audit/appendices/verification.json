@@ -1,56 +1,17 @@
 {
-  "audit_scope": "original TeX Appendix A and B, lines 3931–4599",
-  "human_semantic_review": "18 proposition-reference rows and 32 definition families independently reviewed; no uncovered mismatch in the named theorem bundles was found; 11 groups of concrete numerical claims remain unformalized",
-  "named_propositions": 9,
-  "original_review_supplements": 8,
-  "extra_quantifier_witnesses": 1,
-  "total_statement_references": 18,
-  "definition_families": 32,
-  "independent_definition_bodies": 48,
-  "uncovered_numerical_groups": 11,
-  "reference_typecheck": {
-    "exit_code": 0,
-    "command": "lake env lean verification/independent-audit/appendices/Reference.lean",
-    "log": "reference-typecheck.log",
-    "axiom_or_sorry_added": false,
-    "definition_bridges": 48,
-    "all_definition_bridges_use": "rfl"
-  },
-  "statement_assignments": {
-    "exit_code": 0,
-    "command": "lake env lean verification/independent-audit/appendices/TypeAssignments.lean",
-    "log": "assignments-typecheck.log",
-    "rows": 18,
-    "note": "The reference copy embedded in TypeAssignments predates the final 11 additional shared-definition bridges; all 18 expected statement bodies are identical to the final Reference."
-  },
-  "external_lean_comparator": "run and reported by root agent; not claimed by this verification file",
-  "tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
-  "artifact_sha256": {
-    "Reference.lean": "6be27e81044dca6dd2ee92ba114b0eb4709801b47e80cdfae1324de90c3877b1",
-    "TypeAssignments.lean": "4389aadd497fa6972d8438b1d410cb1dc71f0426219b7c56716c5147552e4a31",
-    "comparison.json": "875bb1dd8394a17bea29927d81c520cd7f97a77162f323540f584f266d792d8e",
-    "definitions-comparison.json": "aa9a9d735e9678f5d4cac3c7e131c578b8209a49ba0853b02d99324a8beb3c51",
-    "definition-families.json": "4ff39888a6ba63281c45c046ce452fc95c5a2bc2281e7971740e993e6fba45cf",
-    "uncovered-numerics.json": "c32ee1c061f5cf958efcf610f7406a1fc17b696d5fd9b3151f04ec1ef13b9a70",
-    "audit-report.md": "c509fb4050b2647a9c08adb74dfa07d4aafb01496dff64db8d834861d9b54403"
-  },
-  "live_source_sha256": {
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean": "7f45907d31aa7d58864d78e347adba216010f3b0b850eedc152773166e2d0171",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean": "db3a3d01a22a18d71a30aa9f7f36a3aea38a797ec805ae0b750fae5b237e4633",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean": "ebacf3a2262e45a281a560e273995fd020f6ad7cda9b1ba131e3278268747f30",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BaselineEuler.lean": "887b05ffddc9febb10f2b207c66b68a61e0f63c0ca408a7ab22d92a0f219f3e2",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean": "e3a9f6c26734f41ff1eb4cc72e9dcdeb71565ee0bf5287f57a05af4beb0f0c77",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleObstruction.lean": "65e85f93cfa7196e3641c09919e0b4caf09506e0fdacbed6f81ac0cdab64b213",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean": "e98868d83e92bffcc8cb2493b9a02f0a1a252047e65977b3042a2d5a5301d6c5",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableConsequences.lean": "234eb887cf8375d9435f6fb4be4c33478b24a519308074fe4003d530ebcfd98a",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean": "2099e564c5b2403ba9e2066c5395a029799521fa2665784ae4b65696525187b4",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableStripOperators.lean": "49398b57d2767f9e45ecbe9b486b6550798d32463acac06f7a71480a1b3db76f",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideError.lean": "e435d8a0a5b64658c4c666c0872126c3fc6b95ec3e08b81be73ed52f9106dbf1",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMainIntegral.lean": "ac9f0df1d4d525467a5166dc50b1099a4d1c3fe85105af987422aa413b3b1241",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMellinResidual.lean": "907cf8c8459fa8f9674343022b9d12e346a43572335c109b69e28487f8be78ae",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMoments.lean": "bbb88b54fd8f291b0bdfbd2ef1b4e3e34ffb530501bde7b18f576d4e0918154c",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WidePrimePowerCount.lean": "9c8261ac87223cdef2e06153de3c02be918ec35f4d21e7aa476d6b3c80d40aa2",
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideWeight.lean": "5044f8b43074308d5eab6059081868e41c70e99518d098901456c3104fbe6abd"
-  },
-  "trust_boundary": "TeX-to-reference is a human semantic audit. Kernel type/definition equality and the external comparator establish only reference-to-live-Lean agreement. Shared core analytic definitions rely on the other independent audit sections."
+  "scope": "appendices",
+  "frozen_reference_base": "..",
+  "independent_full_types": 18,
+  "definition_body_comparisons": 48,
+  "source_tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
+  "comparator_record": "../comparator-result.json",
+  "comparator_sha256": "049997b276e1071b33d1f516bec6abd2a420975237b49006465182e20ae15c32",
+  "current_comparator_accepted": true,
+  "all_independent_full_types_equal": true,
+  "frozen_reference_files": {
+    "appendices/Reference.lean": "682ac57356f00d936b958c1b307c11db8bc07250b3fbe71c2ac39f404a968cf3",
+    "appendices/comparison.json": "7657a007b483fe4392778f731c66c8d79fe4d1061bde5a49aaee827081ba1f49",
+    "appendices/definitions-comparison.json": "322317373554753571ed3d10e269781c57947a1adfb183993e0cd0654b64e98c",
+    "appendices/NumericCrossCheck.lean": "b9ae1ae33785a0444f9b5549476df5a322a6df6aa19d5159ff922e4c60803cba"
+  }
 }

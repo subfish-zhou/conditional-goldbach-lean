@@ -76,8 +76,8 @@
       4496
     ],
     "claim": "精确905无序对、1810有序对；直接有理求和与独立素数枚举双重检验",
-    "status": "not_formalized_in_audited_library",
-    "scope": "对活跃LiLiuGoldbach目录检索905未发现对应命题；可另补枚举证书，但不能代替积分误差认证。"
+    "status": "partially_certified_by_audit_supplement",
+    "scope": "独立审计补充证明已通过 Lean 内核直接枚举认证无序素数对计数为905。原文通过积分误差得到905的认证路径、直接有理校正数值及其余数值展示仍待完成。"
   },
   {
     "id": "B-number-09",

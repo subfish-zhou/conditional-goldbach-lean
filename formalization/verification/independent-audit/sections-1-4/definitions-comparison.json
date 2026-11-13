@@ -1,7 +1,7 @@
 [
   {
     "expected": "TexAudit14.Weight",
-    "actual": "LiLiuGoldbach16.IsWeight",
+    "actual": "ConditionalGoldbach.IsWeight",
     "tex_lines": [
       151,
       154
@@ -9,7 +9,7 @@
   },
   {
     "expected": "TexAudit14.Mass",
-    "actual": "LiLiuGoldbach16.weightMass",
+    "actual": "ConditionalGoldbach.weightMass",
     "tex_lines": [
       160,
       164
@@ -17,7 +17,7 @@
   },
   {
     "expected": "TexAudit14.Goldbach",
-    "actual": "LiLiuGoldbach16.goldbach",
+    "actual": "ConditionalGoldbach.goldbach",
     "tex_lines": [
       154,
       164
@@ -25,7 +25,7 @@
   },
   {
     "expected": "TexAudit14.GRHExpected",
-    "actual": "LiLiuGoldbach16.GRH",
+    "actual": "ConditionalGoldbach.GRH",
     "tex_lines": [
       182,
       185
@@ -33,7 +33,7 @@
   },
   {
     "expected": "TexAudit14.EventuallyEven",
-    "actual": "LiLiuGoldbach16.EvenEventually",
+    "actual": "ConditionalGoldbach.EvenEventually",
     "tex_lines": [
       345,
       346
@@ -41,7 +41,7 @@
   },
   {
     "expected": "TexAudit14.TendsToInfinityEven",
-    "actual": "LiLiuGoldbach16.EvenTendstoInfinity",
+    "actual": "ConditionalGoldbach.EvenTendstoInfinity",
     "tex_lines": [
       273,
       278
@@ -49,7 +49,7 @@
   },
   {
     "expected": "TexAudit14.AsymptoticEven",
-    "actual": "LiLiuGoldbach16.EvenAsymptotic",
+    "actual": "ConditionalGoldbach.EvenAsymptotic",
     "tex_lines": [
       289,
       298
@@ -57,7 +57,7 @@
   },
   {
     "expected": "TexAudit14.Width",
-    "actual": "LiLiuGoldbach16.zeroFreeWidth",
+    "actual": "ConditionalGoldbach.zeroFreeWidth",
     "tex_lines": [
       273,
       278
@@ -65,7 +65,7 @@
   },
   {
     "expected": "TexAudit14.Admissible",
-    "actual": "LiLiuGoldbach16.IsAdmissible",
+    "actual": "ConditionalGoldbach.IsAdmissible",
     "tex_lines": [
       273,
       282
@@ -73,7 +73,7 @@
   },
   {
     "expected": "TexAudit14.S",
-    "actual": "LiLiuGoldbach16.HypothesisS",
+    "actual": "ConditionalGoldbach.HypothesisS",
     "tex_lines": [
       273,
       282
@@ -81,7 +81,7 @@
   },
   {
     "expected": "TexAudit14.R",
-    "actual": "LiLiuGoldbach16.HypothesisR",
+    "actual": "ConditionalGoldbach.HypothesisR",
     "tex_lines": [
       306,
       310
@@ -89,7 +89,7 @@
   },
   {
     "expected": "TexAudit14.Scale",
-    "actual": "LiLiuGoldbach16.spectralScale",
+    "actual": "ConditionalGoldbach.spectralScale",
     "tex_lines": [
       229,
       233
@@ -97,7 +97,7 @@
   },
   {
     "expected": "TexAudit14.PrimeCount",
-    "actual": "LiLiuGoldbach16.PrimePairCount",
+    "actual": "ConditionalGoldbach.PrimePairCount",
     "tex_lines": [
       325,
       328
@@ -105,7 +105,7 @@
   },
   {
     "expected": "TexAudit14.BetaRegion",
-    "actual": "LiLiuGoldbach16.betaDomain",
+    "actual": "ConditionalGoldbach.betaDomain",
     "tex_lines": [
       1480,
       1482
@@ -113,7 +113,7 @@
   },
   {
     "expected": "TexAudit14.Omega",
-    "actual": "LiLiuGoldbach16.analyticDomain",
+    "actual": "ConditionalGoldbach.analyticDomain",
     "tex_lines": [
       1704,
       1709
@@ -121,7 +121,7 @@
   },
   {
     "expected": "TexAudit14.BetaSigned",
-    "actual": "LiLiuGoldbach16.betaKernel",
+    "actual": "ConditionalGoldbach.betaKernel",
     "tex_lines": [
       1461,
       1466
@@ -129,7 +129,7 @@
   },
   {
     "expected": "TexAudit14.GammaRatio",
-    "actual": "LiLiuGoldbach16.gammaQuotient",
+    "actual": "ConditionalGoldbach.gammaQuotient",
     "tex_lines": [
       1532,
       1535
@@ -137,7 +137,7 @@
   },
   {
     "expected": "TexAudit14.DensityProduct",
-    "actual": "LiLiuGoldbach16.densityEulerProduct",
+    "actual": "ConditionalGoldbach.densityEulerProduct",
     "tex_lines": [
       1598,
       1604
@@ -145,7 +145,7 @@
   },
   {
     "expected": "TexAudit14.ContinuedDensity",
-    "actual": "LiLiuGoldbach16.continuedDensity",
+    "actual": "ConditionalGoldbach.continuedDensity",
     "tex_lines": [
       1593,
       1604
@@ -153,7 +153,7 @@
   },
   {
     "expected": "TexAudit14.Model",
-    "actual": "LiLiuGoldbach16.betaModel",
+    "actual": "ConditionalGoldbach.betaModel",
     "tex_lines": [
       1690,
       1699
@@ -161,7 +161,7 @@
   },
   {
     "expected": "TexAudit14.ContinuedModel",
-    "actual": "LiLiuGoldbach16.continuedModel",
+    "actual": "ConditionalGoldbach.continuedModel",
     "tex_lines": [
       1695,
       1709
@@ -169,7 +169,7 @@
   },
   {
     "expected": "TexAudit14.Residual",
-    "actual": "LiLiuGoldbach16.residual",
+    "actual": "ConditionalGoldbach.residual",
     "tex_lines": [
       1732,
       1747

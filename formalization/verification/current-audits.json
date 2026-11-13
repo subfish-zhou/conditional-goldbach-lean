@@ -1,0 +1,100 @@
+[
+  {
+    "label": "definitions",
+    "command": [
+      "python3",
+      "scripts/check_definitions.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:26:07.514847+00:00",
+    "wall_seconds": 0.040838103741407394,
+    "log": "verification/current-definitions.log",
+    "log_sha256": "385d0f52bf07b1125d471415a4551fccf8dceb5b971ea093b5576cb6783927e6"
+  },
+  {
+    "label": "types",
+    "command": [
+      "python3",
+      "scripts/check_reviewed_types.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:26:07.556085+00:00",
+    "wall_seconds": 14.705430004745722,
+    "log": "verification/current-types.log",
+    "log_sha256": "ff891d8cb5ebe5c0e8336a1b88324aeb77ab571776a7d907946ec1b0eb87f046"
+  },
+  {
+    "label": "axioms",
+    "command": [
+      "python3",
+      "scripts/audit_proofs.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:26:22.261935+00:00",
+    "wall_seconds": 11.458341661840677,
+    "log": "verification/current-axioms.log",
+    "log_sha256": "f09d49204b0e570d83094edef625c873840f7fafd49a5621293136ae2a807fae"
+  },
+  {
+    "label": "dependency-graph",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "verification/publication/declaration-audit/DeclarationAudit.lean"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:26:33.720749+00:00",
+    "wall_seconds": 24.946267265826464,
+    "log": "verification/publication/declaration-audit/compile.log",
+    "log_sha256": "c0c4d0a0505bb5b58826ebb3ac71cd68446124c5296eca4ef74bd0adbe8a6668"
+  },
+  {
+    "label": "dependency-analysis",
+    "command": [
+      "python3",
+      "verification/publication/declaration-audit/analyze.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:26:58.667522+00:00",
+    "wall_seconds": 6.08587047085166,
+    "log": "verification/publication/declaration-audit/analyze-recheck.log",
+    "log_sha256": "81c8e457dc991eb7ebf5530e59c6b36aa0fc238ae66a6113b46b5897fac967e4"
+  },
+  {
+    "label": "dependency-imports",
+    "command": [
+      "python3",
+      "verification/publication/audit_imports.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:27:04.753910+00:00",
+    "wall_seconds": 34.827970024198294,
+    "log": "verification/publication/imports-recheck.log",
+    "log_sha256": "a9b82b2d24b49706297e849988bc410ff8e7c79be3410d956e326d5b16e6e007"
+  },
+  {
+    "label": "comparator-prepare",
+    "command": [
+      "python3",
+      "verification/independent-audit/prepare_comparator.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:27:39.639039+00:00",
+    "wall_seconds": 0.04841959848999977,
+    "log": "verification/current-comparator-prepare.log",
+    "log_sha256": "4b38aaf12655d2770b15ae55185f81911aa317b2f4966ccbebd926846d6c477f"
+  },
+  {
+    "label": "comparator",
+    "command": [
+      "python3",
+      "verification/independent-audit/run_comparator.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-13T19:27:39.687893+00:00",
+    "wall_seconds": 633.5305093675852,
+    "log": "verification/current-comparator.log",
+    "log_sha256": "6f8047aa1b6c8b26974f728f0e393c749e8341b070035cdcb9e4e291820e48d8"
+  }
+]

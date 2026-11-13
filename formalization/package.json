@@ -1,7 +1,7 @@
 {
-  "name": "liliu-goldbach-proof-review",
+  "name": "conditional-goldbach-review",
   "private": true,
-  "description": "Optional dependencies for regenerating and checking the offline proof review page; not used by Lean proofs.",
+  "description": "Optional dependencies for rendering and checking offline proof review pages.",
   "devDependencies": {
     "katex": "0.19.1",
     "playwright": "1.65.0"

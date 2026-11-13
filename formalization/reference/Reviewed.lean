@@ -2,7 +2,7 @@ import Mathlib
 import MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries
 
 /-!
-Statement preparation for Li–Liu, LiLiuGoldbach16.pdf (63 pages).
+Statement preparation for Li–Liu, ConditionalGoldbach.pdf (63 pages).
 All proof bodies are deliberately `sorry` for the author's review.
 Existence lemmas used to define analytic objects are also review obligations.
 No theorem here is claimed proved. Existing project sources are read-only.
@@ -19,7 +19,7 @@ noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
 open MeasureTheory Filter Set Complex
 
-namespace LiLiuGoldbach16
+namespace ConditionalGoldbach
 
 attribute [local instance] Classical.propDecidable
 
@@ -969,7 +969,7 @@ theorem proposition_B_5 (hGRH : GRH experimentN) :
     (finiteMatrixOpNorm ≤ spectralScale experimentN →
       ∀ q : ℂ, finiteSpectralFunction q = 0 → q.re = 1 / 2) := by sorry
 
-end LiLiuGoldbach16
+end ConditionalGoldbach
 
 /-!
 Auxiliary definitions used in the paper's proofs and appendices.
@@ -978,7 +978,7 @@ All are part of this single review module and contain their actual formulas.
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
-namespace LiLiuGoldbach16
+namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable conductorNeZero
 
 /-- Full meromorphic Gamma-quotient form; equality to the integral has domain hypotheses. -/
@@ -1081,7 +1081,7 @@ def HasMomentError (Ihat : Character experimentN → ℂ) (ε : ℝ) : Prop :=
   0 ≤ ε ∧ (5760 : ℝ)⁻¹ * ∑ χ : Character experimentN,
     ‖countingIntegral χ - Ihat χ‖ ^ 2 ≤ ε ^ 2
 
-end LiLiuGoldbach16
+end ConditionalGoldbach
 
 /-!
 Supplementary clauses of named statements. These are proof-free review stubs.
@@ -1090,7 +1090,7 @@ Labels are kept in the names so that subordinate clauses are not silently lost.
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
-namespace LiLiuGoldbach16
+namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable conductorNeZero
 
 /-- The finite-dimensionality assertion is essential: `finrank` alone is zero
@@ -1392,10 +1392,10 @@ theorem proposition_7_3_absolute_convergence (N : ℕ) [NeZero N]
         mellinWeight φ (line σ p.1) * mellinWeight φ (line σ p.2) *
         residual N (line σ p.1) (line σ p.2)) := by sorry
 
-end LiLiuGoldbach16
+end ConditionalGoldbach
 
 
-namespace LiLiuGoldbach16
+namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable conductorNeZero
 
 /-- Appendix A.3, the two-sided balance and the corresponding width gain. -/
@@ -1535,10 +1535,10 @@ theorem lemma_A_3_width_ratio (φ : ℝ → ℝ) (hφ : IsWeight φ)
           requiredWidth / suppliedWidth ≤
             U * h ^ 2 * Real.log N ^ 4 / singularSeries N ^ 2 * balanceFactor c ^ 2) := by sorry
 
-end LiLiuGoldbach16
+end ConditionalGoldbach
 
 
-namespace LiLiuGoldbach16
+namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable conductorNeZero
 
 /-- Lemma 7.1: both inversion integrals are absolutely convergent; the double
@@ -1644,4 +1644,4 @@ theorem proposition_A_1_operator_spec (N : ℕ) [NeZero N] (hN : Even N)
         (boundaryTraces ha h).2 t)) := by sorry
 
 
-end LiLiuGoldbach16
+end ConditionalGoldbach

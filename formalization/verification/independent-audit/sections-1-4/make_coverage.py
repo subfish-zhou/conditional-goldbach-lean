@@ -3,18 +3,18 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[3]
 out = Path(__file__).resolve().parent
-texpath = root.parent / 'outputs/formalization-preparation/LiLiuGoldbach16.tex'
+texpath = root.parent / 'outputs/formalization-preparation/conditional-goldbach.tex'
 tex = texpath.read_text().splitlines()
 inventory = json.loads((root / 'reference/inventory.json').read_text())
 
 # The old inventory supplies identifiers ONLY. Original formulas below are read
 # directly from the TeX, and actual declaration locations from current sources.
 locations = {}
-for path in (root / 'LiLiuGoldbach').rglob('*.lean'):
+for path in (root / 'ConditionalGoldbach').rglob('*.lean'):
     for line, s in enumerate(path.read_text().splitlines(), 1):
         m = re.match(r'(?:(?:noncomputable|private|protected)\s+)*(?:def|abbrev|structure|theorem|lemma)\s+(\S+)', s)
         if m:
-            locations.setdefault('LiLiuGoldbach16.' + m.group(1), []).append({'file': str(path), 'line': line})
+            locations.setdefault('ConditionalGoldbach.' + m.group(1), []).append({'file': str(path), 'line': line})
 
 definition_data = '''
 weight|151:164|Smooth real nonzero symmetric weight; support in [1/3,2/3], 0≤φ≤1. Compact support omitted syntactically but machine-derived, as is positive mass.|weight_has_required_compact_support
@@ -108,7 +108,7 @@ assert set(expected) == set(statement_ranges), set(expected)^set(statement_range
 comparisons = []
 for name in expected:
     a,b = statement_ranges[name]
-    comparisons.append({'expected':'TexAudit14.expect_'+name, 'actual':'LiLiuGoldbach16.'+name,
+    comparisons.append({'expected':'TexAudit14.expect_'+name, 'actual':'ConditionalGoldbach.'+name,
       'tex_lines':[a,b], 'label':name})
 (out/'comparison.json').write_text(json.dumps(comparisons,ensure_ascii=False,indent=2)+'\n')
 

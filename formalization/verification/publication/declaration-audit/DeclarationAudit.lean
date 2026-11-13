@@ -1,4 +1,4 @@
-import LiLiuGoldbach
+import ConditionalGoldbach
 import Lean
 
 open Lean Elab Command
@@ -26,7 +26,7 @@ run_cmd do
   let env := (← getEnv).setExporting false
   let modules := env.header.moduleNames
   let localNames := env.constants.toList.toArray.filterMap fun (n, _) =>
-    if "LiLiuGoldbach".isPrefixOf (origin env modules n).toString then some n else none
+    if "ConditionalGoldbach".isPrefixOf (origin env modules n).toString then some n else none
   let mut todo := localNames
   let mut seen : NameSet := {}
   let mut rows : Array Json := #[]

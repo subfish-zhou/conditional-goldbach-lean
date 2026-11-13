@@ -1,7 +1,7 @@
-# 并行证明复核记录
+# Proof verification records
 
-`main-assembly-cross-check.json` 是所有证明模块定稿后的独立只读复核，记录当前源码哈希、主定理与谱字典拼接的条件检查、以及独立遍历的实际待证依赖。
+[Chinese](README.zh.md)
 
-其余模块报告是各工作分支交付时的验证记录，供追溯使用。全工程的最新计数、声明归属、传递公理和来源哈希统一以父目录的 `proof-status.json`、`reviewed-types.json`、`reviewed-definitions.json` 及 `verification.json` 为准。
+Current project-wide declaration counts, provenance, transitive axioms, and source hashes are recorded in the parent directory's `proof-status.json`, `reviewed-types.json`, `reviewed-definitions.json`, and `verification.json`.
 
-`collectAxioms` 没有 `sorryAx` 表示该 Lean 声明的证明依赖已经闭合；不表示一个带有 GRH、S 或 R 假设的命题消除了这些假设。编译成功也不表示其余保留占位的论文内容已经证明。
+The independent audit and publication subdirectories contain the corresponding source reviews and verification evidence. Historical reports identify their review stage. The main theorem statements retain their GRH and spectral S/R hypotheses.

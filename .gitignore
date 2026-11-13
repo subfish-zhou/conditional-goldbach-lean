@@ -14,7 +14,7 @@
 /formalization/work/
 /formalization/verification/independent-audit/benchmark-project/
 /formalization/*Check.lean
-/formalization/LiLiuGoldbach/**/*Check.lean
+/formalization/ConditionalGoldbach/**/*Check.lean
 /formalization/scripts/*.lean
 /formalization/*.log
 /formalization/verification/spectral-final-axioms.log

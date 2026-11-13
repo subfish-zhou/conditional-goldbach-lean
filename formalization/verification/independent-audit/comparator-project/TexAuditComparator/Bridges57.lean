@@ -1,4 +1,4 @@
-import LiLiuGoldbach
+import ConditionalGoldbach
 
 /-! Extra independent semantic checks, not an assertion that TeX can be mechanically parsed. -/
 set_option autoImplicit false
@@ -6,7 +6,7 @@ noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace TexAudit57
-open LiLiuGoldbach16
+open ConditionalGoldbach
 
 def KernelQuadratic (K : ℂ → ℂ → ℂ) (n : ℕ) (z c : Fin n → ℂ) : ℂ :=
   ∑ i, ∑ j, c i * conj (c j) * K (z i) (z j)

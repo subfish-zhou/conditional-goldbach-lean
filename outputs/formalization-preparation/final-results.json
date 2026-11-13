@@ -1,6 +1,6 @@
 {
   "title_zh": "本文最终结果、条件及当前Lean覆盖范围",
-  "source_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.tex",
+  "source_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/conditional-goldbach.tex",
   "global_conventions_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。 \\(\\mathrm{GRH}(N)\\) 指每个导子整除 \\(N\\) 的本原 Dirichlet \\(L\\) 函数的非平凡零点实部均为 \\(1/2\\)。 所有 \\(N\\) 的极限沿偶数取；谱函数 \\(\\mathfrak X_N\\) 不是经典 \\(\\zeta\\) 函数。",
   "results": [
     {
@@ -20,7 +20,7 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.theorem_1_1"
+        "ConditionalGoldbach.theorem_1_1"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -61,7 +61,7 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.theorem_1_2"
+        "ConditionalGoldbach.theorem_1_2"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -101,7 +101,7 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.primePair_consequence"
+        "ConditionalGoldbach.primePair_consequence"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -144,7 +144,7 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S"
+        "ConditionalGoldbach.theorem_1_2_hypothesisR_implies_S"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -179,8 +179,8 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.theorem_7_1",
-        "LiLiuGoldbach16.theorem_7_1_uniform"
+        "ConditionalGoldbach.theorem_7_1",
+        "ConditionalGoldbach.theorem_7_1_uniform"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -214,7 +214,7 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.theorem_6_2"
+        "ConditionalGoldbach.theorem_6_2"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -245,8 +245,8 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.lemma_7_5",
-        "LiLiuGoldbach16.lemma_7_5_asymptotic"
+        "ConditionalGoldbach.lemma_7_5",
+        "ConditionalGoldbach.lemma_7_5_asymptotic"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -284,10 +284,10 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.proposition_A_1",
-        "LiLiuGoldbach16.proposition_A_1_operator_spec",
-        "LiLiuGoldbach16.proposition_A_2",
-        "LiLiuGoldbach16.proposition_A_2_pointwise"
+        "ConditionalGoldbach.proposition_A_1",
+        "ConditionalGoldbach.proposition_A_1_operator_spec",
+        "ConditionalGoldbach.proposition_A_2",
+        "ConditionalGoldbach.proposition_A_2_pointwise"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -324,10 +324,10 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.lemma_A_3",
-        "LiLiuGoldbach16.lemma_A_3_balance",
-        "LiLiuGoldbach16.lemma_A_3_absolute_operator_bound",
-        "LiLiuGoldbach16.lemma_A_3_width_ratio"
+        "ConditionalGoldbach.lemma_A_3",
+        "ConditionalGoldbach.lemma_A_3_balance",
+        "ConditionalGoldbach.lemma_A_3_absolute_operator_bound",
+        "ConditionalGoldbach.lemma_A_3_width_ratio"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -361,8 +361,8 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.proposition_A_4",
-        "LiLiuGoldbach16.proposition_A_4_baseline_product"
+        "ConditionalGoldbach.proposition_A_4",
+        "ConditionalGoldbach.proposition_A_4_baseline_product"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -397,8 +397,8 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.proposition_B_1",
-        "LiLiuGoldbach16.lemma_B_2"
+        "ConditionalGoldbach.proposition_B_1",
+        "ConditionalGoldbach.lemma_B_2"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -431,7 +431,7 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.lemma_B_3"
+        "ConditionalGoldbach.lemma_B_3"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -500,8 +500,8 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.proposition_B_4",
-        "LiLiuGoldbach16.proposition_B_4_weight"
+        "ConditionalGoldbach.proposition_B_4",
+        "ConditionalGoldbach.proposition_B_4_weight"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,
@@ -532,7 +532,7 @@
         }
       ],
       "Lean_names": [
-        "LiLiuGoldbach16.proposition_B_5"
+        "ConditionalGoldbach.proposition_B_5"
       ],
       "stated_in_paper": true,
       "lean_placeholder_available": true,

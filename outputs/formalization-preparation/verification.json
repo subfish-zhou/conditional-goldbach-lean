@@ -1,5 +1,5 @@
 {
-  "module": "LiLiuGoldbach16.lean",
+  "module": "conditional-goldbach.lean",
   "module_sha256": "bd3b94f0b7218b1675e5346ba36c05985ab161868f40e8524796912268f34261",
   "line_count": 1647,
   "typecheck_exit_code": 0,
@@ -11,7 +11,7 @@
     "Mathlib",
     "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
   ],
-  "command": "LEAN_NUM_THREADS=2 lake env lean /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.lean",
+  "command": "LEAN_NUM_THREADS=2 lake env lean /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/conditional-goldbach.lean",
   "command_working_directory": "/home/azureuser/goldbach-lean",
   "paper_named_statements": 38,
   "definition_inventory_entries": 121,
@@ -42,9 +42,9 @@
     ],
     "new_interface_note": "Generic zero–norm dictionary extracted from the proof of Theorem 6.1, supporting fixed and variable strips; still by sorry and not a new named result in the paper."
   },
-  "checked_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.lean",
+  "checked_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/conditional-goldbach.lean",
   "delivered_file_byte_identical_to_checked_file": true,
-  "reproduction_command": "LEAN_NUM_THREADS=2 lake env lean /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.lean",
+  "reproduction_command": "LEAN_NUM_THREADS=2 lake env lean /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/conditional-goldbach.lean",
   "auxiliary_definition_audit": "auxiliary-definitions-cross-check.json",
   "all_definition_declarations_mapped": 171,
   "pdf_excerpt_evidence": "pdf-excerpts.json",
@@ -86,5 +86,11 @@
   "revision": 9,
   "typecheck_log": "typecheck.log",
   "typecheck_log_sha256": "0fea979d4337dc9a283a0724eccf0621577df72d5f42340a035aa05b3c99637f",
-  "definition_declarations": 171
+  "definition_declarations": 171,
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

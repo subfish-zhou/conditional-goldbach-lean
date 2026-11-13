@@ -1,0 +1,127 @@
+{
+  "text": {
+    "定理": "Theorem",
+    "引理": "Lemma",
+    "定义": "Definition",
+    "缩写": "Abbreviation",
+    "结构": "Structure",
+    "证明已闭合": "Proof complete",
+    "证明体已写，依赖待证": "Proof written; dependencies pending",
+    "证明仍占位": "Proof pending",
+    "定义无占位依赖": "Definition verified",
+    "定义依赖待证": "Definition dependencies pending",
+    "Lean.collectAxioms 未发现 sorryAx。状态包含被引用定理和定义的传递依赖检查。": "Lean.collectAxioms reports no sorryAx in this declaration or its transitive dependencies.",
+    "本声明的证明体已写出，但传递依赖仍含 sorryAx，因此尚未完成端到端证明。": "The proof body is written; transitive dependencies still contain sorryAx.",
+    "本声明的证明体仍直接含 sorry；条件与结论保留，等待证明。": "The statement retains its hypotheses and conclusion; its proof contains sorry.",
+    "定义及其传递依赖未发现 sorryAx。": "The definition and its transitive dependencies contain no sorryAx.",
+    "定义的构造或传递依赖仍含 sorryAx；其对象有效性仍有待证义务。": "The construction or its transitive dependencies contain sorryAx; proof obligations remain.",
+    "102 个基线声明的完整类型正在自动同一性核验；尚未把类型检查状态视为已通过。": "Full-type verification for the 102 baseline statements is pending.",
+    "102 个原审阅定理的完整类型已通过 Lean 定义等同性检查；证明及其传递依赖也已全部核验。": "All 102 reviewed theorem types pass Lean definitional-equality checks, and their proofs and transitive dependencies are verified.",
+    "102 个原审阅定理的完整类型已通过 Lean 定义等同性检查；证明完成状态另由传递公理审计判定。": "All 102 reviewed theorem types pass Lean definitional-equality checks. Proof status comes from the transitive axiom audit.",
+    "用于连接原文定义与证明的辅助声明；精确条件、量词和完整证明见右栏。": "A supporting declaration connecting the paper's definitions and proofs. Its complete Lean statement and proof appear alongside.",
+    "配套声明：下列原文主条目摘要仅作背景，精确子结论以右栏为准。": "Companion declaration within this result family. The Lean statement specifies this component's conclusion.",
+    "原文中文 / Lean 审阅条目": "Historical Chinese / Lean review",
+    "原审阅声明": "Reviewed statement",
+    "新增辅助": "Added helpers",
+    "显式引用链中的待证依赖（": "Pending dependencies in the explicit reference chain (",
+    "Lean 传递公理检查": "Lean transitive axiom audit",
+    "无公理": "No axioms",
+    "即使声明本身没有 sorry，只要依赖含 sorryAx，也不会标为证明闭合。依赖列表按显式常量引用追踪；完整传递判定以 Lean.collectAxioms 为准。": "The dependency list follows explicit constant references. Lean.collectAxioms determines the complete transitive axiom set.",
+    "复制完整声明": "Copy declaration",
+    " 的实际 Lean 证明": " — actual Lean proof",
+    "显示 ": "Showing ",
+    " 项": " items",
+    "当前范围：102 个原审阅定理": "Scope: 102 reviewed theorems",
+    "当前范围：新增辅助定理": "Scope: added supporting theorems",
+    "当前范围：定义、缩写与结构": "Scope: definitions, abbreviations, and structures",
+    "当前范围：全部公开定理": "Scope: all public theorems",
+    "已复制完整 Lean 声明": "Lean declaration copied",
+    "浏览器阻止复制，请在右栏选择源码": "Copy unavailable; select the source in the code panel",
+    "主定理待证依赖：无": "Pending main-theorem dependencies: none",
+    "主定理待证依赖：": "Pending main-theorem dependencies:",
+    "102 条原审阅定理（含附录）的传递依赖均未检出 sorryAx；完整类型及原定义已核对。": "All 102 reviewed theorems, including the appendices, have no sorryAx in their transitive dependencies. Full types and original definitions have been checked.",
+    "两个主定理的传递依赖均未检出 sorryAx；请同时核对类型同一性记录。": "Both main theorems have no sorryAx in their transitive dependencies. Full-type results are recorded separately.",
+    "两个主定理目前尚未端到端完成。已写出的推导仍依赖待证的解析与谱论结果，不能把“证明体完成”视为整篇论文已证明。": "The main theorems remain incomplete: their proofs depend on pending analytic and spectral results.",
+    "形式化进展审阅": "Formalization progress",
+    "左侧核对中文条件和证明状态，右侧查看当前实际 Lean 证明。状态按完整传递公理计算。": "Read the mathematical summaries and proof status alongside the current Lean source. Status includes all transitive axiom dependencies.",
+    "原文依赖图": "Historical dependency review",
+    "原始中文 / Lean 对照": "Historical source review",
+    "机器审计 JSON": "Machine audit JSON",
+    "原声明证明已闭合": "Reviewed proofs complete",
+    "原声明仍占位": "Reviewed proofs pending",
+    "搜索定理编号、中文、条件或 Lean 代码…": "Search theorem number, title, hypotheses, or Lean code…",
+    "搜索声明": "Search declarations",
+    "原审阅定理 ": "Reviewed theorems ",
+    "全部定理 ": "All theorems ",
+    "全部状态": "All statuses",
+    "证明闭合": "Complete",
+    "依赖待证": "Dependencies pending",
+    "仍占位": "Pending",
+    "中文说明 · 条件 · 传递依赖状态": "Mathematical summary · hypotheses · proof status",
+    "当前 Lean 声明及证明 · 语法高亮": "Current Lean statement and proof · syntax highlighting",
+    "没有匹配项。": "No matching declarations. ",
+    "清除筛选": "Reset filters",
+    "此页可离线使用。所有代码逐字取自当前源文件，核对 proof-status.json 的源文件哈希后生成；公式由 KaTeX 预先渲染。": "This page works offline. Source excerpts are reproduced exactly after checking their hashes against proof-status.json. Formulas are rendered with KaTeX.",
+    "标准公理 propext、Classical.choice、Quot.sound 与未证明占位 sorryAx 分开列示。": "Axiom records list propext, Classical.choice, Quot.sound, and any sorryAx dependencies.",
+    "完整审计元数据与文件哈希": "Full audit metadata and file hashes",
+    "辅助": "Supporting "
+  },
+  "custom": {
+    "theorem_1_1_weight_exists": [
+      "Existence of an admissible weight",
+      "A smooth bump centered at \\(1/2\\) gives a nonzero, nonnegative, symmetric weight supported in \\([1/3,2/3]\\)."
+    ],
+    "lemma_3_5_weight_support": [
+      "Fixed support eliminates difference families",
+      "For \\(N>0\\), if both weights are nonzero, the two nonzero difference families vanish; the sum family has only \\(k=1\\), so \\(n+m=N\\)."
+    ],
+    "lemma_7_2_convolutions": [
+      "Convolution integrals and weight mass",
+      "Both convolutions are integrable; the half-line formulas equal the corresponding finite-interval integrals and recover the weight mass at \\(y=1\\)."
+    ],
+    "proposition_7_4_norm_integrals": [
+      "Integrability of the weight-norm integrals",
+      "For \\(N>0\\) and every real boundary parameter, the energy and actual weight-norm integrals are integrable."
+    ],
+    "weightMass_pos": [
+      "Strict positivity of the weight mass",
+      "The squared integral of a continuous nonzero weight is strictly positive, supplying the denominator in relative errors and prime-pair lower bounds."
+    ],
+    "weightMass_nonneg": [
+      "Nonnegative weight mass",
+      "The integral of the squared weight is nonnegative."
+    ],
+    "weightEnergy_nonneg": [
+      "Nonnegative weight energy",
+      "The squared derivative weight divided by the positive coordinate has a nonnegative half-line integral."
+    ],
+    "normFunctional_le_exp2_weightEnergy": [
+      "Uniform upper bound for the weight norm",
+      "For \\(N>e^{10}\\), the integral formula and support yield \\(Q_N\\le e^2\\,\\mathrm{weightEnergy}(\\phi)\\)."
+    ],
+    "badGoldbachMass": [
+      "Contribution from higher prime powers",
+      "The original correlation range, coprimality condition, and two weights select terms where at least one entry is not prime."
+    ],
+    "badGoldbachMass_le_psi_sub_theta": [
+      "Controlling higher-power terms by ψ − θ",
+      "The two-weight contribution is at most \\((2\\log N/N)(\\psi(N)-\\theta(N))\\)."
+    ],
+    "badGoldbachMass_le_sqrt": [
+      "Explicit bound for higher prime powers",
+      "Mathlib Chebyshev estimates give the upper bound \\(4(\\log N)^2/\\sqrt N\\)."
+    ],
+    "goldbach_le_badGoldbachMass_add_primePairCount": [
+      "From weighted correlation to prime-pair counts",
+      "Split the finite sum into prime-pair and higher-power terms. Each prime pair contributes at most \\((\\log N)^2/N\\)."
+    ],
+    "companion_contDiff": [
+      "Smoothness of the companion weight",
+      "The original weight vanishes near zero, so multiplying by the square root preserves global smoothness."
+    ],
+    "derivativeWeight_support_subset": [
+      "Support of the derivative weight",
+      "The derivative weight remains supported in the closed support of the original weight."
+    ]
+  }
+}

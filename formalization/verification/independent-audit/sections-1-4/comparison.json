@@ -1,7 +1,7 @@
 [
   {
     "expected": "TexAudit14.expect_singularSeries_eq_existing",
-    "actual": "LiLiuGoldbach16.singularSeries_eq_existing",
+    "actual": "ConditionalGoldbach.singularSeries_eq_existing",
     "tex_lines": [
       1055,
       1059
@@ -10,7 +10,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_1",
-    "actual": "LiLiuGoldbach16.theorem_1_1",
+    "actual": "ConditionalGoldbach.theorem_1_1",
     "tex_lines": [
       289,
       298
@@ -19,7 +19,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_1_weight_exists",
-    "actual": "LiLiuGoldbach16.theorem_1_1_weight_exists",
+    "actual": "ConditionalGoldbach.theorem_1_1_weight_exists",
     "tex_lines": [
       151,
       154
@@ -28,7 +28,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_2",
-    "actual": "LiLiuGoldbach16.theorem_1_2",
+    "actual": "ConditionalGoldbach.theorem_1_2",
     "tex_lines": [
       315,
       323
@@ -37,7 +37,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_2_hypothesisR_implies_S",
-    "actual": "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S",
+    "actual": "ConditionalGoldbach.theorem_1_2_hypothesisR_implies_S",
     "tex_lines": [
       306,
       313
@@ -46,7 +46,7 @@
   },
   {
     "expected": "TexAudit14.expect_primePair_consequence",
-    "actual": "LiLiuGoldbach16.primePair_consequence",
+    "actual": "ConditionalGoldbach.primePair_consequence",
     "tex_lines": [
       325,
       328
@@ -55,7 +55,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_1",
-    "actual": "LiLiuGoldbach16.lemma_3_1",
+    "actual": "ConditionalGoldbach.lemma_3_1",
     "tex_lines": [
       1090,
       1100
@@ -64,7 +64,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_1_odd_orthogonality",
-    "actual": "LiLiuGoldbach16.lemma_3_1_odd_orthogonality",
+    "actual": "ConditionalGoldbach.lemma_3_1_odd_orthogonality",
     "tex_lines": [
       1102,
       1117
@@ -73,7 +73,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_3_2",
-    "actual": "LiLiuGoldbach16.proposition_3_2",
+    "actual": "ConditionalGoldbach.proposition_3_2",
     "tex_lines": [
       1180,
       1200
@@ -82,7 +82,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_3_2_finite_rank",
-    "actual": "LiLiuGoldbach16.proposition_3_2_finite_rank",
+    "actual": "ConditionalGoldbach.proposition_3_2_finite_rank",
     "tex_lines": [
       1198,
       1199
@@ -91,7 +91,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_3_2_joint_meromorphic",
-    "actual": "LiLiuGoldbach16.proposition_3_2_joint_meromorphic",
+    "actual": "ConditionalGoldbach.proposition_3_2_joint_meromorphic",
     "tex_lines": [
       1190,
       1193
@@ -100,7 +100,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_3",
-    "actual": "LiLiuGoldbach16.lemma_3_3",
+    "actual": "ConditionalGoldbach.lemma_3_3",
     "tex_lines": [
       1247,
       1260
@@ -109,7 +109,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_4",
-    "actual": "LiLiuGoldbach16.lemma_3_4",
+    "actual": "ConditionalGoldbach.lemma_3_4",
     "tex_lines": [
       1274,
       1290
@@ -118,7 +118,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_4_normal_convergence",
-    "actual": "LiLiuGoldbach16.lemma_3_4_normal_convergence",
+    "actual": "ConditionalGoldbach.lemma_3_4_normal_convergence",
     "tex_lines": [
       1274,
       1276
@@ -127,7 +127,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_4_paired_zero_sum",
-    "actual": "LiLiuGoldbach16.lemma_3_4_paired_zero_sum",
+    "actual": "ConditionalGoldbach.lemma_3_4_paired_zero_sum",
     "tex_lines": [
       1262,
       1283
@@ -136,7 +136,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5",
-    "actual": "LiLiuGoldbach16.lemma_3_5",
+    "actual": "ConditionalGoldbach.lemma_3_5",
     "tex_lines": [
       1365,
       1380
@@ -145,7 +145,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5_absolute_convergence",
-    "actual": "LiLiuGoldbach16.lemma_3_5_absolute_convergence",
+    "actual": "ConditionalGoldbach.lemma_3_5_absolute_convergence",
     "tex_lines": [
       1365,
       1402
@@ -154,7 +154,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5_small_sigma",
-    "actual": "LiLiuGoldbach16.lemma_3_5_small_sigma",
+    "actual": "ConditionalGoldbach.lemma_3_5_small_sigma",
     "tex_lines": [
       1365,
       1376
@@ -163,7 +163,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5_weight_support",
-    "actual": "LiLiuGoldbach16.lemma_3_5_weight_support",
+    "actual": "ConditionalGoldbach.lemma_3_5_weight_support",
     "tex_lines": [
       1377,
       1409
@@ -172,7 +172,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1",
-    "actual": "LiLiuGoldbach16.lemma_4_1",
+    "actual": "ConditionalGoldbach.lemma_4_1",
     "tex_lines": [
       1480,
       1497
@@ -181,7 +181,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1_absolute_convergence",
-    "actual": "LiLiuGoldbach16.lemma_4_1_absolute_convergence",
+    "actual": "ConditionalGoldbach.lemma_4_1_absolute_convergence",
     "tex_lines": [
       1480,
       1492
@@ -190,7 +190,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1_signed_model",
-    "actual": "LiLiuGoldbach16.lemma_4_1_signed_model",
+    "actual": "ConditionalGoldbach.lemma_4_1_signed_model",
     "tex_lines": [
       1493,
       1497
@@ -199,7 +199,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1_local_density",
-    "actual": "LiLiuGoldbach16.lemma_4_1_local_density",
+    "actual": "ConditionalGoldbach.lemma_4_1_local_density",
     "tex_lines": [
       1499,
       1513
@@ -208,7 +208,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_2",
-    "actual": "LiLiuGoldbach16.lemma_4_2",
+    "actual": "ConditionalGoldbach.lemma_4_2",
     "tex_lines": [
       1538,
       1551
@@ -217,7 +217,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_2_meromorphic",
-    "actual": "LiLiuGoldbach16.lemma_4_2_meromorphic",
+    "actual": "ConditionalGoldbach.lemma_4_2_meromorphic",
     "tex_lines": [
       1545,
       1551
@@ -226,7 +226,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3",
-    "actual": "LiLiuGoldbach16.lemma_4_3",
+    "actual": "ConditionalGoldbach.lemma_4_3",
     "tex_lines": [
       1611,
       1630
@@ -235,7 +235,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3_uniform",
-    "actual": "LiLiuGoldbach16.lemma_4_3_uniform",
+    "actual": "ConditionalGoldbach.lemma_4_3_uniform",
     "tex_lines": [
       1619,
       1628
@@ -244,7 +244,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3_density_convergence",
-    "actual": "LiLiuGoldbach16.lemma_4_3_density_convergence",
+    "actual": "ConditionalGoldbach.lemma_4_3_density_convergence",
     "tex_lines": [
       1580,
       1618
@@ -253,7 +253,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3_euler_product_convergence",
-    "actual": "LiLiuGoldbach16.lemma_4_3_euler_product_convergence",
+    "actual": "ConditionalGoldbach.lemma_4_3_euler_product_convergence",
     "tex_lines": [
       1642,
       1648
@@ -262,7 +262,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_4_4",
-    "actual": "LiLiuGoldbach16.proposition_4_4",
+    "actual": "ConditionalGoldbach.proposition_4_4",
     "tex_lines": [
       1704,
       1710
@@ -271,7 +271,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_4_5",
-    "actual": "LiLiuGoldbach16.proposition_4_5",
+    "actual": "ConditionalGoldbach.proposition_4_5",
     "tex_lines": [
       1760,
       1768

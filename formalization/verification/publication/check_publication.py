@@ -23,7 +23,7 @@ def run(label,command,want=0):
     assert result.returncode==want,item
     record['steps'].append(item);print(json.dumps(item),flush=True)
 
-with open('/tmp/liliu-build.lock','a') as lock:
+with open('/tmp/conditional-goldbach-build.lock','a') as lock:
     fcntl.flock(lock,fcntl.LOCK_EX)
     run('portable-comparator-build',['lake','build','TexAuditComparator.CheckTypes','TexAuditComparator.Solution'])
     run('portable-comparator-smoke',['lake','comparator','--config','../../publication/comparator-smoke.json'])

@@ -1,0 +1,170 @@
+{
+  "Theorem 1.1": {
+    "title": "Theorem 1.1 · Goldbach asymptotics under Hypothesis S",
+    "summary": "Fix a nonzero smooth compactly supported weight \\(\\phi\\). Suppose every sufficiently large even integer satisfies GRH and Hypothesis S holds for the chosen admissible \\(h\\). The error constant depends only on \\(\\phi\\); the threshold may also depend on \\(h\\).\n\\[|G(N)-c_\\phi\\mathfrak S(N)|\\le C_\\phi\\mathfrak S(N)/h(N),\\qquad G(N)\\sim c_\\phi\\mathfrak S(N).\\]"
+  },
+  "Theorem 1.2": {
+    "title": "Theorem 1.2 · Error bound under Hypothesis R",
+    "summary": "Suppose all sufficiently large even integers satisfy \\(\\mathrm{GRH}(N)\\) and Hypothesis R. The error constant depends only on \\(\\phi\\). The supplementary result establishes \\(R\\Rightarrow S(h)\\) for each admissible \\(h\\) fixed in advance.\n\\[|G(N)-c_\\phi\\mathfrak S(N)|\\ll_\\phi\\sqrt{\\mathfrak S(N)/N}(\\log N)^{3/2}.\\]"
+  },
+  "Lemma 3.1": {
+    "title": "Lemma 3.1 · Finite projection onto odd characters",
+    "summary": "For even \\(N\\ge4\\) and a nonzero smooth compactly supported weight, the finite character projection gives the correlation identity and the nonnegative projection bound below.\n\\[G(N)=D(N)-P(N),\\qquad 0\\le P(N)\\le D(N)\\ll_\\phi\\log N.\\]"
+  },
+  "Proposition 3.2": {
+    "title": "Proposition 3.2 · Analytic structure and positivity of the character kernel",
+    "summary": "Fix even \\(N\\ge4\\). The double series converges absolutely for \\(\\Re s,\\Re z>1/2\\). The kernel is jointly meromorphic on \\(\\mathbb C^2\\), with possible poles from the logarithmic derivatives. Under GRH it is jointly holomorphic for \\(\\Re s,\\Re z>0\\). The conjugated kernel is Hermitian positive semidefinite, and its section space is finite dimensional with dimension at most \\(\\varphi(N)/2\\).\n\\[P_N(s,z)=\\sum_{\\substack{n,m\\ge1\\\\(nm,N)=1}}\\frac{\\Lambda(n)\\Lambda(m)}{n^{1/2+s}m^{1/2+z}}\\left(\\mathbf1_{n\\equiv m\\pmod N}-\\mathbf1_{n\\equiv-m\\pmod N}\\right).\\]\n\\[P_N(s,z)=P_N(z,s),\\qquad\\overline{P_N(s,z)}=P_N(\\bar s,\\bar z).\\]"
+  },
+  "Lemma 3.3": {
+    "title": "Lemma 3.3 · Paired zero expansion of the completed L-function",
+    "summary": "The nontrivial zeros of a primitive odd character are counted with multiplicity. At points where both completed L-values are nonzero, the difference of logarithmic derivatives has the absolutely and locally uniformly convergent expansion below. The number of zeros with \\(t\\le\\Im\\rho<t+1\\) is \\(O(\\log(d_\\chi(|t|+2)))\\), uniformly in conductor, character, and height.\n\\[\\frac{\\mathcal L'}{\\mathcal L}(u)-\\frac{\\mathcal L'}{\\mathcal L}(u_0)=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right).\\]"
+  },
+  "Lemma 3.4": {
+    "title": "Lemma 3.4 · Logarithmic derivative expansion and growth under GRH",
+    "summary": "Under \\(\\mathrm{GRH}(N)\\), the zero-difference series \\(Z_\\chi(s)\\) converges absolutely and locally uniformly for \\(\\Re s>0\\), with multiplicities retained. On each fixed compact interval \\(I\\subset(0,\\infty)\\), the logarithmic derivative is \\(O_I(\\log^2(N(|t|+2)))\\), uniformly in \\(N,\\chi,t\\).\n\\[g_\\chi(s)=Z_\\chi(s)+\\frac{L'}L(2,\\chi)-\\frac12\\left(\\frac{\\Gamma'}\\Gamma(\\tfrac34+\\tfrac s2)-\\frac{\\Gamma'}\\Gamma(\\tfrac32)\\right)+e_\\chi(\\tfrac12+s)-e_\\chi(2).\\]"
+  },
+  "Lemma 3.5": {
+    "title": "Lemma 3.5 · Double Mellin representation of the second moment",
+    "summary": "Fix even \\(N\\ge4\\) and an admissible weight. The two vertical integrals are independent and absolutely convergent for \\(\\sigma>1/2\\). Under GRH the identity extends to \\(0<\\sigma\\le1/9\\). The off-diagonal congruences split into \\(m=n+kN\\), \\(n=m+kN\\), and \\(n+m=kN\\), with signs \\(+,+,-\\). When both weights are nonzero, the first two families vanish and the last has only \\(k=1\\).\n\\[P(N)=\\frac1{(2\\pi i)^2}\\int_{(\\sigma)}\\int_{(\\sigma)}N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)P_N(s,z)\\,ds\\,dz.\\]"
+  },
+  "Lemma 4.1": {
+    "title": "Lemma 4.1 · Beta integrals for the three continuous models",
+    "summary": "Write \\(w=s+z\\). Assume \\(h>0\\), \\(\\Re s,\\Re z<1/2\\), and \\(\\Re w>0\\). All three integrals below converge absolutely. Their signed sum is \\(h^{-w}K_-(s,z)\\); for \\(h=kN\\), the common local density gives the full model \\(\\mathfrak S(h)h^{-w}K_-\\).\n\\[\\int_0^\\infty x^{-1/2-s}(x+h)^{-1/2-z}\\,dx=h^{-w}B(\\tfrac12-s,w),\\]\n\\[\\int_0^\\infty x^{-1/2-z}(x+h)^{-1/2-s}\\,dx=h^{-w}B(\\tfrac12-z,w),\\]\n\\[\\int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\\,dx=h^{-w}B(\\tfrac12-s,\\tfrac12-z).\\]"
+  },
+  "Lemma 4.2": {
+    "title": "Lemma 4.2 · Factorization of the signed Beta kernel",
+    "summary": "For \\(\\Re s=\\Re z=\\sigma\\) with \\(0<\\sigma\\le1/9\\), the first formula bounds the kernel. The factorization is a global meromorphic identity, represented by a common quotient of entire functions.\n\\[|K_-(s,z)|\\le2B(\\tfrac12-\\sigma,2\\sigma)+B(\\tfrac12-\\sigma,\\tfrac12-\\sigma).\\]\n\\[K_-(s,z)=2^{1-w}\\Gamma(w)\\cos(\\pi w/2)X_1(s)X_1(z),\\qquad w=s+z.\\]"
+  },
+  "Lemma 4.3": {
+    "title": "Lemma 4.3 · Diagonal and singular-density series",
+    "summary": "Fix even \\(N\\ge4\\). The diagonal series converges absolutely and is holomorphic for \\(\\Re w>0\\). The density series converges absolutely for \\(\\Re w>1\\); its continuation is meromorphic for \\(\\Re w>0\\), with the single simple pole and residue below. The Euler product converges normally in this half-plane. For each fixed strip \\(0<\\sigma_-<\\sigma_+\\) and \\(|\\Im w|\\ge1\\), the continuation is bounded by \\(C(N/\\varphi(N))(1+|\\Im w|)\\), and \\(N/\\varphi(N)\\le C\\log\\log N\\).\n\\[\\lim_{w\\to1}(w-1)\\mathfrak S_N(w)=\\frac N{\\varphi(N)}.\\]\n\\[1<\\mathfrak S(N),\\qquad C_2\\frac N{\\varphi(N)}\\le\\mathfrak S(N)\\le\\frac N{\\varphi(N)}.\\]\n\\[\\mathfrak S_N(w)=\\mathfrak S(N)\\zeta(w)\\prod_{\\substack{p>2\\\\p\\nmid N}}\\left(1+\\frac{p^{-w}}{p-2}\\right).\\]"
+  },
+  "Proposition 4.4": {
+    "title": "Proposition 4.4 · Holomorphic continuation of the Beta model",
+    "summary": "For even \\(N\\ge4\\), the original Beta model equals `continuedModel` pointwise on `betaDomain`. The continued model is jointly holomorphic on the paper's two-variable domain \\(\\Omega\\), encoded by `analyticDomain`."
+  },
+  "Proposition 4.5": {
+    "title": "Proposition 4.5 · Holomorphic and Hermitian arithmetic residual",
+    "summary": "For even \\(N\\ge4\\) satisfying \\(\\operatorname{GRH}(N)\\), the residual \\(E_N(s,z)\\) is jointly holomorphic on \\(\\Omega\\), symmetric under exchange and conjugation, and \\(E_N(s,\\overline z)\\) is Hermitian."
+  },
+  "Proposition 5.1": {
+    "title": "Proposition 5.1 · Weighted kernel and analytic differential identities",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). Under the standing assumptions below, \\(E_N(s,\\bar z)\\) and \\(\\kappa_N(s,z)=E_N(s,\\bar z)/((1+s)(1+\\bar z))\\) are Hermitian and holomorphic in \\(s,\\bar z\\). The weighted kernel extends to a neighborhood of the closed strip. The differential identity and the exact strip gaps are:\n\\[(\\partial_{\\bar s}+j\\partial_z)E_N(s,\\bar z)=0,\\qquad \\sigma_*-\\alpha_N>1/90,\\quad\\beta-\\sigma_*=1/72.\\]"
+  },
+  "Lemma 5.2": {
+    "title": "Lemma 5.2 · Fourier–Laplace realization of the Hardy space",
+    "summary": "For arbitrary \\(\\alpha<\\beta\\), the Fourier–Laplace transform is a unitary map from the weighted \\(L^2\\) space to the strip Hardy space. Both boundary traces exist in \\(L^2\\), and their joint image is closed. The inner product is linear in its first argument, as in the paper.\n\\[U\\psi(s)=\\frac1{\\sqrt{2\\pi}}\\int_{\\mathbb R}\\psi(\\tau)e^{s\\tau}\\,d\\tau,\\qquad w_H=e^{2\\alpha\\tau}+e^{2\\beta\\tau}.\\]\n\\[\\|U\\psi\\|_{H^2}^2=\\|h_\\alpha\\|_2^2+\\|h_\\beta\\|_2^2=\\int_{\\mathbb R}|\\psi(\\tau)|^2w_H(\\tau)\\,d\\tau.\\]"
+  },
+  "Proposition 5.3": {
+    "title": "Proposition 5.3 · Compact spectral structure of the residual operator",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). The weighted boundary kernel belongs to \\(L^2(\\Gamma_N\\times\\Gamma_N)\\). Its operator \\(T_N\\) is compact, self-adjoint, and Hilbert–Schmidt. Nonzero eigenvalues are counted with multiplicity. The operator norm equals \\(\\sup_j|\\mu_j(N)|\\), attained when \\(T_N\\ne0\\).\n\\[\\sum_j\\mu_j(N)^2=\\|T_N\\|_{\\mathrm{HS}}^2=\\iint_{\\Gamma_N^2}\\frac{|E_N(s,\\bar z)|^2}{|1+s|^2|1+\\bar z|^2}\\,|ds|\\,|dz|.\\]"
+  },
+  "Proposition 5.4": {
+    "title": "Proposition 5.4 · Reproducing kernel and pointwise estimates",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). Let \\(\\Delta_N=\\beta-\\alpha_N\\) and \\(d_N(s)=\\min(\\Re s-\\alpha_N,\\beta-\\Re s)\\). The formulas give the reproducing kernel, its exact norm, and the induced residual estimate. On \\(\\Re s=\\sigma_*\\), the residual is bounded by an absolute constant times \\(\\|T_N\\|(1+|v|+|t|)^2\\).\n\\[k_z(s)=\\frac1{4\\Delta_N}\\csc\\frac{\\pi(s+\\bar z-2\\alpha_N)}{2\\Delta_N},\\qquad h(s)=\\langle h,k_s\\rangle.\\]\n\\[\\|k_s\\|^2=\\frac1{4\\Delta_N\\sin(\\pi(\\Re s-\\alpha_N)/\\Delta_N)}\\le\\frac1{8d_N(s)}.\\]\n\\[|E_N(s,\\bar z)|\\le\\frac{\\|T_N\\||1+s||1+z|}{8\\sqrt{d_N(s)d_N(z)}}.\\]"
+  },
+  "Proposition 6.1": {
+    "title": "Proposition 6.1 · Existence and intrinsic entirety of the spectral product",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). The quaternionic spectral product converges locally uniformly, is independent of enumeration, and defines an intrinsic entire slice-regular function. The trace and determinant identities below hold; the determinant identity is on the usual complex slice.\n\\[X_N(q)=\\prod_j\\left(1-\\frac{4\\mu_j(N)^2}{\\delta_N^2}q(1-q)\\right)\\]\n\\[\\operatorname{tr}(T_N^2)=\\sum_j\\mu_j(N)^2=\\|T_N\\|_{\\mathrm{HS}}^2.\\]\n\\[X_N(q)=\\det\\left(I-\\frac4{\\delta_N^2}q(1-q)T_N^2\\right).\\]"
+  },
+  "Proposition 6.2": {
+    "title": "Proposition 6.2 · Symmetries and critical-plane values",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). The spectral function satisfies \\(X_N(0)=X_N(1)=1\\), \\(X_N(1-q)=X_N(q)\\), and \\(X_N(\\bar q)=\\overline{X_N(q)}\\). The centered and critical-plane products are below. The latter is real and independent of the unit imaginary quaternion \\(I\\). For real \\(x\\notin(0,1)\\), \\(X_N(x)\\ge1\\).\n\\[X_N(1/2+\\xi)=\\prod_j\\left(1-\\frac{\\mu_j^2}{\\delta_N^2}+\\frac{4\\mu_j^2}{\\delta_N^2}\\xi^2\\right).\\]\n\\[X_N(1/2+It)=\\prod_j\\left(1-\\frac{\\mu_j^2}{\\delta_N^2}(1+4t^2)\\right)\\in\\mathbb R,\\]"
+  },
+  "Proposition 6.3": {
+    "title": "Proposition 6.3 · Zero spheres, real zero pairs, and multiplicities",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). For each nonzero eigenvalue put \\(d_j=\\delta_N^2/\\mu_j(N)^2\\). The three cases below classify all zeros. There are finitely many exceptional real pairs, and every real zero lies in \\((0,1)\\). Nonreal zero spheres are invariant under unit-quaternion conjugation. Reflection and conjugation preserve slice multiplicities; the central order is even.\n\\[\\begin{cases}\n\\Re q=1/2,\\quad|\\Im q|=\\sqrt{d_j-1}/2,&d_j>1,\\\\\nq=1/2\\text{ (double factor root)},&d_j=1,\\\\\nq=1/2\\pm\\sqrt{1-d_j}/2,&0<d_j<1.\n\\end{cases}\\]"
+  },
+  "Theorem 6.1": {
+    "title": "Theorem 6.1 · Exact equivalence of zero-free regions and operator norms",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). The pointwise spectral condition \\(\\mathcal R(N)\\) is equivalent to \\(\\|T_N\\|\\le\\delta_N\\). For \\(0<\\eta<1/2\\), the zero-free half-space has the exact norm criterion below. A bound \\(\\|T_N\\|\\le M_N\\), with \\(M_N>\\delta_N\\), gives the displayed width. When this width is at most \\(1/4\\), it is comparable to \\(\\delta_N^2/M_N^2\\).\n\\[X_N(q)\\ne0\\ (\\Re q>1-\\eta)\\iff\\|T_N\\|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}}.\\]\n\\[\\eta(M_N)=\\frac{1-\\sqrt{1-\\delta_N^2/M_N^2}}2\\in(0,1/2)\\]"
+  },
+  "Theorem 6.2": {
+    "title": "Theorem 6.2 · Baseline zero-free region from GRH",
+    "summary": "Absolute constants and an absolute threshold give the Hilbert–Schmidt bound below for all sufficiently large even \\(N\\) satisfying \\(\\mathrm{GRH}(N)\\), together with the stated baseline zero-free width.\n\\[\\|T_N\\|\\le\\|T_N\\|_{\\mathrm{HS}}\\ll(\\log N)^2.\\]\n\\[\\eta_N^{\\mathrm{GRH}}\\asymp\\frac{\\mathfrak S(N)}{N\\log N},\\qquad\nX_N(q)\\ne0\\quad(\\Re q>1-\\eta_N^{\\mathrm{GRH}}).\\]"
+  },
+  "Lemma 6.4": {
+    "title": "Lemma 6.4 · Mean energy bound for logarithmic derivatives",
+    "summary": "Standing assumptions: \\(N\\) is even, \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), \\(\\alpha_N=1/\\log N\\), \\(\\beta=1/8\\), and \\(\\sigma_*=1/9\\). For \\(0<\\sigma\\le\\beta\\), average over all odd characters, including imprimitive characters. The implied constant in the estimate below is independent of \\(N,\\sigma\\).\n\\[\\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\\int_{\\mathbb R}\n\\frac{|g_\\chi(\\sigma+it)|^2}{1+t^2}\\,dt\n\\ll(\\log N)^2+\\sigma^{-2}.\\]"
+  },
+  "Proposition 6.5": {
+    "title": "Proposition 6.5 · Trace and norm bounds for three operator components",
+    "summary": "Assume even \\(N>e^{10}\\), \\(\\mathrm{GRH}(N)\\), and \\(\\alpha_N=1/\\log N\\). The arithmetic and diagonal operators are positive trace class; the model operator is Hilbert–Schmidt. A single absolute \\(C>0\\), independent of \\(N\\) and \\(\\alpha_N\\), gives the three bounds below. The local names `P`, `D`, and `K` refer to these operators.\n\\[\\|\\mathcal P_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal P_N\\le C\\bigl((\\log N)^2+\\alpha_N^{-2}\\bigr),\\]\n\\[\\|\\mathcal D_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal D_N\\le C\\alpha_N^{-2},\\]\n\\[\\|\\mathcal K_N\\|_{\\mathrm{HS}}\\le C\\alpha_N^{-2}.\\]"
+  },
+  "Lemma 7.1": {
+    "title": "Lemma 7.1 · Mellin inversion and decay of the weight",
+    "summary": "For an admissible weight \\(\\phi\\), let \\(\\Phi(u)=\\sqrt u\\,\\phi(u)\\). Mellin inversion holds for every real \\(\\sigma\\) and \\(u>0\\). On each fixed vertical strip, the transform has uniform decay \\(C(1+|\\Im s|)^{-6}\\). If even \\(N\\ge4\\) satisfies GRH, the character integral holds for every odd \\(\\chi\\) and \\(0<\\sigma\\le1/9\\). The inversion, character integral, and double second-moment integral are absolutely convergent.\n\\[P_\\chi=-\\frac1{2\\pi i}\\int_{(\\sigma)}N^s\\widetilde\\Phi(s)g_\\chi(s)\\,ds.\\]\n\\[\\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde\\Phi(s)u^{-s}\\,ds\\qquad(u>0).\\]"
+  },
+  "Lemma 7.2": {
+    "title": "Lemma 7.2 · Inversion of diagonal and model terms",
+    "summary": "Fix even \\(N\\ge4\\), an admissible weight, and \\(0<\\sigma\\le1/9\\). The diagonal double Mellin integral equals \\(D(N)\\), while the density and signed Beta-kernel integral equals \\(-c_\\phi\\mathfrak S(N)\\). Both are absolutely integrable. The companion declarations establish convolution integrability, equivalence of half-line and finite-interval formulas, and \\(J_0(1)=c_\\phi\\).\n\\[\\frac1{(2\\pi i)^2}\\iint_{(\\sigma)^2}N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)D_N(s+z)\\,ds\\,dz=D(N),\\]\n\\[\\frac1{(2\\pi i)^2}\\iint_{(\\sigma)^2}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathfrak S_N(s+z)K_-(s,z)\\,ds\\,dz=-c_\\phi\\mathfrak S(N).\\]"
+  },
+  "Proposition 7.3": {
+    "title": "Proposition 7.3 · Arithmetic meaning of the residual double integral",
+    "summary": "For even \\(N\\ge4\\) satisfying GRH, an admissible weight, and \\(0<\\sigma\\le1/9\\), the double Mellin integral involving \\(N^{s+z}\\), the two weight transforms, and \\(E_N(s,z)\\) equals the quantity below. The corresponding two-variable real integral is absolutely integrable.\n\\[c_\\phi\\mathfrak S(N)-G(N).\\]"
+  },
+  "Proposition 7.4": {
+    "title": "Proposition 7.4 · Riesz vector and exact norm of the weight functional",
+    "summary": "For an admissible weight and even \\(N>e^{10}\\), every interior vertical line defines the same continuous functional \\(\\ell_N\\) and Riesz vector \\(v_N\\). Put \\(V(u)=\\Phi(u)-u\\Phi'(u)\\). The exact norm and upper bound are below. In addition, \\(Q_N=e^2\\mathcal E_\\phi+O_\\phi(1/\\log N)\\), where \\(\\mathcal E_\\phi=(2\\pi)^{-1}\\int_0^\\infty|V(u)|^2du/u\\).\n\\[Q_N=\\|\\ell_N\\|^2=\\|v_N\\|^2=\\frac1{2\\pi}\\int_0^\\infty\\frac{(Nu)^{2\\alpha_N}|V(u)|^2}{1+(Nu)^{-2\\Delta_N}}\\,\\frac{du}{u}\\le e^2\\mathcal E_\\phi.\\]"
+  },
+  "Theorem 7.1": {
+    "title": "Theorem 7.1 · Operator quadratic form for the Goldbach error",
+    "summary": "For even \\(N>e^{10}\\) satisfying GRH, an admissible weight, and the standard Hardy realization, the arithmetic residual is exactly the operator quadratic form below. The supplementary bound has a constant depending only on the weight.\n\\[c_\\phi\\mathfrak S(N)-G(N)=\\langle T_Nv,v\\rangle,\\qquad |c_\\phi\\mathfrak S(N)-G(N)|\\le Q_N\\|T_N\\|.\\]\n\\[|c_\\phi\\mathfrak S(N)-G(N)|\\le e^2\\mathcal E_\\phi\\|T_N\\|,\\]"
+  },
+  "Lemma 7.5": {
+    "title": "Lemma 7.5 · From zero-free width to relative arithmetic error",
+    "summary": "For each admissible weight there is \\(C>0\\), chosen before \\(N,\\eta\\), such that the bound below holds for even \\(N>e^{10}\\) satisfying GRH whenever \\(0<\\eta\\le1/4\\) and the spectral function has no zeros in \\(\\Re q>1-\\eta\\). Along such even integers, divergence of the displayed ratio implies \\(G(N)/(c_\\phi\\mathfrak S(N))\\to1\\).\n\\[\\frac{|G(N)-c_\\phi\\mathfrak S(N)|}{c_\\phi\\mathfrak S(N)}\\le C\\sqrt{\\frac{(\\log N)^3}{N\\eta\\mathfrak S(N)}}.\\]\n\\[\\frac{N\\eta_N\\mathfrak S(N)}{(\\log N)^3}\\longrightarrow\\infty,\\]"
+  },
+  "Proposition A.1": {
+    "title": "Proposition A.1 · Realization with left boundary c/log N",
+    "summary": "Fix an admissible weight and \\(c>0\\). For even \\(N\\ge4\\), \\(N>e^{10c}\\), and GRH, put \\(\\alpha_{N,c}=c/\\log N\\). The boundary kernel defines a compact self-adjoint Hilbert–Schmidt operator and satisfies the corresponding pointwise estimate. The strip gaps, functional norm, and arithmetic pairing are below. The asymptotics fix \\(c\\) first; the pairing is independent of \\(c\\), and \\(c=1\\) recovers the main text.\n\\[\\alpha_{N,c}<1/10,\\quad \\Delta_{N,c}>1/40,\\quad \\sigma_*-\\alpha_{N,c}>1/90,\\quad\\beta-\\sigma_*=1/72.\\]\n\\[Q_{N,c}=\\|\\ell_{N,c}\\|^2=\\|v_{N,c}\\|^2\\le e^{2c}\\mathcal E_\\phi,\\qquad Q_{N,c}=e^{2c}\\mathcal E_\\phi+O_{\\phi,c}(1/\\log N).\\]\n\\[c_\\phi\\mathfrak S(N)-G(N)=\\langle T_{N,c}v_{N,c},v_{N,c}\\rangle,\\quad |c_\\phi\\mathfrak S(N)-G(N)|\\le Q_{N,c}\\|T_{N,c}\\|.\\]"
+  },
+  "Proposition A.2": {
+    "title": "Proposition A.2 · Spectral conditions and asymptotics for fixed c",
+    "summary": "Fix an admissible weight \\(\\phi\\) and \\(c>0\\). For even \\(N\\ge4\\), \\(N>e^{10c}\\), and \\(\\mathrm{GRH}(N)\\), the pointwise spectral condition \\(\\mathrm R(N,c)\\) is equivalent to \\(\\|T\\|\\le\\delta\\). For \\(0<\\eta<1/2\\), zero-freeness in the open half-space \\(\\Re q>1-\\eta\\) is equivalent to \\(\\|T\\|\\le\\delta/(2\\sqrt{\\eta(1-\\eta)})\\). Substituting \\(\\eta_N(h)\\) gives the bound below when \\(h(N)>0\\) and \\(0<\\eta_N(h)\\le1/4\\). The GRH baseline bound \\(\\|T\\|\\le C(\\log N)^2\\) and width \\(c_0\\mathfrak S(N)/(N\\log N)\\) have constants depending only on \\(c\\). The arithmetic error constant depends only on \\(\\phi,c\\) and is chosen before \\(h\\). Under `HypothesisSAt(c,h)` or `HypothesisRAt(c)`, each sufficiently large even integer satisfying GRH has error at most \\(C\\mathfrak S(N)/h(N)\\) or \\(C\\delta_N\\), respectively. The threshold in the S estimate may depend on the growth and admissibility of \\(h\\).\n\\[\\|T\\|\\le\\frac{\\mathfrak S(N)}{2h(N)\\sqrt{1-\\eta_N(h)}}.\\]"
+  },
+  "Lemma A.3": {
+    "title": "Lemma A.3 · Balancing the functional norm and operator baseline",
+    "summary": "For each admissible weight there are positive \\(L,U\\) depending only on the weight and an absolute \\(C>0\\). The first bounds hold for sufficiently large even \\(N\\) satisfying GRH and every \\(0<a<1/10\\). With \\(a=c/\\log N\\), the product \\(Q_aM_a\\) is comparable to \\((\\log N)^2e^{2c}(1+c^{-2})\\); the balancing factor diverges as \\(c\\downarrow0\\) or \\(c\\to\\infty\\). When the exact widths for the target norm \\(\\mathfrak S(N)/(hQ_a)\\) and baseline \\(M_a\\) both exist and are at most \\(1/4\\), their ratio is comparable to the final expression below.\n\\[LN^{2a}\\le Q_a\\le UN^{2a},\\qquad \\|T_a\\|\\le M_a=C\\bigl((\\log N)^2+a^{-2}\\bigr).\\]\n\\[\\frac{h^2(\\log N)^4}{\\mathfrak S(N)^2}e^{4c}(1+c^{-2})^2.\\]"
+  },
+  "Proposition A.4": {
+    "title": "Proposition A.4 · Obstruction to approaching the boundary at fixed modulus",
+    "summary": "Fix even \\(N\\ge4\\) satisfying GRH and a nontrivial zero \\(1/2+i\\gamma\\) of an odd character. The positive coefficient and lower limit below force \\(\\|T_{N,c}\\|\\ge z_N/c\\) and failure of R for sufficiently small \\(c\\). One can choose \\(z_N>0\\) and \\(0<c_N\\le\\log N/24\\); every admissible width \\(0<\\eta\\le1/4\\) then satisfies the last bound. Companion statements give the near-zero convergence of \\(R_N\\) and \\(\\mathfrak S(N)R_N(0)=1\\).\n\\[C_{N,\\gamma}=\\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}m_\\chi(1/2+i\\gamma)^2>0.\\]\n\\[\\liminf_{c\\downarrow0}c\\|T_{N,c}\\|\\ge\\frac{2C_{N,\\gamma}\\log N}{1+\\gamma^2}>0.\\]\n\\[\\eta\\le\\frac{\\delta_N^2c^2}{3z_N^2}.\\]"
+  },
+  "Proposition B.1": {
+    "title": "Proposition B.1 · Wide-weight counting formula at N = 30030",
+    "summary": "Fix \\(N=30030\\), \\(A=16\\), and \\(L=1000\\). The cutoff is \\(C^6\\), symmetric about \\(N/2\\), and equals one on \\([L,N-L]\\). With companion weight \\(W\\), put \\(f(u)=W(u)/\\sqrt u\\). The weight product on its support and the exact counting identity are below.\n\\[f(u)f(1-u)=\\frac{\\eta(Nu)^2}{\\log(Nu)\\log(N(1-u))}.\\]\n\\[r_G(N)=\\frac N2\\mathcal J-\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E.\\]"
+  },
+  "Lemma B.2": {
+    "title": "Lemma B.2 · Wide-weight character integrals and second moments",
+    "summary": "At \\(N=30030\\), every Dirichlet-character counting integral on \\(\\Re s=1\\) is absolutely integrable and satisfies the formula below. The wide-weight correlation is the signed second moment of these exact integrals; the diagonal counting moment is the unsigned second moment. Both use normalization \\(\\varphi(30030)=5760\\).\n\\[I_\\chi=-\\sum_{n<N}a_n\\chi(n).\\]"
+  },
+  "Lemma B.3": {
+    "title": "Lemma B.3 · Propagation of integral error to the prime-pair count",
+    "summary": "Given approximations \\(\\widehat I_\\chi\\) and \\(\\varepsilon\\ge0\\), the displayed mean-square error condition bounds the correlation error by \\(2\\sqrt{\\widehat D}\\,\\varepsilon+\\varepsilon^2\\). Multiplication by \\(N/2\\) gives `countError` for the unordered prime-pair count and the integer enclosure below. The normalization of the main term is \\(A=N\\mathfrak S(N)c_f/2\\).\n\\[\\frac1{5760}\\sum_\\chi|I_\\chi-\\widehat I_\\chi|^2\\le\\varepsilon^2,\\]\n\\[r_G(N)\\in[\\widehat r_G-\\varepsilon_r,\\widehat r_G+\\varepsilon_r]\\cap\\mathbb Z.\\]"
+  },
+  "Proposition B.4": {
+    "title": "Proposition B.4 · The same operator represents the wide-weight residual",
+    "summary": "Assume \\(\\operatorname{GRH}(30030)\\). The continuous wide-weight functional is represented by its Riesz vector \\(v_W\\), and the residual equals the quadratic form below for the main-text residual operator with the standard left boundary. The integral is absolutely convergent; the wide weight is \\(C^6\\) with compact support in \\((0,1)\\).\n\\[\\langle T_{30030}v_W,v_W\\rangle,\\]"
+  },
+  "Proposition B.5": {
+    "title": "Proposition B.5 · Finite spectral model of order 2562",
+    "summary": "Assume \\(\\operatorname{GRH}(30030)\\). The complex matrix from 1281 trapezoidal nodes on each boundary has a real eigenvalue list and unitary diagonalization. Its determinant spectral function is the product below, with symmetry \\(q\\mapsto1-q\\). If the matrix operator norm is at most \\(\\delta\\), every complex zero has real part \\(1/2\\).\n\\[\\prod_j\\left(1-\\frac{4\\lambda_j^2q(1-q)}{\\delta^2}\\right),\\]"
+  },
+  "ConditionalGoldbach.singularSeries_eq_existing": {
+    "title": "Supporting result · Normalization against the existing singular series",
+    "summary": "For every natural \\(N\\), `singularSeries(N)` equals twice `MathlibNt.SieveTheory.SingularSeries.liuSingularSeries(N)`."
+  },
+  "ConditionalGoldbach.interiorLine_memLp": {
+    "title": "Supporting result · L² membership of interior Hardy lines",
+    "summary": "For \\(a<b\\), \\(a<x<b\\), and an element \\(\\psi\\) of the weighted \\(L^2\\) space, the function below belongs to \\(L^2\\) for Lebesgue measure on the real line. This supplies the interior-line element of Lean's `Lp` type.\n\\[t\\longmapsto\\operatorname{FourierLaplace}(\\psi)(x+it)\\]"
+  },
+  "ConditionalGoldbach.boundaryTraces_exist": {
+    "title": "Supporting result · Existence of both L² boundary traces",
+    "summary": "For \\(a<b\\) and \\(\\psi\\) in the Hardy model, two real-line \\(L^2\\) elements are the limits of the interior-line functions as \\(x\\) approaches \\(a\\) and \\(b\\) from within the strip."
+  },
+  "ConditionalGoldbach.primePair_consequence": {
+    "title": "Supporting result · Prime-pair lower bound in the central interval",
+    "summary": "Fix an admissible weight. Suppose all sufficiently large even \\(N\\) satisfy GRH and either `HypothesisR` holds or `HypothesisS(h)` holds for some \\(h\\). Then there is \\(C>0\\) such that the displayed central prime-pair lower bound holds for every sufficiently large even integer.\n\\[\\#\\left\\{p\\in\\mathbb N:\\frac N3\\le p\\le\\frac{2N}3,\\ \\operatorname{Prime}(p)\\land\\operatorname{Prime}(N-p)\\right\\}\\ge C\\frac{\\mathfrak S(N)N}{(\\log N)^2}.\\]"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "source": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.tex",
+  "source": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/conditional-goldbach.tex",
   "source_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
   "independence": "Original TeX and current source types read directly. Existing inventory only locates labels/names; old Reviewed.lean and old audit verdicts are not evidence.",
   "counts": {
@@ -65,10 +65,10 @@
       "original_tex": "Fix a nonzero function\n$\\phi\\in C_c^\\infty(\\mathbb R)$ supported in $[1/3,2/3]$,\nwith $0\\le\\phi\\le1$ and $\\phi(u)=\\phi(1-u)$. For even\n$N\\ge4$, write\n\\begin{align}\n \\mathcal G(N)&=\\frac1N\n   \\sum_{\\substack{n+m=N\\\\(nm,N)=1}}\n       \\Lambda(n)\\Lambda(m)\\phi(n/N)\\phi(m/N),\n       \\label{eq:goldbach-correlation}\\\\\n c_\\phi&=\\int_0^1\\phi^2(u)\\,\\mathrm{d}u>0,\n       \\label{eq:c0}\n\\end{align}\nThe sum runs over ordered pairs of positive integers and gives a\nnormalized weighted count for the Goldbach equation $n+m=N$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.IsWeight",
+          "name": "ConditionalGoldbach.IsWeight",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 20
             }
           ]
@@ -90,10 +90,10 @@
       "original_tex": "\\medskip\\noindent\\textit{Notation.}\nWe use standard notation from analytic number theory. In\nparticular, $p$ denotes a prime, $(a,b)$ the greatest common\ndivisor of $a$ and $b$, and $d\\mid n$ divisibility.\nThe symbols $\\Lambda$, $\\varphi$, and $\\mu$ denote the von\nMangoldt, Euler totient, and M\\\"obius functions, respectively.\nThe notations $O,o,\\ll,\\gg,\\asymp$, and $\\sim$ have their\nstandard asymptotic meanings; subscripts indicate the allowed\ndependence of implied constants.\nWe write $\\mathbf1_{\\mathcal A}$ for the indicator of the\ncondition $\\mathcal A$, and $\\int_{(\\sigma)}$ for integration\nupwards along $\\Re s=\\sigma$.\nAll logarithms are natural, and all limits in $N$ are taken",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.mangoldt",
+          "name": "ConditionalGoldbach.mangoldt",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 16
             }
           ]
@@ -117,10 +117,10 @@
       "original_tex": "and\n\\[\n \\mathfrak S(N)=2C_2\\prod_{\\substack{p\\mid N\\\\p>2}}\\frac{p-1}{p-2},\n \\qquad C_2=\\prod_{p>2}\\left(1-\\frac1{(p-1)^2}\\right),\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.singularSeries",
+          "name": "ConditionalGoldbach.singularSeries",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 33
             }
           ]
@@ -144,19 +144,19 @@
       "original_tex": "and\n\\[\n \\mathfrak S(N)=2C_2\\prod_{\\substack{p\\mid N\\\\p>2}}\\frac{p-1}{p-2},\n \\qquad C_2=\\prod_{p>2}\\left(1-\\frac1{(p-1)^2}\\right),\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.C2",
+          "name": "ConditionalGoldbach.C2",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 31
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.prime",
+          "name": "ConditionalGoldbach.prime",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 18
             }
           ]
@@ -180,19 +180,19 @@
       "original_tex": "$N\\ge4$, write\n\\begin{align}\n \\mathcal G(N)&=\\frac1N\n   \\sum_{\\substack{n+m=N\\\\(nm,N)=1}}\n       \\Lambda(n)\\Lambda(m)\\phi(n/N)\\phi(m/N),\n       \\label{eq:goldbach-correlation}\\\\\n c_\\phi&=\\int_0^1\\phi^2(u)\\,\\mathrm{d}u>0,\n       \\label{eq:c0}\n\\end{align}\nThe sum runs over ordered pairs of positive integers and gives a\nnormalized weighted count for the Goldbach equation $n+m=N$.\nOur aim is to prove, under our hypotheses, that $\\mathcal G(N)>0$\nfor all sufficiently large even $N$, with a positive contribution\nfrom prime pairs remaining after the removal of proper prime powers.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.goldbach",
+          "name": "ConditionalGoldbach.goldbach",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 36
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.PrimePairCount",
+          "name": "ConditionalGoldbach.PrimePairCount",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 169
             }
           ]
@@ -216,10 +216,10 @@
       "original_tex": "Fix a nonzero function\n$\\phi\\in C_c^\\infty(\\mathbb R)$ supported in $[1/3,2/3]$,\nwith $0\\le\\phi\\le1$ and $\\phi(u)=\\phi(1-u)$. For even\n$N\\ge4$, write\n\\begin{align}\n \\mathcal G(N)&=\\frac1N\n   \\sum_{\\substack{n+m=N\\\\(nm,N)=1}}\n       \\Lambda(n)\\Lambda(m)\\phi(n/N)\\phi(m/N),\n       \\label{eq:goldbach-correlation}\\\\\n c_\\phi&=\\int_0^1\\phi^2(u)\\,\\mathrm{d}u>0,\n       \\label{eq:c0}\n\\end{align}\nThe sum runs over ordered pairs of positive integers and gives a\nnormalized weighted count for the Goldbach equation $n+m=N$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.weightMass",
+          "name": "ConditionalGoldbach.weightMass",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 29
             }
           ]
@@ -241,10 +241,10 @@
       "original_tex": "For each $N$, the construction uses the following part of GRH.\n\n\\begin{grh}\nEvery nontrivial zero of every primitive Dirichlet $L$-function\nwhose conductor divides $N$ has real part $1/2$.\n\\end{grh}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.GRH",
+          "name": "ConditionalGoldbach.GRH",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 56
             }
           ]
@@ -266,10 +266,10 @@
       "original_tex": "Write $\\mu_j(N)$ for the nonzero real eigenvalues of $T_N$,\nwith multiplicity, so that $\\sum_j\\mu_j^2(N)<\\infty$. Set\n\\begin{equation}\\label{v3i:spectral-scale}\n \\delta_N=\\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}.\n\\end{equation}\nDefine the symmetric spectral function\n\\begin{equation}\\label{qp:spectral-function}\n \\mathfrak X_N(q)=\n \\prod_j\\left(1-\\frac{4\\mu_j^2(N)}{\\delta_N^2}q(1-q)\\right),\n \\qquad q\\in\\mathbb H,\n\\end{equation}\nwhere $\\mathbb H$ denotes the quaternions and $\\Re q$ denotes\nthe real part of $q$. The product converges locally uniformly; an empty\nproduct is $1$. Its symmetry under $q\\mapsto1-q$ is similar to that of\nRiemann's completed function~\\cite{Riemann1859}.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.spectralScale",
+          "name": "ConditionalGoldbach.spectralScale",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 97
             }
           ]
@@ -293,55 +293,55 @@
       "original_tex": "Write $\\mu_j(N)$ for the nonzero real eigenvalues of $T_N$,\nwith multiplicity, so that $\\sum_j\\mu_j^2(N)<\\infty$. Set\n\\begin{equation}\\label{v3i:spectral-scale}\n \\delta_N=\\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}.\n\\end{equation}\nDefine the symmetric spectral function\n\\begin{equation}\\label{qp:spectral-function}\n \\mathfrak X_N(q)=\n \\prod_j\\left(1-\\frac{4\\mu_j^2(N)}{\\delta_N^2}q(1-q)\\right),\n \\qquad q\\in\\mathbb H,\n\\end{equation}\nwhere $\\mathbb H$ denotes the quaternions and $\\Re q$ denotes\nthe real part of $q$. The product converges locally uniformly; an empty\nproduct is $1$. Its symmetry under $q\\mapsto1-q$ is similar to that of\nRiemann's completed function~\\cite{Riemann1859}.\nThis is an intrinsic slice-regular function of the\nspectral variable $q$; the Fueter regularity above concerns the\narithmetic coordinates. The locations of its zeros determine the\nmagnitudes of the nonzero eigenvalues and hence $\\|T_N\\|$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.spectralQuaternion",
+          "name": "ConditionalGoldbach.spectralQuaternion",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 109
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.spectralComplex",
+          "name": "ConditionalGoldbach.spectralComplex",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 100
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.spectralPartialQuaternion",
+          "name": "ConditionalGoldbach.spectralPartialQuaternion",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 104
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.CompactUniformLimit",
+          "name": "ConditionalGoldbach.CompactUniformLimit",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 216
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.spectralPartialQuaternionReindexed",
+          "name": "ConditionalGoldbach.spectralPartialQuaternionReindexed",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 446
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.centeredSpectralPartial",
+          "name": "ConditionalGoldbach.centeredSpectralPartial",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 452
             }
           ]
@@ -363,37 +363,37 @@
       "original_tex": "\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.\n\\end{hypothesisS}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.IsAdmissible",
+          "name": "ConditionalGoldbach.IsAdmissible",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 152
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.EvenTendstoInfinity",
+          "name": "ConditionalGoldbach.EvenTendstoInfinity",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 149
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.EvenEventually",
+          "name": "ConditionalGoldbach.EvenEventually",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 147
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.EvenAsymptotic",
+          "name": "ConditionalGoldbach.EvenAsymptotic",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 221
             }
           ]
@@ -415,10 +415,10 @@
       "original_tex": "\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.zeroFreeWidth",
+          "name": "ConditionalGoldbach.zeroFreeWidth",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 144
             }
           ]
@@ -442,10 +442,10 @@
       "original_tex": "\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.\n\\end{hypothesisS}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.HypothesisS",
+          "name": "ConditionalGoldbach.HypothesisS",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 165
             }
           ]
@@ -469,10 +469,10 @@
       "original_tex": "\\begin{hypothesisR}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, every zero of $\\mathfrak X_N(q)$ has\nreal part $1/2$.\n\\end{hypothesisR}\n\nHypothesis R implies Hypothesis S for every admissible choice\nof $h$ and gives the following sharper estimate.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.HypothesisR",
+          "name": "ConditionalGoldbach.HypothesisR",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 162
             }
           ]
@@ -494,19 +494,19 @@
       "original_tex": "The relation $n+m=N$ implies $n\\equiv-m\\ \\mathrm{mod}\\ N$. Let $X_N^-$ be\nall odd characters modulo $N$, including imprimitive characters,\nextended by $0$ at nonunits. Their orthogonality gives\n\\begin{equation}\\label{gb:orthogonality}\n \\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\n          \\chi(n)\\overline{\\chi(m)}\n =\\mathbf1_{(nm,N)=1}\n    \\left(\\mathbf1_{n\\equiv m\\ \\mathrm{mod}\\ N}\n               -\\mathbf1_{n\\equiv-m\\ \\mathrm{mod}\\ N}\\right).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.oddCharacters",
+          "name": "ConditionalGoldbach.oddCharacters",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 46
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.Character",
+          "name": "ConditionalGoldbach.Character",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 11
             }
           ]
@@ -528,10 +528,10 @@
       "original_tex": "\\begin{equation}\\label{gb:prime-polynomial}\n P_\\chi=\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{\\sqrt n}\\Phi(n/N)\n        =\\frac1{\\sqrt N}\\sum_{n\\ge1}\\Lambda(n)\\chi(n)\\phi(n/N).\n\\end{equation}\nHere the companion weight used throughout is defined by\n\\begin{equation}\\label{eq:fixed-goldbach-weight}\n \\Phi(u)=\\sqrt u\\,\\phi(u).\n\\end{equation}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.characterPolynomial",
+          "name": "ConditionalGoldbach.characterPolynomial",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 49
             }
           ]
@@ -553,10 +553,10 @@
       "original_tex": "Here the companion weight used throughout is defined by\n\\begin{equation}\\label{eq:fixed-goldbach-weight}\n \\Phi(u)=\\sqrt u\\,\\phi(u).\n\\end{equation}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.companion",
+          "name": "ConditionalGoldbach.companion",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 24
             }
           ]
@@ -578,10 +578,10 @@
       "original_tex": "\\begin{equation}\\label{gb:finite-moments}\n \\begin{aligned}\n \\mathcal D(N)&=\\frac1N\\sum_{(n,N)=1}\\Lambda^2(n)\\phi^2(n/N),\\\\\n \\mathcal P(N)&=\\frac2{\\varphi(N)}\n       \\sum_{\\chi\\in X_N^-}|P_\\chi|^2,\n \\end{aligned}\n\\end{equation}\nand\n\\begin{equation}\\label{gb:prime-polynomial}\n P_\\chi=\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{\\sqrt n}\\Phi(n/N)\n        =\\frac1{\\sqrt N}\\sum_{n\\ge1}\\Lambda(n)\\chi(n)\\phi(n/N).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.diagonalMoment",
+          "name": "ConditionalGoldbach.diagonalMoment",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 42
             }
           ]
@@ -603,10 +603,10 @@
       "original_tex": "\\begin{equation}\\label{gb:finite-moments}\n \\begin{aligned}\n \\mathcal D(N)&=\\frac1N\\sum_{(n,N)=1}\\Lambda^2(n)\\phi^2(n/N),\\\\\n \\mathcal P(N)&=\\frac2{\\varphi(N)}\n       \\sum_{\\chi\\in X_N^-}|P_\\chi|^2,\n \\end{aligned}\n\\end{equation}\nand\n\\begin{equation}\\label{gb:prime-polynomial}\n P_\\chi=\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{\\sqrt n}\\Phi(n/N)\n        =\\frac1{\\sqrt N}\\sum_{n\\ge1}\\Lambda(n)\\chi(n)\\phi(n/N).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.characterMoment",
+          "name": "ConditionalGoldbach.characterMoment",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 53
             }
           ]
@@ -632,37 +632,37 @@
       "original_tex": "For $\\Re s,\\Re z>1/2$, define\n\\begin{equation}\\label{eq:goldbach-moment}\n \\mathscr P_N(s,z)=\\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\n       \\frac{L'}L(1/2+s,\\chi)\n       \\frac{L'}L(1/2+z,\\bar\\chi).\n\\end{equation}\nThe variables $s,z$ are independent, and the bar conjugates only\nthe character. We write $w=s+z$. Use the Mellin convention\n\\begin{equation}\\label{gb:mellin-convention}\n \\widetilde{\\Phi}(s)=\\int_0^\\infty \\Phi(u)u^{s-1}\\d u,\n \\quad\n \\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde{\\Phi}(s)u^{-s}\\d s\n \\quad(\\sigma\\in\\mathbb R).\n\\end{equation}\nThe series $-L'/L(1/2+s,\\chi)=\\sum_n\\Lambda(n)\\chi(n)n^{-1/2-s}$",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.characterKernel",
+          "name": "ConditionalGoldbach.characterKernel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 63
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.arithmeticExpansionTerm",
+          "name": "ConditionalGoldbach.arithmeticExpansionTerm",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 227
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.HermitianKernel",
+          "name": "ConditionalGoldbach.HermitianKernel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 201
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.PositiveKernel",
+          "name": "ConditionalGoldbach.PositiveKernel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 203
             }
           ]
@@ -684,10 +684,10 @@
       "original_tex": "\\begin{equation}\\label{gb:mellin-convention}\n \\widetilde{\\Phi}(s)=\\int_0^\\infty \\Phi(u)u^{s-1}\\d u,\n \\quad\n \\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde{\\Phi}(s)u^{-s}\\d s\n \\quad(\\sigma\\in\\mathbb R).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.mellinWeight",
+          "name": "ConditionalGoldbach.mellinWeight",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 120
             }
           ]
@@ -709,19 +709,19 @@
       "original_tex": "\\begin{equation}\\label{gb:mellin-convention}\n \\widetilde{\\Phi}(s)=\\int_0^\\infty \\Phi(u)u^{s-1}\\d u,\n \\quad\n \\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde{\\Phi}(s)u^{-s}\\d s\n \\quad(\\sigma\\in\\mathbb R).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.verticalMellin",
+          "name": "ConditionalGoldbach.verticalMellin",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 123
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.line",
+          "name": "ConditionalGoldbach.line",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 115
             }
           ]
@@ -743,28 +743,28 @@
       "original_tex": "The positive congruence gives the diagonal $n=m$ and two difference\nfamilies; the negative congruence gives the sum family. The three\noff-diagonal families are therefore\n\\[\n \\begin{array}{c|c}\n \\text{relation},\\ k\\ge1 & \\text{sign in }\\mathscr P_N\\\\ \\hline\n m=n+kN & +\\\\\n n=m+kN & +\\\\\n n+m=kN & -\n \\end{array}\n\\]\nAfter Mellin inversion restores the weight, its support gives\n$|n-m|\\le N/3$ and $n+m\\le4N/3$. Thus both difference families\nand the sum terms with $k\\ge2$ vanish; among the off-diagonal\nfamilies, only $n+m=N$ remains. Before this inversion, however,",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.positiveDifferenceFamily",
+          "name": "ConditionalGoldbach.positiveDifferenceFamily",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 367
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.negativeDifferenceFamily",
+          "name": "ConditionalGoldbach.negativeDifferenceFamily",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 370
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.sumFamily",
+          "name": "ConditionalGoldbach.sumFamily",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 373
             }
           ]
@@ -788,10 +788,10 @@
       "original_tex": "\\begin{equation}\\label{eq:beta-kernel}\n K_-(s,z)=B(1/2-s,s+z)+B(1/2-z,s+z)\n                         -B(1/2-s,1/2-z).\n\\end{equation}\nHere $B(s,z)=\\Gamma(s)\\Gamma(z)/\\Gamma(s+z)$ is Euler's Beta function.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.betaKernel",
+          "name": "ConditionalGoldbach.betaKernel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 81
             }
           ]
@@ -815,19 +815,19 @@
       "original_tex": "Euler's Gamma function is\n$\\Gamma(s)=\\int_0^\\infty e^{-t}t^{s-1}\\d t$ for $\\Re s>0$,\nwith meromorphic continuation, and\n$B(s,z)=\\int_0^1t^{s-1}(1-t)^{z-1}\\d t$ for $\\Re s,\\Re z>0$.\nThe change of variable $u=yt$ gives, for $y>0$,\n\\begin{equation}\\label{v3i:Euler}\n \\int_0^y u^{s-1}(y-u)^{z-1}\\d u\n =B(s,z)y^{s+z-1},\\quad\n B(s,z)=\\frac{\\Gamma(s)\\Gamma(z)}{\\Gamma(s+z)}\n \\quad(\\Re s,\\Re z>0).\n\\end{equation}\n\n\\begin{lemma}[The continuous signed model]\\label{proof:v9:signed-beta-model}\nFor $h>0$, $\\Re s,\\Re z<1/2$ and $\\Re(s+z)>0$, put $w=s+z$.\nThe following integrals converge absolutely:",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.betaGamma",
+          "name": "ConditionalGoldbach.betaGamma",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 357
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.betaDomain",
+          "name": "ConditionalGoldbach.betaDomain",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 102
             }
           ]
@@ -849,10 +849,10 @@
       "original_tex": "Define the one-variable factor\n\\[\n \\mathcal X_1(s)=\\frac{\\Gamma((3/2-s)/2)}{\\Gamma((3/2+s)/2)}.\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.gammaQuotient",
+          "name": "ConditionalGoldbach.gammaQuotient",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 85
             }
           ]
@@ -874,10 +874,10 @@
       "original_tex": "We now collect the densities at all scales $h=kN$ and record the\nexact diagonal. The corresponding Dirichlet series are\n\\[\n \\begin{aligned}\n \\mathscr D_N(w)&=\\sum_{\\substack{n\\ge1\\\\(n,N)=1}}\n                       \\frac{\\Lambda^2(n)}{n^{1+w}}\n                       &&(\\Re w>0),\\\\\n \\mathscr S_N(w)&=\\sum_{k\\ge1}\\frac{\\mathfrak S(kN)}{k^w}\n                       &&(\\Re w>1),\n \\end{aligned}\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.diagonalSeries",
+          "name": "ConditionalGoldbach.diagonalSeries",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 67
             }
           ]
@@ -899,19 +899,19 @@
       "original_tex": "We now collect the densities at all scales $h=kN$ and record the\nexact diagonal. The corresponding Dirichlet series are\n\\[\n \\begin{aligned}\n \\mathscr D_N(w)&=\\sum_{\\substack{n\\ge1\\\\(n,N)=1}}\n                       \\frac{\\Lambda^2(n)}{n^{1+w}}\n                       &&(\\Re w>0),\\\\\n \\mathscr S_N(w)&=\\sum_{k\\ge1}\\frac{\\mathfrak S(kN)}{k^w}\n                       &&(\\Re w>1),\n \\end{aligned}\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels} and~\\eqref{v3i:series}.\nThe former records the exact arithmetic diagonal; the latter collects\nthe local densities $\\mathfrak S(kN)$. The density series is\ninitially defined for $\\Re w>1$, whereas the three Beta integrals\nhave $0<\\Re w<1$ in their common domain. To use the density factor\nthere, we first continue it by the Euler product, which we restate here:\n\\[\n \\mathscr S_N(w)=\\mathfrak S(N)\\zeta(w)P_N(w),\n\\]\nwhere $P_N$ is the Euler product\n\\[\n P_N(w)=\\prod_{\\substack{p>2\\\\p\\nmid N}}\n                  \\left(1+\\frac{p^{-w}}{p-2}\\right),\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.densitySeries",
+          "name": "ConditionalGoldbach.densitySeries",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 71
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.continuedDensity",
+          "name": "ConditionalGoldbach.continuedDensity",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 78
             }
           ]
@@ -933,10 +933,10 @@
       "original_tex": " \\mathscr S_N(w)=\\mathfrak S(N)\\zeta(w)P_N(w),\n\\]\nwhere $P_N$ is the Euler product\n\\[\n P_N(w)=\\prod_{\\substack{p>2\\\\p\\nmid N}}\n                  \\left(1+\\frac{p^{-w}}{p-2}\\right),\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.densityEulerProduct",
+          "name": "ConditionalGoldbach.densityEulerProduct",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 74
             }
           ]
@@ -958,19 +958,19 @@
       "original_tex": "With the continued density factor, define the off-diagonal model by\n\\[\n \\mathscr K_N(s,z)=N^{-w}\\mathscr S_N(w)K_-(s,z),\\qquad w=s+z,\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels}.\nThe equivalent form to be proved is\n\\[\n \\mathscr K_N(s,z)=\\mathfrak S(N)\\left(\\frac\\pi N\\right)^w\n       P_N(w)\\zeta(1-w)\\mathcal X_1(s)\\mathcal X_1(z),\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.betaModel",
+          "name": "ConditionalGoldbach.betaModel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 88
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.localDensityFactor",
+          "name": "ConditionalGoldbach.localDensityFactor",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 464
             }
           ]
@@ -992,10 +992,10 @@
       "original_tex": "With the continued density factor, define the off-diagonal model by\n\\[\n \\mathscr K_N(s,z)=N^{-w}\\mathscr S_N(w)K_-(s,z),\\qquad w=s+z,\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels}.\nThe equivalent form to be proved is\n\\[\n \\mathscr K_N(s,z)=\\mathfrak S(N)\\left(\\frac\\pi N\\right)^w\n       P_N(w)\\zeta(1-w)\\mathcal X_1(s)\\mathcal X_1(z),\n\\]\nas in~\\eqref{v3:model-functional-form}.\nThe second expression makes holomorphy beyond the original Beta\nintegral domain visible factor by factor.\n\n\\begin{proposition}[Continuation of the Beta model]\\label{proof:v3:model-geometry}\nThe second expression for $\\mathscr K_N$ above gives its continuation\nand is holomorphic on\n\\[\n \\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}.\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.continuedModel",
+          "name": "ConditionalGoldbach.continuedModel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 91
             }
           ]
@@ -1017,10 +1017,10 @@
       "original_tex": "\\subsection{Holomorphy and symmetry of the residual}\n\nThe residual is the exact difference between the character kernel\nand its diagonal and off-diagonal model:\n\n\\[\n \\mathscr E_N(s,z)=\\mathscr P_N(s,z)\n                  -\\mathscr D_N(s+z)-\\mathscr K_N(s,z).\n\\]\nHere $\\mathscr P_N$ is the character kernel at the start of this\nsection. Its exact diagonal is\n\\[\n \\mathscr D_N(w)=\\sum_{(n,N)=1}\\Lambda^2(n)n^{-1-w},\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels},\nand $\\mathscr K_N$ is the continued model.\nWe now assume $\\mathrm{GRH}(N)$: every nontrivial zero of every\nprimitive Dirichlet $L$-function of conductor dividing $N$ lies on\n$\\Re s=1/2$. Proposition~\\ref{proof:v3:kernel-holomorphy} then\ngives holomorphy of $\\mathscr P_N$ for $\\Re s,\\Re z>0$;\nthe other two terms have just been treated unconditionally.\nTheir common domain is\n$\\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}$.\nAs with the character kernel, $\\mathscr E_N(s,z)$ is the form\nholomorphic in both variables, while $\\mathscr E_N(s,\\bar z)$\nis the Hermitian form used in the kernel of the integral operator\n$T_N$ defined in~\\eqref{qp:operator}.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.residual",
+          "name": "ConditionalGoldbach.residual",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 96
             }
           ]
@@ -1042,10 +1042,10 @@
       "original_tex": "\\begin{proposition}[Continuation of the Beta model]\\label{proof:v3:model-geometry}\nThe second expression for $\\mathscr K_N$ above gives its continuation\nand is holomorphic on\n\\[\n \\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}.\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.analyticDomain",
+          "name": "ConditionalGoldbach.analyticDomain",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 99
             }
           ]
@@ -1067,10 +1067,10 @@
       "original_tex": "where $g_\\chi$ is the logarithmic derivative\n\\[\n g_\\chi(s)=\\frac{L'}L(1/2+s,\\chi),\n\\]\nas in~\\eqref{qp:Gram}.\nThe variables $s,z$ are independent; conjugation here acts only on\nthe character. Thus $\\mathscr P_N(s,z)$ is holomorphic in both\nvariables wherever the logarithmic derivatives are holomorphic.\nThe Hermitian kernel used later is $\\mathscr P_N(s,\\bar z)$:\nit is holomorphic in the first variable and antiholomorphic in\nthe second, as is usual for kernels on spaces of holomorphic functions. We keep these two\nforms distinct when applying Mellin inversion.\n\nWrite $\\chi^*$ for the primitive character inducing $\\chi$ and\n$d_\\chi\\mid N$ for its conductor. In this section,\n$\\mathrm{GRH}(N)$ means that every nontrivial zero of every\nprimitive Dirichlet $L$-function whose conductor divides $N$\nhas real part $1/2$. On $\\Re s>1$,\n$L(s,\\chi)=\\sum_{n\\ge1}\\chi(n)n^{-s}$, and its logarithmic derivative is\n\\[\n -\\frac{L'}L(1/2+s,\\chi)\n =\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{n^{1/2+s}}\n \\qquad(\\Re s>1/2).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.logDerivative",
+          "name": "ConditionalGoldbach.logDerivative",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 60
             }
           ]
@@ -1092,10 +1092,10 @@
       "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.alpha",
+          "name": "ConditionalGoldbach.alpha",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 105
             }
           ]
@@ -1117,10 +1117,10 @@
       "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.beta",
+          "name": "ConditionalGoldbach.beta",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 107
             }
           ]
@@ -1142,10 +1142,10 @@
       "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.sigmaStar",
+          "name": "ConditionalGoldbach.sigmaStar",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 109
             }
           ]
@@ -1167,10 +1167,10 @@
       "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.width",
+          "name": "ConditionalGoldbach.width",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 111
             }
           ]
@@ -1194,19 +1194,19 @@
       "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.strip",
+          "name": "ConditionalGoldbach.strip",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 113
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.RealizationValid",
+          "name": "ConditionalGoldbach.RealizationValid",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 114
             }
           ]
@@ -1230,37 +1230,37 @@
       "original_tex": "\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.BoundaryParameter",
+          "name": "ConditionalGoldbach.BoundaryParameter",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 359
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.boundaryPoint",
+          "name": "ConditionalGoldbach.boundaryPoint",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 361
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.boundaryMeasure",
+          "name": "ConditionalGoldbach.boundaryMeasure",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 364
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.boundaryIntegral",
+          "name": "ConditionalGoldbach.boundaryIntegral",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 117
             }
           ]
@@ -1284,10 +1284,10 @@
       "original_tex": "\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.paperInner",
+          "name": "ConditionalGoldbach.paperInner",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 36
             }
           ]
@@ -1309,10 +1309,10 @@
       "original_tex": "\\label{story:operator}\nInsert decay at large heights and define\n\\begin{equation}\\label{qp:operator}\n (T_Nh)(s)=\\int_{\\Gamma_N}\n       \\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)}h(z)\\,|\\mathrm{d}z|.\n\\end{equation}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.weightedKernel",
+          "name": "ConditionalGoldbach.weightedKernel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 39
             }
           ]
@@ -1336,37 +1336,37 @@
       "original_tex": "\\label{story:operator}\nInsert decay at large heights and define\n\\begin{equation}\\label{qp:operator}\n (T_Nh)(s)=\\int_{\\Gamma_N}\n       \\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)}h(z)\\,|\\mathrm{d}z|.\n\\end{equation}\nWe will prove in Proposition~\\ref{proof:bd:HS} that the boundary\nkernel is square integrable and that the operator maps into the\nHardy trace space. Hermitian symmetry then makes $T_N$\nselfadjoint; square integrability makes it Hilbert--Schmidt and\nhence compact. Consequently its nonzero eigenvalues $\\mu_j(N)$,\ncounted with multiplicity, satisfy\n\\[\n \\mu_j(N)\\in\\mathbb R,\\qquad\n \\sum_j\\mu_j^2(N)=\\|T_N\\|_{\\mathrm{HS}}^2<\\infty,\n \\qquad \\|T_N\\|=\\sup_j|\\mu_j(N)|.\n\\]\nThe last supremum is understood as zero when $T_N=0$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.residualOperator",
+          "name": "ConditionalGoldbach.residualOperator",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 55
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.kernelOperator",
+          "name": "ConditionalGoldbach.kernelOperator",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 51
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.kernelAction",
+          "name": "ConditionalGoldbach.kernelAction",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 42
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.RepresentsKernel",
+          "name": "ConditionalGoldbach.RepresentsKernel",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 47
             }
           ]
@@ -1390,10 +1390,10 @@
       "original_tex": "We will prove in Proposition~\\ref{proof:bd:HS} that the boundary\nkernel is square integrable and that the operator maps into the\nHardy trace space. Hermitian symmetry then makes $T_N$\nselfadjoint; square integrability makes it Hilbert--Schmidt and\nhence compact. Consequently its nonzero eigenvalues $\\mu_j(N)$,\ncounted with multiplicity, satisfy\n\\[\n \\mu_j(N)\\in\\mathbb R,\\qquad\n \\sum_j\\mu_j^2(N)=\\|T_N\\|_{\\mathrm{HS}}^2<\\infty,\n \\qquad \\|T_N\\|=\\sup_j|\\mu_j(N)|.\n\\]\nThe last supremum is understood as zero when $T_N=0$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.IsHilbertSchmidt",
+          "name": "ConditionalGoldbach.IsHilbertSchmidt",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 67
             }
           ]
@@ -1417,19 +1417,19 @@
       "original_tex": "We will prove in Proposition~\\ref{proof:bd:HS} that the boundary\nkernel is square integrable and that the operator maps into the\nHardy trace space. Hermitian symmetry then makes $T_N$\nselfadjoint; square integrability makes it Hilbert--Schmidt and\nhence compact. Consequently its nonzero eigenvalues $\\mu_j(N)$,\ncounted with multiplicity, satisfy\n\\[\n \\mu_j(N)\\in\\mathbb R,\\qquad\n \\sum_j\\mu_j^2(N)=\\|T_N\\|_{\\mathrm{HS}}^2<\\infty,\n \\qquad \\|T_N\\|=\\sup_j|\\mu_j(N)|.\n\\]\nThe last supremum is understood as zero when $T_N=0$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.SpectralData",
+          "name": "ConditionalGoldbach.SpectralData",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 86
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.eigenvalues",
+          "name": "ConditionalGoldbach.eigenvalues",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 93
             }
           ]
@@ -1453,10 +1453,10 @@
       "original_tex": "For $\\alpha_N<\\sigma\\le1/9$, we define the linear functional\n$\\ell_N:\\mathcal H_N\\to\\mathbb C$ using the Mellin transform\n$\\widetilde\\Phi$ of the companion weight $\\Phi$ from\n\\eqref{eq:fixed-goldbach-weight}:\n\\[\n \\ell_N(h)=\\frac1{2\\pi i}\\int_{(\\sigma)}\n       N^s\\widetilde\\Phi(s)(1+s)h(s)\\,\\mathrm{d}s.\n\\]\nIt has a Riesz vector $v_N$, characterized by\n$\\ell_N(h)=\\langle h,v_N\\rangle$, with\n$\\mathcal Q_N:=\\|v_N\\|^2\\ll_\\phi1$ uniformly in $N$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.functionalValue",
+          "name": "ConditionalGoldbach.functionalValue",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 125
             }
           ]
@@ -1480,10 +1480,10 @@
       "original_tex": "Let $v_N$ be the Riesz vector, with\n$\\ell_N(h)=\\langle h,v_N\\rangle$ and\n$\\|v_N\\|^2=\\mathcal Q_N$; the inner product is linear in its first\nentry. Let $k_z$ be the evaluation vector, defined by\n$h(z)=\\langle h,k_z\\rangle$. The operator kernel is\n\\[\n \\langle T_Nk_z,k_s\\rangle\n   =\\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)}.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.rieszVector",
+          "name": "ConditionalGoldbach.rieszVector",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 129
             }
           ]
@@ -1507,19 +1507,19 @@
       "original_tex": "For an interior line $\\alpha_N<\\sigma<\\beta$, define\n\\begin{equation}\\label{bm:functional}\n \\ell_N(h)=\\frac1{2\\pi i}\\int_{(\\sigma)}\n          N^s\\widetilde\\Phi(s)(1+s)h(s)\\,\\mathrm{d}s,\n \\qquad h\\in\\mathcal H_N.\n\\end{equation}\nThe factor $1+s$ compensates for the denominator inserted in\nthe operator kernel. Put $V(u)=\\Phi(u)-u\\Phi'(u)$, so that\n$\\widetilde V(s)=(1+s)\\widetilde\\Phi(s)$.\nWe will prove the following formula for the exact squared norm in\nProposition~\\ref{proof:bm:norm}, using the Fourier--Laplace\nrepresentation of the strip Hardy space:\n\\begin{equation}\\label{bm:norm-integral}\n \\mathcal Q_N:=\\|\\ell_N\\|^2\n =\\frac1{2\\pi}\\int_0^\\infty\n       \\frac{(Nu)^{2\\alpha_N}|V(u)|^2}\n            {1+(Nu)^{-2\\Delta_N}}\\,\\frac{\\mathrm{d}u}{u}.\n\\end{equation}\nThis representation also proves independence of the interior contour.\nSince $\\alpha_N=1/\\log N$ and $V$ is supported in $[1/3,2/3]$,\n\\begin{equation}\\label{bm:uniform-norm}\n \\mathcal Q_N\\le\\frac{e^2}{2\\pi}\n       \\int_0^\\infty|\\Phi(u)-u\\Phi'(u)|^2\\,\\frac{\\mathrm{d}u}{u}\n       \\ll_\\phi1.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.normFunctional",
+          "name": "ConditionalGoldbach.normFunctional",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 117
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.weightEnergy",
+          "name": "ConditionalGoldbach.weightEnergy",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 122
             }
           ]
@@ -1543,10 +1543,10 @@
       "original_tex": "\\emph{Hypothesis R.} Write $\\mathrm R(N)$ for its assertion\nat the fixed modulus. The zero classification shows directly that\n\\begin{equation}\\label{v3i:R-equivalence}\n \\mathrm R(N)\\quad\\Longleftrightarrow\\quad\\|T_N\\|\\le\\delta_N.\n\\end{equation}\nThe master estimate \\eqref{v3f:master-estimate} therefore gives\n$\\mathcal G(N)=c_\\phi\\mathfrak S(N)+O_\\phi(\\delta_N)$,\nproving Theorem~\\ref{thm:goldbach-R}. All exceptional real pairs\nare excluded, so R also implies S for every admissible choice of\n$h$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.SpectralR",
+          "name": "ConditionalGoldbach.SpectralR",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 156
             }
           ]
@@ -1570,10 +1570,10 @@
       "original_tex": "Fix $0<\\eta<1/2$. Only the larger root of an exceptional pair\ncan enter $\\Re q>1-\\eta$. Keeping it outside means\n\\[\n \\frac12+\\frac12\\sqrt{1-\\delta_N^2/\\mu_j^2}\n \\le1-\\eta,\n\\]\nwhich is equivalent to\n\\[\n |\\mu_j|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}}.\n\\]\nNonexceptional eigenvalues already satisfy this inequality.\nTaking the supremum therefore gives the exact dictionary\n\\[\n \\mathfrak X_N(q)\\ne0\\ (\\Re q>1-\\eta)\n \\quad\\Longleftrightarrow\\quad\n \\|T_N\\|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}}.\n\\]\nThe half-space is open, so boundary zeros and equality in the\nnorm bound are allowed. In particular, a bound\n$\\|T_N\\|\\le M_N$ with $M_N>\\delta_N$ guarantees width\n\\begin{equation}\\label{outline:norm-width-conversion}\n \\eta(M_N)=\\frac{1-\\sqrt{1-\\delta_N^2/M_N^2}}2,\n \\qquad \\eta(M_N)(1-\\eta(M_N))=\\frac{\\delta_N^2}{4M_N^2}.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.SpectralZeroFree",
+          "name": "ConditionalGoldbach.SpectralZeroFree",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 159
             }
           ]
@@ -1595,10 +1595,10 @@
       "original_tex": "norm bound are allowed. In particular, a bound\n$\\|T_N\\|\\le M_N$ with $M_N>\\delta_N$ guarantees width\n\\begin{equation}\\label{outline:norm-width-conversion}\n \\eta(M_N)=\\frac{1-\\sqrt{1-\\delta_N^2/M_N^2}}2,\n \\qquad \\eta(M_N)(1-\\eta(M_N))=\\frac{\\delta_N^2}{4M_N^2}.\n\\end{equation}\nThus the width has order $\\delta_N^2/M_N^2$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.spectralWidthFromBound",
+          "name": "ConditionalGoldbach.spectralWidthFromBound",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 224
             }
           ]
@@ -1622,10 +1622,10 @@
       "original_tex": "The residual integral is therefore\n\\begin{equation}\\label{v3w:residual}\n \\begin{aligned}\n r_\\sigma(N)&=\\frac1{(2\\pi i)^2}\n \\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathscr E_N(s,z)\n \\,\\mathrm ds\\,\\mathrm dz\\\\\n &=\\mathcal P(N)-\\mathcal D(N)+c_\\phi\\mathfrak S(N).\n \\end{aligned}\n\\end{equation}\nThe exact projection \\eqref{gb:projection-identity} now yields\n\\begin{equation}\\label{v3w:exact}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)-r_\\sigma(N).\n\\end{equation}\nIn particular, this signed discrepancy is independent of $\\sigma$;",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.residualIntegral",
+          "name": "ConditionalGoldbach.residualIntegral",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 126
             }
           ]
@@ -1647,10 +1647,10 @@
       "original_tex": "The factor $1+s$ compensates for the denominator inserted in\nthe operator kernel. Put $V(u)=\\Phi(u)-u\\Phi'(u)$, so that\n$\\widetilde V(s)=(1+s)\\widetilde\\Phi(s)$.\nWe will prove the following formula for the exact squared norm in\nProposition~\\ref{proof:bm:norm}, using the Fourier--Laplace\nrepresentation of the strip Hardy space:\n\\begin{equation}\\label{bm:norm-integral}\n \\mathcal Q_N:=\\|\\ell_N\\|^2\n =\\frac1{2\\pi}\\int_0^\\infty\n       \\frac{(Nu)^{2\\alpha_N}|V(u)|^2}\n            {1+(Nu)^{-2\\Delta_N}}\\,\\frac{\\mathrm{d}u}{u}.\n\\end{equation}\nThis representation also proves independence of the interior contour.\nSince $\\alpha_N=1/\\log N$ and $V$ is supported in $[1/3,2/3]$,\n\\begin{equation}\\label{bm:uniform-norm}\n \\mathcal Q_N\\le\\frac{e^2}{2\\pi}\n       \\int_0^\\infty|\\Phi(u)-u\\Phi'(u)|^2\\,\\frac{\\mathrm{d}u}{u}",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.derivativeWeight",
+          "name": "ConditionalGoldbach.derivativeWeight",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
               "line": 26
             }
           ]
@@ -1674,10 +1674,10 @@
       "original_tex": "For a primitive odd character $\\chi^*$ of conductor $d_\\chi$, write\n\\[\n \\mathcal L(u,\\chi^*)=(d_\\chi/\\pi)^{(u+1)/2}\n \\Gamma((u+1)/2)L(u,\\chi^*).\n\\]",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.completedL",
+          "name": "ConditionalGoldbach.completedL",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 177
             }
           ]
@@ -1701,10 +1701,10 @@
       "original_tex": "\\begin{lemma}\\label{proof:v9:primitive-zero-data}\nFor a primitive odd character $\\chi^*$, the nontrivial zeros $\\rho$,\ncounted with multiplicity, satisfy\n\\begin{align}\n \\frac{\\mathcal L'}{\\mathcal L}(u,\\chi^*)\n -\\frac{\\mathcal L'}{\\mathcal L}(u_0,\\chi^*)\n &=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right),\n       \\label{proof:gb:hadamard-difference}\\\\\n \\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\n &\\ll\\log\\bigl(d_\\chi(|t|+2)\\bigr),\\label{proof:gb:local-zero-count}\n\\end{align}\nwhere the first identity holds away from zeros and its series\nconverges absolutely and locally uniformly in $u,u_0$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.ZeroIndex",
+          "name": "ConditionalGoldbach.ZeroIndex",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 173
             }
           ]
@@ -1726,10 +1726,10 @@
       "original_tex": "\\begin{lemma}\\label{proof:v9:primitive-zero-data}\nFor a primitive odd character $\\chi^*$, the nontrivial zeros $\\rho$,\ncounted with multiplicity, satisfy\n\\begin{align}\n \\frac{\\mathcal L'}{\\mathcal L}(u,\\chi^*)\n -\\frac{\\mathcal L'}{\\mathcal L}(u_0,\\chi^*)\n &=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right),\n       \\label{proof:gb:hadamard-difference}\\\\\n \\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\n &\\ll\\log\\bigl(d_\\chi(|t|+2)\\bigr),\\label{proof:gb:local-zero-count}\n\\end{align}\nwhere the first identity holds away from zeros and its series\nconverges absolutely and locally uniformly in $u,u_0$.",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.zeroWindow",
+          "name": "ConditionalGoldbach.zeroWindow",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 233
             }
           ]
@@ -1751,28 +1751,28 @@
       "original_tex": "Under $\\mathrm{GRH}(N)$, the nontrivial zeros of $L(s,\\chi^*)$\nhave the form $1/2+i\\gamma_\\chi$, where $\\chi^*$ is the primitive\ncharacter inducing $\\chi$. Set\n\\begin{align}\n Z_\\chi(s)&=\\sum_{\\gamma_\\chi}\n   \\left(\\frac1{s-i\\gamma_\\chi}-\\frac1{3/2-i\\gamma_\\chi}\\right),\n       &&\\Re s>0,\\label{proof:gb:zero-resolvent}\\\\\n e_\\chi(u)&=\\sum_{\\substack{p\\mid N\\\\p\\nmid d_\\chi}}\n       \\frac{\\chi^*(p)\\log p}{p^u-\\chi^*(p)},\n       &&\\Re u>0.\\label{proof:gb:Euler-correction}\n\\end{align}\n\n\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}\n\\end{equation}\nFor every compact interval $I\\subset(0,\\infty)$,\n\\begin{equation}\\label{proof:gb:logderivative-bound}\n g_\\chi(\\sigma+it)\\ll_I\\log^2\\bigl(N(|t|+2)\\bigr)\n \\qquad(\\sigma\\in I,\\ t\\in\\mathbb R,\\ \\chi\\in X_N^-).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.pairedZeroSum",
+          "name": "ConditionalGoldbach.pairedZeroSum",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 376
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.zeroDifference",
+          "name": "ConditionalGoldbach.zeroDifference",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 180
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.NormallySummableOn",
+          "name": "ConditionalGoldbach.NormallySummableOn",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 195
             }
           ]
@@ -1794,10 +1794,10 @@
       "original_tex": "Under $\\mathrm{GRH}(N)$, the nontrivial zeros of $L(s,\\chi^*)$\nhave the form $1/2+i\\gamma_\\chi$, where $\\chi^*$ is the primitive\ncharacter inducing $\\chi$. Set\n\\begin{align}\n Z_\\chi(s)&=\\sum_{\\gamma_\\chi}\n   \\left(\\frac1{s-i\\gamma_\\chi}-\\frac1{3/2-i\\gamma_\\chi}\\right),\n       &&\\Re s>0,\\label{proof:gb:zero-resolvent}\\\\\n e_\\chi(u)&=\\sum_{\\substack{p\\mid N\\\\p\\nmid d_\\chi}}\n       \\frac{\\chi^*(p)\\log p}{p^u-\\chi^*(p)},\n       &&\\Re u>0.\\label{proof:gb:Euler-correction}\n\\end{align}\n\n\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}\n\\end{equation}\nFor every compact interval $I\\subset(0,\\infty)$,\n\\begin{equation}\\label{proof:gb:logderivative-bound}\n g_\\chi(\\sigma+it)\\ll_I\\log^2\\bigl(N(|t|+2)\\bigr)\n \\qquad(\\sigma\\in I,\\ t\\in\\mathbb R,\\ \\chi\\in X_N^-).",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.eulerCorrection",
+          "name": "ConditionalGoldbach.eulerCorrection",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions.lean",
               "line": 183
             }
           ]
@@ -1816,19 +1816,19 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.theorem_1_1",
+          "name": "ConditionalGoldbach.theorem_1_1",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Main.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Main.lean",
               "line": 56
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.theorem_1_1_weight_exists",
+          "name": "ConditionalGoldbach.theorem_1_1_weight_exists",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Weights.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Weights.lean",
               "line": 45
             }
           ]
@@ -1853,19 +1853,19 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.theorem_1_2",
+          "name": "ConditionalGoldbach.theorem_1_2",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Main.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Main.lean",
               "line": 98
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S",
+          "name": "ConditionalGoldbach.theorem_1_2_hypothesisR_implies_S",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralAlgebra.lean",
               "line": 12
             }
           ]
@@ -1890,19 +1890,19 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.lemma_3_1",
+          "name": "ConditionalGoldbach.lemma_3_1",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Characters.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Characters.lean",
               "line": 360
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_3_1_odd_orthogonality",
+          "name": "ConditionalGoldbach.lemma_3_1_odd_orthogonality",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Characters.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Characters.lean",
               "line": 58
             }
           ]
@@ -1927,28 +1927,28 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.proposition_3_2",
+          "name": "ConditionalGoldbach.proposition_3_2",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterAnalytic.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterAnalytic.lean",
               "line": 108
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.proposition_3_2_finite_rank",
+          "name": "ConditionalGoldbach.proposition_3_2_finite_rank",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/KernelAlgebra.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/KernelAlgebra.lean",
               "line": 106
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.proposition_3_2_joint_meromorphic",
+          "name": "ConditionalGoldbach.proposition_3_2_joint_meromorphic",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterJoint.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterJoint.lean",
               "line": 55
             }
           ]
@@ -1974,10 +1974,10 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.lemma_3_3",
+          "name": "ConditionalGoldbach.lemma_3_3",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HadamardLimit.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HadamardLimit.lean",
               "line": 110
             }
           ]
@@ -2001,28 +2001,28 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.lemma_3_4",
+          "name": "ConditionalGoldbach.lemma_3_4",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroExpansion.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterZeroExpansion.lean",
               "line": 53
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_3_4_normal_convergence",
+          "name": "ConditionalGoldbach.lemma_3_4_normal_convergence",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroShiftNormal.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterZeroShiftNormal.lean",
               "line": 26
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_3_4_paired_zero_sum",
+          "name": "ConditionalGoldbach.lemma_3_4_paired_zero_sum",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterSeries.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterSeries.lean",
               "line": 63
             }
           ]
@@ -2048,37 +2048,37 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.lemma_3_5",
+          "name": "ConditionalGoldbach.lemma_3_5",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMoment.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinMoment.lean",
               "line": 97
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_3_5_absolute_convergence",
+          "name": "ConditionalGoldbach.lemma_3_5_absolute_convergence",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMomentComplete.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinMomentComplete.lean",
               "line": 10
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_3_5_small_sigma",
+          "name": "ConditionalGoldbach.lemma_3_5_small_sigma",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMomentComplete.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinMomentComplete.lean",
               "line": 21
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_3_5_weight_support",
+          "name": "ConditionalGoldbach.lemma_3_5_weight_support",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Weights.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Weights.lean",
               "line": 66
             }
           ]
@@ -2105,37 +2105,37 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.lemma_4_1",
+          "name": "ConditionalGoldbach.lemma_4_1",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
               "line": 172
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_4_1_absolute_convergence",
+          "name": "ConditionalGoldbach.lemma_4_1_absolute_convergence",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
               "line": 183
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_4_1_local_density",
+          "name": "ConditionalGoldbach.lemma_4_1_local_density",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SingularDensity.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SingularDensity.lean",
               "line": 63
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_4_1_signed_model",
+          "name": "ConditionalGoldbach.lemma_4_1_signed_model",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
               "line": 195
             }
           ]
@@ -2162,19 +2162,19 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.lemma_4_2",
+          "name": "ConditionalGoldbach.lemma_4_2",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIdentity.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIdentity.lean",
               "line": 219
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_4_2_meromorphic",
+          "name": "ConditionalGoldbach.lemma_4_2_meromorphic",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaMeromorphic.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaMeromorphic.lean",
               "line": 129
             }
           ]
@@ -2199,37 +2199,37 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.lemma_4_3",
+          "name": "ConditionalGoldbach.lemma_4_3",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityEulerIdentity.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/DensityEulerIdentity.lean",
               "line": 98
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_4_3_uniform",
+          "name": "ConditionalGoldbach.lemma_4_3_uniform",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/TotientLogLog.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/TotientLogLog.lean",
               "line": 170
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_4_3_density_convergence",
+          "name": "ConditionalGoldbach.lemma_4_3_density_convergence",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityConvergence.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/DensityConvergence.lean",
               "line": 75
             }
           ]
         },
         {
-          "name": "LiLiuGoldbach16.lemma_4_3_euler_product_convergence",
+          "name": "ConditionalGoldbach.lemma_4_3_euler_product_convergence",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityEuler.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/DensityEuler.lean",
               "line": 146
             }
           ]
@@ -2256,10 +2256,10 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.proposition_4_4",
+          "name": "ConditionalGoldbach.proposition_4_4",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/ModelContinuation.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/ModelContinuation.lean",
               "line": 88
             }
           ]
@@ -2283,10 +2283,10 @@
       "status": "independently_reconstructed_pending_root_comparator",
       "lean_declarations": [
         {
-          "name": "LiLiuGoldbach16.proposition_4_5",
+          "name": "ConditionalGoldbach.proposition_4_5",
           "current_locations": [
             {
-              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/ResidualAnalytic.lean",
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/ResidualAnalytic.lean",
               "line": 85
             }
           ]

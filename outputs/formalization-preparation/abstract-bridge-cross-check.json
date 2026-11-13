@@ -1,6 +1,6 @@
 {
   "scope": "本轮唯一新增Lean桥梁theorem_6_1_abstract_dictionary独立交叉审阅，含素数幂移除复用补查",
-  "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.lean",
+  "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/conditional-goldbach.lean",
   "sha256": "bd3b94f0b7218b1675e5346ba36c05985ab161868f40e8524796912268f34261",
   "baseline_sha256": "997fef646a1980da0a56a8b19ead78113cec5b2a128064b8fb4403ac23022e5a",
   "declaration": "theorem_6_1_abstract_dictionary",
@@ -204,12 +204,18 @@
   "typecheck": {
     "status": "passed",
     "log": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/dependency-audit/abstract-bridge-typecheck.log",
-    "command": "LEAN_NUM_THREADS=2 lake env lean /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.lean",
+    "command": "LEAN_NUM_THREADS=2 lake env lean /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/conditional-goldbach.lean",
     "working_directory": "/home/azureuser/goldbach-lean",
     "exit_code": 0,
     "sorry_warnings": 102,
     "checked_file_unchanged": true
   },
   "proofs_added": false,
-  "main_file_modified_by_reviewer": false
+  "main_file_modified_by_reviewer": false,
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

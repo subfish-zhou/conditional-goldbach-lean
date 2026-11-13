@@ -320,196 +320,196 @@ theorem statement_101_proposition_B_4_weight : TexAuditAB.B4_weight := by sorry
 -- B.5; TeX [4533, 4561]
 theorem statement_102_proposition_B_5 : TexAuditAB.B5 := by sorry
 
-theorem definition_000_IsWeight : @TexAudit14.Weight = @LiLiuGoldbach16.IsWeight := by sorry
+theorem definition_000_IsWeight : @TexAudit14.Weight = @ConditionalGoldbach.IsWeight := by sorry
 
-theorem definition_001_weightMass : @TexAudit14.Mass = @LiLiuGoldbach16.weightMass := by sorry
+theorem definition_001_weightMass : @TexAudit14.Mass = @ConditionalGoldbach.weightMass := by sorry
 
-theorem definition_002_goldbach : @TexAudit14.Goldbach = @LiLiuGoldbach16.goldbach := by sorry
+theorem definition_002_goldbach : @TexAudit14.Goldbach = @ConditionalGoldbach.goldbach := by sorry
 
-theorem definition_003_GRH : @TexAudit14.GRHExpected = @LiLiuGoldbach16.GRH := by sorry
+theorem definition_003_GRH : @TexAudit14.GRHExpected = @ConditionalGoldbach.GRH := by sorry
 
-theorem definition_004_EvenEventually : @TexAudit14.EventuallyEven = @LiLiuGoldbach16.EvenEventually := by sorry
+theorem definition_004_EvenEventually : @TexAudit14.EventuallyEven = @ConditionalGoldbach.EvenEventually := by sorry
 
-theorem definition_005_EvenTendstoInfinity : @TexAudit14.TendsToInfinityEven = @LiLiuGoldbach16.EvenTendstoInfinity := by sorry
+theorem definition_005_EvenTendstoInfinity : @TexAudit14.TendsToInfinityEven = @ConditionalGoldbach.EvenTendstoInfinity := by sorry
 
-theorem definition_006_EvenAsymptotic : @TexAudit14.AsymptoticEven = @LiLiuGoldbach16.EvenAsymptotic := by sorry
+theorem definition_006_EvenAsymptotic : @TexAudit14.AsymptoticEven = @ConditionalGoldbach.EvenAsymptotic := by sorry
 
-theorem definition_007_zeroFreeWidth : @TexAudit14.Width = @LiLiuGoldbach16.zeroFreeWidth := by sorry
+theorem definition_007_zeroFreeWidth : @TexAudit14.Width = @ConditionalGoldbach.zeroFreeWidth := by sorry
 
-theorem definition_008_IsAdmissible : @TexAudit14.Admissible = @LiLiuGoldbach16.IsAdmissible := by sorry
+theorem definition_008_IsAdmissible : @TexAudit14.Admissible = @ConditionalGoldbach.IsAdmissible := by sorry
 
-theorem definition_009_HypothesisS : @TexAudit14.S = @LiLiuGoldbach16.HypothesisS := by sorry
+theorem definition_009_HypothesisS : @TexAudit14.S = @ConditionalGoldbach.HypothesisS := by sorry
 
-theorem definition_010_HypothesisR : @TexAudit14.R = @LiLiuGoldbach16.HypothesisR := by sorry
+theorem definition_010_HypothesisR : @TexAudit14.R = @ConditionalGoldbach.HypothesisR := by sorry
 
-theorem definition_011_spectralScale : @TexAudit14.Scale = @LiLiuGoldbach16.spectralScale := by sorry
+theorem definition_011_spectralScale : @TexAudit14.Scale = @ConditionalGoldbach.spectralScale := by sorry
 
-theorem definition_012_PrimePairCount : @TexAudit14.PrimeCount = @LiLiuGoldbach16.PrimePairCount := by sorry
+theorem definition_012_PrimePairCount : @TexAudit14.PrimeCount = @ConditionalGoldbach.PrimePairCount := by sorry
 
-theorem definition_013_betaDomain : @TexAudit14.BetaRegion = @LiLiuGoldbach16.betaDomain := by sorry
+theorem definition_013_betaDomain : @TexAudit14.BetaRegion = @ConditionalGoldbach.betaDomain := by sorry
 
-theorem definition_014_analyticDomain : @TexAudit14.Omega = @LiLiuGoldbach16.analyticDomain := by sorry
+theorem definition_014_analyticDomain : @TexAudit14.Omega = @ConditionalGoldbach.analyticDomain := by sorry
 
-theorem definition_015_betaKernel : @TexAudit14.BetaSigned = @LiLiuGoldbach16.betaKernel := by sorry
+theorem definition_015_betaKernel : @TexAudit14.BetaSigned = @ConditionalGoldbach.betaKernel := by sorry
 
-theorem definition_016_gammaQuotient : @TexAudit14.GammaRatio = @LiLiuGoldbach16.gammaQuotient := by sorry
+theorem definition_016_gammaQuotient : @TexAudit14.GammaRatio = @ConditionalGoldbach.gammaQuotient := by sorry
 
-theorem definition_017_densityEulerProduct : @TexAudit14.DensityProduct = @LiLiuGoldbach16.densityEulerProduct := by sorry
+theorem definition_017_densityEulerProduct : @TexAudit14.DensityProduct = @ConditionalGoldbach.densityEulerProduct := by sorry
 
-theorem definition_018_continuedDensity : @TexAudit14.ContinuedDensity = @LiLiuGoldbach16.continuedDensity := by sorry
+theorem definition_018_continuedDensity : @TexAudit14.ContinuedDensity = @ConditionalGoldbach.continuedDensity := by sorry
 
-theorem definition_019_betaModel : @TexAudit14.Model = @LiLiuGoldbach16.betaModel := by sorry
+theorem definition_019_betaModel : @TexAudit14.Model = @ConditionalGoldbach.betaModel := by sorry
 
-theorem definition_020_continuedModel : @TexAudit14.ContinuedModel = @LiLiuGoldbach16.continuedModel := by sorry
+theorem definition_020_continuedModel : @TexAudit14.ContinuedModel = @ConditionalGoldbach.continuedModel := by sorry
 
-theorem definition_021_residual : @TexAudit14.Residual = @LiLiuGoldbach16.residual := by sorry
+theorem definition_021_residual : @TexAudit14.Residual = @ConditionalGoldbach.residual := by sorry
 
-theorem definition_022_IsRawHardy : @TexAudit57.RawHardy = @LiLiuGoldbach16.IsRawHardy := by sorry
+theorem definition_022_IsRawHardy : @TexAudit57.RawHardy = @ConditionalGoldbach.IsRawHardy := by sorry
 
-theorem definition_023_rawHardyNormSq : @TexAudit57.RawNormSquared = @LiLiuGoldbach16.rawHardyNormSq := by sorry
+theorem definition_023_rawHardyNormSq : @TexAudit57.RawNormSquared = @ConditionalGoldbach.rawHardyNormSq := by sorry
 
-theorem definition_024_fourierLaplace : @TexAudit57.PW = @LiLiuGoldbach16.fourierLaplace := by sorry
+theorem definition_024_fourierLaplace : @TexAudit57.PW = @ConditionalGoldbach.fourierLaplace := by sorry
 
-theorem definition_025_IsBoundaryTrace : @TexAudit57.TracePair = @LiLiuGoldbach16.IsBoundaryTrace := by sorry
+theorem definition_025_IsBoundaryTrace : @TexAudit57.TracePair = @ConditionalGoldbach.IsBoundaryTrace := by sorry
 
-theorem definition_026_weightedKernel : @TexAudit57.WeightedResidual = @LiLiuGoldbach16.weightedKernel := by sorry
+theorem definition_026_weightedKernel : @TexAudit57.WeightedResidual = @ConditionalGoldbach.weightedKernel := by sorry
 
-theorem definition_027_reproducingKernel : @TexAudit57.Reproducer = @LiLiuGoldbach16.reproducingKernel := by sorry
+theorem definition_027_reproducingKernel : @TexAudit57.Reproducer = @ConditionalGoldbach.reproducingKernel := by sorry
 
-theorem definition_028_pointDistance : @TexAudit57.Distance = @LiLiuGoldbach16.pointDistance := by sorry
+theorem definition_028_pointDistance : @TexAudit57.Distance = @ConditionalGoldbach.pointDistance := by sorry
 
-theorem definition_029_spectralRootParameter : @TexAudit57.RootRatio = @LiLiuGoldbach16.spectralRootParameter := by sorry
+theorem definition_029_spectralRootParameter : @TexAudit57.RootRatio = @ConditionalGoldbach.spectralRootParameter := by sorry
 
-theorem definition_030_quaternionSlice : @TexAudit57.Slice = @LiLiuGoldbach16.quaternionSlice := by sorry
+theorem definition_030_quaternionSlice : @TexAudit57.Slice = @ConditionalGoldbach.quaternionSlice := by sorry
 
-theorem definition_031_IntrinsicEntire : @TexAudit57.SliceEntire = @LiLiuGoldbach16.IntrinsicEntire := by sorry
+theorem definition_031_IntrinsicEntire : @TexAudit57.SliceEntire = @ConditionalGoldbach.IntrinsicEntire := by sorry
 
-theorem definition_032_zeroPoisson : @TexAudit57.ZeroSum = @LiLiuGoldbach16.zeroPoisson := by sorry
+theorem definition_032_zeroPoisson : @TexAudit57.ZeroSum = @ConditionalGoldbach.zeroPoisson := by sorry
 
-theorem definition_033_logDerivativeEnergy : @TexAudit57.Energy = @LiLiuGoldbach16.logDerivativeEnergy := by sorry
+theorem definition_033_logDerivativeEnergy : @TexAudit57.Energy = @ConditionalGoldbach.logDerivativeEnergy := by sorry
 
-theorem definition_034_averagedLogDerivative : @TexAudit57.AverageEnergy = @LiLiuGoldbach16.averagedLogDerivative := by sorry
+theorem definition_034_averagedLogDerivative : @TexAudit57.AverageEnergy = @ConditionalGoldbach.averagedLogDerivative := by sorry
 
-theorem definition_035_referenceLine : @TexAudit57.ReferenceLine = @LiLiuGoldbach16.referenceLine := by sorry
+theorem definition_035_referenceLine : @TexAudit57.ReferenceLine = @ConditionalGoldbach.referenceLine := by sorry
 
-theorem definition_036_smoothedPerronWeight : @TexAudit57.Cutoff = @LiLiuGoldbach16.smoothedPerronWeight := by sorry
+theorem definition_036_smoothedPerronWeight : @TexAudit57.Cutoff = @ConditionalGoldbach.smoothedPerronWeight := by sorry
 
-theorem definition_037_smoothedPerronKernel : @TexAudit57.Perron = @LiLiuGoldbach16.smoothedPerronKernel := by sorry
+theorem definition_037_smoothedPerronKernel : @TexAudit57.Perron = @ConditionalGoldbach.smoothedPerronKernel := by sorry
 
-theorem definition_038_poissonKernelReal : @TexAudit57.Poisson = @LiLiuGoldbach16.poissonKernelReal := by sorry
+theorem definition_038_poissonKernelReal : @TexAudit57.Poisson = @ConditionalGoldbach.poissonKernelReal := by sorry
 
-theorem definition_039_realConvolution : @TexAudit57.Convolution = @LiLiuGoldbach16.realConvolution := by sorry
+theorem definition_039_realConvolution : @TexAudit57.Convolution = @ConditionalGoldbach.realConvolution := by sorry
 
-theorem definition_040_diagonalVector : @TexAudit57.DiagonalVector = @LiLiuGoldbach16.diagonalVector := by sorry
+theorem definition_040_diagonalVector : @TexAudit57.DiagonalVector = @ConditionalGoldbach.diagonalVector := by sorry
 
-theorem definition_041_differenceConvolution : @TexAudit57.Difference = @LiLiuGoldbach16.differenceConvolution := by sorry
+theorem definition_041_differenceConvolution : @TexAudit57.Difference = @ConditionalGoldbach.differenceConvolution := by sorry
 
-theorem definition_042_sumConvolution : @TexAudit57.SumOnPositiveHalfLine = @LiLiuGoldbach16.sumConvolution := by sorry
+theorem definition_042_sumConvolution : @TexAudit57.SumOnPositiveHalfLine = @ConditionalGoldbach.sumConvolution := by sorry
 
-theorem definition_043_signedConvolution : @TexAudit57.Signed = @LiLiuGoldbach16.signedConvolution := by sorry
+theorem definition_043_signedConvolution : @TexAudit57.Signed = @ConditionalGoldbach.signedConvolution := by sorry
 
-theorem definition_044_derivativeWeight : @TexAudit57.V = @LiLiuGoldbach16.derivativeWeight := by sorry
+theorem definition_044_derivativeWeight : @TexAudit57.V = @ConditionalGoldbach.derivativeWeight := by sorry
 
-theorem definition_045_normFunctional : @TexAudit57.Q = @LiLiuGoldbach16.normFunctional := by sorry
+theorem definition_045_normFunctional : @TexAudit57.Q = @ConditionalGoldbach.normFunctional := by sorry
 
-theorem definition_046_weightEnergy : @TexAudit57.EnergyV = @LiLiuGoldbach16.weightEnergy := by sorry
+theorem definition_046_weightEnergy : @TexAudit57.EnergyV = @ConditionalGoldbach.weightEnergy := by sorry
 
-theorem definition_047_functionalIntegrand : @TexAudit57.Psi = @LiLiuGoldbach16.functionalIntegrand := by sorry
+theorem definition_047_functionalIntegrand : @TexAudit57.Psi = @ConditionalGoldbach.functionalIntegrand := by sorry
 
-theorem definition_048_strip : @TexAuditAB.variableStrip = @LiLiuGoldbach16.strip := by sorry
+theorem definition_048_strip : @TexAuditAB.variableStrip = @ConditionalGoldbach.strip := by sorry
 
-theorem definition_049_HardySpace : @TexAuditAB.variableHardySpace = @LiLiuGoldbach16.HardySpace := by sorry
+theorem definition_049_HardySpace : @TexAuditAB.variableHardySpace = @ConditionalGoldbach.HardySpace := by sorry
 
-theorem definition_050_boundaryPoint : @TexAuditAB.variableBoundary = @LiLiuGoldbach16.boundaryPoint := by sorry
+theorem definition_050_boundaryPoint : @TexAuditAB.variableBoundary = @ConditionalGoldbach.boundaryPoint := by sorry
 
-theorem definition_051_residualOperator : @TexAuditAB.variableOperator = @LiLiuGoldbach16.residualOperator := by sorry
+theorem definition_051_residualOperator : @TexAuditAB.variableOperator = @ConditionalGoldbach.residualOperator := by sorry
 
-theorem definition_052_functionalValue : @TexAuditAB.variableFunctional = @LiLiuGoldbach16.functionalValue := by sorry
+theorem definition_052_functionalValue : @TexAuditAB.variableFunctional = @ConditionalGoldbach.functionalValue := by sorry
 
-theorem definition_053_rieszVector : @TexAuditAB.variableVector = @LiLiuGoldbach16.rieszVector := by sorry
+theorem definition_053_rieszVector : @TexAuditAB.variableVector = @ConditionalGoldbach.rieszVector := by sorry
 
-theorem definition_054_normFunctional : @TexAuditAB.variableFunctionalNorm = @LiLiuGoldbach16.normFunctional := by sorry
+theorem definition_054_normFunctional : @TexAuditAB.variableFunctionalNorm = @ConditionalGoldbach.normFunctional := by sorry
 
-theorem definition_055_spectralComplex : @TexAuditAB.variableComplexProduct = @LiLiuGoldbach16.spectralComplex := by sorry
+theorem definition_055_spectralComplex : @TexAuditAB.variableComplexProduct = @ConditionalGoldbach.spectralComplex := by sorry
 
-theorem definition_056_spectralQuaternion : @TexAuditAB.variableQuaternionProduct = @LiLiuGoldbach16.spectralQuaternion := by sorry
+theorem definition_056_spectralQuaternion : @TexAuditAB.variableQuaternionProduct = @ConditionalGoldbach.spectralQuaternion := by sorry
 
-theorem definition_057_SpectralR : @TexAuditAB.pointwiseR = @LiLiuGoldbach16.SpectralR := by sorry
+theorem definition_057_SpectralR : @TexAuditAB.pointwiseR = @ConditionalGoldbach.SpectralR := by sorry
 
-theorem definition_058_SpectralZeroFree : @TexAuditAB.pointwiseZeroFree = @LiLiuGoldbach16.SpectralZeroFree := by sorry
+theorem definition_058_SpectralZeroFree : @TexAuditAB.pointwiseZeroFree = @ConditionalGoldbach.SpectralZeroFree := by sorry
 
-theorem definition_059_alpha : @TexAuditAB.boundaryParameter = @LiLiuGoldbach16.alpha := by sorry
+theorem definition_059_alpha : @TexAuditAB.boundaryParameter = @ConditionalGoldbach.alpha := by sorry
 
-theorem definition_060_HypothesisRAt : @TexAuditAB.eventualR = @LiLiuGoldbach16.HypothesisRAt := by sorry
+theorem definition_060_HypothesisRAt : @TexAuditAB.eventualR = @ConditionalGoldbach.HypothesisRAt := by sorry
 
-theorem definition_061_HypothesisSAt : @TexAuditAB.eventualS = @LiLiuGoldbach16.HypothesisSAt := by sorry
+theorem definition_061_HypothesisSAt : @TexAuditAB.eventualS = @ConditionalGoldbach.HypothesisSAt := by sorry
 
-theorem definition_062_zeroMultiplicity : @TexAuditAB.poleOrder = @LiLiuGoldbach16.zeroMultiplicity := by sorry
+theorem definition_062_zeroMultiplicity : @TexAuditAB.poleOrder = @ConditionalGoldbach.zeroMultiplicity := by sorry
 
-theorem definition_063_poleCoefficient : @TexAuditAB.poleMass = @LiLiuGoldbach16.poleCoefficient := by sorry
+theorem definition_063_poleCoefficient : @TexAuditAB.poleMass = @ConditionalGoldbach.poleCoefficient := by sorry
 
-theorem definition_064_baselineProductR : @TexAuditAB.regularEulerFactor = @LiLiuGoldbach16.baselineProductR := by sorry
+theorem definition_064_baselineProductR : @TexAuditAB.regularEulerFactor = @ConditionalGoldbach.baselineProductR := by sorry
 
-theorem definition_065_baselineBound : @TexAuditAB.operatorMajorant = @LiLiuGoldbach16.baselineBound := by sorry
+theorem definition_065_baselineBound : @TexAuditAB.operatorMajorant = @ConditionalGoldbach.baselineBound := by sorry
 
-theorem definition_066_balanceFactor : @TexAuditAB.boundaryCost = @LiLiuGoldbach16.balanceFactor := by sorry
+theorem definition_066_balanceFactor : @TexAuditAB.boundaryCost = @ConditionalGoldbach.balanceFactor := by sorry
 
-theorem definition_067_experimentN : @TexAuditAB.numericalN = @LiLiuGoldbach16.experimentN := by sorry
+theorem definition_067_experimentN : @TexAuditAB.numericalN = @ConditionalGoldbach.experimentN := by sorry
 
-theorem definition_068_cutoffPolynomial : @TexAuditAB.P = @LiLiuGoldbach16.cutoffPolynomial := by sorry
+theorem definition_068_cutoffPolynomial : @TexAuditAB.P = @ConditionalGoldbach.cutoffPolynomial := by sorry
 
-theorem definition_069_wideCutoff : @TexAuditAB.eta = @LiLiuGoldbach16.wideCutoff := by sorry
+theorem definition_069_wideCutoff : @TexAuditAB.eta = @ConditionalGoldbach.wideCutoff := by sorry
 
-theorem definition_070_wideCompanion : @TexAuditAB.W = @LiLiuGoldbach16.wideCompanion := by sorry
+theorem definition_070_wideCompanion : @TexAuditAB.W = @ConditionalGoldbach.wideCompanion := by sorry
 
-theorem definition_071_wideWeight : @TexAuditAB.f = @LiLiuGoldbach16.wideWeight := by sorry
+theorem definition_071_wideWeight : @TexAuditAB.f = @ConditionalGoldbach.wideWeight := by sorry
 
-theorem definition_072_wideCorrelation : @TexAuditAB.J = @LiLiuGoldbach16.wideCorrelation := by sorry
+theorem definition_072_wideCorrelation : @TexAuditAB.J = @ConditionalGoldbach.wideCorrelation := by sorry
 
-theorem definition_073_unorderedPrimePairs : @TexAuditAB.primePairCount = @LiLiuGoldbach16.unorderedPrimePairs := by sorry
+theorem definition_073_unorderedPrimePairs : @TexAuditAB.primePairCount = @ConditionalGoldbach.unorderedPrimePairs := by sorry
 
-theorem definition_074_edgeCorrection : @TexAuditAB.edge = @LiLiuGoldbach16.edgeCorrection := by sorry
+theorem definition_074_edgeCorrection : @TexAuditAB.edge = @ConditionalGoldbach.edgeCorrection := by sorry
 
-theorem definition_075_primePowerCorrection : @TexAuditAB.properPowers = @LiLiuGoldbach16.primePowerCorrection := by sorry
+theorem definition_075_primePowerCorrection : @TexAuditAB.properPowers = @ConditionalGoldbach.primePowerCorrection := by sorry
 
-theorem definition_076_countingCoefficient : @TexAuditAB.coefficient = @LiLiuGoldbach16.countingCoefficient := by sorry
+theorem definition_076_countingCoefficient : @TexAuditAB.coefficient = @ConditionalGoldbach.countingCoefficient := by sorry
 
-theorem definition_077_countingIntegral : @TexAuditAB.integralI = @LiLiuGoldbach16.countingIntegral := by sorry
+theorem definition_077_countingIntegral : @TexAuditAB.integralI = @ConditionalGoldbach.countingIntegral := by sorry
 
-theorem definition_078_diagonalCountingMoment : @TexAuditAB.diagonalD = @LiLiuGoldbach16.diagonalCountingMoment := by sorry
+theorem definition_078_diagonalCountingMoment : @TexAuditAB.diagonalD = @ConditionalGoldbach.diagonalCountingMoment := by sorry
 
-theorem definition_079_approxSignedMoment : @TexAuditAB.signedJhat = @LiLiuGoldbach16.approxSignedMoment := by sorry
+theorem definition_079_approxSignedMoment : @TexAuditAB.signedJhat = @ConditionalGoldbach.approxSignedMoment := by sorry
 
-theorem definition_080_approxDiagonalMoment : @TexAuditAB.diagonalDhat = @LiLiuGoldbach16.approxDiagonalMoment := by sorry
+theorem definition_080_approxDiagonalMoment : @TexAuditAB.diagonalDhat = @ConditionalGoldbach.approxDiagonalMoment := by sorry
 
-theorem definition_081_wideModelMass : @TexAuditAB.crossMass = @LiLiuGoldbach16.wideModelMass := by sorry
+theorem definition_081_wideModelMass : @TexAuditAB.crossMass = @ConditionalGoldbach.wideModelMass := by sorry
 
-theorem definition_082_wideMainIntegral : @TexAuditAB.mainIntegral = @LiLiuGoldbach16.wideMainIntegral := by sorry
+theorem definition_082_wideMainIntegral : @TexAuditAB.mainIntegral = @ConditionalGoldbach.wideMainIntegral := by sorry
 
-theorem definition_083_wideResidual : @TexAuditAB.residualB = @LiLiuGoldbach16.wideResidual := by sorry
+theorem definition_083_wideResidual : @TexAuditAB.residualB = @ConditionalGoldbach.wideResidual := by sorry
 
-theorem definition_084_HasMomentError : @TexAuditAB.momentError = @LiLiuGoldbach16.HasMomentError := by sorry
+theorem definition_084_HasMomentError : @TexAuditAB.momentError = @ConditionalGoldbach.HasMomentError := by sorry
 
-theorem definition_085_approxPrimeCount : @TexAuditAB.countCentre = @LiLiuGoldbach16.approxPrimeCount := by sorry
+theorem definition_085_approxPrimeCount : @TexAuditAB.countCentre = @ConditionalGoldbach.approxPrimeCount := by sorry
 
-theorem definition_086_countError : @TexAuditAB.countRadius = @LiLiuGoldbach16.countError := by sorry
+theorem definition_086_countError : @TexAuditAB.countRadius = @ConditionalGoldbach.countError := by sorry
 
-theorem definition_087_wideFunctional : @TexAuditAB.ellW = @LiLiuGoldbach16.wideFunctional := by sorry
+theorem definition_087_wideFunctional : @TexAuditAB.ellW = @ConditionalGoldbach.wideFunctional := by sorry
 
-theorem definition_088_wideRieszVector : @TexAuditAB.vectorW = @LiLiuGoldbach16.wideRieszVector := by sorry
+theorem definition_088_wideRieszVector : @TexAuditAB.vectorW = @ConditionalGoldbach.wideRieszVector := by sorry
 
-theorem definition_089_spectralNode : @TexAuditAB.node = @LiLiuGoldbach16.spectralNode := by sorry
+theorem definition_089_spectralNode : @TexAuditAB.node = @ConditionalGoldbach.spectralNode := by sorry
 
-theorem definition_090_trapezoidWeight : @TexAuditAB.nodeWeight = @LiLiuGoldbach16.trapezoidWeight := by sorry
+theorem definition_090_trapezoidWeight : @TexAuditAB.nodeWeight = @ConditionalGoldbach.trapezoidWeight := by sorry
 
-theorem definition_091_finiteSpectralMatrix : @TexAuditAB.matrixC = @LiLiuGoldbach16.finiteSpectralMatrix := by sorry
+theorem definition_091_finiteSpectralMatrix : @TexAuditAB.matrixC = @ConditionalGoldbach.finiteSpectralMatrix := by sorry
 
-theorem definition_092_finiteSpectralFunction : @TexAuditAB.finiteX = @LiLiuGoldbach16.finiteSpectralFunction := by sorry
+theorem definition_092_finiteSpectralFunction : @TexAuditAB.finiteX = @ConditionalGoldbach.finiteSpectralFunction := by sorry
 
-theorem definition_093_IsFiniteSpectrum : @TexAuditAB.finiteSpectrum = @LiLiuGoldbach16.IsFiniteSpectrum := by sorry
+theorem definition_093_IsFiniteSpectrum : @TexAuditAB.finiteSpectrum = @ConditionalGoldbach.IsFiniteSpectrum := by sorry
 
-theorem definition_094_finiteEigenvalues : @TexAuditAB.eigenvalueList = @LiLiuGoldbach16.finiteEigenvalues := by sorry
+theorem definition_094_finiteEigenvalues : @TexAuditAB.eigenvalueList = @ConditionalGoldbach.finiteEigenvalues := by sorry
 
-theorem definition_095_finiteMatrixOpNorm : @TexAuditAB.matrixNorm = @LiLiuGoldbach16.finiteMatrixOpNorm := by sorry
+theorem definition_095_finiteMatrixOpNorm : @TexAuditAB.matrixNorm = @ConditionalGoldbach.finiteMatrixOpNorm := by sorry
 
 end TexComparator

@@ -1,7 +1,7 @@
 [
   {
     "expected": "TexAudit14.expect_singularSeries_eq_existing",
-    "actual": "LiLiuGoldbach16.singularSeries_eq_existing",
+    "actual": "ConditionalGoldbach.singularSeries_eq_existing",
     "tex_lines": [
       1055,
       1059
@@ -16,7 +16,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_1",
-    "actual": "LiLiuGoldbach16.theorem_1_1",
+    "actual": "ConditionalGoldbach.theorem_1_1",
     "tex_lines": [
       289,
       298
@@ -26,7 +26,7 @@
     "original_tex": "\\begin{theorem}\\label{thm:goldbach-S}\nAssume $\\mathrm{GRH}(N)$ for every sufficiently large even\n$N$, and Hypothesis S with the prescribed function $h$. Then\n\\begin{equation}\\label{v3i:weak-result}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)+\n O_\\phi\\!\\left(\\frac{\\mathfrak S(N)}{h(N)}\\right).\n\\end{equation}\nIn particular, $\\mathcal G(N)\\sim c_\\phi\\mathfrak S(N)$.\nThe implied constant is independent of $N$ and $h$.\n\\end{theorem}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Main.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Main.lean",
         "line": 56
       }
     ],
@@ -36,7 +36,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_1_weight_exists",
-    "actual": "LiLiuGoldbach16.theorem_1_1_weight_exists",
+    "actual": "ConditionalGoldbach.theorem_1_1_weight_exists",
     "tex_lines": [
       151,
       154
@@ -46,7 +46,7 @@
     "original_tex": "Fix a nonzero function\n$\\phi\\in C_c^\\infty(\\mathbb R)$ supported in $[1/3,2/3]$,\nwith $0\\le\\phi\\le1$ and $\\phi(u)=\\phi(1-u)$. For even\n$N\\ge4$, write",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Weights.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Weights.lean",
         "line": 45
       }
     ],
@@ -56,7 +56,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_2",
-    "actual": "LiLiuGoldbach16.theorem_1_2",
+    "actual": "ConditionalGoldbach.theorem_1_2",
     "tex_lines": [
       315,
       323
@@ -66,7 +66,7 @@
     "original_tex": "\\begin{theorem}\\label{thm:goldbach-R}\nAssume $\\mathrm{GRH}(N)$ for every sufficiently large even\n$N$, and Hypothesis R. Then\n\\begin{equation}\\label{v3i:strong-result}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)+\n O_\\phi\\!\\left(\n       \\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}\\right).\n\\end{equation}\n\\end{theorem}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Main.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Main.lean",
         "line": 98
       }
     ],
@@ -76,7 +76,7 @@
   },
   {
     "expected": "TexAudit14.expect_theorem_1_2_hypothesisR_implies_S",
-    "actual": "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S",
+    "actual": "ConditionalGoldbach.theorem_1_2_hypothesisR_implies_S",
     "tex_lines": [
       306,
       313
@@ -86,7 +86,7 @@
     "original_tex": "\\begin{hypothesisR}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, every zero of $\\mathfrak X_N(q)$ has\nreal part $1/2$.\n\\end{hypothesisR}\n\nHypothesis R implies Hypothesis S for every admissible choice\nof $h$ and gives the following sharper estimate.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralAlgebra.lean",
         "line": 12
       }
     ],
@@ -96,7 +96,7 @@
   },
   {
     "expected": "TexAudit14.expect_primePair_consequence",
-    "actual": "LiLiuGoldbach16.primePair_consequence",
+    "actual": "ConditionalGoldbach.primePair_consequence",
     "tex_lines": [
       325,
       328
@@ -111,7 +111,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_1",
-    "actual": "LiLiuGoldbach16.lemma_3_1",
+    "actual": "ConditionalGoldbach.lemma_3_1",
     "tex_lines": [
       1090,
       1100
@@ -121,7 +121,7 @@
     "original_tex": "\\begin{lemma}[Finite projection]\\label{proof:v9:finite-projection}\nFor every even $N\\ge4$, the moments just defined satisfy the exact identity\n\\[\n \\mathcal G(N)=\\mathcal D(N)-\\mathcal P(N)\n\\]\nas in~\\eqref{gb:projection-identity},\nand the bound\n\\begin{equation}\\label{proof:dir:moment-bound}\n 0\\le\\mathcal P(N)\\le\\mathcal D(N)\\ll_\\phi\\log N.\n\\end{equation}\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Characters.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Characters.lean",
         "line": 360
       }
     ],
@@ -131,7 +131,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_1_odd_orthogonality",
-    "actual": "LiLiuGoldbach16.lemma_3_1_odd_orthogonality",
+    "actual": "ConditionalGoldbach.lemma_3_1_odd_orthogonality",
     "tex_lines": [
       1102,
       1117
@@ -141,7 +141,7 @@
     "original_tex": "\\begin{proof}\nThe selector $(1-\\chi(-1))/2$ in the full character sum gives\n\\[\n \\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\\chi(n)\\overline{\\chi(m)}\n =\\frac1{\\varphi(N)}\\sum_{\\chi\\ \\mathrm{mod}\\ N}\n       (1-\\chi(-1))\\chi(n)\\overline{\\chi(m)}.\n\\]\nFull character orthogonality gives, with the coprimality restriction\ncoming from the zero extension,\n\\[\n \\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\\chi(n)\\overline{\\chi(m)}\n =\\mathbf1_{(nm,N)=1}\n   \\left(\\mathbf1_{n\\equiv m\\ \\mathrm{mod}\\ N}\n              -\\mathbf1_{n\\equiv-m\\ \\mathrm{mod}\\ N}\\right),\n\\]\nas in~\\eqref{gb:orthogonality}.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Characters.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Characters.lean",
         "line": 58
       }
     ],
@@ -151,7 +151,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_3_2",
-    "actual": "LiLiuGoldbach16.proposition_3_2",
+    "actual": "ConditionalGoldbach.proposition_3_2",
     "tex_lines": [
       1180,
       1200
@@ -161,7 +161,7 @@
     "original_tex": "\\begin{proposition}[The character kernel]\\label{proof:v3:kernel-holomorphy}\nFor $\\Re s,\\Re z>1/2$, the kernel has the absolutely convergent\nexpansion\n\\begin{equation}\\label{proof:dir:kernel-expansion}\n \\mathscr P_N(s,z)=\n \\sum_{\\substack{n,m\\ge1\\\\(nm,N)=1}}\n \\frac{\\Lambda(n)\\Lambda(m)}{n^{1/2+s}m^{1/2+z}}\n \\left(\\mathbf1_{n\\equiv m\\ \\mathrm{mod}\\ N}\n              -\\mathbf1_{n\\equiv-m\\ \\mathrm{mod}\\ N}\\right).\n\\end{equation}\nThe kernel $\\mathscr P_N$ is meromorphic on $\\mathbb C^2$, with\npossible poles only where one of its logarithmic derivatives has a\npole. Under $\\mathrm{GRH}(N)$ it is jointly holomorphic for\n$\\Re s,\\Re z>0$ and satisfies\n\\begin{equation}\\label{proof:v3:kernel-symmetries}\n \\mathscr P_N(s,z)=\\mathscr P_N(z,s),\\qquad\n \\overline{\\mathscr P_N(s,z)}=\\mathscr P_N(\\bar s,\\bar z).\n\\end{equation}\nThe Hermitian kernel $\\mathscr P_N(s,\\bar z)$ is positive\nsemidefinite, of rank at most $\\varphi(N)/2$.\n\\end{proposition}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterAnalytic.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterAnalytic.lean",
         "line": 108
       }
     ],
@@ -171,7 +171,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_3_2_finite_rank",
-    "actual": "LiLiuGoldbach16.proposition_3_2_finite_rank",
+    "actual": "ConditionalGoldbach.proposition_3_2_finite_rank",
     "tex_lines": [
       1198,
       1199
@@ -181,7 +181,7 @@
     "original_tex": "The Hermitian kernel $\\mathscr P_N(s,\\bar z)$ is positive\nsemidefinite, of rank at most $\\varphi(N)/2$.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/KernelAlgebra.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/KernelAlgebra.lean",
         "line": 106
       }
     ],
@@ -191,7 +191,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_3_2_joint_meromorphic",
-    "actual": "LiLiuGoldbach16.proposition_3_2_joint_meromorphic",
+    "actual": "ConditionalGoldbach.proposition_3_2_joint_meromorphic",
     "tex_lines": [
       1190,
       1193
@@ -201,7 +201,7 @@
     "original_tex": "The kernel $\\mathscr P_N$ is meromorphic on $\\mathbb C^2$, with\npossible poles only where one of its logarithmic derivatives has a\npole. Under $\\mathrm{GRH}(N)$ it is jointly holomorphic for\n$\\Re s,\\Re z>0$ and satisfies",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterJoint.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterJoint.lean",
         "line": 55
       }
     ],
@@ -211,7 +211,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_3",
-    "actual": "LiLiuGoldbach16.lemma_3_3",
+    "actual": "ConditionalGoldbach.lemma_3_3",
     "tex_lines": [
       1247,
       1260
@@ -221,7 +221,7 @@
     "original_tex": "\\begin{lemma}\\label{proof:v9:primitive-zero-data}\nFor a primitive odd character $\\chi^*$, the nontrivial zeros $\\rho$,\ncounted with multiplicity, satisfy\n\\begin{align}\n \\frac{\\mathcal L'}{\\mathcal L}(u,\\chi^*)\n -\\frac{\\mathcal L'}{\\mathcal L}(u_0,\\chi^*)\n &=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right),\n       \\label{proof:gb:hadamard-difference}\\\\\n \\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\n &\\ll\\log\\bigl(d_\\chi(|t|+2)\\bigr),\\label{proof:gb:local-zero-count}\n\\end{align}\nwhere the first identity holds away from zeros and its series\nconverges absolutely and locally uniformly in $u,u_0$.\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HadamardLimit.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HadamardLimit.lean",
         "line": 110
       }
     ],
@@ -231,7 +231,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_4",
-    "actual": "LiLiuGoldbach16.lemma_3_4",
+    "actual": "ConditionalGoldbach.lemma_3_4",
     "tex_lines": [
       1274,
       1290
@@ -241,7 +241,7 @@
     "original_tex": "\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}\n\\end{equation}\nFor every compact interval $I\\subset(0,\\infty)$,\n\\begin{equation}\\label{proof:gb:logderivative-bound}\n g_\\chi(\\sigma+it)\\ll_I\\log^2\\bigl(N(|t|+2)\\bigr)\n \\qquad(\\sigma\\in I,\\ t\\in\\mathbb R,\\ \\chi\\in X_N^-).\n\\end{equation}\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroExpansion.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterZeroExpansion.lean",
         "line": 53
       }
     ],
@@ -251,7 +251,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_4_normal_convergence",
-    "actual": "LiLiuGoldbach16.lemma_3_4_normal_convergence",
+    "actual": "ConditionalGoldbach.lemma_3_4_normal_convergence",
     "tex_lines": [
       1274,
       1276
@@ -261,7 +261,7 @@
     "original_tex": "\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroShiftNormal.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterZeroShiftNormal.lean",
         "line": 26
       }
     ],
@@ -271,7 +271,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_4_paired_zero_sum",
-    "actual": "LiLiuGoldbach16.lemma_3_4_paired_zero_sum",
+    "actual": "ConditionalGoldbach.lemma_3_4_paired_zero_sum",
     "tex_lines": [
       1262,
       1283
@@ -281,7 +281,7 @@
     "original_tex": "Under $\\mathrm{GRH}(N)$, the nontrivial zeros of $L(s,\\chi^*)$\nhave the form $1/2+i\\gamma_\\chi$, where $\\chi^*$ is the primitive\ncharacter inducing $\\chi$. Set\n\\begin{align}\n Z_\\chi(s)&=\\sum_{\\gamma_\\chi}\n   \\left(\\frac1{s-i\\gamma_\\chi}-\\frac1{3/2-i\\gamma_\\chi}\\right),\n       &&\\Re s>0,\\label{proof:gb:zero-resolvent}\\\\\n e_\\chi(u)&=\\sum_{\\substack{p\\mid N\\\\p\\nmid d_\\chi}}\n       \\frac{\\chi^*(p)\\log p}{p^u-\\chi^*(p)},\n       &&\\Re u>0.\\label{proof:gb:Euler-correction}\n\\end{align}\n\n\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterSeries.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterSeries.lean",
         "line": 63
       }
     ],
@@ -291,7 +291,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5",
-    "actual": "LiLiuGoldbach16.lemma_3_5",
+    "actual": "ConditionalGoldbach.lemma_3_5",
     "tex_lines": [
       1365,
       1380
@@ -301,7 +301,7 @@
     "original_tex": "\\begin{lemma}[Mellin projection and signed families]\n\\label{proof:v9:mellin-signed-families}\nThe following Mellin representation holds unconditionally for\n$\\sigma>1/2$ and, under $\\mathrm{GRH}(N)$, also for\n$0<\\sigma\\le1/9$:\n\\[\n \\mathcal P(N)=\\frac1{(2\\pi i)^2}\n \\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathscr P_N(s,z)\n \\,\\d s\\,\\d z,\n\\]\nas in~\\eqref{gb:mellin-moment}.\nThe off-diagonal relations in \\eqref{proof:dir:kernel-expansion} are\n$m=n+kN$, $n=m+kN$, and $n+m=kN$, with signs $+,+,-$.\nAfter insertion of the weight, only the sum family with $k=1$ remains.\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMoment.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinMoment.lean",
         "line": 97
       }
     ],
@@ -311,7 +311,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5_absolute_convergence",
-    "actual": "LiLiuGoldbach16.lemma_3_5_absolute_convergence",
+    "actual": "ConditionalGoldbach.lemma_3_5_absolute_convergence",
     "tex_lines": [
       1365,
       1402
@@ -321,7 +321,7 @@
     "original_tex": "\\begin{lemma}[Mellin projection and signed families]\n\\label{proof:v9:mellin-signed-families}\nThe following Mellin representation holds unconditionally for\n$\\sigma>1/2$ and, under $\\mathrm{GRH}(N)$, also for\n$0<\\sigma\\le1/9$:\n\\[\n \\mathcal P(N)=\\frac1{(2\\pi i)^2}\n \\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathscr P_N(s,z)\n \\,\\d s\\,\\d z,\n\\]\nas in~\\eqref{gb:mellin-moment}.\nThe off-diagonal relations in \\eqref{proof:dir:kernel-expansion} are\n$m=n+kN$, $n=m+kN$, and $n+m=kN$, with signs $+,+,-$.\nAfter insertion of the weight, only the sum family with $k=1$ remains.\n\\end{lemma}\n\n\\begin{proof}\nFor $\\sigma>1/2$, the absolutely convergent logarithmic-derivative\nseries and the rapid decay of $\\widetilde\\Phi$ justify termwise\nMellin inversion:\n\\[\n P_\\chi=-\\frac1{2\\pi i}\\int_{(\\sigma)}\n       N^s\\widetilde\\Phi(s)\\frac{L'}L(1/2+s,\\chi)\\,\\d s,\n\\]\nas in~\\eqref{gb:mellin-P}.\nThe factor $N^s$ comes from $(n/N)^{-s}$. Apply the same formula\nto $P_{\\bar\\chi}$, multiply, and average over $X_N^-$.\nThe two minus signs cancel, and absolute convergence permits the\nproduct integrals and finite character sum to be interchanged.\nThis proves the displayed Mellin representation on the initial contours.\nUnder GRH, Proposition~\\ref{proof:v3:kernel-holomorphy} excludes\npoles between any positive contour and this initial contour.\nLemma~\\ref{proof:lem:zero-expansion} gives logarithmic growth on\nthe intervening fixed strip, whereas $\\widetilde\\Phi$ decays faster\nthan every power. The horizontal sides of the contour rectangles\ntherefore tend to zero, and the vertical integrals converge absolutely.\nMoving the contours successively proves the stated continuation.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMomentComplete.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinMomentComplete.lean",
         "line": 10
       }
     ],
@@ -331,7 +331,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5_small_sigma",
-    "actual": "LiLiuGoldbach16.lemma_3_5_small_sigma",
+    "actual": "ConditionalGoldbach.lemma_3_5_small_sigma",
     "tex_lines": [
       1365,
       1376
@@ -341,7 +341,7 @@
     "original_tex": "\\begin{lemma}[Mellin projection and signed families]\n\\label{proof:v9:mellin-signed-families}\nThe following Mellin representation holds unconditionally for\n$\\sigma>1/2$ and, under $\\mathrm{GRH}(N)$, also for\n$0<\\sigma\\le1/9$:\n\\[\n \\mathcal P(N)=\\frac1{(2\\pi i)^2}\n \\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathscr P_N(s,z)\n \\,\\d s\\,\\d z,\n\\]\nas in~\\eqref{gb:mellin-moment}.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMomentComplete.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinMomentComplete.lean",
         "line": 21
       }
     ],
@@ -351,7 +351,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_3_5_weight_support",
-    "actual": "LiLiuGoldbach16.lemma_3_5_weight_support",
+    "actual": "ConditionalGoldbach.lemma_3_5_weight_support",
     "tex_lines": [
       1377,
       1409
@@ -361,7 +361,7 @@
     "original_tex": "The off-diagonal relations in \\eqref{proof:dir:kernel-expansion} are\n$m=n+kN$, $n=m+kN$, and $n+m=kN$, with signs $+,+,-$.\nAfter insertion of the weight, only the sum family with $k=1$ remains.\n\\end{lemma}\n\n\\begin{proof}\nFor $\\sigma>1/2$, the absolutely convergent logarithmic-derivative\nseries and the rapid decay of $\\widetilde\\Phi$ justify termwise\nMellin inversion:\n\\[\n P_\\chi=-\\frac1{2\\pi i}\\int_{(\\sigma)}\n       N^s\\widetilde\\Phi(s)\\frac{L'}L(1/2+s,\\chi)\\,\\d s,\n\\]\nas in~\\eqref{gb:mellin-P}.\nThe factor $N^s$ comes from $(n/N)^{-s}$. Apply the same formula\nto $P_{\\bar\\chi}$, multiply, and average over $X_N^-$.\nThe two minus signs cancel, and absolute convergence permits the\nproduct integrals and finite character sum to be interchanged.\nThis proves the displayed Mellin representation on the initial contours.\nUnder GRH, Proposition~\\ref{proof:v3:kernel-holomorphy} excludes\npoles between any positive contour and this initial contour.\nLemma~\\ref{proof:lem:zero-expansion} gives logarithmic growth on\nthe intervening fixed strip, whereas $\\widetilde\\Phi$ decays faster\nthan every power. The horizontal sides of the contour rectangles\ntherefore tend to zero, and the vertical integrals converge absolutely.\nMoving the contours successively proves the stated continuation.\n\nSeparating equal from unequal indices in the first congruence of\n\\eqref{proof:dir:kernel-expansion} gives the diagonal and the two\npositive difference families. The second congruence gives the negative\nsum family. On the support of the weight, $|n-m|\\le N/3$ and\n$2N/3\\le n+m\\le4N/3$. Thus both difference families and all sums\nwith $k\\ge2$ have zero weighted contribution.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Weights.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Weights.lean",
         "line": 66
       }
     ],
@@ -371,7 +371,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1",
-    "actual": "LiLiuGoldbach16.lemma_4_1",
+    "actual": "ConditionalGoldbach.lemma_4_1",
     "tex_lines": [
       1480,
       1497
@@ -381,7 +381,7 @@
     "original_tex": "\\begin{lemma}[The continuous signed model]\\label{proof:v9:signed-beta-model}\nFor $h>0$, $\\Re s,\\Re z<1/2$ and $\\Re(s+z)>0$, put $w=s+z$.\nThe following integrals converge absolutely:\n\\begin{equation}\\label{v3:beta-scaled-model}\n \\begin{aligned}\n \\int_0^\\infty x^{-1/2-s}(x+h)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,w),\\\\\n \\int_0^\\infty x^{-1/2-z}(x+h)^{-1/2-s}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-z,w),\\\\\n \\int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,1/2-z).\n \\end{aligned}\n\\end{equation}\nTheir signed sum, with signs $+,+,-$, is $h^{-s-z}K_-(s,z)$.\nFor $h=kN$, the common local density for these three families is\n$\\mathfrak S(h)$, so their model is\n$\\mathfrak S(h)h^{-s-z}K_-(s,z)$.\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
         "line": 172
       }
     ],
@@ -391,7 +391,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1_absolute_convergence",
-    "actual": "LiLiuGoldbach16.lemma_4_1_absolute_convergence",
+    "actual": "ConditionalGoldbach.lemma_4_1_absolute_convergence",
     "tex_lines": [
       1480,
       1492
@@ -401,7 +401,7 @@
     "original_tex": "\\begin{lemma}[The continuous signed model]\\label{proof:v9:signed-beta-model}\nFor $h>0$, $\\Re s,\\Re z<1/2$ and $\\Re(s+z)>0$, put $w=s+z$.\nThe following integrals converge absolutely:\n\\begin{equation}\\label{v3:beta-scaled-model}\n \\begin{aligned}\n \\int_0^\\infty x^{-1/2-s}(x+h)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,w),\\\\\n \\int_0^\\infty x^{-1/2-z}(x+h)^{-1/2-s}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-z,w),\\\\\n \\int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,1/2-z).\n \\end{aligned}\n\\end{equation}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
         "line": 183
       }
     ],
@@ -411,7 +411,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1_signed_model",
-    "actual": "LiLiuGoldbach16.lemma_4_1_signed_model",
+    "actual": "ConditionalGoldbach.lemma_4_1_signed_model",
     "tex_lines": [
       1493,
       1497
@@ -421,7 +421,7 @@
     "original_tex": "Their signed sum, with signs $+,+,-$, is $h^{-s-z}K_-(s,z)$.\nFor $h=kN$, the common local density for these three families is\n$\\mathfrak S(h)$, so their model is\n$\\mathfrak S(h)h^{-s-z}K_-(s,z)$.\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
         "line": 195
       }
     ],
@@ -431,7 +431,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_1_local_density",
-    "actual": "LiLiuGoldbach16.lemma_4_1_local_density",
+    "actual": "ConditionalGoldbach.lemma_4_1_local_density",
     "tex_lines": [
       1499,
       1513
@@ -441,7 +441,7 @@
     "original_tex": "\\begin{proof}\nFor both sums and differences, the two entries exclude one\nresidue class modulo $p$ if $p\\mid h$ and two otherwise.\nRelative to independent prime densities, the correction is\n\\[\n \\frac{1-\\nu_p(h)/p}{(1-1/p)^2},\\qquad\n \\nu_p(h)=\\begin{cases}1,&p\\mid h,\\\\2,&p\\nmid h.\\end{cases}\n\\]\nSince $h=kN$ is even, the product is\n\\[\n 2C_2\\prod_{\\substack{p\\mid h\\\\p>2}}\\frac{p-1}{p-2}\n =\\mathfrak S(h).\n\\]\nIn particular, $N\\mid h$ makes the factors at primes dividing $N$\nconsistent with the coprimality restriction in the arithmetic kernel.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SingularDensity.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SingularDensity.lean",
         "line": 63
       }
     ],
@@ -451,7 +451,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_2",
-    "actual": "LiLiuGoldbach16.lemma_4_2",
+    "actual": "ConditionalGoldbach.lemma_4_2",
     "tex_lines": [
       1538,
       1551
@@ -461,7 +461,7 @@
     "original_tex": "\\begin{lemma}[Gamma factorization]\\label{proof:v9:gamma-factorization}\nOn $\\Re s=\\Re z=\\sigma$, one has\n\\begin{equation}\\label{proof:gb:beta-uniform-bound}\n |K_-(s,z)|\\le\n 2B(1/2-\\sigma,2\\sigma)+B(1/2-\\sigma,1/2-\\sigma)\n \\qquad(0<\\sigma\\le1/9).\n\\end{equation}\nFor this Gamma quotient $\\mathcal X_1$, the factorization is\n\\begin{equation}\\label{proof:gb:gamma-beta}\n K_-(s,z)=2^{1-w}\\Gamma(w)\\cos(\\pi w/2)\n                      \\mathcal X_1(s)\\mathcal X_1(z),\\qquad w=s+z.\n\\end{equation}\nThe latter equality is an identity of meromorphic functions.\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIdentity.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIdentity.lean",
         "line": 219
       }
     ],
@@ -471,7 +471,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_2_meromorphic",
-    "actual": "LiLiuGoldbach16.lemma_4_2_meromorphic",
+    "actual": "ConditionalGoldbach.lemma_4_2_meromorphic",
     "tex_lines": [
       1545,
       1551
@@ -481,7 +481,7 @@
     "original_tex": "For this Gamma quotient $\\mathcal X_1$, the factorization is\n\\begin{equation}\\label{proof:gb:gamma-beta}\n K_-(s,z)=2^{1-w}\\Gamma(w)\\cos(\\pi w/2)\n                      \\mathcal X_1(s)\\mathcal X_1(z),\\qquad w=s+z.\n\\end{equation}\nThe latter equality is an identity of meromorphic functions.\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaMeromorphic.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaMeromorphic.lean",
         "line": 129
       }
     ],
@@ -491,7 +491,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3",
-    "actual": "LiLiuGoldbach16.lemma_4_3",
+    "actual": "ConditionalGoldbach.lemma_4_3",
     "tex_lines": [
       1611,
       1630
@@ -501,7 +501,7 @@
     "original_tex": "\\begin{lemma}\\label{proof:lem:singular-N}\nThe diagonal series $\\mathscr D_N(w)$ converges absolutely for\n$\\Re w>0$. The density series $\\mathscr S_N(w)$ has the Euler\nproduct displayed above and continues meromorphically to\n$\\Re w>0$, with a single simple pole at $w=1$ of residue\n\\begin{equation}\\label{proof:gb:singular-series-residue}\n \\operatorname*{Res}_{w=1}\\mathscr S_N(w)=\\frac N{\\varphi(N)}.\n\\end{equation}\nFor fixed $0<\\sigma_-<\\sigma_+<\\infty$,\n\\begin{equation}\\label{proof:gb:singular-series-growth}\n |\\mathscr S_N(w)|\\ll_{\\sigma_-,\\sigma_+}\n \\frac N{\\varphi(N)}(1+|\\Im w|)\n \\quad(\\sigma_-\\le\\Re w\\le\\sigma_+,\\ |\\Im w|\\ge1).\n\\end{equation}\nMoreover, $\\mathfrak S(N)>1$ and\n\\begin{equation}\\label{proof:sp:family-bounds}\n C_2\\frac N{\\varphi(N)}\\le\\mathfrak S(N)\n       \\le\\frac N{\\varphi(N)}\\ll\\log\\log N.\n\\end{equation}\n\\end{lemma}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityEulerIdentity.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/DensityEulerIdentity.lean",
         "line": 98
       }
     ],
@@ -511,7 +511,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3_uniform",
-    "actual": "LiLiuGoldbach16.lemma_4_3_uniform",
+    "actual": "ConditionalGoldbach.lemma_4_3_uniform",
     "tex_lines": [
       1619,
       1628
@@ -521,7 +521,7 @@
     "original_tex": "For fixed $0<\\sigma_-<\\sigma_+<\\infty$,\n\\begin{equation}\\label{proof:gb:singular-series-growth}\n |\\mathscr S_N(w)|\\ll_{\\sigma_-,\\sigma_+}\n \\frac N{\\varphi(N)}(1+|\\Im w|)\n \\quad(\\sigma_-\\le\\Re w\\le\\sigma_+,\\ |\\Im w|\\ge1).\n\\end{equation}\nMoreover, $\\mathfrak S(N)>1$ and\n\\begin{equation}\\label{proof:sp:family-bounds}\n C_2\\frac N{\\varphi(N)}\\le\\mathfrak S(N)\n       \\le\\frac N{\\varphi(N)}\\ll\\log\\log N.",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/TotientLogLog.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/TotientLogLog.lean",
         "line": 170
       }
     ],
@@ -531,7 +531,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3_density_convergence",
-    "actual": "LiLiuGoldbach16.lemma_4_3_density_convergence",
+    "actual": "ConditionalGoldbach.lemma_4_3_density_convergence",
     "tex_lines": [
       1580,
       1618
@@ -541,7 +541,7 @@
     "original_tex": "We now collect the densities at all scales $h=kN$ and record the\nexact diagonal. The corresponding Dirichlet series are\n\\[\n \\begin{aligned}\n \\mathscr D_N(w)&=\\sum_{\\substack{n\\ge1\\\\(n,N)=1}}\n                       \\frac{\\Lambda^2(n)}{n^{1+w}}\n                       &&(\\Re w>0),\\\\\n \\mathscr S_N(w)&=\\sum_{k\\ge1}\\frac{\\mathfrak S(kN)}{k^w}\n                       &&(\\Re w>1),\n \\end{aligned}\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels} and~\\eqref{v3i:series}.\nThe former records the exact arithmetic diagonal; the latter collects\nthe local densities $\\mathfrak S(kN)$. The density series is\ninitially defined for $\\Re w>1$, whereas the three Beta integrals\nhave $0<\\Re w<1$ in their common domain. To use the density factor\nthere, we first continue it by the Euler product, which we restate here:\n\\[\n \\mathscr S_N(w)=\\mathfrak S(N)\\zeta(w)P_N(w),\n\\]\nwhere $P_N$ is the Euler product\n\\[\n P_N(w)=\\prod_{\\substack{p>2\\\\p\\nmid N}}\n                  \\left(1+\\frac{p^{-w}}{p-2}\\right),\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels}.\nThis Euler product is distinct from the character polynomial\n$P_\\chi$ of the preceding section.\nSeparating the zeta factor identifies the pole at $w=1$; controlling\nthe remaining product gives bounds uniform in the modulus.\n\n\\begin{lemma}\\label{proof:lem:singular-N}\nThe diagonal series $\\mathscr D_N(w)$ converges absolutely for\n$\\Re w>0$. The density series $\\mathscr S_N(w)$ has the Euler\nproduct displayed above and continues meromorphically to\n$\\Re w>0$, with a single simple pole at $w=1$ of residue\n\\begin{equation}\\label{proof:gb:singular-series-residue}\n \\operatorname*{Res}_{w=1}\\mathscr S_N(w)=\\frac N{\\varphi(N)}.\n\\end{equation}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityConvergence.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/DensityConvergence.lean",
         "line": 75
       }
     ],
@@ -551,7 +551,7 @@
   },
   {
     "expected": "TexAudit14.expect_lemma_4_3_euler_product_convergence",
-    "actual": "LiLiuGoldbach16.lemma_4_3_euler_product_convergence",
+    "actual": "ConditionalGoldbach.lemma_4_3_euler_product_convergence",
     "tex_lines": [
       1642,
       1648
@@ -561,7 +561,7 @@
     "original_tex": "For every $\\delta>0$, the product $P_N(w)$ is holomorphic and\nuniformly bounded in $N$ on $\\Re w\\ge\\delta$, since\n$\\sum_{p>2}p^{-\\delta}/(p-2)<\\infty$.\nOmitting the primes dividing $N$ only decreases this absolute\nmajorant. At $w=1$ all Euler factors are positive, so they do not\ncancel the pole of the zeta factor.\nOnly the pole of $\\zeta(w)$ at $1$ remains. The identity",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityEuler.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/DensityEuler.lean",
         "line": 146
       }
     ],
@@ -571,7 +571,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_4_4",
-    "actual": "LiLiuGoldbach16.proposition_4_4",
+    "actual": "ConditionalGoldbach.proposition_4_4",
     "tex_lines": [
       1704,
       1710
@@ -581,7 +581,7 @@
     "original_tex": "\\begin{proposition}[Continuation of the Beta model]\\label{proof:v3:model-geometry}\nThe second expression for $\\mathscr K_N$ above gives its continuation\nand is holomorphic on\n\\[\n \\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}.\n\\]\n\\end{proposition}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/ModelContinuation.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/ModelContinuation.lean",
         "line": 88
       }
     ],
@@ -591,7 +591,7 @@
   },
   {
     "expected": "TexAudit14.expect_proposition_4_5",
-    "actual": "LiLiuGoldbach16.proposition_4_5",
+    "actual": "ConditionalGoldbach.proposition_4_5",
     "tex_lines": [
       1760,
       1768
@@ -601,7 +601,7 @@
     "original_tex": "\\begin{proposition}[The analytic residual]\\label{proof:v7:residual-holomorphy}\nUnder $\\mathrm{GRH}(N)$, $\\mathscr E_N$ is holomorphic on\n$\\Omega$ and satisfies\n\\[\n \\mathscr E_N(s,z)=\\mathscr E_N(z,s),\\qquad\n \\overline{\\mathscr E_N(s,z)}=\\mathscr E_N(\\bar s,\\bar z).\n\\]\nIn particular, $\\mathscr E_N(s,\\bar z)$ is Hermitian.\n\\end{proposition}",
     "current_locations": [
       {
-        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/ResidualAnalytic.lean",
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/ResidualAnalytic.lean",
         "line": 85
       }
     ],

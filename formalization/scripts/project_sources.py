@@ -35,7 +35,7 @@ def source_declarations(path):
                    'private': bool(re.match(r'^(?:noncomputable\s+)?private\s', line))}
 
 def library_sources():
-    todo=[ROOT/'LiLiuGoldbach.lean'];seen=set()
+    todo=[ROOT/'ConditionalGoldbach.lean'];seen=set()
     while todo:
         p=todo.pop()
         if p in seen:continue
@@ -45,6 +45,6 @@ def library_sources():
             m=re.match(r'^(?:public\s+)?import\s+(.+)$',line)
             if not m:continue
             for module in m[1].split():
-                if module=='LiLiuGoldbach' or module.startswith('LiLiuGoldbach.'):
+                if module=='ConditionalGoldbach' or module.startswith('ConditionalGoldbach.'):
                     todo.append(ROOT/('/'.join(module.split('.'))+'.lean'))
-    return sorted(p for p in seen if p.name!='LiLiuGoldbach.lean')
+    return sorted(p for p in seen if p.name!='ConditionalGoldbach.lean')

@@ -1,4 +1,4 @@
-import LiLiuGoldbach
+import ConditionalGoldbach
 
 /-! Independently stated semantic bridges for TeX sections 1--4.
 These invoke proved results only after their exact conclusions have been checked.
@@ -6,7 +6,7 @@ No theorem of the paper is promoted to an axiom or a hypothesis here. -/
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex LiLiuGoldbach16
+open MeasureTheory Filter Set Complex ConditionalGoldbach
 namespace TexAudit14
 attribute [local instance] Classical.propDecidable conductorNeZero
 

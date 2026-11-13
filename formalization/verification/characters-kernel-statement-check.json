@@ -1,9 +1,0 @@
-{
-  "status": "passed",
-  "method": "Whitespace-normalized original audited declaration prefixes compared before proof body. No type, parameter, hypothesis, conclusion or quantifier changed.",
-  "statements": [
-    "lemma_3_1_odd_orthogonality",
-    "lemma_3_1",
-    "proposition_3_2_finite_rank"
-  ]
-}

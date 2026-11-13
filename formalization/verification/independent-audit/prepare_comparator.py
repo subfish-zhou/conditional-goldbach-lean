@@ -44,14 +44,14 @@ if numeric.exists():
     bridge_modules.append('NumericCrossCheck')
     numerical_cross_checks.append('TexAuditAB.Numeric.unorderedPrimePairs_eq_905')
 original = json.loads((project/'reference/declarations.json').read_text())
-original_theorems = {'LiLiuGoldbach16.'+n for n,d in original.items() if d['kind']=='theorem'}
+original_theorems = {'ConditionalGoldbach.'+n for n,d in original.items() if d['kind']=='theorem'}
 assert original_theorems <= {r['actual'] for r in rows}
 (out/'lean-toolchain').write_text((project/'lean-toolchain').read_text())
-(out/'lakefile.toml').write_text('name = "independentTexAudit"\nversion = "0.1.0"\ndefaultTargets = ["TexAuditComparator"]\n\n[[require]]\nname = "liLiuGoldbach"\npath = "../../.."\n\n[[lean_lib]]\nname = "TexAuditComparator"\n')
+(out/'lakefile.toml').write_text('name = "independentTexAudit"\nversion = "0.1.0"\ndefaultTargets = ["TexAuditComparator"]\n\n[[require]]\nname = "conditionalGoldbach"\npath = "../../.."\n\n[[lean_lib]]\nname = "TexAuditComparator"\n')
 manifest = json.loads((project/'lake-manifest.json').read_text())
 manifest['name'] = 'independentTexAudit'
 for p in manifest['packages']: p['inherited'] = True
-manifest['packages'].insert(0, dict(type='path', scope='', name='liLiuGoldbach',
+manifest['packages'].insert(0, dict(type='path', scope='', name='conditionalGoldbach',
     manifestFile='lake-manifest.json', inherited=False, dir='../../..', copy=False,
     configFile='lakefile.toml'))
 (out/'lake-manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')

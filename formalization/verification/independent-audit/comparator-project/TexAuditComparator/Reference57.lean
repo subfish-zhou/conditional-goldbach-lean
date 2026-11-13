@@ -1,7 +1,7 @@
-import LiLiuGoldbach
+import ConditionalGoldbach
 
 /-!
-Independent reference, derived from LiLiuGoldbach16.tex §§5–7 in this audit.
+Independent reference, derived from conditional-goldbach.tex §§5–7 in this audit.
 No old Reviewed.lean or prior audit result is used as mathematical evidence.
 `Expected_*` definitions are propositions, not assumed proofs. Definition bridges
 check only the independently transcribed formula against the implementation;
@@ -13,8 +13,8 @@ open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace TexAudit57
 universe u
-open LiLiuGoldbach16
-attribute [local instance] LiLiuGoldbach16.conductorNeZero
+open ConditionalGoldbach
+attribute [local instance] ConditionalGoldbach.conductorNeZero
 
 -- TeX 1986–2027: the frequency representation is distinct from the raw Hardy space.
 def RawHardy (a b : ℝ) (h : ℂ → ℂ) : Prop :=
@@ -528,41 +528,41 @@ def expect_lemma_7_5_asymptotic : Prop := ∀ φ : ℝ → ℝ, IsWeight φ →
 
 
 -- Supplemental reference-to-implementation type checks.
-theorem check_proposition_5_1_fueter_equation : TexAudit57.expect_proposition_5_1_fueter_equation := @LiLiuGoldbach16.proposition_5_1_fueter_equation
-theorem check_lemma_5_2_closed_trace_space : TexAudit57.expect_lemma_5_2_closed_trace_space := @LiLiuGoldbach16.lemma_5_2_closed_trace_space
-theorem check_lemma_5_2_representation_spec : TexAudit57.expect_lemma_5_2_representation_spec := @LiLiuGoldbach16.lemma_5_2_representation_spec
-theorem check_lemma_5_2_boundary_inner : TexAudit57.expect_lemma_5_2_boundary_inner := @LiLiuGoldbach16.lemma_5_2_boundary_inner
-theorem check_proposition_5_3_kernel_integrability : TexAudit57.expect_proposition_5_3_kernel_integrability := @LiLiuGoldbach16.proposition_5_3_kernel_integrability
-theorem check_proposition_5_3_hs_basis_independent : TexAudit57.expect_proposition_5_3_hs_basis_independent := @LiLiuGoldbach16.proposition_5_3_hs_basis_independent
-theorem check_proposition_5_4_exact_norm : TexAudit57.expect_proposition_5_4_exact_norm := @LiLiuGoldbach16.proposition_5_4_exact_norm
-theorem check_proposition_5_4_kernel_pairing : TexAudit57.expect_proposition_5_4_kernel_pairing := @LiLiuGoldbach16.proposition_5_4_kernel_pairing
-theorem check_proposition_5_4_fixed_contour : TexAudit57.expect_proposition_5_4_fixed_contour := @LiLiuGoldbach16.proposition_5_4_fixed_contour
-theorem check_proposition_6_1_enumeration : TexAudit57.expect_proposition_6_1_enumeration := @LiLiuGoldbach16.proposition_6_1_enumeration
-theorem check_proposition_6_1_complex_slice : TexAudit57.expect_proposition_6_1_complex_slice := @LiLiuGoldbach16.proposition_6_1_complex_slice
-theorem check_proposition_6_1_positive_fredholm_spec : TexAudit57.expect_proposition_6_1_positive_fredholm_spec := @LiLiuGoldbach16.proposition_6_1_positive_fredholm_spec
-theorem check_proposition_6_1_square_determinant : TexAudit57.expect_proposition_6_1_square_determinant := @LiLiuGoldbach16.proposition_6_1_square_determinant
-theorem check_proposition_6_1_all_slices : TexAudit57.expect_proposition_6_1_all_slices := @LiLiuGoldbach16.proposition_6_1_all_slices
-theorem check_proposition_6_1_spectral_choice_independent : TexAudit57.expect_proposition_6_1_spectral_choice_independent := @LiLiuGoldbach16.proposition_6_1_spectral_choice_independent
-theorem check_proposition_6_2_centered_product : TexAudit57.expect_proposition_6_2_centered_product := @LiLiuGoldbach16.proposition_6_2_centered_product
-theorem check_proposition_6_2_critical_values : TexAudit57.expect_proposition_6_2_critical_values := @LiLiuGoldbach16.proposition_6_2_critical_values
-theorem check_proposition_6_3_three_cases : TexAudit57.expect_proposition_6_3_three_cases := @LiLiuGoldbach16.proposition_6_3_three_cases
-theorem check_proposition_6_3_factor_central_order : TexAudit57.expect_proposition_6_3_factor_central_order := @LiLiuGoldbach16.proposition_6_3_factor_central_order
-theorem check_proposition_6_3_multiplicities : TexAudit57.expect_proposition_6_3_multiplicities := @LiLiuGoldbach16.proposition_6_3_multiplicities
-theorem check_theorem_6_1_abstract_dictionary : TexAudit57.expect_theorem_6_1_abstract_dictionary := @LiLiuGoldbach16.theorem_6_1_abstract_dictionary
-theorem check_theorem_6_1_width_comparison : TexAudit57.expect_theorem_6_1_width_comparison := @LiLiuGoldbach16.theorem_6_1_width_comparison
-theorem check_lemma_6_4_zero_poisson_convergence : TexAudit57.expect_lemma_6_4_zero_poisson_convergence := @LiLiuGoldbach16.lemma_6_4_zero_poisson_convergence
-theorem check_lemma_6_4_perron_residue : TexAudit57.expect_lemma_6_4_perron_residue := @LiLiuGoldbach16.lemma_6_4_perron_residue
-theorem check_lemma_6_4_poisson_action_spec : TexAudit57.expect_lemma_6_4_poisson_action_spec := @LiLiuGoldbach16.lemma_6_4_poisson_action_spec
-theorem check_lemma_6_4_poisson_convolution : TexAudit57.expect_lemma_6_4_poisson_convolution := @LiLiuGoldbach16.lemma_6_4_poisson_convolution
-theorem check_proposition_6_5_components_spec : TexAudit57.expect_proposition_6_5_components_spec := @LiLiuGoldbach16.proposition_6_5_components_spec
-theorem check_proposition_6_5_diagonal_vector_spec : TexAudit57.expect_proposition_6_5_diagonal_vector_spec := @LiLiuGoldbach16.proposition_6_5_diagonal_vector_spec
-theorem check_lemma_7_1_absolute_convergence : TexAudit57.expect_lemma_7_1_absolute_convergence := @LiLiuGoldbach16.lemma_7_1_absolute_convergence
-theorem check_lemma_7_2_absolute_convergence : TexAudit57.expect_lemma_7_2_absolute_convergence := @LiLiuGoldbach16.lemma_7_2_absolute_convergence
-theorem check_lemma_7_2_convolutions : TexAudit57.expect_lemma_7_2_convolutions := @LiLiuGoldbach16.lemma_7_2_convolutions
-theorem check_proposition_7_3_absolute_convergence : TexAudit57.expect_proposition_7_3_absolute_convergence := @LiLiuGoldbach16.proposition_7_3_absolute_convergence
-theorem check_proposition_7_4_norm_integrals : TexAudit57.expect_proposition_7_4_norm_integrals := @LiLiuGoldbach16.proposition_7_4_norm_integrals
-theorem check_theorem_7_1_uniform : TexAudit57.expect_theorem_7_1_uniform := @LiLiuGoldbach16.theorem_7_1_uniform
-theorem check_lemma_7_5_asymptotic : TexAudit57.expect_lemma_7_5_asymptotic := @LiLiuGoldbach16.lemma_7_5_asymptotic
+theorem check_proposition_5_1_fueter_equation : TexAudit57.expect_proposition_5_1_fueter_equation := @ConditionalGoldbach.proposition_5_1_fueter_equation
+theorem check_lemma_5_2_closed_trace_space : TexAudit57.expect_lemma_5_2_closed_trace_space := @ConditionalGoldbach.lemma_5_2_closed_trace_space
+theorem check_lemma_5_2_representation_spec : TexAudit57.expect_lemma_5_2_representation_spec := @ConditionalGoldbach.lemma_5_2_representation_spec
+theorem check_lemma_5_2_boundary_inner : TexAudit57.expect_lemma_5_2_boundary_inner := @ConditionalGoldbach.lemma_5_2_boundary_inner
+theorem check_proposition_5_3_kernel_integrability : TexAudit57.expect_proposition_5_3_kernel_integrability := @ConditionalGoldbach.proposition_5_3_kernel_integrability
+theorem check_proposition_5_3_hs_basis_independent : TexAudit57.expect_proposition_5_3_hs_basis_independent := @ConditionalGoldbach.proposition_5_3_hs_basis_independent
+theorem check_proposition_5_4_exact_norm : TexAudit57.expect_proposition_5_4_exact_norm := @ConditionalGoldbach.proposition_5_4_exact_norm
+theorem check_proposition_5_4_kernel_pairing : TexAudit57.expect_proposition_5_4_kernel_pairing := @ConditionalGoldbach.proposition_5_4_kernel_pairing
+theorem check_proposition_5_4_fixed_contour : TexAudit57.expect_proposition_5_4_fixed_contour := @ConditionalGoldbach.proposition_5_4_fixed_contour
+theorem check_proposition_6_1_enumeration : TexAudit57.expect_proposition_6_1_enumeration := @ConditionalGoldbach.proposition_6_1_enumeration
+theorem check_proposition_6_1_complex_slice : TexAudit57.expect_proposition_6_1_complex_slice := @ConditionalGoldbach.proposition_6_1_complex_slice
+theorem check_proposition_6_1_positive_fredholm_spec : TexAudit57.expect_proposition_6_1_positive_fredholm_spec := @ConditionalGoldbach.proposition_6_1_positive_fredholm_spec
+theorem check_proposition_6_1_square_determinant : TexAudit57.expect_proposition_6_1_square_determinant := @ConditionalGoldbach.proposition_6_1_square_determinant
+theorem check_proposition_6_1_all_slices : TexAudit57.expect_proposition_6_1_all_slices := @ConditionalGoldbach.proposition_6_1_all_slices
+theorem check_proposition_6_1_spectral_choice_independent : TexAudit57.expect_proposition_6_1_spectral_choice_independent := @ConditionalGoldbach.proposition_6_1_spectral_choice_independent
+theorem check_proposition_6_2_centered_product : TexAudit57.expect_proposition_6_2_centered_product := @ConditionalGoldbach.proposition_6_2_centered_product
+theorem check_proposition_6_2_critical_values : TexAudit57.expect_proposition_6_2_critical_values := @ConditionalGoldbach.proposition_6_2_critical_values
+theorem check_proposition_6_3_three_cases : TexAudit57.expect_proposition_6_3_three_cases := @ConditionalGoldbach.proposition_6_3_three_cases
+theorem check_proposition_6_3_factor_central_order : TexAudit57.expect_proposition_6_3_factor_central_order := @ConditionalGoldbach.proposition_6_3_factor_central_order
+theorem check_proposition_6_3_multiplicities : TexAudit57.expect_proposition_6_3_multiplicities := @ConditionalGoldbach.proposition_6_3_multiplicities
+theorem check_theorem_6_1_abstract_dictionary : TexAudit57.expect_theorem_6_1_abstract_dictionary := @ConditionalGoldbach.theorem_6_1_abstract_dictionary
+theorem check_theorem_6_1_width_comparison : TexAudit57.expect_theorem_6_1_width_comparison := @ConditionalGoldbach.theorem_6_1_width_comparison
+theorem check_lemma_6_4_zero_poisson_convergence : TexAudit57.expect_lemma_6_4_zero_poisson_convergence := @ConditionalGoldbach.lemma_6_4_zero_poisson_convergence
+theorem check_lemma_6_4_perron_residue : TexAudit57.expect_lemma_6_4_perron_residue := @ConditionalGoldbach.lemma_6_4_perron_residue
+theorem check_lemma_6_4_poisson_action_spec : TexAudit57.expect_lemma_6_4_poisson_action_spec := @ConditionalGoldbach.lemma_6_4_poisson_action_spec
+theorem check_lemma_6_4_poisson_convolution : TexAudit57.expect_lemma_6_4_poisson_convolution := @ConditionalGoldbach.lemma_6_4_poisson_convolution
+theorem check_proposition_6_5_components_spec : TexAudit57.expect_proposition_6_5_components_spec := @ConditionalGoldbach.proposition_6_5_components_spec
+theorem check_proposition_6_5_diagonal_vector_spec : TexAudit57.expect_proposition_6_5_diagonal_vector_spec := @ConditionalGoldbach.proposition_6_5_diagonal_vector_spec
+theorem check_lemma_7_1_absolute_convergence : TexAudit57.expect_lemma_7_1_absolute_convergence := @ConditionalGoldbach.lemma_7_1_absolute_convergence
+theorem check_lemma_7_2_absolute_convergence : TexAudit57.expect_lemma_7_2_absolute_convergence := @ConditionalGoldbach.lemma_7_2_absolute_convergence
+theorem check_lemma_7_2_convolutions : TexAudit57.expect_lemma_7_2_convolutions := @ConditionalGoldbach.lemma_7_2_convolutions
+theorem check_proposition_7_3_absolute_convergence : TexAudit57.expect_proposition_7_3_absolute_convergence := @ConditionalGoldbach.proposition_7_3_absolute_convergence
+theorem check_proposition_7_4_norm_integrals : TexAudit57.expect_proposition_7_4_norm_integrals := @ConditionalGoldbach.proposition_7_4_norm_integrals
+theorem check_theorem_7_1_uniform : TexAudit57.expect_theorem_7_1_uniform := @ConditionalGoldbach.theorem_7_1_uniform
+theorem check_lemma_7_5_asymptotic : TexAudit57.expect_lemma_7_5_asymptotic := @ConditionalGoldbach.lemma_7_5_asymptotic
 
 -- Construction obligations implicit in the Fourier–Laplace lemma (TeX 2030–2046).
 def expect_interiorLine_memLp : Prop := ∀ {a b x : ℝ}, a < b → x ∈ Ioo a b →
@@ -573,7 +573,7 @@ def expect_boundaryTraces_exist : Prop := ∀ {a b : ℝ}, ∀ hab : a < b,
   ∃ p : Lp ℂ 2 (volume : Measure ℝ) × Lp ℂ 2 (volume : Measure ℝ),
     TracePair hab ψ p.1 p.2
 
-theorem check_interiorLine_memLp : expect_interiorLine_memLp := @LiLiuGoldbach16.interiorLine_memLp
-theorem check_boundaryTraces_exist : expect_boundaryTraces_exist := @LiLiuGoldbach16.boundaryTraces_exist
+theorem check_interiorLine_memLp : expect_interiorLine_memLp := @ConditionalGoldbach.interiorLine_memLp
+theorem check_boundaryTraces_exist : expect_boundaryTraces_exist := @ConditionalGoldbach.boundaryTraces_exist
 
 end TexAudit57

@@ -1,7 +1,7 @@
 [
   {
     "expected": "TexAudit57.Expected_5_1",
-    "actual": "LiLiuGoldbach16.proposition_5_1",
+    "actual": "ConditionalGoldbach.proposition_5_1",
     "label": "Proposition 5.1",
     "tex_lines": [
       [
@@ -22,7 +22,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/KernelRegularity.lean",
+      "file": "ConditionalGoldbach/Proofs/KernelRegularity.lean",
       "line": 95
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -32,7 +32,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_5_1_fueter_equation",
-    "actual": "LiLiuGoldbach16.proposition_5_1_fueter_equation",
+    "actual": "ConditionalGoldbach.proposition_5_1_fueter_equation",
     "label": "Proposition 5.1 / proposition_5_1_fueter_equation",
     "tex_lines": [
       [
@@ -53,7 +53,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/KernelRegularity.lean",
+      "file": "ConditionalGoldbach/Proofs/KernelRegularity.lean",
       "line": 144
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -63,7 +63,7 @@
   },
   {
     "expected": "TexAudit57.Expected_5_2",
-    "actual": "LiLiuGoldbach16.lemma_5_2",
+    "actual": "ConditionalGoldbach.lemma_5_2",
     "label": "Lemma 5.2",
     "tex_lines": [
       [
@@ -76,7 +76,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyConverse.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyConverse.lean",
       "line": 43
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -86,7 +86,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_5_2_closed_trace_space",
-    "actual": "LiLiuGoldbach16.lemma_5_2_closed_trace_space",
+    "actual": "ConditionalGoldbach.lemma_5_2_closed_trace_space",
     "label": "Lemma 5.2 / lemma_5_2_closed_trace_space",
     "tex_lines": [
       [
@@ -99,7 +99,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean",
       "line": 181
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -109,7 +109,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_5_2_representation_spec",
-    "actual": "LiLiuGoldbach16.lemma_5_2_representation_spec",
+    "actual": "ConditionalGoldbach.lemma_5_2_representation_spec",
     "label": "Lemma 5.2 / lemma_5_2_representation_spec",
     "tex_lines": [
       [
@@ -122,7 +122,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean",
       "line": 123
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -132,7 +132,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_5_2_boundary_inner",
-    "actual": "LiLiuGoldbach16.lemma_5_2_boundary_inner",
+    "actual": "ConditionalGoldbach.lemma_5_2_boundary_inner",
     "label": "Lemma 5.2 / lemma_5_2_boundary_inner",
     "tex_lines": [
       [
@@ -145,7 +145,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean",
       "line": 198
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -155,7 +155,7 @@
   },
   {
     "expected": "TexAudit57.Expected_5_3",
-    "actual": "LiLiuGoldbach16.proposition_5_3",
+    "actual": "ConditionalGoldbach.proposition_5_3",
     "label": "Proposition 5.3",
     "tex_lines": [
       [
@@ -176,7 +176,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean",
       "line": 33
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -186,7 +186,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_5_3_kernel_integrability",
-    "actual": "LiLiuGoldbach16.proposition_5_3_kernel_integrability",
+    "actual": "ConditionalGoldbach.proposition_5_3_kernel_integrability",
     "label": "Proposition 5.3 / proposition_5_3_kernel_integrability",
     "tex_lines": [
       [
@@ -207,7 +207,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean",
       "line": 55
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -217,7 +217,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_5_3_hs_basis_independent",
-    "actual": "LiLiuGoldbach16.proposition_5_3_hs_basis_independent",
+    "actual": "ConditionalGoldbach.proposition_5_3_hs_basis_independent",
     "label": "Proposition 5.3 / proposition_5_3_hs_basis_independent",
     "tex_lines": [
       [
@@ -241,7 +241,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralHilbertSchmidt.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralHilbertSchmidt.lean",
       "line": 52
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -251,7 +251,7 @@
   },
   {
     "expected": "TexAudit57.Expected_5_4",
-    "actual": "LiLiuGoldbach16.proposition_5_4",
+    "actual": "ConditionalGoldbach.proposition_5_4",
     "label": "Proposition 5.4",
     "tex_lines": [
       [
@@ -272,7 +272,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean",
       "line": 66
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -282,7 +282,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_5_4_exact_norm",
-    "actual": "LiLiuGoldbach16.proposition_5_4_exact_norm",
+    "actual": "ConditionalGoldbach.proposition_5_4_exact_norm",
     "label": "Proposition 5.4 / proposition_5_4_exact_norm",
     "tex_lines": [
       [
@@ -303,7 +303,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyReproducing.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyReproducing.lean",
       "line": 138
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -313,7 +313,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_5_4_kernel_pairing",
-    "actual": "LiLiuGoldbach16.proposition_5_4_kernel_pairing",
+    "actual": "ConditionalGoldbach.proposition_5_4_kernel_pairing",
     "label": "Proposition 5.4 / proposition_5_4_kernel_pairing",
     "tex_lines": [
       [
@@ -334,7 +334,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean",
       "line": 47
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -344,7 +344,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_5_4_fixed_contour",
-    "actual": "LiLiuGoldbach16.proposition_5_4_fixed_contour",
+    "actual": "ConditionalGoldbach.proposition_5_4_fixed_contour",
     "label": "Proposition 5.4 / proposition_5_4_fixed_contour",
     "tex_lines": [
       [
@@ -365,7 +365,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "file": "ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean",
       "line": 79
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -375,7 +375,7 @@
   },
   {
     "expected": "TexAudit57.Expected_6_1_product",
-    "actual": "LiLiuGoldbach16.proposition_6_1",
+    "actual": "ConditionalGoldbach.proposition_6_1",
     "label": "Proposition 6.1",
     "tex_lines": [
       [
@@ -396,7 +396,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionDeterminant.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionDeterminant.lean",
       "line": 46
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -406,7 +406,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_1_enumeration",
-    "actual": "LiLiuGoldbach16.proposition_6_1_enumeration",
+    "actual": "ConditionalGoldbach.proposition_6_1_enumeration",
     "label": "Proposition 6.1 / proposition_6_1_enumeration",
     "tex_lines": [
       [
@@ -427,7 +427,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean",
       "line": 53
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -437,7 +437,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_1_complex_slice",
-    "actual": "LiLiuGoldbach16.proposition_6_1_complex_slice",
+    "actual": "ConditionalGoldbach.proposition_6_1_complex_slice",
     "label": "Proposition 6.1 / proposition_6_1_complex_slice",
     "tex_lines": [
       [
@@ -458,7 +458,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralConsequences.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralConsequences.lean",
       "line": 65
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -468,7 +468,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_1_positive_fredholm_spec",
-    "actual": "LiLiuGoldbach16.proposition_6_1_positive_fredholm_spec",
+    "actual": "ConditionalGoldbach.proposition_6_1_positive_fredholm_spec",
     "label": "Proposition 6.1 / proposition_6_1_positive_fredholm_spec",
     "tex_lines": [
       [
@@ -492,7 +492,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralPositiveFredholm.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralPositiveFredholm.lean",
       "line": 17
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -502,7 +502,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_1_square_determinant",
-    "actual": "LiLiuGoldbach16.proposition_6_1_square_determinant",
+    "actual": "ConditionalGoldbach.proposition_6_1_square_determinant",
     "label": "Proposition 6.1 / proposition_6_1_square_determinant",
     "tex_lines": [
       [
@@ -523,7 +523,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionDeterminant.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionDeterminant.lean",
       "line": 37
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -533,7 +533,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_1_all_slices",
-    "actual": "LiLiuGoldbach16.proposition_6_1_all_slices",
+    "actual": "ConditionalGoldbach.proposition_6_1_all_slices",
     "label": "Proposition 6.1 / proposition_6_1_all_slices",
     "tex_lines": [
       [
@@ -554,7 +554,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralConsequences.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralConsequences.lean",
       "line": 56
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -564,7 +564,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_1_spectral_choice_independent",
-    "actual": "LiLiuGoldbach16.proposition_6_1_spectral_choice_independent",
+    "actual": "ConditionalGoldbach.proposition_6_1_spectral_choice_independent",
     "label": "Proposition 6.1 / proposition_6_1_spectral_choice_independent",
     "tex_lines": [
       [
@@ -588,7 +588,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionChoice.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionChoice.lean",
       "line": 104
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -598,7 +598,7 @@
   },
   {
     "expected": "TexAudit57.Expected_6_2_symmetries",
-    "actual": "LiLiuGoldbach16.proposition_6_2",
+    "actual": "ConditionalGoldbach.proposition_6_2",
     "label": "Proposition 6.2",
     "tex_lines": [
       [
@@ -619,7 +619,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletion.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletion.lean",
       "line": 81
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -629,7 +629,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_2_centered_product",
-    "actual": "LiLiuGoldbach16.proposition_6_2_centered_product",
+    "actual": "ConditionalGoldbach.proposition_6_2_centered_product",
     "label": "Proposition 6.2 / proposition_6_2_centered_product",
     "tex_lines": [
       [
@@ -650,7 +650,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean",
       "line": 98
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -660,7 +660,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_2_critical_values",
-    "actual": "LiLiuGoldbach16.proposition_6_2_critical_values",
+    "actual": "ConditionalGoldbach.proposition_6_2_critical_values",
     "label": "Proposition 6.2 / proposition_6_2_critical_values",
     "tex_lines": [
       [
@@ -681,7 +681,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean",
       "line": 154
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -691,7 +691,7 @@
   },
   {
     "expected": "TexAudit57.Expected_6_3_zeros",
-    "actual": "LiLiuGoldbach16.proposition_6_3",
+    "actual": "ConditionalGoldbach.proposition_6_3",
     "label": "Proposition 6.3",
     "tex_lines": [
       [
@@ -712,7 +712,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralConsequences.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralConsequences.lean",
       "line": 33
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -722,7 +722,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_3_three_cases",
-    "actual": "LiLiuGoldbach16.proposition_6_3_three_cases",
+    "actual": "ConditionalGoldbach.proposition_6_3_three_cases",
     "label": "Proposition 6.3 / proposition_6_3_three_cases",
     "tex_lines": [
       [
@@ -743,7 +743,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionZeros.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionZeros.lean",
       "line": 91
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -753,7 +753,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_3_factor_central_order",
-    "actual": "LiLiuGoldbach16.proposition_6_3_factor_central_order",
+    "actual": "ConditionalGoldbach.proposition_6_3_factor_central_order",
     "label": "Proposition 6.3 / proposition_6_3_factor_central_order",
     "tex_lines": [
       [
@@ -774,7 +774,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralAlgebra.lean",
       "line": 126
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -784,7 +784,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_3_multiplicities",
-    "actual": "LiLiuGoldbach16.proposition_6_3_multiplicities",
+    "actual": "ConditionalGoldbach.proposition_6_3_multiplicities",
     "label": "Proposition 6.3 / proposition_6_3_multiplicities",
     "tex_lines": [
       [
@@ -805,7 +805,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralCompletionMultiplicities.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralCompletionMultiplicities.lean",
       "line": 86
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -815,7 +815,7 @@
   },
   {
     "expected": "TexAudit57.Expected_6_1_dictionary",
-    "actual": "LiLiuGoldbach16.theorem_6_1",
+    "actual": "ConditionalGoldbach.theorem_6_1",
     "label": "Theorem 6.1",
     "tex_lines": [
       [
@@ -836,7 +836,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/DictionaryApplication.lean",
+      "file": "ConditionalGoldbach/Proofs/DictionaryApplication.lean",
       "line": 34
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -846,7 +846,7 @@
   },
   {
     "expected": "TexAudit57.expect_theorem_6_1_abstract_dictionary",
-    "actual": "LiLiuGoldbach16.theorem_6_1_abstract_dictionary",
+    "actual": "ConditionalGoldbach.theorem_6_1_abstract_dictionary",
     "label": "Theorem 6.1 / theorem_6_1_abstract_dictionary",
     "tex_lines": [
       [
@@ -870,7 +870,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralDictionary.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralDictionary.lean",
       "line": 166
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -880,7 +880,7 @@
   },
   {
     "expected": "TexAudit57.expect_theorem_6_1_width_comparison",
-    "actual": "LiLiuGoldbach16.theorem_6_1_width_comparison",
+    "actual": "ConditionalGoldbach.theorem_6_1_width_comparison",
     "label": "Theorem 6.1 / theorem_6_1_width_comparison",
     "tex_lines": [
       [
@@ -901,7 +901,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralAlgebra.lean",
       "line": 24
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -911,7 +911,7 @@
   },
   {
     "expected": "TexAudit57.Expected_6_2_baseline",
-    "actual": "LiLiuGoldbach16.theorem_6_2",
+    "actual": "ConditionalGoldbach.theorem_6_2",
     "label": "Theorem 6.2",
     "tex_lines": [
       [
@@ -932,7 +932,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "file": "ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
       "line": 108
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -942,7 +942,7 @@
   },
   {
     "expected": "TexAudit57.Expected_6_4",
-    "actual": "LiLiuGoldbach16.lemma_6_4",
+    "actual": "ConditionalGoldbach.lemma_6_4",
     "label": "Lemma 6.4",
     "tex_lines": [
       [
@@ -971,7 +971,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/CharacterAverage.lean",
+      "file": "ConditionalGoldbach/Proofs/CharacterAverage.lean",
       "line": 82
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -981,7 +981,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_6_4_zero_poisson_convergence",
-    "actual": "LiLiuGoldbach16.lemma_6_4_zero_poisson_convergence",
+    "actual": "ConditionalGoldbach.lemma_6_4_zero_poisson_convergence",
     "label": "Lemma 6.4 / lemma_6_4_zero_poisson_convergence",
     "tex_lines": [
       [
@@ -1010,7 +1010,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/CharacterZeroSummability.lean",
+      "file": "ConditionalGoldbach/Proofs/CharacterZeroSummability.lean",
       "line": 122
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1020,7 +1020,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_6_4_perron_residue",
-    "actual": "LiLiuGoldbach16.lemma_6_4_perron_residue",
+    "actual": "ConditionalGoldbach.lemma_6_4_perron_residue",
     "label": "Lemma 6.4 / lemma_6_4_perron_residue",
     "tex_lines": [
       [
@@ -1049,7 +1049,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralPoisson.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralPoisson.lean",
       "line": 43
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1059,7 +1059,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_6_4_poisson_action_spec",
-    "actual": "LiLiuGoldbach16.lemma_6_4_poisson_action_spec",
+    "actual": "ConditionalGoldbach.lemma_6_4_poisson_action_spec",
     "label": "Lemma 6.4 / lemma_6_4_poisson_action_spec",
     "tex_lines": [
       [
@@ -1088,7 +1088,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralPoisson.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralPoisson.lean",
       "line": 29
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1098,7 +1098,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_6_4_poisson_convolution",
-    "actual": "LiLiuGoldbach16.lemma_6_4_poisson_convolution",
+    "actual": "ConditionalGoldbach.lemma_6_4_poisson_convolution",
     "label": "Lemma 6.4 / lemma_6_4_poisson_convolution",
     "tex_lines": [
       [
@@ -1127,7 +1127,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralPoissonConvolution.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralPoissonConvolution.lean",
       "line": 172
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1137,7 +1137,7 @@
   },
   {
     "expected": "TexAudit57.Expected_6_5",
-    "actual": "LiLiuGoldbach16.proposition_6_5",
+    "actual": "ConditionalGoldbach.proposition_6_5",
     "label": "Proposition 6.5",
     "tex_lines": [
       [
@@ -1158,7 +1158,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "file": "ConditionalGoldbach/Proofs/QuantitativeBounds.lean",
       "line": 23
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1168,7 +1168,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_5_components_spec",
-    "actual": "LiLiuGoldbach16.proposition_6_5_components_spec",
+    "actual": "ConditionalGoldbach.proposition_6_5_components_spec",
     "label": "Proposition 6.5 / proposition_6_5_components_spec",
     "tex_lines": [
       [
@@ -1189,7 +1189,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/ArithmeticComponentOperators.lean",
+      "file": "ConditionalGoldbach/Proofs/ArithmeticComponentOperators.lean",
       "line": 108
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1199,7 +1199,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_6_5_diagonal_vector_spec",
-    "actual": "LiLiuGoldbach16.proposition_6_5_diagonal_vector_spec",
+    "actual": "ConditionalGoldbach.proposition_6_5_diagonal_vector_spec",
     "label": "Proposition 6.5 / proposition_6_5_diagonal_vector_spec",
     "tex_lines": [
       [
@@ -1220,7 +1220,7 @@
     "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/SpectralDiagonalVector.lean",
+      "file": "ConditionalGoldbach/Proofs/SpectralDiagonalVector.lean",
       "line": 111
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1230,7 +1230,7 @@
   },
   {
     "expected": "TexAudit57.Expected_7_1_mellin",
-    "actual": "LiLiuGoldbach16.lemma_7_1",
+    "actual": "ConditionalGoldbach.lemma_7_1",
     "label": "Lemma 7.1",
     "tex_lines": [
       [
@@ -1243,7 +1243,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/MellinCharacterShift.lean",
+      "file": "ConditionalGoldbach/Proofs/MellinCharacterShift.lean",
       "line": 107
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1253,7 +1253,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_7_1_absolute_convergence",
-    "actual": "LiLiuGoldbach16.lemma_7_1_absolute_convergence",
+    "actual": "ConditionalGoldbach.lemma_7_1_absolute_convergence",
     "label": "Lemma 7.1 / lemma_7_1_absolute_convergence",
     "tex_lines": [
       [
@@ -1266,7 +1266,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/MellinCharacterShift.lean",
+      "file": "ConditionalGoldbach/Proofs/MellinCharacterShift.lean",
       "line": 153
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1276,7 +1276,7 @@
   },
   {
     "expected": "TexAudit57.Expected_7_2",
-    "actual": "LiLiuGoldbach16.lemma_7_2",
+    "actual": "ConditionalGoldbach.lemma_7_2",
     "label": "Lemma 7.2",
     "tex_lines": [
       [
@@ -1289,7 +1289,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/MellinModelDouble.lean",
+      "file": "ConditionalGoldbach/Proofs/MellinModelDouble.lean",
       "line": 66
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1299,7 +1299,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_7_2_absolute_convergence",
-    "actual": "LiLiuGoldbach16.lemma_7_2_absolute_convergence",
+    "actual": "ConditionalGoldbach.lemma_7_2_absolute_convergence",
     "label": "Lemma 7.2 / lemma_7_2_absolute_convergence",
     "tex_lines": [
       [
@@ -1312,7 +1312,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/MellinModelDouble.lean",
+      "file": "ConditionalGoldbach/Proofs/MellinModelDouble.lean",
       "line": 77
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1322,7 +1322,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_7_2_convolutions",
-    "actual": "LiLiuGoldbach16.lemma_7_2_convolutions",
+    "actual": "ConditionalGoldbach.lemma_7_2_convolutions",
     "label": "Lemma 7.2 / lemma_7_2_convolutions",
     "tex_lines": [
       [
@@ -1335,7 +1335,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/Weights.lean",
+      "file": "ConditionalGoldbach/Proofs/Weights.lean",
       "line": 115
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1345,7 +1345,7 @@
   },
   {
     "expected": "TexAudit57.Expected_7_3",
-    "actual": "LiLiuGoldbach16.proposition_7_3",
+    "actual": "ConditionalGoldbach.proposition_7_3",
     "label": "Proposition 7.3",
     "tex_lines": [
       [
@@ -1358,7 +1358,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/MellinResidual.lean",
+      "file": "ConditionalGoldbach/Proofs/MellinResidual.lean",
       "line": 89
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1368,7 +1368,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_7_3_absolute_convergence",
-    "actual": "LiLiuGoldbach16.proposition_7_3_absolute_convergence",
+    "actual": "ConditionalGoldbach.proposition_7_3_absolute_convergence",
     "label": "Proposition 7.3 / proposition_7_3_absolute_convergence",
     "tex_lines": [
       [
@@ -1381,7 +1381,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/MellinResidual.lean",
+      "file": "ConditionalGoldbach/Proofs/MellinResidual.lean",
       "line": 98
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1391,7 +1391,7 @@
   },
   {
     "expected": "TexAudit57.Expected_7_4",
-    "actual": "LiLiuGoldbach16.proposition_7_4",
+    "actual": "ConditionalGoldbach.proposition_7_4",
     "label": "Proposition 7.4",
     "tex_lines": [
       [
@@ -1404,7 +1404,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/QuadraticFunctional.lean",
+      "file": "ConditionalGoldbach/Proofs/QuadraticFunctional.lean",
       "line": 11
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1414,7 +1414,7 @@
   },
   {
     "expected": "TexAudit57.expect_proposition_7_4_norm_integrals",
-    "actual": "LiLiuGoldbach16.proposition_7_4_norm_integrals",
+    "actual": "ConditionalGoldbach.proposition_7_4_norm_integrals",
     "label": "Proposition 7.4 / proposition_7_4_norm_integrals",
     "tex_lines": [
       [
@@ -1427,7 +1427,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/Weights.lean",
+      "file": "ConditionalGoldbach/Proofs/Weights.lean",
       "line": 196
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1437,7 +1437,7 @@
   },
   {
     "expected": "TexAudit57.Expected_7_1_quadratic",
-    "actual": "LiLiuGoldbach16.theorem_7_1",
+    "actual": "ConditionalGoldbach.theorem_7_1",
     "label": "Theorem 7.1",
     "tex_lines": [
       [
@@ -1450,7 +1450,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/QuadraticIdentity.lean",
+      "file": "ConditionalGoldbach/Proofs/QuadraticIdentity.lean",
       "line": 120
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1460,7 +1460,7 @@
   },
   {
     "expected": "TexAudit57.expect_theorem_7_1_uniform",
-    "actual": "LiLiuGoldbach16.theorem_7_1_uniform",
+    "actual": "ConditionalGoldbach.theorem_7_1_uniform",
     "label": "Theorem 7.1 / theorem_7_1_uniform",
     "tex_lines": [
       [
@@ -1473,7 +1473,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/Main.lean",
+      "file": "ConditionalGoldbach/Proofs/Main.lean",
       "line": 16
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1483,7 +1483,7 @@
   },
   {
     "expected": "TexAudit57.Expected_7_5",
-    "actual": "LiLiuGoldbach16.lemma_7_5",
+    "actual": "ConditionalGoldbach.lemma_7_5",
     "label": "Lemma 7.5",
     "tex_lines": [
       [
@@ -1496,7 +1496,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/QuadraticEstimates.lean",
+      "file": "ConditionalGoldbach/Proofs/QuadraticEstimates.lean",
       "line": 37
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1506,7 +1506,7 @@
   },
   {
     "expected": "TexAudit57.expect_lemma_7_5_asymptotic",
-    "actual": "LiLiuGoldbach16.lemma_7_5_asymptotic",
+    "actual": "ConditionalGoldbach.lemma_7_5_asymptotic",
     "label": "Lemma 7.5 / lemma_7_5_asymptotic",
     "tex_lines": [
       [
@@ -1519,7 +1519,7 @@
     "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
     "quantifier_review": "∀φ,∀ε>0,∃B>0,∀N,η满足假设；B只可依φ,ε，不能依N,η。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Proofs/QuadraticEstimates.lean",
+      "file": "ConditionalGoldbach/Proofs/QuadraticEstimates.lean",
       "line": 74
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1529,7 +1529,7 @@
   },
   {
     "expected": "TexAudit57.expect_interiorLine_memLp",
-    "actual": "LiLiuGoldbach16.interiorLine_memLp",
+    "actual": "ConditionalGoldbach.interiorLine_memLp",
     "label": "Lemma 5.2 / interiorLine_memLp",
     "tex_lines": [
       [
@@ -1546,7 +1546,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Definitions.lean",
+      "file": "ConditionalGoldbach/Definitions.lean",
       "line": 12
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",
@@ -1556,7 +1556,7 @@
   },
   {
     "expected": "TexAudit57.expect_boundaryTraces_exist",
-    "actual": "LiLiuGoldbach16.boundaryTraces_exist",
+    "actual": "ConditionalGoldbach.boundaryTraces_exist",
     "label": "Lemma 5.2 / boundaryTraces_exist",
     "tex_lines": [
       [
@@ -1573,7 +1573,7 @@
     "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
     "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
     "actual_source": {
-      "file": "LiLiuGoldbach/Definitions.lean",
+      "file": "ConditionalGoldbach/Definitions.lean",
       "line": 28
     },
     "semantic_assessment": "consistent_after_stated_representation_bridges",

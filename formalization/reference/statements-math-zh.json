@@ -111,7 +111,7 @@
   },
   "Proposition 6.5": {
     "title": "命题 6.5 · 三个算子分量的迹与范数界",
-    "summary": "假设 \\(N\\) 为偶数、\\(N>e^{10}\\)、\\(\\mathrm{GRH}(N)\\)，固定 \\(\\alpha_N=1/\\log N\\)。\\(\\mathcal P_N,\\mathcal D_N\\) 为正迹类，\\(\\mathcal K_N\\) 为 Hilbert–Schmidt。存在独立于 \\(N\\) 的绝对常数 \\(C>0\\)，三个估计分别为：\n\\[\\|\\mathcal P_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal P_N\\le C\\bigl((\\log N)^2+\\alpha_N^{-2}\\bigr),\\]\n\\[\\|\\mathcal D_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal D_N\\le C\\alpha_N^{-2},\\]\n\\[\\|\\mathcal K_N\\|_{\\mathrm{HS}}\\le C\\alpha_N^{-2}.\\]\n右栏用局部名字 `P`、`D`、`K` 对应这三个算子。",
+    "summary": "假设 \\(N\\) 为偶数、\\(N>e^{10}\\)、\\(\\mathrm{GRH}(N)\\)，固定 \\(\\alpha_N=1/\\log N\\)。\\(\\mathcal P_N,\\mathcal D_N\\) 为正迹类，\\(\\mathcal K_N\\) 为 Hilbert–Schmidt。存在独立于 \\(N,\\alpha_N\\) 的绝对常数 \\(C>0\\)，三个估计分别为：\n\\[\\|\\mathcal P_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal P_N\\le C\\bigl((\\log N)^2+\\alpha_N^{-2}\\bigr),\\]\n\\[\\|\\mathcal D_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal D_N\\le C\\alpha_N^{-2},\\]\n\\[\\|\\mathcal K_N\\|_{\\mathrm{HS}}\\le C\\alpha_N^{-2}.\\]\n右栏用局部名字 `P`、`D`、`K` 对应这三个算子。",
     "review": "第三条模型算子估计独立显示，不再压缩成文字。配套陈述可展开查看：三个积分核的实现、边界积分可积性、\\(T_N=\\mathcal P_N-\\mathcal D_N-\\mathcal K_N\\)，以及 \\(d_n\\) 的 Hardy 实现。选择定义的零值回退不能代替存在性；相关证明仍为空。"
   },
   "Lemma 7.1": {
@@ -151,7 +151,7 @@
   },
   "Proposition A.2": {
     "title": "命题 A.2 · 固定 c 的谱条件与渐近式",
-    "summary": "固定合法权 \\(\\phi\\) 和 \\(c>0\\)。对偶数 \\(N\\ge4\\)、\\(N>e^{10c}\\) 且满足 \\(\\mathrm{GRH}(N)\\)，谱条件 \\(\\mathsf R\\) 与 \\(\\|T\\|\\le\\delta\\) 等价，无零宽度 \\(\\eta\\) 与 \\(\\|T\\|\\le\\delta/[2\\sqrt{\\eta(1-\\eta)}]\\) 等价；代入 \\(\\eta_N(h)\\) 后，后者为\n\\[\\|T\\|\\le\\frac{\\mathfrak S(N)}{2h(N)\\sqrt{1-\\eta_N(h)}}.\\]\n存在 \\(C,c_0>0\\)，给出固定 \\(c\\) 下的 GRH 基线 \\(\\|T\\|\\le C(\\log N)^2\\) 及宽度 \\(c_0\\mathfrak S(N)/(N\\log N)\\)。在 `HypothesisSAt(c,h)` 或 `HypothesisRAt(c)` 下，对每个充分大且满足 GRH 的偶数分别得到误差上界 \\(C\\mathfrak S(N)/h(N)\\) 或 \\(C\\delta_N\\)。一般无零等价要求 \\(0<\\eta<1/2\\)；代入 \\(h\\) 时要求 \\(h(N)>0\\) 及 \\(0<\\eta_N(h)\\le1/4\\)。\n量词为“\\(\\mathsf S_c(h)\\Rightarrow\\forall\\) 充分大偶数 \\(N\\)，\\(\\mathrm{GRH}(N)\\Rightarrow\\) 误差界”，不要求全部充分大偶数事先满足 GRH。常数在 \\(h\\) 之前选定。",
+    "summary": "固定合法权 \\(\\phi\\) 和 \\(c>0\\)。对满足 \\(\\mathrm{GRH}(N)\\) 的偶数 \\(N\\ge4\\)、\\(N>e^{10c}\\)，逐点谱条件 \\(\\mathrm R(N,c)\\) 与 \\(\\|T\\|\\le\\delta\\) 等价。对 \\(0<\\eta<1/2\\)，谱函数在开半空间 \\(\\Re q>1-\\eta\\) 无零与 \\(\\|T\\|\\le\\delta/[2\\sqrt{\\eta(1-\\eta)}]\\) 等价。在 \\(h(N)>0\\)、\\(0<\\eta_N(h)\\le1/4\\) 时，代入 \\(\\eta_N(h)\\) 得到下列界。GRH基线 \\(\\|T\\|\\le C(\\log N)^2\\) 与宽度 \\(c_0\\mathfrak S(N)/(N\\log N)\\) 的常数仅依赖 \\(c\\)。算术误差常数仅依赖 \\(\\phi,c\\)，并在选择 \\(h\\) 之前给出。在 `HypothesisSAt(c,h)` 或 `HypothesisRAt(c)` 下，每个充分大且满足GRH的偶数分别得到误差界 \\(C\\mathfrak S(N)/h(N)\\) 或 \\(C\\delta_N\\)。S估计的阈值可依赖 \\(h\\) 的增长和可容许性。\n\\[\\|T\\|\\le\\frac{\\mathfrak S(N)}{2h(N)\\sqrt{1-\\eta_N(h)}}.\\]",
     "review": "修正旧版额外要求“所有充分大偶数均满足 GRH”的量词弱化。现为逐个 N 的 GRH 条件，并新增逐点误差声明；\\(c\\) 仍先于 N 固定，未增加 \\(c\\)-一致性。"
   },
   "Lemma A.3": {
@@ -189,22 +189,22 @@
     "summary": "假设 \\(\\operatorname{GRH}(30030)\\)。由两条边界上各 \\(1281\\) 个节点及梯形权构成的复矩阵具有所选择的实特征值列表和酉对角化。\n有限行列式谱函数等于\n\\[\\prod_j\\left(1-\\frac{4\\lambda_j^2q(1-q)}{\\delta^2}\\right),\\]\n满足 \\(q\\mapsto1-q\\) 对称性。若该矩阵的算子范数不超过 \\(\\delta\\)，则它的全部复零点满足 \\(\\Re q=1/2\\)。",
     "review": "保留 \\(\\mathrm{GRH}(30030)\\)：原文第 57 页明确把 Hardy 解释和有限谱图景置于这一总假设下。有限矩阵定理不包含到无限维算子 \\(T_N\\) 的误差证书，亦不把数值特征值近似当成已证明范数界。"
   },
-  "LiLiuGoldbach16.singularSeries_eq_existing": {
+  "ConditionalGoldbach.singularSeries_eq_existing": {
     "title": "辅助接口 · 与已有奇异级数的归一化对应",
     "summary": "对每个自然数 \\(N\\)，本文的 `singularSeries(N)` 等于现有项目 `MathlibNt.SieveTheory.SingularSeries.liuSingularSeries(N)` 的两倍。",
     "review": "这是直接复用定义的归一化接口，证明仍按用户要求留空。检查原文 \\(\\mathfrak S(N)\\) 的前导因子 \\(2\\)；不要使用名称相近的有限截断奇异级数。"
   },
-  "LiLiuGoldbach16.interiorLine_memLp": {
+  "ConditionalGoldbach.interiorLine_memLp": {
     "title": "辅助接口 · Hardy 内部竖线的 \\(L^2\\) 归属",
     "summary": "对任意 \\(a<b\\)、\\(a<x<b\\) 和加权 \\(L^2\\) 元素 \\(\\psi\\)，函数\n\\[t\\longmapsto\\operatorname{FourierLaplace}(\\psi)(x+it)\\]\n属于实线 Lebesgue 测度下的 \\(L^2\\)。该陈述用于将内部竖线函数装入 Lean 的 `Lp` 类型。",
     "review": "这是定义 `interiorLine` 所需的分析证明义务；不是附加给用户的任意假设。需要检查 Fourier–Laplace 积分的存在性与加权范数对内部竖线的控制。"
   },
-  "LiLiuGoldbach16.boundaryTraces_exist": {
+  "ConditionalGoldbach.boundaryTraces_exist": {
     "title": "辅助接口 · 两侧 \\(L^2\\) 边界迹存在",
     "summary": "对任意 \\(a<b\\) 和 Hardy 模型中的 \\(\\psi\\)，存在一对实线 \\(L^2\\) 元素，分别是内部竖线函数在 \\(x\\) 从带内趋向 \\(a,b\\) 时的 \\(L^2\\) 极限。",
     "review": "边界迹通过这个待证存在性声明作选择。检查两次趋近均从带内进行，滤子是在开区间 \\((a,b)\\) 的子类型上拉回，且极限拓扑为 \\(L^2\\) 范数拓扑。"
   },
-  "LiLiuGoldbach16.primePair_consequence": {
+  "ConditionalGoldbach.primePair_consequence": {
     "title": "辅助推论 · 中央区间内的素数对下界",
     "summary": "给定合法权 \\(\\phi\\)，假设所有充分大的偶数 \\(N\\) 满足 \\(\\operatorname{GRH}(N)\\)，并且 `HypothesisR` 成立，或存在 \\(h\\) 使 `HypothesisS(h)` 成立。则存在 \\(C>0\\)，使所有充分大的偶数 \\(N\\) 满足\n\\[\\#\\left\\{p\\in\\mathbb N:\\frac N3\\le p\\le\\frac{2N}3,\\ \\operatorname{Prime}(p)\\land\\operatorname{Prime}(N-p)\\right\\}\\ge C\\frac{\\mathfrak S(N)N}{(\\log N)^2}.\\]",
     "review": "这里 `PrimePairCount` 按 \\(p\\) 计数，是有序中央素数对计数，不是附录 B 的无序对数。需要从 Mangoldt 加权和剔除高次素数幂；现有另一项目相关结果只是后续可移植依赖。"

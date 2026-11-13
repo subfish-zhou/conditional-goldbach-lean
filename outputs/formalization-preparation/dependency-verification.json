@@ -25,5 +25,11 @@
   ],
   "limitations": [
     "Structural and editorial verification; not a mathematical proof or machine-checked equivalence of paper and Lean."
-  ]
+  ],
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

@@ -5,8 +5,13 @@
   "checks": [
     {
       "declaration": "lemma_3_1_odd_orthogonality",
-      "source_lines": [373, 382],
-      "source_labels": ["gb:orthogonality"],
+      "source_lines": [
+        373,
+        382
+      ],
+      "source_labels": [
+        "gb:orthogonality"
+      ],
       "result": "matched",
       "checks": [
         "All odd characters, including imprimitive ones, are summed; no GRH or weight condition has been introduced.",
@@ -17,8 +22,13 @@
     },
     {
       "declaration": "lemma_6_4_perron_residue",
-      "source_lines": [2721, 2738],
-      "source_labels": ["proof:grh:smoothed-truncation"],
+      "source_lines": [
+        2721,
+        2738
+      ],
+      "source_labels": [
+        "proof:grh:smoothed-truncation"
+      ],
       "result": "matched",
       "checks": [
         "Source kernel is (X^v-x^v)/(v^2 log x) with x=sqrt X; the implemented kernel has exactly those factors.",
@@ -28,8 +38,14 @@
       ]
     },
     {
-      "declarations": ["poissonAction", "lemma_6_4_poisson_action_spec"],
-      "source_lines": [2915, 2923],
+      "declarations": [
+        "poissonAction",
+        "lemma_6_4_poisson_action_spec"
+      ],
+      "source_lines": [
+        2915,
+        2923
+      ],
       "result": "matched",
       "checks": [
         "TeX explicitly interprets ell=0 as the identity; poissonAction 0 f=f implements this for every f.",
@@ -40,7 +56,10 @@
     },
     {
       "declaration": "lemma_6_4_poisson_convolution",
-      "source_lines": [2924, 2929],
+      "source_lines": [
+        2924,
+        2929
+      ],
       "result": "matched",
       "checks": [
         "The orientation realConvolution(f,g)(t)=integral f(u)g(t-u) agrees with the source P1*Pell calculation.",
@@ -51,8 +70,14 @@
     },
     {
       "declaration": "proposition_A_1_operator_spec",
-      "source_lines": [3949, 3967],
-      "source_labels": ["proof:app:param:strip", "proof:v9:variable-boundary-realization"],
+      "source_lines": [
+        3949,
+        3967
+      ],
+      "source_labels": [
+        "proof:app:param:strip",
+        "proof:v9:variable-boundary-realization"
+      ],
       "result": "matched",
       "checks": [
         "Fixed c>0, even N>=4, N>exp(10c), and GRH(N) are precisely the source hypotheses.",
@@ -73,5 +98,11 @@
     }
   ],
   "mandatory_fixes": [],
-  "source_files_modified": false
+  "source_files_modified": false,
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

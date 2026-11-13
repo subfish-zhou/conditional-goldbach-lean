@@ -7,17 +7,17 @@ pat=re.compile(r'^(?:(?:private|protected)\s+)*(def|abbrev|structure|theorem|lem
 for p in library_sources():
  for declaration in source_declarations(p):
   name=declaration['name']
-  short=name.removeprefix('LiLiuGoldbach16.')
+  short=name.removeprefix('ConditionalGoldbach.')
   owners[name]={'source_kind':declaration['source_kind'],'file':str(p.relative_to(ROOT)),
     'line':declaration['line'],'original':short in base}
 raw=ROOT/'proof-status-raw.json';dump=ROOT/'scripts/Audit.lean'
-lean=r'''import LiLiuGoldbach
+lean=r'''import ConditionalGoldbach
 open Lean Elab Command in
 run_cmd do
   let env ← getEnv
   let mut rows : Array Json := #[]
   for (name, info) in env.constants.toList do
-    if "LiLiuGoldbach16.".isPrefixOf name.toString then
+    if "ConditionalGoldbach.".isPrefixOf name.toString then
       let axioms ← Lean.collectAxioms name
       let refs := match info.value? (allowOpaque := true) with
         | some value => value.getUsedConstants.map (fun n => toJson n.toString)
@@ -57,12 +57,12 @@ def pending_deps(name):
   seen.add(n)
   if n in stub_names:found.add(n)
   if n in by:
-   todo.extend(x for x in by[n]['type_constants']+by[n]['value_constants'] if x.startswith('LiLiuGoldbach16.'))
+   todo.extend(x for x in by[n]['type_constants']+by[n]['value_constants'] if x.startswith('ConditionalGoldbach.'))
  return sorted(found)
 for r in out:r['pending_local_dependencies']=pending_deps(r['name'])
 original=[r for r in out if r['original'] and r['source_kind'] in ['theorem','lemma']]
 assert len(original)==102,len(original)
 allth=[r for r in out if r['source_kind'] in ['theorem','lemma']]
 counts=lambda rs:{k:sum(r['status']==k for r in rs) for k in ['kernel_closed','proof_written_dependencies_pending','pending_direct_sorry']}
-result={'scope':'All original 102 theorem declarations plus public implementation helpers; transitive axioms collected by Lean.collectAxioms, including axioms in object definitions.','original_theorem_counts':counts(original),'all_public_theorem_counts':counts(allth),'original_definitions':171,'original_theorems':102,'standard_axioms':['propext','Classical.choice','Quot.sound'],'unusual_axioms':sorted({a for r in out for a in r['axioms'] if a not in ['propext','Classical.choice','Quot.sound','sorryAx']}),'declarations':out,'source_files':[{'file':str(p.relative_to(ROOT)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in library_sources()],'main_results':{n:next(r for r in out if r['name']=='LiLiuGoldbach16.'+n)['status'] for n in ['theorem_1_1','theorem_1_2']}}
+result={'scope':'All original 102 theorem declarations plus public implementation helpers; transitive axioms collected by Lean.collectAxioms, including axioms in object definitions.','original_theorem_counts':counts(original),'all_public_theorem_counts':counts(allth),'original_definitions':171,'original_theorems':102,'standard_axioms':['propext','Classical.choice','Quot.sound'],'unusual_axioms':sorted({a for r in out for a in r['axioms'] if a not in ['propext','Classical.choice','Quot.sound','sorryAx']}),'declarations':out,'source_files':[{'file':str(p.relative_to(ROOT)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in library_sources()],'main_results':{n:next(r for r in out if r['name']=='ConditionalGoldbach.'+n)['status'] for n in ['theorem_1_1','theorem_1_2']}}
 (ROOT/'proof-status.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps({k:v for k,v in result.items() if k!='declarations' and k!='source_files'},ensure_ascii=False,indent=2))

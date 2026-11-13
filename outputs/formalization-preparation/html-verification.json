@@ -36,5 +36,11 @@
   "definition_declarations": 171,
   "supplementary_statements": 60,
   "dependency_review_entry": true,
-  "abstract_dictionary_under_theorem_6_1_collapsible": true
+  "abstract_dictionary_under_theorem_6_1_collapsible": true,
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

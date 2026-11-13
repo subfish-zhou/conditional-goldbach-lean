@@ -5,7 +5,7 @@
   "reviewed_files": {
     "outputs/formalization-preparation/dependency-graph.json": "4a476bd73dadfa5146f42bcc517c6f1354d046b80155ee57b1337e9b4afad0ae",
     "outputs/formalization-preparation/dependency-audit.md": "ba25a99fac49661b324c264add85ff1e5466a27a1d5e475c6eb2327f1594ffe5",
-    "outputs/formalization-preparation/LiLiuGoldbach16.tex": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125"
+    "outputs/formalization-preparation/conditional-goldbach.tex": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125"
   },
   "current_graph_counts": {
     "paper_nodes": 146,
@@ -155,5 +155,11 @@
   "unresolved_required_corrections": [],
   "proof_boundary": "All102 theorem bodies remain by sorry. This targeted review is not a mathematical proof, full equivalence proof, or Lean proof-DAG certificate.",
   "source_files_modified": false,
-  "lean_recompiled": false
+  "lean_recompiled": false,
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

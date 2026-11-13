@@ -65,7 +65,7 @@ conds={
 '6':'算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。',
 '7':'φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。'}
 rows=[]
-all_sources=list((root/'LiLiuGoldbach').rglob('*.lean'))
+all_sources=list((root/'ConditionalGoldbach').rglob('*.lean'))
 for c in comparisons:
  n=c['actual'].split('.')[-1];tex,formula,note=notes[n]
  locs=[]
@@ -124,7 +124,7 @@ for item in inv['definitions']:
  if str(item.get('section','')).split('.')[0] not in ['5','6','7']:continue
  name=item['label'];tex,formula,note,bridges=defnotes[name]
  actual=item.get('actual_lean_declarations') or ['InnerProductSpace.rankOne']
- if name=='rankOneOperator': actual=['InnerProductSpace.rankOne','LiLiuGoldbach16.proposition_6_5_diagonal_vector_spec']
+ if name=='rankOneOperator': actual=['InnerProductSpace.rankOne','ConditionalGoldbach.proposition_6_5_diagonal_vector_spec']
  defrows.append(dict(label=name,section=item['section'],tex_lines_directly_reviewed=tex,formula=formula,actual_declarations=actual,semantic_assessment='consistent_on_paper_domain_with_noted_bridges',semantic_note=note,independent_reference_or_bridge=bridges,tex_to_reference_check='human semantic transcription, not machine-certified'))
 assert len(defrows)==32
 (D/'definition-matrix.json').write_text(json.dumps(defrows,ensure_ascii=False,indent=2)+'\n')

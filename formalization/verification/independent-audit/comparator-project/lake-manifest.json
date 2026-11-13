@@ -5,7 +5,7 @@
     {
       "type": "path",
       "scope": "",
-      "name": "liLiuGoldbach",
+      "name": "conditionalGoldbach",
       "manifestFile": "lake-manifest.json",
       "inherited": false,
       "dir": "../../..",

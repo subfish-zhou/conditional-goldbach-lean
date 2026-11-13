@@ -35,6 +35,11 @@
       "physical_lines": 29705,
       "nonblank_noncomment_lines": 18097
     },
+    "conditionalGoldbach": {
+      "modules": 254,
+      "physical_lines": 29629,
+      "nonblank_noncomment_lines": 27005
+    },
     "goldbach": {
       "modules": 57,
       "physical_lines": 22284,
@@ -44,11 +49,6 @@
       "modules": 35,
       "physical_lines": 5410,
       "nonblank_noncomment_lines": 2838
-    },
-    "liLiuGoldbach": {
-      "modules": 254,
-      "physical_lines": 29629,
-      "nonblank_noncomment_lines": 27005
     },
     "mathlib": {
       "modules": 8625,
@@ -68,225 +68,225 @@
   },
   "direct_external_imports": [
     {
-      "from_module": "LiLiuGoldbach.BaseDefinitions",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+      "from_module": "ConditionalGoldbach.BaseDefinitions",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
       "line": 1,
       "to_module": "Mathlib",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.BaseDefinitions",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+      "from_module": "ConditionalGoldbach.BaseDefinitions",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/BaseDefinitions.lean",
       "line": 2,
       "to_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries",
       "to_package": "goldbach"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterGrowthFoundation.lean",
+      "from_module": "ConditionalGoldbach.Proofs.CharacterGrowthFoundation",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean",
       "line": 2,
       "to_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries",
       "to_package": "goldbach"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterGrowthFoundation.lean",
+      "from_module": "ConditionalGoldbach.Proofs.CharacterGrowthFoundation",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean",
       "line": 3,
       "to_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds",
       "to_package": "goldbach"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.CharacterZeroCounting",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroCounting.lean",
+      "from_module": "ConditionalGoldbach.Proofs.CharacterZeroCounting",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterZeroCounting.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.Complex.JensenFormula",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.CharacterZeroCounting",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroCounting.lean",
+      "from_module": "ConditionalGoldbach.Proofs.CharacterZeroCounting",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterZeroCounting.lean",
       "line": 4,
       "to_module": "Mathlib.Data.Set.Card.Arithmetic",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.CutoffSmooth",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CutoffSmooth.lean",
+      "from_module": "ConditionalGoldbach.Proofs.CutoffSmooth",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CutoffSmooth.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.Calculus.Deriv.Slope",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.FiniteExperimentSpectrum",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean",
+      "from_module": "ConditionalGoldbach.Proofs.FiniteExperimentSpectrum",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteExperimentSpectrum.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.Matrix.Spectrum",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.GammaResolventBounds",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/GammaResolventBounds.lean",
+      "from_module": "ConditionalGoldbach.Proofs.GammaResolventBounds",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/GammaResolventBounds.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.PSeries",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.GammaSequenceBounds",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/GammaSequenceBounds.lean",
+      "from_module": "ConditionalGoldbach.Proofs.GammaSequenceBounds",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/GammaSequenceBounds.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.GammaSequenceBounds",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/GammaSequenceBounds.lean",
+      "from_module": "ConditionalGoldbach.Proofs.GammaSequenceBounds",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/GammaSequenceBounds.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.SpecialFunctions.Gamma.Beta",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.HadamardFactors",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HadamardFactors.lean",
+      "from_module": "ConditionalGoldbach.Proofs.HadamardFactors",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HadamardFactors.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.Meromorphic.FactorizedRational",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.HalfPlaneWeightedCauchy",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HalfPlaneWeightedCauchy.lean",
+      "from_module": "ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HalfPlaneWeightedCauchy.lean",
       "line": 4,
       "to_module": "Mathlib.Analysis.Complex.RemovableSingularity",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.HardyKernelMajorant",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HardyKernelMajorant.lean",
+      "from_module": "ConditionalGoldbach.Proofs.HardyKernelMajorant",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelMajorant.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.SpecialFunctions.JapaneseBracket",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.HardyKernelOperator",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HardyKernelOperator.lean",
+      "from_module": "ConditionalGoldbach.Proofs.HardyKernelOperator",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelOperator.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.InnerProductSpace.Adjoint",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.HardyKernelOperator",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HardyKernelOperator.lean",
+      "from_module": "ConditionalGoldbach.Proofs.HardyKernelOperator",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelOperator.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.Normed.Operator.Compact.Basic",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.HardyWeakLimit",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HardyWeakLimit.lean",
+      "from_module": "ConditionalGoldbach.Proofs.HardyWeakLimit",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyWeakLimit.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.Normed.Module.WeakDual",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.MellinModelRemovable",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinModelRemovable.lean",
+      "from_module": "ConditionalGoldbach.Proofs.MellinModelRemovable",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinModelRemovable.lean",
       "line": 3,
       "to_module": "Mathlib.NumberTheory.Harmonic.ZetaAsymp",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.PoleDiagonalComparison",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleDiagonalComparison.lean",
+      "from_module": "ConditionalGoldbach.Proofs.PoleDiagonalComparison",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PoleDiagonalComparison.lean",
       "line": 2,
       "to_module": "Mathlib.NumberTheory.LSeries.Dirichlet",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.PoleModel",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleModel.lean",
+      "from_module": "ConditionalGoldbach.Proofs.PoleModel",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PoleModel.lean",
       "line": 2,
       "to_module": "Mathlib.NumberTheory.Harmonic.ZetaAsymp",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.PoleZeta",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleZeta.lean",
+      "from_module": "ConditionalGoldbach.Proofs.PoleZeta",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PoleZeta.lean",
       "line": 3,
       "to_module": "Mathlib.NumberTheory.Harmonic.ZetaAsymp",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.PrimePowerReindex",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PrimePowerReindex.lean",
+      "from_module": "ConditionalGoldbach.Proofs.PrimePowerReindex",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PrimePowerReindex.lean",
       "line": 2,
       "to_module": "Mathlib.Data.Nat.Prime.Int",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.SpectralCompletedLGrowth",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralCompletedLGrowth.lean",
+      "from_module": "ConditionalGoldbach.Proofs.SpectralCompletedLGrowth",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralCompletedLGrowth.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.SpectralDiagonalBound",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralDiagonalBound.lean",
+      "from_module": "ConditionalGoldbach.Proofs.SpectralDiagonalBound",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDiagonalBound.lean",
       "line": 3,
       "to_module": "Mathlib.NumberTheory.Chebyshev",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.SpectralDiagonalBound",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralDiagonalBound.lean",
+      "from_module": "ConditionalGoldbach.Proofs.SpectralDiagonalBound",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDiagonalBound.lean",
       "line": 4,
       "to_module": "Mathlib.NumberTheory.LSeries.SumCoeff",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.SpectralHardyRankSeries",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralHardyRankSeries.lean",
+      "from_module": "ConditionalGoldbach.Proofs.SpectralHardyRankSeries",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralHardyRankSeries.lean",
       "line": 3,
       "to_module": "Mathlib.MeasureTheory.Function.LpSpace.InfiniteSum",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.SpectralL2BasisExistence",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralL2BasisExistence.lean",
+      "from_module": "ConditionalGoldbach.Proofs.SpectralL2BasisExistence",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralL2BasisExistence.lean",
       "line": 2,
       "to_module": "Mathlib.MeasureTheory.Measure.SeparableMeasure",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.SpectralPoissonConvolution",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralPoissonConvolution.lean",
+      "from_module": "ConditionalGoldbach.Proofs.SpectralPoissonConvolution",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPoissonConvolution.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.Fourier.Convolution",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.SpectralPoissonConvolution",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralPoissonConvolution.lean",
+      "from_module": "ConditionalGoldbach.Proofs.SpectralPoissonConvolution",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPoissonConvolution.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.Fourier.Inversion",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.TotientLogLog",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/TotientLogLog.lean",
+      "from_module": "ConditionalGoldbach.Proofs.TotientLogLog",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/TotientLogLog.lean",
       "line": 2,
       "to_module": "MathlibNt.SieveTheory.Arithmetic.MertensTheorem",
       "to_package": "goldbach"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.WideWeight",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideWeight.lean",
+      "from_module": "ConditionalGoldbach.Proofs.WideWeight",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideWeight.lean",
       "line": 2,
       "to_module": "Mathlib.Analysis.SpecialFunctions.Sqrt",
       "to_package": "mathlib"
     },
     {
-      "from_module": "LiLiuGoldbach.Proofs.WideWeight",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideWeight.lean",
+      "from_module": "ConditionalGoldbach.Proofs.WideWeight",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideWeight.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
       "to_package": "mathlib"

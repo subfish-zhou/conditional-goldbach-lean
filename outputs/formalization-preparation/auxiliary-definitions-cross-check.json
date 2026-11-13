@@ -298,5 +298,11 @@
     "No theorem proofs were filled or validated. Existing sorry-based validity conclusions remain review obligations.",
     "RealizationValid is conditional on GRH by design; no unconditional existence of a GRH instance is claimed.",
     "BoundaryKernelSquareIntegral and localDensityFactor are not advertised as faithful outside their explicitly noted endpoint/prime/parity domains."
-  ]
+  ],
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

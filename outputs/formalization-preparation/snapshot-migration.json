@@ -1,0 +1,8 @@
+{
+  "reviewed_snapshot_sha256": "7fb43da75b14d806d7a7d1cc92437ac9a1a35819d6d0ac4497d7217935dfca24",
+  "reviewed_baseline": "../../formalization/reference/Reviewed.lean",
+  "identical_to_current_reviewed_baseline": true,
+  "original_tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
+  "naming_migration": "../../formalization/verification/naming-migration.json",
+  "current_type_checks": "../../formalization/reviewed-types.json"
+}

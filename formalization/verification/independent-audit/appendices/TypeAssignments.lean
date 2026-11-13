@@ -1,4 +1,4 @@
-import LiLiuGoldbach
+import ConditionalGoldbach
 
 /-!
 Independent statement reference for Li--Liu, Appendices A and B.
@@ -10,7 +10,7 @@ No previous Reviewed.lean file is used by this file or its construction.
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex LiLiuGoldbach16
+open MeasureTheory Filter Set Complex ConditionalGoldbach
 namespace TexAuditAB
 attribute [local instance] Classical.propDecidable
 
@@ -303,61 +303,61 @@ end TexAuditAB
 -- BEGIN GENERATED DEFINITION BRIDGES
 
 namespace TexAuditAB
-theorem bridge_boundaryParameter : @TexAuditAB.boundaryParameter = @LiLiuGoldbach16.alpha := rfl
-theorem bridge_eventualR : @TexAuditAB.eventualR = @LiLiuGoldbach16.HypothesisRAt := rfl
-theorem bridge_eventualS : @TexAuditAB.eventualS = @LiLiuGoldbach16.HypothesisSAt := rfl
-theorem bridge_poleOrder : @TexAuditAB.poleOrder = @LiLiuGoldbach16.zeroMultiplicity := rfl
-theorem bridge_poleMass : @TexAuditAB.poleMass = @LiLiuGoldbach16.poleCoefficient := rfl
-theorem bridge_regularEulerFactor : @TexAuditAB.regularEulerFactor = @LiLiuGoldbach16.baselineProductR := rfl
-theorem bridge_operatorMajorant : @TexAuditAB.operatorMajorant = @LiLiuGoldbach16.baselineBound := rfl
-theorem bridge_boundaryCost : @TexAuditAB.boundaryCost = @LiLiuGoldbach16.balanceFactor := rfl
-theorem bridge_numericalN : @TexAuditAB.numericalN = @LiLiuGoldbach16.experimentN := rfl
-theorem bridge_P : @TexAuditAB.P = @LiLiuGoldbach16.cutoffPolynomial := rfl
-theorem bridge_eta : @TexAuditAB.eta = @LiLiuGoldbach16.wideCutoff := rfl
-theorem bridge_W : @TexAuditAB.W = @LiLiuGoldbach16.wideCompanion := rfl
-theorem bridge_f : @TexAuditAB.f = @LiLiuGoldbach16.wideWeight := rfl
-theorem bridge_J : @TexAuditAB.J = @LiLiuGoldbach16.wideCorrelation := rfl
-theorem bridge_primePairCount : @TexAuditAB.primePairCount = @LiLiuGoldbach16.unorderedPrimePairs := rfl
-theorem bridge_edge : @TexAuditAB.edge = @LiLiuGoldbach16.edgeCorrection := rfl
-theorem bridge_properPowers : @TexAuditAB.properPowers = @LiLiuGoldbach16.primePowerCorrection := rfl
-theorem bridge_coefficient : @TexAuditAB.coefficient = @LiLiuGoldbach16.countingCoefficient := rfl
-theorem bridge_integralI : @TexAuditAB.integralI = @LiLiuGoldbach16.countingIntegral := rfl
-theorem bridge_diagonalD : @TexAuditAB.diagonalD = @LiLiuGoldbach16.diagonalCountingMoment := rfl
-theorem bridge_signedJhat : @TexAuditAB.signedJhat = @LiLiuGoldbach16.approxSignedMoment := rfl
-theorem bridge_diagonalDhat : @TexAuditAB.diagonalDhat = @LiLiuGoldbach16.approxDiagonalMoment := rfl
-theorem bridge_crossMass : @TexAuditAB.crossMass = @LiLiuGoldbach16.wideModelMass := rfl
-theorem bridge_mainIntegral : @TexAuditAB.mainIntegral = @LiLiuGoldbach16.wideMainIntegral := rfl
-theorem bridge_residualB : @TexAuditAB.residualB = @LiLiuGoldbach16.wideResidual := rfl
-theorem bridge_momentError : @TexAuditAB.momentError = @LiLiuGoldbach16.HasMomentError := rfl
-theorem bridge_countCentre : @TexAuditAB.countCentre = @LiLiuGoldbach16.approxPrimeCount := rfl
-theorem bridge_countRadius : @TexAuditAB.countRadius = @LiLiuGoldbach16.countError := rfl
-theorem bridge_ellW : @TexAuditAB.ellW = @LiLiuGoldbach16.wideFunctional := rfl
-theorem bridge_vectorW : @TexAuditAB.vectorW = @LiLiuGoldbach16.wideRieszVector := rfl
-theorem bridge_node : @TexAuditAB.node = @LiLiuGoldbach16.spectralNode := rfl
-theorem bridge_nodeWeight : @TexAuditAB.nodeWeight = @LiLiuGoldbach16.trapezoidWeight := rfl
-theorem bridge_matrixC : @TexAuditAB.matrixC = @LiLiuGoldbach16.finiteSpectralMatrix := rfl
-theorem bridge_finiteX : @TexAuditAB.finiteX = @LiLiuGoldbach16.finiteSpectralFunction := rfl
-theorem bridge_finiteSpectrum : @TexAuditAB.finiteSpectrum = @LiLiuGoldbach16.IsFiniteSpectrum := rfl
-theorem bridge_eigenvalueList : @TexAuditAB.eigenvalueList = @LiLiuGoldbach16.finiteEigenvalues := rfl
-theorem bridge_matrixNorm : @TexAuditAB.matrixNorm = @LiLiuGoldbach16.finiteMatrixOpNorm := rfl
+theorem bridge_boundaryParameter : @TexAuditAB.boundaryParameter = @ConditionalGoldbach.alpha := rfl
+theorem bridge_eventualR : @TexAuditAB.eventualR = @ConditionalGoldbach.HypothesisRAt := rfl
+theorem bridge_eventualS : @TexAuditAB.eventualS = @ConditionalGoldbach.HypothesisSAt := rfl
+theorem bridge_poleOrder : @TexAuditAB.poleOrder = @ConditionalGoldbach.zeroMultiplicity := rfl
+theorem bridge_poleMass : @TexAuditAB.poleMass = @ConditionalGoldbach.poleCoefficient := rfl
+theorem bridge_regularEulerFactor : @TexAuditAB.regularEulerFactor = @ConditionalGoldbach.baselineProductR := rfl
+theorem bridge_operatorMajorant : @TexAuditAB.operatorMajorant = @ConditionalGoldbach.baselineBound := rfl
+theorem bridge_boundaryCost : @TexAuditAB.boundaryCost = @ConditionalGoldbach.balanceFactor := rfl
+theorem bridge_numericalN : @TexAuditAB.numericalN = @ConditionalGoldbach.experimentN := rfl
+theorem bridge_P : @TexAuditAB.P = @ConditionalGoldbach.cutoffPolynomial := rfl
+theorem bridge_eta : @TexAuditAB.eta = @ConditionalGoldbach.wideCutoff := rfl
+theorem bridge_W : @TexAuditAB.W = @ConditionalGoldbach.wideCompanion := rfl
+theorem bridge_f : @TexAuditAB.f = @ConditionalGoldbach.wideWeight := rfl
+theorem bridge_J : @TexAuditAB.J = @ConditionalGoldbach.wideCorrelation := rfl
+theorem bridge_primePairCount : @TexAuditAB.primePairCount = @ConditionalGoldbach.unorderedPrimePairs := rfl
+theorem bridge_edge : @TexAuditAB.edge = @ConditionalGoldbach.edgeCorrection := rfl
+theorem bridge_properPowers : @TexAuditAB.properPowers = @ConditionalGoldbach.primePowerCorrection := rfl
+theorem bridge_coefficient : @TexAuditAB.coefficient = @ConditionalGoldbach.countingCoefficient := rfl
+theorem bridge_integralI : @TexAuditAB.integralI = @ConditionalGoldbach.countingIntegral := rfl
+theorem bridge_diagonalD : @TexAuditAB.diagonalD = @ConditionalGoldbach.diagonalCountingMoment := rfl
+theorem bridge_signedJhat : @TexAuditAB.signedJhat = @ConditionalGoldbach.approxSignedMoment := rfl
+theorem bridge_diagonalDhat : @TexAuditAB.diagonalDhat = @ConditionalGoldbach.approxDiagonalMoment := rfl
+theorem bridge_crossMass : @TexAuditAB.crossMass = @ConditionalGoldbach.wideModelMass := rfl
+theorem bridge_mainIntegral : @TexAuditAB.mainIntegral = @ConditionalGoldbach.wideMainIntegral := rfl
+theorem bridge_residualB : @TexAuditAB.residualB = @ConditionalGoldbach.wideResidual := rfl
+theorem bridge_momentError : @TexAuditAB.momentError = @ConditionalGoldbach.HasMomentError := rfl
+theorem bridge_countCentre : @TexAuditAB.countCentre = @ConditionalGoldbach.approxPrimeCount := rfl
+theorem bridge_countRadius : @TexAuditAB.countRadius = @ConditionalGoldbach.countError := rfl
+theorem bridge_ellW : @TexAuditAB.ellW = @ConditionalGoldbach.wideFunctional := rfl
+theorem bridge_vectorW : @TexAuditAB.vectorW = @ConditionalGoldbach.wideRieszVector := rfl
+theorem bridge_node : @TexAuditAB.node = @ConditionalGoldbach.spectralNode := rfl
+theorem bridge_nodeWeight : @TexAuditAB.nodeWeight = @ConditionalGoldbach.trapezoidWeight := rfl
+theorem bridge_matrixC : @TexAuditAB.matrixC = @ConditionalGoldbach.finiteSpectralMatrix := rfl
+theorem bridge_finiteX : @TexAuditAB.finiteX = @ConditionalGoldbach.finiteSpectralFunction := rfl
+theorem bridge_finiteSpectrum : @TexAuditAB.finiteSpectrum = @ConditionalGoldbach.IsFiniteSpectrum := rfl
+theorem bridge_eigenvalueList : @TexAuditAB.eigenvalueList = @ConditionalGoldbach.finiteEigenvalues := rfl
+theorem bridge_matrixNorm : @TexAuditAB.matrixNorm = @ConditionalGoldbach.finiteMatrixOpNorm := rfl
 end TexAuditAB
 
 -- Full type assignment smoke checks; root also uses the external comparator.
-example : TexAuditAB.A1 := @LiLiuGoldbach16.proposition_A_1
-example : TexAuditAB.A1_operator := @LiLiuGoldbach16.proposition_A_1_operator_spec
-example : TexAuditAB.A2 := @LiLiuGoldbach16.proposition_A_2
-example : TexAuditAB.A2_pointwise := @LiLiuGoldbach16.proposition_A_2_pointwise
-example : TexAuditAB.A2_uniform := @LiLiuGoldbach16.variable_uniform_spectral_bound
-example : TexAuditAB.A3 := @LiLiuGoldbach16.lemma_A_3
-example : TexAuditAB.A3_absolute := @LiLiuGoldbach16.lemma_A_3_absolute_operator_bound
-example : TexAuditAB.A3_balance := @LiLiuGoldbach16.lemma_A_3_balance
-example : TexAuditAB.A3_widths := @LiLiuGoldbach16.lemma_A_3_width_ratio
-example : TexAuditAB.A4 := @LiLiuGoldbach16.proposition_A_4
-example : TexAuditAB.A4_regular := @LiLiuGoldbach16.proposition_A_4_baseline_product
-example : TexAuditAB.B1 := @LiLiuGoldbach16.proposition_B_1
-example : TexAuditAB.B2 := @LiLiuGoldbach16.lemma_B_2
-example : TexAuditAB.B3 := @LiLiuGoldbach16.lemma_B_3
-example : TexAuditAB.B3_main := @LiLiuGoldbach16.lemma_B_3_main_integral
-example : TexAuditAB.B4 := @LiLiuGoldbach16.proposition_B_4
-example : TexAuditAB.B4_weight := @LiLiuGoldbach16.proposition_B_4_weight
-example : TexAuditAB.B5 := @LiLiuGoldbach16.proposition_B_5
+example : TexAuditAB.A1 := @ConditionalGoldbach.proposition_A_1
+example : TexAuditAB.A1_operator := @ConditionalGoldbach.proposition_A_1_operator_spec
+example : TexAuditAB.A2 := @ConditionalGoldbach.proposition_A_2
+example : TexAuditAB.A2_pointwise := @ConditionalGoldbach.proposition_A_2_pointwise
+example : TexAuditAB.A2_uniform := @ConditionalGoldbach.variable_uniform_spectral_bound
+example : TexAuditAB.A3 := @ConditionalGoldbach.lemma_A_3
+example : TexAuditAB.A3_absolute := @ConditionalGoldbach.lemma_A_3_absolute_operator_bound
+example : TexAuditAB.A3_balance := @ConditionalGoldbach.lemma_A_3_balance
+example : TexAuditAB.A3_widths := @ConditionalGoldbach.lemma_A_3_width_ratio
+example : TexAuditAB.A4 := @ConditionalGoldbach.proposition_A_4
+example : TexAuditAB.A4_regular := @ConditionalGoldbach.proposition_A_4_baseline_product
+example : TexAuditAB.B1 := @ConditionalGoldbach.proposition_B_1
+example : TexAuditAB.B2 := @ConditionalGoldbach.lemma_B_2
+example : TexAuditAB.B3 := @ConditionalGoldbach.lemma_B_3
+example : TexAuditAB.B3_main := @ConditionalGoldbach.lemma_B_3_main_integral
+example : TexAuditAB.B4 := @ConditionalGoldbach.proposition_B_4
+example : TexAuditAB.B4_weight := @ConditionalGoldbach.proposition_B_4_weight
+example : TexAuditAB.B5 := @ConditionalGoldbach.proposition_B_5

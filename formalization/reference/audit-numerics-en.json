@@ -1,0 +1,46 @@
+{
+  "B-number-01": {
+    "claim": "75 edge prime pairs and 26 unordered proper-prime-power pairs; E = 44.35776816334822525… and Cpp/2 = 10.16758713116445818…",
+    "scope": "The exact symbolic identity is proved in B.1. These numerical values remain uncertified."
+  },
+  "B-number-02": {
+    "claim": "h = 0.1, T = 1600, 2^20 FFT grid, 24 Euler–Maclaurin terms, height reset 32; Jhat ≈ 0.05799599193959489 and Dhat ≈ 0.29331844084848136",
+    "scope": "The 5760 approximate character integrals, numerical integration implementation, and rational certificates connecting these outputs to integralI remain to be formalized."
+  },
+  "B-number-03": {
+    "claim": "Hardy–Littlewood prediction ≈ 908.1405628685 and wide-weight A ≈ 851.831147718741; 65-digit integration and accelerated C2 parameters",
+    "scope": "wideMainIntegral has an exact definition. The displayed approximations and the numerical Hardy–Littlewood integral remain uncertified."
+  },
+  "B-number-04": {
+    "claim": "A − Cpp/2 + E ≈ 886.021328750925",
+    "scope": "The symbolic correction identity is proved; this decimal value remains uncertified."
+  },
+  "B-number-05": {
+    "claim": "−N Bhat/2 ≈ 18.978671254276 and rhat ≈ 905.0000000052",
+    "scope": "B.3 accepts arbitrary approximate character integrals. A specific input array and this numerical center remain to be certified."
+  },
+  "B-number-06": {
+    "claim": "3280 nonzero coefficients a_n; rational finite-transform enclosures give RMS integral error < 1.68935 × 10^−5",
+    "scope": "This concrete error bound is an outstanding input to B.3. HasMomentError defines the condition, and lemma_B_3 assumes it."
+  },
+  "B-number-07": {
+    "claim": "Count error ≈ 0.274758682716; outward-rounded interval [904.725241, 905.274759] contains only the integer 905",
+    "scope": "The general integer-enclosure theorem is proved. Propagating the actual numerical integration error into this particular interval remains to be certified."
+  },
+  "B-number-08": {
+    "claim": "Exactly 905 unordered prime pairs and 1810 ordered pairs; direct rational summation and independent prime enumeration",
+    "scope": "The audit supplement certifies the unordered count 905 by Lean-kernel enumeration. The integral-error route to 905, rational correction values, and remaining numerical displays are still outstanding."
+  },
+  "B-number-09": {
+    "claim": "α at N = 30030 ≈ 0.09699366",
+    "scope": "The exact parameter and placement of 1/9 inside the strip are proved. The decimal display remains uncertified."
+  },
+  "B-number-10": {
+    "claim": "Numerical L′/L and Euler products with prime cutoff 2 × 10^5; extreme eigenvalues ≈ −0.353421 and 0.357462; norm ratio ≈ 0.826864 < 1; δ ≈ 0.432310239587548",
+    "scope": "B.5 proves the critical-line conclusion assuming the exact matrix norm is at most δ. A certified numerical matrix approximation and norm bound remain outstanding."
+  },
+  "B-number-11": {
+    "claim": "Doubling the cutoff from 10^5 changes the extreme eigenvalues by < 3 × 10^−8; displayed zeros and figures use the full computed spectrum",
+    "scope": "The figures and cutoff-stability calculations remain numerical evidence for the finite model. A bound for the infinite operator is outside this numerical certification."
+  }
+}

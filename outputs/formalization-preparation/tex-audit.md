@@ -1,30 +1,26 @@
-已用用户提供的原始 TeX 重新核对 **38 个命名条目、121 个核心定义族**，包括各节全局假设、量词、常数依赖、公式及对象的有效域。源码另清点出 3 个假设环境和 233 个标签；每项的准确 TeX 行段、标签与 Lean 对照见 [逐项台账](/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/tex-audit.json)。
+# Original TeX review: revision 8 snapshot
 
-未发现正文数学版本发生变动。此次发现包括中文符号混用、直接依赖接口未单列，以及变量边界算子的表示义务缺口，不能统一称为原定理陈述错误。
+The type checks and source hashes recorded here belong to the **pre-rename review snapshot**. Current theorem-type checks are in [reviewed-types.json](../../formalization/reviewed-types.json); [naming-migration.json](../../formalization/verification/naming-migration.json) records the original Git blobs and before/after hashes. [snapshot-migration.json](snapshot-migration.json) records the current snapshot's byte-for-byte match to the Reviewed reference and the unchanged TeX hash.
 
-| 本轮分类 | 命名条目 | 定义族 |
+[Detailed Chinese record](tex-audit.zh.md) · [Item-by-item ledger](tex-audit.json)
+
+The review checked **38 named results and 121 core definition families** against the original TeX, including section assumptions, quantifiers, constant dependencies, formulas, and valid domains. The source index contains 3 hypothesis environments and 233 labels.
+
+| Review classification | Named results | Definition families |
 |---|---:|---:|
-| 原陈述/定义匹配 | 32 | 109 |
-| 中文展示修正 | 3 | 7 |
-| 证明依赖接口补充 | 2 | 3 |
-| 对象表示义务补齐 | 1 | 2 |
+| Statement or definition matched | 32 | 109 |
+| Display notation corrected | 3 | 7 |
+| Supporting proof interface added | 2 | 3 |
+| Object representation obligation added | 1 | 2 |
 
-这些数字是受影响条目的分类，同一问题可能影响多个条目，不是独立错误数量。
+These counts classify affected entries; one issue can affect several entries.
 
-本轮修正与补充：
+The principal additions were Appendix A.1's variable-boundary representation and spectral-existence obligations, the general odd-character projection, the Perron residue, and the Poisson action's zero-parameter identity and positive-parameter normalization and convolution. Display corrections distinguished `V` from `Ψ`, restored `η/W/f`, and used the original coefficient `C_{N,γ}`.
 
-- **A.1 的对象表示义务。** 补变量边界参数 c 下的核表示、边界 L²、作用积分可积性和谱数据非空，均放在原条件下作为结论，不添加额外假设。
-- **7.4 的中文符号。** 范数积分中应是实权 V(u)=Φ(u)−uΦ′(u)，不应写 Ψ(u)；Ψ_N(s) 是另一个复积分因子。Lean 公式原已正确。
-- **B.1 与 A.4 的符号对应。** 恢复截断 η、伴随权 W、宽权 f，以及重数平方平均 C_{N,γ}。这些属于中文展示修正。
-- **Perron／Poisson 边界。** 单列 Perron 核在零点的去心留数，区分 Poisson 零参数的恒等作用和正参数的积分核，并补归一化、卷积义务。
-- **奇特征正交式。** 把原文 gb:orthogonality 单列为有限投影的直接依赖；3.1 主结论此前已匹配。
+The five encoding choices documented in [semantic-audit.md](semantic-audit.md) concern joint meromorphy, Hardy realization, countable Hilbert bases, positive trace-class Fredholm determinants, and quaternionic slices.
 
-此前五类数学编码选择继续待审：共同整分母表示联合亚纯性、加权 L² 实现 Hardy 空间、可数基的 HS 与谱接口、专用正迹类 Fredholm 行列式、四元数切片及重数的共同复函数编码。原始 TeX 让目标陈述可直接核对，但不自动证明这些编码等价。
+At this revision the merged snapshot had **101 theorem statements and 171 definition declarations**. The type check succeeded with placeholder proofs; revision 9 subsequently added the abstract spectral dictionary, bringing the theorem count to 102. The [independent interface check](tex-cross-check.json) and [verification record](verification.json) preserve the evidence.
 
-合并稿含 **101 个定理声明、171 个定义声明**，定理证明全部保持 `by sorry`。新增接口已做[独立复核](/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/tex-cross-check.json)，未发现必须修复项。整份类型检查通过，证据见 [verification.json](/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/verification.json)。
+The TeX attachment omitted `X30030-heatmap.pdf` and `X30030-zeros.pdf`. A local typeset copy used figure placeholders for numbering and had 62 pages; the supplied PDF had 63. PDF page references use the supplied PDF. An auxiliary long-token sequence comparison reported approximately 99.87% agreement, with differences due to mathematical glyphs, layout, and extraction order.
 
-两张附录图 `X30030-heatmap.pdf`、`X30030-zeros.pdf` 没有随 TeX 提供。本地使用占位图编译，仅用于解析编号，排成 62 页；原用户 PDF 为 63 页，原文页码与图像仍以该 PDF 为准。辅助长词序列比对约 99.87% 匹配，差异来自数学字形、排版和提取顺序；该统计不是等价性证明。
-
-121 项是核心定义族，不代表全文每个局部符号都建立了全局 Lean 名称。证明内局部绑定、边界 L² 扩张、后续轮廓与能量估计的范围说明，以及第 8 节的解释性例子，均保留在 JSON 台账中。
-
-原始 TeX SHA-256：`0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125`。文件内容作为数学资料处理，不作为执行指令。
+The original TeX SHA-256 was `0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125`. The ledger records local notation and the scope of later contour and energy estimates separately from the 121 core definition families.

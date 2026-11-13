@@ -8,7 +8,11 @@
   "checks": [
     {
       "target": "Proposition 6.5 and proposition_6_5_components_spec",
-      "source_pages": [31, 40, 41],
+      "source_pages": [
+        31,
+        40,
+        41
+      ],
       "status": "matched",
       "findings": [
         "All three distinct estimates remain: HS(P)≤tr(P)≤C(log²N+α_N⁻²); HS(D)≤tr(D)≤Cα_N⁻²; HS(K)≤Cα_N⁻². Positivity and trace class of P,D, and HS validity of K remain conclusions.",
@@ -19,7 +23,10 @@
     },
     {
       "target": "positiveFredholmDet, proposition_6_1_positive_fredholm_spec, proposition_6_1_square_determinant",
-      "source_pages": [32, 33],
+      "source_pages": [
+        32,
+        33
+      ],
       "status": "matched_on_declared_domain",
       "findings": [
         "The determinant now uses the spectrum of A=T² itself. Spectral existence, nonnegative summable eigenvalues and product convergence follow as conclusions of the positive-trace-class support statement.",
@@ -30,7 +37,9 @@
     },
     {
       "target": "diagonalHardyVector and proposition_6_5_diagonal_vector_spec",
-      "source_pages": [41],
+      "source_pages": [
+        41
+      ],
       "status": "matched",
       "findings": [
         "The source's d_n(s)=n^(−s)/(1+s) requires positive n. The support theorem's n≥1 is exactly that domain, including n=1.",
@@ -41,7 +50,11 @@
     },
     {
       "target": "Proposition A.2, proposition_A_2_pointwise and lemma_A_3_absolute_operator_bound",
-      "source_pages": [53, 54, 55],
+      "source_pages": [
+        53,
+        54,
+        55
+      ],
       "status": "matched",
       "findings": [
         "Fixed c>0 is quantified before the asymptotic N. The local equivalences retain even N≥4, N>exp(10c), GRH(N), the open half-space, 0<η<1/2 and η≤1/4 in the h-parametrized specialization.",
@@ -53,7 +66,27 @@
     },
     {
       "target": "Remaining new support clauses in §§5–7 and appendices",
-      "source_pages": [25, 26, 27, 29, 30, 33, 34, 35, 36, 39, 44, 45, 48, 49, 53, 55, 56, 60, 61],
+      "source_pages": [
+        25,
+        26,
+        27,
+        29,
+        30,
+        33,
+        34,
+        35,
+        36,
+        39,
+        44,
+        45,
+        48,
+        49,
+        53,
+        55,
+        56,
+        60,
+        61
+      ],
       "status": "no_new_domain_restriction_found",
       "findings": [
         "The additions for strip representation uniqueness, joint boundary L² validity, integrability, HS basis independence, all complex slices and all real roots add conclusions; they do not make the original theorem depend on those conclusions as hypotheses.",
@@ -64,7 +97,11 @@
     },
     {
       "target": "lemma_4_2_meromorphic common entire denominator",
-      "source_pages": [20, 21, 22],
+      "source_pages": [
+        20,
+        21,
+        22
+      ],
       "status": "faithful_meromorphic_germ_encoding_with_explicit_future_proof_obligation",
       "findings": [
         "The statement already requires B≠0 for B : ℂ×ℂ→ℂ. This means B is not the identically zero function, not that it is nowhere zero. Equivalently there must exist a point p with B(p)≠0. No extra all-points nonvanishing requirement should be added, since that would rule out genuine poles.",
@@ -75,5 +112,11 @@
       ]
     }
   ],
-  "validation_limit": "This is an independent mathematical source/statement review, not a proof of any new theorem. No additional compilation was necessary because no Lean file was changed."
+  "validation_limit": "This is an independent mathematical source/statement review, not a proof of any new theorem. No additional compilation was necessary because no Lean file was changed.",
+  "record_provenance": {
+    "stage": "Historical statement-review snapshot",
+    "recorded_revision": "8e2f641b8625cf58ae53ab5a836d30193b9c1c30",
+    "source_identifiers": "Updated for navigation; recorded verification hashes refer to the pre-migration Git revision.",
+    "naming_migration": "../../formalization/verification/naming-migration.json"
+  }
 }

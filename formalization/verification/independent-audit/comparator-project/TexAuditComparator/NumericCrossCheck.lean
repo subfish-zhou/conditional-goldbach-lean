@@ -1,4 +1,4 @@
-import LiLiuGoldbach
+import ConditionalGoldbach
 
 /-!
 Independent finite enumeration check for the Appendix B count.
@@ -36,12 +36,12 @@ def computedPairs : Finset ℕ := (Finset.range 30031).filter
 theorem computedPairs_card : computedPairs.card = 905 := by
   decide +kernel
 
-theorem unorderedPrimePairs_eq_905 : LiLiuGoldbach16.unorderedPrimePairs = 905 := by
-  have heq : LiLiuGoldbach16.unorderedPrimePairs = computedPairs.card := by
-    unfold LiLiuGoldbach16.unorderedPrimePairs computedPairs
+theorem unorderedPrimePairs_eq_905 : ConditionalGoldbach.unorderedPrimePairs = 905 := by
+  have heq : ConditionalGoldbach.unorderedPrimePairs = computedPairs.card := by
+    unfold ConditionalGoldbach.unorderedPrimePairs computedPairs
     apply congrArg Finset.card
     ext p
-    simp only [Finset.mem_filter, Finset.mem_range, LiLiuGoldbach16.experimentN,
+    simp only [Finset.mem_filter, Finset.mem_range, ConditionalGoldbach.experimentN,
       trialPrime_iff]
     tauto
   exact heq.trans computedPairs_card

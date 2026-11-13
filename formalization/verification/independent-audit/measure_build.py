@@ -12,7 +12,7 @@ if mode == 'project-clean':
         raise SystemExit('Refusing to label a cached build as clean. Preserve/move the previous benchmark-project directory before repeating this measurement.')
     sys.path.insert(0,str(project/'scripts'))
     from project_sources import library_sources
-    for source in library_sources()+[project/'LiLiuGoldbach.lean',project/'lakefile.toml',project/'lake-manifest.json',project/'lean-toolchain']:
+    for source in library_sources()+[project/'ConditionalGoldbach.lean',project/'lakefile.toml',project/'lake-manifest.json',project/'lean-toolchain']:
         target=cwd/source.relative_to(project)
         target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copy2(source,target)
@@ -23,7 +23,7 @@ env = os.environ.copy()
 if mode == 'project-clean':
     # Limit Lake's runtime worker pool on the shared 8-CPU, 32-GiB host.
     env['LEAN_NUM_THREADS'] = '2'
-lock = open('/tmp/liliu-build.lock', 'a')
+lock = open('/tmp/conditional-goldbach-build.lock', 'a')
 queued = time.perf_counter()
 fcntl.flock(lock, fcntl.LOCK_EX)
 queue_seconds = time.perf_counter() - queued

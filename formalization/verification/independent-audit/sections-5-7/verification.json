@@ -1,37 +1,17 @@
 {
-  "scope": {
-    "named_statements": 17,
-    "review_supplements": 35,
-    "construction_obligations": 2,
-    "total_statement_references": 54,
-    "definition_families": 32,
-    "definition_body_comparisons": 26
-  },
+  "scope": "sections-5-7",
+  "frozen_reference_base": "..",
+  "independent_full_types": 54,
+  "definition_body_comparisons": 26,
   "source_tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
-  "reference_compile_exit_code": 0,
-  "bridges_compile_exit_code": 0,
-  "comparator_status": "delegated_to_root_not_claimed_here",
-  "semantic_findings": {
-    "substantive_statement_weakening_detected": false,
-    "modeling_issues_requiring_explicit_bridges": [
-      "HardySpace frequency representation",
-      "choice operator default branch",
-      "zero-padded full eigenbasis",
-      "Re-only positivity plus Hermitian",
-      "sumConvolution positive-halfline versus interval"
-    ],
-    "locator_metadata_difference": [
-      "rankOneOperator is Mathlib InnerProductSpace.rankOne, not a new project declaration"
-    ]
-  },
-  "artifact_sha256": {
-    "Reference.lean": "f27a70fc9cc68944a1e2099722f397104340d7d14c2fab4dd2e7a55117da5010",
-    "Bridges.lean": "83f5767c4792345de381ea532b78f13687be1505c62886aec5d5bd3a89e00b39",
-    "comparison.json": "0211652d49dcf31aff73ab52754161d60991b9372aeac3daa2caff57904126bb",
-    "definitions-comparison.json": "e8531ccfa87cf80e10ceca59db56305a22adf701e73e19e113cd3244312e7d59",
-    "semantic-matrix.md": "1a21154df77de7e555218a990c96e37662c7fef03e011e1b831144ea000b0668",
-    "statement-matrix.json": "89b4746f219b6e2cab4d30526b4ad20803a3be60f17e87f0423df9e66e49940e",
-    "definition-matrix.json": "77d49c7bac63be101cf90a2b2d7baa28041d43597386714b244ba74f5dbb699e",
-    "report.md": "21ab2beabc438d2f54f69b216a02e10f9a08378e0a76e176156161384bddcb29"
+  "comparator_record": "../comparator-result.json",
+  "comparator_sha256": "049997b276e1071b33d1f516bec6abd2a420975237b49006465182e20ae15c32",
+  "current_comparator_accepted": true,
+  "all_independent_full_types_equal": true,
+  "frozen_reference_files": {
+    "sections-5-7/Reference.lean": "210b9633bdc142579d132577f7ea5d22d56de4d32d13a0dbfef8ba8301983cb9",
+    "sections-5-7/comparison.json": "43a590967c57d395e5ca58570836afdd2324e265bfca4bfdadb03ed328082916",
+    "sections-5-7/definitions-comparison.json": "fa29d8e5f8c16a80b62926eb2f53d2050d1c65ffd762ecc7828ecaa2ca6bec9a",
+    "sections-5-7/Bridges.lean": "5cbd2f0066343dfa2b9d21460521aa98078b2afcf8d0d62c77d9cdb9dc6e2fce"
   }
 }
