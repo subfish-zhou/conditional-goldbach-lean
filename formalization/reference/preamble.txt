@@ -1,0 +1,7 @@
+set_option autoImplicit false
+noncomputable section
+open scoped BigOperators ComplexConjugate Topology ContDiff
+open MeasureTheory Filter Set Complex
+namespace LiLiuGoldbach16
+attribute [local instance] Classical.propDecidable
+attribute [local instance] conductorNeZero

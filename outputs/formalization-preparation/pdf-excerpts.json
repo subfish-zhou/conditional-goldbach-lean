@@ -1,0 +1,594 @@
+{
+  "source_pdf_sha256": "998f35a787a2f568113fac12caf5a9a799f537e83a5e649be25f3a76ac81bc58",
+  "display": "Images are embedded as data URLs in review.html; no external image files are required.",
+  "verification": {
+    "source_pdf": "/home/azureuser/.codex/attachments/b084ec14-3014-4e90-bdad-233ea2be434c/LiLiuGoldbach16.pdf",
+    "source_tex_available": false,
+    "dpi": 150,
+    "statement_count": 38,
+    "full_page_count": 36,
+    "image_count": 76,
+    "image_bytes": 3782230,
+    "cropped_count": 31,
+    "full_page_fallback_count": 7,
+    "manifest": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/statement-excerpts/manifest.json",
+    "boundary_word_crossings": [],
+    "missing_images": 0,
+    "pdf_page_numbering_checked": true,
+    "manual_visual_checks": [
+      "Proposition 6.5 all three formula rows and final uniformity sentence",
+      "Proposition 5.4 both pages 30 and 31, including formulas (5.6)–(5.9)",
+      "Proposition 6.2 continuation on page 34, including (6.5), (6.6) and final sentences"
+    ],
+    "previous_prop6_5_png_preserved": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/statement-excerpts/proposition-6-5-original.png"
+  },
+  "statements": [
+    {
+      "label": "Theorem 1.1",
+      "pages": [
+        4
+      ],
+      "mode": "full_page",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "page-04.webp",
+          "sha256": "7748f0de77106c2e270ae61cf3b2d0cbf3e31b0910cbeb43fb7392615dd5e8bd"
+        }
+      ]
+    },
+    {
+      "label": "Theorem 1.2",
+      "pages": [
+        5
+      ],
+      "mode": "full_page",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "page-05.webp",
+          "sha256": "46c6f764e08530a6863e086e3fc4e15f8ab0c5a74c5f9ea0ab518be5b0131f70"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 3.1",
+      "pages": [
+        15
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-3-1-p15.webp",
+          "sha256": "1255da7a1f0a8d9f1e8b92e15564a25d422838a500b4c0d508d80243e3acdcab"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 3.2",
+      "pages": [
+        16,
+        17
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-3-2-p16.webp",
+          "sha256": "f569ba0f3d18e413a7c7e8d2fd591648ff73f102a2cc5a2ef40ecc4bb1cb52e5"
+        },
+        {
+          "file": "proposition-3-2-p17.webp",
+          "sha256": "ea9fffdac08c351aab4e884d895cb426c126a692efaf5a4eef905b0159630ae0"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 3.3",
+      "pages": [
+        17,
+        18
+      ],
+      "mode": "full_page",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "page-17.webp",
+          "sha256": "91a3d8774db645ed854e3cc78f2679de09023d60e7a3138e7d0d5456ec92343c"
+        },
+        {
+          "file": "page-18.webp",
+          "sha256": "2036f7cb46ad729dfb6d062071f8bcbddc2890595ca5ae189390f97c2fa5d4d7"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 3.4",
+      "pages": [
+        18
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-3-4-p18.webp",
+          "sha256": "65135588401178ee4774451d2fcda4880ad21385716cbe5e75647152940c1f25"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 3.5",
+      "pages": [
+        19
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-3-5-p19.webp",
+          "sha256": "c2aeac7b92a4e665ecd5575be90198493779b3f23674cb07988bcb7cef433e06"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 4.1",
+      "pages": [
+        21
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-4-1-p21.webp",
+          "sha256": "629816ea1399ddb5df29b9c7f7953deb643ab1708bed1d4dabef46ab138808a0"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 4.2",
+      "pages": [
+        21
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-4-2-p21.webp",
+          "sha256": "2f8ebfd966747bf5da29f522e2483bc8578d7191b1938575cbd69abdfd54c344"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 4.3",
+      "pages": [
+        22,
+        23
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-4-3-p22.webp",
+          "sha256": "695a4f5d1d7371d2a5fcdd3305063e77825af14b276dc79861d526a8d190c4d3"
+        },
+        {
+          "file": "lemma-4-3-p23.webp",
+          "sha256": "327c8004d88e54b813907462b8d70656303cb39f562c59ce8f10223d7e4dd1ab"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 4.4",
+      "pages": [
+        24
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-4-4-p24.webp",
+          "sha256": "34a5824b755314eafc76b6f437cdd124ad7de4aca046a907874cca9b8bc4a197"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 4.5",
+      "pages": [
+        24
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-4-5-p24.webp",
+          "sha256": "34e4172001ba033eed1ecb4bc8cdbd950946b95049dfbf4947f59ea92240f163"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 5.1",
+      "pages": [
+        27
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-5-1-p27.webp",
+          "sha256": "945c422504914e2ad52134f57d2878eab9e60178b0d7a57346d61b5317be64d0"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 5.2",
+      "pages": [
+        28
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-5-2-p28.webp",
+          "sha256": "09114dd2409b214fb1152c48880476ea294b66b427095d76842e17144741a14c"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 5.3",
+      "pages": [
+        29
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-5-3-p29.webp",
+          "sha256": "eb3042b3bca23c356701e6bbbb5c55ee0ad9562f5686cb9056ad32184113b184"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 5.4",
+      "pages": [
+        30,
+        31
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-5-4-p30.webp",
+          "sha256": "676cd14ff925bc1603b247fbda15d04e92fa908b2f7793e225633495a9c829ad"
+        },
+        {
+          "file": "proposition-5-4-p31.webp",
+          "sha256": "081320d949354d192308ffae3e156d44c260d6ebe6b7a1f1a68f959781df97fd"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 6.1",
+      "pages": [
+        33
+      ],
+      "mode": "full_page",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "page-33.webp",
+          "sha256": "92bfe9fc1c615cd76993ad38ebf61e2b230e788339f3de79994ed784787820ec"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 6.2",
+      "pages": [
+        33,
+        34
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-6-2-p33.webp",
+          "sha256": "a122b34283366654ecc5b8eb6a2ed738e336ea7fd4aa6efa47ae46b6f36720ac"
+        },
+        {
+          "file": "proposition-6-2-p34.webp",
+          "sha256": "81e5847dd6324b5da4a30ba7607512f11f18b4ab0df9da346eb3e915208513bf"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 6.3",
+      "pages": [
+        34
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-6-3-p34.webp",
+          "sha256": "658a262bfc2fa1222b4bd99b3793917fc8747f3a7e557a426a8b229079bde320"
+        }
+      ]
+    },
+    {
+      "label": "Theorem 6.1",
+      "pages": [
+        35
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "theorem-6-1-p35.webp",
+          "sha256": "15bc1fa8d70b1b4a9d9f41976aa836a01da22793ba27a5cce355b99099a6035f"
+        }
+      ]
+    },
+    {
+      "label": "Theorem 6.2",
+      "pages": [
+        36
+      ],
+      "mode": "full_page",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "page-36.webp",
+          "sha256": "c2cf1fb1c547ad4facc6e0fd45eef013f9d2769ddce088c152456939ab33e84e"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 6.4",
+      "pages": [
+        36
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-6-4-p36.webp",
+          "sha256": "6d0d60878806b489b6b916174c19c1a54266adbab23bec51c8101472f9253626"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 6.5",
+      "pages": [
+        40
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-6-5-p40.webp",
+          "sha256": "3358bc75bd89880c6324bdecd2bcb2adc6b3914d07f03bfbbd85c2773c28a16b"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 7.1",
+      "pages": [
+        44
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-7-1-p44.webp",
+          "sha256": "4401a66e0b81050ceece3343ca990370a8baa3469a8a8f8b33d4127f030f5b5e"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 7.2",
+      "pages": [
+        45
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-7-2-p45.webp",
+          "sha256": "663ecc2577550b5ca917fd273d057db5c6cc7f2bb08a6b3d72d642b57aeffa3d"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 7.3",
+      "pages": [
+        47
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-7-3-p47.webp",
+          "sha256": "d6c3883ad416d452f6612173e8a2027f975fe790d91e5fee032529d013c2a440"
+        }
+      ]
+    },
+    {
+      "label": "Proposition 7.4",
+      "pages": [
+        49
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-7-4-p49.webp",
+          "sha256": "29bb861c6e00a7cd98249c9a74a8e2929559a806f62220d055fc90efa123d65d"
+        }
+      ]
+    },
+    {
+      "label": "Theorem 7.1",
+      "pages": [
+        50
+      ],
+      "mode": "full_page",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "page-50.webp",
+          "sha256": "0c89d340c0061d87a767ff53f8af1a9f1dc6a6893719c8d8fc9e67b168c93df5"
+        }
+      ]
+    },
+    {
+      "label": "Lemma 7.5",
+      "pages": [
+        50,
+        51
+      ],
+      "mode": "full_page",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "page-50.webp",
+          "sha256": "0c89d340c0061d87a767ff53f8af1a9f1dc6a6893719c8d8fc9e67b168c93df5"
+        },
+        {
+          "file": "page-51.webp",
+          "sha256": "e60b74810bb125fa95a105d473935d0a5ffe6d43a229b2216a9f7bb6dd482915"
+        }
+      ]
+    },
+    {
+      "label": "Proposition A.1",
+      "pages": [
+        53
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-a-1-p53.webp",
+          "sha256": "a0f70326cdb867cbe2e273d3e6e774606c03df989b384431fe5c6cd627d3dd7e"
+        }
+      ]
+    },
+    {
+      "label": "Proposition A.2",
+      "pages": [
+        54
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-a-2-p54.webp",
+          "sha256": "a031132e4b1b9f932e8230e984c57fe859b9002155a431fd3d6cd253794422f6"
+        }
+      ]
+    },
+    {
+      "label": "Lemma A.3",
+      "pages": [
+        55
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-a-3-p55.webp",
+          "sha256": "529105c7d1d75de6b30823601f3d6f7b1ff52a5b01615802907278171ed399c5"
+        }
+      ]
+    },
+    {
+      "label": "Proposition A.4",
+      "pages": [
+        55,
+        56
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-a-4-p55.webp",
+          "sha256": "118a6c94bff6f703713c31efd11269a387debbe4b49784981a788fd5e9aad525"
+        },
+        {
+          "file": "proposition-a-4-p56.webp",
+          "sha256": "1e18ede5bd5460a94fa1b4522d2fd60fade9b5d7ae8782ad26a3573fe7c1f5c2"
+        }
+      ]
+    },
+    {
+      "label": "Proposition B.1",
+      "pages": [
+        57
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-b-1-p57.webp",
+          "sha256": "e8a223b91f4adf5a693521ee736dee1934cb25ce4a686a00ac02f2e34fe638db"
+        }
+      ]
+    },
+    {
+      "label": "Lemma B.2",
+      "pages": [
+        58
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-b-2-p58.webp",
+          "sha256": "278c567e2b07b36d1820f5965c59abfc576e06ac648278579dc053ac81d6648f"
+        }
+      ]
+    },
+    {
+      "label": "Lemma B.3",
+      "pages": [
+        59
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "lemma-b-3-p59.webp",
+          "sha256": "abfb199dc0c1a32f65fcb3ae63bba35ffc15355df5fc3ea7432106e5e19f7831"
+        }
+      ]
+    },
+    {
+      "label": "Proposition B.4",
+      "pages": [
+        60
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-b-4-p60.webp",
+          "sha256": "4c9843bf8f92212038de116010007e5ec5a4468056fc1c9aff61256ead00e458"
+        }
+      ]
+    },
+    {
+      "label": "Proposition B.5",
+      "pages": [
+        61
+      ],
+      "mode": "crop",
+      "boundary_verified": true,
+      "images": [
+        {
+          "file": "proposition-b-5-p61.webp",
+          "sha256": "076f9e1db641ad6896d4df4934edb5f4712d428c898191eabde687d4f2f7bba8"
+        }
+      ]
+    }
+  ]
+}

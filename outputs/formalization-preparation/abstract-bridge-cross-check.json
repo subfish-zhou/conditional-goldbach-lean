@@ -1,0 +1,215 @@
+{
+  "scope": "本轮唯一新增Lean桥梁theorem_6_1_abstract_dictionary独立交叉审阅，含素数幂移除复用补查",
+  "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.lean",
+  "sha256": "bd3b94f0b7218b1675e5346ba36c05985ab161868f40e8524796912268f34261",
+  "baseline_sha256": "997fef646a1980da0a56a8b19ead78113cec5b2a128064b8fb4403ac23022e5a",
+  "declaration": "theorem_6_1_abstract_dictionary",
+  "source_range": {
+    "line_start": 1498,
+    "line_end": 1505
+  },
+  "overall_status": "no_required_fix; mathematical_statement_consistent_with_explicit_scope",
+  "required_fixes": [],
+  "nonblocking_limitations": [
+    "SpectralData的ℕ HilbertBasis范围不涵盖有限维/零维H；这是已有接口限制，不使Hardy上的附录A应用增加前提。",
+    "谱乘积有效性、范数sup公式和前置存在性仍需要证明，所有新旧theorem都含sorry。"
+  ],
+  "checks": [
+    {
+      "id": "spectral_data_sufficiency",
+      "status": "pass_pending_proof",
+      "lean_ranges": [
+        [
+          256,
+          263
+        ]
+      ],
+      "audit_zh": "SpectralData包含完整HilbertBasis ℕ ℂ H、实特征值、逐基向量对角化和平方可和。完整性给向量的Hilbert展开；有界T与实对角化给自伴及norm(T)=sup_j|μ_j|，平方可和给μ_j→0、有限秩截断趋于T、紧性和HS。无需再把紧、自伴、HS列为新调用者前提。",
+      "proof_obligations": [
+        "将chosen SpectralData与eigenvalues定义的if正支连接；并非任意μ序列。",
+        "用Hilbert展开和连续性建立算子范数=谱幅度sup。",
+        "由∑μ²<∞处理零特征值、收敛和谱因子的总化定义。"
+      ]
+    },
+    {
+      "id": "spectral_product_totalization",
+      "status": "pass_pending_proof",
+      "lean_ranges": [
+        [
+          264,
+          282
+        ]
+      ],
+      "audit_zh": "hT选出的特征值平方可和且δ>0，故固定q时∑‖(4μ_j²/δ²)•q(1-q)‖有限；compact q集有统一界。全部因子是同一q的实系数多项式，彼此交换并位于含q的复切片中，故有限乘积收敛，spectralQuaternion的fallback-zero分支不会被采用。非零因子尾积的范数有正下界，所以不会出现仅由无限乘积产生的额外零点。",
+      "paper_ranges": [
+        [
+          2513,
+          2536
+        ]
+      ],
+      "proof_obligations": [
+        "构造任意q所在复切片或直接证明可和扰动的四元数乘积收敛。",
+        "唯一极限连接Classical.choose定义。",
+        "零集等于至少一个因子为零；不能仅从收敛推出此结论。"
+      ]
+    },
+    {
+      "id": "critical_hyperplane_equivalence",
+      "status": "pass_pending_proof",
+      "audit_zh": "μ=0给恒1因子；μ≠0时q(1-q)=δ²/(4μ²)。写q=x+v，虚部=(1-2x)v。若|μ|≤δ，则所有根在x=1/2；若|μ|>δ，出现两个(0,1)内实根且偏离1/2。因此全部零点Re=1/2等价于∀j|μ_j|≤δ，再由范数sup得到‖T‖≤δ。零算子（作用在有ℕ基的空间上）全部因子1，等价两侧均真。",
+      "paper_ranges": [
+        [
+          2514,
+          2524
+        ],
+        [
+          2572,
+          2578
+        ]
+      ],
+      "proof_obligations": [
+        "正确覆盖μ=0和δ>0；不能在μ=0时除以μ²。",
+        "不需依赖最大特征值存在，只需sup与逐点界等价。"
+      ]
+    },
+    {
+      "id": "strict_open_boundary",
+      "status": "pass_pending_proof",
+      "audit_zh": "0<η<1/2确保1-η>1/2；只有较大实根x+=(1+sqrt(1-δ²/μ²))/2可能进入排除区。开条件x>1-η的无根等价于x+≤1-η，化简成|μ|≤δ/(2sqrt(η(1-η)))。当等号成立，根恰在边界x=1-η，被允许，因此新接口中的≤与原文一致。平方步骤可逆，因为1-2η>0且δ、sqrt(η(1-η))均正。",
+      "paper_ranges": [
+        [
+          2546,
+          2562
+        ],
+        [
+          2580,
+          2588
+        ]
+      ],
+      "edge_cases": [
+        "η=0和η=1/2不在本接口量词域，未意外扩域。",
+        "μ=δ给中央双根，不在该开半空间。",
+        "μ=δ/(2sqrt(η(1-η)))给边界根，零自由条件仍成立。"
+      ]
+    },
+    {
+      "id": "dimension_scope",
+      "status": "pass_with_explicit_scope_limit",
+      "audit_zh": "该接口的H语法上一般，但Nonempty(SpectralData T)含HilbertBasis ℕ ℂ H，故其可实例化对象必须有可数无限正交基。零维及有限维H无法提供hT；命题在这些类型上前件不可满足，并不是一个适用于任意有限维矩阵的API。零算子在无限维Hardy空间可提供全零特征值的SpectralData，与原文including zero operator相容。有限矩阵B.5仍应使用单独Fin索引接口。",
+      "required_change": false,
+      "reason_no_change": "这是已有SpectralData/IsHilbertSchmidt的明确建模范围（源注释已说明），新桥没有偷偷宣称所有H都存在谱数据。若将来做通用库API，应改可数/有限索引或允许适当零填充的spectral representation，而不是要求有限维H拥有ℕ HilbertBasis。"
+    },
+    {
+      "id": "appendix_A_domain_transfer",
+      "status": "pass_pending_upstream_proofs",
+      "lean_ranges": [
+        [
+          1632,
+          1644
+        ]
+      ],
+      "paper_ranges": [
+        [
+          4021,
+          4045
+        ],
+        [
+          4070,
+          4077
+        ]
+      ],
+      "audit_zh": "取H=HardySpace(alpha N c) beta、T=residualOperator ha N。已有proposition_A_1_operator_spec的结论直接给Nonempty(SpectralData T)，其前提就是A.1原条件：N正偶且≥4、c>0、N>exp(10c)、GRH、有效ha。Lp Hardy实例提供CompleteSpace。lemma_4_3给S(N)>1，N≥4给N>0和log N>0，遂spectralScale N>0。谱尺度仍只依N，与c无关。可以用新抽象字典证明A.2字典，无需新增hT/hδ到原A.2调用者假设。",
+      "proof_obligations": [
+        "A.1_operator_spec仍是sorry，不能把这个上游待证结论当作已完成的存在性证明。",
+        "N>exp(10c)与c>0在有效域推alpha N c<1/10<beta；不能误用只针对alpha N的固定5.3。",
+        "HardySpace(a,b)为正权L²，确有可数无限维模型；这一编码选择仍待整体验证。"
+      ]
+    },
+    {
+      "id": "all_new_changes",
+      "status": "pass",
+      "audit_zh": "与本轮baseline逐字比较，唯一变化是15行抽象字典及注释。没有修改任何已有定理前提/结论、定义、参数或证明体。新增接口仍为by sorry；全部既有101条及新增1条保持待证。",
+      "added_theorems": [
+        "theorem_6_1_abstract_dictionary"
+      ],
+      "removed_or_modified_existing_declarations": [],
+      "new_definitions": []
+    }
+  ],
+  "prime_pair_dependency_followup": {
+    "status": "direct_mathlib_ingredients_found; weighted_binary_bridge_still_unproved",
+    "preferred_existing_results": [
+      {
+        "name": "Chebyshev.psi_sub_theta_eq_sum_not_prime",
+        "path": "/home/azureuser/goldbach-lean/.lake/packages/mathlib/Mathlib/NumberTheory/Chebyshev.lean",
+        "line_start": 469,
+        "line_end": 475,
+        "actual_statement": "ψ x-θ x=Σ n∈Ioc 0 floor_nat(x),¬Prime(n),Λ(n)",
+        "application": "取x=N，floor_nat(N)=N，直接覆盖整个1≤n≤N而非某个专用window；非素数的Λ只在高次素数幂非零。"
+      },
+      {
+        "name": "Chebyshev.psi_sub_theta_le",
+        "path": "/home/azureuser/goldbach-lean/.lake/packages/mathlib/Mathlib/NumberTheory/Chebyshev.lean",
+        "line_start": 490,
+        "line_end": 492,
+        "actual_statement": "1≤x → ψ x-θ x≤2sqrt(x)log(x)",
+        "application": "N≥4可直接实例化；不需exp3100阈值。"
+      },
+      {
+        "name": "Chebyshev.psi_sub_theta_le_mul_sqrt",
+        "path": "/home/azureuser/goldbach-lean/.lake/packages/mathlib/Mathlib/NumberTheory/Chebyshev.lean",
+        "line_start": 592,
+        "line_end": 600,
+        "actual_statement": "∃C,∀x, ψ x-θ x≤C sqrt(x)",
+        "application": "更强全局O(sqrt N)界；取max(C,1)可确保使用正统一常数。当前模块import Mathlib，基础工具无需跨项目移植。"
+      }
+    ],
+    "weighted_bridge_outline": [
+      "把G中的项分成双素数项和至少一项非素数的坏项；Λ≥0和0≤φ≤1允许以并集上界及去掉互素/支集筛选估计坏项。",
+      "当0<n<N，Λ(n),Λ(N-n)≤log N。经n↦N-n重编号，坏项总量≤(2log N/N)*(ψ(N)-θ(N))。",
+      "用490行得坏项≤4log²(N)/sqrt(N)；用592行可改进为O(log(N)/sqrt(N))。这已足以成为o(S(N))，因为4.3给S(N)>1。不必保守写成O(log³N/sqrtN)。",
+      "由1.1渐近（或1.2及δ/S→0）与c_phi>0，充分大偶数时G≥c_phi*S/2，减去坏项仍≥c_phi*S/4。",
+      "每个双素数有序对的加权贡献≤log²N/N；支集强迫p∈[N/3,2N/3]。因此当前PrimePairCount至少(c_phi/4)*S*N/log²N。互素筛选可能排除某些素数对，但只使加权和更小，不破坏这个上界转计数。"
+    ],
+    "remaining_formal_obligations": [
+      "range(N+1)与Ioc0N索引转换、Λ(0)=0、Nat.sub在n<N时的重编号。",
+      "权平方/双权非负、Λ≤logN及支集区间对齐。",
+      "c_phi严格正性和eventual小量比较。",
+      "定义正素数权相关或在局部证明中用filter，建立坏项界和计数上界。"
+    ],
+    "older_project_candidates": [
+      {
+        "name": "LiuWang.Proof.PrimePowerRemoval.primePowerMass_le_psi_sub_theta",
+        "path": "/home/azureuser/liu-wang-ternary-goldbach-lean/LiuWang/Proof/PrimePowerRemoval/Main.lean",
+        "line_start": 85,
+        "line_end": 95,
+        "limitation": "需要旧windowFinset，不是当前G定义的range/support；可参考证明，但Mathlib全域恒等式更直接。"
+      },
+      {
+        "name": "LiuWang.Proof.PrimePowerRemoval.primePowerMass_le_sqrt_mul_log",
+        "path": "/home/azureuser/liu-wang-ternary-goldbach-lean/LiuWang/Proof/PrimePowerRemoval/Main.lean",
+        "line_start": 121,
+        "line_end": 136,
+        "limitation": "要求exp3100≤N且用旧windowFinset与sourceL；sourceL确为logN，但窗口接口仍需桥接，当前任务没有必要引入该更重限制。"
+      }
+    ],
+    "proof_status": "这里只读取现有已写定理和给出数学适用路径；没有填写或新增primePair_consequence证明。"
+  },
+  "change_summary": {
+    "theorems_before": 101,
+    "theorems_after": 102,
+    "only_added_declaration": true,
+    "all_new_proofs_sorry": true
+  },
+  "typecheck": {
+    "status": "passed",
+    "log": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/dependency-audit/abstract-bridge-typecheck.log",
+    "command": "LEAN_NUM_THREADS=2 lake env lean /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.lean",
+    "working_directory": "/home/azureuser/goldbach-lean",
+    "exit_code": 0,
+    "sorry_warnings": 102,
+    "checked_file_unchanged": true
+  },
+  "proofs_added": false,
+  "main_file_modified_by_reviewer": false
+}

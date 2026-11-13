@@ -1,0 +1,49 @@
+{
+  "input": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/dependency-graph.json",
+  "output": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/dependency-review.html",
+  "input_sha256": "4a476bd73dadfa5146f42bcc517c6f1354d046b80155ee57b1337e9b4afad0ae",
+  "html_bytes": 11236076,
+  "paper_nodes": 146,
+  "paper_edges": 236,
+  "lean_nodes": 273,
+  "lean_edges": 987,
+  "definition_families": 121,
+  "final_results": 17,
+  "math_formulas": 104,
+  "math_errors": [],
+  "embedded_woff2_fonts": 20,
+  "external_runtime_requests": 0,
+  "all_source_text_html_escaped": true,
+  "proof_claim": "all theorem bodies remain sorry; no Lean proof graph is asserted",
+  "graphviz_layouts": 2,
+  "browser_qa": {
+    "errors": [],
+    "remote_requests": [],
+    "initial_nodes": 11,
+    "final_results": 17,
+    "definition_families": 121,
+    "rendered_katex": 142,
+    "overview_font_pixels": 18.325300455093384,
+    "paper_all": 146,
+    "A2_ancestors": 108,
+    "A2_descendants": 2,
+    "lean_all": 273,
+    "generic_detail_has_code": 1,
+    "wideWeight_matches": 3,
+    "mobile_body_width": 390
+  },
+  "screenshots": {
+    "desktop": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/dependency-audit/dependency-review-desktop.png",
+    "mobile": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/dependency-audit/dependency-review-mobile.png",
+    "results": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/dependency-audit/dependency-review-results.png"
+  },
+  "graph_sha_matches_final_data": true,
+  "standalone_full_graph_svgs": false,
+  "ui_notes_zh": [
+    "默认上下排布的11节点概览，1600px屏幕实测字号18.3px；全部前置/后续/全图均可展开。",
+    "定义边为绿色点线、假设边为黄色长虚线；图明确说明使用关系不是逻辑蕴含。",
+    "121定义族可全文检索并展开高亮Lean，17结论含离线公式；所有包内链接相对。",
+    "Lean图只显示声明引用，单个节点展示其精确声明代码，全部定理仍为sorry。"
+  ],
+  "html_sha256": "3e28de5d4d33f0e6f4588b406e8ba0207024d86f06da66a16b4187845342d6aa"
+}

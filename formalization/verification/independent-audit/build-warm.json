@@ -1,0 +1,21 @@
+{
+  "mode": "warm",
+  "command": [
+    "lake",
+    "--no-cache",
+    "build"
+  ],
+  "cwd": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization",
+  "start_utc": "2026-11-13T18:08:02.272165+00:00",
+  "wall_seconds": 4.7542091608047485,
+  "user_cpu_seconds": 5.895944,
+  "system_cpu_seconds": 3.498193,
+  "largest_child_maxrss_kib": 929968,
+  "queue_seconds_excluded": 6.361407682299614,
+  "exit_code": 0,
+  "cpu_count": 8,
+  "machine": "x86_64",
+  "lean_num_threads": "default",
+  "dependency_cache": "existing Mathlib and goldbach build artifacts reused",
+  "source_cache": "existing"
+}

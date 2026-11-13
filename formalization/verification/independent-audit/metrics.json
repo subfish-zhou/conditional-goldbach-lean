@@ -1,0 +1,19 @@
+{
+  "library_files": 253,
+  "library_physical_lines": 29628,
+  "with_entry_files": 254,
+  "with_entry_physical_lines": 29629,
+  "nonblank_lines_with_entry": 27451,
+  "scope": "Actual import closure of LiLiuGoldbach; excludes mathlib/goldbach dependencies, review baselines, audit code and generated HTML.",
+  "elapsed_formalization_record": {
+    "basis": "Filesystem birth of the proof project toolchain file through the mtime of the completed verified archive. Not exact human prompt time or active CPU time. Excludes earlier PDF/TeX preparation and the present audit.",
+    "start_utc": "2026-11-13T12:30:28.643881+00:00",
+    "end_utc": "2026-11-13T17:55:48.862902+00:00",
+    "elapsed_seconds": 19520.219021,
+    "sources": [
+      "formalization/lean-toolchain",
+      "outputs/LiLiuGoldbach16-formalized.zip"
+    ]
+  },
+  "previous_final_incremental_build_seconds_from_file_timestamps": 30.266994033
+}

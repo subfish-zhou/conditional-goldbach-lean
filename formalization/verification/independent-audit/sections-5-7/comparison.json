@@ -1,0 +1,936 @@
+[
+  {
+    "expected": "TexAudit57.Expected_5_1",
+    "actual": "LiLiuGoldbach16.proposition_5_1",
+    "label": "Proposition 5.1",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        1926,
+        1943
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_1_fueter_equation",
+    "actual": "LiLiuGoldbach16.proposition_5_1_fueter_equation",
+    "label": "Proposition 5.1 / proposition_5_1_fueter_equation",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        1926,
+        1943
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_5_2",
+    "actual": "LiLiuGoldbach16.lemma_5_2",
+    "label": "Lemma 5.2",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_5_2_closed_trace_space",
+    "actual": "LiLiuGoldbach16.lemma_5_2_closed_trace_space",
+    "label": "Lemma 5.2 / lemma_5_2_closed_trace_space",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_5_2_representation_spec",
+    "actual": "LiLiuGoldbach16.lemma_5_2_representation_spec",
+    "label": "Lemma 5.2 / lemma_5_2_representation_spec",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_5_2_boundary_inner",
+    "actual": "LiLiuGoldbach16.lemma_5_2_boundary_inner",
+    "label": "Lemma 5.2 / lemma_5_2_boundary_inner",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_5_3",
+    "actual": "LiLiuGoldbach16.proposition_5_3",
+    "label": "Proposition 5.3",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2123,
+        2141
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_3_kernel_integrability",
+    "actual": "LiLiuGoldbach16.proposition_5_3_kernel_integrability",
+    "label": "Proposition 5.3 / proposition_5_3_kernel_integrability",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2123,
+        2141
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_3_hs_basis_independent",
+    "actual": "LiLiuGoldbach16.proposition_5_3_hs_basis_independent",
+    "label": "Proposition 5.3 / proposition_5_3_hs_basis_independent",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2123,
+        2141
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_5_4",
+    "actual": "LiLiuGoldbach16.proposition_5_4",
+    "label": "Proposition 5.4",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_4_exact_norm",
+    "actual": "LiLiuGoldbach16.proposition_5_4_exact_norm",
+    "label": "Proposition 5.4 / proposition_5_4_exact_norm",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_4_kernel_pairing",
+    "actual": "LiLiuGoldbach16.proposition_5_4_kernel_pairing",
+    "label": "Proposition 5.4 / proposition_5_4_kernel_pairing",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_4_fixed_contour",
+    "actual": "LiLiuGoldbach16.proposition_5_4_fixed_contour",
+    "label": "Proposition 5.4 / proposition_5_4_fixed_contour",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_6_1_product",
+    "actual": "LiLiuGoldbach16.proposition_6_1",
+    "label": "Proposition 6.1",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_enumeration",
+    "actual": "LiLiuGoldbach16.proposition_6_1_enumeration",
+    "label": "Proposition 6.1 / proposition_6_1_enumeration",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_complex_slice",
+    "actual": "LiLiuGoldbach16.proposition_6_1_complex_slice",
+    "label": "Proposition 6.1 / proposition_6_1_complex_slice",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_positive_fredholm_spec",
+    "actual": "LiLiuGoldbach16.proposition_6_1_positive_fredholm_spec",
+    "label": "Proposition 6.1 / proposition_6_1_positive_fredholm_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_square_determinant",
+    "actual": "LiLiuGoldbach16.proposition_6_1_square_determinant",
+    "label": "Proposition 6.1 / proposition_6_1_square_determinant",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_all_slices",
+    "actual": "LiLiuGoldbach16.proposition_6_1_all_slices",
+    "label": "Proposition 6.1 / proposition_6_1_all_slices",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_spectral_choice_independent",
+    "actual": "LiLiuGoldbach16.proposition_6_1_spectral_choice_independent",
+    "label": "Proposition 6.1 / proposition_6_1_spectral_choice_independent",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_6_2_symmetries",
+    "actual": "LiLiuGoldbach16.proposition_6_2",
+    "label": "Proposition 6.2",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2443,
+        2476
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_2_centered_product",
+    "actual": "LiLiuGoldbach16.proposition_6_2_centered_product",
+    "label": "Proposition 6.2 / proposition_6_2_centered_product",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2443,
+        2476
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_2_critical_values",
+    "actual": "LiLiuGoldbach16.proposition_6_2_critical_values",
+    "label": "Proposition 6.2 / proposition_6_2_critical_values",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2443,
+        2476
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_6_3_zeros",
+    "actual": "LiLiuGoldbach16.proposition_6_3",
+    "label": "Proposition 6.3",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_3_three_cases",
+    "actual": "LiLiuGoldbach16.proposition_6_3_three_cases",
+    "label": "Proposition 6.3 / proposition_6_3_three_cases",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_3_factor_central_order",
+    "actual": "LiLiuGoldbach16.proposition_6_3_factor_central_order",
+    "label": "Proposition 6.3 / proposition_6_3_factor_central_order",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_3_multiplicities",
+    "actual": "LiLiuGoldbach16.proposition_6_3_multiplicities",
+    "label": "Proposition 6.3 / proposition_6_3_multiplicities",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_6_1_dictionary",
+    "actual": "LiLiuGoldbach16.theorem_6_1",
+    "label": "Theorem 6.1",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2552,
+        2570
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_theorem_6_1_abstract_dictionary",
+    "actual": "LiLiuGoldbach16.theorem_6_1_abstract_dictionary",
+    "label": "Theorem 6.1 / theorem_6_1_abstract_dictionary",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2552,
+        2570
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_theorem_6_1_width_comparison",
+    "actual": "LiLiuGoldbach16.theorem_6_1_width_comparison",
+    "label": "Theorem 6.1 / theorem_6_1_width_comparison",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2552,
+        2570
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_6_2_baseline",
+    "actual": "LiLiuGoldbach16.theorem_6_2",
+    "label": "Theorem 6.2",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2616,
+        2629
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_6_4",
+    "actual": "LiLiuGoldbach16.lemma_6_4",
+    "label": "Lemma 6.4",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_zero_poisson_convergence",
+    "actual": "LiLiuGoldbach16.lemma_6_4_zero_poisson_convergence",
+    "label": "Lemma 6.4 / lemma_6_4_zero_poisson_convergence",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_perron_residue",
+    "actual": "LiLiuGoldbach16.lemma_6_4_perron_residue",
+    "label": "Lemma 6.4 / lemma_6_4_perron_residue",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_poisson_action_spec",
+    "actual": "LiLiuGoldbach16.lemma_6_4_poisson_action_spec",
+    "label": "Lemma 6.4 / lemma_6_4_poisson_action_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_poisson_convolution",
+    "actual": "LiLiuGoldbach16.lemma_6_4_poisson_convolution",
+    "label": "Lemma 6.4 / lemma_6_4_poisson_convolution",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_6_5",
+    "actual": "LiLiuGoldbach16.proposition_6_5",
+    "label": "Proposition 6.5",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2975,
+        2986
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_5_components_spec",
+    "actual": "LiLiuGoldbach16.proposition_6_5_components_spec",
+    "label": "Proposition 6.5 / proposition_6_5_components_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2975,
+        2986
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_5_diagonal_vector_spec",
+    "actual": "LiLiuGoldbach16.proposition_6_5_diagonal_vector_spec",
+    "label": "Proposition 6.5 / proposition_6_5_diagonal_vector_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2975,
+        2986
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_7_1_mellin",
+    "actual": "LiLiuGoldbach16.lemma_7_1",
+    "label": "Lemma 7.1",
+    "tex_lines": [
+      [
+        3282,
+        3297
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_1_absolute_convergence",
+    "actual": "LiLiuGoldbach16.lemma_7_1_absolute_convergence",
+    "label": "Lemma 7.1 / lemma_7_1_absolute_convergence",
+    "tex_lines": [
+      [
+        3282,
+        3297
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_7_2",
+    "actual": "LiLiuGoldbach16.lemma_7_2",
+    "label": "Lemma 7.2",
+    "tex_lines": [
+      [
+        3374,
+        3390
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_2_absolute_convergence",
+    "actual": "LiLiuGoldbach16.lemma_7_2_absolute_convergence",
+    "label": "Lemma 7.2 / lemma_7_2_absolute_convergence",
+    "tex_lines": [
+      [
+        3374,
+        3390
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_2_convolutions",
+    "actual": "LiLiuGoldbach16.lemma_7_2_convolutions",
+    "label": "Lemma 7.2 / lemma_7_2_convolutions",
+    "tex_lines": [
+      [
+        3374,
+        3390
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_7_3",
+    "actual": "LiLiuGoldbach16.proposition_7_3",
+    "label": "Proposition 7.3",
+    "tex_lines": [
+      [
+        3523,
+        3531
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_7_3_absolute_convergence",
+    "actual": "LiLiuGoldbach16.proposition_7_3_absolute_convergence",
+    "label": "Proposition 7.3 / proposition_7_3_absolute_convergence",
+    "tex_lines": [
+      [
+        3523,
+        3531
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_7_4",
+    "actual": "LiLiuGoldbach16.proposition_7_4",
+    "label": "Proposition 7.4",
+    "tex_lines": [
+      [
+        3623,
+        3638
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_7_4_norm_integrals",
+    "actual": "LiLiuGoldbach16.proposition_7_4_norm_integrals",
+    "label": "Proposition 7.4 / proposition_7_4_norm_integrals",
+    "tex_lines": [
+      [
+        3623,
+        3638
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_7_1_quadratic",
+    "actual": "LiLiuGoldbach16.theorem_7_1",
+    "label": "Theorem 7.1",
+    "tex_lines": [
+      [
+        3710,
+        3722
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_theorem_7_1_uniform",
+    "actual": "LiLiuGoldbach16.theorem_7_1_uniform",
+    "label": "Theorem 7.1 / theorem_7_1_uniform",
+    "tex_lines": [
+      [
+        3710,
+        3722
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.Expected_7_5",
+    "actual": "LiLiuGoldbach16.lemma_7_5",
+    "label": "Lemma 7.5",
+    "tex_lines": [
+      [
+        3781,
+        3795
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_5_asymptotic",
+    "actual": "LiLiuGoldbach16.lemma_7_5_asymptotic",
+    "label": "Lemma 7.5 / lemma_7_5_asymptotic",
+    "tex_lines": [
+      [
+        3781,
+        3795
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_interiorLine_memLp",
+    "actual": "LiLiuGoldbach16.interiorLine_memLp",
+    "label": "Lemma 5.2 / interiorLine_memLp",
+    "tex_lines": [
+      [
+        1986,
+        2046
+      ],
+      [
+        2050,
+        2070
+      ]
+    ]
+  },
+  {
+    "expected": "TexAudit57.expect_boundaryTraces_exist",
+    "actual": "LiLiuGoldbach16.boundaryTraces_exist",
+    "label": "Lemma 5.2 / boundaryTraces_exist",
+    "tex_lines": [
+      [
+        1986,
+        2046
+      ],
+      [
+        2050,
+        2070
+      ]
+    ]
+  }
+]

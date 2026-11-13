@@ -1,0 +1,212 @@
+{
+  "Theorem 1.1": {
+    "title": "定理 1.1 · 谱假设 S 下的 Goldbach 渐近式",
+    "summary": "固定非零\\(C_c^\\infty\\)权函数\\(\\phi\\)，假设充分大偶数均满足GRH且对预给的可容许\\(h\\)满足S，则\\[|G(N)-c_\\phi\\mathfrak S(N)|\\le C_\\phi\\mathfrak S(N)/h(N),\\qquad G(N)\\sim c_\\phi\\mathfrak S(N).\\]常数独立\\(N,h\\)，充分大阈值可依赖\\(h\\)。",
+    "review": "高危共享修正：原文要求\\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，原Lean却误写解析阶\\(\\omega\\)。现改为真正的\\(C^\\infty\\)，并增加\\(\\exists\\phi,\\mathrm{IsWeight}(\\phi)\\)的非空性义务，避免空前提使结果失去数学内容。"
+  },
+  "Theorem 1.2": {
+    "title": "定理 1.2 · 谱假设 R 下的误差界",
+    "summary": "假设充分大偶数\\(N\\)满足\\(\\mathrm{GRH}(N)\\)且满足R，则\\[|G(N)-c_\\phi\\mathfrak S(N)|\\ll_\\phi\\sqrt{\\mathfrak S(N)/N}(\\log N)^{3/2}.\\]同时保留原文的附属断言：\\(R\\Rightarrow S(h)\\) 对每个预先给定的可容许\\(h\\)成立。",
+    "review": "误差常数只依赖权函数\\(\\phi\\)。新增附属陈述不改变主定理；所有证明仍是\\(\\texttt{sorry}\\)。 高危共享修正：原文要求\\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，原Lean却误写解析阶\\(\\omega\\)。现改为真正的\\(C^\\infty\\)，并增加\\(\\exists\\phi,\\mathrm{IsWeight}(\\phi)\\)的非空性义务，避免空前提使结果失去数学内容。"
+  },
+  "Lemma 3.1": {
+    "title": "引理 3.1 · 奇特征标的有限投影",
+    "summary": "对每个偶数\\(N\\ge4\\)，以非零\\(C_c^\\infty\\)权函数定义的有限投影满足\\[G(N)=D(N)-P(N),\\qquad 0\\le P(N)\\le D(N)\\ll_\\phi\\log N.\\]",
+    "review": "原定理的投影与大小界已匹配原始 TeX。本次把原文标签 `gb:orthogonality` 的直接依赖单列：\\[\\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\\chi(n)\\overline{\\chi(m)}=\\mathbf1_{(nm,N)=1}\\bigl(\\mathbf1_{n\\equiv m\\pmod N}-\\mathbf1_{n\\equiv-m\\pmod N}\\bigr).\\]奇特征包括非本原成员，非单位处零延拓；证明仍保留 `sorry`。"
+  },
+  "Proposition 3.2": {
+    "title": "命题 3.2 · 特征标核的解析与正性结构",
+    "summary": "固定偶数 \\(N\\ge4\\)。当 \\(\\Re s,\\Re z>1/2\\) 时，绝对收敛展开为\n\\[P_N(s,z)=\\sum_{\\substack{n,m\\ge1\\\\(nm,N)=1}}\\frac{\\Lambda(n)\\Lambda(m)}{n^{1/2+s}m^{1/2+z}}\\left(\\mathbf1_{n\\equiv m\\pmod N}-\\mathbf1_{n\\equiv-m\\pmod N}\\right).\\]\n核在 \\(\\mathbb C^2\\) 上联合亚纯，可能极点仅来自对数导数的极点。GRH 下在 \\(\\Re s,\\Re z>0\\) 联合全纯，且\n\\[P_N(s,z)=P_N(z,s),\\qquad\\overline{P_N(s,z)}=P_N(\\bar s,\\bar z).\\]\n\\(P_N(s,\\bar z)\\) 为 Hermitian 正半定核，核截面空间有限维且维数不超过 \\(\\varphi(N)/2\\)。",
+    "review": "补充联合亚纯编码：\\[B(s,z)=\\prod_{\\chi\\in X_N^-}L(\\tfrac12+s,\\chi)L(\\tfrac12+z,\\chi),\\qquad P_N=A/B.\\]要求\\(A,B\\)均为整函数且\\(B\\not\\equiv0\\)，等式在\\(B\\ne0\\)处成立；可能极点仅在上述L因子的零点处。分别单变量亚纯不再冒充这一联合结论。"
+  },
+  "Lemma 3.3": {
+    "title": "引理 3.3 · 完成 L 函数的成对零点展开",
+    "summary": "本原奇特征\\(\\chi^*\\)的非平凡零点按重数计数。在\\(\\mathcal L(u)\\mathcal L(u_0)\\ne0\\)处，\\[\\frac{\\mathcal L'}{\\mathcal L}(u)-\\frac{\\mathcal L'}{\\mathcal L}(u_0)=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right).\\]级数对\\((u,u_0)\\)绝对且局部一致收敛，并有\\(\\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\\ll\\log(d_\\chi(|t|+2))\\)，常数独立导子、特征和高度。",
+    "review": "正规收敛现在明确要求每项在每个紧集上有界，并且\\(\\sum_\\rho\\sup_K|f_\\rho|<\\infty\\)。这堵住了实数\\(\\sup\\)在无上界集合上的总化漏洞。"
+  },
+  "Lemma 3.4": {
+    "title": "引理 3.4 · GRH 下的对数导数展开与增长界",
+    "summary": "在\\(\\mathrm{GRH}(N)\\)下，\\(Z_\\chi(s)\\)在\\(\\Re s>0\\)绝对且局部一致收敛。保留\\[g_\\chi(s)=Z_\\chi(s)+\\frac{L'}L(2,\\chi)-\\frac12\\left(\\frac{\\Gamma'}\\Gamma(\\tfrac34+\\tfrac s2)-\\frac{\\Gamma'}\\Gamma(\\tfrac32)\\right)+e_\\chi(\\tfrac12+s)-e_\\chi(2).\\]对固定\\(I\\subset(0,\\infty)\\)，\\(|g_\\chi(\\sigma+it)|\\ll_I\\log^2(N(|t|+2))\\)，一致于\\(N,\\chi,t\\)。",
+    "review": "明确\\(Z_\\chi(s)=\\mathrm{zeroDifference}(\\chi^*,\\tfrac12+s,2)\\)，并保留零点重数。正常收敛共享定义已补紧集上逐项有界条件。"
+  },
+  "Lemma 3.5": {
+    "title": "引理 3.5 · 二次矩的双 Mellin 表示",
+    "summary": "固定偶数 \\(N\\ge4\\) 和合法权 \\(\\phi\\)。在 \\(\\sigma>1/2\\) 的两变量各自沿实部为 \\(\\sigma\\) 的竖线独立积分时，\\(P(N)\\) 等于含 \\(N^{s+z}\\)、两个 Mellin 变换和特征标核的双积分，积分绝对收敛。假设 \\(\\operatorname{GRH}(N)\\) 后，该等式与绝对收敛延伸到 \\(0<\\sigma\\le1/9\\)。\n非对角同余关系分成 \\(m=n+kN\\)、\\(n=m+kN\\)、\\(n+m=kN\\) 三类；在两权函数均非零时，两种差分族消失，和式族仅剩 \\(k=1\\)，即 \\(n+m=N\\)。\n\\[P(N)=\\frac1{(2\\pi i)^2}\\int_{(\\sigma)}\\int_{(\\sigma)}N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)P_N(s,z)\\,ds\\,dz.\\]三族按上述次序分别带 \\(+,+,-\\) 号。",
+    "review": "高危共享修正：原文要求\\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，原Lean却误写解析阶\\(\\omega\\)。现改为真正的\\(C^\\infty\\)，并增加\\(\\exists\\phi,\\mathrm{IsWeight}(\\phi)\\)的非空性义务，避免空前提使结果失去数学内容。"
+  },
+  "Lemma 4.1": {
+    "title": "引理 4.1 · 三类连续模型的 Beta 积分",
+    "summary": "令\\(w=s+z\\)，假设\\(h>0\\)、\\(\\Re s,\\Re z<1/2\\)、\\(\\Re w>0\\)。三式均绝对收敛：\\[\\int_0^\\infty x^{-1/2-s}(x+h)^{-1/2-z}\\,dx=h^{-w}B(\\tfrac12-s,w),\\]\\[\\int_0^\\infty x^{-1/2-z}(x+h)^{-1/2-s}\\,dx=h^{-w}B(\\tfrac12-z,w),\\]\\[\\int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\\,dx=h^{-w}B(\\tfrac12-s,\\tfrac12-z).\\]三式以\\(+,+,-\\)合并为\\(h^{-w}K_-(s,z)\\)；\\(h=kN\\)时共同局部密度为\\(\\mathfrak S(h)\\)，完整模型为\\(\\mathfrak S(h)h^{-w}K_-\\)。",
+    "review": "三个积分、三个绝对可积条件、带符号和、局部密度及乘入密度后的模型均独立可见，没有删掉第三式。"
+  },
+  "Lemma 4.2": {
+    "title": "引理 4.2 · 有符号 Beta 核的因子分解",
+    "summary": "当\\(\\Re s=\\Re z=\\sigma\\)、\\(0<\\sigma\\le1/9\\)时，\\[|K_-(s,z)|\\le2B(\\tfrac12-\\sigma,2\\sigma)+B(\\tfrac12-\\sigma,\\tfrac12-\\sigma).\\]并有全局亚纯恒等式\\[K_-(s,z)=2^{1-w}\\Gamma(w)\\cos(\\pi w/2)X_1(s)X_1(z),\\qquad w=s+z.\\]",
+    "review": "全局亚纯恒等式改为：存在整函数\\(A,B\\)，\\(B\\not\\equiv0\\)，两边在\\(B\\ne0\\)处同时等于\\(A/B\\)。此处不再要求读者额外假设各Gamma值非零；极点按亚纯商解释，不以Lean总化点值冒充。"
+  },
+  "Lemma 4.3": {
+    "title": "引理 4.3 · 对角级数与奇异密度级数",
+    "summary": "固定偶数 \\(N\\ge4\\)。\\(D_N(w)\\) 在 \\(\\Re w>0\\) 绝对收敛；\\(\\mathfrak S_N(w)\\) 在 \\(\\Re w>1\\) 绝对收敛并等于已定义的延拓公式。后者在 \\(\\Re w>0\\) 亚纯，在 \\(w\\ne1\\) 处全纯，且\n\\[\\lim_{w\\to1}(w-1)\\mathfrak S_N(w)=\\frac N{\\varphi(N)}.\\]\n奇异级数满足\n\\[1<\\mathfrak S(N),\\qquad C_2\\frac N{\\varphi(N)}\\le\\mathfrak S(N)\\le\\frac N{\\varphi(N)}.\\]\n在固定正实部竖带且 \\(|\\Im w|\\ge1\\) 时，延拓函数受 \\(C\\frac N{\\varphi(N)}(1+|\\Im w|)\\) 控制；另有 \\(N/\\varphi(N)\\le C\\log\\log N\\)。\n延拓使用 Euler 乘积\n\\[\\mathfrak S_N(w)=\\mathfrak S(N)\\zeta(w)\\prod_{\\substack{p>2\\\\p\\nmid N}}\\left(1+\\frac{p^{-w}}{p-2}\\right).\\]\n乘积在 \\(\\Re w>0\\) 正常收敛且全纯，\\(D_N\\) 在该域也全纯。一致条带范围明确为 \\(0<\\sigma_-<\\sigma_+\\)。",
+    "review": "新增显式乘积收敛与全纯义务，避免用\\(\\texttt{tprod}\\)的总化值替代解析Euler乘积。\\(w=1\\)的留数极限、非零留数和除此点外的全纯性共同保留“唯一单极点”。"
+  },
+  "Proposition 4.4": {
+    "title": "命题 4.4 · Beta 模型的全纯延拓",
+    "summary": "固定偶数 \\(N\\ge4\\)。原始 Beta 模型与函数方程给出的 `continuedModel` 在 `betaDomain` 上逐点相等；`continuedModel` 作为二复变量函数在 `analyticDomain`（论文的 \\(\\Omega\\)）上联合全纯。",
+    "review": "核对 \\(\\Omega\\) 中对 \\(s,z,s+z\\) 的限制，以及函数方程引入的 \\(N\\) 幂、Gamma 因子和密度函数参数。此条不需要 GRH。"
+  },
+  "Proposition 4.5": {
+    "title": "命题 4.5 · 算术余项的全纯与 Hermitian 性",
+    "summary": "若偶数 \\(N\\ge4\\) 满足 \\(\\operatorname{GRH}(N)\\)，则 \\(E_N(s,z)\\) 在 \\(\\Omega\\) 上联合全纯，具有变量交换与共轭对称性，并且 \\(E_N(s,\\overline z)\\) 是 Hermitian 核。",
+    "review": "检查余项的定义为特征标核减对角项再减模型，尤其符号必须与第 7 节 \\(c_\\phi\\mathfrak S(N)-G(N)\\) 的二次型方向一致。Hermitian 性不等于半正定性。"
+  },
+  "Proposition 5.1": {
+    "title": "命题 5.1 · 加权核与解析微分关系",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n在本节假设下，\\(E_N(s,\\bar z)\\) 与 \\(\\kappa_N(s,z)=E_N(s,\\bar z)/((1+s)(1+\\bar z))\\) 是 Hermitian 核，关于 \\(s,\\bar z\\) 全纯，且 \\(\\kappa_N\\) 延伸到闭带邻域。\n\\[(\\partial_{\\bar s}+j\\partial_z)E_N(s,\\bar z)=0,\\qquad \\sigma_*-\\alpha_N>1/90,\\quad\\beta-\\sigma_*=1/72.\\]",
+    "review": "补全全纯性、闭带邻域和 Fueter 算子桥接。开邻域针对两个全纯坐标；对象有效性均为结论，没有增添给用户承担的分析假设。"
+  },
+  "Lemma 5.2": {
+    "title": "引理 5.2 · Hardy 空间的 Fourier–Laplace 实现",
+    "summary": "任意 \\(\\alpha<\\beta\\)，Fourier–Laplace 变换是 \\(L^2(\\mathbb R,w_H\\,d\\tau)\\) 到带状 Hardy 空间的酉同构：\n\\[U\\psi(s)=\\frac1{\\sqrt{2\\pi}}\\int_{\\mathbb R}\\psi(\\tau)e^{s\\tau}\\,d\\tau,\\qquad w_H=e^{2\\alpha\\tau}+e^{2\\beta\\tau}.\\]\n\\[\\|U\\psi\\|_{H^2}^2=\\|h_\\alpha\\|_2^2+\\|h_\\beta\\|_2^2=\\int_{\\mathbb R}|\\psi(\\tau)|^2w_H(\\tau)\\,d\\tau.\\]\n左右 \\(L^2\\) 迹存在，迹像闭，内积采用对第一变量线性的原文约定。",
+    "review": "用加权 \\(L^2\\) 作为实现，补齐到原始 Hardy 函数的唯一表示、线性、等距及积分有效性。边界迹来自极限结论，没有放进原始 Hardy 定义当作额外前提。"
+  },
+  "Proposition 5.3": {
+    "title": "命题 5.3 · 余项算子的紧谱结构",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n边界加权核属于 \\(L^2(\\Gamma_N\\times\\Gamma_N)\\)，所定义的 \\(T_N\\) 紧、自伴并为 Hilbert–Schmidt。\n\\[\\sum_j\\mu_j(N)^2=\\|T_N\\|_{\\mathrm{HS}}^2=\\iint_{\\Gamma_N^2}\\frac{|E_N(s,\\bar z)|^2}{|1+s|^2|1+\\bar z|^2}\\,|ds|\\,|dz|.\\]\n非零特征值按重数计，且 \\(\\|T_N\\|=\\sup_j|\\mu_j(N)|\\)，在 \\(T_N\\ne0\\) 时取得最大值。",
+    "review": "补上四个边界分块的 \\(L^2\\) 归属、核作用可积性和 HS 范数选基无关性。完整特征基可含零特征值，它们不改变平方和与谱乘积。主标签恢复原文固定 \\(\\alpha_N=1/\\log N\\)、\\(N>e^{10}\\)。"
+  },
+  "Proposition 5.4": {
+    "title": "命题 5.4 · 再生核与点值估计",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n令 \\(\\Delta_N=\\beta-\\alpha_N\\)、\\(d_N(s)=\\min(\\Re s-\\alpha_N,\\beta-\\Re s)\\)。\n\\[k_z(s)=\\frac1{4\\Delta_N}\\csc\\frac{\\pi(s+\\bar z-2\\alpha_N)}{2\\Delta_N},\\qquad h(s)=\\langle h,k_s\\rangle.\\]\n\\[\\|k_s\\|^2=\\frac1{4\\Delta_N\\sin(\\pi(\\Re s-\\alpha_N)/\\Delta_N)}\\le\\frac1{8d_N(s)}.\\]\n\\[|E_N(s,\\bar z)|\\le\\frac{\\|T_N\\||1+s||1+z|}{8\\sqrt{d_N(s)d_N(z)}}.\\]\n在 \\(\\sigma_*\\) 线上进一步有 \\(|E_N(\\sigma_*+iv,\\sigma_*+it)|\\ll\\|T_N\\|(1+|v|+|t|)^2\\)，常数绝对。",
+    "review": "精确范数仍保留在 exact_norm；补齐原文式(5.9)与 \\(\\langle T_Nk_z,k_s\\rangle=\\kappa_N(s,z)\\)。一般端点 exact_norm 是原计算支持的 Hardy 几何恒等式，主命题使用固定算术带。"
+  },
+  "Proposition 6.1": {
+    "title": "命题 6.1 · 谱乘积的存在与内禀整性",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n谱乘积\n\\[X_N(q)=\\prod_j\\left(1-\\frac{4\\mu_j(N)^2}{\\delta_N^2}q(1-q)\\right)\\]\n在四元数空间局部一致收敛，与枚举无关，并给出 intrinsic entire slice-regular 函数。\n\\[\\operatorname{tr}(T_N^2)=\\sum_j\\mu_j(N)^2=\\|T_N\\|_{\\mathrm{HS}}^2.\\]\n在通常复切片上，\n\\[X_N(q)=\\det\\left(I-\\frac4{\\delta_N^2}q(1-q)T_N^2\\right).\\]",
+    "review": "Fredholm 接口改为先用正迹类 \\(A\\) 自身谱定义 \\(\\prod_j(1-t\\lambda_j(A))\\)，再单列 \\(A=T_N^2\\) 与 \\(\\mu_j(T_N)^2\\) 的桥接。这是本论文适用范围的谱定义，尚不是 Mathlib 通用 Fredholm API；收敛、谱有效性与选择无关性仍需用户审阅及后续证明。"
+  },
+  "Proposition 6.2": {
+    "title": "命题 6.2 · 谱函数的对称性与临界线取值",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n规范化与对称性为 \\(X_N(0)=X_N(1)=1\\)、\\(X_N(1-q)=X_N(q)\\)、\\(X_N(\\bar q)=\\overline{X_N(q)}\\)，从而 \\(X_N(1-\\bar q)=\\overline{X_N(q)}\\)。中心化乘积为\n\\[X_N(1/2+\\xi)=\\prod_j\\left(1-\\frac{\\mu_j^2}{\\delta_N^2}+\\frac{4\\mu_j^2}{\\delta_N^2}\\xi^2\\right).\\]\n对任意单位纯虚 \\(I\\)，\n\\[X_N(1/2+It)=\\prod_j\\left(1-\\frac{\\mu_j^2}{\\delta_N^2}(1+4t^2)\\right)\\in\\mathbb R,\\]\n与 \\(I\\) 无关；实 \\(x\\notin(0,1)\\) 时 \\(X_N(x)\\ge1\\)。",
+    "review": "保留所有对称、中心化与临界平面公式；给临界平面实乘积补 Multipliable，避免把总化乘积值视为已收敛。主标签恢复固定 \\(\\alpha_N\\) 与原文的大 \\(N\\) 假设。"
+  },
+  "Proposition 6.3": {
+    "title": "命题 6.3 · 零点球、实零点对与重数",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n设 \\(d_j=\\delta_N^2/\\mu_j(N)^2\\)。全部零点由以下三种情况给出：\n\\[\\begin{cases}\n\\Re q=1/2,\\quad|\\Im q|=\\sqrt{d_j-1}/2,&d_j>1,\\\\\nq=1/2\\text{（因子二重根）},&d_j=1,\\\\\nq=1/2\\pm\\sqrt{1-d_j}/2,&0<d_j<1.\n\\end{cases}\\]\n例外实根对有限，全部实根位于 \\((0,1)\\)；非实根球在单位四元数共轭下不变。每个切片上的反射、共轭保持重数，中心阶数为偶数。",
+    "review": "补上包括中心根在内的全部实根范围；保留双向零点分类，排除只由无限乘积产生的额外零点。通常复切片的重数由 Proposition 6.1 的 all_slices 桥接转移到所有切片；该编码仍需人审。"
+  },
+  "Theorem 6.1": {
+    "title": "定理 6.1 · 无零域与算子范数的精确等价",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n\\(\\mathcal R(N)\\iff\\|T_N\\|\\le\\delta_N\\)。对 \\(0<\\eta<1/2\\)，\n\\[X_N(q)\\ne0\\ (\\Re q>1-\\eta)\\iff\\|T_N\\|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}}.\\]\n若 \\(\\|T_N\\|\\le M_N\\) 且 \\(M_N>\\delta_N\\)，则\n\\[\\eta(M_N)=\\frac{1-\\sqrt{1-\\delta_N^2/M_N^2}}2\\in(0,1/2)\\]\n给出无零半空间，且在原文范围 \\(\\eta(M_N)\\le1/4\\) 时，\\(\\eta(M_N)\\asymp\\delta_N^2/M_N^2\\)。",
+    "review": "保留开半空间的严格不等式，因此范数一侧使用 \\(\\le\\)，允许边界零点。补上宽度的正性和小于 \\(1/2\\)。独立的 width_comparison 给原证明有理化直接得到的更一般代数界，不悄悄改主标签范围。 依赖复验新增抽象谱字典，供固定和可变条带复用；这是从原证明抽出的待证接口，不是原文新增命名定理。"
+  },
+  "Theorem 6.2": {
+    "title": "定理 6.2 · GRH 给出的基线无零域",
+    "summary": "存在绝对常数及绝对 \\(N\\) 下界，使所有充分大偶 \\(N\\) 在 \\(\\mathrm{GRH}(N)\\) 下满足\n\\[\\|T_N\\|\\le\\|T_N\\|_{\\mathrm{HS}}\\ll(\\log N)^2.\\]\n并存在\n\\[\\eta_N^{\\mathrm{GRH}}\\asymp\\frac{\\mathfrak S(N)}{N\\log N},\\qquad\nX_N(q)\\ne0\\quad(\\Re q>1-\\eta_N^{\\mathrm{GRH}}).\\]",
+    "review": "绝对常数置于“最终所有偶数 \\(N\\)”的量词之外。Lean 取 \\(c\\mathfrak S(N)/(N\\log N)\\) 为宽度见证，保留双边量级；另加真实 HS 归属为结论。"
+  },
+  "Lemma 6.4": {
+    "title": "引理 6.4 · 平均对数导数能量界",
+    "summary": "本条沿用原文全局设定：\\(N\\) 为偶数，\\(N>e^{10}\\)，满足 \\(\\mathrm{GRH}(N)\\)，并固定 \\(\\alpha_N=1/\\log N\\)、\\(\\beta=1/8\\)、\\(\\sigma_*=1/9\\)。\n对 \\(N>e^{10}\\)、\\(0<\\sigma\\le\\beta\\)，在本节 GRH 假设下，全部奇特征标（包括非本原）满足\n\\[\\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\\int_{\\mathbb R}\n\\frac{|g_\\chi(\\sigma+it)|^2}{1+t^2}\\,dt\n\\ll(\\log N)^2+\\sigma^{-2}.\\]\n隐常数独立于 \\(N,\\sigma\\)。",
+    "review": "原始 TeX 的命名引理与现稿一致。本轮补齐证明依赖：对 \\(X>1\\)，Perron 核满足 \\(\\lim_{v\\to0,\\,v\\ne0}vK_X(v)=1\\)；Poisson 核只在 \\(\\ell>0\\) 使用普通积分，\\(\\ell=0\\) 的作用另定义为恒等，并列出正参数归一化及 \\(P_1*P_\\ell=P_{1+\\ell}\\)。所有新增证明仍为空。"
+  },
+  "Proposition 6.5": {
+    "title": "命题 6.5 · 三个算子分量的迹与范数界",
+    "summary": "假设 \\(N\\) 为偶数、\\(N>e^{10}\\)、\\(\\mathrm{GRH}(N)\\)，固定 \\(\\alpha_N=1/\\log N\\)。\\(\\mathcal P_N,\\mathcal D_N\\) 为正迹类，\\(\\mathcal K_N\\) 为 Hilbert–Schmidt。存在独立于 \\(N\\) 的绝对常数 \\(C>0\\)，三个估计分别为：\n\\[\\|\\mathcal P_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal P_N\\le C\\bigl((\\log N)^2+\\alpha_N^{-2}\\bigr),\\]\n\\[\\|\\mathcal D_N\\|_{\\mathrm{HS}}\\le\\operatorname{tr}\\mathcal D_N\\le C\\alpha_N^{-2},\\]\n\\[\\|\\mathcal K_N\\|_{\\mathrm{HS}}\\le C\\alpha_N^{-2}.\\]\n右栏用局部名字 `P`、`D`、`K` 对应这三个算子。",
+    "review": "第三条模型算子估计独立显示，不再压缩成文字。配套陈述可展开查看：三个积分核的实现、边界积分可积性、\\(T_N=\\mathcal P_N-\\mathcal D_N-\\mathcal K_N\\)，以及 \\(d_n\\) 的 Hardy 实现。选择定义的零值回退不能代替存在性；相关证明仍为空。"
+  },
+  "Lemma 7.1": {
+    "title": "引理 7.1 · 权函数的 Mellin 反演与衰减",
+    "summary": "对合法权 \\(\\phi\\) 和伴随权 \\(\\Phi(u)=\\sqrt u\\,\\phi(u)\\)，任意 \\(\\sigma\\in\\mathbb R\\)、\\(u>0\\) 都有相应 Mellin 反演公式。每个固定竖带 \\(\\ell\\le\\Re s\\le H\\) 上，Mellin 变换满足 \\(C(1+|\\Im s|)^{-6}\\) 的统一衰减。\n若偶数 \\(N\\ge4\\) 满足 \\(\\operatorname{GRH}(N)\\)，则对任意奇特征标 \\(\\chi\\) 和 \\(0<\\sigma\\le1/9\\)，有限加权特征标和满足\n\\[P_\\chi=-\\frac1{2\\pi i}\\int_{(\\sigma)}N^s\\widetilde\\Phi(s)g_\\chi(s)\\,ds.\\]\n反演及特征积分均绝对收敛；反演式为\n\\[\\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde\\Phi(s)u^{-s}\\,ds\\qquad(u>0).\\]\n双特征矩式 (7.3) 与 Lemma 3.5 的双积分相同，也明确保留绝对可积性。",
+    "review": "补齐单积分与反演的 \\(\\mathrm{Integrable}\\)，并把单特征竖线范围恢复为原文 \\(0<\\sigma\\le1/9\\)。双积分此前归在 Lemma 3.5 下，现于本条同步显示；全局主权仍为 \\(C_c^\\infty\\)，六阶衰减只使用其中六阶正则性。"
+  },
+  "Lemma 7.2": {
+    "title": "引理 7.2 · 对角项与模型项的反演",
+    "summary": "固定偶数 \\(N\\ge4\\)、合法权 \\(\\phi\\) 及 \\(0<\\sigma\\le1/9\\)。对角级数的双 Mellin 积分等于 \\(D(N)\\)；密度延拓与有符号 Beta 核的双 Mellin 积分等于 \\(-c_\\phi\\mathfrak S(N)\\)。两个双积分都绝对可积。\n两式分别为\n\\[\\frac1{(2\\pi i)^2}\\iint_{(\\sigma)^2}N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)D_N(s+z)\\,ds\\,dz=D(N),\\]\n\\[\\frac1{(2\\pi i)^2}\\iint_{(\\sigma)^2}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathfrak S_N(s+z)K_-(s,z)\\,ds\\,dz=-c_\\phi\\mathfrak S(N).\\]\n还保留卷积的积分存在性、正半轴实现与原文积分区间的等价，以及 \\(J_0(1)=c_\\phi\\)。",
+    "review": "核心两个公式及两项绝对收敛此前完整。\\(J_0\\) 在 Lean 中用正半轴积分实现；新增声明确认其在主权零延拓假设下等于原文的 \\(\\int_0^y\\)，并列出积分存在性。"
+  },
+  "Proposition 7.3": {
+    "title": "命题 7.3 · 余项双积分的算术意义",
+    "summary": "固定满足 \\(\\operatorname{GRH}(N)\\) 的偶数 \\(N\\ge4\\)、合法权 \\(\\phi\\) 和 \\(0<\\sigma\\le1/9\\)。含 \\(N^{s+z}\\)、两个权 Mellin 变换与余项 \\(E_N(s,z)\\) 的双 Mellin 积分，精确等于\n\\[c_\\phi\\mathfrak S(N)-G(N).\\]\n对应二变量实积分绝对可积。",
+    "review": "检查减法方向是 \\(c_\\phi\\mathfrak S(N)-G(N)\\)。绝对可积单列在补充声明中，后续换序和移线仍需证明，不能仅因总化积分在 Lean 中有值便使用。"
+  },
+  "Proposition 7.4": {
+    "title": "命题 7.4 · 权泛函的 Riesz 向量与精确范数",
+    "summary": "对合法主权 \\(\\phi\\) 与偶数 \\(N>e^{10}\\)，每条内部竖线给出同一个连续泛函 \\(\\ell_N\\) 和 Riesz 向量 \\(v_N\\)。令 \\(V(u)=\\Phi(u)-u\\Phi'(u)\\)，则\n\\[Q_N=\\|\\ell_N\\|^2=\\|v_N\\|^2=\\frac1{2\\pi}\\int_0^\\infty\\frac{(Nu)^{2\\alpha_N}|V(u)|^2}{1+(Nu)^{-2\\Delta_N}}\\,\\frac{du}{u}\\le e^2\\mathcal E_\\phi.\\]\n并有 \\(Q_N=e^2\\mathcal E_\\phi+O_\\phi(1/\\log N)\\)，其中 \\(\\mathcal E_\\phi=(2\\pi)^{-1}\\int_0^\\infty |V(u)|^2du/u\\)。",
+    "review": "TeX 第3600、3627–3636行明确使用实变量权 \\(V\\)。此前中文误用 \\(\\Psi(u)\\)；\\(\\Psi_N(s)=N^s\\widetilde\\Phi(s)(1+s)\\) 是第3725行另一个复积分因子。Lean的 `derivativeWeight` 及范数公式原本正确。泛函范数计算自身不使用GRH。"
+  },
+  "Theorem 7.1": {
+    "title": "定理 7.1 · Goldbach 误差的算子二次型",
+    "summary": "对满足 \\(\\operatorname{GRH}(N)\\) 的偶数 \\(N>e^{10}\\)、合法权 \\(\\phi\\) 和标准 Hardy 实现，精确地有\n\\[c_\\phi\\mathfrak S(N)-G(N)=\\langle T_Nv,v\\rangle,\\qquad |c_\\phi\\mathfrak S(N)-G(N)|\\le Q_N\\|T_N\\|.\\]\n补充声明进一步给出\n\\[|c_\\phi\\mathfrak S(N)-G(N)|\\le e^2\\mathcal E_\\phi\\|T_N\\|,\\]\n使常数只依赖权函数。",
+    "review": "`paperInner` 在第一变量线性，Lean 标准 `inner` 的参数次序已交换。检查 \\(v\\) 属于同一左边界的 Hardy 空间，且二次型右端虽为复数，等式左端嵌入自实数。"
+  },
+  "Lemma 7.5": {
+    "title": "引理 7.5 · 从无零宽度到相对算术误差",
+    "summary": "给定合法权 \\(\\phi\\)，存在 \\(C>0\\)。对满足 \\(\\operatorname{GRH}(N)\\) 的偶数 \\(N>e^{10}\\)，如果 \\(0<\\eta\\le1/4\\) 且谱函数在 \\(\\Re q>1-\\eta\\) 无零，则\n\\[\\frac{|G(N)-c_\\phi\\mathfrak S(N)|}{c_\\phi\\mathfrak S(N)}\\le C\\sqrt{\\frac{(\\log N)^3}{N\\eta\\mathfrak S(N)}}.\\]\n常数在选择 \\(N,\\eta\\) 之前给出。\n渐近准则 (7.20) 也保留：沿满足上述 GRH 与无零条件的偶数，若\n\\[\\frac{N\\eta_N\\mathfrak S(N)}{(\\log N)^3}\\longrightarrow\\infty,\\]\n则 \\(G(N)/(c_\\phi\\mathfrak S(N))\\to1\\)。",
+    "review": "补齐原文 (7.20)，用先选 \\(\\varepsilon\\)、再统一选阈值 \\(B\\)、最后量化 \\(N,\\eta\\) 的形式表达，可用于任意满足条件的子序列；没有另加全体大偶数均满足 GRH 的假设。"
+  },
+  "Proposition A.1": {
+    "title": "命题 A.1 · 左边界 c/log N 的实现",
+    "summary": "固定合法主权 \\(\\phi\\)、\\(c>0\\)。对偶数 \\(N\\ge4\\)、\\(N>e^{10c}\\) 且满足 \\(\\mathrm{GRH}(N)\\)，令 \\(\\alpha_{N,c}=c/\\log N\\)，有\n\\[\\alpha_{N,c}<1/10,\\quad \\Delta_{N,c}>1/40,\\quad \\sigma_*-\\alpha_{N,c}>1/90,\\quad\\beta-\\sigma_*=1/72.\\]\n变量条带上的实际边界积分核定义紧、自伴、HS算子，并保留新边界距离下的点估计。其泛函与 Riesz 向量满足\n\\[Q_{N,c}=\\|\\ell_{N,c}\\|^2=\\|v_{N,c}\\|^2\\le e^{2c}\\mathcal E_\\phi,\\qquad Q_{N,c}=e^{2c}\\mathcal E_\\phi+O_{\\phi,c}(1/\\log N).\\]\n\\[c_\\phi\\mathfrak S(N)-G(N)=\\langle T_{N,c}v_{N,c},v_{N,c}\\rangle,\\quad |c_\\phi\\mathfrak S(N)-G(N)|\\le Q_{N,c}\\|T_{N,c}\\|.\\]\n渐近式先固定c；配对不依赖c，c=1还原主文。",
+    "review": "原TeX第3954–3958行明确沿用积分算子定义；固定 \\(\\alpha_N\\) 的 Proposition5.3 不能替代 \\(c\\ne1\\) 的表示义务。新增配套陈述把边界核 \\(L^2\\)、`RepresentsKernel`、两个作用积分的可积性及谱数据存在性放在结论中，没有加用户前提。"
+  },
+  "Proposition A.2": {
+    "title": "命题 A.2 · 固定 c 的谱条件与渐近式",
+    "summary": "固定合法权 \\(\\phi\\) 和 \\(c>0\\)。对偶数 \\(N\\ge4\\)、\\(N>e^{10c}\\) 且满足 \\(\\mathrm{GRH}(N)\\)，谱条件 \\(\\mathsf R\\) 与 \\(\\|T\\|\\le\\delta\\) 等价，无零宽度 \\(\\eta\\) 与 \\(\\|T\\|\\le\\delta/[2\\sqrt{\\eta(1-\\eta)}]\\) 等价；代入 \\(\\eta_N(h)\\) 后，后者为\n\\[\\|T\\|\\le\\frac{\\mathfrak S(N)}{2h(N)\\sqrt{1-\\eta_N(h)}}.\\]\n存在 \\(C,c_0>0\\)，给出固定 \\(c\\) 下的 GRH 基线 \\(\\|T\\|\\le C(\\log N)^2\\) 及宽度 \\(c_0\\mathfrak S(N)/(N\\log N)\\)。在 `HypothesisSAt(c,h)` 或 `HypothesisRAt(c)` 下，对每个充分大且满足 GRH 的偶数分别得到误差上界 \\(C\\mathfrak S(N)/h(N)\\) 或 \\(C\\delta_N\\)。一般无零等价要求 \\(0<\\eta<1/2\\)；代入 \\(h\\) 时要求 \\(h(N)>0\\) 及 \\(0<\\eta_N(h)\\le1/4\\)。\n量词为“\\(\\mathsf S_c(h)\\Rightarrow\\forall\\) 充分大偶数 \\(N\\)，\\(\\mathrm{GRH}(N)\\Rightarrow\\) 误差界”，不要求全部充分大偶数事先满足 GRH。常数在 \\(h\\) 之前选定。",
+    "review": "修正旧版额外要求“所有充分大偶数均满足 GRH”的量词弱化。现为逐个 N 的 GRH 条件，并新增逐点误差声明；\\(c\\) 仍先于 N 固定，未增加 \\(c\\)-一致性。"
+  },
+  "Lemma A.3": {
+    "title": "引理 A.3 · 权泛函与算子基线的平衡",
+    "summary": "对合法权 \\(\\phi\\)，存在仅依赖权函数的正常数 \\(L,U\\)，并有独立于权函数的绝对常数 \\(C>0\\)，使对充分大且满足 \\(\\operatorname{GRH}(N)\\) 的偶数 \\(N\\)、任意 \\(0<a<1/10\\)，有\n\\[LN^{2a}\\le Q_a\\le UN^{2a},\\qquad \\|T_a\\|\\le M_a=C\\bigl((\\log N)^2+a^{-2}\\bigr).\\]\n令 \\(a=c/\\log N\\)，补充声明给出 \\(Q_aM_a\\) 与 \\((\\log N)^2e^{2c}(1+c^{-2})\\) 的双边比较；平衡因子在 \\(c\\downarrow0\\) 和 \\(c\\to\\infty\\) 时都趋于无穷。\n当目标范数 \\(\\mathfrak S(N)/(hQ_a)\\) 与基线范数 \\(M_a\\) 对应的精确无零宽度均可用且不超过 \\(1/4\\) 时，两宽度之比与下式双边可比：\n\\[\\frac{h^2(\\log N)^4}{\\mathfrak S(N)^2}e^{4c}(1+c^{-2})^2.\\]",
+    "review": "新增无权函数参数的绝对算子界声明，以固定 C 的独立性；原有声明中 C 写在 \\(\\phi\\) 后，不能单独表达这一点。宽度比较使用实际宽度函数，并逐项保留两宽度合法的前提。"
+  },
+  "Proposition A.4": {
+    "title": "命题 A.4 · 固定模数下逼近边界的障碍",
+    "summary": "固定满足GRH的偶数 \\(N\\ge4\\)，并取某个奇特征的非平凡零点 \\(1/2+i\\gamma\\)。令\n\\[C_{N,\\gamma}=\\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}m_\\chi(1/2+i\\gamma)^2>0.\\]\n\\[\\liminf_{c\\downarrow0}c\\|T_{N,c}\\|\\ge\\frac{2C_{N,\\gamma}\\log N}{1+\\gamma^2}>0.\\]\n存在 \\(z_N>0\\)、\\(0<c_N\\le\\log N/24\\)，使 \\(0<c<c_N\\) 时 \\(\\|T_{N,c}\\|\\ge z_N/c\\)、R失败；任何合法 \\(0<\\eta\\le1/4\\) 都满足\n\\[\\eta\\le\\frac{\\delta_N^2c^2}{3z_N^2}.\\]\n证明中 \\(R_N\\) 的近零收敛与 \\(\\mathfrak S(N)R_N(0)=1\\) 仍作为配套义务。",
+    "review": "TeX第4187–4190行用 \\(C_{N,\\gamma}\\)，中文恢复该名称；Lean的 `poleCoefficient` 已按原式定义，数学内容不改。固定N后令c趋零，不能与固定c的大N渐近混淆。"
+  },
+  "Proposition B.1": {
+    "title": "命题 B.1 · 固定 \\(N=30030\\) 的宽权计数公式",
+    "summary": "固定 \\(N=30030\\)、\\(A=16\\)、\\(L=1000\\)。截断函数 \\(\\eta\\) 为 \\(C^6\\)，关于N/2对称，并在 \\([L,N-L]\\) 恒为1。伴随权为W，宽权为 \\(f(u)=W(u)/\\sqrt u\\)；在支集内\n\\[f(u)f(1-u)=\\frac{\\eta(Nu)^2}{\\log(Nu)\\log(N(1-u))}.\\]\n精确计数公式为\n\\[r_G(N)=\\frac N2\\mathcal J-\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E.\\]",
+    "review": "TeX第4292–4303行区分三个对象：`wideCutoff`=\\(\\eta\\)、`wideCompanion`=\\(W\\)、`wideWeight`=\\(f\\)。旧中文混用W和\\(\\varphi_W\\)，现恢复原符号；Lean定义原本正确。有序素数幂修正除2，边缘无序修正不除2，本计数式无GRH假设。"
+  },
+  "Lemma B.2": {
+    "title": "引理 B.2 · 宽权的特征标积分与二次矩",
+    "summary": "固定 \\(N=30030\\)，对全部 Dirichlet 特征标 \\(\\chi\\)，实部为 \\(1\\) 的计数积分绝对可积，并满足\n\\[I_\\chi=-\\sum_{n<N}a_n\\chi(n).\\]\n宽权相关和等于由这些精确积分构成的有符号特征标二次矩；对角计数矩等于无符号二次矩。两种矩都按 \\(\\varphi(30030)=5760\\) 归一化。",
+    "review": "本条使用全部特征标，不能误换为仅奇特征标。检查 \\(\\chi(-1)\\) 的符号权、积分等式前的负号，以及初始积分线处不需要 GRH。"
+  },
+  "Lemma B.3": {
+    "title": "引理 B.3 · 积分误差传播到素数对计数",
+    "summary": "给定全部特征标积分的近似值 \\(\\widehat I_\\chi\\) 和 \\(\\varepsilon\\ge0\\)，若\n\\[\\frac1{5760}\\sum_\\chi|I_\\chi-\\widehat I_\\chi|^2\\le\\varepsilon^2,\\]\n则宽权相关和误差不超过 \\(2\\sqrt{\\widehat D}\\,\\varepsilon+\\varepsilon^2\\)。\n因此，真实无序素数对数与由 \\(\\widehat I\\) 得到的近似计数之差，至多为 `countError` 给出的界，即上述误差乘 \\(N/2\\)。\n现显式展示整数信息：\n\\[r_G(N)\\in[\\widehat r_G-\\varepsilon_r,\\widehat r_G+\\varepsilon_r]\\cap\\mathbb Z.\\]\n同时保留主项 \\(A=N\\mathfrak S(N)c_f/2\\) 的归一化。整数性此前已由自然数计数蕴含，此次是展示补齐。",
+    "review": "旧版绝对误差界结合计数的自然数类型，已逻辑蕴含整数区间，因此此处是展示补齐；主积分等式则新增明确接口。此条没有声称已形式化原文的浮点近似数据或最终 905 的数值证书。"
+  },
+  "Proposition B.4": {
+    "title": "命题 B.4 · 宽权余项的同一算子表示",
+    "summary": "假设 \\(\\operatorname{GRH}(30030)\\)。宽权泛函由其 Riesz 向量 \\(v_W\\) 表示，且宽权余项恰等于\n\\[\\langle T_{30030}v_W,v_W\\rangle,\\]\n其中 \\(T\\) 是主文标准左边界下的余项算子。\n该泛函连续且积分绝对收敛；宽权为 \\(C^6\\)，紧支撑于 \\((0,1)\\)。不把它误套进主权的窄支撑条件。",
+    "review": "补齐泛函绝对可积性、连续线性映射存在性和宽权专用正则性；没有把主权的 IsWeight 条件误套到宽权。固定条带几何证明参数 ha 是真值算术侧条件，仍留作待证。"
+  },
+  "Proposition B.5": {
+    "title": "命题 B.5 · 2562 阶有限谱模型",
+    "summary": "假设 \\(\\operatorname{GRH}(30030)\\)。由两条边界上各 \\(1281\\) 个节点及梯形权构成的复矩阵具有所选择的实特征值列表和酉对角化。\n有限行列式谱函数等于\n\\[\\prod_j\\left(1-\\frac{4\\lambda_j^2q(1-q)}{\\delta^2}\\right),\\]\n满足 \\(q\\mapsto1-q\\) 对称性。若该矩阵的算子范数不超过 \\(\\delta\\)，则它的全部复零点满足 \\(\\Re q=1/2\\)。",
+    "review": "保留 \\(\\mathrm{GRH}(30030)\\)：原文第 57 页明确把 Hardy 解释和有限谱图景置于这一总假设下。有限矩阵定理不包含到无限维算子 \\(T_N\\) 的误差证书，亦不把数值特征值近似当成已证明范数界。"
+  },
+  "LiLiuGoldbach16.singularSeries_eq_existing": {
+    "title": "辅助接口 · 与已有奇异级数的归一化对应",
+    "summary": "对每个自然数 \\(N\\)，本文的 `singularSeries(N)` 等于现有项目 `MathlibNt.SieveTheory.SingularSeries.liuSingularSeries(N)` 的两倍。",
+    "review": "这是直接复用定义的归一化接口，证明仍按用户要求留空。检查原文 \\(\\mathfrak S(N)\\) 的前导因子 \\(2\\)；不要使用名称相近的有限截断奇异级数。"
+  },
+  "LiLiuGoldbach16.interiorLine_memLp": {
+    "title": "辅助接口 · Hardy 内部竖线的 \\(L^2\\) 归属",
+    "summary": "对任意 \\(a<b\\)、\\(a<x<b\\) 和加权 \\(L^2\\) 元素 \\(\\psi\\)，函数\n\\[t\\longmapsto\\operatorname{FourierLaplace}(\\psi)(x+it)\\]\n属于实线 Lebesgue 测度下的 \\(L^2\\)。该陈述用于将内部竖线函数装入 Lean 的 `Lp` 类型。",
+    "review": "这是定义 `interiorLine` 所需的分析证明义务；不是附加给用户的任意假设。需要检查 Fourier–Laplace 积分的存在性与加权范数对内部竖线的控制。"
+  },
+  "LiLiuGoldbach16.boundaryTraces_exist": {
+    "title": "辅助接口 · 两侧 \\(L^2\\) 边界迹存在",
+    "summary": "对任意 \\(a<b\\) 和 Hardy 模型中的 \\(\\psi\\)，存在一对实线 \\(L^2\\) 元素，分别是内部竖线函数在 \\(x\\) 从带内趋向 \\(a,b\\) 时的 \\(L^2\\) 极限。",
+    "review": "边界迹通过这个待证存在性声明作选择。检查两次趋近均从带内进行，滤子是在开区间 \\((a,b)\\) 的子类型上拉回，且极限拓扑为 \\(L^2\\) 范数拓扑。"
+  },
+  "LiLiuGoldbach16.primePair_consequence": {
+    "title": "辅助推论 · 中央区间内的素数对下界",
+    "summary": "给定合法权 \\(\\phi\\)，假设所有充分大的偶数 \\(N\\) 满足 \\(\\operatorname{GRH}(N)\\)，并且 `HypothesisR` 成立，或存在 \\(h\\) 使 `HypothesisS(h)` 成立。则存在 \\(C>0\\)，使所有充分大的偶数 \\(N\\) 满足\n\\[\\#\\left\\{p\\in\\mathbb N:\\frac N3\\le p\\le\\frac{2N}3,\\ \\operatorname{Prime}(p)\\land\\operatorname{Prime}(N-p)\\right\\}\\ge C\\frac{\\mathfrak S(N)N}{(\\log N)^2}.\\]",
+    "review": "这里 `PrimePairCount` 按 \\(p\\) 计数，是有序中央素数对计数，不是附录 B 的无序对数。需要从 Mangoldt 加权和剔除高次素数幂；现有另一项目相关结果只是后续可移植依赖。"
+  }
+}

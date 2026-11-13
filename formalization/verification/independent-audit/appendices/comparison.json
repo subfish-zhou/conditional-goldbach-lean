@@ -1,0 +1,362 @@
+[
+  {
+    "expected": "TexAuditAB.A1",
+    "actual": "LiLiuGoldbach16.proposition_A_1",
+    "tex_lines": [
+      3949,
+      3989
+    ],
+    "label": "A.1",
+    "original_formula": "固定 c>0；偶 N≥4,N>exp(10c),GRH(N)；Q=e^(2c)/(2π)∫|V|²du/u+Oφ,c(1/logN)，Q≤主项，r=<Tv,v>，|r|≤Q||T||；紧、自伴、HS及点值界。",
+    "implicit_conditions": "∀φ∈IsWeight ∀c>0，逐N结论；∃Cφ,c∃N0φ,c∀偶N≥N0 的渐近式。",
+    "quantifiers": "∀φ∈IsWeight ∀c>0，逐N结论；∃Cφ,c∃N0φ,c∀偶N≥N0 的渐近式。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "已检查：c不随N变化；固定c的常数容许依赖φ,c；c=1由默认参数定义化归。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+      "line": 55
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A1_operator",
+    "actual": "LiLiuGoldbach16.proposition_A_1_operator_spec",
+    "tex_lines": [
+      3954,
+      4004
+    ],
+    "label": "A.1 operator",
+    "original_formula": "变边界核仍表示同一残差算子；闭边界核平方可积，边界作用可积，存在平方可和谱。",
+    "implicit_conditions": "∀N,c在A1范围；所有Hardy函数及内点。",
+    "quantifiers": "∀N,c在A1范围；所有Hardy函数及内点。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "命名命题的构造/算子补充；已检查无额外算术假设。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableStripOperators.lean",
+      "line": 151
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A2",
+    "actual": "LiLiuGoldbach16.proposition_A_2",
+    "tex_lines": [
+      4018,
+      4100
+    ],
+    "label": "A.2",
+    "original_formula": "R↔||T||≤δ；开半空间零点排除↔δ/(2√η(1−η))；S↔S(N)/(2h√(1−η))；固定c的GRH界与S/R误差。",
+    "implicit_conditions": "固定φ,c后∃C,c0，再∀h；S所需N0在∀h之后；GRH恒作为条件。",
+    "quantifiers": "固定φ,c后∃C,c0，再∀h；S所需N0在∀h之后；GRH恒作为条件。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "已检查开边界严格性、η∈(0,1/2)、S宽≤1/4与h>0；φ无关算子常数另由A2_uniform补足。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableConsequences.lean",
+      "line": 19
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A2_pointwise",
+    "actual": "LiLiuGoldbach16.proposition_A_2_pointwise",
+    "tex_lines": [
+      4058,
+      4068
+    ],
+    "label": "A.2 pointwise",
+    "original_formula": "|G−cφS|≤Cφ,c S/h 或 Cφ,c δ；常数独立h。",
+    "implicit_conditions": "∀φ,c ∃C>0 ∀N ∀h；不把h放到C之前。",
+    "quantifiers": "∀φ,c ∃C>0 ∀N ∀h；不把h放到C之前。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "比eventual版更强的逐点误差保证；不要求h先验发散也可在单点使用。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+      "line": 116
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A2_uniform",
+    "actual": "LiLiuGoldbach16.variable_uniform_spectral_bound",
+    "tex_lines": [
+      4053,
+      4056
+    ],
+    "label": "A.2 uniform witness",
+    "original_formula": "||T||≪c(logN)²；可取ηGRH=c0(c)S/(NlogN)，因而ηGRH≍c S/(NlogN)。",
+    "implicit_conditions": "∀c>0 ∃C≥1,c0>0 ∃N0 ∀偶N≥N0；不含φ或h。",
+    "quantifiers": "∀c>0 ∃C≥1,c0>0 ∃N0 ∀偶N≥N0；不含φ或h。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "补上主命题类型中φ先于常数量词的依赖歧义；宽度是所供给的宽度，不是最大零自由宽度。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "line": 72
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A3",
+    "actual": "LiLiuGoldbach16.lemma_A_3",
+    "tex_lines": [
+      4110,
+      4134
+    ],
+    "label": "A.3",
+    "original_formula": "Qα≍φ N^(2α)，||T||≤C((logN)²+α⁻²)；e^(2c)(1+c⁻²)在0+及∞发散。",
+    "implicit_conditions": "φ固定后∃上下常数和N0，∀0<α<1/10；绝对C另见A3_absolute。",
+    "quantifiers": "φ固定后∃上下常数和N0，∀0<α<1/10；绝对C另见A3_absolute。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "主声明C依赖φ的表面歧义由独立绝对算子界消除。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "line": 53
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A3_absolute",
+    "actual": "LiLiuGoldbach16.lemma_A_3_absolute_operator_bound",
+    "tex_lines": [
+      4112,
+      4119
+    ],
+    "label": "A.3 absolute C",
+    "original_formula": "存在绝对C，使所有充分大偶N且GRH及0<α<1/10时 ||T||≤C((logN)²+α⁻²)。",
+    "implicit_conditions": "∃C>0∃N0∀N∀α；无φ、c、h参数。",
+    "quantifiers": "∃C>0∃N0∀N∀α；无φ、c、h参数。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "已检查绝对性，不仅靠主lemma的依赖φ常数。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "line": 42
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A3_balance",
+    "actual": "LiLiuGoldbach16.lemma_A_3_balance",
+    "tex_lines": [
+      4119,
+      4134
+    ],
+    "label": "A.3 product",
+    "original_formula": "QαMα≍φ(logN)²e^(2c)(1+c⁻²)及平方比例表达式。",
+    "implicit_conditions": "C>0固定，∃L,U,N0∀N∀c满足0<αN,c<1/10；L,U依赖φ,C而不依赖c。",
+    "quantifiers": "C>0固定，∃L,U,N0∀N∀c满足0<αN,c<1/10；L,U依赖φ,C而不依赖c。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "C为A3_absolute的绝对常数时恢复TeX的≍φ；并未假设对无约束c及固定N有效。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+      "line": 36
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A3_widths",
+    "actual": "LiLiuGoldbach16.lemma_A_3_width_ratio",
+    "tex_lines": [
+      4127,
+      4159
+    ],
+    "label": "A.3 widths",
+    "original_formula": "充分误差宽与算子界供给宽之比≍φ h²(logN)^4/S²·e^(4c)(1+c⁻²)²。",
+    "implicit_conditions": "固定φ,C；∃L,U,N0∀N,c,h；两宽均≤1/4且由正范数的反函数给出。",
+    "quantifiers": "固定φ,C；∃L,U,N0∀N,c,h；两宽均≤1/4且由正范数的反函数给出。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "δ<requiredNorm,suppliedNorm与正δ是反函数有效域；在正范数且宽≤1/4时不是额外算术条件。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+      "line": 95
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A4",
+    "actual": "LiLiuGoldbach16.proposition_A_4",
+    "tex_lines": [
+      4181,
+      4208
+    ],
+    "label": "A.4",
+    "original_formula": "C=2/φ(N)Σodd mχ(1/2+iγ)²>0；liminf c||T||≥2C logN/(1+γ²)>0；||T||≥z/c，R失败，η≤δ²c²/(3z²)。",
+    "implicit_conditions": "先固定偶N≥4、GRH及选定γ零点；∀ε>0∃c0>0∀0<c<c0；∃z,cobs≤logN/24。",
+    "quantifiers": "先固定偶N≥4、GRH及选定γ零点；∀ε>0∃c0>0∀0<c<c0；∃z,cobs≤logN/24。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "已检查系数2、平方重数、分母1+γ²、liminf ε量词、小c与固定N顺序；NeZero/ha为类型良定义条件。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleObstruction.lean",
+      "line": 11
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.A4_regular",
+    "actual": "LiLiuGoldbach16.proposition_A_4_baseline_product",
+    "tex_lines": [
+      4221,
+      4229
+    ],
+    "label": "A.4 Euler regularity",
+    "original_formula": "RN(w)=∏p|N(1−p^−1−w)∏p>2,p∤N(1+(2p^−w−p^−2w)/(p(p−2)))在0附近解析；S(N)RN(0)=1。",
+    "implicit_conditions": "∀偶N≥4∃ε>0∀|w|<ε；无GRH要求。",
+    "quantifiers": "∀偶N≥4∃ε>0∀|w|<ε；无GRH要求。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "该补充本身不声称Euler因子分解P=ζR；该恒等式在支持定理另行建立。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BaselineEuler.lean",
+      "line": 123
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.B1",
+    "actual": "LiLiuGoldbach16.proposition_B_1",
+    "tex_lines": [
+      4286,
+      4327
+    ],
+    "label": "B.1",
+    "original_formula": "η为C6、对称、[1000,N−1000]为1；f(u)f(1−u)=η(Nu)²/(log(Nu)log(N(1−u)))；rG=NJ/2−Cpp/2+E。",
+    "implicit_conditions": "N=30030,A=16,L=1000；无GRH，无谱假设。",
+    "quantifiers": "N=30030,A=16,L=1000；无GRH，无谱假设。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "已检查proper powers按有序对求和、至少一指数≥2、(pq,N)=1、分母kℓ和边缘校正只计无序素数对。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WidePrimePowerCount.lean",
+      "line": 143
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.B2",
+    "actual": "LiLiuGoldbach16.lemma_B_2",
+    "tex_lines": [
+      4351,
+      4378
+    ],
+    "label": "B.2",
+    "original_formula": "Iχ绝对收敛且=−Σa_nχ(n)；J=5760⁻¹Σχ(−1)|Iχ|²；D=5760⁻¹Σ|Iχ|²。",
+    "implicit_conditions": "全部5760字符，包括principal；无GRH。",
+    "quantifiers": "全部5760字符，包括principal；无GRH。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "logDerivative χ s= L′/L(1/2+s)确认在3/2线上；range包含0但该项为0；χ(−1)取实部与其±1值相容。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMoments.lean",
+      "line": 84
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.B3",
+    "actual": "LiLiuGoldbach16.lemma_B_3",
+    "tex_lines": [
+      4443,
+      4463
+    ],
+    "label": "B.3",
+    "original_formula": "若ε≥0且平均误差平方≤ε²，则|J−Jhat|≤2√Dhat ε+ε²；rG位于[rhat−εr,rhat+εr]∩Z。",
+    "implicit_conditions": "∀Ihat∀ε≥0；准确有限校正；ε输入必须满足真实积分误差界。",
+    "quantifiers": "∀Ihat∀ε≥0；准确有限校正；ε输入必须满足真实积分误差界。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "无GRH；包含整数性。不能据此宣称实际数值误差输入已验证。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideError.lean",
+      "line": 11
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.B3_main",
+    "actual": "LiLiuGoldbach16.lemma_B_3_main_integral",
+    "tex_lines": [
+      4413,
+      4428
+    ],
+    "label": "B.3 main identity",
+    "original_formula": "A=NS c_f/2；rG=A−NB/2−Cpp/2+E。",
+    "implicit_conditions": "固定N和实际宽权；无数值近似假设。",
+    "quantifiers": "固定N和实际宽权；无数值近似假设。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "cross mass用∫f(u)f(1−u)，不是∫f²。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMainIntegral.lean",
+      "line": 65
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.B4",
+    "actual": "LiLiuGoldbach16.proposition_B_4",
+    "tex_lines": [
+      4501,
+      4520
+    ],
+    "label": "B.4",
+    "original_formula": "GRH(30030)下B=<T vW,vW>，vW表示ℓW(h)=(2πi)^−1∫N^s Wtilde(s)(1+s)h(s)ds且ℓW有界。",
+    "implicit_conditions": "所有Hardy h；N固定；ha:α<β由30030>e^10可证，不添加数学假设。",
+    "quantifiers": "所有Hardy h；N固定；ha:α<β由30030>e^10可证，不添加数学假设。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "已检查实际Riesz关系与有界线性泛函同列结论；无HypothesisR；使用同一残差核。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMellinResidual.lean",
+      "line": 58
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.B4_weight",
+    "actual": "LiLiuGoldbach16.proposition_B_4_weight",
+    "tex_lines": [
+      4522,
+      4530
+    ],
+    "label": "B.4 wide support",
+    "original_formula": "f∈C6_c(0,1)；cross mass和主积分可积。",
+    "implicit_conditions": "实际f，不要求IsWeight主文的C∞、[1/3,2/3]或反射对称。",
+    "quantifiers": "实际f，不要求IsWeight主文的C∞、[1/3,2/3]或反射对称。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "FiniteModelWeight只要求C6及支撑内含(0,1)；modelMass为cross mass。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideWeight.lean",
+      "line": 163
+    },
+    "assignment_typecheck": "passed"
+  },
+  {
+    "expected": "TexAuditAB.B5",
+    "actual": "LiLiuGoldbach16.proposition_B_5",
+    "tex_lines": [
+      4533,
+      4561
+    ],
+    "label": "B.5",
+    "original_formula": "2562节点，两边界[-40,40]，步1/16，端点半权，无1/(2π)；X=det(I−4q(1−q)C²/δ²)=∏(1−4λj²q(1−q)/δ²)，X(1−q)=X(q)，||C||≤δ⇒所有零点Re=1/2。",
+    "implicit_conditions": "章节继承GRH；实谱由酉对角化绑定真实矩阵；条件范数界未声称实际数值通过。",
+    "quantifiers": "章节继承GRH；实谱由酉对角化绑定真实矩阵；条件范数界未声称实际数值通过。",
+    "human_semantic_conclusion": "matched_with_explicit_interpretation",
+    "findings": "已检查两√w、核分母、复共轭和Euclidean算子范数；未把有限矩阵等同无限Hardy算子。",
+    "mechanical_status": "pending_root_external_comparator",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean",
+      "line": 141
+    },
+    "assignment_typecheck": "passed"
+  }
+]

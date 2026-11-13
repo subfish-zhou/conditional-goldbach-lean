@@ -1,0 +1,44 @@
+{
+  "goldbach_revision": "24490c2ab7787238f816d771c9176411dcbda503",
+  "package_source_provenance": [
+    {
+      "source_family": "MathlibNt and shared foundations",
+      "upstream": "https://github.com/UyNewNas/chen-theorem-lean",
+      "kind": "provenance of bundled adapted source, not an extra Lake package or use of the Chen endpoint",
+      "evidence_file": "/home/azureuser/goldbach-lean/docs/PROVENANCE.md",
+      "evidence_lines": [
+        76,
+        83
+      ]
+    },
+    {
+      "source_family": "AnalyticNumberTheory",
+      "upstream": "https://github.com/UyNewNas/analytic-number-theory-lean",
+      "kind": "bundled reusable mathematics plus subsequent local development",
+      "evidence_file": "/home/azureuser/goldbach-lean/docs/PROVENANCE.md",
+      "evidence_lines": [
+        79,
+        83
+      ]
+    },
+    {
+      "source_family": "PrimeNumberTheoremAnd",
+      "upstream": "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd",
+      "upstream_release": "v4.32.2",
+      "upstream_commit": "6a380f0c4658c04a420a9eb00b1ed62a1e3fde01",
+      "kind": "adapted bundled mathematical proof closure",
+      "evidence_file": "/home/azureuser/goldbach-lean/docs/PROVENANCE.md",
+      "evidence_lines": [
+        90,
+        103
+      ]
+    },
+    {
+      "source_family": "LeanArchitect",
+      "upstream": "https://github.com/hanwenzhu/LeanArchitect.git",
+      "kind": "separate Lake tool package; imported as Architect by PrimeNumberTheoremAnd modules"
+    }
+  ],
+  "package_source_provenance_sha256": "4d628f08b6248b767e2f53018b9aedbd6d50e869c9902f136f5030d5b96c2104",
+  "note": "Recorded from the pinned goldbach repository docs/PROVENANCE.md; separate from the reproducible module-closure output."
+}

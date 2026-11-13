@@ -1,0 +1,10 @@
+name = "independentTexAudit"
+version = "0.1.0"
+defaultTargets = ["TexAuditComparator"]
+
+[[require]]
+name = "liLiuGoldbach"
+path = "../../.."
+
+[[lean_lib]]
+name = "TexAuditComparator"

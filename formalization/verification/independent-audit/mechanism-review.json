@@ -1,0 +1,8 @@
+{
+  "reviewer": "independent sections-1-4 auditor, additional read-only review",
+  "logical_cycle_found": false,
+  "key_check": "Independent expected Prop value is compared to the actual full theorem type, including universe arity; wrapper equality alone would not suffice.",
+  "limits": "TeX-to-reference semantics and shared unreconstructed foundations still require human review and the explicit semantic bridges.",
+  "hardening": ["Validate staged reference copies against their frozen hashes", "Require every type comparison flag and exact row mapping, not merely the row count"],
+  "hardening_applied_in": ["run_comparator.py", "build_report.py"]
+}

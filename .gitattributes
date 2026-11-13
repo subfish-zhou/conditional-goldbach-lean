@@ -1,0 +1,3 @@
+# Mathematical sources and verification evidence are hashed byte for byte.
+# Preserve their exact bytes, including the original TeX's line endings.
+* -text

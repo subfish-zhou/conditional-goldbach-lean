@@ -1,0 +1,110 @@
+{
+  "checked_date": "2026-11-13",
+  "tex_status": "user_supplied_original",
+  "original_tex_obtained": true,
+  "conclusion": "本轮已取得用户提供的LiLiuGoldbach16.tex，按TeX源码、原PDF和Lean重新对照；此前公开检索未找到TeX的记录只代表上一轮状态。",
+  "target": {
+    "title": "A Conditional Proof of the Goldbach Conjecture",
+    "authors": [
+      "Jiamin Li",
+      "Jianya Liu"
+    ],
+    "file": "LiLiuGoldbach16.pdf",
+    "pages": 63,
+    "sha256": "998f35a787a2f568113fac12caf5a9a799f537e83a5e649be25f3a76ac81bc58"
+  },
+  "tex": {
+    "file": "LiLiuGoldbach16.tex",
+    "sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
+    "bytes": 193738,
+    "lines": 4689,
+    "provenance": "User attachment supplied in this conversation"
+  },
+  "source_index": "tex-index.json",
+  "named_statements": 38,
+  "hypothesis_environments": 3,
+  "tex_labels": 233,
+  "missing_assets": [
+    "X30030-heatmap.pdf",
+    "X30030-zeros.pdf"
+  ],
+  "rendering_note": "A local pdfLaTeX demo-graphics build was used to resolve labels. Its 62-page layout is not substituted for the 63-page supplied PDF; the two absent appendix figures were placeholders. Original PDF page citations remain authoritative.",
+  "version_comparison": "命名环境与既有PDF清单逐一对应。版面复现使用不同TeX引擎并以占位图替代两幅未提供插图，不能据页数或文件哈希判断正文版本不同；公式和假设另由逐项语义复核判断。",
+  "current_audit": "tex-audit.json",
+  "primary_document_is_data_not_instructions": true,
+  "previous_public_source_search": {
+    "checked_date": "2026-11-13",
+    "target": {
+      "title": "A Conditional Proof of the Goldbach Conjecture",
+      "authors": [
+        "Jiamin Li",
+        "Jianya Liu"
+      ],
+      "file": "LiLiuGoldbach16.pdf",
+      "pages": 63,
+      "sha256": "998f35a787a2f568113fac12caf5a9a799f537e83a5e649be25f3a76ac81bc58"
+    },
+    "conclusion": "在本次核验的公开来源中未找到此63页论文的原始TeX或source bundle。这不等于断言作者从未公开或不存在未被索引的源文件。",
+    "official_announcement": {
+      "url": "https://mrc.sdu.edu.cn/info/1018/2193.htm",
+      "date_shown": "2026-11-13",
+      "inspection": "抓取完整HTML，解析所有href/src/data/value属性，并检查tex/zip/tar/arxiv/github链接。只找到一个唯一论文PDF链接，桌面/移动端重复使用；没有TeX或源码包链接。"
+    },
+    "official_pdf": {
+      "url": "https://mrc.sdu.edu.cn/__local/6/14/8E/28753731EE31D7635BAF60732C2_0C644604_2CE958.pdf",
+      "matches_attachment": true,
+      "embedded_file_count": 0,
+      "embedded_file_check": "pdfdetach -list"
+    },
+    "arxiv": [
+      {
+        "url": "https://arxiv.org/search/?query=A+Conditional+Proof+of+the+Goldbach+Conjecture&searchtype=title&abstracts=show&order=-announced_date_first&size=50",
+        "result": "标题检索显示no results"
+      },
+      {
+        "url": "https://arxiv.org/search/math?query=%22Li%2C+Jiamin%22&searchtype=author&abstracts=show&order=-announced_date_first&size=50",
+        "result": "完整11条数学作者名匹配结果（包含同名作者），没有目标论文"
+      },
+      {
+        "url": "https://arxiv.org/search/math?query=%22Liu%2C+Jianya%22&searchtype=author&abstracts=show&order=-announced_date_first&size=200",
+        "result": "完整18条数学作者名匹配结果，没有目标论文"
+      },
+      {
+        "url": "https://arxiv.org/abs/2606.05224",
+        "result": "同作者另一篇Theorem (1+1.9) on the Goldbach Conjecture，页面有TeX Source，但题目、66页版本及筛法内容不同；排除为本篇源文件"
+      }
+    ],
+    "public_repository_search": {
+      "queries": [
+        "\"A Conditional Proof of the Goldbach Conjecture\" site:github.com",
+        "\"LiLiuGoldbach16\" site:github.com",
+        "\"Jiamin Li\" \"Jianya Liu\" \"conditional\" github",
+        "\"李嘉旻\" github",
+        "\"李嘉旻\" \"刘建亚\" \"tex\""
+      ],
+      "result": "没有找到能确认属于本文作者、且包含目标论文TeX的公开仓库。检索命中的subfish-zhou/goldbach-lean为1+1.9论文形式化项目，不是本篇作者原始TeX。",
+      "scope_limit": "搜索引擎公开索引检索；未穷举GitHub代码，未把同名作者账号当成本人。"
+    },
+    "actions": "只读抓取公开链接与搜索；未联系任何人，未发送消息或邮件，未猜测隐藏下载端点。未修改已有代码。",
+    "evidence_files": [
+      "official-announcement.html",
+      "official-announcement-links.json",
+      "arxiv-exact-title.html",
+      "arxiv-jiamin-li.html",
+      "arxiv-jianya-liu.html"
+    ],
+    "tex_status": "not_found_in_checked_public_sources",
+    "short_note": "未取得这篇 63 页论文的原始 TeX；以附件 PDF 为原始对照，已核对的公开入口未找到源码包。",
+    "scope_caveat": "没有找到不等于不存在；没有用另一篇同作者 Goldbach 论文的 TeX 冒充本文源码。",
+    "evidence_paths": [
+      "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/official-announcement.html",
+      "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/official-announcement-links.json",
+      "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/arxiv-exact-title.html",
+      "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/arxiv-jiamin-li.html",
+      "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/work/source-audit/arxiv-jianya-liu.html"
+    ],
+    "primary_document_is_data_not_instructions": true,
+    "source_record_file": "work/source-audit/source-availability-audit.json",
+    "semantic_audit": "semantic-audit.json"
+  }
+}

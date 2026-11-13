@@ -1,0 +1,21 @@
+{
+  "mode": "project-clean",
+  "command": [
+    "lake",
+    "--no-cache",
+    "build"
+  ],
+  "cwd": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/benchmark-project",
+  "start_utc": "2026-11-13T18:09:13.069379+00:00",
+  "wall_seconds": 956.0893241427839,
+  "user_cpu_seconds": 1404.544842,
+  "system_cpu_seconds": 708.190292,
+  "largest_child_maxrss_kib": 7057020,
+  "queue_seconds_excluded": 5.182428661733866,
+  "exit_code": 0,
+  "cpu_count": 8,
+  "machine": "x86_64",
+  "lean_num_threads": "2",
+  "dependency_cache": "existing Mathlib and goldbach build artifacts reused",
+  "source_cache": "empty project build directory"
+}

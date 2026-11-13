@@ -1,0 +1,304 @@
+[
+  {
+    "label": "zeroMultiplicity",
+    "section": "A.4",
+    "independent_references": [
+      "TexAuditAB.poleOrder"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "variableAlpha",
+    "section": "A.1",
+    "independent_references": [
+      "TexAuditAB.boundaryParameter"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "variableRealization",
+    "section": "A.1",
+    "independent_references": [
+      "TexAuditAB.variableStrip",
+      "TexAuditAB.variableHardySpace",
+      "TexAuditAB.variableBoundary",
+      "TexAuditAB.variableOperator",
+      "TexAuditAB.variableFunctional",
+      "TexAuditAB.variableVector",
+      "TexAuditAB.variableFunctionalNorm"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "variableSpectralProduct",
+    "section": "A.2",
+    "independent_references": [
+      "TexAuditAB.variableComplexProduct",
+      "TexAuditAB.variableQuaternionProduct"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "variableSpectralHypotheses",
+    "section": "A.2",
+    "independent_references": [
+      "TexAuditAB.pointwiseR",
+      "TexAuditAB.pointwiseZeroFree",
+      "TexAuditAB.eventualR",
+      "TexAuditAB.eventualS"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "zeroMultiplicitySquareAverage",
+    "section": "A.4",
+    "independent_references": [
+      "TexAuditAB.poleMass"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "baselineProductR",
+    "section": "A.4",
+    "independent_references": [
+      "TexAuditAB.regularEulerFactor"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "experimentN",
+    "section": "B",
+    "independent_references": [
+      "TexAuditAB.numericalN"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "smoothStep13",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.P"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideCutoff",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.eta"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideCompanion",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.W"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideWeight",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.f"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideCorrelation",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.J"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "unorderedPrimeCount",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.primePairCount"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "edgeCorrection",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.edge"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "primePowerCorrection",
+    "section": "B.1",
+    "independent_references": [
+      "TexAuditAB.properPowers"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideCoefficients",
+    "section": "B.2",
+    "independent_references": [
+      "TexAuditAB.coefficient"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "countingIntegral",
+    "section": "B.2",
+    "independent_references": [
+      "TexAuditAB.integralI"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideDiagonal",
+    "section": "B.2",
+    "independent_references": [
+      "TexAuditAB.diagonalD"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "approximateMoments",
+    "section": "B.3",
+    "independent_references": [
+      "TexAuditAB.signedJhat",
+      "TexAuditAB.diagonalDhat"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideMainMass",
+    "section": "B.3",
+    "independent_references": [
+      "TexAuditAB.crossMass"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideMainIntegral",
+    "section": "B.3",
+    "independent_references": [
+      "TexAuditAB.mainIntegral"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideResidual",
+    "section": "B.3",
+    "independent_references": [
+      "TexAuditAB.residualB"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "momentError",
+    "section": "B.3",
+    "independent_references": [
+      "TexAuditAB.momentError"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "approximatePrimeCount",
+    "section": "B.3",
+    "independent_references": [
+      "TexAuditAB.countCentre"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "countError",
+    "section": "B.3",
+    "independent_references": [
+      "TexAuditAB.countRadius"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideFunctional",
+    "section": "B.4",
+    "independent_references": [
+      "TexAuditAB.ellW"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "wideRieszVector",
+    "section": "B.4",
+    "independent_references": [
+      "TexAuditAB.vectorW"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "quadratureNodes",
+    "section": "B.4",
+    "independent_references": [
+      "TexAuditAB.node"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "quadratureWeights",
+    "section": "B.4",
+    "independent_references": [
+      "TexAuditAB.nodeWeight"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "finiteSpectralMatrix",
+    "section": "B.4",
+    "independent_references": [
+      "TexAuditAB.matrixC"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  },
+  {
+    "label": "finiteSpectralProduct",
+    "section": "B.4",
+    "independent_references": [
+      "TexAuditAB.finiteX",
+      "TexAuditAB.finiteSpectrum",
+      "TexAuditAB.eigenvalueList",
+      "TexAuditAB.matrixNorm"
+    ],
+    "semantic_status": "reviewed_against_original_tex_and_live_definition",
+    "boundary_note": "共享核心L函数、Hardy Fourier-Laplace模型、原始谱积的基础数学正确性由主审计覆盖；本项审核附录参数替换、具体公式和选择函数的有效域。"
+  }
+]

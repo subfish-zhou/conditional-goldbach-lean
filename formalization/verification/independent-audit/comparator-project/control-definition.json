@@ -1,0 +1,12 @@
+{
+  "challenge_module": "TexAuditComparator.ControlDefinitionChallenge",
+  "solution_module": "TexAuditComparator.ControlDefinitionSolution",
+  "theorem_names": [
+    "ComparatorControl.check"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "challenge_module": "TexAuditComparator.Challenge",
+  "solution_module": "TexAuditComparator.Solution",
+  "theorem_names": [
+    "TexComparator.statement_000_singularSeries_eq_existing"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

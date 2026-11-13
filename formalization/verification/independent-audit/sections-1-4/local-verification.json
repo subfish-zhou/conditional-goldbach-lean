@@ -1,0 +1,35 @@
+{
+  "expected_props": 31,
+  "independent_core_definitions": 22,
+  "semantic_bridge_theorems": 11,
+  "expected_typecheck": "passed (31 expected Props plus 22 independent definitions; exit 0)",
+  "bridges_typecheck": "passed (11 bridge theorems; exit 0)",
+  "bridges_axioms": "propext, Classical.choice, Quot.sound only",
+  "no_sorryAx": true,
+  "files": {
+    "Expected.lean": {
+      "sha256": "399d917f3c8ec13d005abaedc750e8333f520d150765af56b57f189799a5ab36"
+    },
+    "Bridges.lean": {
+      "sha256": "1d216a8e3d217986fa9f5618621a7e96c6573856347f8cbcbb7f4a9330172368"
+    },
+    "comparison.json": {
+      "sha256": "3016a0f78f1d2b70fb0e900827a1ec8a507a61e13ebc142c4264ea4d92c8e9eb"
+    },
+    "coverage.json": {
+      "sha256": "3b33a482d2ffa303c82b212d4f3519e17ab68f8c2beb3a50e65b5424e93a7c19"
+    },
+    "bridges-build.log": {
+      "sha256": "a789df11984541431bb0aee76ae494c5e82af06867978a13dc61091db65b5914"
+    },
+    "definitions-comparison.json": {
+      "sha256": "ba0f0858cf9116fcb27d3c4b60f9e91ef030bac1b84392767de54ba2fd2356ec"
+    },
+    "statement-coverage.json": {
+      "sha256": "83cc0fd0e98242b515b373916a59a7e0e0a1894acd12f18c4361cb84107ecebf"
+    },
+    "expected-build.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

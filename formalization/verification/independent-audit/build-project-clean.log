@@ -1,0 +1,2056 @@
+ℹ [9070/9369] Replayed MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation
+info: MathlibNt/AnalyticNumberTheory/DirichletL/DirichletLAbelWeightVariation.lean:88:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: MathlibNt/AnalyticNumberTheory/DirichletL/DirichletLAbelWeightVariation.lean:235:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [9115/9369] Built LiLiuGoldbach.BaseDefinitions (5.7s)
+warning: LiLiuGoldbach/BaseDefinitions.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9116/9369] Built LiLiuGoldbach.Proofs.BetaIntegrals (6.8s)
+warning: LiLiuGoldbach/Proofs/BetaIntegrals.lean:27:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BetaIntegrals.lean:27:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BetaIntegrals.lean:40:57: This simp argument is unused:
+  Pi.div_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.sub_apply, id_eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/BetaIntegrals.lean:40:92: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BetaIntegrals.lean:40:92: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: LiLiuGoldbach/Proofs/BetaIntegrals.lean:160:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/BetaIntegrals.lean:147:6: Unused tactic linter: `simp only [he1, he2] at hi'` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BetaIntegrals.lean:172:50: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9117/9369] Built LiLiuGoldbach.Proofs.BetaIdentity (7.3s)
+⚠ [9118/9369] Built LiLiuGoldbach.Proofs.HardyWeights (5.8s)
+warning: LiLiuGoldbach/Proofs/HardyWeights.lean:58:31: This simp argument is unused:
+  abs_of_nonneg (sq_nonneg (‖(Real.exp (x * τ) : ℂ) * ψ τ‖))
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Real.norm_eq_abs, norm_mul, Complex.norm_real, Real.norm_eq_abs, abs_of_pos (Real.exp_pos _),
+    mul_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyWeights.lean:102:13: This simp argument is unused:
+  Pi.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hardy_exp_mul_factor] at hl hr
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9119/9369] Built LiLiuGoldbach.Proofs.HardyFourier (5.8s)
+⚠ [9120/9369] Built LiLiuGoldbach.Proofs.HardyInterior (5.3s)
+warning: LiLiuGoldbach/Proofs/HardyInterior.lean:19:15: This simp argument is unused:
+  real_inner_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Real.inner_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyInterior.lean:25:39: This simp argument is unused:
+  Complex.ofReal_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [line, Complex.ofReal_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: LiLiuGoldbach/Proofs/HardyInterior.lean:40:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/HardyInterior.lean:28:44: Variable name `hab` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hab
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9121/9369] Built LiLiuGoldbach.Proofs.MellinBetaInner (5.9s)
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:27:28: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:42:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:42:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:42:14: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:42:28: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:49:28: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:64:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:64:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:64:14: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/MellinBetaInner.lean:64:28: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9122/9369] Built LiLiuGoldbach.Proofs.HardyBoundary (9.8s)
+info: LiLiuGoldbach/Proofs/HardyBoundary.lean:130:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/HardyBoundary.lean:123:2: Unused tactic linter: `change physicalFourierL2 (hf2.toLp f) t = _` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyBoundary.lean:202:2: Unused tactic linter: `change ‖(hardyLineDensity ψ x) τ‖ ^ 2 = _` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyBoundary.lean:224:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/HardyBoundary.lean:225:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9123/9369] Built LiLiuGoldbach.Definitions (7.8s)
+⚠ [9124/9369] Built LiLiuGoldbach.Proofs.SignedFamilies (5.5s)
+warning: LiLiuGoldbach/Proofs/SignedFamilies.lean:32:12: This simp argument is unused:
+  Nat.modEq_add_mul_modulus_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SignedFamilies.lean:33:12: This simp argument is unused:
+  Nat.add_mul_modulus_modEq_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SignedFamilies.lean:35:54: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9125/9369] Built LiLiuGoldbach.Proofs.BetaMeromorphic (6.6s)
+warning: LiLiuGoldbach/Proofs/BetaMeromorphic.lean:85:40: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9126/9369] Built LiLiuGoldbach.Proofs.CutoffSmooth (6.2s)
+warning: LiLiuGoldbach/Proofs/CutoffSmooth.lean: imports `Mathlib.Analysis.Calculus.Deriv.Slope` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/CutoffSmooth.lean:64:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CutoffSmooth.lean:64:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: LiLiuGoldbach/Proofs/CutoffSmooth.lean:77:77: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/CutoffSmooth.lean:77:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CutoffSmooth.lean:77:73: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CutoffSmooth.lean:77:61: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CutoffSmooth.lean:77:73: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9127/9369] Built LiLiuGoldbach.Proofs.SpectralPoisson (5.9s)
+⚠ [9128/9369] Built LiLiuGoldbach.Proofs.CauchyBoundedLimit (6.1s)
+warning: LiLiuGoldbach/Proofs/CauchyBoundedLimit.lean:30:28: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [K, deriv_circleMap, norm_div, norm_pow, circleMap_sub_center, norm_circleMap_zero, abs_of_pos hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/CauchyBoundedLimit.lean:30:37: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [K, deriv_circleMap, norm_mul, norm_pow, circleMap_sub_center, norm_circleMap_zero, abs_of_pos hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9129/9369] Built LiLiuGoldbach.Proofs.Weights (7.1s)
+⚠ [9130/9369] Built LiLiuGoldbach.Proofs.LogDerivativeDisk (6.8s)
+warning: LiLiuGoldbach/Proofs/LogDerivativeDisk.lean:51:18: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9131/9369] Built LiLiuGoldbach.Proofs.SpectralAlgebra (7.3s)
+✔ [9132/9369] Built LiLiuGoldbach.Proofs.LFunctionDomain (5.7s)
+⚠ [9133/9369] Built LiLiuGoldbach.Proofs.HardyTraceAlgebra (8.1s)
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:35:5: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:87:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:90:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:205:38: This simp argument is unused:
+  WithLp.ofLp_toLp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [WithLp.prod_inner_apply] at hi
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:207:14: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:207:42: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:207:10: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:207:14: Unused tactic linter: `apply integral_congr_ae` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:207:38: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean:207:42: Unused tactic linter: `exact Eventually.of_forall (fun t => by simp only [RCLike.inner_apply, mul_comm])` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9134/9369] Built LiLiuGoldbach.Proofs.Elementary (5.6s)
+⚠ [9135/9369] Built LiLiuGoldbach.Proofs.Characters (7.6s)
+warning: LiLiuGoldbach/Proofs/Characters.lean:59:5: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/Characters.lean:59:19: Variable name `hN4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9136/9369] Built LiLiuGoldbach.Proofs.SingularDensity (5.4s)
+warning: LiLiuGoldbach/Proofs/SingularDensity.lean:17:31: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/SingularDensity.lean:17:27: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SingularDensity.lean:17:31: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SingularDensity.lean:32:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/SingularDensity.lean:33:92: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: LiLiuGoldbach/Proofs/SingularDensity.lean:49:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9137/9369] Built LiLiuGoldbach.Proofs.DensitySeries (5.7s)
+warning: LiLiuGoldbach/Proofs/DensitySeries.lean:37:29: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LSeries.term, ite_false, Nat.pos_iff_ne_zero, hn, not_false_eq_true, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensitySeries.lean:37:69: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LSeries.term, hn, ite_false, Nat.pos_iff_ne_zero, hn, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensitySeries.lean:38:6: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LSeries.term, hn, ite_false, Nat.pos_iff_ne_zero, hn, not_false_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensitySeries.lean:50:29: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LSeries.term, ite_false, Nat.pos_iff_ne_zero, hn, not_false_eq_true, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensitySeries.lean:50:69: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LSeries.term, hn, ite_false, Nat.pos_iff_ne_zero, hn, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensitySeries.lean:51:6: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LSeries.term, hn, ite_false, Nat.pos_iff_ne_zero, hn, not_false_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9138/9369] Built LiLiuGoldbach.Proofs.WideWeight (6.4s)
+warning: LiLiuGoldbach/Proofs/WideWeight.lean: imports `Mathlib.Analysis.SpecialFunctions.Sqrt` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/WideWeight.lean: imports `Mathlib.Analysis.SpecialFunctions.Log.Deriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/WideWeight.lean:65:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: LiLiuGoldbach/Proofs/WideWeight.lean:145:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/WideWeight.lean:145:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9139/9369] Built LiLiuGoldbach.Proofs.SpectralPoissonConvolution (6.3s)
+warning: LiLiuGoldbach/Proofs/SpectralPoissonConvolution.lean: imports `Mathlib.Analysis.Fourier.Convolution` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/SpectralPoissonConvolution.lean: imports `Mathlib.Analysis.Fourier.Inversion` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [9140/9369] Built LiLiuGoldbach.Proofs.PrimePowers (6.4s)
+✔ [9141/9369] Built LiLiuGoldbach.Proofs.WeightNorm (5.7s)
+✔ [9142/9369] Built LiLiuGoldbach.Proofs.MellinConvolution (6.1s)
+✔ [9143/9369] Built LiLiuGoldbach.Proofs.MellinBasic (5.9s)
+✔ [9144/9369] Built LiLiuGoldbach.Proofs.HadamardLog (5.8s)
+✔ [9145/9369] Built LiLiuGoldbach.Proofs.SpectralProducts (6.2s)
+✔ [9146/9369] Built LiLiuGoldbach.Proofs.CharacterZerosCompact (5.2s)
+⚠ [9147/9369] Built LiLiuGoldbach.Proofs.SpectralCompletionTrace (13s)
+warning: LiLiuGoldbach/Proofs/SpectralCompletionTrace.lean:122:6: This simp argument is unused:
+  Complex.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ContinuousLinearMap.comp_apply, d.diagonal, map_smul, smul_smul, pow_two, Complex.ofReal_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9148/9369] Built LiLiuGoldbach.Proofs.CharacterGrowthFoundation (10s)
+warning: LiLiuGoldbach/Proofs/CharacterGrowthFoundation.lean:54:51: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [LSeries.term, ne_of_gt hn, ite_false, norm_mul, norm_inv, Complex.norm_natCast_cpow_of_pos hn,
+    Real.rpow_neg hnR.le, div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9149/9369] Built LiLiuGoldbach.Proofs.HardyHolomorphic (6.1s)
+✔ [9150/9369] Built LiLiuGoldbach.Proofs.Asymptotics (5.2s)
+✔ [9151/9369] Built LiLiuGoldbach.Proofs.SingularLower (5.9s)
+✔ [9152/9369] Built LiLiuGoldbach.Proofs.FiniteCharacterMoments (5.7s)
+⚠ [9153/9369] Built LiLiuGoldbach.Proofs.KernelAlgebra (5.9s)
+warning: LiLiuGoldbach/Proofs/KernelAlgebra.lean:107:5: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/KernelAlgebra.lean:107:19: Variable name `hN4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9154/9369] Built LiLiuGoldbach.Proofs.CharacterSeries (8.0s)
+warning: LiLiuGoldbach/Proofs/CharacterSeries.lean:64:5: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterSeries.lean:64:19: Variable name `hN4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterSeries.lean:65:23: Variable name `hχ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hχ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterSeries.lean:65:58: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9155/9369] Built LiLiuGoldbach.Proofs.SingularBounds (5.8s)
+⚠ [9156/9369] Built LiLiuGoldbach.Proofs.PoleDiagonalComparison (5.0s)
+warning: LiLiuGoldbach/Proofs/PoleDiagonalComparison.lean: imports `Mathlib.NumberTheory.LSeries.Dirichlet` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/PoleDiagonalComparison.lean:60:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/PoleDiagonalComparison.lean:62:4: Unused tactic linter: `change
+  (mangoldt n) ^ 2 / (n : ℝ) ^ (1 + w) ≤ Real.log n * mangoldt n / (n : ℝ) ^ (1 + w)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/PoleDiagonalComparison.lean:65:4: Unused tactic linter: `change 0 ≤ Real.log n * mangoldt n / (n : ℝ) ^ (1 + w)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9157/9369] Built LiLiuGoldbach.Proofs.DensityEuler (6.1s)
+warning: LiLiuGoldbach/Proofs/DensityEuler.lean:142:8: `Differentiable.fun_finset_prod` has been deprecated: Use `Differentiable.fun_finsetProd` instead
+
+Hint: Replace the deprecated name:
+  Differentiable.fun_finset_̵p̵P̲rod
+warning: LiLiuGoldbach/Proofs/DensityEuler.lean:146:53: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/DensityEuler.lean:146:67: Variable name `hN4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9158/9369] Built LiLiuGoldbach.Proofs.WidePrimePairs (5.7s)
+warning: LiLiuGoldbach/Proofs/WidePrimePairs.lean:11:57: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9159/9369] Built LiLiuGoldbach.Proofs.PrimePowerReindex (5.8s)
+warning: LiLiuGoldbach/Proofs/PrimePowerReindex.lean: imports `Mathlib.Data.Nat.Prime.Int` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9160/9369] Built LiLiuGoldbach.Proofs.MellinBetaPairing (5.7s)
+warning: LiLiuGoldbach/Proofs/MellinBetaPairing.lean:52:15: This simp argument is unused:
+  ← mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [integral_mul_const] at hs
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9161/9369] Built LiLiuGoldbach.Proofs.QuadraticAsymptotic (7.4s)
+info: LiLiuGoldbach/Proofs/QuadraticAsymptotic.lean:63:100: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/QuadraticAsymptotic.lean:63:84: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/QuadraticAsymptotic.lean:63:96: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/QuadraticAsymptotic.lean:63:84: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/QuadraticAsymptotic.lean:63:96: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9162/9369] Built LiLiuGoldbach.Proofs.MellinContourShift (5.7s)
+⚠ [9163/9369] Built LiLiuGoldbach.Proofs.MellinDifferentiation (6.7s)
+warning: LiLiuGoldbach/Proofs/MellinDifferentiation.lean:187:17: Variable name `hlohi` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlohi
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9164/9369] Built LiLiuGoldbach.Proofs.HadamardFactors (6.0s)
+warning: LiLiuGoldbach/Proofs/HadamardFactors.lean: imports `Mathlib.Analysis.Meromorphic.FactorizedRational` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [9165/9369] Built LiLiuGoldbach.Proofs.SpectralDictionary (7.8s)
+⚠ [9166/9369] Built LiLiuGoldbach.Proofs.CharacterZeroReflection (6.0s)
+warning: LiLiuGoldbach/Proofs/CharacterZeroReflection.lean:51:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroReflection.lean:51:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9167/9369] Built LiLiuGoldbach.Proofs.SpectralPositiveTrace (7.1s)
+✔ [9168/9369] Built LiLiuGoldbach.Proofs.SpectralCompletionChoice (12s)
+⚠ [9169/9369] Built LiLiuGoldbach.Proofs.CharacterZeroCounting (9.8s)
+warning: LiLiuGoldbach/Proofs/CharacterZeroCounting.lean: imports `Mathlib.Analysis.Complex.JensenFormula` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/CharacterZeroCounting.lean: imports `Mathlib.Data.Set.Card.Arithmetic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/CharacterZeroCounting.lean:88:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroCounting.lean:93:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroCounting.lean:88:25: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroCounting.lean:93:75: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9170/9369] Built LiLiuGoldbach.Proofs.SpectralHilbertSchmidt (13s)
+⚠ [9171/9369] Built LiLiuGoldbach.Proofs.HardyRawNorm (6.8s)
+warning: LiLiuGoldbach/Proofs/HardyRawNorm.lean:114:8: Variable name `ε` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ε
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/HardyRawNorm.lean:136:53: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9172/9369] Built LiLiuGoldbach.Proofs.CharacterGrowth (12s)
+warning: LiLiuGoldbach/Proofs/CharacterGrowth.lean:60:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterGrowth.lean:101:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterGrowth.lean:101:93: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterGrowth.lean:60:24: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterGrowth.lean:101:79: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterGrowth.lean:101:93: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9173/9369] Built LiLiuGoldbach.Proofs.MellinProjection (6.5s)
+✔ [9174/9369] Built LiLiuGoldbach.Proofs.CharacterAnalytic (6.1s)
+⚠ [9175/9369] Built LiLiuGoldbach.Proofs.DensityResidue (6.2s)
+warning: LiLiuGoldbach/Proofs/DensityResidue.lean:44:11: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [densityEulerTerm, liuBaseDeviation, hp, ite_false, add_zero, Complex.ofReal_one, hpm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9176/9369] Built LiLiuGoldbach.Proofs.ModelContinuation (6.5s)
+warning: LiLiuGoldbach/Proofs/ModelContinuation.lean:65:43: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [he] at hw1
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: LiLiuGoldbach/Proofs/ModelContinuation.lean:88:33: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9177/9369] Built LiLiuGoldbach.Proofs.PrimePowerDouble (5.0s)
+✔ [9178/9369] Built LiLiuGoldbach.Proofs.MellinBetaConvolution (6.3s)
+✔ [9179/9369] Built LiLiuGoldbach.Proofs.MellinCompactPositive (6.5s)
+✔ [9180/9369] Built LiLiuGoldbach.Proofs.MellinTestInversion (5.7s)
+✔ [9181/9369] Built LiLiuGoldbach.Proofs.HadamardDiskFactor (5.3s)
+✔ [9182/9369] Built LiLiuGoldbach.Proofs.CharacterZeroCompactSets (5.3s)
+⚠ [9183/9369] Built LiLiuGoldbach.Proofs.SpectralCompletedLGrowth (8.7s)
+warning: LiLiuGoldbach/Proofs/SpectralCompletedLGrowth.lean: imports `Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: LiLiuGoldbach/Proofs/SpectralCompletedLGrowth.lean:198:88: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [9184/9369] Built LiLiuGoldbach.Proofs.CharacterEulerCorrection (5.6s)
+✔ [9185/9369] Built LiLiuGoldbach.Proofs.CompletedLZeros (5.4s)
+✔ [9186/9369] Built LiLiuGoldbach.Proofs.SpectralRankOneSeries (6.2s)
+⚠ [9187/9369] Built LiLiuGoldbach.Proofs.CharacterZeroLocalBounds (7.6s)
+info: LiLiuGoldbach/Proofs/CharacterZeroLocalBounds.lean:79:42: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/CharacterZeroLocalBounds.lean:79:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroLocalBounds.lean:79:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroLocalBounds.lean:79:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroLocalBounds.lean:79:38: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9188/9369] Built LiLiuGoldbach.Proofs.SpectralProductBasis (5.0s)
+✔ [9189/9369] Built LiLiuGoldbach.Proofs.SpectralBasisExistence (6.1s)
+✔ [9190/9369] Built LiLiuGoldbach.Proofs.HardyEvaluation (6.0s)
+⚠ [9191/9369] Built LiLiuGoldbach.Proofs.HardyKernelOperator (11s)
+warning: LiLiuGoldbach/Proofs/HardyKernelOperator.lean: imports `Mathlib.Analysis.InnerProductSpace.Adjoint` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/HardyKernelOperator.lean: imports `Mathlib.Analysis.Normed.Operator.Compact.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9192/9369] Built LiLiuGoldbach.Proofs.MellinMoment (6.4s)
+warning: LiLiuGoldbach/Proofs/MellinMoment.lean:97:38: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/MellinMoment.lean:97:52: Variable name `hN4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9193/9369] Built LiLiuGoldbach.Proofs.CharacterJoint (5.9s)
+warning: LiLiuGoldbach/Proofs/CharacterJoint.lean:16:13: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: LiLiuGoldbach/Proofs/CharacterJoint.lean:56:5: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterJoint.lean:56:19: Variable name `hN4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9194/9369] Built LiLiuGoldbach.Proofs.BaselineEuler (5.7s)
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:28:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:28:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:28:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:69:8: `Differentiable.fun_finset_prod` has been deprecated: Use `Differentiable.fun_finsetProd` instead
+
+Hint: Replace the deprecated name:
+  Differentiable.fun_finset_̵p̵P̲rod
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:84:8: `Differentiable.fun_finset_prod` has been deprecated: Use `Differentiable.fun_finsetProd` instead
+
+Hint: Replace the deprecated name:
+  Differentiable.fun_finset_̵p̵P̲rod
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:115:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:115:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BaselineEuler.lean:115:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9195/9369] Built LiLiuGoldbach.Proofs.DensityConvergence (5.6s)
+⚠ [9196/9369] Built LiLiuGoldbach.Proofs.ResidualAnalytic (5.5s)
+warning: LiLiuGoldbach/Proofs/ResidualAnalytic.lean:85:44: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9197/9369] Built LiLiuGoldbach.Proofs.GammaQuotientBound (5.8s)
+warning: LiLiuGoldbach/Proofs/GammaQuotientBound.lean:43:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/GammaQuotientBound.lean:43:31: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9198/9369] Built LiLiuGoldbach.Proofs.WidePrimePowerCount (5.0s)
+warning: LiLiuGoldbach/Proofs/WidePrimePowerCount.lean:59:27: This simp argument is unused:
+  hc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [h0, hN, he, true_and, ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/WidePrimePowerCount.lean:59:42: This simp argument is unused:
+  ite_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [h0, hN, hc, he, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/WidePrimePowerCount.lean:61:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/WidePrimePowerCount.lean:61:20: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9199/9369] Built LiLiuGoldbach.Proofs.MellinConvolutionTransform (6.1s)
+✔ [9200/9369] Built LiLiuGoldbach.Proofs.FiniteMellin (6.4s)
+ℹ [9201/9369] Built LiLiuGoldbach.Proofs.QuadraticDensity (5.8s)
+info: LiLiuGoldbach/Proofs/QuadraticDensity.lean:112:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [9202/9369] Built LiLiuGoldbach.Proofs.HadamardApproximation (6.2s)
+✔ [9203/9369] Built LiLiuGoldbach.Proofs.CharacterEulerBounds (5.9s)
+✔ [9204/9369] Built LiLiuGoldbach.Proofs.CharacterGammaFactor (5.0s)
+⚠ [9205/9369] Built LiLiuGoldbach.Proofs.CharacterZeroSummability (7.4s)
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:63:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:71:22: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:78:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:78:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:78:25: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:78:65: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:122:63: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:123:5: Variable name `hlarge` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlarge
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroSummability.lean:123:38: Variable name `hGRH` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hGRH
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9206/9369] Built LiLiuGoldbach.Proofs.SpectralHilbertSchmidtCompact (10s)
+✔ [9207/9369] Built LiLiuGoldbach.Proofs.SpectralPositiveFredholm (15s)
+✔ [9208/9369] Built LiLiuGoldbach.Proofs.SpectralNormAttainment (10s)
+⚠ [9209/9369] Built LiLiuGoldbach.Proofs.SpectralHardyRankSeries (8.9s)
+warning: LiLiuGoldbach/Proofs/SpectralHardyRankSeries.lean: imports `Mathlib.MeasureTheory.Function.LpSpace.InfiniteSum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9210/9369] Built LiLiuGoldbach.Proofs.HardyWeakLimit (7.9s)
+warning: LiLiuGoldbach/Proofs/HardyWeakLimit.lean: imports `Mathlib.Analysis.Normed.Module.WeakDual` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/HardyWeakLimit.lean:51:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9211/9369] Built LiLiuGoldbach.Proofs.HardyReproducing (7.1s)
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:117:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:117:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:135:13: This simp argument is unused:
+  Complex.ofReal_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.ofReal_mul, Complex.ofReal_sub, Complex.ofReal_one, Complex.ofReal_ofNat,
+    Complex.ofReal_inv, one_mul, one_div, mul_inv, div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:135:73: This simp argument is unused:
+  Complex.ofReal_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.ofReal_div, Complex.ofReal_mul, Complex.ofReal_sub, Complex.ofReal_ofNat,
+    Complex.ofReal_inv, one_mul, one_div, mul_inv, div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:136:55: This simp argument is unused:
+  one_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.ofReal_div, Complex.ofReal_mul, Complex.ofReal_sub, Complex.ofReal_one,
+    Complex.ofReal_ofNat, Complex.ofReal_inv, one_mul, mul_inv, div_eq_mul_inv]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:125:73: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:125:73: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:133:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:133:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:174:41: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/HardyReproducing.lean:174:41: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9212/9369] Built LiLiuGoldbach.Proofs.HardyKernelPairing (6.2s)
+✔ [9213/9369] Built LiLiuGoldbach.Proofs.MellinDoubleSeries (7.6s)
+⚠ [9214/9369] Built LiLiuGoldbach.Proofs.MellinCharacterShift (8.5s)
+warning: LiLiuGoldbach/Proofs/MellinCharacterShift.lean:65:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/MellinCharacterShift.lean:55:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/MellinCharacterShift.lean:55:22: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/MellinCharacterShift.lean:65:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/MellinCharacterShift.lean:65:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/MellinCharacterShift.lean:96:49: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9215/9369] Built LiLiuGoldbach.Proofs.MellinModelSampling (6.4s)
+⚠ [9216/9369] Built LiLiuGoldbach.Proofs.DensityArithmetic (6.2s)
+warning: LiLiuGoldbach/Proofs/DensityArithmetic.lean:31:4: This simp argument is unused:
+  (Nat.mul_pos hk hN).ne'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_union, Nat.mem_primeFactors, hk.ne', hN.ne', not_false_eq_true,
+    and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensityArithmetic.lean:31:29: This simp argument is unused:
+  hk.ne'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_union, Nat.mem_primeFactors, (Nat.mul_pos hk hN).ne', hN.ne',
+    not_false_eq_true, and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensityArithmetic.lean:31:37: This simp argument is unused:
+  hN.ne'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_union, Nat.mem_primeFactors, (Nat.mul_pos hk hN).ne', hk.ne',
+    not_false_eq_true, and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensityArithmetic.lean:31:45: This simp argument is unused:
+  not_false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_union, Nat.mem_primeFactors, (Nat.mul_pos hk hN).ne', hk.ne', hN.ne',
+    and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/DensityArithmetic.lean:31:64: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Finset.mem_union, Nat.mem_primeFactors, (Nat.mul_pos hk hN).ne', hk.ne', hN.ne',
+    not_false_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9217/9369] Built LiLiuGoldbach.Proofs.KernelRegularity (7.2s)
+warning: LiLiuGoldbach/Proofs/KernelRegularity.lean:95:44: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/KernelRegularity.lean:144:60: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9218/9369] Built LiLiuGoldbach.Proofs.SpectralModelBound (7.1s)
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:12:45: Variable name `hu` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hu
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:12:61: Variable name `hv` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hv
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:42:67: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:42:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:42:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:42:20: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:42:32: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:42:63: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:42:67: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:45:51: Variable name `hb0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hb0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:70:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralModelBound.lean:70:33: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9219/9369] Built LiLiuGoldbach.Proofs.WideMainIntegral (6.5s)
+⚠ [9220/9369] Built LiLiuGoldbach.Proofs.MellinBetaRelation (6.3s)
+warning: LiLiuGoldbach/Proofs/MellinBetaRelation.lean:13:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/MellinBetaRelation.lean:13:40: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/MellinBetaRelation.lean:78:4: Unused tactic linter: `change
+  2 * mellin (fun y => (differenceConvolution φ y : ℂ)) w - mellin (fun y => (sumConvolution φ y : ℂ)) w =
+    _` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9221/9369] Built LiLiuGoldbach.Proofs.FiniteMellinProjection (6.4s)
+⚠ [9222/9369] Built LiLiuGoldbach.Proofs.QuadraticRiesz (6.7s)
+warning: LiLiuGoldbach/Proofs/QuadraticRiesz.lean:72:44: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/QuadraticRiesz.lean:134:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9223/9369] Built LiLiuGoldbach.Proofs.GammaResolventBounds (8.5s)
+warning: LiLiuGoldbach/Proofs/GammaResolventBounds.lean: imports `Mathlib.Analysis.PSeries` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9224/9369] Built LiLiuGoldbach.Proofs.GammaSequenceBounds (6.0s)
+warning: LiLiuGoldbach/Proofs/GammaSequenceBounds.lean: imports `Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/GammaSequenceBounds.lean: imports `Mathlib.Analysis.SpecialFunctions.Gamma.Beta` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/GammaSequenceBounds.lean:57:4: `DifferentiableAt.fun_finset_prod` has been deprecated: Use `DifferentiableAt.fun_finsetProd` instead
+
+Hint: Replace the deprecated name:
+  DifferentiableAt.fun_finset_̵p̵P̲rod
+⚠ [9225/9369] Built LiLiuGoldbach.Proofs.SpectralPerronBounds (10s)
+warning: LiLiuGoldbach/Proofs/SpectralPerronBounds.lean:137:36: Variable name `hC₁` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC₁
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9226/9369] Built LiLiuGoldbach.Proofs.CharacterZeroNormal (9.0s)
+warning: LiLiuGoldbach/Proofs/CharacterZeroNormal.lean:60:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [9227/9369] Built LiLiuGoldbach.Proofs.CharacterPoissonAnchor (21s)
+warning: LiLiuGoldbach/Proofs/CharacterPoissonAnchor.lean:44:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterPoissonAnchor.lean:44:76: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterPoissonAnchor.lean:91:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/CharacterPoissonAnchor.lean:116:38: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/CharacterPoissonAnchor.lean:102:57: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterPoissonAnchor.lean:102:57: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9228/9369] Built LiLiuGoldbach.Proofs.SpectralZeroPower (6.9s)
+warning: LiLiuGoldbach/Proofs/SpectralZeroPower.lean:54:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/SpectralZeroPower.lean:62:22: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/SpectralZeroPower.lean:72:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralZeroPower.lean:72:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralZeroPower.lean:72:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralZeroPower.lean:72:76: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9229/9369] Built LiLiuGoldbach.Proofs.SpectralL2Kernel (8.1s)
+✔ [9230/9369] Built LiLiuGoldbach.Proofs.SpectralCompression (15s)
+✔ [9231/9369] Built LiLiuGoldbach.Proofs.SpectralTraceBounds (6.8s)
+⚠ [9232/9369] Built LiLiuGoldbach.Proofs.HardyRawLines (8.1s)
+warning: LiLiuGoldbach/Proofs/HardyRawLines.lean:20:63: Variable name `hab` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hab
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9233/9369] Built LiLiuGoldbach.Proofs.MellinDiagonal (7.2s)
+✔ [9234/9369] Built LiLiuGoldbach.Proofs.MellinMomentComplete (6.5s)
+⚠ [9235/9369] Built LiLiuGoldbach.Proofs.DensityEulerIdentity (6.3s)
+warning: LiLiuGoldbach/Proofs/DensityEulerIdentity.lean:45:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [this] at hq
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: LiLiuGoldbach/Proofs/DensityEulerIdentity.lean:87:33: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+✔ [9236/9369] Built LiLiuGoldbach.Proofs.HardyKernelResidual (9.1s)
+⚠ [9237/9369] Built LiLiuGoldbach.Proofs.FiniteExperimentSpectrum (9.5s)
+warning: LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean: imports `Mathlib.Analysis.Matrix.Spectrum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean:33:77: This simp argument is unused:
+  Complex.mul_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.mul_apply, Matrix.star_apply, Matrix.one_apply_eq, star_def, Complex.one_re,
+    Complex.conj_re, Complex.conj_im] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean:34:4: This simp argument is unused:
+  Complex.conj_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.mul_apply, Matrix.star_apply, Matrix.one_apply_eq, star_def, Complex.mul_re, Complex.one_re,
+    Complex.conj_im] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean:34:20: This simp argument is unused:
+  Complex.conj_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.mul_apply, Matrix.star_apply, Matrix.one_apply_eq, star_def, Complex.mul_re, Complex.one_re,
+    Complex.conj_re] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean:96:12: This simp argument is unused:
+  Matrix.mul_diagonal
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, Matrix.diagonal_apply, Matrix.one_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean:141:25: Variable name `hGRH` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hGRH
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9238/9369] Built LiLiuGoldbach.Proofs.WideCounting (7.1s)
+✔ [9239/9369] Built LiLiuGoldbach.Proofs.FiniteModelBasic (7.1s)
+✔ [9240/9369] Built LiLiuGoldbach.Proofs.FiniteMellinDouble (8.2s)
+⚠ [9241/9369] Built LiLiuGoldbach.Proofs.FiniteCharacterShift (6.8s)
+warning: LiLiuGoldbach/Proofs/FiniteCharacterShift.lean:45:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/FiniteCharacterShift.lean:35:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/FiniteCharacterShift.lean:35:22: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/FiniteCharacterShift.lean:45:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/FiniteCharacterShift.lean:45:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [9242/9369] Built LiLiuGoldbach.Proofs.FiniteFunctional (6.9s)
+info: LiLiuGoldbach/Proofs/FiniteFunctional.lean:114:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [9243/9369] Built LiLiuGoldbach.Proofs.QuadraticNormChange (6.7s)
+✔ [9244/9369] Built LiLiuGoldbach.Proofs.GammaDerivativeLimit (6.7s)
+⚠ [9245/9369] Built LiLiuGoldbach.Proofs.CharacterZeroShiftNormal (6.9s)
+warning: LiLiuGoldbach/Proofs/CharacterZeroShiftNormal.lean:27:5: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterZeroShiftNormal.lean:27:19: Variable name `hN4` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN4
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9246/9369] Built LiLiuGoldbach.Proofs.CharacterZeroMultiplicity (6.6s)
+⚠ [9247/9369] Built LiLiuGoldbach.Proofs.SpectralL2KernelAdjoint (5.0s)
+warning: LiLiuGoldbach/Proofs/SpectralL2KernelAdjoint.lean:23:0: automatically included section variable(s) unused in theorem `LiLiuGoldbach16.l2Kernel_pairing_integrable`:
+  [SFinite μ]
+  [SFinite ν]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [SFinite μ] [SFinite ν] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9248/9369] Built LiLiuGoldbach.Proofs.SpectralL2KernelBasis (6.2s)
+✔ [9249/9369] Built LiLiuGoldbach.Proofs.HilbertSchmidtTriangle (6.5s)
+⚠ [9250/9369] Built LiLiuGoldbach.Proofs.HardyContourShift (5.0s)
+warning: LiLiuGoldbach/Proofs/HardyContourShift.lean:17:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: LiLiuGoldbach/Proofs/HardyContourShift.lean:21:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [Real.volume_Ioi, lt_self_iff_false] at hlt
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [9251/9369] Built LiLiuGoldbach.Proofs.MellinModelRemovable (5.9s)
+warning: LiLiuGoldbach/Proofs/MellinModelRemovable.lean: imports `Mathlib.NumberTheory.Harmonic.ZetaAsymp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9252/9369] Built LiLiuGoldbach.Proofs.BaselineProductLink (6.2s)
+warning: LiLiuGoldbach/Proofs/BaselineProductLink.lean:26:6: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [norm_one, lt_self_iff_false] at hq
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: LiLiuGoldbach/Proofs/BaselineProductLink.lean:29:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/BaselineProductLink.lean:31:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/BaselineProductLink.lean:37:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: LiLiuGoldbach/Proofs/BaselineProductLink.lean:54:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BaselineProductLink.lean:54:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9253/9369] Built LiLiuGoldbach.Proofs.SpectralModelEuler (7.1s)
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:14:59: Variable name `hq0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:23:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:23:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:72:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:97:40: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:66:56: This simp argument is unused:
+  hN.ne'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Nat.mem_primeFactors, and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:66:64: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mem_filter, Nat.mem_primeFactors, hN.ne']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:78:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralModelEuler.lean:78:8: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9254/9369] Built LiLiuGoldbach.Proofs.ZetaGrowth (7.1s)
+✔ [9255/9369] Built LiLiuGoldbach.Proofs.WideMoments (6.4s)
+✔ [9256/9369] Built LiLiuGoldbach.Proofs.WideModelData (5.8s)
+✔ [9257/9369] Built LiLiuGoldbach.Proofs.FiniteModelConvolution (6.2s)
+⚠ [9258/9369] Built LiLiuGoldbach.Proofs.FiniteModelBetaPairing (6.1s)
+warning: LiLiuGoldbach/Proofs/FiniteModelBetaPairing.lean:52:15: This simp argument is unused:
+  ← mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [integral_mul_const] at hs
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9259/9369] Built LiLiuGoldbach.Proofs.WideFunctional (5.6s)
+warning: LiLiuGoldbach/Proofs/WideFunctional.lean:15:38: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: LiLiuGoldbach/Proofs/WideFunctional.lean:48:6: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+✔ [9260/9369] Built LiLiuGoldbach.Proofs.QuadraticFunctional (6.1s)
+⚠ [9261/9369] Built LiLiuGoldbach.Proofs.VariableWeightNorm (7.1s)
+warning: LiLiuGoldbach/Proofs/VariableWeightNorm.lean:108:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/VariableWeightNorm.lean:108:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/VariableWeightNorm.lean:148:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/VariableWeightNorm.lean:153:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/VariableWeightNorm.lean:148:25: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/VariableWeightNorm.lean:153:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9262/9369] Built LiLiuGoldbach.Proofs.GammaDifference (5.6s)
+✔ [9263/9369] Built LiLiuGoldbach.Proofs.HadamardLimit (6.4s)
+✔ [9264/9369] Built LiLiuGoldbach.Proofs.SpectralBoundaryBlocks (8.2s)
+⚠ [9265/9369] Built LiLiuGoldbach.Proofs.SpectralPerronIntegral (6.6s)
+warning: LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean:64:23: This simp argument is unused:
+  max_comm 0 x
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Measure.real, Real.volume_Ioo, sub_zero, ENNReal.toReal_ofReal', Complex.real_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean:71:75: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, sub_zero, add_zero, add_im, mul_im,
+    mul_one, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean:74:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean:74:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean:74:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean:177:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean:177:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9266/9369] Built LiLiuGoldbach.Proofs.MellinModelShift (6.8s)
+⚠ [9267/9369] Built LiLiuGoldbach.Proofs.PoleModel (9.3s)
+warning: LiLiuGoldbach/Proofs/PoleModel.lean: imports `Mathlib.NumberTheory.Harmonic.ZetaAsymp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/PoleModel.lean:61:15: This simp argument is unused:
+  ofReal_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_add, sub_zero, add_zero, cpow_zero, mul_one, riemannZeta₁_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/PoleModel.lean:61:36: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ofReal_zero, mul_zero, sub_zero, add_zero, cpow_zero, mul_one, riemannZeta₁_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9268/9369] Built LiLiuGoldbach.Proofs.HardyGaussian (18s)
+warning: LiLiuGoldbach/Proofs/HardyGaussian.lean:64:6: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pow_two, Complex.mul_re, line, Complex.add_re, Complex.ofReal_re, Complex.mul_re,
+    Complex.ofReal_im, Complex.I_re, Complex.I_im, mul_zero, sub_zero, add_zero, Complex.add_im, Complex.mul_im,
+    mul_one, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9269/9369] Built LiLiuGoldbach.Proofs.KernelGrowthBounds (9.1s)
+warning: LiLiuGoldbach/Proofs/KernelGrowthBounds.lean:52:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/KernelGrowthBounds.lean:91:4: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [line, Complex.add_re, Complex.one_re, Complex.ofReal_re, Complex.mul_re, Complex.ofReal_im,
+    Complex.I_re, Complex.I_im, mul_zero, sub_zero, add_zero, Complex.add_im, Complex.one_im, Complex.mul_im, mul_one,
+    zero_add] at hr hi
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/KernelGrowthBounds.lean:133:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/KernelGrowthBounds.lean:133:19: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/KernelGrowthBounds.lean:141:55: Variable name `hab` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hab
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9270/9369] Built LiLiuGoldbach.Proofs.TotientLogLog (8.6s)
+warning: LiLiuGoldbach/Proofs/TotientLogLog.lean:83:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/TotientLogLog.lean:83:8: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9271/9369] Built LiLiuGoldbach.Proofs.MomentError (6.8s)
+⚠ [9272/9369] Built LiLiuGoldbach.Proofs.ZetaTruncation (10s)
+warning: LiLiuGoldbach/Proofs/ZetaTruncation.lean:73:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: LiLiuGoldbach/Proofs/ZetaTruncation.lean:76:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: LiLiuGoldbach/Proofs/ZetaTruncation.lean:142:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/ZetaTruncation.lean:142:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9273/9369] Built LiLiuGoldbach.Proofs.WideMellinArithmetic (7.7s)
+warning: LiLiuGoldbach/Proofs/WideMellinArithmetic.lean:96:32: This simp argument is unused:
+  countingCoefficient_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [f]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9274/9369] Built LiLiuGoldbach.Proofs.FiniteModelSampling (6.4s)
+✔ [9275/9369] Built LiLiuGoldbach.Proofs.FiniteModelBetaConvolution (7.2s)
+⚠ [9276/9369] Built LiLiuGoldbach.Proofs.VariableWeightAsymptotic (8.6s)
+info: LiLiuGoldbach/Proofs/VariableWeightAsymptotic.lean:60:100: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/VariableWeightAsymptotic.lean:60:84: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/VariableWeightAsymptotic.lean:60:96: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/VariableWeightAsymptotic.lean:60:84: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/VariableWeightAsymptotic.lean:60:96: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9277/9369] Built LiLiuGoldbach.Proofs.BalanceBounds (6.8s)
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:33:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:34:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:33:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:34:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:86:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:92:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:86:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:92:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:122:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:135:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:137:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:122:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:122:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:135:34: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/BalanceBounds.lean:137:34: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9278/9369] Built LiLiuGoldbach.Proofs.CharacterZeroExpansion (6.4s)
+✔ [9279/9369] Built LiLiuGoldbach.Proofs.SpectralHardyCompression (6.7s)
+⚠ [9280/9369] Built LiLiuGoldbach.Proofs.SpectralPerronPoleIntegral (7.2s)
+warning: LiLiuGoldbach/Proofs/SpectralPerronPoleIntegral.lean:53:10: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Complex.norm_exp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronPoleIntegral.lean:68:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronPoleIntegral.lean:68:31: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9281/9369] Built LiLiuGoldbach.Proofs.MellinModelSingle (6.1s)
+⚠ [9282/9369] Built LiLiuGoldbach.Proofs.HardyGaussianDensity (6.5s)
+warning: LiLiuGoldbach/Proofs/HardyGaussianDensity.lean:71:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/HardyGaussianDensity.lean:71:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HardyGaussianDensity.lean:71:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: LiLiuGoldbach/Proofs/HardyGaussianDensity.lean:118:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [9283/9369] Built LiLiuGoldbach.Proofs.WideError (6.2s)
+✔ [9284/9369] Built LiLiuGoldbach.Proofs.SpectralModelGrowth (8.3s)
+✔ [9285/9369] Built LiLiuGoldbach.Proofs.FiniteModelRemovable (5.9s)
+✔ [9286/9369] Built LiLiuGoldbach.Proofs.BalanceLimits (5.8s)
+✔ [9287/9369] Built LiLiuGoldbach.Proofs.FiniteModelBetaTransform (6.5s)
+✔ [9288/9369] Built LiLiuGoldbach.CharacterEstimatePrerequisites (5.8s)
+✔ [9289/9369] Built LiLiuGoldbach.Proofs.PoleLogDerivative (6.7s)
+✔ [9290/9369] Built LiLiuGoldbach.Proofs.CharacterPoissonIdentity (6.3s)
+⚠ [9291/9369] Built LiLiuGoldbach.Proofs.SpectralL2BasisExistence (6.5s)
+warning: LiLiuGoldbach/Proofs/SpectralL2BasisExistence.lean: imports `Mathlib.MeasureTheory.Measure.SeparableMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+✔ [9292/9369] Built LiLiuGoldbach.Proofs.MellinModelBound (7.2s)
+✔ [9293/9369] Built LiLiuGoldbach.Proofs.HardyGaussianSpace (6.9s)
+✔ [9294/9369] Built LiLiuGoldbach.Proofs.FiniteModelShift (6.1s)
+⚠ [9295/9369] Built LiLiuGoldbach.Proofs.FiniteModelBetaRelation (6.3s)
+warning: LiLiuGoldbach/Proofs/FiniteModelBetaRelation.lean:13:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/FiniteModelBetaRelation.lean:13:40: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/FiniteModelBetaRelation.lean:78:4: Unused tactic linter: `change
+  2 * mellin (fun y => (differenceConvolution φ y : ℂ)) w - mellin (fun y => (sumConvolution φ y : ℂ)) w =
+    _` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9296/9369] Built LiLiuGoldbach.Proofs.PoleZeta (6.0s)
+warning: LiLiuGoldbach/Proofs/PoleZeta.lean: imports `Mathlib.NumberTheory.Harmonic.ZetaAsymp` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9297/9369] Built LiLiuGoldbach.Proofs.PoleCharacterKernel (6.2s)
+warning: LiLiuGoldbach/Proofs/PoleCharacterKernel.lean:59:16: `tendsto_finset_sum` has been deprecated: Use `tendsto_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  tendsto_finset_̵s̵S̲um
+✔ [9298/9369] Built LiLiuGoldbach.Proofs.FiniteModelBound (6.8s)
+⚠ [9299/9369] Built LiLiuGoldbach.Proofs.MellinModelDouble (6.4s)
+warning: LiLiuGoldbach/Proofs/MellinModelDouble.lean:78:5: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9300/9369] Built LiLiuGoldbach.Proofs.FiniteModelSingle (5.5s)
+⚠ [9301/9369] Built LiLiuGoldbach.Proofs.HardyGaussianRepresentation (6.4s)
+info: LiLiuGoldbach/Proofs/HardyGaussianRepresentation.lean:52:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: LiLiuGoldbach/Proofs/HardyGaussianRepresentation.lean:61:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: LiLiuGoldbach/Proofs/HardyGaussianRepresentation.lean:50:4: Unused tactic linter: `congr 1` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9302/9369] Built LiLiuGoldbach.ModelMellinPrerequisites (5.7s)
+✔ [9303/9369] Built LiLiuGoldbach.Proofs.FiniteModelDouble (6.3s)
+✔ [9304/9369] Built LiLiuGoldbach.Proofs.HardyConverse (5.0s)
+⚠ [9305/9369] Built LiLiuGoldbach.Proofs.MellinResidual (6.8s)
+warning: LiLiuGoldbach/Proofs/MellinResidual.lean:34:25: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+✔ [9306/9369] Built LiLiuGoldbach.Proofs.WideMellinModel (5.4s)
+⚠ [9307/9369] Built LiLiuGoldbach.Proofs.HardyContinuousBoundary (7.0s)
+warning: LiLiuGoldbach/Proofs/HardyContinuousBoundary.lean:79:50: Variable name `hab` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hab
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9308/9369] Built LiLiuGoldbach.ResidualMellinPrerequisites (5.8s)
+⚠ [9309/9369] Built LiLiuGoldbach.Proofs.SpectralDiagonalVector (6.3s)
+warning: LiLiuGoldbach/Proofs/SpectralDiagonalVector.lean:25:30: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.normSq_apply, line, add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, one_re, one_im,
+    mul_zero, sub_zero, add_zero, add_im, mul_im, mul_one, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9310/9369] Built LiLiuGoldbach.Proofs.HardyKernelColumns (7.7s)
+warning: LiLiuGoldbach/Proofs/HardyKernelColumns.lean:44:15: This simp argument is unused:
+  WithLp.ofLp_toLp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [RCLike.inner_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyKernelColumns.lean:49:15: This simp argument is unused:
+  WithLp.ofLp_toLp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [RCLike.inner_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9311/9369] Built LiLiuGoldbach.Proofs.SpectralDiagonalTrace (6.4s)
+⚠ [9312/9369] Built LiLiuGoldbach.Proofs.HardyKernelMajorant (6.2s)
+warning: LiLiuGoldbach/Proofs/HardyKernelMajorant.lean: imports `Mathlib.Analysis.SpecialFunctions.JapaneseBracket` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9313/9369] Built LiLiuGoldbach.Proofs.SpectralDiagonalOperator (6.3s)
+warning: LiLiuGoldbach/Proofs/SpectralDiagonalOperator.lean:45:37: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9314/9369] Built LiLiuGoldbach.Proofs.SpectralPerronFubini (7.9s)
+warning: LiLiuGoldbach/Proofs/SpectralPerronFubini.lean:157:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronFubini.lean:170:16: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronFubini.lean:157:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronFubini.lean:157:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronFubini.lean:170:6: Unused tactic linter: `all_goals positivity` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9315/9369] Built LiLiuGoldbach.Proofs.VariableStripOperators (7.2s)
+warning: LiLiuGoldbach/Proofs/VariableStripOperators.lean:151:58: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/VariableStripOperators.lean:152:40: Variable name `hlarge` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlarge
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9316/9369] Built LiLiuGoldbach.Proofs.ArithmeticKernelRealization (5.0s)
+⚠ [9317/9369] Built LiLiuGoldbach.Proofs.SpectralDiagonalBound (7.3s)
+warning: LiLiuGoldbach/Proofs/SpectralDiagonalBound.lean: imports `Mathlib.NumberTheory.Chebyshev` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/SpectralDiagonalBound.lean: imports `Mathlib.NumberTheory.LSeries.SumCoeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9318/9369] Built LiLiuGoldbach.Proofs.SpectralPerronGamma (8.1s)
+warning: LiLiuGoldbach/Proofs/SpectralPerronGamma.lean:29:45: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralPerronGamma.lean:29:45: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: LiLiuGoldbach/Proofs/SpectralPerronGamma.lean:75:18: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [9319/9369] Built LiLiuGoldbach.Proofs.PoleLowerBound (7.9s)
+⚠ [9320/9369] Built LiLiuGoldbach.Proofs.HardyArithmeticTheorems (6.4s)
+warning: LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean:33:44: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean:47:59: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean:55:65: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9321/9369] Built LiLiuGoldbach.Proofs.WeightedComponentKernel (6.9s)
+warning: LiLiuGoldbach/Proofs/WeightedComponentKernel.lean:51:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/WeightedComponentKernel.lean:51:19: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9322/9369] Built LiLiuGoldbach.EarlyAnalyticPrerequisites (5.6s)
+✔ [9323/9369] Built LiLiuGoldbach.Proofs.CharacterHardyVectors (6.4s)
+⚠ [9324/9369] Built LiLiuGoldbach.Proofs.SpectralModelOperator (6.9s)
+warning: LiLiuGoldbach/Proofs/SpectralModelOperator.lean:51:13: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/SpectralModelOperator.lean:96:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9325/9369] Built LiLiuGoldbach.Proofs.ArithmeticComponentOperators (7.6s)
+warning: LiLiuGoldbach/Proofs/ArithmeticComponentOperators.lean:108:60: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9326/9369] Built LiLiuGoldbach.Proofs.QuadraticIdentity (7.6s)
+warning: LiLiuGoldbach/Proofs/QuadraticIdentity.lean:118:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/QuadraticIdentity.lean:118:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9327/9369] Built LiLiuGoldbach.Proofs.HardyFiniteGram (7.6s)
+warning: LiLiuGoldbach/Proofs/HardyFiniteGram.lean:45:44: `ContinuousLinearMap.sum_apply` has been deprecated: Use `sum_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sum_apply` to `sum_apply x`).
+
+Hint: Replace the deprecated name:
+  C̵o̵n̵t̵i̵n̵u̵o̵u̵s̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵s̲u̲m̲_̲a̲p̲p̲l̲y̲
+warning: LiLiuGoldbach/Proofs/HardyFiniteGram.lean:49:4: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: LiLiuGoldbach/Proofs/HardyFiniteGram.lean:49:46: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: LiLiuGoldbach/Proofs/HardyFiniteGram.lean:46:28: This simp argument is unused:
+  map_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rankOne_apply, smul_eq_mul, hardyEvaluationFunctional_apply hs, hf _ s hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyFiniteGram.lean:46:38: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rankOne_apply, map_smul, hardyEvaluationFunctional_apply hs, hf _ s hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/HardyFiniteGram.lean:46:87: This simp argument is unused:
+  hf _ s hs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [rankOne_apply, map_smul, smul_eq_mul, hardyEvaluationFunctional_apply hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9328/9369] Built LiLiuGoldbach.Proofs.VariableComponentOperators (6.6s)
+✔ [9329/9369] Built LiLiuGoldbach.AnalyticPrerequisites (6.0s)
+⚠ [9330/9369] Built LiLiuGoldbach.Proofs.FiniteQuadratic (7.4s)
+warning: LiLiuGoldbach/Proofs/FiniteQuadratic.lean:100:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/FiniteQuadratic.lean:100:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9331/9369] Built LiLiuGoldbach.Proofs.CharacterGramOperator (7.9s)
+✔ [9332/9369] Built LiLiuGoldbach.Proofs.DictionaryApplication (7.5s)
+✔ [9333/9369] Built LiLiuGoldbach.Proofs.WideQuadratic (5.9s)
+⚠ [9334/9369] Built LiLiuGoldbach.Proofs.CharacterTraceBounds (7.2s)
+warning: LiLiuGoldbach/Proofs/CharacterTraceBounds.lean:15:61: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [line, Complex.add_re, Complex.one_re, Complex.ofReal_re, Complex.mul_re, Complex.ofReal_im,
+    Complex.I_re, Complex.I_im, mul_zero, sub_zero, add_zero, Complex.add_im, Complex.one_im, Complex.mul_im, mul_one,
+    zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9335/9369] Built LiLiuGoldbach.Proofs.VariableQuadratic (7.5s)
+✔ [9336/9369] Built LiLiuGoldbach.Proofs.Main (6.8s)
+✔ [9337/9369] Built LiLiuGoldbach.Proofs.SpectralConsequences (6.0s)
+✔ [9338/9369] Built LiLiuGoldbach.Proofs.WideMellinResidual (6.6s)
+⚠ [9339/9369] Built LiLiuGoldbach.Proofs.HalfPlaneWeightedCauchy (8.1s)
+warning: LiLiuGoldbach/Proofs/HalfPlaneWeightedCauchy.lean: imports `Mathlib.Analysis.Complex.RemovableSingularity` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: LiLiuGoldbach/Proofs/HalfPlaneWeightedCauchy.lean:144:15: Variable name `hR` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hR
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9340/9369] Built LiLiuGoldbach.Proofs.CharacterShortPolynomial (6.0s)
+warning: LiLiuGoldbach/Proofs/CharacterShortPolynomial.lean:95:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+✔ [9341/9369] Built LiLiuGoldbach.Proofs.CharacterStripTrace (8.3s)
+✔ [9342/9369] Built LiLiuGoldbach.Proofs.PoleSpectralObstruction (11s)
+✔ [9343/9369] Built LiLiuGoldbach.Proofs.QuadraticEstimates (8.7s)
+✔ [9344/9369] Built LiLiuGoldbach.Proofs.PrimePairs (7.1s)
+⚠ [9345/9369] Built LiLiuGoldbach.Proofs.SpectralCompletion (7.1s)
+warning: LiLiuGoldbach/Proofs/SpectralCompletion.lean:27:8: This simp argument is unused:
+  Quaternion.star_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hstar]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletion.lean:72:29: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← Quaternion.coe_one, ← Quaternion.coe_sub, ← Quaternion.coe_mul, Quaternion.smul_coe, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9346/9369] Built LiLiuGoldbach.Proofs.HalfPlanePoisson (7.2s)
+warning: LiLiuGoldbach/Proofs/HalfPlanePoisson.lean:41:52: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/HalfPlanePoisson.lean:41:52: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HalfPlanePoisson.lean:145:40: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LiLiuGoldbach/Proofs/HalfPlanePoisson.lean:145:36: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HalfPlanePoisson.lean:145:40: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/HalfPlanePoisson.lean:184:87: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/HalfPlanePoisson.lean:184:87: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9347/9369] Built LiLiuGoldbach.Proofs.SpectralPerronEuler (7.1s)
+warning: LiLiuGoldbach/Proofs/SpectralPerronEuler.lean:130:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [he'] at hr
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [9348/9369] Built LiLiuGoldbach.Proofs.SpectralPerronSeries (7.0s)
+✔ [9349/9369] Built LiLiuGoldbach.Proofs.CharacterReferencePolynomial (7.1s)
+✔ [9350/9369] Built LiLiuGoldbach.Proofs.ComponentNormBounds (7.3s)
+✔ [9351/9369] Built LiLiuGoldbach.Proofs.PoleObstruction (6.8s)
+⚠ [9352/9369] Built LiLiuGoldbach.Proofs.SpectralCompletionUniform (6.6s)
+warning: LiLiuGoldbach/Proofs/SpectralCompletionUniform.lean:46:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletionUniform.lean:46:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletionUniform.lean:46:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletionUniform.lean:46:29: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9353/9369] Built LiLiuGoldbach.Proofs.SpectralPerronTruncation (8.2s)
+warning: LiLiuGoldbach/Proofs/SpectralPerronTruncation.lean:70:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: LiLiuGoldbach/Proofs/SpectralPerronTruncation.lean:158:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [9354/9369] Built LiLiuGoldbach.Proofs.CharacterReferenceEnergy (7.9s)
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:52:82: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:52:82: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:84:8: `continuous_finset_sum` has been deprecated: Use `continuous_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  continuous_finset_̵s̵S̲um
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:113:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:113:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:130:8: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:138:28: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:144:30: Variable name `hA` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hA
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:170:84: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:170:84: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:224:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean:224:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9355/9369] Built LiLiuGoldbach.Proofs.SpectralQuantitative (9.2s)
+warning: LiLiuGoldbach/Proofs/SpectralQuantitative.lean:59:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralQuantitative.lean:59:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9356/9369] Built LiLiuGoldbach.Proofs.SpectralCompletionZeros (10s)
+warning: LiLiuGoldbach/Proofs/SpectralCompletionZeros.lean:30:67: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletionZeros.lean:30:67: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9357/9369] Built LiLiuGoldbach.Proofs.SpectralCompletionIdentities (11s)
+warning: LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean:129:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean:132:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean:129:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean:132:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9358/9369] Built LiLiuGoldbach.Proofs.CharacterHalfPlane (7.8s)
+warning: LiLiuGoldbach/Proofs/CharacterHalfPlane.lean:24:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterHalfPlane.lean:24:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterHalfPlane.lean:24:25: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterHalfPlane.lean:24:38: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LiLiuGoldbach/Proofs/CharacterHalfPlane.lean:62:92: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterHalfPlane.lean:62:92: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9359/9369] Built LiLiuGoldbach.Proofs.SpectralCompletionDeterminant (7.0s)
+✔ [9360/9369] Built LiLiuGoldbach.Proofs.PoissonWeightedEnergy (7.3s)
+✔ [9361/9369] Built LiLiuGoldbach.Proofs.SpectralCompletionMultiplicities (6.5s)
+⚠ [9362/9369] Built LiLiuGoldbach.Proofs.CharacterPoissonComparison (9.0s)
+warning: LiLiuGoldbach/Proofs/CharacterPoissonComparison.lean:45:29: This simp argument is unused:
+  neg_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_re, sub_re] at he ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9363/9369] Built LiLiuGoldbach.Proofs.CharacterAverageAssembly (16s)
+warning: LiLiuGoldbach/Proofs/CharacterAverageAssembly.lean:84:78: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LiLiuGoldbach/Proofs/CharacterAverageAssembly.lean:84:78: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [9364/9369] Built LiLiuGoldbach.Proofs.CharacterAverage (7.5s)
+✔ [9365/9369] Built LiLiuGoldbach.Proofs.QuantitativeBounds (7.5s)
+⚠ [9366/9369] Built LiLiuGoldbach.Proofs.VariableConsequences (6.9s)
+warning: LiLiuGoldbach/Proofs/VariableConsequences.lean:63:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: LiLiuGoldbach/Proofs/VariableConsequences.lean:80:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9367/9369] Built LiLiuGoldbach.Remaining (6.2s)
+✔ [9368/9369] Built LiLiuGoldbach (6.1s)
+Build completed successfully (9369 jobs).

@@ -1,0 +1,27 @@
+# Local build products and optional review-page tooling.
+**/.lake/
+**/node_modules/
+**/__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.ir
+*.olean.private
+*.olean.server
+
+# Exploratory work and duplicated build benchmark are not the proof library.
+/work/
+/formalization/work/
+/formalization/verification/independent-audit/benchmark-project/
+/formalization/*Check.lean
+/formalization/LiLiuGoldbach/**/*Check.lean
+/formalization/scripts/*.lean
+/formalization/*.log
+/formalization/verification/spectral-final-axioms.log
+/formalization/verification/publication/declaration-audit/declaration-graph.json
+
+# ZIPs and early exports remain local; publish their curated contents instead.
+/outputs/*
+!/outputs/formalization-preparation/
+!/outputs/publication/
+*.zip

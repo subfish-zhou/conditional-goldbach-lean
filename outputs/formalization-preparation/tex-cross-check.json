@@ -1,0 +1,77 @@
+{
+  "scope": "Independent cross-check of the new or changed TeX-audit interfaces only; no source files changed.",
+  "source_tex": "work/tex-audit/source.tex",
+  "conclusion": "No mandatory correction found in the inspected interfaces. Original domain restrictions are retained; validity and convergence are conclusions rather than new caller hypotheses.",
+  "checks": [
+    {
+      "declaration": "lemma_3_1_odd_orthogonality",
+      "source_lines": [373, 382],
+      "source_labels": ["gb:orthogonality"],
+      "result": "matched",
+      "checks": [
+        "All odd characters, including imprimitive ones, are summed; no GRH or weight condition has been introduced.",
+        "The factor 2/varphi(N), complex conjugation of chi(m), and plus-equal/minus-opposite congruence signs exactly match TeX.",
+        "The if Nat.Coprime(n*m)N branch is exactly the source coprimality indicator, including n=0 or m=0; nonunit character values vanish.",
+        "Even N and N>=4 match the paper's actual Goldbach modulus domain. NeZero N is a redundant typeclass witness on that domain, not a stronger arithmetic assumption."
+      ]
+    },
+    {
+      "declaration": "lemma_6_4_perron_residue",
+      "source_lines": [2721, 2738],
+      "source_labels": ["proof:grh:smoothed-truncation"],
+      "result": "matched",
+      "checks": [
+        "Source kernel is (X^v-x^v)/(v^2 log x) with x=sqrt X; the implemented kernel has exactly those factors.",
+        "X>1 ensures x>1 and log x nonzero. In the application X=N/2 this follows from the existing modulus range.",
+        "The numerator's first derivative at zero is log X-log sqrt X=log sqrt X, so the residue is +1, not a derivative term or an extra factor 2.",
+        "MeromorphicOn together with punctured limit v*K(v)->1 expresses the simple-pole residue without mistaking the totalized value at v=0 for a meromorphic point value."
+      ]
+    },
+    {
+      "declarations": ["poissonAction", "lemma_6_4_poisson_action_spec"],
+      "source_lines": [2915, 2923],
+      "result": "matched",
+      "checks": [
+        "TeX explicitly interprets ell=0 as the identity; poissonAction 0 f=f implements this for every f.",
+        "The scalar Poisson kernel at ell=0 is not a Dirac mass and should not be used in an ordinary convolution to implement that identity.",
+        "For ell>0 the theorem gives Integrable, pointwise nonnegativity and integral exactly 1. The convolution equality for arbitrary f is only its definition, not an assertion that all arbitrary-f convolutions are integrable.",
+        "No analytic assertion is made for ell<0. Applicability to the logarithmic-derivative boundary data remains part of proving the existing Lemma 6.4, whose proof is intentionally sorry."
+      ]
+    },
+    {
+      "declaration": "lemma_6_4_poisson_convolution",
+      "source_lines": [2924, 2929],
+      "result": "matched",
+      "checks": [
+        "The orientation realConvolution(f,g)(t)=integral f(u)g(t-u) agrees with the source P1*Pell calculation.",
+        "For ell>0 the product integrand is integrable: the second kernel is bounded and the first is integrable. Integrability appears as a conclusion.",
+        "P1*Pell=P(1+ell) and P(1+ell)(t)<=(1+ell)P1(t) have the correct normalization and comparison direction.",
+        "The restriction ell>0 is necessary for the ordinary scalar-kernel convolution; ell=0 is already represented by the separate identity action. No case in the paper's nonnegative parameter range is lost."
+      ]
+    },
+    {
+      "declaration": "proposition_A_1_operator_spec",
+      "source_lines": [3949, 3967],
+      "source_labels": ["proof:app:param:strip", "proof:v9:variable-boundary-realization"],
+      "result": "matched",
+      "checks": [
+        "Fixed c>0, even N>=4, N>exp(10c), and GRH(N) are precisely the source hypotheses.",
+        "These imply 0<alpha(N,c)<1/10<sigmaStar=1/9<beta=1/8. Thus ha:alpha(N,c)<beta is mathematically implied and the existing Riesz choice at sigmaStar belongs to the same strip.",
+        "Every HardySpace, residualOperator and boundaryTraces occurrence uses exactly alpha(N,c), beta and the same ha; no accidental mixing with alpha(N,1) occurs.",
+        "Both boundary lines and all four kernel L2 combinations are retained. Kernel representation, spectral-data nonemptiness and the two action-integral Integrable statements are conclusions, not stronger caller premises.",
+        "The theorem does not claim a c-uniform bound or threshold: it states validity for each source-admissible realization. This preserves fixed-c versus varying-c quantifier distinctions."
+      ]
+    },
+    {
+      "topic": "Uniform constants and proof policy",
+      "result": "matched",
+      "checks": [
+        "The newly added orthogonality, Perron, Poisson and A.1 validity statements are exact identities or existence/regularity statements; they introduce no Big-O constant with a changed quantifier dependency.",
+        "The original Lemma6.4 absolute constant remains quantified before N and sigma. A.1's fixed-c norm asymptotic remains separate, with constants allowed to depend on phi and c.",
+        "All new theorem proofs remain by sorry. This cross-check does not certify mathematical proofs or resolve the previously registered implementation choices."
+      ]
+    }
+  ],
+  "mandatory_fixes": [],
+  "source_files_modified": false
+}

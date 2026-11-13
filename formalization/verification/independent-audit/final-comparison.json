@@ -1,0 +1,3315 @@
+{
+  "statements": [
+    {
+      "expected": "TexAudit14.expect_singularSeries_eq_existing",
+      "actual": "LiLiuGoldbach16.singularSeries_eq_existing",
+      "tex_lines": [
+        1055,
+        1059
+      ],
+      "label": "singularSeries_eq_existing",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_000_singularSeries_eq_existing",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_theorem_1_1",
+      "actual": "LiLiuGoldbach16.theorem_1_1",
+      "tex_lines": [
+        289,
+        298
+      ],
+      "label": "theorem_1_1",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_001_theorem_1_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_theorem_1_1_weight_exists",
+      "actual": "LiLiuGoldbach16.theorem_1_1_weight_exists",
+      "tex_lines": [
+        151,
+        154
+      ],
+      "label": "theorem_1_1_weight_exists",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_002_theorem_1_1_weight_exists",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_theorem_1_2",
+      "actual": "LiLiuGoldbach16.theorem_1_2",
+      "tex_lines": [
+        315,
+        323
+      ],
+      "label": "theorem_1_2",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_003_theorem_1_2",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_theorem_1_2_hypothesisR_implies_S",
+      "actual": "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S",
+      "tex_lines": [
+        306,
+        313
+      ],
+      "label": "theorem_1_2_hypothesisR_implies_S",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_004_theorem_1_2_hypothesisR_implies_S",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_primePair_consequence",
+      "actual": "LiLiuGoldbach16.primePair_consequence",
+      "tex_lines": [
+        325,
+        328
+      ],
+      "label": "primePair_consequence",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_005_primePair_consequence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_1",
+      "actual": "LiLiuGoldbach16.lemma_3_1",
+      "tex_lines": [
+        1090,
+        1100
+      ],
+      "label": "lemma_3_1",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_006_lemma_3_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_1_odd_orthogonality",
+      "actual": "LiLiuGoldbach16.lemma_3_1_odd_orthogonality",
+      "tex_lines": [
+        1102,
+        1117
+      ],
+      "label": "lemma_3_1_odd_orthogonality",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_007_lemma_3_1_odd_orthogonality",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_proposition_3_2",
+      "actual": "LiLiuGoldbach16.proposition_3_2",
+      "tex_lines": [
+        1180,
+        1200
+      ],
+      "label": "proposition_3_2",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_008_proposition_3_2",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_proposition_3_2_finite_rank",
+      "actual": "LiLiuGoldbach16.proposition_3_2_finite_rank",
+      "tex_lines": [
+        1198,
+        1199
+      ],
+      "label": "proposition_3_2_finite_rank",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_009_proposition_3_2_finite_rank",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_proposition_3_2_joint_meromorphic",
+      "actual": "LiLiuGoldbach16.proposition_3_2_joint_meromorphic",
+      "tex_lines": [
+        1190,
+        1193
+      ],
+      "label": "proposition_3_2_joint_meromorphic",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_010_proposition_3_2_joint_meromorphic",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_3",
+      "actual": "LiLiuGoldbach16.lemma_3_3",
+      "tex_lines": [
+        1247,
+        1260
+      ],
+      "label": "lemma_3_3",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_011_lemma_3_3",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_4",
+      "actual": "LiLiuGoldbach16.lemma_3_4",
+      "tex_lines": [
+        1274,
+        1290
+      ],
+      "label": "lemma_3_4",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_012_lemma_3_4",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_4_normal_convergence",
+      "actual": "LiLiuGoldbach16.lemma_3_4_normal_convergence",
+      "tex_lines": [
+        1274,
+        1276
+      ],
+      "label": "lemma_3_4_normal_convergence",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_013_lemma_3_4_normal_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_4_paired_zero_sum",
+      "actual": "LiLiuGoldbach16.lemma_3_4_paired_zero_sum",
+      "tex_lines": [
+        1262,
+        1283
+      ],
+      "label": "lemma_3_4_paired_zero_sum",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_014_lemma_3_4_paired_zero_sum",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_5",
+      "actual": "LiLiuGoldbach16.lemma_3_5",
+      "tex_lines": [
+        1365,
+        1380
+      ],
+      "label": "lemma_3_5",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_015_lemma_3_5",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_5_absolute_convergence",
+      "actual": "LiLiuGoldbach16.lemma_3_5_absolute_convergence",
+      "tex_lines": [
+        1365,
+        1402
+      ],
+      "label": "lemma_3_5_absolute_convergence",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_016_lemma_3_5_absolute_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_5_small_sigma",
+      "actual": "LiLiuGoldbach16.lemma_3_5_small_sigma",
+      "tex_lines": [
+        1365,
+        1376
+      ],
+      "label": "lemma_3_5_small_sigma",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_017_lemma_3_5_small_sigma",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_3_5_weight_support",
+      "actual": "LiLiuGoldbach16.lemma_3_5_weight_support",
+      "tex_lines": [
+        1377,
+        1409
+      ],
+      "label": "lemma_3_5_weight_support",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_018_lemma_3_5_weight_support",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_1",
+      "actual": "LiLiuGoldbach16.lemma_4_1",
+      "tex_lines": [
+        1480,
+        1497
+      ],
+      "label": "lemma_4_1",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_019_lemma_4_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_1_absolute_convergence",
+      "actual": "LiLiuGoldbach16.lemma_4_1_absolute_convergence",
+      "tex_lines": [
+        1480,
+        1492
+      ],
+      "label": "lemma_4_1_absolute_convergence",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_020_lemma_4_1_absolute_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_1_signed_model",
+      "actual": "LiLiuGoldbach16.lemma_4_1_signed_model",
+      "tex_lines": [
+        1493,
+        1497
+      ],
+      "label": "lemma_4_1_signed_model",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_021_lemma_4_1_signed_model",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_1_local_density",
+      "actual": "LiLiuGoldbach16.lemma_4_1_local_density",
+      "tex_lines": [
+        1499,
+        1513
+      ],
+      "label": "lemma_4_1_local_density",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_022_lemma_4_1_local_density",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_2",
+      "actual": "LiLiuGoldbach16.lemma_4_2",
+      "tex_lines": [
+        1538,
+        1551
+      ],
+      "label": "lemma_4_2",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_023_lemma_4_2",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_2_meromorphic",
+      "actual": "LiLiuGoldbach16.lemma_4_2_meromorphic",
+      "tex_lines": [
+        1545,
+        1551
+      ],
+      "label": "lemma_4_2_meromorphic",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_024_lemma_4_2_meromorphic",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_3",
+      "actual": "LiLiuGoldbach16.lemma_4_3",
+      "tex_lines": [
+        1611,
+        1630
+      ],
+      "label": "lemma_4_3",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_025_lemma_4_3",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_3_uniform",
+      "actual": "LiLiuGoldbach16.lemma_4_3_uniform",
+      "tex_lines": [
+        1619,
+        1628
+      ],
+      "label": "lemma_4_3_uniform",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_026_lemma_4_3_uniform",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_3_density_convergence",
+      "actual": "LiLiuGoldbach16.lemma_4_3_density_convergence",
+      "tex_lines": [
+        1580,
+        1618
+      ],
+      "label": "lemma_4_3_density_convergence",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_027_lemma_4_3_density_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_lemma_4_3_euler_product_convergence",
+      "actual": "LiLiuGoldbach16.lemma_4_3_euler_product_convergence",
+      "tex_lines": [
+        1642,
+        1648
+      ],
+      "label": "lemma_4_3_euler_product_convergence",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_028_lemma_4_3_euler_product_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_proposition_4_4",
+      "actual": "LiLiuGoldbach16.proposition_4_4",
+      "tex_lines": [
+        1704,
+        1710
+      ],
+      "label": "proposition_4_4",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_029_proposition_4_4",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit14.expect_proposition_4_5",
+      "actual": "LiLiuGoldbach16.proposition_4_5",
+      "tex_lines": [
+        1760,
+        1768
+      ],
+      "label": "proposition_4_5",
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.statement_030_proposition_4_5",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_5_1",
+      "actual": "LiLiuGoldbach16.proposition_5_1",
+      "label": "Proposition 5.1",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          1926,
+          1943
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_031_proposition_5_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_5_1_fueter_equation",
+      "actual": "LiLiuGoldbach16.proposition_5_1_fueter_equation",
+      "label": "Proposition 5.1 / proposition_5_1_fueter_equation",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          1926,
+          1943
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_032_proposition_5_1_fueter_equation",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_5_2",
+      "actual": "LiLiuGoldbach16.lemma_5_2",
+      "label": "Lemma 5.2",
+      "tex_lines": [
+        [
+          2030,
+          2046
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_033_lemma_5_2",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_5_2_closed_trace_space",
+      "actual": "LiLiuGoldbach16.lemma_5_2_closed_trace_space",
+      "label": "Lemma 5.2 / lemma_5_2_closed_trace_space",
+      "tex_lines": [
+        [
+          2030,
+          2046
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_034_lemma_5_2_closed_trace_space",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_5_2_representation_spec",
+      "actual": "LiLiuGoldbach16.lemma_5_2_representation_spec",
+      "label": "Lemma 5.2 / lemma_5_2_representation_spec",
+      "tex_lines": [
+        [
+          2030,
+          2046
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_035_lemma_5_2_representation_spec",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_5_2_boundary_inner",
+      "actual": "LiLiuGoldbach16.lemma_5_2_boundary_inner",
+      "label": "Lemma 5.2 / lemma_5_2_boundary_inner",
+      "tex_lines": [
+        [
+          2030,
+          2046
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_036_lemma_5_2_boundary_inner",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_5_3",
+      "actual": "LiLiuGoldbach16.proposition_5_3",
+      "label": "Proposition 5.3",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2123,
+          2141
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_037_proposition_5_3",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_5_3_kernel_integrability",
+      "actual": "LiLiuGoldbach16.proposition_5_3_kernel_integrability",
+      "label": "Proposition 5.3 / proposition_5_3_kernel_integrability",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2123,
+          2141
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_038_proposition_5_3_kernel_integrability",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_5_3_hs_basis_independent",
+      "actual": "LiLiuGoldbach16.proposition_5_3_hs_basis_independent",
+      "label": "Proposition 5.3 / proposition_5_3_hs_basis_independent",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2123,
+          2141
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "universe_params": [
+        "u"
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_039_proposition_5_3_hs_basis_independent",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_5_4",
+      "actual": "LiLiuGoldbach16.proposition_5_4",
+      "label": "Proposition 5.4",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2226,
+          2253
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_040_proposition_5_4",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_5_4_exact_norm",
+      "actual": "LiLiuGoldbach16.proposition_5_4_exact_norm",
+      "label": "Proposition 5.4 / proposition_5_4_exact_norm",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2226,
+          2253
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_041_proposition_5_4_exact_norm",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_5_4_kernel_pairing",
+      "actual": "LiLiuGoldbach16.proposition_5_4_kernel_pairing",
+      "label": "Proposition 5.4 / proposition_5_4_kernel_pairing",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2226,
+          2253
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_042_proposition_5_4_kernel_pairing",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_5_4_fixed_contour",
+      "actual": "LiLiuGoldbach16.proposition_5_4_fixed_contour",
+      "label": "Proposition 5.4 / proposition_5_4_fixed_contour",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2226,
+          2253
+        ],
+        [
+          2299,
+          2308
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_043_proposition_5_4_fixed_contour",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_6_1_product",
+      "actual": "LiLiuGoldbach16.proposition_6_1",
+      "label": "Proposition 6.1",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2388,
+          2409
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_044_proposition_6_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_1_enumeration",
+      "actual": "LiLiuGoldbach16.proposition_6_1_enumeration",
+      "label": "Proposition 6.1 / proposition_6_1_enumeration",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2388,
+          2409
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_045_proposition_6_1_enumeration",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_1_complex_slice",
+      "actual": "LiLiuGoldbach16.proposition_6_1_complex_slice",
+      "label": "Proposition 6.1 / proposition_6_1_complex_slice",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2388,
+          2409
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_046_proposition_6_1_complex_slice",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_1_positive_fredholm_spec",
+      "actual": "LiLiuGoldbach16.proposition_6_1_positive_fredholm_spec",
+      "label": "Proposition 6.1 / proposition_6_1_positive_fredholm_spec",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2388,
+          2409
+        ]
+      ],
+      "universe_params": [
+        "u"
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_047_proposition_6_1_positive_fredholm_spec",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_1_square_determinant",
+      "actual": "LiLiuGoldbach16.proposition_6_1_square_determinant",
+      "label": "Proposition 6.1 / proposition_6_1_square_determinant",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2388,
+          2409
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_048_proposition_6_1_square_determinant",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_1_all_slices",
+      "actual": "LiLiuGoldbach16.proposition_6_1_all_slices",
+      "label": "Proposition 6.1 / proposition_6_1_all_slices",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2388,
+          2409
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_049_proposition_6_1_all_slices",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_1_spectral_choice_independent",
+      "actual": "LiLiuGoldbach16.proposition_6_1_spectral_choice_independent",
+      "label": "Proposition 6.1 / proposition_6_1_spectral_choice_independent",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2388,
+          2409
+        ]
+      ],
+      "universe_params": [
+        "u"
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_050_proposition_6_1_spectral_choice_independent",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_6_2_symmetries",
+      "actual": "LiLiuGoldbach16.proposition_6_2",
+      "label": "Proposition 6.2",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2443,
+          2476
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_051_proposition_6_2",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_2_centered_product",
+      "actual": "LiLiuGoldbach16.proposition_6_2_centered_product",
+      "label": "Proposition 6.2 / proposition_6_2_centered_product",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2443,
+          2476
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_052_proposition_6_2_centered_product",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_2_critical_values",
+      "actual": "LiLiuGoldbach16.proposition_6_2_critical_values",
+      "label": "Proposition 6.2 / proposition_6_2_critical_values",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2443,
+          2476
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_053_proposition_6_2_critical_values",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_6_3_zeros",
+      "actual": "LiLiuGoldbach16.proposition_6_3",
+      "label": "Proposition 6.3",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2493,
+          2511
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_054_proposition_6_3",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_3_three_cases",
+      "actual": "LiLiuGoldbach16.proposition_6_3_three_cases",
+      "label": "Proposition 6.3 / proposition_6_3_three_cases",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2493,
+          2511
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_055_proposition_6_3_three_cases",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_3_factor_central_order",
+      "actual": "LiLiuGoldbach16.proposition_6_3_factor_central_order",
+      "label": "Proposition 6.3 / proposition_6_3_factor_central_order",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2493,
+          2511
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_056_proposition_6_3_factor_central_order",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_3_multiplicities",
+      "actual": "LiLiuGoldbach16.proposition_6_3_multiplicities",
+      "label": "Proposition 6.3 / proposition_6_3_multiplicities",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2493,
+          2511
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_057_proposition_6_3_multiplicities",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_6_1_dictionary",
+      "actual": "LiLiuGoldbach16.theorem_6_1",
+      "label": "Theorem 6.1",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2552,
+          2570
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_058_theorem_6_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_theorem_6_1_abstract_dictionary",
+      "actual": "LiLiuGoldbach16.theorem_6_1_abstract_dictionary",
+      "label": "Theorem 6.1 / theorem_6_1_abstract_dictionary",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2552,
+          2570
+        ]
+      ],
+      "universe_params": [
+        "u"
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_059_theorem_6_1_abstract_dictionary",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_theorem_6_1_width_comparison",
+      "actual": "LiLiuGoldbach16.theorem_6_1_width_comparison",
+      "label": "Theorem 6.1 / theorem_6_1_width_comparison",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2552,
+          2570
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_060_theorem_6_1_width_comparison",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_6_2_baseline",
+      "actual": "LiLiuGoldbach16.theorem_6_2",
+      "label": "Theorem 6.2",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2616,
+          2629
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_061_theorem_6_2",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_6_4",
+      "actual": "LiLiuGoldbach16.lemma_6_4",
+      "label": "Lemma 6.4",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2655,
+          2664
+        ],
+        [
+          2736,
+          2745
+        ],
+        [
+          2912,
+          2929
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_062_lemma_6_4",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_6_4_zero_poisson_convergence",
+      "actual": "LiLiuGoldbach16.lemma_6_4_zero_poisson_convergence",
+      "label": "Lemma 6.4 / lemma_6_4_zero_poisson_convergence",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2655,
+          2664
+        ],
+        [
+          2736,
+          2745
+        ],
+        [
+          2912,
+          2929
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_063_lemma_6_4_zero_poisson_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_6_4_perron_residue",
+      "actual": "LiLiuGoldbach16.lemma_6_4_perron_residue",
+      "label": "Lemma 6.4 / lemma_6_4_perron_residue",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2655,
+          2664
+        ],
+        [
+          2736,
+          2745
+        ],
+        [
+          2912,
+          2929
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_064_lemma_6_4_perron_residue",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_6_4_poisson_action_spec",
+      "actual": "LiLiuGoldbach16.lemma_6_4_poisson_action_spec",
+      "label": "Lemma 6.4 / lemma_6_4_poisson_action_spec",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2655,
+          2664
+        ],
+        [
+          2736,
+          2745
+        ],
+        [
+          2912,
+          2929
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_065_lemma_6_4_poisson_action_spec",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_6_4_poisson_convolution",
+      "actual": "LiLiuGoldbach16.lemma_6_4_poisson_convolution",
+      "label": "Lemma 6.4 / lemma_6_4_poisson_convolution",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2655,
+          2664
+        ],
+        [
+          2736,
+          2745
+        ],
+        [
+          2912,
+          2929
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_066_lemma_6_4_poisson_convolution",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_6_5",
+      "actual": "LiLiuGoldbach16.proposition_6_5",
+      "label": "Proposition 6.5",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2975,
+          2986
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_067_proposition_6_5",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_5_components_spec",
+      "actual": "LiLiuGoldbach16.proposition_6_5_components_spec",
+      "label": "Proposition 6.5 / proposition_6_5_components_spec",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2975,
+          2986
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_068_proposition_6_5_components_spec",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_6_5_diagonal_vector_spec",
+      "actual": "LiLiuGoldbach16.proposition_6_5_diagonal_vector_spec",
+      "label": "Proposition 6.5 / proposition_6_5_diagonal_vector_spec",
+      "tex_lines": [
+        [
+          1834,
+          1855
+        ],
+        [
+          2299,
+          2308
+        ],
+        [
+          2975,
+          2986
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_069_proposition_6_5_diagonal_vector_spec",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_7_1_mellin",
+      "actual": "LiLiuGoldbach16.lemma_7_1",
+      "label": "Lemma 7.1",
+      "tex_lines": [
+        [
+          3282,
+          3297
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_070_lemma_7_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_7_1_absolute_convergence",
+      "actual": "LiLiuGoldbach16.lemma_7_1_absolute_convergence",
+      "label": "Lemma 7.1 / lemma_7_1_absolute_convergence",
+      "tex_lines": [
+        [
+          3282,
+          3297
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_071_lemma_7_1_absolute_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_7_2",
+      "actual": "LiLiuGoldbach16.lemma_7_2",
+      "label": "Lemma 7.2",
+      "tex_lines": [
+        [
+          3374,
+          3390
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_072_lemma_7_2",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_7_2_absolute_convergence",
+      "actual": "LiLiuGoldbach16.lemma_7_2_absolute_convergence",
+      "label": "Lemma 7.2 / lemma_7_2_absolute_convergence",
+      "tex_lines": [
+        [
+          3374,
+          3390
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_073_lemma_7_2_absolute_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_7_2_convolutions",
+      "actual": "LiLiuGoldbach16.lemma_7_2_convolutions",
+      "label": "Lemma 7.2 / lemma_7_2_convolutions",
+      "tex_lines": [
+        [
+          3374,
+          3390
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_074_lemma_7_2_convolutions",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_7_3",
+      "actual": "LiLiuGoldbach16.proposition_7_3",
+      "label": "Proposition 7.3",
+      "tex_lines": [
+        [
+          3523,
+          3531
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_075_proposition_7_3",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_7_3_absolute_convergence",
+      "actual": "LiLiuGoldbach16.proposition_7_3_absolute_convergence",
+      "label": "Proposition 7.3 / proposition_7_3_absolute_convergence",
+      "tex_lines": [
+        [
+          3523,
+          3531
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_076_proposition_7_3_absolute_convergence",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_7_4",
+      "actual": "LiLiuGoldbach16.proposition_7_4",
+      "label": "Proposition 7.4",
+      "tex_lines": [
+        [
+          3623,
+          3638
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_077_proposition_7_4",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_proposition_7_4_norm_integrals",
+      "actual": "LiLiuGoldbach16.proposition_7_4_norm_integrals",
+      "label": "Proposition 7.4 / proposition_7_4_norm_integrals",
+      "tex_lines": [
+        [
+          3623,
+          3638
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_078_proposition_7_4_norm_integrals",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_7_1_quadratic",
+      "actual": "LiLiuGoldbach16.theorem_7_1",
+      "label": "Theorem 7.1",
+      "tex_lines": [
+        [
+          3710,
+          3722
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_079_theorem_7_1",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_theorem_7_1_uniform",
+      "actual": "LiLiuGoldbach16.theorem_7_1_uniform",
+      "label": "Theorem 7.1 / theorem_7_1_uniform",
+      "tex_lines": [
+        [
+          3710,
+          3722
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_080_theorem_7_1_uniform",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.Expected_7_5",
+      "actual": "LiLiuGoldbach16.lemma_7_5",
+      "label": "Lemma 7.5",
+      "tex_lines": [
+        [
+          3781,
+          3795
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_081_lemma_7_5",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_lemma_7_5_asymptotic",
+      "actual": "LiLiuGoldbach16.lemma_7_5_asymptotic",
+      "label": "Lemma 7.5 / lemma_7_5_asymptotic",
+      "tex_lines": [
+        [
+          3781,
+          3795
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_082_lemma_7_5_asymptotic",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_interiorLine_memLp",
+      "actual": "LiLiuGoldbach16.interiorLine_memLp",
+      "label": "Lemma 5.2 / interiorLine_memLp",
+      "tex_lines": [
+        [
+          1986,
+          2046
+        ],
+        [
+          2050,
+          2070
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_083_interiorLine_memLp",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAudit57.expect_boundaryTraces_exist",
+      "actual": "LiLiuGoldbach16.boundaryTraces_exist",
+      "label": "Lemma 5.2 / boundaryTraces_exist",
+      "tex_lines": [
+        [
+          1986,
+          2046
+        ],
+        [
+          2050,
+          2070
+        ]
+      ],
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.statement_084_boundaryTraces_exist",
+      "mechanical_status": "passed_actual_comparator",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A1",
+      "actual": "LiLiuGoldbach16.proposition_A_1",
+      "tex_lines": [
+        3949,
+        3989
+      ],
+      "label": "A.1",
+      "original_formula": "固定 c>0；偶 N≥4,N>exp(10c),GRH(N)；Q=e^(2c)/(2π)∫|V|²du/u+Oφ,c(1/logN)，Q≤主项，r=<Tv,v>，|r|≤Q||T||；紧、自伴、HS及点值界。",
+      "implicit_conditions": "∀φ∈IsWeight ∀c>0，逐N结论；∃Cφ,c∃N0φ,c∀偶N≥N0 的渐近式。",
+      "quantifiers": "∀φ∈IsWeight ∀c>0，逐N结论；∃Cφ,c∃N0φ,c∀偶N≥N0 的渐近式。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "已检查：c不随N变化；固定c的常数容许依赖φ,c；c=1由默认参数定义化归。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+        "line": 55
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_085_proposition_A_1",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A1_operator",
+      "actual": "LiLiuGoldbach16.proposition_A_1_operator_spec",
+      "tex_lines": [
+        3954,
+        4004
+      ],
+      "label": "A.1 operator",
+      "original_formula": "变边界核仍表示同一残差算子；闭边界核平方可积，边界作用可积，存在平方可和谱。",
+      "implicit_conditions": "∀N,c在A1范围；所有Hardy函数及内点。",
+      "quantifiers": "∀N,c在A1范围；所有Hardy函数及内点。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "命名命题的构造/算子补充；已检查无额外算术假设。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableStripOperators.lean",
+        "line": 151
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_086_proposition_A_1_operator_spec",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A2",
+      "actual": "LiLiuGoldbach16.proposition_A_2",
+      "tex_lines": [
+        4018,
+        4100
+      ],
+      "label": "A.2",
+      "original_formula": "R↔||T||≤δ；开半空间零点排除↔δ/(2√η(1−η))；S↔S(N)/(2h√(1−η))；固定c的GRH界与S/R误差。",
+      "implicit_conditions": "固定φ,c后∃C,c0，再∀h；S所需N0在∀h之后；GRH恒作为条件。",
+      "quantifiers": "固定φ,c后∃C,c0，再∀h；S所需N0在∀h之后；GRH恒作为条件。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "已检查开边界严格性、η∈(0,1/2)、S宽≤1/4与h>0；φ无关算子常数另由A2_uniform补足。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableConsequences.lean",
+        "line": 19
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_087_proposition_A_2",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A2_pointwise",
+      "actual": "LiLiuGoldbach16.proposition_A_2_pointwise",
+      "tex_lines": [
+        4058,
+        4068
+      ],
+      "label": "A.2 pointwise",
+      "original_formula": "|G−cφS|≤Cφ,c S/h 或 Cφ,c δ；常数独立h。",
+      "implicit_conditions": "∀φ,c ∃C>0 ∀N ∀h；不把h放到C之前。",
+      "quantifiers": "∀φ,c ∃C>0 ∀N ∀h；不把h放到C之前。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "比eventual版更强的逐点误差保证；不要求h先验发散也可在单点使用。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+        "line": 116
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_088_proposition_A_2_pointwise",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A2_uniform",
+      "actual": "LiLiuGoldbach16.variable_uniform_spectral_bound",
+      "tex_lines": [
+        4053,
+        4056
+      ],
+      "label": "A.2 uniform witness",
+      "original_formula": "||T||≪c(logN)²；可取ηGRH=c0(c)S/(NlogN)，因而ηGRH≍c S/(NlogN)。",
+      "implicit_conditions": "∀c>0 ∃C≥1,c0>0 ∃N0 ∀偶N≥N0；不含φ或h。",
+      "quantifiers": "∀c>0 ∃C≥1,c0>0 ∃N0 ∀偶N≥N0；不含φ或h。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "补上主命题类型中φ先于常数量词的依赖歧义；宽度是所供给的宽度，不是最大零自由宽度。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+        "line": 72
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_089_variable_uniform_spectral_bound",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A3",
+      "actual": "LiLiuGoldbach16.lemma_A_3",
+      "tex_lines": [
+        4110,
+        4134
+      ],
+      "label": "A.3",
+      "original_formula": "Qα≍φ N^(2α)，||T||≤C((logN)²+α⁻²)；e^(2c)(1+c⁻²)在0+及∞发散。",
+      "implicit_conditions": "φ固定后∃上下常数和N0，∀0<α<1/10；绝对C另见A3_absolute。",
+      "quantifiers": "φ固定后∃上下常数和N0，∀0<α<1/10；绝对C另见A3_absolute。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "主声明C依赖φ的表面歧义由独立绝对算子界消除。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+        "line": 53
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_090_lemma_A_3",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A3_absolute",
+      "actual": "LiLiuGoldbach16.lemma_A_3_absolute_operator_bound",
+      "tex_lines": [
+        4112,
+        4119
+      ],
+      "label": "A.3 absolute C",
+      "original_formula": "存在绝对C，使所有充分大偶N且GRH及0<α<1/10时 ||T||≤C((logN)²+α⁻²)。",
+      "implicit_conditions": "∃C>0∃N0∀N∀α；无φ、c、h参数。",
+      "quantifiers": "∃C>0∃N0∀N∀α；无φ、c、h参数。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "已检查绝对性，不仅靠主lemma的依赖φ常数。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+        "line": 42
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_091_lemma_A_3_absolute_operator_bound",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A3_balance",
+      "actual": "LiLiuGoldbach16.lemma_A_3_balance",
+      "tex_lines": [
+        4119,
+        4134
+      ],
+      "label": "A.3 product",
+      "original_formula": "QαMα≍φ(logN)²e^(2c)(1+c⁻²)及平方比例表达式。",
+      "implicit_conditions": "C>0固定，∃L,U,N0∀N∀c满足0<αN,c<1/10；L,U依赖φ,C而不依赖c。",
+      "quantifiers": "C>0固定，∃L,U,N0∀N∀c满足0<αN,c<1/10；L,U依赖φ,C而不依赖c。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "C为A3_absolute的绝对常数时恢复TeX的≍φ；并未假设对无约束c及固定N有效。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+        "line": 36
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_092_lemma_A_3_balance",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A3_widths",
+      "actual": "LiLiuGoldbach16.lemma_A_3_width_ratio",
+      "tex_lines": [
+        4127,
+        4159
+      ],
+      "label": "A.3 widths",
+      "original_formula": "充分误差宽与算子界供给宽之比≍φ h²(logN)^4/S²·e^(4c)(1+c⁻²)²。",
+      "implicit_conditions": "固定φ,C；∃L,U,N0∀N,c,h；两宽均≤1/4且由正范数的反函数给出。",
+      "quantifiers": "固定φ,C；∃L,U,N0∀N,c,h；两宽均≤1/4且由正范数的反函数给出。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "δ<requiredNorm,suppliedNorm与正δ是反函数有效域；在正范数且宽≤1/4时不是额外算术条件。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BalanceBounds.lean",
+        "line": 95
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_093_lemma_A_3_width_ratio",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A4",
+      "actual": "LiLiuGoldbach16.proposition_A_4",
+      "tex_lines": [
+        4181,
+        4208
+      ],
+      "label": "A.4",
+      "original_formula": "C=2/φ(N)Σodd mχ(1/2+iγ)²>0；liminf c||T||≥2C logN/(1+γ²)>0；||T||≥z/c，R失败，η≤δ²c²/(3z²)。",
+      "implicit_conditions": "先固定偶N≥4、GRH及选定γ零点；∀ε>0∃c0>0∀0<c<c0；∃z,cobs≤logN/24。",
+      "quantifiers": "先固定偶N≥4、GRH及选定γ零点；∀ε>0∃c0>0∀0<c<c0；∃z,cobs≤logN/24。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "已检查系数2、平方重数、分母1+γ²、liminf ε量词、小c与固定N顺序；NeZero/ha为类型良定义条件。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PoleObstruction.lean",
+        "line": 11
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_094_proposition_A_4",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.A4_regular",
+      "actual": "LiLiuGoldbach16.proposition_A_4_baseline_product",
+      "tex_lines": [
+        4221,
+        4229
+      ],
+      "label": "A.4 Euler regularity",
+      "original_formula": "RN(w)=∏p|N(1−p^−1−w)∏p>2,p∤N(1+(2p^−w−p^−2w)/(p(p−2)))在0附近解析；S(N)RN(0)=1。",
+      "implicit_conditions": "∀偶N≥4∃ε>0∀|w|<ε；无GRH要求。",
+      "quantifiers": "∀偶N≥4∃ε>0∀|w|<ε；无GRH要求。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "该补充本身不声称Euler因子分解P=ζR；该恒等式在支持定理另行建立。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BaselineEuler.lean",
+        "line": 123
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_095_proposition_A_4_baseline_product",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.B1",
+      "actual": "LiLiuGoldbach16.proposition_B_1",
+      "tex_lines": [
+        4286,
+        4327
+      ],
+      "label": "B.1",
+      "original_formula": "η为C6、对称、[1000,N−1000]为1；f(u)f(1−u)=η(Nu)²/(log(Nu)log(N(1−u)))；rG=NJ/2−Cpp/2+E。",
+      "implicit_conditions": "N=30030,A=16,L=1000；无GRH，无谱假设。",
+      "quantifiers": "N=30030,A=16,L=1000；无GRH，无谱假设。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "已检查proper powers按有序对求和、至少一指数≥2、(pq,N)=1、分母kℓ和边缘校正只计无序素数对。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WidePrimePowerCount.lean",
+        "line": 143
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_096_proposition_B_1",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.B2",
+      "actual": "LiLiuGoldbach16.lemma_B_2",
+      "tex_lines": [
+        4351,
+        4378
+      ],
+      "label": "B.2",
+      "original_formula": "Iχ绝对收敛且=−Σa_nχ(n)；J=5760⁻¹Σχ(−1)|Iχ|²；D=5760⁻¹Σ|Iχ|²。",
+      "implicit_conditions": "全部5760字符，包括principal；无GRH。",
+      "quantifiers": "全部5760字符，包括principal；无GRH。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "logDerivative χ s= L′/L(1/2+s)确认在3/2线上；range包含0但该项为0；χ(−1)取实部与其±1值相容。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMoments.lean",
+        "line": 84
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_097_lemma_B_2",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.B3",
+      "actual": "LiLiuGoldbach16.lemma_B_3",
+      "tex_lines": [
+        4443,
+        4463
+      ],
+      "label": "B.3",
+      "original_formula": "若ε≥0且平均误差平方≤ε²，则|J−Jhat|≤2√Dhat ε+ε²；rG位于[rhat−εr,rhat+εr]∩Z。",
+      "implicit_conditions": "∀Ihat∀ε≥0；准确有限校正；ε输入必须满足真实积分误差界。",
+      "quantifiers": "∀Ihat∀ε≥0；准确有限校正；ε输入必须满足真实积分误差界。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "无GRH；包含整数性。不能据此宣称实际数值误差输入已验证。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideError.lean",
+        "line": 11
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_098_lemma_B_3",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.B3_main",
+      "actual": "LiLiuGoldbach16.lemma_B_3_main_integral",
+      "tex_lines": [
+        4413,
+        4428
+      ],
+      "label": "B.3 main identity",
+      "original_formula": "A=NS c_f/2；rG=A−NB/2−Cpp/2+E。",
+      "implicit_conditions": "固定N和实际宽权；无数值近似假设。",
+      "quantifiers": "固定N和实际宽权；无数值近似假设。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "cross mass用∫f(u)f(1−u)，不是∫f²。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMainIntegral.lean",
+        "line": 65
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_099_lemma_B_3_main_integral",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.B4",
+      "actual": "LiLiuGoldbach16.proposition_B_4",
+      "tex_lines": [
+        4501,
+        4520
+      ],
+      "label": "B.4",
+      "original_formula": "GRH(30030)下B=<T vW,vW>，vW表示ℓW(h)=(2πi)^−1∫N^s Wtilde(s)(1+s)h(s)ds且ℓW有界。",
+      "implicit_conditions": "所有Hardy h；N固定；ha:α<β由30030>e^10可证，不添加数学假设。",
+      "quantifiers": "所有Hardy h；N固定；ha:α<β由30030>e^10可证，不添加数学假设。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "已检查实际Riesz关系与有界线性泛函同列结论；无HypothesisR；使用同一残差核。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideMellinResidual.lean",
+        "line": 58
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_100_proposition_B_4",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.B4_weight",
+      "actual": "LiLiuGoldbach16.proposition_B_4_weight",
+      "tex_lines": [
+        4522,
+        4530
+      ],
+      "label": "B.4 wide support",
+      "original_formula": "f∈C6_c(0,1)；cross mass和主积分可积。",
+      "implicit_conditions": "实际f，不要求IsWeight主文的C∞、[1/3,2/3]或反射对称。",
+      "quantifiers": "实际f，不要求IsWeight主文的C∞、[1/3,2/3]或反射对称。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "FiniteModelWeight只要求C6及支撑内含(0,1)；modelMass为cross mass。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WideWeight.lean",
+        "line": 163
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_101_proposition_B_4_weight",
+      "full_type_definitionally_equal": true
+    },
+    {
+      "expected": "TexAuditAB.B5",
+      "actual": "LiLiuGoldbach16.proposition_B_5",
+      "tex_lines": [
+        4533,
+        4561
+      ],
+      "label": "B.5",
+      "original_formula": "2562节点，两边界[-40,40]，步1/16，端点半权，无1/(2π)；X=det(I−4q(1−q)C²/δ²)=∏(1−4λj²q(1−q)/δ²)，X(1−q)=X(q)，||C||≤δ⇒所有零点Re=1/2。",
+      "implicit_conditions": "章节继承GRH；实谱由酉对角化绑定真实矩阵；条件范数界未声称实际数值通过。",
+      "quantifiers": "章节继承GRH；实谱由酉对角化绑定真实矩阵；条件范数界未声称实际数值通过。",
+      "human_semantic_conclusion": "matched_with_explicit_interpretation",
+      "findings": "已检查两√w、核分母、复共轭和Euclidean算子范数；未把有限矩阵等同无限Hardy算子。",
+      "mechanical_status": "passed_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean",
+        "line": 141
+      },
+      "assignment_typecheck": "passed",
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.statement_102_proposition_B_5",
+      "full_type_definitionally_equal": true
+    }
+  ],
+  "definitions": [
+    {
+      "expected": "TexAudit14.Weight",
+      "actual": "LiLiuGoldbach16.IsWeight",
+      "tex_lines": [
+        151,
+        154
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_000_IsWeight",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Mass",
+      "actual": "LiLiuGoldbach16.weightMass",
+      "tex_lines": [
+        160,
+        164
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_001_weightMass",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Goldbach",
+      "actual": "LiLiuGoldbach16.goldbach",
+      "tex_lines": [
+        154,
+        164
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_002_goldbach",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.GRHExpected",
+      "actual": "LiLiuGoldbach16.GRH",
+      "tex_lines": [
+        182,
+        185
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_003_GRH",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.EventuallyEven",
+      "actual": "LiLiuGoldbach16.EvenEventually",
+      "tex_lines": [
+        345,
+        346
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_004_EvenEventually",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.TendsToInfinityEven",
+      "actual": "LiLiuGoldbach16.EvenTendstoInfinity",
+      "tex_lines": [
+        273,
+        278
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_005_EvenTendstoInfinity",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.AsymptoticEven",
+      "actual": "LiLiuGoldbach16.EvenAsymptotic",
+      "tex_lines": [
+        289,
+        298
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_006_EvenAsymptotic",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Width",
+      "actual": "LiLiuGoldbach16.zeroFreeWidth",
+      "tex_lines": [
+        273,
+        278
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_007_zeroFreeWidth",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Admissible",
+      "actual": "LiLiuGoldbach16.IsAdmissible",
+      "tex_lines": [
+        273,
+        282
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_008_IsAdmissible",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.S",
+      "actual": "LiLiuGoldbach16.HypothesisS",
+      "tex_lines": [
+        273,
+        282
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_009_HypothesisS",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.R",
+      "actual": "LiLiuGoldbach16.HypothesisR",
+      "tex_lines": [
+        306,
+        310
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_010_HypothesisR",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Scale",
+      "actual": "LiLiuGoldbach16.spectralScale",
+      "tex_lines": [
+        229,
+        233
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_011_spectralScale",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.PrimeCount",
+      "actual": "LiLiuGoldbach16.PrimePairCount",
+      "tex_lines": [
+        325,
+        328
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_012_PrimePairCount",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.BetaRegion",
+      "actual": "LiLiuGoldbach16.betaDomain",
+      "tex_lines": [
+        1480,
+        1482
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_013_betaDomain",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Omega",
+      "actual": "LiLiuGoldbach16.analyticDomain",
+      "tex_lines": [
+        1704,
+        1709
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_014_analyticDomain",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.BetaSigned",
+      "actual": "LiLiuGoldbach16.betaKernel",
+      "tex_lines": [
+        1461,
+        1466
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_015_betaKernel",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.GammaRatio",
+      "actual": "LiLiuGoldbach16.gammaQuotient",
+      "tex_lines": [
+        1532,
+        1535
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_016_gammaQuotient",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.DensityProduct",
+      "actual": "LiLiuGoldbach16.densityEulerProduct",
+      "tex_lines": [
+        1598,
+        1604
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_017_densityEulerProduct",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.ContinuedDensity",
+      "actual": "LiLiuGoldbach16.continuedDensity",
+      "tex_lines": [
+        1593,
+        1604
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_018_continuedDensity",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Model",
+      "actual": "LiLiuGoldbach16.betaModel",
+      "tex_lines": [
+        1690,
+        1699
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_019_betaModel",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.ContinuedModel",
+      "actual": "LiLiuGoldbach16.continuedModel",
+      "tex_lines": [
+        1695,
+        1709
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_020_continuedModel",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit14.Residual",
+      "actual": "LiLiuGoldbach16.residual",
+      "tex_lines": [
+        1732,
+        1747
+      ],
+      "audit_group": "sections-1-4",
+      "comparator_target": "TexComparator.definition_021_residual",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.RawHardy",
+      "actual": "LiLiuGoldbach16.IsRawHardy",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "RawHardy = IsRawHardy",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_022_IsRawHardy",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.RawNormSquared",
+      "actual": "LiLiuGoldbach16.rawHardyNormSq",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "RawNormSquared = rawHardyNormSq",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_023_rawHardyNormSq",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.PW",
+      "actual": "LiLiuGoldbach16.fourierLaplace",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "PW = fourierLaplace",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_024_fourierLaplace",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.TracePair",
+      "actual": "LiLiuGoldbach16.IsBoundaryTrace",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "TracePair = IsBoundaryTrace",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_025_IsBoundaryTrace",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.WeightedResidual",
+      "actual": "LiLiuGoldbach16.weightedKernel",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "WeightedResidual = weightedKernel",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_026_weightedKernel",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Reproducer",
+      "actual": "LiLiuGoldbach16.reproducingKernel",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Reproducer = reproducingKernel",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_027_reproducingKernel",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Distance",
+      "actual": "LiLiuGoldbach16.pointDistance",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Distance = pointDistance",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_028_pointDistance",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.RootRatio",
+      "actual": "LiLiuGoldbach16.spectralRootParameter",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "RootRatio = spectralRootParameter",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_029_spectralRootParameter",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Slice",
+      "actual": "LiLiuGoldbach16.quaternionSlice",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Slice = quaternionSlice",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_030_quaternionSlice",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.SliceEntire",
+      "actual": "LiLiuGoldbach16.IntrinsicEntire",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "SliceEntire = IntrinsicEntire",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_031_IntrinsicEntire",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.ZeroSum",
+      "actual": "LiLiuGoldbach16.zeroPoisson",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "ZeroSum = zeroPoisson",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_032_zeroPoisson",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Energy",
+      "actual": "LiLiuGoldbach16.logDerivativeEnergy",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Energy = logDerivativeEnergy",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_033_logDerivativeEnergy",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.AverageEnergy",
+      "actual": "LiLiuGoldbach16.averagedLogDerivative",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "AverageEnergy = averagedLogDerivative",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_034_averagedLogDerivative",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.ReferenceLine",
+      "actual": "LiLiuGoldbach16.referenceLine",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "ReferenceLine = referenceLine",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_035_referenceLine",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Cutoff",
+      "actual": "LiLiuGoldbach16.smoothedPerronWeight",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Cutoff = smoothedPerronWeight",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_036_smoothedPerronWeight",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Perron",
+      "actual": "LiLiuGoldbach16.smoothedPerronKernel",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Perron = smoothedPerronKernel",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_037_smoothedPerronKernel",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Poisson",
+      "actual": "LiLiuGoldbach16.poissonKernelReal",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Poisson = poissonKernelReal",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_038_poissonKernelReal",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Convolution",
+      "actual": "LiLiuGoldbach16.realConvolution",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Convolution = realConvolution",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_039_realConvolution",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.DiagonalVector",
+      "actual": "LiLiuGoldbach16.diagonalVector",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "DiagonalVector = diagonalVector",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_040_diagonalVector",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Difference",
+      "actual": "LiLiuGoldbach16.differenceConvolution",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Difference = differenceConvolution",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_041_differenceConvolution",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.SumOnPositiveHalfLine",
+      "actual": "LiLiuGoldbach16.sumConvolution",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "SumOnPositiveHalfLine = sumConvolution",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_042_sumConvolution",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Signed",
+      "actual": "LiLiuGoldbach16.signedConvolution",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Signed = signedConvolution",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_043_signedConvolution",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.V",
+      "actual": "LiLiuGoldbach16.derivativeWeight",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "V = derivativeWeight",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_044_derivativeWeight",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Q",
+      "actual": "LiLiuGoldbach16.normFunctional",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Q = normFunctional",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_045_normFunctional",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.EnergyV",
+      "actual": "LiLiuGoldbach16.weightEnergy",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "EnergyV = weightEnergy",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_046_weightEnergy",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAudit57.Psi",
+      "actual": "LiLiuGoldbach16.functionalIntegrand",
+      "universe_params": [],
+      "comparison_kind": "definition_body",
+      "label": "Psi = functionalIntegrand",
+      "audit_group": "sections-5-7",
+      "comparator_target": "TexComparator.definition_047_functionalIntegrand",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator"
+    },
+    {
+      "expected": "TexAuditAB.variableStrip",
+      "actual": "LiLiuGoldbach16.strip",
+      "tex_lines": [
+        3954,
+        3958
+      ],
+      "formula": "S={s:α<Re(s)<β}",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+        "line": 113
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_048_strip"
+    },
+    {
+      "expected": "TexAuditAB.variableHardySpace",
+      "actual": "LiLiuGoldbach16.HardySpace",
+      "tex_lines": [
+        3954,
+        3958
+      ],
+      "formula": "Fourier-Laplace Hardy模型Lp²(hardyMeasure α β)",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+        "line": 144
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_049_HardySpace"
+    },
+    {
+      "expected": "TexAuditAB.variableBoundary",
+      "actual": "LiLiuGoldbach16.boundaryPoint",
+      "tex_lines": [
+        3954,
+        3958
+      ],
+      "formula": "左右两条无向边界线",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 361
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_050_boundaryPoint"
+    },
+    {
+      "expected": "TexAuditAB.variableOperator",
+      "actual": "LiLiuGoldbach16.residualOperator",
+      "tex_lines": [
+        3954,
+        3958
+      ],
+      "formula": "不变算术残差核E/((1+s)(1+conj z))在新Hardy空间的作用",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 55
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_051_residualOperator"
+    },
+    {
+      "expected": "TexAuditAB.variableFunctional",
+      "actual": "LiLiuGoldbach16.functionalValue",
+      "tex_lines": [
+        3954,
+        3958
+      ],
+      "formula": "(2πi)^−1∫N^s Wtilde(s)(1+s)h(s)ds",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 125
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_052_functionalValue"
+    },
+    {
+      "expected": "TexAuditAB.variableVector",
+      "actual": "LiLiuGoldbach16.rieszVector",
+      "tex_lines": [
+        3954,
+        3958
+      ],
+      "formula": "表示该泛函的Riesz向量",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 129
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_053_rieszVector"
+    },
+    {
+      "expected": "TexAuditAB.variableFunctionalNorm",
+      "actual": "LiLiuGoldbach16.normFunctional",
+      "tex_lines": [
+        3970,
+        3977
+      ],
+      "formula": "(2π)^−1∫(Nu)^(2α)V²/(1+(Nu)^(−2(β−α)))du/u",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 117
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_054_normFunctional"
+    },
+    {
+      "expected": "TexAuditAB.variableComplexProduct",
+      "actual": "LiLiuGoldbach16.spectralComplex",
+      "tex_lines": [
+        4020,
+        4024
+      ],
+      "formula": "相同δN尺度的复切片谱积",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 100
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_055_spectralComplex"
+    },
+    {
+      "expected": "TexAuditAB.variableQuaternionProduct",
+      "actual": "LiLiuGoldbach16.spectralQuaternion",
+      "tex_lines": [
+        4020,
+        4024
+      ],
+      "formula": "四元数谱积为partial products极限",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 109
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_056_spectralQuaternion"
+    },
+    {
+      "expected": "TexAuditAB.pointwiseR",
+      "actual": "LiLiuGoldbach16.SpectralR",
+      "tex_lines": [
+        4024,
+        4031
+      ],
+      "formula": "所有四元数零点实部1/2",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 156
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_057_SpectralR"
+    },
+    {
+      "expected": "TexAuditAB.pointwiseZeroFree",
+      "actual": "LiLiuGoldbach16.SpectralZeroFree",
+      "tex_lines": [
+        4024,
+        4031
+      ],
+      "formula": "开半空间Re(q)>1−η无零点",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 159
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_058_SpectralZeroFree"
+    },
+    {
+      "expected": "TexAuditAB.boundaryParameter",
+      "actual": "LiLiuGoldbach16.alpha",
+      "tex_lines": [
+        3949,
+        3953
+      ],
+      "formula": "αN,c=c/logN",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+        "line": 105
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_059_alpha"
+    },
+    {
+      "expected": "TexAuditAB.eventualR",
+      "actual": "LiLiuGoldbach16.HypothesisRAt",
+      "tex_lines": [
+        4093,
+        4100
+      ],
+      "formula": "固定c的eventual R；阈值依赖c",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 250
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_060_HypothesisRAt"
+    },
+    {
+      "expected": "TexAuditAB.eventualS",
+      "actual": "LiLiuGoldbach16.HypothesisSAt",
+      "tex_lines": [
+        4025,
+        4031
+      ],
+      "formula": "h正、沿偶数发散及最终η≤1/4；阈值依赖c,h",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 253
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_061_HypothesisSAt"
+    },
+    {
+      "expected": "TexAuditAB.poleOrder",
+      "actual": "LiLiuGoldbach16.zeroMultiplicity",
+      "tex_lines": [
+        4184,
+        4186
+      ],
+      "formula": "L函数解析零点阶数，非零点为0",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 380
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_062_zeroMultiplicity"
+    },
+    {
+      "expected": "TexAuditAB.poleMass",
+      "actual": "LiLiuGoldbach16.poleCoefficient",
+      "tex_lines": [
+        4187,
+        4191
+      ],
+      "formula": "2/φ(N)Σodd mχ²",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 261
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_063_poleCoefficient"
+    },
+    {
+      "expected": "TexAuditAB.regularEulerFactor",
+      "actual": "LiLiuGoldbach16.baselineProductR",
+      "tex_lines": [
+        4221,
+        4229
+      ],
+      "formula": "有限坏素数积与无限正则Euler积",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 432
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_064_baselineProductR"
+    },
+    {
+      "expected": "TexAuditAB.operatorMajorant",
+      "actual": "LiLiuGoldbach16.baselineBound",
+      "tex_lines": [
+        4114,
+        4117
+      ],
+      "formula": "C((logN)²+α⁻²)",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 257
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_065_baselineBound"
+    },
+    {
+      "expected": "TexAuditAB.boundaryCost",
+      "actual": "LiLiuGoldbach16.balanceFactor",
+      "tex_lines": [
+        4119,
+        4126
+      ],
+      "formula": "e^(2c)(1+c⁻²)",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 259
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_066_balanceFactor"
+    },
+    {
+      "expected": "TexAuditAB.numericalN",
+      "actual": "LiLiuGoldbach16.experimentN",
+      "tex_lines": [
+        4281,
+        4284
+      ],
+      "formula": "N=30030",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 265
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_067_experimentN"
+    },
+    {
+      "expected": "TexAuditAB.P",
+      "actual": "LiLiuGoldbach16.cutoffPolynomial",
+      "tex_lines": [
+        4292,
+        4300
+      ],
+      "formula": "分段13阶二项式平滑截断",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 267
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_068_cutoffPolynomial"
+    },
+    {
+      "expected": "TexAuditAB.eta",
+      "actual": "LiLiuGoldbach16.wideCutoff",
+      "tex_lines": [
+        4291,
+        4295
+      ],
+      "formula": "A=16,L=1000对称双截断",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 271
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_069_wideCutoff"
+    },
+    {
+      "expected": "TexAuditAB.W",
+      "actual": "LiLiuGoldbach16.wideCompanion",
+      "tex_lines": [
+        4301,
+        4305
+      ],
+      "formula": "sqrt(1−u)η(Nu)/sqrt(log(Nu)log(N(1−u)))零延拓",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 275
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_070_wideCompanion"
+    },
+    {
+      "expected": "TexAuditAB.f",
+      "actual": "LiLiuGoldbach16.wideWeight",
+      "tex_lines": [
+        4303,
+        4305
+      ],
+      "formula": "W(u)/sqrtu",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 280
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_071_wideWeight"
+    },
+    {
+      "expected": "TexAuditAB.J",
+      "actual": "LiLiuGoldbach16.wideCorrelation",
+      "tex_lines": [
+        4306,
+        4310
+      ],
+      "formula": "N⁻¹Σn+m=N,(nm,N)=1 ΛnΛm f(n/N)f(m/N)",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 282
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_072_wideCorrelation"
+    },
+    {
+      "expected": "TexAuditAB.primePairCount",
+      "actual": "LiLiuGoldbach16.unorderedPrimePairs",
+      "tex_lines": [
+        4311,
+        4311
+      ],
+      "formula": "无序素数对p≤q,p+q=N",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 284
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_073_unorderedPrimePairs"
+    },
+    {
+      "expected": "TexAuditAB.edge",
+      "actual": "LiLiuGoldbach16.edgeCorrection",
+      "tex_lines": [
+        4311,
+        4312
+      ],
+      "formula": "p<L的无序素数对缺失权1−η(p)²",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 287
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_074_edgeCorrection"
+    },
+    {
+      "expected": "TexAuditAB.properPowers",
+      "actual": "LiLiuGoldbach16.primePowerCorrection",
+      "tex_lines": [
+        4312,
+        4314
+      ],
+      "formula": "有序真素数幂校正η(p^k)²/(kℓ)",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 291
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_075_primePowerCorrection"
+    },
+    {
+      "expected": "TexAuditAB.coefficient",
+      "actual": "LiLiuGoldbach16.countingCoefficient",
+      "tex_lines": [
+        4361,
+        4363
+      ],
+      "formula": "Λ(n)W(n/N)/sqrt n",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 298
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_076_countingCoefficient"
+    },
+    {
+      "expected": "TexAuditAB.integralI",
+      "actual": "LiLiuGoldbach16.countingIntegral",
+      "tex_lines": [
+        4351,
+        4355
+      ],
+      "formula": "(2π)⁻¹∫N^(1+it)Wtilde(1+it)L′/L(3/2+it)dt",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 300
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_077_countingIntegral"
+    },
+    {
+      "expected": "TexAuditAB.diagonalD",
+      "actual": "LiLiuGoldbach16.diagonalCountingMoment",
+      "tex_lines": [
+        4357,
+        4360
+      ],
+      "formula": "Σ1≤n<N,(n,N)=1 a_n²",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 304
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_078_diagonalCountingMoment"
+    },
+    {
+      "expected": "TexAuditAB.signedJhat",
+      "actual": "LiLiuGoldbach16.approxSignedMoment",
+      "tex_lines": [
+        4445,
+        4446
+      ],
+      "formula": "5760⁻¹Σχχ(−1)|Ihatχ|²",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 307
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_079_approxSignedMoment"
+    },
+    {
+      "expected": "TexAuditAB.diagonalDhat",
+      "actual": "LiLiuGoldbach16.approxDiagonalMoment",
+      "tex_lines": [
+        4445,
+        4446
+      ],
+      "formula": "5760⁻¹Σχ|Ihatχ|²",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 310
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_080_approxDiagonalMoment"
+    },
+    {
+      "expected": "TexAuditAB.crossMass",
+      "actual": "LiLiuGoldbach16.wideModelMass",
+      "tex_lines": [
+        4422,
+        4422
+      ],
+      "formula": "c_f=∫0¹ f(u)f(1−u)du",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 313
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_081_wideModelMass"
+    },
+    {
+      "expected": "TexAuditAB.mainIntegral",
+      "actual": "LiLiuGoldbach16.wideMainIntegral",
+      "tex_lines": [
+        4413,
+        4415
+      ],
+      "formula": "S(N)∫16^(N/2)η(x)²/(log x log(N−x))dx",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 438
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_082_wideMainIntegral"
+    },
+    {
+      "expected": "TexAuditAB.residualB",
+      "actual": "LiLiuGoldbach16.wideResidual",
+      "tex_lines": [
+        4422,
+        4424
+      ],
+      "formula": "S(N)c_f−J",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 315
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_083_wideResidual"
+    },
+    {
+      "expected": "TexAuditAB.momentError",
+      "actual": "LiLiuGoldbach16.HasMomentError",
+      "tex_lines": [
+        4447,
+        4448
+      ],
+      "formula": "ε≥0且5760⁻¹Σ|I−Ihat|²≤ε²",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 442
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_084_HasMomentError"
+    },
+    {
+      "expected": "TexAuditAB.countCentre",
+      "actual": "LiLiuGoldbach16.approxPrimeCount",
+      "tex_lines": [
+        4453,
+        4456
+      ],
+      "formula": "N Jhat/2−Cpp/2+E",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 317
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_085_approxPrimeCount"
+    },
+    {
+      "expected": "TexAuditAB.countRadius",
+      "actual": "LiLiuGoldbach16.countError",
+      "tex_lines": [
+        4457,
+        4459
+      ],
+      "formula": "N(2√Dhat ε+ε²)/2",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 320
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_086_countError"
+    },
+    {
+      "expected": "TexAuditAB.ellW",
+      "actual": "LiLiuGoldbach16.wideFunctional",
+      "tex_lines": [
+        4514,
+        4519
+      ],
+      "formula": "固定1/9线上的宽权线性泛函",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 323
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_087_wideFunctional"
+    },
+    {
+      "expected": "TexAuditAB.vectorW",
+      "actual": "LiLiuGoldbach16.wideRieszVector",
+      "tex_lines": [
+        4512,
+        4514
+      ],
+      "formula": "选择实际表示ℓW的Riesz向量；存在性由B4保证",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 327
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_088_wideRieszVector"
+    },
+    {
+      "expected": "TexAuditAB.node",
+      "actual": "LiLiuGoldbach16.spectralNode",
+      "tex_lines": [
+        4533,
+        4535
+      ],
+      "formula": "2×1281节点，左右边界，t=j/16−40",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 331
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_089_spectralNode"
+    },
+    {
+      "expected": "TexAuditAB.nodeWeight",
+      "actual": "LiLiuGoldbach16.trapezoidWeight",
+      "tex_lines": [
+        4534,
+        4535
+      ],
+      "formula": "1/16，端点半权，无2π归一因子",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 334
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_090_trapezoidWeight"
+    },
+    {
+      "expected": "TexAuditAB.matrixC",
+      "actual": "LiLiuGoldbach16.finiteSpectralMatrix",
+      "tex_lines": [
+        4544,
+        4549
+      ],
+      "formula": "√wi E(si,conj sj)/((1+si)(1+conj sj)) √wj",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 337
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_091_finiteSpectralMatrix"
+    },
+    {
+      "expected": "TexAuditAB.finiteX",
+      "actual": "LiLiuGoldbach16.finiteSpectralFunction",
+      "tex_lines": [
+        4536,
+        4541
+      ],
+      "formula": "det(I−4q(1−q)C²/δ²)",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 341
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_092_finiteSpectralFunction"
+    },
+    {
+      "expected": "TexAuditAB.finiteSpectrum",
+      "actual": "LiLiuGoldbach16.IsFiniteSpectrum",
+      "tex_lines": [
+        4553,
+        4560
+      ],
+      "formula": "C=U diag(real eigenvalues) U*，U*U=UU*=I",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 345
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_093_IsFiniteSpectrum"
+    },
+    {
+      "expected": "TexAuditAB.eigenvalueList",
+      "actual": "LiLiuGoldbach16.finiteEigenvalues",
+      "tex_lines": [
+        4553,
+        4553
+      ],
+      "formula": "选择与实际矩阵绑定的实特征值列表",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 350
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_094_finiteEigenvalues"
+    },
+    {
+      "expected": "TexAuditAB.matrixNorm",
+      "actual": "LiLiuGoldbach16.finiteMatrixOpNorm",
+      "tex_lines": [
+        4560,
+        4561
+      ],
+      "formula": "复Euclidean空间单位球上矩阵作用的sup范数",
+      "semantic_status": "independently_reviewed",
+      "mechanical_status": "passed_kernel_checked_definition_body_equality_and_actual_comparator",
+      "live_source": {
+        "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+        "line": 353
+      },
+      "audit_group": "appendices",
+      "comparator_target": "TexComparator.definition_095_finiteMatrixOpNorm"
+    }
+  ],
+  "semantic_bridges": [
+    "TexAudit14.weight_has_required_compact_support",
+    "TexAudit14.universal_product_formula",
+    "TexAudit14.singular_series_formula",
+    "TexAudit14.character_kernel_original_formula",
+    "TexAudit14.character_kernel_full_positive",
+    "TexAudit14.character_kernel_rank_meaning",
+    "TexAudit14.completed_function_meaning",
+    "TexAudit14.beta_integral_continuation_bridge",
+    "TexAudit14.beta_bound_rhs_is_nonnegative",
+    "TexAudit14.beta_bound_rhs_norm_is_re",
+    "TexAudit14.prime_count_members_have_both_support_bounds",
+    "TexAudit57.hermitian_quadratic_real",
+    "TexAudit57.character_quadratic_nonnegative_real",
+    "TexAudit57.arithmetic_strip_nonempty",
+    "TexAudit57.selected_operator_unique",
+    "TexAudit57.actual_operator_integral",
+    "TexAudit57.zero_padding_product",
+    "TexAudit57.zero_padding_square_sum"
+  ],
+  "numeric_cross_checks": [
+    "TexAuditAB.Numeric.unorderedPrimePairs_eq_905"
+  ],
+  "note": "Final root integration result; per-agent source reports preserve their earlier handoff state. TeX-to-reference semantics remain independent mathematical review."
+}

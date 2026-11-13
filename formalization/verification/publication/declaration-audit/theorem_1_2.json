@@ -1,0 +1,1125 @@
+{
+  "root_count": 1,
+  "reachable_declaration_count": 77134,
+  "external_project_declaration_count": 68,
+  "external_project_module_count": 5,
+  "external_project_modules": {
+    "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation": [
+      "DirichletLAbelWeightVariation.cpowWeight",
+      "DirichletLAbelWeightVariation.cpowWeightDeriv",
+      "DirichletLAbelWeightVariation.cpowWeightDeriv.eq_1",
+      "DirichletLAbelWeightVariation.hasDerivAt_cpowWeight",
+      "DirichletLAbelWeightVariation.norm_cpowWeightDeriv",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub"
+    ],
+    "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries": [
+      "DirichletLAbelWeightVariation.cpowWeight.eq_1",
+      "DirichletLConditionalValueSeries.cauchySeq_sum_range_cpowWeight_character",
+      "DirichletLConditionalValueSeries.character_nat_zero_of_ne_one",
+      "DirichletLConditionalValueSeries.compactValueTailMajorant",
+      "DirichletLConditionalValueSeries.cpowWeight_nat_eq",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "DirichletLConditionalValueSeries.exists_tendsto_sum_range_cpowWeight_character",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLConditionalValueSeries.orderedValueFunction",
+      "DirichletLConditionalValueSeries.orderedValueFunction_eq",
+      "DirichletLConditionalValueSeries.orderedValueSeries",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction._proof_1",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.rightHalfPlane",
+      "DirichletLConditionalValueSeries.rightHalfPlane.eq_1",
+      "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum",
+      "DirichletLConditionalValueSeries.tendsto_cpowVariationBudget_nat_atTop",
+      "DirichletLConditionalValueSeries.tendsto_norm_cpowWeight_nat_atTop",
+      "DirichletLConditionalValueSeries.tendsto_sum_range_orderedValueSeries",
+      "DirichletLConditionalValueSeries.valuePartialSum",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail._simp_1_1",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.differentiable_valuePartialSum",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le._simp_1_1",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.tendsto_compactValueTailMajorant"
+    ],
+    "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds": [
+      "AnalyticNumberTheory.LargeSieve.tsum_nat_add_one_rpow_neg_le",
+      "AnalyticNumberTheory.LargeSieve.tsum_nat_rpow_neg_le"
+    ],
+    "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLWeakStripDerivative": [
+      "DirichletLWeakStripDerivative.abel_Ico",
+      "DirichletLWeakStripDerivative.character_norm_le_one",
+      "DirichletLWeakStripDerivative.dirichlet_cpow_abel_Ico",
+      "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus",
+      "DirichletLWeakStripDerivative.sum_aligned_period_eq_zero",
+      "DirichletLWeakStripDerivative.sum_mul_period_eq_zero",
+      "DirichletLWeakStripDerivative.sum_one_period_eq_zero"
+    ],
+    "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries": [
+      "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation",
+      "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation.eq_1",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrection",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrection_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor.eq_1",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_ne_zero",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_nonneg",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation",
+      "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_eq_baseFactor",
+      "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_le_one",
+      "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_pos",
+      "MathlibNt.SieveTheory.SingularSeries.summable_liuBaseDeviation_bound",
+      "MathlibNt.SieveTheory.SingularSeries.summable_norm_liuBaseDeviation",
+      "_private.MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries.0.MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd._proof_1_2"
+    ]
+  },
+  "external_direct_boundary_declaration_count": 20,
+  "external_direct_boundary_edges": [
+    {
+      "source": "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "source_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
+      "edge_kind": "value_refs",
+      "target": "DirichletLConditionalValueSeries.orderedValueSeries",
+      "target_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "source_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
+      "edge_kind": "value_refs",
+      "target": "DirichletLAbelWeightVariation.cpowWeight",
+      "target_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation"
+    },
+    {
+      "source": "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "source_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
+      "edge_kind": "value_refs",
+      "target": "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "target_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "source_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
+      "edge_kind": "value_refs",
+      "target": "DirichletLConditionalValueSeries.character_nat_zero_of_ne_one",
+      "target_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "source_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
+      "edge_kind": "value_refs",
+      "target": "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "target_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.LFunction_sub_one_norm_bound",
+      "source_module": "LiLiuGoldbach.Proofs.CharacterGrowthFoundation",
+      "edge_kind": "value_refs",
+      "target": "AnalyticNumberTheory.LargeSieve.tsum_nat_rpow_neg_le",
+      "target_module": "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds"
+    },
+    {
+      "source": "LiLiuGoldbach16.densityMultiplier",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.densityMultiplier_mul",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.densityMultiplier_one",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.densityMultiplier_prime_pow",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "type_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.densityMultiplier_prime_pow",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.density_prime_power_sum",
+      "source_module": "LiLiuGoldbach.Proofs.DensityEulerIdentity",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.density_prime_power_sum",
+      "source_module": "LiLiuGoldbach.Proofs.DensityEulerIdentity",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.density_prime_power_term",
+      "source_module": "LiLiuGoldbach.Proofs.DensityEulerIdentity",
+      "edge_kind": "type_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.density_prime_power_term",
+      "source_module": "LiLiuGoldbach.Proofs.DensityEulerIdentity",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.liuUniversalProduct_le_primeFactors",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "type_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.liuUniversalProduct_le_primeFactors",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "type_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.liuUniversalProduct_le_primeFactors",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.liuUniversalProduct_le_primeFactors",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.liuUniversalProduct_le_primeFactors",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_pos",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.liuUniversalProduct_le_primeFactors",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_le_one",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries",
+      "source_module": "LiLiuGoldbach.BaseDefinitions",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_mul_factorization",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_mul_factorization",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrection",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_mul_factorization",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_mul_factorization",
+      "source_module": "LiLiuGoldbach.Proofs.DensityArithmetic",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_pos",
+      "source_module": "LiLiuGoldbach.Proofs.Elementary",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_pos",
+      "source_module": "LiLiuGoldbach.Proofs.Elementary",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrection",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrection_pos",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_eq_baseFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "LiLiuGoldbach16.singularSeries_upper_totient",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor.eq_1",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "type_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor.eq_1",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "type_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    },
+    {
+      "source": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor.eq_1",
+      "source_module": "LiLiuGoldbach.Proofs.SingularBounds",
+      "edge_kind": "value_refs",
+      "target": "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
+    }
+  ],
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "proof_witness_paths": {
+    "AnalyticNumberTheory.LargeSieve.tsum_nat_add_one_rpow_neg_le": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_right_lower_bound",
+      "LiLiuGoldbach16.LFunction_sub_one_norm_bound",
+      "AnalyticNumberTheory.LargeSieve.tsum_nat_rpow_neg_le",
+      "AnalyticNumberTheory.LargeSieve.tsum_nat_add_one_rpow_neg_le"
+    ],
+    "AnalyticNumberTheory.LargeSieve.tsum_nat_rpow_neg_le": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_right_lower_bound",
+      "LiLiuGoldbach16.LFunction_sub_one_norm_bound",
+      "AnalyticNumberTheory.LargeSieve.tsum_nat_rpow_neg_le"
+    ],
+    "DirichletLAbelWeightVariation.cpowWeight": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLAbelWeightVariation.cpowWeight"
+    ],
+    "DirichletLAbelWeightVariation.cpowWeight.eq_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLAbelWeightVariation.cpowWeight.eq_1"
+    ],
+    "DirichletLAbelWeightVariation.cpowWeightDeriv": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral",
+      "DirichletLAbelWeightVariation.cpowWeightDeriv"
+    ],
+    "DirichletLAbelWeightVariation.cpowWeightDeriv.eq_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral",
+      "DirichletLAbelWeightVariation.norm_cpowWeightDeriv",
+      "DirichletLAbelWeightVariation.cpowWeightDeriv.eq_1"
+    ],
+    "DirichletLAbelWeightVariation.hasDerivAt_cpowWeight": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral",
+      "DirichletLAbelWeightVariation.hasDerivAt_cpowWeight"
+    ],
+    "DirichletLAbelWeightVariation.norm_cpowWeightDeriv": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral",
+      "DirichletLAbelWeightVariation.norm_cpowWeightDeriv"
+    ],
+    "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le"
+    ],
+    "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le",
+      "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral"
+    ],
+    "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le"
+    ],
+    "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le",
+      "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub"
+    ],
+    "DirichletLConditionalValueSeries.cauchySeq_sum_range_cpowWeight_character": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries",
+      "DirichletLConditionalValueSeries.exists_tendsto_sum_range_cpowWeight_character",
+      "DirichletLConditionalValueSeries.cauchySeq_sum_range_cpowWeight_character"
+    ],
+    "DirichletLConditionalValueSeries.character_nat_zero_of_ne_one": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.character_nat_zero_of_ne_one"
+    ],
+    "DirichletLConditionalValueSeries.compactValueTailMajorant": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail",
+      "DirichletLConditionalValueSeries.compactValueTailMajorant"
+    ],
+    "DirichletLConditionalValueSeries.cpowWeight_nat_eq": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction",
+      "DirichletLConditionalValueSeries.cpowWeight_nat_eq"
+    ],
+    "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction"
+    ],
+    "DirichletLConditionalValueSeries.exists_tendsto_sum_range_cpowWeight_character": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries",
+      "DirichletLConditionalValueSeries.exists_tendsto_sum_range_cpowWeight_character"
+    ],
+    "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le"
+    ],
+    "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le"
+    ],
+    "DirichletLConditionalValueSeries.orderedValueFunction": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.orderedValueFunction"
+    ],
+    "DirichletLConditionalValueSeries.orderedValueFunction_eq": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.orderedValueFunction_eq"
+    ],
+    "DirichletLConditionalValueSeries.orderedValueSeries": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries"
+    ],
+    "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction"
+    ],
+    "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction._proof_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction._proof_1"
+    ],
+    "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos"
+    ],
+    "DirichletLConditionalValueSeries.rightHalfPlane": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.rightHalfPlane"
+    ],
+    "DirichletLConditionalValueSeries.rightHalfPlane.eq_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.rightHalfPlane.eq_1"
+    ],
+    "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum"
+    ],
+    "DirichletLConditionalValueSeries.tendsto_cpowVariationBudget_nat_atTop": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries",
+      "DirichletLConditionalValueSeries.exists_tendsto_sum_range_cpowWeight_character",
+      "DirichletLConditionalValueSeries.cauchySeq_sum_range_cpowWeight_character",
+      "DirichletLConditionalValueSeries.tendsto_cpowVariationBudget_nat_atTop"
+    ],
+    "DirichletLConditionalValueSeries.tendsto_norm_cpowWeight_nat_atTop": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.tendsto_norm_cpowWeight_nat_atTop"
+    ],
+    "DirichletLConditionalValueSeries.tendsto_sum_range_orderedValueSeries": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.tendsto_sum_range_orderedValueSeries"
+    ],
+    "DirichletLConditionalValueSeries.valuePartialSum": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "DirichletLConditionalValueSeries.valuePartialSum"
+    ],
+    "DirichletLWeakStripDerivative.abel_Ico": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLWeakStripDerivative.dirichlet_cpow_abel_Ico",
+      "DirichletLWeakStripDerivative.abel_Ico"
+    ],
+    "DirichletLWeakStripDerivative.character_norm_le_one": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus",
+      "DirichletLWeakStripDerivative.character_norm_le_one"
+    ],
+    "DirichletLWeakStripDerivative.dirichlet_cpow_abel_Ico": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLWeakStripDerivative.dirichlet_cpow_abel_Ico"
+    ],
+    "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus"
+    ],
+    "DirichletLWeakStripDerivative.sum_aligned_period_eq_zero": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus",
+      "DirichletLWeakStripDerivative.sum_mul_period_eq_zero",
+      "DirichletLWeakStripDerivative.sum_aligned_period_eq_zero"
+    ],
+    "DirichletLWeakStripDerivative.sum_mul_period_eq_zero": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus",
+      "DirichletLWeakStripDerivative.sum_mul_period_eq_zero"
+    ],
+    "DirichletLWeakStripDerivative.sum_one_period_eq_zero": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus",
+      "DirichletLWeakStripDerivative.sum_mul_period_eq_zero",
+      "DirichletLWeakStripDerivative.sum_aligned_period_eq_zero",
+      "DirichletLWeakStripDerivative.sum_one_period_eq_zero"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct",
+      "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation.eq_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_nonneg",
+      "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation.eq_1"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuCorrection": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrection"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrection",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor_pos": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrection_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor_pos"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuCorrection_pos": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrection_pos"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_7_1_uniform",
+      "LiLiuGoldbach16.theorem_7_1",
+      "LiLiuGoldbach16.proposition_7_3",
+      "LiLiuGoldbach16.residual_mellin_split",
+      "LiLiuGoldbach16.lemma_7_2",
+      "LiLiuGoldbach16.model_double_mellin",
+      "LiLiuGoldbach16.model_single_mellin",
+      "LiLiuGoldbach16.model_single_mellin_shift_of_growth",
+      "LiLiuGoldbach16.regularizedModelMellin_initial",
+      "LiLiuGoldbach16.density_signedConvolution_mellin_initial",
+      "LiLiuGoldbach16.density_sampling_coeff_summable",
+      "LiLiuGoldbach16.densitySeries_summable_norm",
+      "LiLiuGoldbach16.singularSeries_mul_le_divisorCount",
+      "LiLiuGoldbach16.singularSeries_upper_totient",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrection",
+      "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor.eq_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_7_1_uniform",
+      "LiLiuGoldbach16.theorem_7_1",
+      "LiLiuGoldbach16.proposition_7_3",
+      "LiLiuGoldbach16.residual_mellin_split",
+      "LiLiuGoldbach16.lemma_7_2",
+      "LiLiuGoldbach16.model_double_mellin",
+      "LiLiuGoldbach16.model_single_mellin",
+      "LiLiuGoldbach16.model_single_mellin_shift_of_growth",
+      "LiLiuGoldbach16.regularizedModelMellin_initial",
+      "LiLiuGoldbach16.density_signedConvolution_mellin_initial",
+      "LiLiuGoldbach16.density_sampling_coeff_summable",
+      "LiLiuGoldbach16.densitySeries_summable_norm",
+      "LiLiuGoldbach16.singularSeries_mul_le_divisorCount",
+      "LiLiuGoldbach16.singularSeries_upper_totient",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor.eq_1"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_7_1_uniform",
+      "LiLiuGoldbach16.theorem_7_1",
+      "LiLiuGoldbach16.proposition_7_3",
+      "LiLiuGoldbach16.residual_mellin_split",
+      "LiLiuGoldbach16.lemma_7_2",
+      "LiLiuGoldbach16.model_double_mellin",
+      "LiLiuGoldbach16.model_single_mellin",
+      "LiLiuGoldbach16.model_single_mellin_shift_of_growth",
+      "LiLiuGoldbach16.regularizedModelMellin_initial",
+      "LiLiuGoldbach16.density_signedConvolution_mellin_initial",
+      "LiLiuGoldbach16.density_sampling_coeff_summable",
+      "LiLiuGoldbach16.densitySeries_summable_norm",
+      "LiLiuGoldbach16.singularSeries_mul_le_divisorCount",
+      "LiLiuGoldbach16.singularSeries_upper_totient",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_ne_zero": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_ne_zero"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_nonneg": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_nonneg"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_nonneg",
+      "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_eq_baseFactor": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_7_1_uniform",
+      "LiLiuGoldbach16.theorem_7_1",
+      "LiLiuGoldbach16.proposition_7_3",
+      "LiLiuGoldbach16.residual_mellin_split",
+      "LiLiuGoldbach16.lemma_7_2",
+      "LiLiuGoldbach16.model_double_mellin",
+      "LiLiuGoldbach16.model_single_mellin",
+      "LiLiuGoldbach16.model_single_mellin_shift_of_growth",
+      "LiLiuGoldbach16.regularizedModelMellin_initial",
+      "LiLiuGoldbach16.density_signedConvolution_mellin_initial",
+      "LiLiuGoldbach16.density_sampling_coeff_summable",
+      "LiLiuGoldbach16.densitySeries_summable_norm",
+      "LiLiuGoldbach16.singularSeries_mul_le_divisorCount",
+      "LiLiuGoldbach16.singularSeries_upper_totient",
+      "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_eq_baseFactor"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_le_one": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_7_1_uniform",
+      "LiLiuGoldbach16.theorem_7_1",
+      "LiLiuGoldbach16.proposition_7_3",
+      "LiLiuGoldbach16.residual_mellin_split",
+      "LiLiuGoldbach16.lemma_7_2",
+      "LiLiuGoldbach16.model_double_mellin",
+      "LiLiuGoldbach16.model_single_mellin",
+      "LiLiuGoldbach16.model_single_mellin_shift_of_growth",
+      "LiLiuGoldbach16.regularizedModelMellin_initial",
+      "LiLiuGoldbach16.density_signedConvolution_mellin_initial",
+      "LiLiuGoldbach16.density_sampling_coeff_summable",
+      "LiLiuGoldbach16.densitySeries_summable_norm",
+      "LiLiuGoldbach16.singularSeries_mul_le_divisorCount",
+      "LiLiuGoldbach16.singularSeries_upper_totient",
+      "LiLiuGoldbach16.liuUniversalProduct_le_primeFactors",
+      "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_le_one"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_pos": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_nonneg",
+      "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_pos"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.summable_liuBaseDeviation_bound": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_ne_zero",
+      "MathlibNt.SieveTheory.SingularSeries.summable_norm_liuBaseDeviation",
+      "MathlibNt.SieveTheory.SingularSeries.summable_liuBaseDeviation_bound"
+    ],
+    "MathlibNt.SieveTheory.SingularSeries.summable_norm_liuBaseDeviation": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.singularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos",
+      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_ne_zero",
+      "MathlibNt.SieveTheory.SingularSeries.summable_norm_liuBaseDeviation"
+    ],
+    "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail"
+    ],
+    "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail._simp_1_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail._simp_1_1"
+    ],
+    "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.differentiable_valuePartialSum": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.differentiable_valuePartialSum"
+    ],
+    "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le._simp_1_1": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le",
+      "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le._simp_1_1"
+    ],
+    "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.tendsto_compactValueTailMajorant": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_6_1",
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.arithmeticKernel_growth_inputs",
+      "LiLiuGoldbach16.logDerivative_uniform_bound",
+      "LiLiuGoldbach16.LFunction_polynomial_bound",
+      "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos",
+      "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction",
+      "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail",
+      "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.tendsto_compactValueTailMajorant"
+    ],
+    "_private.MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries.0.MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd._proof_1_2": [
+      "LiLiuGoldbach16.theorem_1_2",
+      "LiLiuGoldbach16.theorem_7_1_uniform",
+      "LiLiuGoldbach16.theorem_7_1",
+      "LiLiuGoldbach16.proposition_7_3",
+      "LiLiuGoldbach16.residual_mellin_split",
+      "LiLiuGoldbach16.lemma_7_2",
+      "LiLiuGoldbach16.model_double_mellin",
+      "LiLiuGoldbach16.model_single_mellin",
+      "LiLiuGoldbach16.model_single_mellin_shift_of_growth",
+      "LiLiuGoldbach16.regularizedModelMellin_initial",
+      "LiLiuGoldbach16.density_signedConvolution_mellin_initial",
+      "LiLiuGoldbach16.density_sampling_coeff_summable",
+      "LiLiuGoldbach16.densitySeries_summable_norm",
+      "LiLiuGoldbach16.singularSeries_mul_le_divisorCount",
+      "LiLiuGoldbach16.singularSeries_upper_totient",
+      "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd",
+      "_private.MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries.0.MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_of_dvd._proof_1_2"
+    ]
+  }
+}

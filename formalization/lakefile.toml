@@ -1,0 +1,11 @@
+name = "liLiuGoldbach"
+version = "0.1.0"
+defaultTargets = ["LiLiuGoldbach"]
+
+[[require]]
+name = "goldbach"
+git = "https://github.com/subfish-zhou/goldbach-lean.git"
+rev = "24490c2ab7787238f816d771c9176411dcbda503"
+
+[[lean_lib]]
+name = "LiLiuGoldbach"

@@ -1,0 +1,79 @@
+{
+  "scope": "Independent final source cross-check of new statements in sections_5_6.lean and section7_appendices.lean, plus the joint-meromorphic encoding in sections_1_4.lean. No Lean or shared output file modified.",
+  "verdict": "No additional mandatory mathematical statement fix found in the inspected additions, provided the accepted shared IsWeight C-infinity correction is included in the merged module. All statements remain unproved review obligations.",
+  "must_fix": [],
+  "integration_requirements": [
+    "Merge the accepted IsWeight change to ContDiff ℝ ∞ φ with the ContDiff scope and its nonemptiness obligation. The standalone regional copies retain unrelated original definitions by design; their old weight definition must not override the corrected common definition."
+  ],
+  "checks": [
+    {
+      "target": "Proposition 6.5 and proposition_6_5_components_spec",
+      "source_pages": [31, 40, 41],
+      "status": "matched",
+      "findings": [
+        "All three distinct estimates remain: HS(P)≤tr(P)≤C(log²N+α_N⁻²); HS(D)≤tr(D)≤Cα_N⁻²; HS(K)≤Cα_N⁻². Positivity and trace class of P,D, and HS validity of K remain conclusions.",
+        "The original section-wide assumptions on PDF p31 are even N>e^10, GRH(N), α_N=1/log N, β=1/8. The revised main statement uses precisely that fixed normalization. The ha argument is a derived strip-validity witness, not an independent mathematical restriction.",
+        "The constant is chosen before N. There is no extra hidden size hypothesis on a component norm, and no dropped K estimate. Component realization, boundary-integrand integrability, and T=P−D−K are asserted rather than supplied as caller assumptions.",
+        "Uniformity for a freely varying left endpoint belongs to Appendix A.3 and is separately supplied there; the fixed-normalization Prop6.5 should not be advertised as directly quantifying every free α."
+      ]
+    },
+    {
+      "target": "positiveFredholmDet, proposition_6_1_positive_fredholm_spec, proposition_6_1_square_determinant",
+      "source_pages": [32, 33],
+      "status": "matched_on_declared_domain",
+      "findings": [
+        "The determinant now uses the spectrum of A=T² itself. Spectral existence, nonnegative summable eigenvalues and product convergence follow as conclusions of the positive-trace-class support statement.",
+        "For the arithmetic T, positive trace class of T² remains a conclusion of Proposition 6.1. The new support theorem therefore does not add a trace-class premise to the original arithmetic theorem.",
+        "The predicate IsPositiveTraceClass includes an ℕ-indexed Hilbert basis, and the support theorem assumes CompleteSpace. This is a valid interface for the paper's infinite-dimensional Hardy spaces, not a general finite-dimensional or nonseparable trace-class library interface. The comments correctly restrict the claim.",
+        "Outside that stated domain eigenvalues and tprod remain totalized; no source claim is made about those fallback values. The square-determinant bridge explicitly equates the A-spectrum determinant to the product of 1−tμ_j²."
+      ]
+    },
+    {
+      "target": "diagonalHardyVector and proposition_6_5_diagonal_vector_spec",
+      "source_pages": [41],
+      "status": "matched",
+      "findings": [
+        "The source's d_n(s)=n^(−s)/(1+s) requires positive n. The support theorem's n≥1 is exactly that domain, including n=1.",
+        "Existence is not assumed by the caller: the chosen vector is proved to represent the function on the whole open strip, with both boundary traces identified almost everywhere.",
+        "The exact norm π[n^(−2α_N)/(1+α_N)+n^(−2β)/(1+β)] matches the PDF, including π and both boundary terms.",
+        "The rankOne formula agrees with the paper's first-argument-linear convention because paperInner h d is Mathlib inner d h. Dropping GRH in this purely Hardy support statement is a valid elementary generalization, not a restriction of the paper's conclusion."
+      ]
+    },
+    {
+      "target": "Proposition A.2, proposition_A_2_pointwise and lemma_A_3_absolute_operator_bound",
+      "source_pages": [53, 54, 55],
+      "status": "matched",
+      "findings": [
+        "Fixed c>0 is quantified before the asymptotic N. The local equivalences retain even N≥4, N>exp(10c), GRH(N), the open half-space, 0<η<1/2 and η≤1/4 in the h-parametrized specialization.",
+        "The arithmetic constant is chosen before h. Eventual thresholds can depend on h, as the original source explicitly allows. No uniformity in c is falsely asserted.",
+        "The old stronger global premise EvenEventually GRH is removed from the A.2 arithmetic conclusions. The conclusion is now eventual in even N with GRH(N) as a local implication, faithfully covering subsequences of moduli satisfying GRH.",
+        "The pointwise supplement needs only the spectral condition at the current N and follows from the all-permitted-N upper bound Q≤exp(2c)weightEnergy in A.1. Positive zeroFreeWidth is a redundant domain condition under N≥4, positive h(N), and positive singular series, rather than an additional analytic assumption.",
+        "The bundled A.2 baseline constant is syntactically after φ, but its baseline inequality itself contains no φ; a single existing admissible weight suffices to remove this dummy dependence. Moreover the independent A.3 absolute-operator-bound statement states the stronger uniform constant before any weight or moving boundary. This is not a mathematical loss of source uniformity."
+      ]
+    },
+    {
+      "target": "Remaining new support clauses in §§5–7 and appendices",
+      "source_pages": [25, 26, 27, 29, 30, 33, 34, 35, 36, 39, 44, 45, 48, 49, 53, 55, 56, 60, 61],
+      "status": "no_new_domain_restriction_found",
+      "findings": [
+        "The additions for strip representation uniqueness, joint boundary L² validity, integrability, HS basis independence, all complex slices and all real roots add conclusions; they do not make the original theorem depend on those conclusions as hypotheses.",
+        "The normalized eta asymptotic supplement has a threshold uniform in N and eta for fixed weight, consistent with the preceding quantitative inequality.",
+        "The norm-integral support theorem allows all real a only for scalar integrability, which is justified by the fixed support away from zero; it does not assert a Hardy realization when a≥β.",
+        "The B.4 wide-weight statement uses C^6 and its own support assumptions, preserving its distinction from IsWeight. The A.4 product support theorem gives convergence and holomorphy in a neighborhood of zero, the domain used in the source."
+      ]
+    },
+    {
+      "target": "lemma_4_2_meromorphic common entire denominator",
+      "source_pages": [20, 21, 22],
+      "status": "faithful_meromorphic_germ_encoding_with_explicit_future_proof_obligation",
+      "findings": [
+        "The statement already requires B≠0 for B : ℂ×ℂ→ℂ. This means B is not the identically zero function, not that it is nowhere zero. Equivalently there must exist a point p with B(p)≠0. No extra all-points nonvanishing requirement should be added, since that would rule out genuine poles.",
+        "A,B are entire on the connected space ℂ², so B not identically zero gives a dense open nonzero locus. Equality of both expressions to A/B on that locus identifies the same meromorphic function; it does not impose a caller-provided Gamma nonvanishing premise.",
+        "An explicit possible denominator confirms that the existence requirement is mathematically credible: with G=1/Γ, r=1/2−s, t=1/2−z, w=s+z, a_s=(3/2−s)/2 and a_z=(3/2−z)/2, take B=G(r)G(t)G(w)G(a_s)G(a_z). The reciprocal Gamma function is entire, and B is nonzero at s=z=1/8, where all its Gamma arguments are positive.",
+        "This denominator removes numerator Gamma poles, while denominator Gamma poles represent zeros through the entire reciprocal Gamma function. Both sides of the PDF formula consequently admit entire numerators over B. Extra zeros of a chosen B do not lose regular points of the meromorphic identity: continuation and continuity recover those values wherever the expressions are regular.",
+        "The initial Beta-integral-domain pointwise identity remains separately in lemma_4_2. The new statement deliberately does not equate totalized Gamma point values at genuine or removable poles. Connecting this entire-quotient representation to a future several-variable meromorphic-germ library remains a proof/API obligation, not a filled proof."
+      ]
+    }
+  ],
+  "validation_limit": "This is an independent mathematical source/statement review, not a proof of any new theorem. No additional compilation was necessary because no Lean file was changed."
+}

@@ -1,0 +1,857 @@
+[
+  {
+    "name": "LiLiuGoldbach16.Character",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "7d19b42efa2ead01e15696aea8680cfa02f02befbdc8c034030694bf4e905f8f"
+  },
+  {
+    "name": "LiLiuGoldbach16.mangoldt",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f6db471b7b92920e4eab5a36a3e939697d063a1f22d98cb3e40f35998a07a53d"
+  },
+  {
+    "name": "LiLiuGoldbach16.prime",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "92d0fce30a725f70641b9a900a5543e08868f937283b7324d0efd13dd6a2a54a"
+  },
+  {
+    "name": "LiLiuGoldbach16.IsWeight",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d8471031690f82603032c9c689591b30b12f244482e3664e211c08cec19174b5"
+  },
+  {
+    "name": "LiLiuGoldbach16.companion",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1923a71832c0be1553a59290202bf7c4d9a299fb9c94738074fcd8e93bdb31fd"
+  },
+  {
+    "name": "LiLiuGoldbach16.derivativeWeight",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "53bc5f2da1659b1aa7f89d311cdc70f11a45d3e4fc282a80dea3dea6c8426b25"
+  },
+  {
+    "name": "LiLiuGoldbach16.weightMass",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "6164eb08838b4cd02d5e44e273b34f6c607116fc8115c6c21e9aa269b9ecd738"
+  },
+  {
+    "name": "LiLiuGoldbach16.C2",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c2871596e5c7b8612ea9f652f208a104abb6eb2c8ec1ee05e412076f4300f807"
+  },
+  {
+    "name": "LiLiuGoldbach16.singularSeries",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "067318783e3b9fd6aa59e0c0d05fb6b63fcbf7f419c9f6291f3cdd0f30f701c4"
+  },
+  {
+    "name": "LiLiuGoldbach16.goldbach",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b9dd6a942bf4e4e3f6cf6c780583d9d73eeba1162ee0bcd3806cf2c16ccb5603"
+  },
+  {
+    "name": "LiLiuGoldbach16.diagonalMoment",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c3d783fe6738d8614216659f50c05445dc21776f9212c756263b6feda2dfe435"
+  },
+  {
+    "name": "LiLiuGoldbach16.oddCharacters",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c2a31511a53917e01399cb677ff89153514f1a0855851f0f0330888c32c38f7c"
+  },
+  {
+    "name": "LiLiuGoldbach16.characterPolynomial",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "96b6745e433b29650703e34c37af7bb40bdd6b4b1ac0bed2fef65096017edeee"
+  },
+  {
+    "name": "LiLiuGoldbach16.characterMoment",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "3c3aabf9ef559847e4e6f4ddf06fdc06d75937d094a2faa8240f46dc19e5388c"
+  },
+  {
+    "name": "LiLiuGoldbach16.GRH",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "91c01f87182579d4058c077826e322c170a3b681def1b5e8cf715bd6f66e0c97"
+  },
+  {
+    "name": "LiLiuGoldbach16.logDerivative",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "555f4fbb68c962037cef516481288d95e4fa2076ada7509c967200d846b5fd64"
+  },
+  {
+    "name": "LiLiuGoldbach16.characterKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d70c6cfacbfbbc2ea691144742004f297bf626177737ef2af95a893dac390e0c"
+  },
+  {
+    "name": "LiLiuGoldbach16.diagonalSeries",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "8a14ebbcdeac44e809df80602df5f29ce48a595dbee0a2fc0fefc36e68d66255"
+  },
+  {
+    "name": "LiLiuGoldbach16.densitySeries",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "fb3e834f681001b047d197939cf307e66f27492d5193b18939c651c567b933c2"
+  },
+  {
+    "name": "LiLiuGoldbach16.densityEulerProduct",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "433a101b28350a12b9c31fd15a628afd8b4567ccfedee99ca65216e92bd4ed79"
+  },
+  {
+    "name": "LiLiuGoldbach16.continuedDensity",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5344cdefea2cff38b30416016a676e334f3a07568393c70a0616980c28198f33"
+  },
+  {
+    "name": "LiLiuGoldbach16.betaKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b84236d68e3697db75589aec676856e98f2b9b594837761c089d8fbd9590bd70"
+  },
+  {
+    "name": "LiLiuGoldbach16.gammaQuotient",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "0c98157cf0331049d06d716bacbb2509bbbc897bfdd2b560e047cc91493c4a5d"
+  },
+  {
+    "name": "LiLiuGoldbach16.betaModel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "ef4208d62072a49325b52159c4a634105f4c3eaaea5b54a912123b36d0d73ea5"
+  },
+  {
+    "name": "LiLiuGoldbach16.continuedModel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "bdb1439bb3357e278acad1f29a163952a7db8e2089e31d6a5770c54c8b7a77aa"
+  },
+  {
+    "name": "LiLiuGoldbach16.residual",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "98cb11a64181a434fb7591188d8035ea38311d1d234143eea83ccb53e9c48503"
+  },
+  {
+    "name": "LiLiuGoldbach16.analyticDomain",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "bff8a8a5a0df39128677ef5039750e05df3e900f574efd97bdafc21f3d167c8d"
+  },
+  {
+    "name": "LiLiuGoldbach16.betaDomain",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f07e4ebabb7c47817ed0811bbdf9254d8febdc0b5f98c2f4915326c7750a5f9c"
+  },
+  {
+    "name": "LiLiuGoldbach16.alpha",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1a1e26e9265f61e7c20616581889da9040006066b5dff11012daae0935219071"
+  },
+  {
+    "name": "LiLiuGoldbach16.beta",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "75c5903121ac9a1e261f7a3b55ce32b637f20f3836ff1980b86bbcfc80a916c2"
+  },
+  {
+    "name": "LiLiuGoldbach16.sigmaStar",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "ce95f8f2c69cab9498a5abb42a3610cb1815422d9e99d57dce6e22b9f24686a8"
+  },
+  {
+    "name": "LiLiuGoldbach16.width",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "38c145d43592a5eec4e104f3b7d8fe2fb60b418d78dc44ba8671471c46d97fb4"
+  },
+  {
+    "name": "LiLiuGoldbach16.strip",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "7a14b96077d18f678c1ff20d57d65891c1658fa9fce060d61de0802415d13ed3"
+  },
+  {
+    "name": "LiLiuGoldbach16.line",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "2215cb6eeedc050c28201d23416b14578d74a75672c3dc6350cf8da71a8d3738"
+  },
+  {
+    "name": "LiLiuGoldbach16.boundaryIntegral",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "079859f5027932a1b4cd74749025cbccddada1e4b275c5fb72eae65da0bf98e3"
+  },
+  {
+    "name": "LiLiuGoldbach16.mellinWeight",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "7ff787e01355eb52ab2f8d885c4db52d82237b0b214f625157af4ec57e57fe6e"
+  },
+  {
+    "name": "LiLiuGoldbach16.verticalMellin",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "7f6046fdf25a6ca3ad904a85ea14912e1d26c735f5842be4df7c56cb4109f50a"
+  },
+  {
+    "name": "LiLiuGoldbach16.residualIntegral",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1d2766ae3bd93c3cf0559ad61dad89f53251a337e89c0a86b96aaf923705a0a8"
+  },
+  {
+    "name": "LiLiuGoldbach16.differenceConvolution",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "fbba4210a56107064f911de49f673b06d34dfa8a21ff72aef91cf4b4739e537b"
+  },
+  {
+    "name": "LiLiuGoldbach16.sumConvolution",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "532836b2a1e0429d14096c235c195bee31d01ca37f47ee31a0f8d6d90154d708"
+  },
+  {
+    "name": "LiLiuGoldbach16.signedConvolution",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "07acb14ec3e44decf401cd08403ed397a175825eecd654e2833f4ddb385ede29"
+  },
+  {
+    "name": "LiLiuGoldbach16.hardyWeight",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f7c5a14c7b363d55d6aad91389ed5ced47ad1215834fd3ace9478f436313626c"
+  },
+  {
+    "name": "LiLiuGoldbach16.hardyMeasure",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d1a02c567766160eb2ea09ffcc6df269e925bbed6fc5e76ffb5718f946b96e7e"
+  },
+  {
+    "name": "LiLiuGoldbach16.HardySpace",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "2e567ec23d1944fbbeb30f4397e28bcbb0062dc7849612f85872f193115521fb"
+  },
+  {
+    "name": "LiLiuGoldbach16.fourierLaplace",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c11eaf8d8c8c7f20a4b05918880b3c4c6c2bd3e1fbd7a4341b26cc3d038488b5"
+  },
+  {
+    "name": "LiLiuGoldbach16.IsRawHardy",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d0a3729306455684fde9747777c7ce4cdb445a77f20c5631face1564957b8777"
+  },
+  {
+    "name": "LiLiuGoldbach16.rawHardyNormSq",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1fb5a06443e32f0312d42fe886c8424cecb8778c5eb360e3be950b809ae4c619"
+  },
+  {
+    "name": "LiLiuGoldbach16.interiorLine",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "14ebf1b8b61510816caafae5c3fd7512ba8b4ce1c9bdb0009604456bbd646fe1"
+  },
+  {
+    "name": "LiLiuGoldbach16.IsBoundaryTrace",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "ec367a9fd4ab37932c014dc82168ba24b0e683495eab88bdf981bfd51ce3bfe0"
+  },
+  {
+    "name": "LiLiuGoldbach16.boundaryTraces",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "97b2e70cf9a71faa203850dcfe6e94776b8348df72eea55a8f8fde6110f0e518"
+  },
+  {
+    "name": "LiLiuGoldbach16.paperInner",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "3f209d8bb8e2d07a3da025e7314be108dc9cd983cb2bee81b89d76347b11e767"
+  },
+  {
+    "name": "LiLiuGoldbach16.weightedKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b069d51d3a0991978eb8c30ca79e09a460247e49029480404854bce6326ac79b"
+  },
+  {
+    "name": "LiLiuGoldbach16.kernelAction",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "0348db019330f88afd8b5eda165921c7cba5db56e4e4449246a17e19f93e8f9f"
+  },
+  {
+    "name": "LiLiuGoldbach16.RepresentsKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "9962ea86dca1cda48254a02056e3fe059a1972d08381e2601f7fe4c3bcc8f7e3"
+  },
+  {
+    "name": "LiLiuGoldbach16.kernelOperator",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "e01585bba94b1be574747d2298fde1e8b5f96c75f28a4b45330ced3b75cad6a9"
+  },
+  {
+    "name": "LiLiuGoldbach16.residualOperator",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "2746ef08f51f4815349c9918139a5cec306de6f670991bfc83c57f5fbae81838"
+  },
+  {
+    "name": "LiLiuGoldbach16.arithmeticOperator",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "e137cd8716de22a5675785692156242473e62fc3899a5c7fc772aa57a1d149dd"
+  },
+  {
+    "name": "LiLiuGoldbach16.diagonalOperator",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d31138d849a9f232d6c46ffb5ac4aa0a2d4ea98f9b79299a54afbc18f12eee12"
+  },
+  {
+    "name": "LiLiuGoldbach16.modelOperator",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "4f884f1ddb7d0e9e423d88c842ccaf52adc12bb46e22540ac371d980757fd5ba"
+  },
+  {
+    "name": "LiLiuGoldbach16.IsHilbertSchmidt",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "456ff3ec5d60522972a2043497200655336481e6f8121a617d132765b55af2ea"
+  },
+  {
+    "name": "LiLiuGoldbach16.hsNorm",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "949e7d2791fc55ef699a1397a81a21b988293ee2d783f60860e4b14e46ffb783"
+  },
+  {
+    "name": "LiLiuGoldbach16.IsPositiveTraceClass",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "892c62057bee3c45b767139a8ad4d703570ac0d8f50a2a9e0422443f67aa6129"
+  },
+  {
+    "name": "LiLiuGoldbach16.positiveTrace",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "a7f10bcd22b076d6dac545f945e20c569a980e27858fae2e3c75abaa84af9dd2"
+  },
+  {
+    "name": "LiLiuGoldbach16.SpectralData",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c5962bce23cf72d60c4118932799e8f455bc56d4fb0340135e7bb18d2813ce79"
+  },
+  {
+    "name": "LiLiuGoldbach16.eigenvalues",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "bcbcd9a642246c39c713534c3154c0106dd3d1c0504be9cd49fe98ffa4120509"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralScale",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "824a969c431c1f7384a879ef3d8d0455724acb739312086ccc24f5626e13294d"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralComplex",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "4311afb67eceb8af5945867aab0b4c7d0fb6e7055b3dd45332b78611ba585ef8"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralPartialQuaternion",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "de3353f7784cdad023d7f5e04def15bcfe3f0fdf3ecdb95bce1e8ce7af0ae9bc"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralQuaternion",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "89a3c10b05eeb0fc4c3153c4c5f22faf7f8d02b8ec04150d61954c68db534ea9"
+  },
+  {
+    "name": "LiLiuGoldbach16.RealizationValid",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "6af233a51f6a87875c4a32a2a23ff7aee6efc054b42e0c998b70397cd936e24a"
+  },
+  {
+    "name": "LiLiuGoldbach16.normFunctional",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "16799f49e60b0a0ad65e49ba9f90c0dcb08b632113287e886d7c17eadf4e3515"
+  },
+  {
+    "name": "LiLiuGoldbach16.weightEnergy",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b7efdf1cae60ba85f68b12a1a77b2950344bc4433fb1a1ccab79510dfb64ab45"
+  },
+  {
+    "name": "LiLiuGoldbach16.functionalValue",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "a77813383dc1c915d4cff5034c99304a86d1902b7d5c6cdf2e220994b3a3f76f"
+  },
+  {
+    "name": "LiLiuGoldbach16.rieszVector",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "e5e136e9aa32c2890b2b5d24f75f544981fd46cff422f9245b717780dcc83aeb"
+  },
+  {
+    "name": "LiLiuGoldbach16.evaluationVector",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f0663c3e37e3c12f7b7e48b4d2b4d0c920801f7b5d9b04909807f82c7a837290"
+  },
+  {
+    "name": "LiLiuGoldbach16.pointDistance",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "63f002bb0e098c0f3a181862e04fcf954bf14416b63bdd2d536c69ebdd053d22"
+  },
+  {
+    "name": "LiLiuGoldbach16.reproducingKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "0577d1f0bba2db9d89f101e07a857857c017540dc70465e8905be4292d578f50"
+  },
+  {
+    "name": "LiLiuGoldbach16.zeroFreeWidth",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "e486765f6dce85b7b44227eeba56f37eb09ddb347ac37e0e1032ef3e7d6fe562"
+  },
+  {
+    "name": "LiLiuGoldbach16.EvenEventually",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "789218d813b8a91c4ba89e7c10c5491e8b57364f6a2910f473dc6c0d591ffcad"
+  },
+  {
+    "name": "LiLiuGoldbach16.EvenTendstoInfinity",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c60aa670481587f5b84c3bb25acfcd9df4ef8cc4861ed6dd7d34013843d56942"
+  },
+  {
+    "name": "LiLiuGoldbach16.IsAdmissible",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f34d9a81bb32c7b7fd6b48b653252ad29d9ee65e619d91392bbab26ee05ac4c6"
+  },
+  {
+    "name": "LiLiuGoldbach16.SpectralR",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "579bacbe285ae1cbc6b932014b34ba705e8d9abd4dc65ae4f103470f14852e60"
+  },
+  {
+    "name": "LiLiuGoldbach16.SpectralZeroFree",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "43620845486b8b4678236147d0d0d558ff4b887f6d8fb1bdc9c229706559701c"
+  },
+  {
+    "name": "LiLiuGoldbach16.HypothesisR",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5f1123e78134a826335c8cdef29b98a64ebdc46644f2cff656f8d91e0abca12d"
+  },
+  {
+    "name": "LiLiuGoldbach16.HypothesisS",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b3928f2a83668d7221a3bc9f888985c46677913e14ed2d21d4330174efd2a4ec"
+  },
+  {
+    "name": "LiLiuGoldbach16.PrimePairCount",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "96e45e652fb64d186464445994c63b66e4f08a8fe60a3a04f4ab714f0fb5e797"
+  },
+  {
+    "name": "LiLiuGoldbach16.ZeroIndex",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "805359d3093f75c0b4f043187ac15fb086072ba67594755c5403ad14040769b0"
+  },
+  {
+    "name": "LiLiuGoldbach16.completedL",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "17a0d2e91200f50adbd3ce9c62ddf17b044db9bc16e00057270226ddc128378b"
+  },
+  {
+    "name": "LiLiuGoldbach16.zeroDifference",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "98cd18b8da44dd542458775e5c45eb83006c7f65dadfdb1e33f43cb6468fa417"
+  },
+  {
+    "name": "LiLiuGoldbach16.eulerCorrection",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d3bfedb5f703561135bebcd505d04958f5621958b72217f5a23d73c4804c7beb"
+  },
+  {
+    "name": "LiLiuGoldbach16.zeroPoisson",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "86a1a3080b9395c33207aa3a443d8051e9db55e3f35ed995d93cd704ea93056e"
+  },
+  {
+    "name": "LiLiuGoldbach16.averagedLogDerivative",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "9723e25d72ca8958e6df4ff9843401930997184b73bd590c62f840dc7c58d631"
+  },
+  {
+    "name": "LiLiuGoldbach16.NormallySummableOn",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1e989bc2e5b9d94b341cf3ea18ad3a84acaa9e952fd428f4477dd4ae2c97c1ff"
+  },
+  {
+    "name": "LiLiuGoldbach16.HermitianKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "33b814cf1af97bfa404263b6a3b5ba40325f5b918ad8ce7a05fa54e31c740966"
+  },
+  {
+    "name": "LiLiuGoldbach16.PositiveKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1b66cc840197b68ad419301ac130c3ae03af96f95b6903af9a711180762971c7"
+  },
+  {
+    "name": "LiLiuGoldbach16.BoundaryKernelSquareIntegral",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "e375ee14d42716bfa000bda306911310c482b46f71bbded4946656bf46db01df"
+  },
+  {
+    "name": "LiLiuGoldbach16.IntrinsicEntire",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5dab09d571cca8706906bd486e5aac92cb86e6bec6df21870142812f4364d5fb"
+  },
+  {
+    "name": "LiLiuGoldbach16.CompactUniformLimit",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "19af4d0e30fdf1eb3645ada808774a5a58f7524b1cb1ef096ddb5faabca79609"
+  },
+  {
+    "name": "LiLiuGoldbach16.EvenAsymptotic",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f34472c69d61ec12887f9365998666a0a31b98da2bd4611d8d2c1990f8adfe61"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralWidthFromBound",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "ca21e6b2d012e6dac5c27c54d66e7009aa6b3d410fcc4496a3b288e441ded5f0"
+  },
+  {
+    "name": "LiLiuGoldbach16.arithmeticExpansionTerm",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "bef2030825faa8b512a4d7ad47720b249a694f41b36ddd8e75ec6dfe5e2cfd93"
+  },
+  {
+    "name": "LiLiuGoldbach16.zeroWindow",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f56b0be9a8e9649f81b30abbbfbe2728da8da5f94e77b80d98140201fa457809"
+  },
+  {
+    "name": "LiLiuGoldbach16.wirtingerBar",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b0a380119b117cc8f4ddef5edc774f89594b0abe5ea9d31251b5234aecc57e89"
+  },
+  {
+    "name": "LiLiuGoldbach16.wirtinger",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c9ab43f442c6d1666ff8a47731552248d3acd38cc4609319708f3ae228f447a8"
+  },
+  {
+    "name": "LiLiuGoldbach16.positiveFredholmDet",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f957cb9001d93a56889b15be121cd1b2eed03f9798d36155ef227347df117a41"
+  },
+  {
+    "name": "LiLiuGoldbach16.fredholmSquareDet",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d0f3faa52300b79d4d9ec7a7210aa91e6931518e0ffd99bda58f1fb3894982a2"
+  },
+  {
+    "name": "LiLiuGoldbach16.HypothesisRAt",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "7d30d0ae601db66a2c216524e3b3efa21b71cb6821400e34cbd832895e37de0f"
+  },
+  {
+    "name": "LiLiuGoldbach16.HypothesisSAt",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "884aa2b9ee7c3a4860e742a0181602d62c7180efa004a30cca1295201bdbd37f"
+  },
+  {
+    "name": "LiLiuGoldbach16.baselineBound",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "4f303aaf02cd682fba5ee908f31faca62db87b4076de39fb57a33288ec57f4e8"
+  },
+  {
+    "name": "LiLiuGoldbach16.balanceFactor",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "707119f3e1efce3036ea31eb51cb6a9a89b6dda476227d6a6ceaa9022d6fd09e"
+  },
+  {
+    "name": "LiLiuGoldbach16.poleCoefficient",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "9d35bc8f446cd0571becdf7de08c6c6346c4bdff4f2e5bfa0eca591402eb356a"
+  },
+  {
+    "name": "LiLiuGoldbach16.experimentN",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b1844593921ed0909c3ae337174b79cd1a863a3c90a9c7e0b6d8741f1edcd275"
+  },
+  {
+    "name": "LiLiuGoldbach16.cutoffPolynomial",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b54f323e9391c1ab1185b9fc49e993118da25e257bc146cdc302bc39c107a49a"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideCutoff",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d5164ebb6bf7e8af73f45e1a8cd2402ec430782ff76a4a112b233c62e012e0d6"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideCompanion",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "6d91c68d57ea028825d5bc05ab28c28cb0a7ae14756c04fcdb09b9caf11f496d"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideWeight",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "3d41ae4fccdabbf9d27fb33f4c292adeaefe391b3a554e839446011bacb558dd"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideCorrelation",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "f1fb38a9fc5a1a294c5fd768bcb198cd778104bc6406b602baa745fa8b865ebd"
+  },
+  {
+    "name": "LiLiuGoldbach16.unorderedPrimePairs",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "6d0acb564c79d095de76bede40bd77f3b6f489334cacd01c0a4e713ceda827bf"
+  },
+  {
+    "name": "LiLiuGoldbach16.edgeCorrection",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "687760f607448d994873d1d9eedbc7cd8f53b8a2b3c9c8257b6aca3fb77bf5e1"
+  },
+  {
+    "name": "LiLiuGoldbach16.primePowerCorrection",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "90dde93d4d923b3a49bbd97fcba42a043d7403e6279a96673a8e0169bf845704"
+  },
+  {
+    "name": "LiLiuGoldbach16.countingCoefficient",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "48120aeefa3736a5361620df60a2fefcc2b553bd4074b391c05f867d11671c37"
+  },
+  {
+    "name": "LiLiuGoldbach16.countingIntegral",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c0cd17744206aca17d0538b6a689235da0f1acb2558deb437129fef9d4673927"
+  },
+  {
+    "name": "LiLiuGoldbach16.diagonalCountingMoment",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "0683cc5a34bd3dbb0f9debc09a7d08e264abc08f6947601c053a42beecdc36c4"
+  },
+  {
+    "name": "LiLiuGoldbach16.approxSignedMoment",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "a4e05d26738c972ccb84a2632ca25f5c56833572c5d36370eb7ec64c3941e480"
+  },
+  {
+    "name": "LiLiuGoldbach16.approxDiagonalMoment",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "81911edf92500d9241791780c47e39425732a4758bc3d8799e4ee708cc471c8e"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideModelMass",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "20d43cc273233615059b102f9671a2000e6507da046ffeede7eb20f916f4245c"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideResidual",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5adf0b3dc8568c960a0eca1e13e29cc8a7385886da26fef89113cac6fd97258d"
+  },
+  {
+    "name": "LiLiuGoldbach16.approxPrimeCount",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d153947e82156222cdc83d32538d581d55388b05788ba7c0d2c14724d5f42094"
+  },
+  {
+    "name": "LiLiuGoldbach16.countError",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "18e7e8560cf4e277ddca78500d41efc4d0d33fc05e09c05e6209a1815b50c57e"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideFunctional",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1cb4c5d54e9ce7abc3084d794a147b7569205bbc1d8feb1fcd98cc007f73bd92"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideRieszVector",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5a9252acb3cd2e4f0c4f479e7c7793040e3dd87466196850be7c9f62e9021790"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralNode",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "dfdb9f2997b4a10efabc8a8d71d3adde82354bcf2d869a157b67a7813aa0be0f"
+  },
+  {
+    "name": "LiLiuGoldbach16.trapezoidWeight",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "35528a0174d029bc482174a51dd03267fd626691df294e26522c48d5eaa6d609"
+  },
+  {
+    "name": "LiLiuGoldbach16.finiteSpectralMatrix",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "caac3eeab4df4b5789047f8bc54daefb5e9f5b321f8e4afc01f8b2015b4e531c"
+  },
+  {
+    "name": "LiLiuGoldbach16.finiteSpectralFunction",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d2e35e27eda6e5ead33b4e91249e596b4d8be2e503d3562d530fa9cf92e58053"
+  },
+  {
+    "name": "LiLiuGoldbach16.IsFiniteSpectrum",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "d729dfc8e367c39486ef006eac8024e1e923949d09ee31b6acd41b5c758bc8e1"
+  },
+  {
+    "name": "LiLiuGoldbach16.finiteEigenvalues",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "fd675789caa7e5477c82a117ea2b9cca73e4dd7abb77a51902a9d3e7afc062ed"
+  },
+  {
+    "name": "LiLiuGoldbach16.finiteMatrixOpNorm",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c747a375b01781c1b34d3c71feceb6210e3de58dec64d7c84379b3e949cc51f1"
+  },
+  {
+    "name": "LiLiuGoldbach16.betaGamma",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "399bba9b0f640b3f9d5ab0e7c4d04a8c110903cb85ae50499b912fdcde0fefcf"
+  },
+  {
+    "name": "LiLiuGoldbach16.BoundaryParameter",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c699fe9e53299bab2cf73c88fae32ebfde3ac03d730157518e2df1bad74f3559"
+  },
+  {
+    "name": "LiLiuGoldbach16.boundaryPoint",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "abe161a11729e9862362dfba5d11427a5ac39401667f7c6fdfe4942a5f9e6ea5"
+  },
+  {
+    "name": "LiLiuGoldbach16.boundaryMeasure",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "833125880aba6b21a53482c7e6e1cec653eedc191c4fbc54b776ca63118334c8"
+  },
+  {
+    "name": "LiLiuGoldbach16.positiveDifferenceFamily",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5bc759a732aef552971d9a75e507a66ffde7793bd3725f09b11adaaca14e41e7"
+  },
+  {
+    "name": "LiLiuGoldbach16.negativeDifferenceFamily",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "1ed23aae66338f5d4ee4ee48d7f07497e8528528cf845eb5043d2801211f4a96"
+  },
+  {
+    "name": "LiLiuGoldbach16.sumFamily",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "665bb126d9d277e869ba1cb621a9d31a288bd97da2d5f9da13caae8949409ef2"
+  },
+  {
+    "name": "LiLiuGoldbach16.pairedZeroSum",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "18d62dce5a09e9bf6c32bbeb137a10442ed7a18cf9a4e8dac5d77c841c33532e"
+  },
+  {
+    "name": "LiLiuGoldbach16.zeroMultiplicity",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "e7131e40e1ca53b759a9d3031c22fbccdae158d01af3f8ad00494d3eff81315e"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralRootParameter",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "61c90c5c84c29663b75d4cebdaa81a6e8b4cfa7dea7085568ac1b4d3738df77f"
+  },
+  {
+    "name": "LiLiuGoldbach16.quaternionSlice",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "79a80adb533285dafbbba978be0f3d13327b7b649477df13e31ffbb1bdc64cc8"
+  },
+  {
+    "name": "LiLiuGoldbach16.complexQuaternion",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "a284ad457b747157265b7b043aaa6a15f198ee514fd7c83fcf4c6d1214acd1b9"
+  },
+  {
+    "name": "LiLiuGoldbach16.fueterOperator",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "054cf6207bf1418f904a84477da59c00a6ddbd260d8bdebd04706bbd95a526c4"
+  },
+  {
+    "name": "LiLiuGoldbach16.referenceLine",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "93989a39a27624f4401a6b4d7e4d27f0daf1934d7f3b15f01c6c042623c8d788"
+  },
+  {
+    "name": "LiLiuGoldbach16.perronCutoff",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5c734f0ccc7a200ba4a1bbc7867855f52ac5f421b35f764fe8cf9af5dd8c3f1d"
+  },
+  {
+    "name": "LiLiuGoldbach16.smoothedPerronWeight",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "fb7a04b3771b7951c926fc49abda2413bfbaf15b7d05e3425c0aeae996f46563"
+  },
+  {
+    "name": "LiLiuGoldbach16.smoothedDirichletPolynomial",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "a311534fc1223d2e5171f12196791bc5ef6360bf052f2a757d5e1f21a3f5af0b"
+  },
+  {
+    "name": "LiLiuGoldbach16.smoothedPerronKernel",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "b1fbb8be06a7a8eba78c17a469fee7ef1533ea27ddb4392ba8ee12fb0decf54f"
+  },
+  {
+    "name": "LiLiuGoldbach16.logDerivativeEnergy",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "292cc4f79e34f16de4dacf3e31e6ecb0159ae6b36e347dfcece98d81733629bc"
+  },
+  {
+    "name": "LiLiuGoldbach16.poissonKernelReal",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "4e3ba3dc2a48ed91cf63ff1746af83ad9d465865ea79eb71cae27a49f96e27c3"
+  },
+  {
+    "name": "LiLiuGoldbach16.realConvolution",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c0245f35c93b7213bae3725fc13e2842706db4ec3e734aacb48808e262cfdfe9"
+  },
+  {
+    "name": "LiLiuGoldbach16.poissonAction",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "5782707cd01d9186da77760c2c80bab22d8f23804b123c4847541d8821b2c86f"
+  },
+  {
+    "name": "LiLiuGoldbach16.diagonalVector",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "0cb0b036d45acdb57ec1abf912551517360ad04d45bb22cbac2b7e6a9613c2bf"
+  },
+  {
+    "name": "LiLiuGoldbach16.weightIntegral",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "71c58fac68c434978c41598e47a97ad38077aa09f6b84dd29529903812ef234e"
+  },
+  {
+    "name": "LiLiuGoldbach16.functionalIntegrand",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "0855088203dc82665ca2f8884f4626f9e79ebd07b22b7dd257b5c125cd8a3fe6"
+  },
+  {
+    "name": "LiLiuGoldbach16.availableNormMajorant",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "26d4549a249c9c49abd8d8c80668667b3cfdc99b13026a12e076b8c9bd47e123"
+  },
+  {
+    "name": "LiLiuGoldbach16.baselineProductR",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "abfab8e8043242e717d272b6de656df7a58f7c978f20a95b5916dac1a76140c2"
+  },
+  {
+    "name": "LiLiuGoldbach16.wideMainIntegral",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "86d3bf663b81404b054ce473055db59400ac9a8fcd1dabd94dc4762c0d636abd"
+  },
+  {
+    "name": "LiLiuGoldbach16.HasMomentError",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "c7df5d148917989df23de593be2cb620698c2caad19f673065407ca344abff39"
+  },
+  {
+    "name": "LiLiuGoldbach16.spectralPartialQuaternionReindexed",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "29eac76ac031ef39df5b451deda8c4a461018d69ee7255c80893edebd9cf7141"
+  },
+  {
+    "name": "LiLiuGoldbach16.centeredSpectralPartial",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "81c6f6a619b9dfe6e6c5cc570d4813ffd31a7f6df513a4b9922f3061619c53ed"
+  },
+  {
+    "name": "LiLiuGoldbach16.diagonalHardyVector",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "aa94d85d1bcdfa5a59dc1b0334941aeba28ea974390e6b1e107023c2b338d9da"
+  },
+  {
+    "name": "LiLiuGoldbach16.localDensityFactor",
+    "reviewed_definition_preserved": true,
+    "normalized_sha256": "ca8c4cc2896604e520a49dc13dc9d2974de7614a3feb039f00b339eb705bbaeb"
+  }
+]

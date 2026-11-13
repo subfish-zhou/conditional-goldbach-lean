@@ -1,0 +1,88 @@
+{
+  "scope": "Portable Git dependency configuration, full independent type assignment, comparator transport and rejection controls; the previous 218-target full kernel audit is preserved separately.",
+  "time_utc": "2026-11-13T18:54:20.864276+00:00",
+  "steps": [
+    {
+      "label": "portable-comparator-build",
+      "command": [
+        "lake",
+        "build",
+        "TexAuditComparator.CheckTypes",
+        "TexAuditComparator.Solution"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "wall_seconds": 11.405449770390987,
+      "log": "portable-comparator-build.log",
+      "log_sha256": "26baffe6e25f6b08a7b4d85239ea1cb124930090411b5156e2dad19579eb9823"
+    },
+    {
+      "label": "portable-comparator-smoke",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "../../publication/comparator-smoke.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "wall_seconds": 35.339922945946455,
+      "log": "portable-comparator-smoke.log",
+      "log_sha256": "43c0655f050bc54fa2e5ab37bf3ebf552c42a0770129306ab12d1833cb5bf1f7"
+    },
+    {
+      "label": "portable-control-condition",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-condition.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 6.205303870141506,
+      "log": "portable-control-condition.log",
+      "log_sha256": "8f9fb6fd42921a76414a36b19e1a135c1c63b8761d93fbbdc731ad732d9495ca"
+    },
+    {
+      "label": "portable-control-quantifier",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-quantifier.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 6.409053858369589,
+      "log": "portable-control-quantifier.log",
+      "log_sha256": "7544401e2866e1845265bc899655d678f9f92aabc7a9f3c3ca7ce4c58b89edc7"
+    },
+    {
+      "label": "portable-control-definition",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-definition.json"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "wall_seconds": 6.229032546281815,
+      "log": "portable-control-definition.log",
+      "log_sha256": "02e44430300335c7f3fe4f56f98b52c2847d7bd0dbe4377e83c83e33fe30788b"
+    }
+  ],
+  "frozen_mathematical_source_files_unchanged": 254,
+  "independent_full_types_passed": 103,
+  "main_build_passed": true,
+  "main_build_log_sha256": "11a1359fee60bb34bab76916785811cb82f4748449a1b8896341c3d571a40ed9",
+  "configuration_hashes": {
+    "lakefile.toml": "af6350523d8d40755191adbb5862efd7fa80b38c2d51f112f1606449c2d6426b",
+    "lake-manifest.json": "5525007a8a1045aac4129070b5eb3221a6347498cdff626281a9cf38ffb32723",
+    "verification/independent-audit/comparator-project/lakefile.toml": "81945561e7850fc4e5e0f128748abb3d74cef875b22fbea54010515aff469a3e",
+    "verification/independent-audit/comparator-project/lake-manifest.json": "27c06faf11642ea50f8cf3d3809fb3dac070759a183e93090da9e40176fb34b4",
+    "verification/independent-audit/bwrap_local_dependencies.py": "be9a4cf85fa4369af3aae49f6c3c4e99e20a9e46b970393a2b39b7f5f1c1c283"
+  },
+  "passed": true
+}

@@ -1,0 +1,2302 @@
+{
+  "source": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.tex",
+  "source_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
+  "independence": "Original TeX and current source types read directly. Existing inventory only locates labels/names; old Reviewed.lean and old audit verdicts are not evidence.",
+  "counts": {
+    "named_statements": 12,
+    "definition_families": 57,
+    "independent_expected_statement_props": 31,
+    "prime_pair_consequence_extra": 1,
+    "individual_definition_declarations": 88
+  },
+  "mechanical_scope": "Root performs actual Lean comparator and full-type defeq; this report separately assesses TeX semantics. Definitions not independently reconstructed or linked by Bridges.lean retain semantic-review-only status.",
+  "findings": [
+    {
+      "severity": "medium_definition_contract",
+      "id": "14-POS",
+      "finding": "PositiveKernel by itself only asserts nonnegative real part; it is not a generic PSD-kernel definition.",
+      "impact": "No missing conclusion for proposition 3.2 once characterKernel_hermitian is included.",
+      "resolution": "Bridges.lean character_kernel_full_positive"
+    },
+    {
+      "severity": "medium_type_encoding",
+      "id": "14-RANK",
+      "finding": "A finite Module.finrank bound alone does not exclude infinite dimension.",
+      "impact": "Core proposition_3_2 needs its finite_rank auxiliary.",
+      "resolution": "Bridges.lean character_kernel_rank_meaning"
+    },
+    {
+      "severity": "medium_totalization",
+      "id": "14-COMP",
+      "finding": "completedL must be entire continuation, not pointwise Gamma times L at trivial zeros.",
+      "impact": "Hadamard/zero-index semantics require matching entire function and multiplicity.",
+      "resolution": "Bridges.lean completed_function_meaning"
+    },
+    {
+      "severity": "cross_section_pending",
+      "id": "14-CHOICE",
+      "finding": "Conditional choices for kernelOperator, eigenvalues, spectralQuaternion and rieszVector have default zero branches.",
+      "impact": "Equivalence to TeX needs existence/specification/uniqueness/ordering theorems under GRH and large N.",
+      "resolution": "Cross-section reviewer 5–7 must supply machinery; cannot mark definitions correct from nominal matching alone."
+    },
+    {
+      "severity": "manual_bridge_limit",
+      "id": "14-FINITE",
+      "finding": "Character polynomial and diagonal moment use finite sums; TeX displays sums over all positive integers.",
+      "impact": "Support truncation and change Λ/√n·Φ(n/N)=Λφ/√N were semantically checked, but no new standalone bridge in this audit.",
+      "resolution": "Do not claim universal mechanical TeX-to-definition equivalence; current proof finite projection is separately checked."
+    }
+  ],
+  "rows": [
+    {
+      "label": "weight",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        151,
+        164
+      ],
+      "semantic_assessment": "Smooth real nonzero symmetric weight; support in [1/3,2/3], 0≤φ≤1. Compact support omitted syntactically but machine-derived, as is positive mass.",
+      "bridges": [
+        "weight_has_required_compact_support"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Fix a nonzero function\n$\\phi\\in C_c^\\infty(\\mathbb R)$ supported in $[1/3,2/3]$,\nwith $0\\le\\phi\\le1$ and $\\phi(u)=\\phi(1-u)$. For even\n$N\\ge4$, write\n\\begin{align}\n \\mathcal G(N)&=\\frac1N\n   \\sum_{\\substack{n+m=N\\\\(nm,N)=1}}\n       \\Lambda(n)\\Lambda(m)\\phi(n/N)\\phi(m/N),\n       \\label{eq:goldbach-correlation}\\\\\n c_\\phi&=\\int_0^1\\phi^2(u)\\,\\mathrm{d}u>0,\n       \\label{eq:c0}\n\\end{align}\nThe sum runs over ordered pairs of positive integers and gives a\nnormalized weighted count for the Goldbach equation $n+m=N$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.IsWeight",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "vonMangoldt",
+      "section": "1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        333,
+        345
+      ],
+      "semantic_assessment": "The arithmetic function is mathlib vonMangoldt on naturals; all source sums use positive n; n=0 is harmlessly zero.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\medskip\\noindent\\textit{Notation.}\nWe use standard notation from analytic number theory. In\nparticular, $p$ denotes a prime, $(a,b)$ the greatest common\ndivisor of $a$ and $b$, and $d\\mid n$ divisibility.\nThe symbols $\\Lambda$, $\\varphi$, and $\\mu$ denote the von\nMangoldt, Euler totient, and M\\\"obius functions, respectively.\nThe notations $O,o,\\ll,\\gg,\\asymp$, and $\\sim$ have their\nstandard asymptotic meanings; subscripts indicate the allowed\ndependence of implied constants.\nWe write $\\mathbf1_{\\mathcal A}$ for the indicator of the\ncondition $\\mathcal A$, and $\\int_{(\\sigma)}$ for integration\nupwards along $\\Re s=\\sigma$.\nAll logarithms are natural, and all limits in $N$ are taken",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.mangoldt",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "singularSeries",
+      "section": "1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        1055,
+        1059
+      ],
+      "semantic_assessment": "Factor 2 is required. Expanded imported product and finite correction match exactly; even N≥4 is imposed at use sites.",
+      "bridges": [
+        "singular_series_formula"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "and\n\\[\n \\mathfrak S(N)=2C_2\\prod_{\\substack{p\\mid N\\\\p>2}}\\frac{p-1}{p-2},\n \\qquad C_2=\\prod_{p>2}\\left(1-\\frac1{(p-1)^2}\\right),\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.singularSeries",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "twinPrimeConstant",
+      "section": "1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        1055,
+        1059
+      ],
+      "semantic_assessment": "Prime means Nat.Prime; C2 is the product over odd primes with the factor 1−1/(p−1)², not twice that product.",
+      "bridges": [
+        "universal_product_formula"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "and\n\\[\n \\mathfrak S(N)=2C_2\\prod_{\\substack{p\\mid N\\\\p>2}}\\frac{p-1}{p-2},\n \\qquad C_2=\\prod_{p>2}\\left(1-\\frac1{(p-1)^2}\\right),\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.C2",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 31
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.prime",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "goldbachCorrelation",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        154,
+        167
+      ],
+      "semantic_assessment": "Natural one-index finite sum parametrizes ordered positive pairs by m=N−n; coprimality is (n(N−n),N)=1. PrimePairCount has correct ordered orientation and both primes in support.",
+      "bridges": [
+        "prime_count_members_have_both_support_bounds"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "$N\\ge4$, write\n\\begin{align}\n \\mathcal G(N)&=\\frac1N\n   \\sum_{\\substack{n+m=N\\\\(nm,N)=1}}\n       \\Lambda(n)\\Lambda(m)\\phi(n/N)\\phi(m/N),\n       \\label{eq:goldbach-correlation}\\\\\n c_\\phi&=\\int_0^1\\phi^2(u)\\,\\mathrm{d}u>0,\n       \\label{eq:c0}\n\\end{align}\nThe sum runs over ordered pairs of positive integers and gives a\nnormalized weighted count for the Goldbach equation $n+m=N$.\nOur aim is to prove, under our hypotheses, that $\\mathcal G(N)>0$\nfor all sufficiently large even $N$, with a positive contribution\nfrom prime pairs remaining after the removal of proper prime powers.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.goldbach",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 36
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.PrimePairCount",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 169
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "weightMass",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        151,
+        164
+      ],
+      "semantic_assessment": "Integral φ² from 0 to 1, not integral φ and not unnormalized mass; strict positivity follows from Weight.",
+      "bridges": [
+        "weight_has_required_compact_support"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Fix a nonzero function\n$\\phi\\in C_c^\\infty(\\mathbb R)$ supported in $[1/3,2/3]$,\nwith $0\\le\\phi\\le1$ and $\\phi(u)=\\phi(1-u)$. For even\n$N\\ge4$, write\n\\begin{align}\n \\mathcal G(N)&=\\frac1N\n   \\sum_{\\substack{n+m=N\\\\(nm,N)=1}}\n       \\Lambda(n)\\Lambda(m)\\phi(n/N)\\phi(m/N),\n       \\label{eq:goldbach-correlation}\\\\\n c_\\phi&=\\int_0^1\\phi^2(u)\\,\\mathrm{d}u>0,\n       \\label{eq:c0}\n\\end{align}\nThe sum runs over ordered pairs of positive integers and gives a\nnormalized weighted count for the Goldbach equation $n+m=N$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.weightMass",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "GRH",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        180,
+        185
+      ],
+      "semantic_assessment": "All primitive Dirichlet L-functions of positive conductor dividing N; not only odd characters. Nontrivial zeros are the open critical-strip zeros; all primitive characters retained.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "For each $N$, the construction uses the following part of GRH.\n\n\\begin{grh}\nEvery nontrivial zero of every primitive Dirichlet $L$-function\nwhose conductor divides $N$ has real part $1/2$.\n\\end{grh}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.GRH",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "spectralScale",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        229,
+        243
+      ],
+      "semantic_assessment": "δN=√(S(N)/N)(log N)^(3/2). Noninteger exponent is Real.rpow, not natural truncated exponent.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Write $\\mu_j(N)$ for the nonzero real eigenvalues of $T_N$,\nwith multiplicity, so that $\\sum_j\\mu_j^2(N)<\\infty$. Set\n\\begin{equation}\\label{v3i:spectral-scale}\n \\delta_N=\\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}.\n\\end{equation}\nDefine the symmetric spectral function\n\\begin{equation}\\label{qp:spectral-function}\n \\mathfrak X_N(q)=\n \\prod_j\\left(1-\\frac{4\\mu_j^2(N)}{\\delta_N^2}q(1-q)\\right),\n \\qquad q\\in\\mathbb H,\n\\end{equation}\nwhere $\\mathbb H$ denotes the quaternions and $\\Re q$ denotes\nthe real part of $q$. The product converges locally uniformly; an empty\nproduct is $1$. Its symmetry under $q\\mapsto1-q$ is similar to that of\nRiemann's completed function~\\cite{Riemann1859}.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.spectralScale",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 97
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "spectralProduct",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        229,
+        247
+      ],
+      "semantic_assessment": "Quaternion product of 1−4μ²q(1−q)/δ²; local-uniform convergence must justify chosen limit and independence of ordering. Zero-padding requires bridge from full basis to nonzero eigenvalues.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Write $\\mu_j(N)$ for the nonzero real eigenvalues of $T_N$,\nwith multiplicity, so that $\\sum_j\\mu_j^2(N)<\\infty$. Set\n\\begin{equation}\\label{v3i:spectral-scale}\n \\delta_N=\\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}.\n\\end{equation}\nDefine the symmetric spectral function\n\\begin{equation}\\label{qp:spectral-function}\n \\mathfrak X_N(q)=\n \\prod_j\\left(1-\\frac{4\\mu_j^2(N)}{\\delta_N^2}q(1-q)\\right),\n \\qquad q\\in\\mathbb H,\n\\end{equation}\nwhere $\\mathbb H$ denotes the quaternions and $\\Re q$ denotes\nthe real part of $q$. The product converges locally uniformly; an empty\nproduct is $1$. Its symmetry under $q\\mapsto1-q$ is similar to that of\nRiemann's completed function~\\cite{Riemann1859}.\nThis is an intrinsic slice-regular function of the\nspectral variable $q$; the Fueter regularity above concerns the\narithmetic coordinates. The locations of its zeros determine the\nmagnitudes of the nonzero eigenvalues and hence $\\|T_N\\|$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.spectralQuaternion",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 109
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.spectralComplex",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 100
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.spectralPartialQuaternion",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 104
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.CompactUniformLimit",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 216
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.spectralPartialQuaternionReindexed",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 446
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.centeredSpectralPartial",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 452
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "admissibleH",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        273,
+        282
+      ],
+      "semantic_assessment": "h fixed before zero assertion; positive on even N≥4, tends to infinity through evens, width eventually≤1/4. Positivity on irrelevant odd/small arguments is not needed; weak ≥B expresses the same divergence as >B.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.\n\\end{hypothesisS}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.IsAdmissible",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 152
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.EvenTendstoInfinity",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 149
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.EvenEventually",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 147
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.EvenAsymptotic",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 221
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "hypothesisWidth",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        273,
+        281
+      ],
+      "semantic_assessment": "h²(log N)³/(N S(N)), no missing S factor; upper bound 1/4 eventual, not every N.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.zeroFreeWidth",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 144
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "HypothesisS",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        273,
+        282
+      ],
+      "semantic_assessment": "Admissibility conjunct plus eventual GRH⇒zero exclusion on open Re q>1−ηN, for all quaternions. Proof parameters NeZero/strip are automatic eventually and cannot make the large-N assertion vacuous.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.\n\\end{hypothesisS}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.HypothesisS",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 165
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "HypothesisR",
+      "section": "1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        306,
+        313
+      ],
+      "semantic_assessment": "Eventual conditional GRH assertion, every quaternion zero has real part exactly 1/2. No replacement by complex-only zero condition.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{hypothesisR}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, every zero of $\\mathfrak X_N(q)$ has\nreal part $1/2$.\n\\end{hypothesisR}\n\nHypothesis R implies Hypothesis S for every admissible choice\nof $h$ and gives the following sharper estimate.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.HypothesisR",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 162
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "oddCharacters",
+      "section": "2.1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        373,
+        381
+      ],
+      "semantic_assessment": "All characters modulo N with χ(−1)=−1, including imprimitive. DirichletCharacter supplies zero at nonunits.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "The relation $n+m=N$ implies $n\\equiv-m\\ \\mathrm{mod}\\ N$. Let $X_N^-$ be\nall odd characters modulo $N$, including imprimitive characters,\nextended by $0$ at nonunits. Their orthogonality gives\n\\begin{equation}\\label{gb:orthogonality}\n \\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\n          \\chi(n)\\overline{\\chi(m)}\n =\\mathbf1_{(nm,N)=1}\n    \\left(\\mathbf1_{n\\equiv m\\ \\mathrm{mod}\\ N}\n               -\\mathbf1_{n\\equiv-m\\ \\mathrm{mod}\\ N}\\right).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.oddCharacters",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 46
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.Character",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "characterPolynomial",
+      "section": "2.1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        399,
+        406
+      ],
+      "semantic_assessment": "Current finite sum uses equivalent 1/√N form, truncating at N; source support makes larger indices zero. Algebraic equivalence to Λ(n)/√n·Φ(n/N) has been reviewed; this round has no standalone machine bridge for the two infinite-sum displays.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{gb:prime-polynomial}\n P_\\chi=\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{\\sqrt n}\\Phi(n/N)\n        =\\frac1{\\sqrt N}\\sum_{n\\ge1}\\Lambda(n)\\chi(n)\\phi(n/N).\n\\end{equation}\nHere the companion weight used throughout is defined by\n\\begin{equation}\\label{eq:fixed-goldbach-weight}\n \\Phi(u)=\\sqrt u\\,\\phi(u).\n\\end{equation}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.characterPolynomial",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "companionWeight",
+      "section": "2.1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        403,
+        406
+      ],
+      "semantic_assessment": "Φ(u)=√u φ(u); total Real.sqrt for u<0 is harmless because weight vanishes there.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Here the companion weight used throughout is defined by\n\\begin{equation}\\label{eq:fixed-goldbach-weight}\n \\Phi(u)=\\sqrt u\\,\\phi(u).\n\\end{equation}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.companion",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "diagonalMoment",
+      "section": "2.1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        391,
+        401
+      ],
+      "semantic_assessment": "N⁻¹Σ_(n,N)=1 Λ(n)²φ(n/N)²; finite cutoff is justified by weight support. No standalone infinite-to-finite definition bridge is newly supplied.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{gb:finite-moments}\n \\begin{aligned}\n \\mathcal D(N)&=\\frac1N\\sum_{(n,N)=1}\\Lambda^2(n)\\phi^2(n/N),\\\\\n \\mathcal P(N)&=\\frac2{\\varphi(N)}\n       \\sum_{\\chi\\in X_N^-}|P_\\chi|^2,\n \\end{aligned}\n\\end{equation}\nand\n\\begin{equation}\\label{gb:prime-polynomial}\n P_\\chi=\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{\\sqrt n}\\Phi(n/N)\n        =\\frac1{\\sqrt N}\\sum_{n\\ge1}\\Lambda(n)\\chi(n)\\phi(n/N).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.diagonalMoment",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "characterMoment",
+      "section": "2.1.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        391,
+        401
+      ],
+      "semantic_assessment": "2/φ(N) times sum of squared complex norms over odd characters; normalization and reality unchanged.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{gb:finite-moments}\n \\begin{aligned}\n \\mathcal D(N)&=\\frac1N\\sum_{(n,N)=1}\\Lambda^2(n)\\phi^2(n/N),\\\\\n \\mathcal P(N)&=\\frac2{\\varphi(N)}\n       \\sum_{\\chi\\in X_N^-}|P_\\chi|^2,\n \\end{aligned}\n\\end{equation}\nand\n\\begin{equation}\\label{gb:prime-polynomial}\n P_\\chi=\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{\\sqrt n}\\Phi(n/N)\n        =\\frac1{\\sqrt N}\\sum_{n\\ge1}\\Lambda(n)\\chi(n)\\phi(n/N).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.characterMoment",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 53
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "characterKernel",
+      "section": "2.1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        414,
+        428
+      ],
+      "semantic_assessment": "Two holomorphic variables with conjugation on character only; implemented conj(gχ(conj z)) is bridged to g_(barχ)(z). PositiveKernel alone is weaker than standard positivity, but actual kernel is separately Hermitian. Joint meromorphy and finite-dimensional rank helpers required.",
+      "bridges": [
+        "character_kernel_original_formula",
+        "character_kernel_full_positive",
+        "character_kernel_rank_meaning"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "For $\\Re s,\\Re z>1/2$, define\n\\begin{equation}\\label{eq:goldbach-moment}\n \\mathscr P_N(s,z)=\\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\n       \\frac{L'}L(1/2+s,\\chi)\n       \\frac{L'}L(1/2+z,\\bar\\chi).\n\\end{equation}\nThe variables $s,z$ are independent, and the bar conjugates only\nthe character. We write $w=s+z$. Use the Mellin convention\n\\begin{equation}\\label{gb:mellin-convention}\n \\widetilde{\\Phi}(s)=\\int_0^\\infty \\Phi(u)u^{s-1}\\d u,\n \\quad\n \\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde{\\Phi}(s)u^{-s}\\d s\n \\quad(\\sigma\\in\\mathbb R).\n\\end{equation}\nThe series $-L'/L(1/2+s,\\chi)=\\sum_n\\Lambda(n)\\chi(n)n^{-1/2-s}$",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.characterKernel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 63
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.arithmeticExpansionTerm",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 227
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.HermitianKernel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 201
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.PositiveKernel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 203
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "mellinWeight",
+      "section": "2.1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        422,
+        426
+      ],
+      "semantic_assessment": "Mathlib mellin integral has u^(s−1), multiplied by companion weight; positive half-line and complex powers match.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{gb:mellin-convention}\n \\widetilde{\\Phi}(s)=\\int_0^\\infty \\Phi(u)u^{s-1}\\d u,\n \\quad\n \\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde{\\Phi}(s)u^{-s}\\d s\n \\quad(\\sigma\\in\\mathbb R).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.mellinWeight",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "verticalIntegral",
+      "section": "2.1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        422,
+        426
+      ],
+      "semantic_assessment": "Parameter s=σ+it converts ds=i dt, hence prefactor 1/(2π), without minus sign; nested integral reproduces (2πi)⁻² orientation.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{gb:mellin-convention}\n \\widetilde{\\Phi}(s)=\\int_0^\\infty \\Phi(u)u^{s-1}\\d u,\n \\quad\n \\Phi(u)=\\frac1{2\\pi i}\\int_{(\\sigma)}\\widetilde{\\Phi}(s)u^{-s}\\d s\n \\quad(\\sigma\\in\\mathbb R).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.verticalMellin",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 123
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.line",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 115
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "signedFamilies",
+      "section": "2.1.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        465,
+        479
+      ],
+      "semantic_assessment": "k is a positive natural and signs are +,+,−. Family predicates allow zero n/m as total relations; actual off-diagonal expansion and weight-support results impose positive n/m or nonzero weight.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "The positive congruence gives the diagonal $n=m$ and two difference\nfamilies; the negative congruence gives the sum family. The three\noff-diagonal families are therefore\n\\[\n \\begin{array}{c|c}\n \\text{relation},\\ k\\ge1 & \\text{sign in }\\mathscr P_N\\\\ \\hline\n m=n+kN & +\\\\\n n=m+kN & +\\\\\n n+m=kN & -\n \\end{array}\n\\]\nAfter Mellin inversion restores the weight, its support gives\n$|n-m|\\le N/3$ and $n+m\\le4N/3$. Thus both difference families\nand the sum terms with $k\\ge2$ vanish; among the off-diagonal\nfamilies, only $n+m=N$ remains. Before this inversion, however,",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.positiveDifferenceFamily",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 367
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.negativeDifferenceFamily",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 370
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.sumFamily",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 373
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "signedBeta",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        514,
+        518
+      ],
+      "semantic_assessment": "Three terms B(1/2−s,s+z)+B(1/2−z,s+z)−B(1/2−s,1/2−z). Integral-based betaKernel only used on original betaDomain; Gamma-ratio continuation uses a separately bridged function.",
+      "bridges": [
+        "beta_integral_continuation_bridge"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{eq:beta-kernel}\n K_-(s,z)=B(1/2-s,s+z)+B(1/2-z,s+z)\n                         -B(1/2-s,1/2-z).\n\\end{equation}\nHere $B(s,z)=\\Gamma(s)\\Gamma(z)/\\Gamma(s+z)$ is Euler's Beta function.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.betaKernel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 81
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "betaFunction",
+      "section": "4.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        1468,
+        1482
+      ],
+      "semantic_assessment": "Integral beta and Gamma quotient agree where real parts positive. betaDomain is Re s,z<1/2 and Re(s+z)>0, exactly lemma 4.1; no unnecessary positivity of each Re s,z.",
+      "bridges": [
+        "beta_integral_continuation_bridge"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Euler's Gamma function is\n$\\Gamma(s)=\\int_0^\\infty e^{-t}t^{s-1}\\d t$ for $\\Re s>0$,\nwith meromorphic continuation, and\n$B(s,z)=\\int_0^1t^{s-1}(1-t)^{z-1}\\d t$ for $\\Re s,\\Re z>0$.\nThe change of variable $u=yt$ gives, for $y>0$,\n\\begin{equation}\\label{v3i:Euler}\n \\int_0^y u^{s-1}(y-u)^{z-1}\\d u\n =B(s,z)y^{s+z-1},\\quad\n B(s,z)=\\frac{\\Gamma(s)\\Gamma(z)}{\\Gamma(s+z)}\n \\quad(\\Re s,\\Re z>0).\n\\end{equation}\n\n\\begin{lemma}[The continuous signed model]\\label{proof:v9:signed-beta-model}\nFor $h>0$, $\\Re s,\\Re z<1/2$ and $\\Re(s+z)>0$, put $w=s+z$.\nThe following integrals converge absolutely:",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.betaGamma",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 357
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.betaDomain",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 102
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "gammaRatio",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        1532,
+        1535
+      ],
+      "semantic_assessment": "Γ((3/2−s)/2)/Γ((3/2+s)/2), numerator and denominator not inverted.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Define the one-variable factor\n\\[\n \\mathcal X_1(s)=\\frac{\\Gamma((3/2-s)/2)}{\\Gamma((3/2+s)/2)}.\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.gammaQuotient",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "diagonalSeries",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        1580,
+        1590
+      ],
+      "semantic_assessment": "Σ positive coprime n Λ(n)²/n^(1+w); domain Re w>0 is imposed on analytic results. ",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "We now collect the densities at all scales $h=kN$ and record the\nexact diagonal. The corresponding Dirichlet series are\n\\[\n \\begin{aligned}\n \\mathscr D_N(w)&=\\sum_{\\substack{n\\ge1\\\\(n,N)=1}}\n                       \\frac{\\Lambda^2(n)}{n^{1+w}}\n                       &&(\\Re w>0),\\\\\n \\mathscr S_N(w)&=\\sum_{k\\ge1}\\frac{\\mathfrak S(kN)}{k^w}\n                       &&(\\Re w>1),\n \\end{aligned}\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.diagonalSeries",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 67
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "densitySeries",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        1580,
+        1604
+      ],
+      "semantic_assessment": "Σ_(k≥1) S(kN)/k^w initially Re w>1. ContinuedDensity uses S(N)ζ(w)P_N(w); identity and convergence are separate audited statements, never applying original series below Re w=1.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "We now collect the densities at all scales $h=kN$ and record the\nexact diagonal. The corresponding Dirichlet series are\n\\[\n \\begin{aligned}\n \\mathscr D_N(w)&=\\sum_{\\substack{n\\ge1\\\\(n,N)=1}}\n                       \\frac{\\Lambda^2(n)}{n^{1+w}}\n                       &&(\\Re w>0),\\\\\n \\mathscr S_N(w)&=\\sum_{k\\ge1}\\frac{\\mathfrak S(kN)}{k^w}\n                       &&(\\Re w>1),\n \\end{aligned}\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels} and~\\eqref{v3i:series}.\nThe former records the exact arithmetic diagonal; the latter collects\nthe local densities $\\mathfrak S(kN)$. The density series is\ninitially defined for $\\Re w>1$, whereas the three Beta integrals\nhave $0<\\Re w<1$ in their common domain. To use the density factor\nthere, we first continue it by the Euler product, which we restate here:\n\\[\n \\mathscr S_N(w)=\\mathfrak S(N)\\zeta(w)P_N(w),\n\\]\nwhere $P_N$ is the Euler product\n\\[\n P_N(w)=\\prod_{\\substack{p>2\\\\p\\nmid N}}\n                  \\left(1+\\frac{p^{-w}}{p-2}\\right),\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.densitySeries",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 71
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.continuedDensity",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 78
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "densityEulerProduct",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        1598,
+        1604
+      ],
+      "semantic_assessment": "Product over prime p>2 not dividing N, factors 1+p^(−w)/(p−2); convergence in Re w>0 supplied by auxiliary statement.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": " \\mathscr S_N(w)=\\mathfrak S(N)\\zeta(w)P_N(w),\n\\]\nwhere $P_N$ is the Euler product\n\\[\n P_N(w)=\\prod_{\\substack{p>2\\\\p\\nmid N}}\n                  \\left(1+\\frac{p^{-w}}{p-2}\\right),\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.densityEulerProduct",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 74
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "betaModel",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        1690,
+        1699
+      ],
+      "semantic_assessment": "N^(−s−z) times continued density times signed Beta; local factor (1−νp(h)/p)/(1−1/p)² uses ν=1 if p divides h, otherwise 2; separate local-density product theorem.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "With the continued density factor, define the off-diagonal model by\n\\[\n \\mathscr K_N(s,z)=N^{-w}\\mathscr S_N(w)K_-(s,z),\\qquad w=s+z,\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels}.\nThe equivalent form to be proved is\n\\[\n \\mathscr K_N(s,z)=\\mathfrak S(N)\\left(\\frac\\pi N\\right)^w\n       P_N(w)\\zeta(1-w)\\mathcal X_1(s)\\mathcal X_1(z),\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.betaModel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 88
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.localDensityFactor",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 464
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "continuedBetaModel",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        1690,
+        1709
+      ],
+      "semantic_assessment": "S(N)(π/N)^(s+z)P_N(s+z)ζ(1−s−z)X1(s)X1(z), exactly continued expression. No GRH needed.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "With the continued density factor, define the off-diagonal model by\n\\[\n \\mathscr K_N(s,z)=N^{-w}\\mathscr S_N(w)K_-(s,z),\\qquad w=s+z,\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels}.\nThe equivalent form to be proved is\n\\[\n \\mathscr K_N(s,z)=\\mathfrak S(N)\\left(\\frac\\pi N\\right)^w\n       P_N(w)\\zeta(1-w)\\mathcal X_1(s)\\mathcal X_1(z),\n\\]\nas in~\\eqref{v3:model-functional-form}.\nThe second expression makes holomorphy beyond the original Beta\nintegral domain visible factor by factor.\n\n\\begin{proposition}[Continuation of the Beta model]\\label{proof:v3:model-geometry}\nThe second expression for $\\mathscr K_N$ above gives its continuation\nand is holomorphic on\n\\[\n \\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}.\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.continuedModel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "residualKernel",
+      "section": "2.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        1732,
+        1758
+      ],
+      "semantic_assessment": "Character kernel minus exact diagonal minus continued model. GRH only needed for holomorphy of first term, retained in proposition 4.5.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\subsection{Holomorphy and symmetry of the residual}\n\nThe residual is the exact difference between the character kernel\nand its diagonal and off-diagonal model:\n\n\\[\n \\mathscr E_N(s,z)=\\mathscr P_N(s,z)\n                  -\\mathscr D_N(s+z)-\\mathscr K_N(s,z).\n\\]\nHere $\\mathscr P_N$ is the character kernel at the start of this\nsection. Its exact diagonal is\n\\[\n \\mathscr D_N(w)=\\sum_{(n,N)=1}\\Lambda^2(n)n^{-1-w},\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels},\nand $\\mathscr K_N$ is the continued model.\nWe now assume $\\mathrm{GRH}(N)$: every nontrivial zero of every\nprimitive Dirichlet $L$-function of conductor dividing $N$ lies on\n$\\Re s=1/2$. Proposition~\\ref{proof:v3:kernel-holomorphy} then\ngives holomorphy of $\\mathscr P_N$ for $\\Re s,\\Re z>0$;\nthe other two terms have just been treated unconditionally.\nTheir common domain is\n$\\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}$.\nAs with the character kernel, $\\mathscr E_N(s,z)$ is the form\nholomorphic in both variables, while $\\mathscr E_N(s,\\bar z)$\nis the Hermitian form used in the kernel of the integral operator\n$T_N$ defined in~\\eqref{qp:operator}.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.residual",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 96
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "analyticDomain",
+      "section": "4.4",
+      "kind": "definition_family",
+      "tex_lines": [
+        1704,
+        1709
+      ],
+      "semantic_assessment": "Both real parts strictly between 0 and 3/2; no silent restriction to smaller Hardy strip.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{proposition}[Continuation of the Beta model]\\label{proof:v3:model-geometry}\nThe second expression for $\\mathscr K_N$ above gives its continuation\nand is holomorphic on\n\\[\n \\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}.\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.analyticDomain",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "logarithmicDerivative",
+      "section": "2.3.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        1155,
+        1177
+      ],
+      "semantic_assessment": "L′/L at 1/2+s with positive sign; Dirichlet series for its negative. Uses derivative of actual imprimitive L-function.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "where $g_\\chi$ is the logarithmic derivative\n\\[\n g_\\chi(s)=\\frac{L'}L(1/2+s,\\chi),\n\\]\nas in~\\eqref{qp:Gram}.\nThe variables $s,z$ are independent; conjugation here acts only on\nthe character. Thus $\\mathscr P_N(s,z)$ is holomorphic in both\nvariables wherever the logarithmic derivatives are holomorphic.\nThe Hermitian kernel used later is $\\mathscr P_N(s,\\bar z)$:\nit is holomorphic in the first variable and antiholomorphic in\nthe second, as is usual for kernels on spaces of holomorphic functions. We keep these two\nforms distinct when applying Mellin inversion.\n\nWrite $\\chi^*$ for the primitive character inducing $\\chi$ and\n$d_\\chi\\mid N$ for its conductor. In this section,\n$\\mathrm{GRH}(N)$ means that every nontrivial zero of every\nprimitive Dirichlet $L$-function whose conductor divides $N$\nhas real part $1/2$. On $\\Re s>1$,\n$L(s,\\chi)=\\sum_{n\\ge1}\\chi(n)n^{-s}$, and its logarithmic derivative is\n\\[\n -\\frac{L'}L(1/2+s,\\chi)\n =\\sum_{n\\ge1}\\frac{\\Lambda(n)\\chi(n)}{n^{1/2+s}}\n \\qquad(\\Re s>1/2).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.logDerivative",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "alpha",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        643,
+        666
+      ],
+      "semantic_assessment": "Main alpha=1/log N; definition generalizes to c/log N with default c=1. Main theorem and hypothesis use c=1.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.alpha",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 105
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "beta",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        643,
+        666
+      ],
+      "semantic_assessment": "Right Hardy boundary 1/8.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.beta",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 107
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "sigmaStar",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        643,
+        666
+      ],
+      "semantic_assessment": "Interior contour 1/9, with alpha<1/10 to ensure interior.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.sigmaStar",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 109
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "stripWidth",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        643,
+        648
+      ],
+      "semantic_assessment": "Width is beta−alpha (or beta−a), not half-width.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.width",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 111
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "hardyStrip",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        643,
+        666
+      ],
+      "semantic_assessment": "Open vertical strip a<Re s<b. RealizationValid records even N≥4, GRH, 0<a<1/10; weighted-L² versus raw H² representation requires later bridge.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Set\n\\begin{equation}\\label{hd:strip}\n \\alpha_N=\\frac1{\\log N},\\quad \\beta=\\frac18,\\quad \\sigma_*=\\frac19,\n \\quad \\Delta_N=\\beta-\\alpha_N,\\quad\n S_N=\\{s:\\alpha_N<\\Re s<\\beta\\},\n\\end{equation}\nand write\n\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice\n$\\alpha_N<1/10$ leaves $\\sigma_*$ strictly inside the strip and\nkeeps $N^{2\\alpha_N}=e^2$, which will make the weight functional\nuniformly bounded.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.strip",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 113
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.RealizationValid",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 114
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "boundarySpace",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        650,
+        663
+      ],
+      "semantic_assessment": "Two disjoint boundary lines, positive arc length on both, no 1/(2π). Bool×R with counting×Lebesgue and sum of two integrals implements disjoint union.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{hd:space-and-boundary}\n \\mathcal H_N=H^2(S_N),\\quad\n \\Gamma_N=(\\alpha_N+i\\mathbb R)\\,\\sqcup\\,(\\beta+i\\mathbb R).\n\\end{equation}\nHere $\\mathcal H_N$ consists of holomorphic functions whose paired\nvertical $L^2$ means remain bounded as the two lines approach\nthe boundaries. Their traces form a closed subspace of\n$L^2(\\Gamma_N)$, with inner product\n\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.BoundaryParameter",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 359
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.boundaryPoint",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 361
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.boundaryMeasure",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 364
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.boundaryIntegral",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 117
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "hardyInnerProduct",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        658,
+        663
+      ],
+      "semantic_assessment": "Paper linear in first slot; mathlib inner is reversed as inner v u. Boundary equality requires trace bridge.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{equation}\\label{hd:inner-product}\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\end{equation}\nlinear in the first variable. Both boundaries carry positive arc\nlength, with no $1/(2\\pi)$ factor. The choice",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.paperInner",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "weightedResidualKernel",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        668,
+        673
+      ],
+      "semantic_assessment": "E(s,conj z)/((1+s)(1+conj z)); numerator and denominator conjugations consistent.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\label{story:operator}\nInsert decay at large heights and define\n\\begin{equation}\\label{qp:operator}\n (T_Nh)(s)=\\int_{\\Gamma_N}\n       \\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)}h(z)\\,|\\mathrm{d}z|.\n\\end{equation}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.weightedKernel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 39
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "residualOperator",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        668,
+        685
+      ],
+      "semantic_assessment": "Current conditional choice falls back to zero if no representing bounded operator; existence, uniqueness, and integral specification must be certified under exact paper assumptions.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\label{story:operator}\nInsert decay at large heights and define\n\\begin{equation}\\label{qp:operator}\n (T_Nh)(s)=\\int_{\\Gamma_N}\n       \\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)}h(z)\\,|\\mathrm{d}z|.\n\\end{equation}\nWe will prove in Proposition~\\ref{proof:bd:HS} that the boundary\nkernel is square integrable and that the operator maps into the\nHardy trace space. Hermitian symmetry then makes $T_N$\nselfadjoint; square integrability makes it Hilbert--Schmidt and\nhence compact. Consequently its nonzero eigenvalues $\\mu_j(N)$,\ncounted with multiplicity, satisfy\n\\[\n \\mu_j(N)\\in\\mathbb R,\\qquad\n \\sum_j\\mu_j^2(N)=\\|T_N\\|_{\\mathrm{HS}}^2<\\infty,\n \\qquad \\|T_N\\|=\\sup_j|\\mu_j(N)|.\n\\]\nThe last supremum is understood as zero when $T_N=0$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.residualOperator",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 55
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.kernelOperator",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 51
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.kernelAction",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 42
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.RepresentsKernel",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 47
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "hilbertSchmidt",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        674,
+        685
+      ],
+      "semantic_assessment": "Square-sum over a countable orthonormal basis implements Hilbert–Schmidt for the infinite-dimensional separable Hardy space. As a generic predicate it excludes finite-dimensional spaces; scope is actual Hardy space.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "We will prove in Proposition~\\ref{proof:bd:HS} that the boundary\nkernel is square integrable and that the operator maps into the\nHardy trace space. Hermitian symmetry then makes $T_N$\nselfadjoint; square integrability makes it Hilbert--Schmidt and\nhence compact. Consequently its nonzero eigenvalues $\\mu_j(N)$,\ncounted with multiplicity, satisfy\n\\[\n \\mu_j(N)\\in\\mathbb R,\\qquad\n \\sum_j\\mu_j^2(N)=\\|T_N\\|_{\\mathrm{HS}}^2<\\infty,\n \\qquad \\|T_N\\|=\\sup_j|\\mu_j(N)|.\n\\]\nThe last supremum is understood as zero when $T_N=0$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.IsHilbertSchmidt",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 67
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "eigenvalueFamily",
+      "section": "2.3.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        674,
+        685
+      ],
+      "semantic_assessment": "Full real diagonal eigenbasis with square-summable values includes zeros; source lists nonzero eigenvalues with multiplicity. Need existence and zero-padding/order independence rather than trusting default zero family.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "We will prove in Proposition~\\ref{proof:bd:HS} that the boundary\nkernel is square integrable and that the operator maps into the\nHardy trace space. Hermitian symmetry then makes $T_N$\nselfadjoint; square integrability makes it Hilbert--Schmidt and\nhence compact. Consequently its nonzero eigenvalues $\\mu_j(N)$,\ncounted with multiplicity, satisfy\n\\[\n \\mu_j(N)\\in\\mathbb R,\\qquad\n \\sum_j\\mu_j^2(N)=\\|T_N\\|_{\\mathrm{HS}}^2<\\infty,\n \\qquad \\|T_N\\|=\\sup_j|\\mu_j(N)|.\n\\]\nThe last supremum is understood as zero when $T_N=0$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.SpectralData",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 86
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.eigenvalues",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 93
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "weightFunctional",
+      "section": "2.3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        691,
+        701
+      ],
+      "semantic_assessment": "Positive vertical Mellin normalization N^s PhiTilde(s)(1+s)h(s); valid interior contour and contour independence supplied in later results.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "For $\\alpha_N<\\sigma\\le1/9$, we define the linear functional\n$\\ell_N:\\mathcal H_N\\to\\mathbb C$ using the Mellin transform\n$\\widetilde\\Phi$ of the companion weight $\\Phi$ from\n\\eqref{eq:fixed-goldbach-weight}:\n\\[\n \\ell_N(h)=\\frac1{2\\pi i}\\int_{(\\sigma)}\n       N^s\\widetilde\\Phi(s)(1+s)h(s)\\,\\mathrm{d}s.\n\\]\nIt has a Riesz vector $v_N$, characterized by\n$\\ell_N(h)=\\langle h,v_N\\rangle$, with\n$\\mathcal Q_N:=\\|v_N\\|^2\\ll_\\phi1$ uniformly in $N$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.functionalValue",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 125
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "rieszVector",
+      "section": "2.3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        992,
+        999
+      ],
+      "semantic_assessment": "Chosen vector must satisfy ell(h)=paperInner h v, plus norm. Default zero branch is legitimate only after existence proof.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Let $v_N$ be the Riesz vector, with\n$\\ell_N(h)=\\langle h,v_N\\rangle$ and\n$\\|v_N\\|^2=\\mathcal Q_N$; the inner product is linear in its first\nentry. Let $k_z$ be the evaluation vector, defined by\n$h(z)=\\langle h,k_z\\rangle$. The operator kernel is\n\\[\n \\langle T_Nk_z,k_s\\rangle\n   =\\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)}.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.rieszVector",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 129
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "functionalNormSq",
+      "section": "2.3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        965,
+        988
+      ],
+      "semantic_assessment": "Exactly (2π)⁻¹ integral (Nu)^(2a)V²/(1+(Nu)^(−2(beta−a))) du/u. WeightEnergy is same without N-dependent factor. Identification with squared functional norm is a theorem.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "For an interior line $\\alpha_N<\\sigma<\\beta$, define\n\\begin{equation}\\label{bm:functional}\n \\ell_N(h)=\\frac1{2\\pi i}\\int_{(\\sigma)}\n          N^s\\widetilde\\Phi(s)(1+s)h(s)\\,\\mathrm{d}s,\n \\qquad h\\in\\mathcal H_N.\n\\end{equation}\nThe factor $1+s$ compensates for the denominator inserted in\nthe operator kernel. Put $V(u)=\\Phi(u)-u\\Phi'(u)$, so that\n$\\widetilde V(s)=(1+s)\\widetilde\\Phi(s)$.\nWe will prove the following formula for the exact squared norm in\nProposition~\\ref{proof:bm:norm}, using the Fourier--Laplace\nrepresentation of the strip Hardy space:\n\\begin{equation}\\label{bm:norm-integral}\n \\mathcal Q_N:=\\|\\ell_N\\|^2\n =\\frac1{2\\pi}\\int_0^\\infty\n       \\frac{(Nu)^{2\\alpha_N}|V(u)|^2}\n            {1+(Nu)^{-2\\Delta_N}}\\,\\frac{\\mathrm{d}u}{u}.\n\\end{equation}\nThis representation also proves independence of the interior contour.\nSince $\\alpha_N=1/\\log N$ and $V$ is supported in $[1/3,2/3]$,\n\\begin{equation}\\label{bm:uniform-norm}\n \\mathcal Q_N\\le\\frac{e^2}{2\\pi}\n       \\int_0^\\infty|\\Phi(u)-u\\Phi'(u)|^2\\,\\frac{\\mathrm{d}u}{u}\n       \\ll_\\phi1.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.normFunctional",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 117
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.weightEnergy",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 122
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "spectralR",
+      "section": "2.4",
+      "kind": "definition_family",
+      "tex_lines": [
+        895,
+        904
+      ],
+      "semantic_assessment": "Pointwise all quaternion zeros on Re q=1/2; dictionary to norm≤δ requires spectral construction.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\emph{Hypothesis R.} Write $\\mathrm R(N)$ for its assertion\nat the fixed modulus. The zero classification shows directly that\n\\begin{equation}\\label{v3i:R-equivalence}\n \\mathrm R(N)\\quad\\Longleftrightarrow\\quad\\|T_N\\|\\le\\delta_N.\n\\end{equation}\nThe master estimate \\eqref{v3f:master-estimate} therefore gives\n$\\mathcal G(N)=c_\\phi\\mathfrak S(N)+O_\\phi(\\delta_N)$,\nproving Theorem~\\ref{thm:goldbach-R}. All exceptional real pairs\nare excluded, so R also implies S for every admissible choice of\n$h$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.SpectralR",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 156
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "zeroFreeWidth",
+      "section": "2.4",
+      "kind": "definition_family",
+      "tex_lines": [
+        794,
+        816
+      ],
+      "semantic_assessment": "Pointwise open zero-free half-space Re q>1−η; boundary zeros allowed. Width restrictions imposed on dictionary theorem, not predicate itself.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Fix $0<\\eta<1/2$. Only the larger root of an exceptional pair\ncan enter $\\Re q>1-\\eta$. Keeping it outside means\n\\[\n \\frac12+\\frac12\\sqrt{1-\\delta_N^2/\\mu_j^2}\n \\le1-\\eta,\n\\]\nwhich is equivalent to\n\\[\n |\\mu_j|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}}.\n\\]\nNonexceptional eigenvalues already satisfy this inequality.\nTaking the supremum therefore gives the exact dictionary\n\\[\n \\mathfrak X_N(q)\\ne0\\ (\\Re q>1-\\eta)\n \\quad\\Longleftrightarrow\\quad\n \\|T_N\\|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}}.\n\\]\nThe half-space is open, so boundary zeros and equality in the\nnorm bound are allowed. In particular, a bound\n$\\|T_N\\|\\le M_N$ with $M_N>\\delta_N$ guarantees width\n\\begin{equation}\\label{outline:norm-width-conversion}\n \\eta(M_N)=\\frac{1-\\sqrt{1-\\delta_N^2/M_N^2}}2,\n \\qquad \\eta(M_N)(1-\\eta(M_N))=\\frac{\\delta_N^2}{4M_N^2}.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.SpectralZeroFree",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 159
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "widthFromNorm",
+      "section": "2.4",
+      "kind": "definition_family",
+      "tex_lines": [
+        812,
+        818
+      ],
+      "semantic_assessment": "η(M)=(1−sqrt(1−δ²/M²))/2; M>δ necessary at use sites, predicate total outside intended range.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "norm bound are allowed. In particular, a bound\n$\\|T_N\\|\\le M_N$ with $M_N>\\delta_N$ guarantees width\n\\begin{equation}\\label{outline:norm-width-conversion}\n \\eta(M_N)=\\frac{1-\\sqrt{1-\\delta_N^2/M_N^2}}2,\n \\qquad \\eta(M_N)(1-\\eta(M_N))=\\frac{\\delta_N^2}{4M_N^2}.\n\\end{equation}\nThus the width has order $\\delta_N^2/M_N^2$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.spectralWidthFromBound",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 224
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "residualIntegral",
+      "section": "2.5.1",
+      "kind": "definition_family",
+      "tex_lines": [
+        945,
+        959
+      ],
+      "semantic_assessment": "Two upward contours with N^(s+z), both Mellin weights, residual and normalization; sign is cφS−G. Contour independence follows from exact identity.",
+      "bridges": [
+        "cross:sections-5-7"
+      ],
+      "status": "reviewed_cross_section_bridge_required",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "The residual integral is therefore\n\\begin{equation}\\label{v3w:residual}\n \\begin{aligned}\n r_\\sigma(N)&=\\frac1{(2\\pi i)^2}\n \\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathscr E_N(s,z)\n \\,\\mathrm ds\\,\\mathrm dz\\\\\n &=\\mathcal P(N)-\\mathcal D(N)+c_\\phi\\mathfrak S(N).\n \\end{aligned}\n\\end{equation}\nThe exact projection \\eqref{gb:projection-identity} now yields\n\\begin{equation}\\label{v3w:exact}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)-r_\\sigma(N).\n\\end{equation}\nIn particular, this signed discrepancy is independent of $\\sigma$;",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.residualIntegral",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 126
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "derivativeWeight",
+      "section": "2.5.2",
+      "kind": "definition_family",
+      "tex_lines": [
+        971,
+        987
+      ],
+      "semantic_assessment": "V=Φ−uΦ′; real square equals |V|². No derivative of φ alone.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "The factor $1+s$ compensates for the denominator inserted in\nthe operator kernel. Put $V(u)=\\Phi(u)-u\\Phi'(u)$, so that\n$\\widetilde V(s)=(1+s)\\widetilde\\Phi(s)$.\nWe will prove the following formula for the exact squared norm in\nProposition~\\ref{proof:bm:norm}, using the Fourier--Laplace\nrepresentation of the strip Hardy space:\n\\begin{equation}\\label{bm:norm-integral}\n \\mathcal Q_N:=\\|\\ell_N\\|^2\n =\\frac1{2\\pi}\\int_0^\\infty\n       \\frac{(Nu)^{2\\alpha_N}|V(u)|^2}\n            {1+(Nu)^{-2\\Delta_N}}\\,\\frac{\\mathrm{d}u}{u}.\n\\end{equation}\nThis representation also proves independence of the interior contour.\nSince $\\alpha_N=1/\\log N$ and $V$ is supported in $[1/3,2/3]$,\n\\begin{equation}\\label{bm:uniform-norm}\n \\mathcal Q_N\\le\\frac{e^2}{2\\pi}\n       \\int_0^\\infty|\\Phi(u)-u\\Phi'(u)|^2\\,\\frac{\\mathrm{d}u}{u}",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.derivativeWeight",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+              "line": 26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "completedLFunction",
+      "section": "3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        1240,
+        1244
+      ],
+      "semantic_assessment": "Entire completed odd L-function rather than total Gamma-times-L at poles. Machine bridge verifies entire extension, positive-half-plane normalization, zero set, and multiplicities.",
+      "bridges": [
+        "completed_function_meaning"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "For a primitive odd character $\\chi^*$ of conductor $d_\\chi$, write\n\\[\n \\mathcal L(u,\\chi^*)=(d_\\chi/\\pi)^{(u+1)/2}\n \\Gamma((u+1)/2)L(u,\\chi^*).\n\\]",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.completedL",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 177
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "nontrivialZeros",
+      "section": "3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        1247,
+        1259
+      ],
+      "semantic_assessment": "Subtype of (rho,j), 0<Re rho<1, L(rho)=0, j<analyticOrderNatAt. Counted with multiplicity, not set of distinct zeros. Completed normalization has equal analytic order.",
+      "bridges": [
+        "completed_function_meaning"
+      ],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{lemma}\\label{proof:v9:primitive-zero-data}\nFor a primitive odd character $\\chi^*$, the nontrivial zeros $\\rho$,\ncounted with multiplicity, satisfy\n\\begin{align}\n \\frac{\\mathcal L'}{\\mathcal L}(u,\\chi^*)\n -\\frac{\\mathcal L'}{\\mathcal L}(u_0,\\chi^*)\n &=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right),\n       \\label{proof:gb:hadamard-difference}\\\\\n \\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\n &\\ll\\log\\bigl(d_\\chi(|t|+2)\\bigr),\\label{proof:gb:local-zero-count}\n\\end{align}\nwhere the first identity holds away from zeros and its series\nconverges absolutely and locally uniformly in $u,u_0$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.ZeroIndex",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 173
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "zeroCount",
+      "section": "3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        1247,
+        1259
+      ],
+      "semantic_assessment": "Half-open t≤Im rho<t+1 window, ncard with a separately stated finiteness conjunct, and constant uniform in conductor/character.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "\\begin{lemma}\\label{proof:v9:primitive-zero-data}\nFor a primitive odd character $\\chi^*$, the nontrivial zeros $\\rho$,\ncounted with multiplicity, satisfy\n\\begin{align}\n \\frac{\\mathcal L'}{\\mathcal L}(u,\\chi^*)\n -\\frac{\\mathcal L'}{\\mathcal L}(u_0,\\chi^*)\n &=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right),\n       \\label{proof:gb:hadamard-difference}\\\\\n \\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\n &\\ll\\log\\bigl(d_\\chi(|t|+2)\\bigr),\\label{proof:gb:local-zero-count}\n\\end{align}\nwhere the first identity holds away from zeros and its series\nconverges absolutely and locally uniformly in $u,u_0$.",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.zeroWindow",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 233
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "pairedZeroSum",
+      "section": "3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        1262,
+        1288
+      ],
+      "semantic_assessment": "Difference of resolvents at s and 3/2, summed over primitive induced zeros with multiplicity; GRH bridge replaces rho by 1/2+iγ. Normal summability controls absolute local uniform convergence.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Under $\\mathrm{GRH}(N)$, the nontrivial zeros of $L(s,\\chi^*)$\nhave the form $1/2+i\\gamma_\\chi$, where $\\chi^*$ is the primitive\ncharacter inducing $\\chi$. Set\n\\begin{align}\n Z_\\chi(s)&=\\sum_{\\gamma_\\chi}\n   \\left(\\frac1{s-i\\gamma_\\chi}-\\frac1{3/2-i\\gamma_\\chi}\\right),\n       &&\\Re s>0,\\label{proof:gb:zero-resolvent}\\\\\n e_\\chi(u)&=\\sum_{\\substack{p\\mid N\\\\p\\nmid d_\\chi}}\n       \\frac{\\chi^*(p)\\log p}{p^u-\\chi^*(p)},\n       &&\\Re u>0.\\label{proof:gb:Euler-correction}\n\\end{align}\n\n\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}\n\\end{equation}\nFor every compact interval $I\\subset(0,\\infty)$,\n\\begin{equation}\\label{proof:gb:logderivative-bound}\n g_\\chi(\\sigma+it)\\ll_I\\log^2\\bigl(N(|t|+2)\\bigr)\n \\qquad(\\sigma\\in I,\\ t\\in\\mathbb R,\\ \\chi\\in X_N^-).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.pairedZeroSum",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 376
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.zeroDifference",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 180
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.NormallySummableOn",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 195
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "eulerCorrection",
+      "section": "3.3",
+      "kind": "definition_family",
+      "tex_lines": [
+        1262,
+        1288
+      ],
+      "semantic_assessment": "Finite primes dividing N but not inducing conductor, χ*(p) log p/(p^u−χ*(p)); both e(1/2+s) and subtract e(2) retained.",
+      "bridges": [],
+      "status": "reviewed_no_substantive_mismatch",
+      "quantifier_scope": "Only the stated physical domain is compared; Lean total values outside it do not represent extra TeX claims.",
+      "original_tex": "Under $\\mathrm{GRH}(N)$, the nontrivial zeros of $L(s,\\chi^*)$\nhave the form $1/2+i\\gamma_\\chi$, where $\\chi^*$ is the primitive\ncharacter inducing $\\chi$. Set\n\\begin{align}\n Z_\\chi(s)&=\\sum_{\\gamma_\\chi}\n   \\left(\\frac1{s-i\\gamma_\\chi}-\\frac1{3/2-i\\gamma_\\chi}\\right),\n       &&\\Re s>0,\\label{proof:gb:zero-resolvent}\\\\\n e_\\chi(u)&=\\sum_{\\substack{p\\mid N\\\\p\\nmid d_\\chi}}\n       \\frac{\\chi^*(p)\\log p}{p^u-\\chi^*(p)},\n       &&\\Re u>0.\\label{proof:gb:Euler-correction}\n\\end{align}\n\n\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}\n\\end{equation}\nFor every compact interval $I\\subset(0,\\infty)$,\n\\begin{equation}\\label{proof:gb:logderivative-bound}\n g_\\chi(\\sigma+it)\\ll_I\\log^2\\bigl(N(|t|+2)\\bigr)\n \\qquad(\\sigma\\in I,\\ t\\in\\mathbb R,\\ \\chi\\in X_N^-).",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.eulerCorrection",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+              "line": 183
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Theorem 1.1",
+      "section": "1",
+      "kind": "named_statement",
+      "tex_lines": [
+        151,
+        298
+      ],
+      "original_tex": "Fix a nonzero function\n$\\phi\\in C_c^\\infty(\\mathbb R)$ supported in $[1/3,2/3]$,\nwith $0\\le\\phi\\le1$ and $\\phi(u)=\\phi(1-u)$. For even\n$N\\ge4$, write\n\\begin{align}\n \\mathcal G(N)&=\\frac1N\n   \\sum_{\\substack{n+m=N\\\\(nm,N)=1}}\n       \\Lambda(n)\\Lambda(m)\\phi(n/N)\\phi(m/N),\n       \\label{eq:goldbach-correlation}\\\\\n c_\\phi&=\\int_0^1\\phi^2(u)\\,\\mathrm{d}u>0,\n       \\label{eq:c0}\n\\end{align}\nThe sum runs over ordered pairs of positive integers and gives a\nnormalized weighted count for the Goldbach equation $n+m=N$.\nOur aim is to prove, under our hypotheses, that $\\mathcal G(N)>0$\nfor all sufficiently large even $N$, with a positive contribution\nfrom prime pairs remaining after the removal of proper prime powers.\nThe expected main term is $c_\\phi\\mathfrak S(N)$, with the same singular series\n\\eqref{eq:singular-series} as in \\eqref{eq:hardy-littlewood-goldbach}.\n\nGauss's congruences gave arithmetic a unifying language.\nHere the decisive choice is to fix the modulus at the very integer\n$N$ to be represented. Within this one modulus, Dirichlet's odd\ncharacters reveal Goldbach, an arithmetic operator $T_N$ becomes\naccessible, and its spectrum produces a quaternionic function in\nRiemann's spirit. Each $N$ thus carries an arithmetic world of its\nown. This is our departure from the usual sieve and circle-method\nroutes.\n\nFor each $N$, the construction uses the following part of GRH.\n\n\\begin{grh}\nEvery nontrivial zero of every primitive Dirichlet $L$-function\nwhose conductor divides $N$ has real part $1/2$.\n\\end{grh}\n\nThe following five steps connect the arithmetic and spectral sides of the proof.\n\n\\emph{Dirichlet.} The elementary sign $\\chi(-1)=-1$ is decisive:\nodd-character orthogonality separates equal from opposite residue\nclasses, and the support of the weight makes the latter exactly\n$n+m=N$.\nLogarithmic derivatives of $L$-functions turn our exact projection\ninto a two-variable arithmetic kernel.\n\n\\emph{Euler.} The Beta model encodes the off-diagonal geometry\nand recovers the Goldbach main term; subtracting the exact diagonal\nand this model isolates the residual. The theory of several complex\nvariables reveals striking phenomena; natural arithmetic examples\nhelp make them clear.\nAs Lebl~\\cite[\\S1.1]{LeblSCV} writes,\n``There is something very special about the holomorphic\ncategory.'' Here the Beta model supplies an example dictated by\narithmetic. After continuation and conjugation in the second\nvariable, the model and its residual are Fueter regular. In coordinates\n$\\omega=s+zj$, the residual satisfies\n\\[\n (\\partial_{\\bar s}+j\\partial_z)\\mathscr E_N(s,\\bar z)=0.\n\\]\nThe four real coordinates retain the two-variable geometry of\nthe prime-pair problem.\n\n\\emph{Hilbert--P\\'olya.} The idea of Hilbert--P\\'olya seeks a selfadjoint\noperator to prove a Riemann Hypothesis. We reverse this approach:\nassuming GRH, we use such an operator to derive arithmetic consequences.\nFor $N>e^{10}>22026$ satisfying $\\mathrm{GRH}(N)$, we realize the\nHilbert--P\\'olya idea in the Goldbach setting by explicitly constructing\nthe selfadjoint operator $T_N$ from the residual in \\eqref{qp:operator}.\nThis operator is compact and Hilbert--Schmidt; the construction is\ndetailed in Subsection~\\ref{story:hilbert-polya}. We then use either of\nthe additional spectral hypotheses below to bound its operator norm.\nThe resulting bound makes the arithmetic error\n$|\\mathcal G(N)-c_\\phi\\mathfrak S(N)|$ smaller than the positive main term\n$c_\\phi\\mathfrak S(N)$ for all sufficiently large even $N$.\n\n\\emph{Riemann.} Riemann connected primes with a complex function.\nFor prime pairs, our passage to a function of four real variables\ngoes through the operator: the function is built from its spectrum.\nWrite $\\mu_j(N)$ for the nonzero real eigenvalues of $T_N$,\nwith multiplicity, so that $\\sum_j\\mu_j^2(N)<\\infty$. Set\n\\begin{equation}\\label{v3i:spectral-scale}\n \\delta_N=\\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}.\n\\end{equation}\nDefine the symmetric spectral function\n\\begin{equation}\\label{qp:spectral-function}\n \\mathfrak X_N(q)=\n \\prod_j\\left(1-\\frac{4\\mu_j^2(N)}{\\delta_N^2}q(1-q)\\right),\n \\qquad q\\in\\mathbb H,\n\\end{equation}\nwhere $\\mathbb H$ denotes the quaternions and $\\Re q$ denotes\nthe real part of $q$. The product converges locally uniformly; an empty\nproduct is $1$. Its symmetry under $q\\mapsto1-q$ is similar to that of\nRiemann's completed function~\\cite{Riemann1859}.\nThis is an intrinsic slice-regular function of the\nspectral variable $q$; the Fueter regularity above concerns the\narithmetic coordinates. The locations of its zeros determine the\nmagnitudes of the nonzero eigenvalues and hence $\\|T_N\\|$.\nBounds on this norm control $|\\mathcal G(N)-c_\\phi\\mathfrak S(N)|$\nthrough the Hardy quadratic-form identity below.\n\n\\emph{Hardy.} Linnik's dispersion method~\\cite{Linnik1963}\nexemplifies the power of quadratic estimates in additive problems.\nHere the key step is to express the exact signed error\nas a quadratic form in a Hardy space. The weight determines $v_N$ with\n$\\|v_N\\|^2\\ll_\\phi1$. Before applying Cauchy--Schwarz, we have the exact identity\n\\[\n c_\\phi\\mathfrak S(N)-\\mathcal G(N)=\\langle T_Nv_N,v_N\\rangle.\n\\]\nApplying Cauchy--Schwarz then gives an upper bound for the absolute error:\n\\[\n |\\langle T_Nv_N,v_N\\rangle|\n \\le\\|T_N\\|\\,\\|v_N\\|^2\\ll_\\phi\\|T_N\\|.\n\\]\nAppendix~\\ref{proof:app:numerical} tests the counting method numerically\nat $N=30030$, recovering the exact number of Goldbach representations.\nSection~\\ref{story:section2} develops these five steps.\n\nTo turn the last inequality into arithmetic estimates, we now\nformulate two conditions on the zeros of $\\mathfrak X_N$ that\ngive bounds for $\\|T_N\\|$. The first, Hypothesis S, excludes zeros\nsufficiently close to $1$ and yields an asymptotic formula.\n\n\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.\n\\end{hypothesisS}\n\nIn fact, GRH alone already gives a zero-free region for $\\mathfrak X_N$\nof the same form. Its width, however, falls short of that required by\nHypothesis S, so the resulting estimate is not strong enough to make\nthe Goldbach error $o(\\mathfrak S(N))$.\n\n\\begin{theorem}\\label{thm:goldbach-S}\nAssume $\\mathrm{GRH}(N)$ for every sufficiently large even\n$N$, and Hypothesis S with the prescribed function $h$. Then\n\\begin{equation}\\label{v3i:weak-result}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)+\n O_\\phi\\!\\left(\\frac{\\mathfrak S(N)}{h(N)}\\right).\n\\end{equation}\nIn particular, $\\mathcal G(N)\\sim c_\\phi\\mathfrak S(N)$.\nThe implied constant is independent of $N$ and $h$.\n\\end{theorem}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.theorem_1_1",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Main.lean",
+              "line": 56
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.theorem_1_1_weight_exists",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Weights.lean",
+              "line": 45
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_theorem_1_1",
+        "TexAudit14.expect_theorem_1_1_weight_exists"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "C is chosen after φ and before h. Both GRH and S remain eventual on even N; eventual threshold may depend on h. Relative asymptotic is included."
+    },
+    {
+      "label": "Theorem 1.2",
+      "section": "1",
+      "kind": "named_statement",
+      "tex_lines": [
+        306,
+        323
+      ],
+      "original_tex": "\\begin{hypothesisR}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, every zero of $\\mathfrak X_N(q)$ has\nreal part $1/2$.\n\\end{hypothesisR}\n\nHypothesis R implies Hypothesis S for every admissible choice\nof $h$ and gives the following sharper estimate.\n\n\\begin{theorem}\\label{thm:goldbach-R}\nAssume $\\mathrm{GRH}(N)$ for every sufficiently large even\n$N$, and Hypothesis R. Then\n\\begin{equation}\\label{v3i:strong-result}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)+\n O_\\phi\\!\\left(\n       \\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}\\right).\n\\end{equation}\n\\end{theorem}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.theorem_1_2",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Main.lean",
+              "line": 98
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+              "line": 12
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_theorem_1_2",
+        "TexAudit14.expect_theorem_1_2_hypothesisR_implies_S"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "GRH and R remain explicit eventual assumptions. Error is δN with correct S(N), N and log exponent. R⇒S helper covers every admissible h."
+    },
+    {
+      "label": "Lemma 3.1",
+      "section": "3",
+      "kind": "named_statement",
+      "tex_lines": [
+        1090,
+        1117
+      ],
+      "original_tex": "\\begin{lemma}[Finite projection]\\label{proof:v9:finite-projection}\nFor every even $N\\ge4$, the moments just defined satisfy the exact identity\n\\[\n \\mathcal G(N)=\\mathcal D(N)-\\mathcal P(N)\n\\]\nas in~\\eqref{gb:projection-identity},\nand the bound\n\\begin{equation}\\label{proof:dir:moment-bound}\n 0\\le\\mathcal P(N)\\le\\mathcal D(N)\\ll_\\phi\\log N.\n\\end{equation}\n\\end{lemma}\n\n\\begin{proof}\nThe selector $(1-\\chi(-1))/2$ in the full character sum gives\n\\[\n \\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\\chi(n)\\overline{\\chi(m)}\n =\\frac1{\\varphi(N)}\\sum_{\\chi\\ \\mathrm{mod}\\ N}\n       (1-\\chi(-1))\\chi(n)\\overline{\\chi(m)}.\n\\]\nFull character orthogonality gives, with the coprimality restriction\ncoming from the zero extension,\n\\[\n \\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\\chi(n)\\overline{\\chi(m)}\n =\\mathbf1_{(nm,N)=1}\n   \\left(\\mathbf1_{n\\equiv m\\ \\mathrm{mod}\\ N}\n              -\\mathbf1_{n\\equiv-m\\ \\mathrm{mod}\\ N}\\right),\n\\]\nas in~\\eqref{gb:orthogonality}.",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.lemma_3_1",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Characters.lean",
+              "line": 360
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_3_1_odd_orthogonality",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Characters.lean",
+              "line": 58
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_lemma_3_1",
+        "TexAudit14.expect_lemma_3_1_odd_orthogonality"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "Unconditional identity for every even N≥4, signs and normalization preserved; one Cφ for all N."
+    },
+    {
+      "label": "Proposition 3.2",
+      "section": "3",
+      "kind": "named_statement",
+      "tex_lines": [
+        1180,
+        1200
+      ],
+      "original_tex": "\\begin{proposition}[The character kernel]\\label{proof:v3:kernel-holomorphy}\nFor $\\Re s,\\Re z>1/2$, the kernel has the absolutely convergent\nexpansion\n\\begin{equation}\\label{proof:dir:kernel-expansion}\n \\mathscr P_N(s,z)=\n \\sum_{\\substack{n,m\\ge1\\\\(nm,N)=1}}\n \\frac{\\Lambda(n)\\Lambda(m)}{n^{1/2+s}m^{1/2+z}}\n \\left(\\mathbf1_{n\\equiv m\\ \\mathrm{mod}\\ N}\n              -\\mathbf1_{n\\equiv-m\\ \\mathrm{mod}\\ N}\\right).\n\\end{equation}\nThe kernel $\\mathscr P_N$ is meromorphic on $\\mathbb C^2$, with\npossible poles only where one of its logarithmic derivatives has a\npole. Under $\\mathrm{GRH}(N)$ it is jointly holomorphic for\n$\\Re s,\\Re z>0$ and satisfies\n\\begin{equation}\\label{proof:v3:kernel-symmetries}\n \\mathscr P_N(s,z)=\\mathscr P_N(z,s),\\qquad\n \\overline{\\mathscr P_N(s,z)}=\\mathscr P_N(\\bar s,\\bar z).\n\\end{equation}\nThe Hermitian kernel $\\mathscr P_N(s,\\bar z)$ is positive\nsemidefinite, of rank at most $\\varphi(N)/2$.\n\\end{proposition}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.proposition_3_2",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterAnalytic.lean",
+              "line": 108
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.proposition_3_2_finite_rank",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/KernelAlgebra.lean",
+              "line": 106
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.proposition_3_2_joint_meromorphic",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterJoint.lean",
+              "line": 55
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_proposition_3_2",
+        "TexAudit14.expect_proposition_3_2_finite_rank",
+        "TexAudit14.expect_proposition_3_2_joint_meromorphic"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "Must combine three declarations: core expansion/GRH holomorphy/symmetry/positive real part/finrank bound; finite-dimensional helper prevents finrank=0 loophole; joint-meromorphic helper supplies genuinely two-variable quotient."
+    },
+    {
+      "label": "Lemma 3.3",
+      "section": "3",
+      "kind": "named_statement",
+      "tex_lines": [
+        1247,
+        1260
+      ],
+      "original_tex": "\\begin{lemma}\\label{proof:v9:primitive-zero-data}\nFor a primitive odd character $\\chi^*$, the nontrivial zeros $\\rho$,\ncounted with multiplicity, satisfy\n\\begin{align}\n \\frac{\\mathcal L'}{\\mathcal L}(u,\\chi^*)\n -\\frac{\\mathcal L'}{\\mathcal L}(u_0,\\chi^*)\n &=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right),\n       \\label{proof:gb:hadamard-difference}\\\\\n \\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\n &\\ll\\log\\bigl(d_\\chi(|t|+2)\\bigr),\\label{proof:gb:local-zero-count}\n\\end{align}\nwhere the first identity holds away from zeros and its series\nconverges absolutely and locally uniformly in $u,u_0$.\n\\end{lemma}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.lemma_3_3",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/HadamardLimit.lean",
+              "line": 110
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_lemma_3_3"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "No GRH assumed; primitive odd character; all zero multiplicities retained; C uniform over conductor and character. completedL bridge rules out Gamma-pole artifact."
+    },
+    {
+      "label": "Lemma 3.4",
+      "section": "3",
+      "kind": "named_statement",
+      "tex_lines": [
+        1262,
+        1290
+      ],
+      "original_tex": "Under $\\mathrm{GRH}(N)$, the nontrivial zeros of $L(s,\\chi^*)$\nhave the form $1/2+i\\gamma_\\chi$, where $\\chi^*$ is the primitive\ncharacter inducing $\\chi$. Set\n\\begin{align}\n Z_\\chi(s)&=\\sum_{\\gamma_\\chi}\n   \\left(\\frac1{s-i\\gamma_\\chi}-\\frac1{3/2-i\\gamma_\\chi}\\right),\n       &&\\Re s>0,\\label{proof:gb:zero-resolvent}\\\\\n e_\\chi(u)&=\\sum_{\\substack{p\\mid N\\\\p\\nmid d_\\chi}}\n       \\frac{\\chi^*(p)\\log p}{p^u-\\chi^*(p)},\n       &&\\Re u>0.\\label{proof:gb:Euler-correction}\n\\end{align}\n\n\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}\n\\end{equation}\nFor every compact interval $I\\subset(0,\\infty)$,\n\\begin{equation}\\label{proof:gb:logderivative-bound}\n g_\\chi(\\sigma+it)\\ll_I\\log^2\\bigl(N(|t|+2)\\bigr)\n \\qquad(\\sigma\\in I,\\ t\\in\\mathbb R,\\ \\chi\\in X_N^-).\n\\end{equation}\n\\end{lemma}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.lemma_3_4",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroExpansion.lean",
+              "line": 53
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_3_4_normal_convergence",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterZeroShiftNormal.lean",
+              "line": 26
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_3_4_paired_zero_sum",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/CharacterSeries.lean",
+              "line": 63
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_lemma_3_4",
+        "TexAudit14.expect_lemma_3_4_normal_convergence",
+        "TexAudit14.expect_lemma_3_4_paired_zero_sum"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "Compact-strip endpoints precede constant C; N, character and vertical height follow C. All Euler corrections present. Normal convergence and GRH resolvent conversion supplied by two helpers."
+    },
+    {
+      "label": "Lemma 3.5",
+      "section": "3",
+      "kind": "named_statement",
+      "tex_lines": [
+        1365,
+        1409
+      ],
+      "original_tex": "\\begin{lemma}[Mellin projection and signed families]\n\\label{proof:v9:mellin-signed-families}\nThe following Mellin representation holds unconditionally for\n$\\sigma>1/2$ and, under $\\mathrm{GRH}(N)$, also for\n$0<\\sigma\\le1/9$:\n\\[\n \\mathcal P(N)=\\frac1{(2\\pi i)^2}\n \\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathscr P_N(s,z)\n \\,\\d s\\,\\d z,\n\\]\nas in~\\eqref{gb:mellin-moment}.\nThe off-diagonal relations in \\eqref{proof:dir:kernel-expansion} are\n$m=n+kN$, $n=m+kN$, and $n+m=kN$, with signs $+,+,-$.\nAfter insertion of the weight, only the sum family with $k=1$ remains.\n\\end{lemma}\n\n\\begin{proof}\nFor $\\sigma>1/2$, the absolutely convergent logarithmic-derivative\nseries and the rapid decay of $\\widetilde\\Phi$ justify termwise\nMellin inversion:\n\\[\n P_\\chi=-\\frac1{2\\pi i}\\int_{(\\sigma)}\n       N^s\\widetilde\\Phi(s)\\frac{L'}L(1/2+s,\\chi)\\,\\d s,\n\\]\nas in~\\eqref{gb:mellin-P}.\nThe factor $N^s$ comes from $(n/N)^{-s}$. Apply the same formula\nto $P_{\\bar\\chi}$, multiply, and average over $X_N^-$.\nThe two minus signs cancel, and absolute convergence permits the\nproduct integrals and finite character sum to be interchanged.\nThis proves the displayed Mellin representation on the initial contours.\nUnder GRH, Proposition~\\ref{proof:v3:kernel-holomorphy} excludes\npoles between any positive contour and this initial contour.\nLemma~\\ref{proof:lem:zero-expansion} gives logarithmic growth on\nthe intervening fixed strip, whereas $\\widetilde\\Phi$ decays faster\nthan every power. The horizontal sides of the contour rectangles\ntherefore tend to zero, and the vertical integrals converge absolutely.\nMoving the contours successively proves the stated continuation.\n\nSeparating equal from unequal indices in the first congruence of\n\\eqref{proof:dir:kernel-expansion} gives the diagonal and the two\npositive difference families. The second congruence gives the negative\nsum family. On the support of the weight, $|n-m|\\le N/3$ and\n$2N/3\\le n+m\\le4N/3$. Thus both difference families and all sums\nwith $k\\ge2$ have zero weighted contribution.",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.lemma_3_5",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMoment.lean",
+              "line": 97
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_3_5_absolute_convergence",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMomentComplete.lean",
+              "line": 10
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_3_5_small_sigma",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/MellinMomentComplete.lean",
+              "line": 21
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_3_5_weight_support",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Weights.lean",
+              "line": 66
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_lemma_3_5",
+        "TexAudit14.expect_lemma_3_5_absolute_convergence",
+        "TexAudit14.expect_lemma_3_5_small_sigma",
+        "TexAudit14.expect_lemma_3_5_weight_support"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "Main declaration alone would miss small contours and support exclusion; all four declarations together cover unconditional σ>1/2, GRH 0<σ≤1/9, absolute convergence and signed-family elimination."
+    },
+    {
+      "label": "Lemma 4.1",
+      "section": "4",
+      "kind": "named_statement",
+      "tex_lines": [
+        1480,
+        1513
+      ],
+      "original_tex": "\\begin{lemma}[The continuous signed model]\\label{proof:v9:signed-beta-model}\nFor $h>0$, $\\Re s,\\Re z<1/2$ and $\\Re(s+z)>0$, put $w=s+z$.\nThe following integrals converge absolutely:\n\\begin{equation}\\label{v3:beta-scaled-model}\n \\begin{aligned}\n \\int_0^\\infty x^{-1/2-s}(x+h)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,w),\\\\\n \\int_0^\\infty x^{-1/2-z}(x+h)^{-1/2-s}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-z,w),\\\\\n \\int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,1/2-z).\n \\end{aligned}\n\\end{equation}\nTheir signed sum, with signs $+,+,-$, is $h^{-s-z}K_-(s,z)$.\nFor $h=kN$, the common local density for these three families is\n$\\mathfrak S(h)$, so their model is\n$\\mathfrak S(h)h^{-s-z}K_-(s,z)$.\n\\end{lemma}\n\n\\begin{proof}\nFor both sums and differences, the two entries exclude one\nresidue class modulo $p$ if $p\\mid h$ and two otherwise.\nRelative to independent prime densities, the correction is\n\\[\n \\frac{1-\\nu_p(h)/p}{(1-1/p)^2},\\qquad\n \\nu_p(h)=\\begin{cases}1,&p\\mid h,\\\\2,&p\\nmid h.\\end{cases}\n\\]\nSince $h=kN$ is even, the product is\n\\[\n 2C_2\\prod_{\\substack{p\\mid h\\\\p>2}}\\frac{p-1}{p-2}\n =\\mathfrak S(h).\n\\]\nIn particular, $N\\mid h$ makes the factors at primes dividing $N$\nconsistent with the coprimality restriction in the arithmetic kernel.",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.lemma_4_1",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+              "line": 172
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_4_1_absolute_convergence",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+              "line": 183
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_4_1_local_density",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SingularDensity.lean",
+              "line": 63
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_4_1_signed_model",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+              "line": 195
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_lemma_4_1",
+        "TexAudit14.expect_lemma_4_1_absolute_convergence",
+        "TexAudit14.expect_lemma_4_1_local_density",
+        "TexAudit14.expect_lemma_4_1_signed_model"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "All three absolutely convergent integrals and signed local-density combination; exact original domain allows one negative real part, provided sum positive. Local density separately derived."
+    },
+    {
+      "label": "Lemma 4.2",
+      "section": "4",
+      "kind": "named_statement",
+      "tex_lines": [
+        1538,
+        1551
+      ],
+      "original_tex": "\\begin{lemma}[Gamma factorization]\\label{proof:v9:gamma-factorization}\nOn $\\Re s=\\Re z=\\sigma$, one has\n\\begin{equation}\\label{proof:gb:beta-uniform-bound}\n |K_-(s,z)|\\le\n 2B(1/2-\\sigma,2\\sigma)+B(1/2-\\sigma,1/2-\\sigma)\n \\qquad(0<\\sigma\\le1/9).\n\\end{equation}\nFor this Gamma quotient $\\mathcal X_1$, the factorization is\n\\begin{equation}\\label{proof:gb:gamma-beta}\n K_-(s,z)=2^{1-w}\\Gamma(w)\\cos(\\pi w/2)\n                      \\mathcal X_1(s)\\mathcal X_1(z),\\qquad w=s+z.\n\\end{equation}\nThe latter equality is an identity of meromorphic functions.\n\\end{lemma}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.lemma_4_2",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaIdentity.lean",
+              "line": 219
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_4_2_meromorphic",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/BetaMeromorphic.lean",
+              "line": 129
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_lemma_4_2",
+        "TexAudit14.expect_lemma_4_2_meromorphic"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "Core integral-domain factorization alone would not cover meromorphic identity; helper uses Gamma quotient and common entire quotient. Norm on real Beta bound is harmless only with nonnegative-real bridge."
+    },
+    {
+      "label": "Lemma 4.3",
+      "section": "4",
+      "kind": "named_statement",
+      "tex_lines": [
+        1580,
+        1648
+      ],
+      "original_tex": "We now collect the densities at all scales $h=kN$ and record the\nexact diagonal. The corresponding Dirichlet series are\n\\[\n \\begin{aligned}\n \\mathscr D_N(w)&=\\sum_{\\substack{n\\ge1\\\\(n,N)=1}}\n                       \\frac{\\Lambda^2(n)}{n^{1+w}}\n                       &&(\\Re w>0),\\\\\n \\mathscr S_N(w)&=\\sum_{k\\ge1}\\frac{\\mathfrak S(kN)}{k^w}\n                       &&(\\Re w>1),\n \\end{aligned}\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels} and~\\eqref{v3i:series}.\nThe former records the exact arithmetic diagonal; the latter collects\nthe local densities $\\mathfrak S(kN)$. The density series is\ninitially defined for $\\Re w>1$, whereas the three Beta integrals\nhave $0<\\Re w<1$ in their common domain. To use the density factor\nthere, we first continue it by the Euler product, which we restate here:\n\\[\n \\mathscr S_N(w)=\\mathfrak S(N)\\zeta(w)P_N(w),\n\\]\nwhere $P_N$ is the Euler product\n\\[\n P_N(w)=\\prod_{\\substack{p>2\\\\p\\nmid N}}\n                  \\left(1+\\frac{p^{-w}}{p-2}\\right),\n\\]\nas in~\\eqref{eq:goldbach-arithmetic-kernels}.\nThis Euler product is distinct from the character polynomial\n$P_\\chi$ of the preceding section.\nSeparating the zeta factor identifies the pole at $w=1$; controlling\nthe remaining product gives bounds uniform in the modulus.\n\n\\begin{lemma}\\label{proof:lem:singular-N}\nThe diagonal series $\\mathscr D_N(w)$ converges absolutely for\n$\\Re w>0$. The density series $\\mathscr S_N(w)$ has the Euler\nproduct displayed above and continues meromorphically to\n$\\Re w>0$, with a single simple pole at $w=1$ of residue\n\\begin{equation}\\label{proof:gb:singular-series-residue}\n \\operatorname*{Res}_{w=1}\\mathscr S_N(w)=\\frac N{\\varphi(N)}.\n\\end{equation}\nFor fixed $0<\\sigma_-<\\sigma_+<\\infty$,\n\\begin{equation}\\label{proof:gb:singular-series-growth}\n |\\mathscr S_N(w)|\\ll_{\\sigma_-,\\sigma_+}\n \\frac N{\\varphi(N)}(1+|\\Im w|)\n \\quad(\\sigma_-\\le\\Re w\\le\\sigma_+,\\ |\\Im w|\\ge1).\n\\end{equation}\nMoreover, $\\mathfrak S(N)>1$ and\n\\begin{equation}\\label{proof:sp:family-bounds}\n C_2\\frac N{\\varphi(N)}\\le\\mathfrak S(N)\n       \\le\\frac N{\\varphi(N)}\\ll\\log\\log N.\n\\end{equation}\n\\end{lemma}\n\n\\begin{proof}\nAbsolute convergence of the diagonal follows from\n$\\Lambda^2(n)\\le\\log^2n$. The function\n$\\mathfrak S(kN)/\\mathfrak S(N)$ is multiplicative in $k$.\nAt $p^j$, $j\\ge1$, its value is $1$ if $p\\mid N$ and\n$(p-1)/(p-2)$ otherwise. Thus the local factor is\n$(1-p^{-w})^{-1}$ in the first case and\n$(1+p^{-w}/(p-2))/(1-p^{-w})$ in the second. This proves the\nEuler product for $\\Re w>1$.\n\nFor every $\\delta>0$, the product $P_N(w)$ is holomorphic and\nuniformly bounded in $N$ on $\\Re w\\ge\\delta$, since\n$\\sum_{p>2}p^{-\\delta}/(p-2)<\\infty$.\nOmitting the primes dividing $N$ only decreases this absolute\nmajorant. At $w=1$ all Euler factors are positive, so they do not\ncancel the pole of the zeta factor.\nOnly the pole of $\\zeta(w)$ at $1$ remains. The identity",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.lemma_4_3",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityEulerIdentity.lean",
+              "line": 98
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_4_3_uniform",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/TotientLogLog.lean",
+              "line": 170
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_4_3_density_convergence",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityConvergence.lean",
+              "line": 75
+            }
+          ]
+        },
+        {
+          "name": "LiLiuGoldbach16.lemma_4_3_euler_product_convergence",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DensityEuler.lean",
+              "line": 146
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_lemma_4_3",
+        "TexAudit14.expect_lemma_4_3_uniform",
+        "TexAudit14.expect_lemma_4_3_density_convergence",
+        "TexAudit14.expect_lemma_4_3_euler_product_convergence"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "Four declarations jointly cover diagonal/density convergence, Euler product, meromorphic continuation, holomorphy off 1, residue, strict S>1, totient bounds and N-uniform vertical growth. Nonzero residue N/totient(N) makes pole simple."
+    },
+    {
+      "label": "Proposition 4.4",
+      "section": "4",
+      "kind": "named_statement",
+      "tex_lines": [
+        1704,
+        1710
+      ],
+      "original_tex": "\\begin{proposition}[Continuation of the Beta model]\\label{proof:v3:model-geometry}\nThe second expression for $\\mathscr K_N$ above gives its continuation\nand is holomorphic on\n\\[\n \\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}.\n\\]\n\\end{proposition}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.proposition_4_4",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/ModelContinuation.lean",
+              "line": 88
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_proposition_4_4"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "Unconditional continuation identity on initial Beta domain and holomorphy on full Omega; source N even≥4 retained."
+    },
+    {
+      "label": "Proposition 4.5",
+      "section": "4",
+      "kind": "named_statement",
+      "tex_lines": [
+        1760,
+        1768
+      ],
+      "original_tex": "\\begin{proposition}[The analytic residual]\\label{proof:v7:residual-holomorphy}\nUnder $\\mathrm{GRH}(N)$, $\\mathscr E_N$ is holomorphic on\n$\\Omega$ and satisfies\n\\[\n \\mathscr E_N(s,z)=\\mathscr E_N(z,s),\\qquad\n \\overline{\\mathscr E_N(s,z)}=\\mathscr E_N(\\bar s,\\bar z).\n\\]\nIn particular, $\\mathscr E_N(s,\\bar z)$ is Hermitian.\n\\end{proposition}",
+      "status": "independently_reconstructed_pending_root_comparator",
+      "lean_declarations": [
+        {
+          "name": "LiLiuGoldbach16.proposition_4_5",
+          "current_locations": [
+            {
+              "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/ResidualAnalytic.lean",
+              "line": 85
+            }
+          ]
+        }
+      ],
+      "expected_props": [
+        "TexAudit14.expect_proposition_4_5"
+      ],
+      "quantifier_review": "See Expected.lean for exact full reconstruction. No paper conclusion is added as an assumption; only source context hypotheses occur.",
+      "semantic_assessment": "GRH is explicit and applies to all primitive dividing conductors. Residual has exact subtraction, holomorphy on Omega, symmetry and Hermitian conjugated kernel."
+    }
+  ]
+}

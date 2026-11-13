@@ -1,0 +1,18 @@
+{
+  "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WeightNorm.lean",
+  "source_sha256": "fd0a23b6947c50e5bc9a00c0b4c9a74479e5c83032c222371f031c98f87bb486",
+  "theorems": [
+    "normFunctional_le_exp2_weightEnergy"
+  ],
+  "all_theorem_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx_dependencies": 0,
+  "source_sorry_count": 0,
+  "typecheck_exit_code": 0,
+  "build_log": "work/proof-wave1/weight-norm-build.log",
+  "axiom_log": "work/proof-wave1/weight-norm-axioms.log",
+  "proof_method": "support u≤2/3, positive log N, N^(2/log N)=exp2, denominator≥1, setIntegral_mono_on with proved integrability"
+}

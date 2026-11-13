@@ -1,0 +1,664 @@
+{
+  "title_zh": "本文最终结果、条件及当前Lean覆盖范围",
+  "source_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/outputs/formalization-preparation/LiLiuGoldbach16.tex",
+  "global_conventions_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。 \\(\\mathrm{GRH}(N)\\) 指每个导子整除 \\(N\\) 的本原 Dirichlet \\(L\\) 函数的非平凡零点实部均为 \\(1/2\\)。 所有 \\(N\\) 的极限沿偶数取；谱函数 \\(\\mathfrak X_N\\) 不是经典 \\(\\zeta\\) 函数。",
+  "results": [
+    {
+      "id": "main_S",
+      "label": "Theorem 1.1",
+      "category": "primary",
+      "summary_tex": "在 GRH 与预给的谱条件 S 下，得到加权 Goldbach 渐近：\\[\\mathcal G(N)=c_\\phi\\mathfrak S(N)+O_\\phi\\!\\left(\\frac{\\mathfrak S(N)}{h(N)}\\right),\\qquad \\frac{\\mathcal G(N)}{c_\\phi\\mathfrak S(N)}\\longrightarrow1.\\]隐常数仅依赖 \\(\\phi\\)，与 \\(N,h\\) 无关；充分大阈值可依赖 \\(h\\)。",
+      "hypotheses_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。对所有充分大的偶数 \\(N\\) 假设 \\(\\mathrm{GRH}(N)\\)。预先固定正函数 \\(h(N)\\to\\infty\\)，且最终 \\(\\eta_N=h(N)^2(\\log N)^3/(N\\mathfrak S(N))\\le1/4\\)；对充分大且满足 GRH 的偶数，\\(\\mathfrak X_N(q)\\ne0\\) 于开半空间 \\(\\Re q>1-\\eta_N\\)。",
+      "source_ranges": [
+        {
+          "start_line": 273,
+          "end_line": 298
+        },
+        {
+          "start_line": 3813,
+          "end_line": 3838
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.theorem_1_1"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "GRH和S均为假设，未被本文消除。",
+        "只有充分大偶数；有限初始区间未覆盖。",
+        "所有Lean证明仍是sorry。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "在 GRH 与预给的谱条件 S 下，得到加权 Goldbach 渐近：\\[\\mathcal G(N)=c_\\phi\\mathfrak S(N)+O_\\phi\\!\\left(\\frac{\\mathfrak S(N)}{h(N)}\\right),\\qquad \\frac{\\mathcal G(N)}{c_\\phi\\mathfrak S(N)}\\longrightarrow1.\\]隐常数仅依赖 \\(\\phi\\)，与 \\(N,h\\) 无关；充分大阈值可依赖 \\(h\\)。",
+      "required_dependencies": [
+        "proof:qp:dictionary",
+        "proof:bm:quadratic"
+      ],
+      "proof_edge_audit_zh": "3814–3825以η≤1/4把谱字典化成||T||≤S/(√3h)；3827–3836用统一Q界得Oφ(S/h)。GRH由定理前提提供，S自身的GRH蕴含不能代替它。",
+      "paper_nodes": [
+        "thm:goldbach-S"
+      ],
+      "review_anchors": [
+        "statement-theorem-1-1"
+      ]
+    },
+    {
+      "id": "main_R",
+      "label": "Theorem 1.2",
+      "category": "primary",
+      "summary_tex": "在 GRH 与谱条件 R 下，得到更强的余项：\\[\\mathcal G(N)=c_\\phi\\mathfrak S(N)+O_\\phi(\\delta_N),\\qquad \\delta_N=\\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}.\\]结合 \\(\\mathfrak S(N)\\ll\\log\\log N\\)，余项也趋于 \\(0\\)。",
+      "hypotheses_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。对所有充分大的偶数 \\(N\\) 假设 \\(\\mathrm{GRH}(N)\\)。谱条件 R 要求：充分大且满足 GRH 的偶数 \\(N\\)，\\(\\mathfrak X_N\\) 的每个四元数零点均有实部 \\(1/2\\)。",
+      "source_ranges": [
+        {
+          "start_line": 306,
+          "end_line": 323
+        },
+        {
+          "start_line": 3840,
+          "end_line": 3854
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.theorem_1_2"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "R不是经典ζ函数的黎曼猜想，而是新造谱乘积的零点条件。",
+        "本文未证明GRH或R；余项趋于0使用奇异级数增长界。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "在 GRH 与谱条件 R 下，得到更强的余项：\\[\\mathcal G(N)=c_\\phi\\mathfrak S(N)+O_\\phi(\\delta_N),\\qquad \\delta_N=\\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}.\\]结合 \\(\\mathfrak S(N)\\ll\\log\\log N\\)，余项也趋于 \\(0\\)。",
+      "required_dependencies": [
+        "proof:qp:dictionary",
+        "proof:bm:quadratic"
+      ],
+      "proof_edge_audit_zh": "3841–3847先以R⇔||T||≤δ，再以7.1控制误差；δ正性由N范围及S>1保证，无循环假设。",
+      "paper_nodes": [
+        "thm:goldbach-R"
+      ],
+      "review_anchors": [
+        "statement-theorem-1-2"
+      ]
+    },
+    {
+      "id": "prime_pairs",
+      "label": "Unnumbered prime-pair consequence",
+      "category": "primary",
+      "summary_tex": "在任一主定理的条件下，充分大的每个偶数都有许多真素数表示：\\[\\#\\{(p_1,p_2):p_1+p_2=N,\\ p_i\\text{ 为素数},\\ N/3\\le p_i\\le2N/3\\}\\gg_\\phi\\frac{\\mathfrak S(N)N}{(\\log N)^2}.\\]这里计数有序素数对。",
+      "hypotheses_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。对所有充分大的偶数 \\(N\\) 假设 \\(\\mathrm{GRH}(N)\\)。再假设 R，或者存在满足 S 的预给 admissible 函数 \\(h\\)。",
+      "source_ranges": [
+        {
+          "start_line": 325,
+          "end_line": 328
+        },
+        {
+          "start_line": 1018,
+          "end_line": 1026
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.primePair_consequence"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "由加权von Mangoldt相关得到真素数对还须去除高次素数幂贡献，并使用每对权≤(logN)²/N；正文未展开这段标准论证。",
+        "现声明只是sorry，不应从G>0直接跳到真素数。",
+        "未覆盖有限初始偶数，故不是无条件强Goldbach。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "在任一主定理的条件下，充分大的每个偶数都有许多真素数表示：\\[\\#\\{(p_1,p_2):p_1+p_2=N,\\ p_i\\text{ 为素数},\\ N/3\\le p_i\\le2N/3\\}\\gg_\\phi\\frac{\\mathfrak S(N)N}{(\\log N)^2}.\\]这里计数有序素数对。",
+      "required_dependencies": [
+        "thm:goldbach-S",
+        "thm:goldbach-R",
+        "external:proper_prime_power_removal",
+        "external:weight_mass_positivity"
+      ],
+      "proof_edge_audit_zh": "高次素数幂总贡献粗界O(N^−1/2 log³N)=o(1)已足够；cφ>0、S>1让正主项保留。候选项目的PrimePowerRemoval接口仅可作为复用来源，未作为本文件已证依赖。",
+      "paper_nodes": [
+        "consequence:prime_pairs"
+      ],
+      "review_anchors": [
+        "support-liliugoldbach16-primepair_consequence"
+      ]
+    },
+    {
+      "id": "R_implies_S",
+      "label": "R implies S",
+      "category": "secondary",
+      "summary_tex": "谱条件之间有单向强弱关系：\\[\\mathrm R\\Longrightarrow\\mathrm S(h)\\quad\\text{对每个预给 admissible }h.\\]因为 \\(1-\\eta_N\\ge3/4>1/2\\)，临界线上的零点不会进入被排除的开半空间。",
+      "hypotheses_tex": "\\(h\\) 正、沿偶数趋于无穷，且 \\(\\eta_N\\le1/4\\) 最终成立；R 与 S 都只针对满足 \\(\\mathrm{GRH}(N)\\) 的充分大偶数。",
+      "source_ranges": [
+        {
+          "start_line": 312,
+          "end_line": 313
+        },
+        {
+          "start_line": 3850,
+          "end_line": 3852
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.theorem_1_2_hypothesisR_implies_S"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "没有证明S⇒R；某个测试向量上的算术误差小也不推出整个算子范数小。",
+        "这是新谱函数条件之间的关系，不是经典RH推出Goldbach的定理。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "谱条件之间有单向强弱关系：\\[\\mathrm R\\Longrightarrow\\mathrm S(h)\\quad\\text{对每个预给 admissible }h.\\]因为 \\(1-\\eta_N\\ge3/4>1/2\\)，临界线上的零点不会进入被排除的开半空间。",
+      "paper_nodes": [
+        "consequence:R_implies_S"
+      ],
+      "review_anchors": [
+        "statement-theorem-1-2"
+      ]
+    },
+    {
+      "id": "exact_error",
+      "label": "Theorem 7.1",
+      "category": "secondary",
+      "summary_tex": "核心桥梁是精确的带符号恒等式：\\[c_\\phi\\mathfrak S(N)-\\mathcal G(N)=\\langle T_Nv_N,v_N\\rangle,\\qquad |\\mathcal G(N)-c_\\phi\\mathfrak S(N)|\\le\\mathcal Q_N\\|T_N\\|\\ll_\\phi\\|T_N\\|.\\]",
+      "hypotheses_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。偶数 \\(N>e^{10}\\) 且 \\(\\mathrm{GRH}(N)\\)；\\(\\alpha_N=1/\\log N,\\beta=1/8\\)，\\(\\mathcal Q_N=\\|v_N\\|^2\\)。不需要 S 或 R。",
+      "source_ranges": [
+        {
+          "start_line": 3710,
+          "end_line": 3722
+        },
+        {
+          "start_line": 3896,
+          "end_line": 3914
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.theorem_7_1",
+        "LiLiuGoldbach16.theorem_7_1_uniform"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "这是条件于GRH的精确重写和误差传递；本身未给满足主定理所需的小范数。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "核心桥梁是精确的带符号恒等式：\\[c_\\phi\\mathfrak S(N)-\\mathcal G(N)=\\langle T_Nv_N,v_N\\rangle,\\qquad |\\mathcal G(N)-c_\\phi\\mathfrak S(N)|\\le\\mathcal Q_N\\|T_N\\|\\ll_\\phi\\|T_N\\|.\\]",
+      "paper_nodes": [
+        "proof:bm:quadratic"
+      ],
+      "review_anchors": [
+        "statement-theorem-7-1"
+      ]
+    },
+    {
+      "id": "baseline_GRH",
+      "label": "Theorem 6.2",
+      "category": "secondary",
+      "summary_tex": "仅用 GRH 能得到的基线是\\[\\|T_N\\|\\le\\|T_N\\|_{\\mathrm{HS}}\\ll(\\log N)^2,\\qquad \\eta_N^{\\mathrm{GRH}}\\asymp\\frac{\\mathfrak S(N)}{N\\log N}.\\]它给一个零点排除半空间，但尚不足以让 Goldbach 误差为 \\(o(\\mathfrak S(N))\\)。",
+      "hypotheses_tex": "充分大偶数 \\(N\\) 逐个满足 \\(\\mathrm{GRH}(N)\\)；常数与阈值绝对。不需假设其它模数 GRH。",
+      "source_ranges": [
+        {
+          "start_line": 2616,
+          "end_line": 2629
+        },
+        {
+          "start_line": 284,
+          "end_line": 287
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.theorem_6_2"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "“只用GRH”仍不是无条件。",
+        "所需S宽度与此供给宽度之比约为h(N)²(logN)⁴/S(N)²；现有分量分别估计未补上这一差距。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "仅用 GRH 能得到的基线是\\[\\|T_N\\|\\le\\|T_N\\|_{\\mathrm{HS}}\\ll(\\log N)^2,\\qquad \\eta_N^{\\mathrm{GRH}}\\asymp\\frac{\\mathfrak S(N)}{N\\log N}.\\]它给一个零点排除半空间，但尚不足以让 Goldbach 误差为 \\(o(\\mathfrak S(N))\\)。",
+      "paper_nodes": [
+        "proof:grh:main-theorem"
+      ],
+      "review_anchors": [
+        "statement-theorem-6-2"
+      ]
+    },
+    {
+      "id": "width_criterion",
+      "label": "Lemma 7.5",
+      "category": "secondary",
+      "summary_tex": "一般宽度的算术准则为\\[\\frac{|\\mathcal G(N)-c_\\phi\\mathfrak S(N)|}{c_\\phi\\mathfrak S(N)}\\ll_\\phi\\sqrt{\\frac{(\\log N)^3}{N\\eta_N\\mathfrak S(N)}}.\\]因此只要沿所考虑的偶数序列 \\(N\\eta_N\\mathfrak S(N)/(\\log N)^3\\to\\infty\\)，便得到相对渐近。",
+      "hypotheses_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。每个所考虑的偶数 \\(N>e^{10}\\) 满足 GRH，\\(0<\\eta_N\\le1/4\\)，且 \\(\\mathfrak X_N(q)\\ne0\\) 于 \\(\\Re q>1-\\eta_N\\)。",
+      "source_ranges": [
+        {
+          "start_line": 3781,
+          "end_line": 3795
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.lemma_7_5",
+        "LiLiuGoldbach16.lemma_7_5_asymptotic"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "仅对满足全部逐点条件的序列成立；不是对所有偶数自动成立。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "一般宽度的算术准则为\\[\\frac{|\\mathcal G(N)-c_\\phi\\mathfrak S(N)|}{c_\\phi\\mathfrak S(N)}\\ll_\\phi\\sqrt{\\frac{(\\log N)^3}{N\\eta_N\\mathfrak S(N)}}.\\]因此只要沿所考虑的偶数序列 \\(N\\eta_N\\mathfrak S(N)/(\\log N)^3\\to\\infty\\)，便得到相对渐近。",
+      "paper_nodes": [
+        "proof:v9:width-arithmetic-estimate"
+      ],
+      "review_anchors": [
+        "statement-lemma-7-5"
+      ]
+    },
+    {
+      "id": "variable_strip",
+      "label": "Proposition A.1 and A.2",
+      "category": "secondary",
+      "summary_tex": "对每个先固定的 \\(c>0\\)，可将左边界改为 \\(\\alpha_{N,c}=c/\\log N\\)，保持\\[c_\\phi\\mathfrak S(N)-\\mathcal G(N)=\\langle T_{N,c}v_{N,c},v_{N,c}\\rangle.\\]并有 \\(\\mathcal Q_{N,c}\\le e^{2c}(2\\pi)^{-1}\\int_0^\\infty |V(u)|^2du/u\\)，以及相应的 S、R 余项 \\(O_{\\phi,c}(\\mathfrak S(N)/h_c(N))\\)、\\(O_{\\phi,c}(\\delta_N)\\)。",
+      "hypotheses_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。\\(c>0\\) 先固定；偶数 \\(N\\ge4\\)、\\(N>e^{10c}\\)、GRH(N)。算术余项分别还需 S(N,c;h_c) 或 R(N,c)。\\(\\delta_N\\) 不随 \\(c\\) 改变。",
+      "source_ranges": [
+        {
+          "start_line": 3949,
+          "end_line": 3989
+        },
+        {
+          "start_line": 4033,
+          "end_line": 4068
+        },
+        {
+          "start_line": 4092,
+          "end_line": 4098
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.proposition_A_1",
+        "LiLiuGoldbach16.proposition_A_1_operator_spec",
+        "LiLiuGoldbach16.proposition_A_2",
+        "LiLiuGoldbach16.proposition_A_2_pointwise"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "不能直接调用主文固定α声明；需重放一般带证明和新增generic谱字典，仍未证明。",
+        "阈值、admissibility及h_c的增长不要求对c一致；不能把固定c后N→∞偷换为N固定c→0。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "对每个先固定的 \\(c>0\\)，可将左边界改为 \\(\\alpha_{N,c}=c/\\log N\\)，保持\\[c_\\phi\\mathfrak S(N)-\\mathcal G(N)=\\langle T_{N,c}v_{N,c},v_{N,c}\\rangle.\\]并有 \\(\\mathcal Q_{N,c}\\le e^{2c}(2\\pi)^{-1}\\int_0^\\infty |V(u)|^2du/u\\)，以及相应的 S、R 余项 \\(O_{\\phi,c}(\\mathfrak S(N)/h_c(N))\\)、\\(O_{\\phi,c}(\\delta_N)\\)。",
+      "paper_nodes": [
+        "proof:v9:variable-boundary-realization",
+        "proof:v9:parameter-spectral-conditions"
+      ],
+      "review_anchors": [
+        "statement-proposition-a-1",
+        "statement-proposition-a-2"
+      ]
+    },
+    {
+      "id": "boundary_balance",
+      "label": "Lemma A.3",
+      "category": "secondary",
+      "summary_tex": "在原有估计内，改变边界常数不能消除对数差距：\\[\\mathcal Q_\\alpha\\asymp_\\phi N^{2\\alpha},\\quad M_\\alpha=C((\\log N)^2+\\alpha^{-2}),\\quad \\mathcal Q_\\alpha M_\\alpha\\asymp_\\phi(\\log N)^2e^{2c}(1+c^{-2}).\\]当 \\(c\\downarrow0\\) 或 \\(c\\to\\infty\\) 时，最后的 \\(c\\) 因子均发散。",
+      "hypotheses_tex": "固定非零实权 \\(\\phi\\in C_c^\\infty(\\mathbb R)\\)，支撑在 \\([1/3,2/3]\\)，满足 \\(0\\le\\phi\\le1\\)、\\(\\phi(u)=\\phi(1-u)\\)；\\(c_\\phi=\\int_0^1\\phi(u)^2\\,du>0\\)。充分大偶数满足 GRH；对 \\(0<\\alpha<1/10\\) 一致，且代入 \\(\\alpha=c/\\log N\\)。宽度比的结论另限于两个实际宽度均 admissible 的情形。",
+      "source_ranges": [
+        {
+          "start_line": 4110,
+          "end_line": 4134
+        },
+        {
+          "start_line": 4166,
+          "end_line": 4171
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.lemma_A_3",
+        "LiLiuGoldbach16.lemma_A_3_balance",
+        "LiLiuGoldbach16.lemma_A_3_absolute_operator_bound",
+        "LiLiuGoldbach16.lemma_A_3_width_ratio"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "仅说明这些已有充分上界的最佳数量级，不证明真正范数的最优常数，也不证明任何方法都不可能改进。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "在原有估计内，改变边界常数不能消除对数差距：\\[\\mathcal Q_\\alpha\\asymp_\\phi N^{2\\alpha},\\quad M_\\alpha=C((\\log N)^2+\\alpha^{-2}),\\quad \\mathcal Q_\\alpha M_\\alpha\\asymp_\\phi(\\log N)^2e^{2c}(1+c^{-2}).\\]当 \\(c\\downarrow0\\) 或 \\(c\\to\\infty\\) 时，最后的 \\(c\\) 因子均发散。",
+      "paper_nodes": [
+        "proof:v9:boundary-balance"
+      ],
+      "review_anchors": [
+        "statement-lemma-a-3"
+      ]
+    },
+    {
+      "id": "small_c_obstruction",
+      "label": "Proposition A.4",
+      "category": "secondary",
+      "summary_tex": "固定模数的小 \\(c\\) 极限有真实障碍：\\[\\liminf_{c\\downarrow0}c\\|T_{N,c}\\|\\ge\\frac{2C_{N,\\gamma}\\log N}{1+\\gamma^2}>0.\\]因而足够小的 \\(c\\) 下 R(N,c) 失败；任意允许的零点排除宽度满足 \\(\\eta\\le\\delta_N^2c^2/(3z_N^2)\\)。",
+      "hypotheses_tex": "固定偶数 \\(N\\ge4\\) 满足 GRH；选择某个奇特征在 \\(\\rho=1/2+i\\gamma\\) 的非平凡零点。\\(C_{N,\\gamma}=2\\varphi(N)^{-1}\\sum_{\\chi\\in X_N^-}m_\\chi(\\rho)^2>0\\)。宽度要求 \\(0<\\eta\\le1/4\\)，且 \\(\\|T_{N,c}\\|\\ge z_N/c\\) 的小 \\(c\\) 域。",
+      "source_ranges": [
+        {
+          "start_line": 4181,
+          "end_line": 4208
+        },
+        {
+          "start_line": 4265,
+          "end_line": 4267
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.proposition_A_4",
+        "LiLiuGoldbach16.proposition_A_4_baseline_product"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "不否定固定c后N→∞的R/S，也不直接反驳主文c=1假设。",
+        "所选零点的存在作为A4显式条件，未在此声明中另证零点存在定理。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "固定模数的小 \\(c\\) 极限有真实障碍：\\[\\liminf_{c\\downarrow0}c\\|T_{N,c}\\|\\ge\\frac{2C_{N,\\gamma}\\log N}{1+\\gamma^2}>0.\\]因而足够小的 \\(c\\) 下 R(N,c) 失败；任意允许的零点排除宽度满足 \\(\\eta\\le\\delta_N^2c^2/(3z_N^2)\\)。",
+      "paper_nodes": [
+        "proof:v9:fixed-modulus-obstruction"
+      ],
+      "review_anchors": [
+        "statement-proposition-a-4"
+      ]
+    },
+    {
+      "id": "wide_exact_count",
+      "label": "Proposition B.1 and Lemma B.2",
+      "category": "secondary",
+      "summary_tex": "在 \\(N=30030\\) 有无条件的精确计数重写：\\[r_G(N)=\\frac N2\\mathcal J-\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E,\\qquad \\mathcal J=\\frac1{5760}\\sum_\\chi\\chi(-1)|I_\\chi|^2.\\]\\(I_\\chi\\) 位于 \\(\\Re s=1\\) 的绝对收敛线上，包含全部特征。",
+      "hypotheses_tex": "固定 \\(N=30030,A=16,L=1000\\) 和附录B定义的 \\(C^6\\) 宽截断 \\(\\eta\\)、\\(W\\)、\\(f=W/\\sqrt u\\)。有限修正必须按原定义精确计算；不假设GRH、S或R。",
+      "source_ranges": [
+        {
+          "start_line": 4316,
+          "end_line": 4327
+        },
+        {
+          "start_line": 4366,
+          "end_line": 4378
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.proposition_B_1",
+        "LiLiuGoldbach16.lemma_B_2"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "这是精确公式，不等于已经在Lean执行/认证905。",
+        "依赖30030没有素数或素数幂对角项的特殊有限事实，不可原样推广所有偶数。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "在 \\(N=30030\\) 有无条件的精确计数重写：\\[r_G(N)=\\frac N2\\mathcal J-\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E,\\qquad \\mathcal J=\\frac1{5760}\\sum_\\chi\\chi(-1)|I_\\chi|^2.\\]\\(I_\\chi\\) 位于 \\(\\Re s=1\\) 的绝对收敛线上，包含全部特征。",
+      "paper_nodes": [
+        "proof:v9:wide-weight-count",
+        "proof:v9:wide-character-moments"
+      ],
+      "review_anchors": [
+        "statement-proposition-b-1",
+        "statement-lemma-b-2"
+      ]
+    },
+    {
+      "id": "moment_certificate",
+      "label": "Lemma B.3",
+      "category": "secondary",
+      "summary_tex": "无条件的计数证书模板：\\[|\\mathcal J-\\widehat{\\mathcal J}|\\le2\\sqrt{\\widehat{\\mathcal D}}\\,\\varepsilon_I+\\varepsilon_I^2,\\quad r_G(N)\\in[\\widehat r_G-\\varepsilon_r,\\widehat r_G+\\varepsilon_r]\\cap\\mathbb Z,\\]\\[\\widehat r_G=\\frac N2\\widehat{\\mathcal J}-\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E,\\quad \\varepsilon_r=\\frac N2(2\\sqrt{\\widehat{\\mathcal D}}\\,\\varepsilon_I+\\varepsilon_I^2).\\]",
+      "hypotheses_tex": "\\(N=30030\\)，指定全部 \\(\\widehat I_\\chi\\)；\\(\\varepsilon_I\\ge0\\) 且 \\(5760^{-1}\\sum_\\chi|I_\\chi-\\widehat I_\\chi|^2\\le\\varepsilon_I^2\\)。\\(\\mathcal C_{\\rm pp},\\mathcal E\\) 精确；无需GRH。",
+      "source_ranges": [
+        {
+          "start_line": 4443,
+          "end_line": 4473
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.lemma_B_3"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "当前只有一般模板；尚未输入论文stored积分近似、有限变换有理包围、误差上界证书。",
+        "主积分A的求积误差在这个证书中消去，不是遗漏误差项。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "无条件的计数证书模板：\\[|\\mathcal J-\\widehat{\\mathcal J}|\\le2\\sqrt{\\widehat{\\mathcal D}}\\,\\varepsilon_I+\\varepsilon_I^2,\\quad r_G(N)\\in[\\widehat r_G-\\varepsilon_r,\\widehat r_G+\\varepsilon_r]\\cap\\mathbb Z,\\]\\[\\widehat r_G=\\frac N2\\widehat{\\mathcal J}-\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E,\\quad \\varepsilon_r=\\frac N2(2\\sqrt{\\widehat{\\mathcal D}}\\,\\varepsilon_I+\\varepsilon_I^2).\\]",
+      "numeric_905_certificate_provided": false,
+      "paper_nodes": [
+        "proof:v9:moment-error-interval"
+      ],
+      "review_anchors": [
+        "statement-lemma-b-3"
+      ]
+    },
+    {
+      "id": "count_905",
+      "label": "Appendix B exact numerical count 905",
+      "category": "numerical_or_illustrative",
+      "summary_tex": "论文声称经向外舍入得到\\[[904.725241,\\ 905.274759]\\cap\\mathbb Z=\\{905\\},\\]\\[r_G(30030)=905\\quad\\text{（无序）},\\qquad 1810\\quad\\text{（有序）}.\\]它是一个固定整数的无条件计数。此次独立Python筛法也复算得905，但这不是Lean证书。",
+      "hypotheses_tex": "论文数值认证需要实际 \\(\\widehat I_\\chi\\) 和有理区间计算证明 \\(\\varepsilon_I=1.68935\\times10^{-5}\\) 控制平均误差，并精确计算有限修正。全部条件不含GRH、S或R。",
+      "source_ranges": [
+        {
+          "start_line": 4475,
+          "end_line": 4497
+        }
+      ],
+      "Lean_names": [],
+      "stated_in_paper": true,
+      "lean_placeholder_available": false,
+      "lean_proof_status": "当前无此数值/例子的Lean定理或证书",
+      "uncovered_items_zh": [
+        "当前模块没有905的Lean定理，也没有stored积分数组、根单位包围及逐阶段区间变换证书。",
+        "独立有限枚举核查只能作额外复算，不能标成本文形式化已完成。",
+        "该固定N结果不能推全体偶数Goldbach。"
+      ],
+      "status": "not_formally_certified",
+      "formula_tex": "论文声称经向外舍入得到\\[[904.725241,\\ 905.274759]\\cap\\mathbb Z=\\{905\\},\\]\\[r_G(30030)=905\\quad\\text{（无序）},\\qquad 1810\\quad\\text{（有序）}.\\]它是一个固定整数的无条件计数。此次独立Python筛法也复算得905，但这不是Lean证书。",
+      "numeric_905_certificate_provided": false,
+      "paper_claims_certified": true,
+      "independent_check": {
+        "method": "Python bytearray Eratosthenes sieve and unordered pair enumeration",
+        "unordered_pairs": 905,
+        "ordered_pairs": 1810,
+        "edge_pairs": 75,
+        "formal_certificate": false
+      },
+      "paper_nodes": [
+        "numerical:905"
+      ],
+      "review_anchors": []
+    },
+    {
+      "id": "wide_Hardy",
+      "label": "Proposition B.4",
+      "category": "secondary",
+      "summary_tex": "同一个算子对宽权残差也有精确解释：\\[\\mathcal B=\\mathfrak S(N)c_f-\\mathcal J=\\langle T_{N,1}v_W,v_W\\rangle,\\qquad c_f=\\int_0^1 f(u)f(1-u)\\,du.\\]",
+      "hypotheses_tex": "\\(N=30030\\)、GRH(N)，\\(\\sigma_*=1/9\\)、\\(c=1\\)，使用附录的真实宽权 \\(f\\) 与泛函 \\(\\ell_W\\)。不需R。",
+      "source_ranges": [
+        {
+          "start_line": 4500,
+          "end_line": 4535
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.proposition_B_4",
+        "LiLiuGoldbach16.proposition_B_4_weight"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "宽权非对称且仅C6；必须重放适用的反演论证，不能调用主权IsWeight，也不能将cf换为∫f²。",
+        "无条件计数与此条件于GRH的Hardy解释是两条不同路径。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "同一个算子对宽权残差也有精确解释：\\[\\mathcal B=\\mathfrak S(N)c_f-\\mathcal J=\\langle T_{N,1}v_W,v_W\\rangle,\\qquad c_f=\\int_0^1 f(u)f(1-u)\\,du.\\]",
+      "paper_nodes": [
+        "proof:v9:wide-hardy-residual"
+      ],
+      "review_anchors": [
+        "statement-proposition-b-4"
+      ]
+    },
+    {
+      "id": "finite_spectral",
+      "label": "Proposition B.5",
+      "category": "secondary",
+      "summary_tex": "有限矩阵的谱定理给\\[X_{30030}(q)=\\det\\!\\left(I-\\frac{4q(1-q)}{\\delta_N^2}C^2\\right)=\\prod_{j=1}^{2562}\\left(1-\\frac{4\\lambda_j^2}{\\delta_N^2}q(1-q)\\right).\\]它满足 \\(X(1-q)=X(q)\\)；若 \\(\\|C\\|\\le\\delta_N\\)，则所有复零点实部为 \\(1/2\\)。",
+      "hypotheses_tex": "附录谱图语境假设GRH(30030)使实际核矩阵Hermitian。矩阵按两条边界、2562节点、正梯形权定义；临界线结论还要严格范数界 \\(\\|C\\|\\le\\delta_N\\)。",
+      "source_ranges": [
+        {
+          "start_line": 4535,
+          "end_line": 4569
+        }
+      ],
+      "Lean_names": [
+        "LiLiuGoldbach16.proposition_B_5"
+      ],
+      "stated_in_paper": true,
+      "lean_placeholder_available": true,
+      "lean_proof_status": "占位声明by sorry，尚未完成证明",
+      "uncovered_items_zh": [
+        "有限维代数结论不含无限算子截断/离散误差估计。",
+        "不把2562个近似特征值当成无限算子全谱。"
+      ],
+      "status": "conditional_statement_unproved_in_lean",
+      "formula_tex": "有限矩阵的谱定理给\\[X_{30030}(q)=\\det\\!\\left(I-\\frac{4q(1-q)}{\\delta_N^2}C^2\\right)=\\prod_{j=1}^{2562}\\left(1-\\frac{4\\lambda_j^2}{\\delta_N^2}q(1-q)\\right).\\]它满足 \\(X(1-q)=X(q)\\)；若 \\(\\|C\\|\\le\\delta_N\\)，则所有复零点实部为 \\(1/2\\)。",
+      "paper_nodes": [
+        "proof:v9:finite-spectral-zeros"
+      ],
+      "review_anchors": [
+        "statement-proposition-b-5"
+      ]
+    },
+    {
+      "id": "finite_spectral_numerics",
+      "label": "Appendix B finite spectral experiment",
+      "category": "numerical_or_illustrative",
+      "summary_tex": "论文报告有限矩阵近似极端特征值 \\(-0.353421,0.357462\\)，\\(\\|C\\|/\\delta_N\\approx0.826864<1\\)，\\(\\delta_N\\approx0.432310239587548\\)。这展示有限模型临界线零点的数值现象。",
+      "hypotheses_tex": "固定 \\(N=30030\\)；谱核的解释仍在GRH语境。近似计算使用有限高度、固定步长和素数截断。",
+      "source_ranges": [
+        {
+          "start_line": 4571,
+          "end_line": 4579
+        },
+        {
+          "start_line": 4597,
+          "end_line": 4599
+        }
+      ],
+      "Lean_names": [],
+      "stated_in_paper": true,
+      "lean_placeholder_available": false,
+      "lean_proof_status": "当前无此数值/例子的Lean定理或证书",
+      "uncovered_items_zh": [
+        "论文明确说明cutoff stability及高精度点检查不能控制无限算子截断/离散误差，不能认证R(30030,1)。",
+        "当前Lean也未严格认证有限矩阵的数值范数界；B5只给条件定理。"
+      ],
+      "status": "not_formally_certified",
+      "formula_tex": "论文报告有限矩阵近似极端特征值 \\(-0.353421,0.357462\\)，\\(\\|C\\|/\\delta_N\\approx0.826864<1\\)，\\(\\delta_N\\approx0.432310239587548\\)。这展示有限模型临界线零点的数值现象。",
+      "numeric_905_certificate_provided": false,
+      "paper_nodes": [
+        "illustration:finite_spectrum"
+      ],
+      "review_anchors": []
+    },
+    {
+      "id": "scope_exclusions",
+      "label": "Section 8 comparisons and non-results",
+      "category": "numerical_or_illustrative",
+      "summary_tex": "第8节讨论仿射筛表达 \\(F(U^nv)=n(n+2)\\) 及 Goldbach 多项式 \\(F_N(n)=n(N-n)\\)，指出后者要求随 \\(N\\) 一致的估计。它没有证明无条件 Goldbach、经典 RH/GRH 或孪生素数猜想。",
+      "hypotheses_tex": "这些是方法比较与未来研究讨论，不是进入主证明的定理假设或已证终点。",
+      "source_ranges": [
+        {
+          "start_line": 3859,
+          "end_line": 3920
+        }
+      ],
+      "Lean_names": [],
+      "stated_in_paper": true,
+      "lean_placeholder_available": false,
+      "lean_proof_status": "当前无此数值/例子的Lean定理或证书",
+      "uncovered_items_zh": [
+        "没有“先借GRH/S/R再还上”的去条件化证明。",
+        "本文只证明条件传递与若干独立有限/解析结果；无法由谱函数的对称性推出所需范数界。"
+      ],
+      "status": "not_formally_certified",
+      "formula_tex": "第8节讨论仿射筛表达 \\(F(U^nv)=n(n+2)\\) 及 Goldbach 多项式 \\(F_N(n)=n(N-n)\\)，指出后者要求随 \\(N\\) 一致的估计。它没有证明无条件 Goldbach、经典 RH/GRH 或孪生素数猜想。",
+      "paper_nodes": [
+        "illustration:section8"
+      ],
+      "review_anchors": []
+    }
+  ],
+  "strength_relations": [
+    {
+      "from": "main_R",
+      "to": "main_S",
+      "relation": "stronger_hypothesis_and_remainder",
+      "explanation_zh": "R⇒S(h)对每个预给admissible h；δ=(S/h)√η≤S/(2h)。S⇒R未证。"
+    },
+    {
+      "from": "main_S",
+      "to": "prime_pairs",
+      "relation": "conditional_consequence",
+      "explanation_zh": "需cφ正、S正、高次素数幂去除及每个素数对权上界。"
+    },
+    {
+      "from": "main_R",
+      "to": "prime_pairs",
+      "relation": "conditional_consequence",
+      "explanation_zh": "同一真素数幂去除桥；只有充分大偶数。"
+    },
+    {
+      "from": "baseline_GRH",
+      "to": "main_S",
+      "relation": "insufficient",
+      "explanation_zh": "GRH给的宽度数量级S/(NlogN)，所需S宽度h²log³N/(NS)，比值h²log⁴N/S²远大；不能宣称已还S贷款。"
+    },
+    {
+      "from": "small_c_obstruction",
+      "to": "variable_strip",
+      "relation": "different_order_of_limits",
+      "explanation_zh": "固定N且c→0的障碍不否定固定c且N→∞。"
+    },
+    {
+      "from": "finite_spectral_numerics",
+      "to": "main_R",
+      "relation": "does_not_imply",
+      "explanation_zh": "一个有限矩阵的近似范数界既不能认证同N无限T，也不能给所有充分大N的R。"
+    },
+    {
+      "from": "count_905",
+      "to": "prime_pairs",
+      "relation": "does_not_generalize",
+      "explanation_zh": "仅一个固定偶数的无条件计数，无全N结论。"
+    }
+  ],
+  "complete_goldbach_requirements_zh": [
+    "至少为所有充分大偶数建立本文所需GRH（或重建不需GRH的算子桥），再建立足够的S/R或直接控制特定二次型。",
+    "主定理渐近阈值以外的有限初始偶数需独立检查。",
+    "当前Lean文件所有定理仍是sorry，类型检查不是上述数学义务已经完成。"
+  ],
+  "numeric_905_certificate_provided": false,
+  "proofs_completed": 0
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "expected": "TexAudit14.Weight",
+    "actual": "LiLiuGoldbach16.IsWeight",
+    "tex_lines": [
+      151,
+      154
+    ]
+  },
+  {
+    "expected": "TexAudit14.Mass",
+    "actual": "LiLiuGoldbach16.weightMass",
+    "tex_lines": [
+      160,
+      164
+    ]
+  },
+  {
+    "expected": "TexAudit14.Goldbach",
+    "actual": "LiLiuGoldbach16.goldbach",
+    "tex_lines": [
+      154,
+      164
+    ]
+  },
+  {
+    "expected": "TexAudit14.GRHExpected",
+    "actual": "LiLiuGoldbach16.GRH",
+    "tex_lines": [
+      182,
+      185
+    ]
+  },
+  {
+    "expected": "TexAudit14.EventuallyEven",
+    "actual": "LiLiuGoldbach16.EvenEventually",
+    "tex_lines": [
+      345,
+      346
+    ]
+  },
+  {
+    "expected": "TexAudit14.TendsToInfinityEven",
+    "actual": "LiLiuGoldbach16.EvenTendstoInfinity",
+    "tex_lines": [
+      273,
+      278
+    ]
+  },
+  {
+    "expected": "TexAudit14.AsymptoticEven",
+    "actual": "LiLiuGoldbach16.EvenAsymptotic",
+    "tex_lines": [
+      289,
+      298
+    ]
+  },
+  {
+    "expected": "TexAudit14.Width",
+    "actual": "LiLiuGoldbach16.zeroFreeWidth",
+    "tex_lines": [
+      273,
+      278
+    ]
+  },
+  {
+    "expected": "TexAudit14.Admissible",
+    "actual": "LiLiuGoldbach16.IsAdmissible",
+    "tex_lines": [
+      273,
+      282
+    ]
+  },
+  {
+    "expected": "TexAudit14.S",
+    "actual": "LiLiuGoldbach16.HypothesisS",
+    "tex_lines": [
+      273,
+      282
+    ]
+  },
+  {
+    "expected": "TexAudit14.R",
+    "actual": "LiLiuGoldbach16.HypothesisR",
+    "tex_lines": [
+      306,
+      310
+    ]
+  },
+  {
+    "expected": "TexAudit14.Scale",
+    "actual": "LiLiuGoldbach16.spectralScale",
+    "tex_lines": [
+      229,
+      233
+    ]
+  },
+  {
+    "expected": "TexAudit14.PrimeCount",
+    "actual": "LiLiuGoldbach16.PrimePairCount",
+    "tex_lines": [
+      325,
+      328
+    ]
+  },
+  {
+    "expected": "TexAudit14.BetaRegion",
+    "actual": "LiLiuGoldbach16.betaDomain",
+    "tex_lines": [
+      1480,
+      1482
+    ]
+  },
+  {
+    "expected": "TexAudit14.Omega",
+    "actual": "LiLiuGoldbach16.analyticDomain",
+    "tex_lines": [
+      1704,
+      1709
+    ]
+  },
+  {
+    "expected": "TexAudit14.BetaSigned",
+    "actual": "LiLiuGoldbach16.betaKernel",
+    "tex_lines": [
+      1461,
+      1466
+    ]
+  },
+  {
+    "expected": "TexAudit14.GammaRatio",
+    "actual": "LiLiuGoldbach16.gammaQuotient",
+    "tex_lines": [
+      1532,
+      1535
+    ]
+  },
+  {
+    "expected": "TexAudit14.DensityProduct",
+    "actual": "LiLiuGoldbach16.densityEulerProduct",
+    "tex_lines": [
+      1598,
+      1604
+    ]
+  },
+  {
+    "expected": "TexAudit14.ContinuedDensity",
+    "actual": "LiLiuGoldbach16.continuedDensity",
+    "tex_lines": [
+      1593,
+      1604
+    ]
+  },
+  {
+    "expected": "TexAudit14.Model",
+    "actual": "LiLiuGoldbach16.betaModel",
+    "tex_lines": [
+      1690,
+      1699
+    ]
+  },
+  {
+    "expected": "TexAudit14.ContinuedModel",
+    "actual": "LiLiuGoldbach16.continuedModel",
+    "tex_lines": [
+      1695,
+      1709
+    ]
+  },
+  {
+    "expected": "TexAudit14.Residual",
+    "actual": "LiLiuGoldbach16.residual",
+    "tex_lines": [
+      1732,
+      1747
+    ]
+  }
+]

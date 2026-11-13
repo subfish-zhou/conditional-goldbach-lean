@@ -1,0 +1,167 @@
+{
+  "theorem_1_1": {
+    "root_count": 1,
+    "reachable_declaration_count": 77145,
+    "external_project_declaration_count": 68,
+    "external_project_module_count": 5,
+    "external_direct_boundary_declaration_count": 20,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "external_project_module_counts": {
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation": 9,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries": 27,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds": 2,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLWeakStripDerivative": 7,
+      "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries": 23
+    }
+  },
+  "theorem_1_2": {
+    "root_count": 1,
+    "reachable_declaration_count": 77134,
+    "external_project_declaration_count": 68,
+    "external_project_module_count": 5,
+    "external_direct_boundary_declaration_count": 20,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "external_project_module_counts": {
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation": 9,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries": 27,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds": 2,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLWeakStripDerivative": 7,
+      "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries": 23
+    }
+  },
+  "primePair_consequence": {
+    "root_count": 1,
+    "reachable_declaration_count": 77314,
+    "external_project_declaration_count": 72,
+    "external_project_module_count": 5,
+    "external_direct_boundary_declaration_count": 22,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "external_project_module_counts": {
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation": 9,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries": 27,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds": 2,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLWeakStripDerivative": 7,
+      "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries": 27
+    }
+  },
+  "reviewed_102": {
+    "root_count": 102,
+    "reachable_declaration_count": 89637,
+    "external_project_declaration_count": 839,
+    "external_project_module_count": 22,
+    "external_direct_boundary_declaration_count": 30,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "external_project_module_counts": {
+      "AnalyticNumberTheory.Mertens.Basic": 4,
+      "AnalyticNumberTheory.Mertens.PartialSummation": 24,
+      "AnalyticNumberTheory.PrimeDistribution.ChebyshevTheta": 2,
+      "AnalyticNumberTheory.PrimeDistribution.PrimeNumberTheorem": 1,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation": 9,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries": 27,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds": 2,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLWeakStripDerivative": 7,
+      "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries": 33,
+      "MathlibNt.SieveTheory.Arithmetic.MertensTheorem": 9,
+      "PrimeNumberTheoremAnd.Auxiliary": 9,
+      "PrimeNumberTheoremAnd.EulerMaclaurin": 11,
+      "PrimeNumberTheoremAnd.Fourier": 1,
+      "PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support": 2,
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic": 2,
+      "PrimeNumberTheoremAnd.MediumPNT": 151,
+      "PrimeNumberTheoremAnd.MellinCalculus": 99,
+      "PrimeNumberTheoremAnd.Rectangle": 18,
+      "PrimeNumberTheoremAnd.ResidueCalcOnRectangles": 57,
+      "PrimeNumberTheoremAnd.SmoothExistence": 33,
+      "PrimeNumberTheoremAnd.ZetaBounds": 334,
+      "PrimeNumberTheoremAnd.ZetaConj": 4
+    }
+  },
+  "public_library": {
+    "root_count": 2869,
+    "reachable_declaration_count": 90403,
+    "external_project_declaration_count": 839,
+    "external_project_module_count": 22,
+    "external_direct_boundary_declaration_count": 30,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "external_project_module_counts": {
+      "AnalyticNumberTheory.Mertens.Basic": 4,
+      "AnalyticNumberTheory.Mertens.PartialSummation": 24,
+      "AnalyticNumberTheory.PrimeDistribution.ChebyshevTheta": 2,
+      "AnalyticNumberTheory.PrimeDistribution.PrimeNumberTheorem": 1,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation": 9,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries": 27,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds": 2,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLWeakStripDerivative": 7,
+      "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries": 33,
+      "MathlibNt.SieveTheory.Arithmetic.MertensTheorem": 9,
+      "PrimeNumberTheoremAnd.Auxiliary": 9,
+      "PrimeNumberTheoremAnd.EulerMaclaurin": 11,
+      "PrimeNumberTheoremAnd.Fourier": 1,
+      "PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support": 2,
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic": 2,
+      "PrimeNumberTheoremAnd.MediumPNT": 151,
+      "PrimeNumberTheoremAnd.MellinCalculus": 99,
+      "PrimeNumberTheoremAnd.Rectangle": 18,
+      "PrimeNumberTheoremAnd.ResidueCalcOnRectangles": 57,
+      "PrimeNumberTheoremAnd.SmoothExistence": 33,
+      "PrimeNumberTheoremAnd.ZetaBounds": 334,
+      "PrimeNumberTheoremAnd.ZetaConj": 4
+    }
+  },
+  "all_local_declarations": {
+    "root_count": 2938,
+    "reachable_declaration_count": 90420,
+    "external_project_declaration_count": 839,
+    "external_project_module_count": 22,
+    "external_direct_boundary_declaration_count": 30,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "external_project_module_counts": {
+      "AnalyticNumberTheory.Mertens.Basic": 4,
+      "AnalyticNumberTheory.Mertens.PartialSummation": 24,
+      "AnalyticNumberTheory.PrimeDistribution.ChebyshevTheta": 2,
+      "AnalyticNumberTheory.PrimeDistribution.PrimeNumberTheorem": 1,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation": 9,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries": 27,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds": 2,
+      "MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLWeakStripDerivative": 7,
+      "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries": 33,
+      "MathlibNt.SieveTheory.Arithmetic.MertensTheorem": 9,
+      "PrimeNumberTheoremAnd.Auxiliary": 9,
+      "PrimeNumberTheoremAnd.EulerMaclaurin": 11,
+      "PrimeNumberTheoremAnd.Fourier": 1,
+      "PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support": 2,
+      "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic": 2,
+      "PrimeNumberTheoremAnd.MediumPNT": 151,
+      "PrimeNumberTheoremAnd.MellinCalculus": 99,
+      "PrimeNumberTheoremAnd.Rectangle": 18,
+      "PrimeNumberTheoremAnd.ResidueCalcOnRectangles": 57,
+      "PrimeNumberTheoremAnd.SmoothExistence": 33,
+      "PrimeNumberTheoremAnd.ZetaBounds": 334,
+      "PrimeNumberTheoremAnd.ZetaConj": 4
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "scope": "38 named results / 102 reviewed theorem statements, plus one uniform-constant theorem",
+  "named_results": 38,
+  "original_theorem_statements": 102,
+  "independent_full_types": 103,
+  "definition_families": 121,
+  "reviewed_definition_declarations": 171,
+  "independently_reconstructed_definition_bodies": 96,
+  "distinct_definition_targets": 95,
+  "semantic_bridge_theorems": 18,
+  "numerical_cross_checks": [
+    "TexAuditAB.Numeric.unorderedPrimePairs_eq_905"
+  ],
+  "comparator_targets": 218,
+  "comparator": {
+    "tool": "Lean 4.35.0 built-in lake comparator",
+    "sandbox": "bwrap enabled; extra read-only mounts for the two local Lake path dependencies",
+    "sandbox_adapter_sha256": "7ec58c362ad99d23e72295b61d40cb7f20bcc43b891a04c262328b9bf78a18fd",
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "runs": [
+      {
+        "name": "independent-full-types-build",
+        "command": [
+          "lake",
+          "--no-cache",
+          "build",
+          "TexAuditComparator.CheckTypes"
+        ],
+        "exit_code": 0,
+        "start_utc": "2026-11-13T18:26:49.773185+00:00",
+        "wall_seconds": 5.061341498047113,
+        "log": "independent-full-types-build.log",
+        "log_sha256": "e6114a77e5d654a5bd56e3e0723b04966cf71c1d6347efc4ef60b61e9dbff98f"
+      },
+      {
+        "name": "comparator",
+        "command": [
+          "lake",
+          "comparator",
+          "--config",
+          "comparator.json"
+        ],
+        "exit_code": 0,
+        "start_utc": "2026-11-13T18:26:54.835396+00:00",
+        "wall_seconds": 557.291805960238,
+        "log": "comparator.log",
+        "log_sha256": "fdb3030aa27a7688d03f4fe8c2d14d4248b381f6e469d28bdf035c16bb1cdc39"
+      },
+      {
+        "name": "control-condition",
+        "command": [
+          "lake",
+          "comparator",
+          "--config",
+          "control-condition.json"
+        ],
+        "exit_code": 1,
+        "start_utc": "2026-11-13T18:36:12.128089+00:00",
+        "wall_seconds": 4.571054354310036,
+        "log": "control-condition.log",
+        "log_sha256": "9baf77427cae2851003223277e94a4d96ce06b489ddd8091736806e07b09e5c5"
+      },
+      {
+        "name": "control-quantifier",
+        "command": [
+          "lake",
+          "comparator",
+          "--config",
+          "control-quantifier.json"
+        ],
+        "exit_code": 1,
+        "start_utc": "2026-11-13T18:36:16.699608+00:00",
+        "wall_seconds": 4.509090404957533,
+        "log": "control-quantifier.log",
+        "log_sha256": "d858bfbdc2920cd54f7b6eae038c1e04b88edc235ec702ee2982d60a0009acee"
+      },
+      {
+        "name": "control-definition",
+        "command": [
+          "lake",
+          "comparator",
+          "--config",
+          "control-definition.json"
+        ],
+        "exit_code": 1,
+        "start_utc": "2026-11-13T18:36:21.209214+00:00",
+        "wall_seconds": 5.072135377675295,
+        "log": "control-definition.log",
+        "log_sha256": "43214dbe9c91f11333750700724fcdc8f284549c8e28c9a81f63e3a32cebc532"
+      }
+    ],
+    "library_sources_unchanged": true,
+    "reference_sources_unchanged": true,
+    "statement_count": 103,
+    "definition_body_count": 96,
+    "semantic_bridge_count": 18,
+    "comparator_target_count": 218,
+    "all_independent_full_types_equal": true,
+    "accepted": true,
+    "negative_controls_rejected": true,
+    "staged_references_match_frozen_sources": true
+  },
+  "source_tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
+  "metrics": {
+    "library_files": 253,
+    "library_physical_lines": 29628,
+    "with_entry_files": 254,
+    "with_entry_physical_lines": 29629,
+    "nonblank_lines_with_entry": 27451,
+    "scope": "Actual import closure of LiLiuGoldbach; excludes mathlib/goldbach dependencies, review baselines, audit code and generated HTML.",
+    "elapsed_formalization_record": {
+      "basis": "Filesystem birth of the proof project toolchain file through the mtime of the completed verified archive. Not exact human prompt time or active CPU time. Excludes earlier PDF/TeX preparation and the present audit.",
+      "start_utc": "2026-11-13T12:30:28.643881+00:00",
+      "end_utc": "2026-11-13T17:55:48.862902+00:00",
+      "elapsed_seconds": 19520.219021,
+      "sources": [
+        "formalization/lean-toolchain",
+        "outputs/LiLiuGoldbach16-formalized.zip"
+      ]
+    },
+    "previous_final_incremental_build_seconds_from_file_timestamps": 30.266994033
+  },
+  "warm_build": {
+    "mode": "warm",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "cwd": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization",
+    "start_utc": "2026-11-13T18:08:02.272165+00:00",
+    "wall_seconds": 4.7542091608047485,
+    "user_cpu_seconds": 5.895944,
+    "system_cpu_seconds": 3.498193,
+    "largest_child_maxrss_kib": 929968,
+    "queue_seconds_excluded": 6.361407682299614,
+    "exit_code": 0,
+    "cpu_count": 8,
+    "machine": "x86_64",
+    "lean_num_threads": "default",
+    "dependency_cache": "existing Mathlib and goldbach build artifacts reused",
+    "source_cache": "existing"
+  },
+  "project_clean_build": {
+    "mode": "project-clean",
+    "command": [
+      "lake",
+      "--no-cache",
+      "build"
+    ],
+    "cwd": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/benchmark-project",
+    "start_utc": "2026-11-13T18:09:13.069379+00:00",
+    "wall_seconds": 956.0893241427839,
+    "user_cpu_seconds": 1404.544842,
+    "system_cpu_seconds": 708.190292,
+    "largest_child_maxrss_kib": 7057020,
+    "queue_seconds_excluded": 5.182428661733866,
+    "exit_code": 0,
+    "cpu_count": 8,
+    "machine": "x86_64",
+    "lean_num_threads": "2",
+    "dependency_cache": "existing Mathlib and goldbach build artifacts reused",
+    "source_cache": "empty project build directory"
+  },
+  "human_semantic_verdict": "No unbridged mismatch found in the named theorem clusters on the paper domains. Model-contract distinctions are explicitly recorded.",
+  "scope_limitation": "Concrete numerical experiments and integral-error certificates in Appendix B are not all formalized. TeX-to-reference semantics are independently reviewed, not mechanically parsed or proved.",
+  "numerical_claim_groups": [
+    {
+      "id": "B-number-01",
+      "tex_lines": [
+        4341,
+        4345
+      ],
+      "claim": "75个边缘素数对、26个无序真素数幂对；E=44.35776816334822525…，Cpp/2=10.16758713116445818…",
+      "status": "not_formalized",
+      "scope": "命名B1之外的具体算例；B1只给精确符号恒等式。"
+    },
+    {
+      "id": "B-number-02",
+      "tex_lines": [
+        4389,
+        4403
+      ],
+      "claim": "h=0.1,T=1600；2^20 FFT网格；24阶Euler–Maclaurin、32高度重置；积分输出Jhat≈0.05799599193959489,Dhat≈0.29331844084848136",
+      "status": "not_formalized",
+      "scope": "未见存储5760个Ihat值、数值积分实现或该输出的有理证书绑定实际integralI。"
+    },
+    {
+      "id": "B-number-03",
+      "tex_lines": [
+        4408,
+        4419
+      ],
+      "claim": "HL预测积分≈908.1405628685、宽权A≈851.831147718741；65位数值积分及C2加速算法参数",
+      "status": "not_formalized",
+      "scope": "wideMainIntegral有精确定义，未认证该近似；传统HL积分的具体数值也未认证。"
+    },
+    {
+      "id": "B-number-04",
+      "tex_lines": [
+        4420,
+        4421
+      ],
+      "claim": "A−Cpp/2+E≈886.021328750925",
+      "status": "not_formalized",
+      "scope": "符号校正公式已覆盖；十进制数值未认证。"
+    },
+    {
+      "id": "B-number-05",
+      "tex_lines": [
+        4430,
+        4437
+      ],
+      "claim": "−N Bhat/2≈18.978671254276及rhat≈905.0000000052",
+      "status": "not_formalized",
+      "scope": "B3的Ihat为任意输入，尚无特定Ihat及该中心的证明。"
+    },
+    {
+      "id": "B-number-06",
+      "tex_lines": [
+        4475,
+        4486
+      ],
+      "claim": "3280个非零a_n；有限变换有理包围证明RMS积分误差<1.68935×10^−5",
+      "status": "not_formalized",
+      "scope": "这是应用B3得905最关键的未填输入；HasMomentError仅是定义，lemma_B_3将该界作为假设。"
+    },
+    {
+      "id": "B-number-07",
+      "tex_lines": [
+        4487,
+        4490
+      ],
+      "claim": "εr≈0.274758682716，外舍入[904.725241,905.274759]∩Z={905}",
+      "status": "not_formalized",
+      "scope": "没有在Lean中将真实积分误差传递到该具体区间；一般整数区间lemma不提供这项数值证书。"
+    },
+    {
+      "id": "B-number-08",
+      "tex_lines": [
+        4491,
+        4496
+      ],
+      "claim": "精确905无序对、1810有序对；直接有理求和与独立素数枚举双重检验",
+      "status": "partially_certified_by_new_audit_supplement",
+      "scope": "原库没有905命题；本轮已另用内核枚举证明实际无序计数=905。原文通过积分误差获得905的认证路径、有理校正数值及其余数值展示仍未完成。",
+      "original_audit_status": "not_formalized_in_audited_library"
+    },
+    {
+      "id": "B-number-09",
+      "tex_lines": [
+        4501,
+        4505
+      ],
+      "claim": "α30030≈0.09699366",
+      "status": "approximation_not_formalized",
+      "scope": "精确α及1/9在条带内的证明已存在；仅该十进制展示未认证，不影响B4。"
+    },
+    {
+      "id": "B-number-10",
+      "tex_lines": [
+        4571,
+        4580
+      ],
+      "claim": "L′/L及Euler积数值实现、截止2×10^5；极端特征值≈−0.353421,0.357462；||C||/δ≈0.826864<1；δ≈0.432310239587548",
+      "status": "not_formalized",
+      "scope": "B5只证明若真实矩阵范数≤δ则零点在临界线；没有已认证的矩阵数值近似/范数上界。"
+    },
+    {
+      "id": "B-number-11",
+      "tex_lines": [
+        4577,
+        4599
+      ],
+      "claim": "截止10^5加倍时端点变化<3×10^−8；显示零点与图形使用完整计算谱",
+      "status": "not_formalized",
+      "scope": "图片和稳定性展示无形式数值证书；原文本身明确不认证无限算子R。"
+    }
+  ]
+}

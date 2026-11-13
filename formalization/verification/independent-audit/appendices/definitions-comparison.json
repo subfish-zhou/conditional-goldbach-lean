@@ -1,0 +1,722 @@
+[
+  {
+    "expected": "TexAuditAB.variableStrip",
+    "actual": "LiLiuGoldbach16.strip",
+    "tex_lines": [
+      3954,
+      3958
+    ],
+    "formula": "S={s:α<Re(s)<β}",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+      "line": 113
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableHardySpace",
+    "actual": "LiLiuGoldbach16.HardySpace",
+    "tex_lines": [
+      3954,
+      3958
+    ],
+    "formula": "Fourier-Laplace Hardy模型Lp²(hardyMeasure α β)",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+      "line": 144
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableBoundary",
+    "actual": "LiLiuGoldbach16.boundaryPoint",
+    "tex_lines": [
+      3954,
+      3958
+    ],
+    "formula": "左右两条无向边界线",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 361
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableOperator",
+    "actual": "LiLiuGoldbach16.residualOperator",
+    "tex_lines": [
+      3954,
+      3958
+    ],
+    "formula": "不变算术残差核E/((1+s)(1+conj z))在新Hardy空间的作用",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 55
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableFunctional",
+    "actual": "LiLiuGoldbach16.functionalValue",
+    "tex_lines": [
+      3954,
+      3958
+    ],
+    "formula": "(2πi)^−1∫N^s Wtilde(s)(1+s)h(s)ds",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 125
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableVector",
+    "actual": "LiLiuGoldbach16.rieszVector",
+    "tex_lines": [
+      3954,
+      3958
+    ],
+    "formula": "表示该泛函的Riesz向量",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 129
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableFunctionalNorm",
+    "actual": "LiLiuGoldbach16.normFunctional",
+    "tex_lines": [
+      3970,
+      3977
+    ],
+    "formula": "(2π)^−1∫(Nu)^(2α)V²/(1+(Nu)^(−2(β−α)))du/u",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 117
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableComplexProduct",
+    "actual": "LiLiuGoldbach16.spectralComplex",
+    "tex_lines": [
+      4020,
+      4024
+    ],
+    "formula": "相同δN尺度的复切片谱积",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 100
+    }
+  },
+  {
+    "expected": "TexAuditAB.variableQuaternionProduct",
+    "actual": "LiLiuGoldbach16.spectralQuaternion",
+    "tex_lines": [
+      4020,
+      4024
+    ],
+    "formula": "四元数谱积为partial products极限",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 109
+    }
+  },
+  {
+    "expected": "TexAuditAB.pointwiseR",
+    "actual": "LiLiuGoldbach16.SpectralR",
+    "tex_lines": [
+      4024,
+      4031
+    ],
+    "formula": "所有四元数零点实部1/2",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 156
+    }
+  },
+  {
+    "expected": "TexAuditAB.pointwiseZeroFree",
+    "actual": "LiLiuGoldbach16.SpectralZeroFree",
+    "tex_lines": [
+      4024,
+      4031
+    ],
+    "formula": "开半空间Re(q)>1−η无零点",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 159
+    }
+  },
+  {
+    "expected": "TexAuditAB.boundaryParameter",
+    "actual": "LiLiuGoldbach16.alpha",
+    "tex_lines": [
+      3949,
+      3953
+    ],
+    "formula": "αN,c=c/logN",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/BaseDefinitions.lean",
+      "line": 105
+    }
+  },
+  {
+    "expected": "TexAuditAB.eventualR",
+    "actual": "LiLiuGoldbach16.HypothesisRAt",
+    "tex_lines": [
+      4093,
+      4100
+    ],
+    "formula": "固定c的eventual R；阈值依赖c",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 250
+    }
+  },
+  {
+    "expected": "TexAuditAB.eventualS",
+    "actual": "LiLiuGoldbach16.HypothesisSAt",
+    "tex_lines": [
+      4025,
+      4031
+    ],
+    "formula": "h正、沿偶数发散及最终η≤1/4；阈值依赖c,h",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 253
+    }
+  },
+  {
+    "expected": "TexAuditAB.poleOrder",
+    "actual": "LiLiuGoldbach16.zeroMultiplicity",
+    "tex_lines": [
+      4184,
+      4186
+    ],
+    "formula": "L函数解析零点阶数，非零点为0",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 380
+    }
+  },
+  {
+    "expected": "TexAuditAB.poleMass",
+    "actual": "LiLiuGoldbach16.poleCoefficient",
+    "tex_lines": [
+      4187,
+      4191
+    ],
+    "formula": "2/φ(N)Σodd mχ²",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 261
+    }
+  },
+  {
+    "expected": "TexAuditAB.regularEulerFactor",
+    "actual": "LiLiuGoldbach16.baselineProductR",
+    "tex_lines": [
+      4221,
+      4229
+    ],
+    "formula": "有限坏素数积与无限正则Euler积",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 432
+    }
+  },
+  {
+    "expected": "TexAuditAB.operatorMajorant",
+    "actual": "LiLiuGoldbach16.baselineBound",
+    "tex_lines": [
+      4114,
+      4117
+    ],
+    "formula": "C((logN)²+α⁻²)",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 257
+    }
+  },
+  {
+    "expected": "TexAuditAB.boundaryCost",
+    "actual": "LiLiuGoldbach16.balanceFactor",
+    "tex_lines": [
+      4119,
+      4126
+    ],
+    "formula": "e^(2c)(1+c⁻²)",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 259
+    }
+  },
+  {
+    "expected": "TexAuditAB.numericalN",
+    "actual": "LiLiuGoldbach16.experimentN",
+    "tex_lines": [
+      4281,
+      4284
+    ],
+    "formula": "N=30030",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 265
+    }
+  },
+  {
+    "expected": "TexAuditAB.P",
+    "actual": "LiLiuGoldbach16.cutoffPolynomial",
+    "tex_lines": [
+      4292,
+      4300
+    ],
+    "formula": "分段13阶二项式平滑截断",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 267
+    }
+  },
+  {
+    "expected": "TexAuditAB.eta",
+    "actual": "LiLiuGoldbach16.wideCutoff",
+    "tex_lines": [
+      4291,
+      4295
+    ],
+    "formula": "A=16,L=1000对称双截断",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 271
+    }
+  },
+  {
+    "expected": "TexAuditAB.W",
+    "actual": "LiLiuGoldbach16.wideCompanion",
+    "tex_lines": [
+      4301,
+      4305
+    ],
+    "formula": "sqrt(1−u)η(Nu)/sqrt(log(Nu)log(N(1−u)))零延拓",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 275
+    }
+  },
+  {
+    "expected": "TexAuditAB.f",
+    "actual": "LiLiuGoldbach16.wideWeight",
+    "tex_lines": [
+      4303,
+      4305
+    ],
+    "formula": "W(u)/sqrtu",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 280
+    }
+  },
+  {
+    "expected": "TexAuditAB.J",
+    "actual": "LiLiuGoldbach16.wideCorrelation",
+    "tex_lines": [
+      4306,
+      4310
+    ],
+    "formula": "N⁻¹Σn+m=N,(nm,N)=1 ΛnΛm f(n/N)f(m/N)",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 282
+    }
+  },
+  {
+    "expected": "TexAuditAB.primePairCount",
+    "actual": "LiLiuGoldbach16.unorderedPrimePairs",
+    "tex_lines": [
+      4311,
+      4311
+    ],
+    "formula": "无序素数对p≤q,p+q=N",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 284
+    }
+  },
+  {
+    "expected": "TexAuditAB.edge",
+    "actual": "LiLiuGoldbach16.edgeCorrection",
+    "tex_lines": [
+      4311,
+      4312
+    ],
+    "formula": "p<L的无序素数对缺失权1−η(p)²",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 287
+    }
+  },
+  {
+    "expected": "TexAuditAB.properPowers",
+    "actual": "LiLiuGoldbach16.primePowerCorrection",
+    "tex_lines": [
+      4312,
+      4314
+    ],
+    "formula": "有序真素数幂校正η(p^k)²/(kℓ)",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 291
+    }
+  },
+  {
+    "expected": "TexAuditAB.coefficient",
+    "actual": "LiLiuGoldbach16.countingCoefficient",
+    "tex_lines": [
+      4361,
+      4363
+    ],
+    "formula": "Λ(n)W(n/N)/sqrt n",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 298
+    }
+  },
+  {
+    "expected": "TexAuditAB.integralI",
+    "actual": "LiLiuGoldbach16.countingIntegral",
+    "tex_lines": [
+      4351,
+      4355
+    ],
+    "formula": "(2π)⁻¹∫N^(1+it)Wtilde(1+it)L′/L(3/2+it)dt",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 300
+    }
+  },
+  {
+    "expected": "TexAuditAB.diagonalD",
+    "actual": "LiLiuGoldbach16.diagonalCountingMoment",
+    "tex_lines": [
+      4357,
+      4360
+    ],
+    "formula": "Σ1≤n<N,(n,N)=1 a_n²",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 304
+    }
+  },
+  {
+    "expected": "TexAuditAB.signedJhat",
+    "actual": "LiLiuGoldbach16.approxSignedMoment",
+    "tex_lines": [
+      4445,
+      4446
+    ],
+    "formula": "5760⁻¹Σχχ(−1)|Ihatχ|²",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 307
+    }
+  },
+  {
+    "expected": "TexAuditAB.diagonalDhat",
+    "actual": "LiLiuGoldbach16.approxDiagonalMoment",
+    "tex_lines": [
+      4445,
+      4446
+    ],
+    "formula": "5760⁻¹Σχ|Ihatχ|²",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 310
+    }
+  },
+  {
+    "expected": "TexAuditAB.crossMass",
+    "actual": "LiLiuGoldbach16.wideModelMass",
+    "tex_lines": [
+      4422,
+      4422
+    ],
+    "formula": "c_f=∫0¹ f(u)f(1−u)du",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 313
+    }
+  },
+  {
+    "expected": "TexAuditAB.mainIntegral",
+    "actual": "LiLiuGoldbach16.wideMainIntegral",
+    "tex_lines": [
+      4413,
+      4415
+    ],
+    "formula": "S(N)∫16^(N/2)η(x)²/(log x log(N−x))dx",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 438
+    }
+  },
+  {
+    "expected": "TexAuditAB.residualB",
+    "actual": "LiLiuGoldbach16.wideResidual",
+    "tex_lines": [
+      4422,
+      4424
+    ],
+    "formula": "S(N)c_f−J",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 315
+    }
+  },
+  {
+    "expected": "TexAuditAB.momentError",
+    "actual": "LiLiuGoldbach16.HasMomentError",
+    "tex_lines": [
+      4447,
+      4448
+    ],
+    "formula": "ε≥0且5760⁻¹Σ|I−Ihat|²≤ε²",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 442
+    }
+  },
+  {
+    "expected": "TexAuditAB.countCentre",
+    "actual": "LiLiuGoldbach16.approxPrimeCount",
+    "tex_lines": [
+      4453,
+      4456
+    ],
+    "formula": "N Jhat/2−Cpp/2+E",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 317
+    }
+  },
+  {
+    "expected": "TexAuditAB.countRadius",
+    "actual": "LiLiuGoldbach16.countError",
+    "tex_lines": [
+      4457,
+      4459
+    ],
+    "formula": "N(2√Dhat ε+ε²)/2",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 320
+    }
+  },
+  {
+    "expected": "TexAuditAB.ellW",
+    "actual": "LiLiuGoldbach16.wideFunctional",
+    "tex_lines": [
+      4514,
+      4519
+    ],
+    "formula": "固定1/9线上的宽权线性泛函",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 323
+    }
+  },
+  {
+    "expected": "TexAuditAB.vectorW",
+    "actual": "LiLiuGoldbach16.wideRieszVector",
+    "tex_lines": [
+      4512,
+      4514
+    ],
+    "formula": "选择实际表示ℓW的Riesz向量；存在性由B4保证",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 327
+    }
+  },
+  {
+    "expected": "TexAuditAB.node",
+    "actual": "LiLiuGoldbach16.spectralNode",
+    "tex_lines": [
+      4533,
+      4535
+    ],
+    "formula": "2×1281节点，左右边界，t=j/16−40",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 331
+    }
+  },
+  {
+    "expected": "TexAuditAB.nodeWeight",
+    "actual": "LiLiuGoldbach16.trapezoidWeight",
+    "tex_lines": [
+      4534,
+      4535
+    ],
+    "formula": "1/16，端点半权，无2π归一因子",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 334
+    }
+  },
+  {
+    "expected": "TexAuditAB.matrixC",
+    "actual": "LiLiuGoldbach16.finiteSpectralMatrix",
+    "tex_lines": [
+      4544,
+      4549
+    ],
+    "formula": "√wi E(si,conj sj)/((1+si)(1+conj sj)) √wj",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 337
+    }
+  },
+  {
+    "expected": "TexAuditAB.finiteX",
+    "actual": "LiLiuGoldbach16.finiteSpectralFunction",
+    "tex_lines": [
+      4536,
+      4541
+    ],
+    "formula": "det(I−4q(1−q)C²/δ²)",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 341
+    }
+  },
+  {
+    "expected": "TexAuditAB.finiteSpectrum",
+    "actual": "LiLiuGoldbach16.IsFiniteSpectrum",
+    "tex_lines": [
+      4553,
+      4560
+    ],
+    "formula": "C=U diag(real eigenvalues) U*，U*U=UU*=I",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 345
+    }
+  },
+  {
+    "expected": "TexAuditAB.eigenvalueList",
+    "actual": "LiLiuGoldbach16.finiteEigenvalues",
+    "tex_lines": [
+      4553,
+      4553
+    ],
+    "formula": "选择与实际矩阵绑定的实特征值列表",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 350
+    }
+  },
+  {
+    "expected": "TexAuditAB.matrixNorm",
+    "actual": "LiLiuGoldbach16.finiteMatrixOpNorm",
+    "tex_lines": [
+      4560,
+      4561
+    ],
+    "formula": "复Euclidean空间单位球上矩阵作用的sup范数",
+    "semantic_status": "independently_reviewed",
+    "mechanical_status": "passed_kernel_checked_rfl_bridge",
+    "live_source": {
+      "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "line": 353
+    }
+  }
+]

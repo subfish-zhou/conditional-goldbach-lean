@@ -1,0 +1,273 @@
+{
+  "status": "passed_with_explicit_pending_dependencies",
+  "scope": "Final read-only independent mathematical assembly review, refreshed after proving the abstract spectral dictionary and its Hardy-space application. Includes all three clauses of Theorem 6.1 and an independent traversal of the completed root dependency extraction. No Lean compilation rerun and no proof source modified.",
+  "reviewed_files": [
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Main.lean",
+      "sha256": "64101eda29a242f91acdfaa9035402688953c4e6e065ec70243e83684367d0df"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Elementary.lean",
+      "sha256": "88f42921a0f23d18e571f942a2ef0dddd1321f50e96a164753df18c75f686858"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/Asymptotics.lean",
+      "sha256": "24ecf9e3fa5c8ea8e31c0ad813435379044df8d1ad3a89ac61148df81695900b"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PrimePairs.lean",
+      "sha256": "86eb9501888c037d3163ac1157ca045d9b53b2425bac038a254f318caae6291b"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PrimePowers.lean",
+      "sha256": "3730b96d5dfebe81af62c541ef684430b2b35aee4139029ce07a1bb4b3734753"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/WeightNorm.lean",
+      "sha256": "fd0a23b6947c50e5bc9a00c0b4c9a74479e5c83032c222371f031c98f87bb486"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+      "sha256": "5a9c972aa139d2b892944415df3a2e777c952cb1ca32876f7b6d17e3ea02c1c5"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralProducts.lean",
+      "sha256": "36f13f13150a9f0942d45bacb549f954f8caf93f41cdc899cae4428e16bdc315"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/SpectralDictionary.lean",
+      "sha256": "25a7bafc495ec4038b0ded7c7537c4db14d283ba385300ffef54fe59acafef19"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/DictionaryApplication.lean",
+      "sha256": "28f9aca77153f2070f067b520ea7095e2233afcc957d1d7dc457cd9c89bbd68e"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/AnalyticPrerequisites.lean",
+      "sha256": "a98ae53d334db2c260f1216202be4077a364931ba8f4777e9d679da5a0fb7261"
+    },
+    {
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+      "sha256": "d55dd3ecc2260278eaad86a51425e17788cf24d1407fd6e636645aad963c7b55"
+    }
+  ],
+  "statement_checks": [
+    {
+      "declaration": "LiLiuGoldbach16.theorem_7_1_uniform",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.theorem_1_1",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.theorem_1_2",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.singularSeries_eq_existing",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.primePair_consequence",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.theorem_6_1",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.theorem_6_1_abstract_dictionary",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.proposition_5_3",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    },
+    {
+      "declaration": "LiLiuGoldbach16.theorem_7_1",
+      "original_statement_unchanged": true,
+      "comparison": "Whitespace-normalized declaration prefix before :=; exact binders, hypotheses, order and conclusion."
+    }
+  ],
+  "condition_checks": [
+    {
+      "item": "Theorem 1.1 uniform quantifier order",
+      "status": "matched",
+      "details": "C=exp(2)*weightEnergy(phi)+1 is fixed before introducing arbitrary h. It depends only on phi. Eventual thresholds may depend on h, GRH/S witnesses and positivity bounds; no uniform threshold is incorrectly claimed."
+    },
+    {
+      "item": "Separate GRH versus conditional S/R",
+      "status": "matched",
+      "details": "EvenEventually GRH is intersected with the spectral hypotheses and the large-N range. The implication GRH N → spectral inside S/R is not treated as proof of GRH."
+    },
+    {
+      "item": "Domains and denominators",
+      "status": "matched",
+      "details": "N>exp10 implies N≥4, logN>0 and alphaN<beta. NeZero N is supplied locally. Positivity of singularSeries N and h N gives eta>0; admissibility gives eta≤1/4<1/2, meeting the dictionary. All divisions and square-root bounds have explicit positivity."
+    },
+    {
+      "item": "Big-O normalization and asymptotic",
+      "status": "matched",
+      "details": "The bound delta/(2sqrt(eta(1-eta)))≤S/h is weaker than the sharper numerical factor but fully sufficient for the unchanged O_phi(S/h). evenAsymptotic_of_error_bound uses m>0,S>0,h→infinity and obtains strict epsilon control by taking h≥C/(m*epsilon)+1."
+    },
+    {
+      "item": "Theorem 1.2 assembly",
+      "status": "matched",
+      "details": "R is instantiated at the same N, alphaN, trace realization and GRH witness. The exact dictionary gives normT≤delta; the uniform quadratic bound then gives the original O_phi(delta) with positive constant A+1."
+    },
+    {
+      "item": "Admissible logarithm",
+      "status": "matched",
+      "details": "logN is positive on N≥4, tends to infinity, and its eta is log^5N/(N*S(N)). The proved uniform lower bound S(N)≥2*C2>0 and log^5N/N→0 yield eventual eta≤1/4. No stronger conjecture or uniform upper singular-series estimate is assumed."
+    },
+    {
+      "item": "R/S disjunction in prime-pair consequence",
+      "status": "matched",
+      "details": "R branch supplies the concrete admissible log function and invokes the R⇒S implication; the other branch uses its supplied h. Both branches legitimately use Theorem1.1. This route need not directly use Theorem1.2 and does not require R and S simultaneously."
+    },
+    {
+      "item": "Removal of proper prime powers",
+      "status": "matched",
+      "details": "badGoldbachMass retains the original 0<n<N, coprimality, range and both weights. Its bad predicate is at least one nonprime; vonMangoldt kills all nonprime non-prime-powers. The union bound and n↦N−n reflection give ≤(2logN/N)*(psi−theta), hence ≤4log²N/sqrtN. The latter tends to0 with a proved general asymptotic."
+    },
+    {
+      "item": "Conversion to prime-pair count",
+      "status": "matched",
+      "details": "G is bounded above by bad mass plus (log²N/N)*PrimePairCount. For nonzero surviving prime contribution the weight support forces n∈[N/3,2N/3]; the count includes all such prime pairs, so omitting coprimality from the count only enlarges it. Counts are ordered, matching the original definition."
+    },
+    {
+      "item": "Positive main term and final constant",
+      "status": "matched",
+      "details": "Theorem1.1 at epsilon1/2 yields G>m*S/2. Eventually bad≤m*C2/2≤m*S/4 by S≥2C2. Hence count≥(m/4)*S*N/log²N with m=weightMass(phi)>0. The positive constant m/4 is independent of the chosen spectral branch and h."
+    },
+    {
+      "item": "Eventual range and finite initial segment",
+      "status": "matched",
+      "details": "The final threshold is the max of the relative asymptotic, bad-mass and N>exp10 thresholds; evenness is retained throughout. The proof makes no assertion about all N≥4 or any finite initial segment."
+    },
+    {
+      "item": "Dictionary 6.1 first clause: R iff norm",
+      "status": "matched",
+      "details": "The same residualOperator at alpha N and proof ha is supplied to the complete abstract quaternionic dictionary. SpectralR is exactly its all-quaternion critical-line predicate. The scale is proved strictly positive using N>exp10, positive singularSeries and logN>0. No caller-side SpectralData assumption is added."
+    },
+    {
+      "item": "Dictionary 6.1 second clause: zero-free width iff norm",
+      "status": "matched",
+      "details": "The abstract equivalence is specialized with exactly 0<eta<1/2 and the original open half-plane 1-eta<q.re. Both directions and the denominator 2*sqrt(eta*(1-eta)) are preserved, with no strengthening or weakening of the endpoint conditions."
+    },
+    {
+      "item": "Dictionary 6.1 third clause: bound-to-width construction",
+      "status": "matched",
+      "details": "For delta<M and normT<=M, spectralWidthFromBound_spec proves 0<eta<1/2 and eta*(1-eta)=delta^2/(4*M^2), where eta=(1-sqrt(1-delta^2/M^2))/2. M>0 follows from delta>0. eigenvalue_bound_iff_parameter then gives M<=delta/(2*sqrt(eta*(1-eta))); transitivity and clause two prove the stated zero-free region. The strict bound delta<M is retained."
+    },
+    {
+      "item": "Spectral existence and totalized definitions",
+      "status": "matched",
+      "details": "The hT argument is exactly the Nonempty (SpectralData (residualOperator ha N)) conjunct of pending Proposition 5.3. eigenvalues_square_summable/norm_le_iff_eigenvalues reduce the dependent conditional with this hT. spectralComplex_multipliable proves convergence, its no-extra-zeros lemma proves nonvanishing when every factor is nonzero, and spectralQuaternion_apply_algHom uses an actual convergence witness and uniqueness of limits to eliminate the fallback value. The dictionary does not deduce information from a default zero spectrum or a default zero product."
+    },
+    {
+      "item": "Hardy operator realization and trace dependency are explicit",
+      "status": "matched",
+      "details": "DictionaryApplication does not prove or bypass the Hardy realization. Proposition 5.3 still asserts that the actual selected residualOperator represents weightedKernel and has spectral data. Its pending proof remains in the transitive dependency closure. The kernelOperator choice and boundaryTraces definitions are unchanged; both trace-construction obligations remain visible in the closure."
+    },
+    {
+      "item": "Final pending closure after replacing 6.1 placeholder",
+      "status": "matched",
+      "details": "Independent traversal of the current Lean-exported type and value constant graph gives exactly proposition_5_3, theorem_7_1, interiorLine_memLp and boundaryTraces_exist for Theorems 1.1, 1.2 and primePair_consequence. Theorem 6.1 itself has a proof body and only 5.3 plus the two trace leaves. The abstract dictionary has no sorry leaf and only the three standard axioms."
+    }
+  ],
+  "pending_dependency_review": {
+    "direct_unproved_analytic_statements": [
+      "LiLiuGoldbach16.proposition_5_3",
+      "LiLiuGoldbach16.theorem_7_1"
+    ],
+    "definition_construction_obligations": [
+      "LiLiuGoldbach16.boundaryTraces_exist",
+      "LiLiuGoldbach16.interiorLine_memLp"
+    ],
+    "theorem_6_1_direct_placeholder_removed": true,
+    "abstract_dictionary_kernel_closed": true,
+    "independently_recomputed_pending_closures": {
+      "theorem_6_1": [
+        "LiLiuGoldbach16.boundaryTraces_exist",
+        "LiLiuGoldbach16.interiorLine_memLp",
+        "LiLiuGoldbach16.proposition_5_3"
+      ],
+      "theorem_7_1_uniform": [
+        "LiLiuGoldbach16.boundaryTraces_exist",
+        "LiLiuGoldbach16.interiorLine_memLp",
+        "LiLiuGoldbach16.theorem_7_1"
+      ],
+      "theorem_1_1": [
+        "LiLiuGoldbach16.boundaryTraces_exist",
+        "LiLiuGoldbach16.interiorLine_memLp",
+        "LiLiuGoldbach16.proposition_5_3",
+        "LiLiuGoldbach16.theorem_7_1"
+      ],
+      "theorem_1_2": [
+        "LiLiuGoldbach16.boundaryTraces_exist",
+        "LiLiuGoldbach16.interiorLine_memLp",
+        "LiLiuGoldbach16.proposition_5_3",
+        "LiLiuGoldbach16.theorem_7_1"
+      ],
+      "primePair_consequence": [
+        "LiLiuGoldbach16.boundaryTraces_exist",
+        "LiLiuGoldbach16.interiorLine_memLp",
+        "LiLiuGoldbach16.proposition_5_3",
+        "LiLiuGoldbach16.theorem_7_1"
+      ],
+      "theorem_6_1_abstract_dictionary": []
+    },
+    "closure_method": "Traverse value_constants and type_constants in proof-status-raw.json; include local object definitions and auxiliary proof declarations; collect declarations with contains_sorry_directly. Compare the result against proof-status.json.",
+    "exported_local_declaration_count": 497,
+    "unexpected_pending_statement_uses_found": [],
+    "important_distinction": "The main results now have real assembly proofs through the proved abstract spectral dictionary and proved Theorem 6.1 application. They remain conditional on the unproved exact Proposition 5.3 and Theorem 7.1 and on both trace constructions; they are not end-to-end proofs and still have sorryAx in their recursive axiom closure.",
+    "default_value_bypass_found": false,
+    "new_hypotheses_found": false,
+    "supporting_observation": "The abstract dictionary is kernel-closed with only propext, Classical.choice and Quot.sound. Current root counts distinguish the original 102 statements (10 closed / 10 proof bodies with pending dependencies / 82 direct placeholders) from 115 closed public results including helpers."
+  },
+  "required_fixes": [],
+  "limits": [
+    "This review independently reads the final source and traverses the root completed Lean extraction; it does not repeat Lean compilation.",
+    "Completion of algebraic dictionary/application and exact statement preservation do not supply the missing analytic proofs or certify the entire original encoding."
+  ],
+  "files_modified": false,
+  "lean_recompiled": false,
+  "machine_evidence": {
+    "root_audit_files": [
+      {
+        "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/proof-status-raw.json",
+        "sha256": "2a970ecd1e9bf6803cc55980ce50c824d7188f0869199f67c00e1243a1a45fc2"
+      },
+      {
+        "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/proof-status.json",
+        "sha256": "68947d4fe22faa8a920770ea194373a79ad41d221fec6e1fb0b71eb467b136da"
+      }
+    ],
+    "original_theorem_counts": {
+      "kernel_closed": 10,
+      "proof_written_dependencies_pending": 10,
+      "pending_direct_sorry": 82
+    },
+    "all_public_theorem_counts": {
+      "kernel_closed": 115,
+      "proof_written_dependencies_pending": 10,
+      "pending_direct_sorry": 82
+    },
+    "original_theorems": 102,
+    "original_definitions": 171,
+    "unusual_axioms": [],
+    "source_versus_audit_note": "Current proof source hashes are recorded above. The original declaration prefixes listed here were independently compared against the audited original inventory. The root reports full kernel definitional-equality checks for all 102 theorem types and all 171 definition bodies; those full checks were not rerun in this independent source review."
+  },
+  "lean_files_modified": false,
+  "review_artifacts_modified": true
+}

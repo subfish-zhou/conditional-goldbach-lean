@@ -1,0 +1,159 @@
+{
+  "status": "passed_after_reported_corrections",
+  "reviewer": "tex_audit_5_6",
+  "scope": "Independent targeted cross-check of combined graph and narrative against original TeX. Root already validated full273/38/121 coverage; no repeated Lean compilation.",
+  "reviewed_files": {
+    "outputs/formalization-preparation/dependency-graph.json": "4a476bd73dadfa5146f42bcc517c6f1354d046b80155ee57b1337e9b4afad0ae",
+    "outputs/formalization-preparation/dependency-audit.md": "ba25a99fac49661b324c264add85ff1e5466a27a1d5e475c6eb2327f1594ffe5",
+    "outputs/formalization-preparation/LiLiuGoldbach16.tex": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125"
+  },
+  "current_graph_counts": {
+    "paper_nodes": 146,
+    "paper_edges": 236,
+    "lean_nodes": 273,
+    "lean_reference_edges": 987
+  },
+  "checks": [
+    {
+      "id": "equation_preview_aliases",
+      "status": "passed_after_correction",
+      "source_ranges": [
+        [
+          231,
+          235
+        ],
+        [
+          708,
+          715
+        ],
+        [
+          977,
+          984
+        ],
+        [
+          2343,
+          2351
+        ],
+        [
+          3623,
+          3638
+        ],
+        [
+          3710,
+          3722
+        ]
+      ],
+      "finding_zh": "bm:norm-integral与v3f:master-error-formula分别归到7.4和7.1，且A章边标proof_replay。谱尺度预告v3i:spectral-scale已合并到spectralScale定义族，保留原引用label及行段。"
+    },
+    {
+      "id": "orthogonality_label_and_applicability",
+      "status": "passed_after_correction",
+      "source_ranges": [
+        [
+          373,
+          382
+        ],
+        [
+          2819,
+          2833
+        ]
+      ],
+      "finding_zh": "gb:orthogonality实际PDF编号为(2.1)，图label已纠正。6.4连接通用奇字符投影，未误连要求IsWeight的Lemma3.1主声明；端点w_X(N/2)=0及互素零延拓保留。"
+    },
+    {
+      "id": "upstream_downstream_direction",
+      "status": "passed",
+      "source_ranges": [
+        [
+          2143,
+          2211
+        ],
+        [
+          2255,
+          2287
+        ],
+        [
+          2988,
+          3103
+        ],
+        [
+          3110,
+          3145
+        ]
+      ],
+      "finding_zh": "5.3→5.4、6.4→6.5→Theorem6.2均与原证明一致，无反向证明边。7.1精确二次型不依赖6.1谱字典。"
+    },
+    {
+      "id": "definition_references_are_not_implications",
+      "status": "passed",
+      "finding_zh": "元数据、报告及边类型明确区分paper proof、definition/context与Lean elaboration引用；定义/条件引用不作为单独逻辑充分条件，所有102个定理仍sorry。图的无环检查不被宣传为已证Lean DAG。"
+    },
+    {
+      "id": "A2_generic_bridge",
+      "status": "passed",
+      "source_ranges": [
+        [
+          2572,
+          2601
+        ],
+        [
+          4071,
+          4090
+        ]
+      ],
+      "finding_zh": "A2经新增未证generic字典，固定α的Theorem6.1仅经proof_replay连接桥梁，未直接实例化c≠1。A1提供谱数据，4.3和N域给δ>0；完整复Hilbert空间与ℕ索引谱基适用域均已说明。通用字典Lean归属已保持Theorem6.1而非A2。"
+    },
+    {
+      "id": "B4_wide_weight_replay",
+      "status": "passed",
+      "source_ranges": [
+        [
+          4500,
+          4535
+        ]
+      ],
+      "finding_zh": "7.2、7.4、7.1→B4均标未证proof_replay；宽权C6、非窄支撑且可不对称，cf是∫f(u)f(1−u)，不调用IsWeight也不替换∫f²。全部计数字符的主特征积分仍在绝对收敛线。"
+    },
+    {
+      "id": "prime_pair_alternative_branches",
+      "status": "passed_after_correction",
+      "source_ranges": [
+        [
+          315,
+          328
+        ],
+        [
+          1018,
+          1026
+        ]
+      ],
+      "finding_zh": "补入1.2的R分支并将1.1标S分支，两个备选情形不作为同时前提；权质量正性和真素数幂去除作为共享义务显示。"
+    },
+    {
+      "id": "summary_dependency_language",
+      "status": "passed_after_correction",
+      "source_ranges": [
+        [
+          3710,
+          3722
+        ],
+        [
+          3813,
+          3838
+        ]
+      ],
+      "finding_zh": "1.1表摘要已改“6.1与7.1共同支撑1.1”，避免误读成7.1依赖6.1；抽象字典摘要补完整复Hilbert空间。"
+    }
+  ],
+  "reported_and_resolved": [
+    "gb:orthogonality display number 3.1 -> 2.1",
+    "v3i:spectral-scale preview alias merged into actual spectralScale family",
+    "R alternative branch and shared positivity for prime-pair consequence",
+    "Theorem1.1 summary: both6.1 and7.1 support1.1, not6.1 ->7.1",
+    "abstract dictionary narrative states CompleteSpace setting"
+  ],
+  "unresolved_required_corrections": [],
+  "proof_boundary": "All102 theorem bodies remain by sorry. This targeted review is not a mathematical proof, full equivalence proof, or Lean proof-DAG certificate.",
+  "source_files_modified": false,
+  "lean_recompiled": false
+}

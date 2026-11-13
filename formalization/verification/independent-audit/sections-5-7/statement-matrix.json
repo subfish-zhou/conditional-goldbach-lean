@@ -1,0 +1,1584 @@
+[
+  {
+    "expected": "TexAudit57.Expected_5_1",
+    "actual": "LiLiuGoldbach16.proposition_5_1",
+    "label": "Proposition 5.1",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        1926,
+        1943
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "1926-1943",
+    "formula_or_clause": "残差及带权核Hermitian；闭带邻域联合全纯；两Wirtinger导数为0；1/90与1/72距离。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/KernelRegularity.lean",
+      "line": 95
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "两核、邻域、Fueter分量及严格左距离俱全；analyticDomain比闭带所需域大，无减弱。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_1_fueter_equation",
+    "actual": "LiLiuGoldbach16.proposition_5_1_fueter_equation",
+    "label": "Proposition 5.1 / proposition_5_1_fueter_equation",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        1926,
+        1943
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "1918-1940",
+    "formula_or_clause": "(∂s̄+j∂z)E(s,z̄)=0。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/KernelRegularity.lean",
+      "line": 144
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "真实ℝ导数定义Wirtinger，嵌入ℍ后左乘j；并非把regular定义成True。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_5_2",
+    "actual": "LiLiuGoldbach16.lemma_5_2",
+    "label": "Lemma 5.2",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ],
+    "tex_lines_directly_reviewed": "1986-2046",
+    "formula_or_clause": "原始全纯+配对竖线L²上确界Hardy空间与加权L²的唯一满射等距。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyConverse.lean",
+      "line": 43
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "正向RawHardy、精确范数、两条迹范数；反向∃!ψ，故频域编码没有用整个边界L²替代Hardy子空间。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_5_2_closed_trace_space",
+    "actual": "LiLiuGoldbach16.lemma_5_2_closed_trace_space",
+    "label": "Lemma 5.2 / lemma_5_2_closed_trace_space",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2030-2046",
+    "formula_or_clause": "迹映射的像为闭子空间。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "line": 181
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "闭像断言成立；线性由representation_spec给出，不能只把IsClosed单独读作子空间。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_5_2_representation_spec",
+    "actual": "LiLiuGoldbach16.lemma_5_2_representation_spec",
+    "label": "Lemma 5.2 / lemma_5_2_representation_spec",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2003-2046",
+    "formula_or_clause": "Fourier–Laplace真可积、L²边界极限、加权范数公式、线性与迹等距。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "line": 123
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "含两边Lp拓扑极限及加权积分可积；不是未证明的边界默认值。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_5_2_boundary_inner",
+    "actual": "LiLiuGoldbach16.lemma_5_2_boundary_inner",
+    "label": "Lemma 5.2 / lemma_5_2_boundary_inner",
+    "tex_lines": [
+      [
+        2030,
+        2046
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2036-2045",
+    "formula_or_clause": "⟨h,g⟩=∫hα ḡα+∫hβ ḡβ，dt不含2π。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "line": 198
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "paperInner交换mathlib内积参数，使第一变量线性；两项正弧长，无归一化缺失。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_5_3",
+    "actual": "LiLiuGoldbach16.proposition_5_3",
+    "label": "Proposition 5.3",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2123,
+        2141
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2123-2141",
+    "formula_or_clause": "积分算子、L²核、自伴紧HS、Σμ²=HS²=双边界核积分、谱范数及非零最大值。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "line": 33
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "全部合取齐全；SpectralData给真Hilbert基与特征关系；0特征值补齐基不改Σμ²/乘积。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_3_kernel_integrability",
+    "actual": "LiLiuGoldbach16.proposition_5_3_kernel_integrability",
+    "label": "Proposition 5.3 / proposition_5_3_kernel_integrability",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2123,
+        2141
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2123-2128;2189-2201",
+    "formula_or_clause": "每个Hardy向量与每个内点的两条边界积分均绝对可积。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "line": 55
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "排除Lean总积分在不可积时默认0的偷换；前提仅站立条件及内点。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_3_hs_basis_independent",
+    "actual": "LiLiuGoldbach16.proposition_5_3_hs_basis_independent",
+    "label": "Proposition 5.3 / proposition_5_3_hs_basis_independent",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2123,
+        2141
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ],
+    "tex_lines_directly_reviewed": "2133-2139",
+    "formula_or_clause": "HS²=Σj‖T bj‖²，任意可数Hilbert基。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralHilbertSchmidt.lean",
+      "line": 52
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "先有IsHilbertSchmidt，再对任意b；保证hsNorm的选择不影响数值。泛型Type u保留。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_5_4",
+    "actual": "LiLiuGoldbach16.proposition_5_4",
+    "label": "Proposition 5.4",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2226-2253",
+    "formula_or_clause": "再生公式、1/(4Δ)csc、范数≤1/(8d)、E≤‖T‖|1+s||1+z|/(8√dsdz)。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "line": 66
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "内点条件、常数8、第二变量共轭均正确；精确范数与固定线界见补充。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_4_exact_norm",
+    "actual": "LiLiuGoldbach16.proposition_5_4_exact_norm",
+    "label": "Proposition 5.4 / proposition_5_4_exact_norm",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2234-2241",
+    "formula_or_clause": "‖ks‖²=1/[4(b−a)sin(π(Re s−a)/(b−a))]。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyReproducing.lean",
+      "line": 138
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "推广到任意a<b，和原式等价；非只给上界。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_4_kernel_pairing",
+    "actual": "LiLiuGoldbach16.proposition_5_4_kernel_pairing",
+    "label": "Proposition 5.4 / proposition_5_4_kernel_pairing",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2280-2283",
+    "formula_or_clause": "带权E(s,z̄)=⟨T kz,ks⟩。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "line": 47
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "参数顺序与第一变量线性的约定正确，未仅用范数界代替等式。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_5_4_fixed_contour",
+    "actual": "LiLiuGoldbach16.proposition_5_4_fixed_contour",
+    "label": "Proposition 5.4 / proposition_5_4_fixed_contour",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2226,
+        2253
+      ],
+      [
+        2299,
+        2308
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2246-2253",
+    "formula_or_clause": "固定σ*=1/9上|E|≪‖T‖(1+|v|+|t|)²。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "line": 79
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "∃C置于∀N前；第二Mellin变量无共轭是原文最终固定线形式。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_6_1_product",
+    "actual": "LiLiuGoldbach16.proposition_6_1",
+    "label": "Proposition 6.1",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2388-2409",
+    "formula_or_clause": "ℍ局部一致乘积、intrinsic entire、T²正迹类、trace=HS²、复切片普通Fredholm行列式。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionDeterminant.lean",
+      "line": 46
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "系数4/δ²、q(1−q)、T²均在；顺序/谱选择独立性由补充覆盖。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_enumeration",
+    "actual": "LiLiuGoldbach16.proposition_6_1_enumeration",
+    "label": "Proposition 6.1 / proposition_6_1_enumeration",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2395-2397",
+    "formula_or_clause": "任意ℕ置换后同一局部一致极限与复乘积。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "line": 53
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "∀e:ℕ≃ℕ，非仅某个排列。含0的基索引与原非零谱乘积差别由单位因子解释。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_complex_slice",
+    "actual": "LiLiuGoldbach16.proposition_6_1_complex_slice",
+    "label": "Proposition 6.1 / proposition_6_1_complex_slice",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2404-2408",
+    "formula_or_clause": "标准ℂ切片的ℍ函数等于复谱乘积嵌入。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralConsequences.lean",
+      "line": 65
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "显式complexQuaternion桥梁，不只给两个互不联系的函数。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_positive_fredholm_spec",
+    "actual": "LiLiuGoldbach16.proposition_6_1_positive_fredholm_spec",
+    "label": "Proposition 6.1 / proposition_6_1_positive_fredholm_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ],
+    "tex_lines_directly_reviewed": "2376-2403",
+    "formula_or_clause": "正迹类给非负可和谱、真compact/HS及任意基trace；行列式乘积可乘。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralPositiveFredholm.lean",
+      "line": 17
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "为choice定义提供存在、谱联系和基独立桥梁；∑非负本征值真实可和。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_square_determinant",
+    "actual": "LiLiuGoldbach16.proposition_6_1_square_determinant",
+    "label": "Proposition 6.1 / proposition_6_1_square_determinant",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2399-2408",
+    "formula_or_clause": "T²谱存在，trace(T²)=Σμ²，det(Id−tT²)=∏(1−tμ²)。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionDeterminant.lean",
+      "line": 37
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "平方算子的任意选定谱确实连接原T的平方谱；不是按名字直接把行列式重定义为结论。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_all_slices",
+    "actual": "LiLiuGoldbach16.proposition_6_1_all_slices",
+    "label": "Proposition 6.1 / proposition_6_1_all_slices",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2364-2374;2395-2397",
+    "formula_or_clause": "每个纯虚单位J上由同一复全纯函数延伸。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralConsequences.lean",
+      "line": 56
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "J.re=0且J²=−1正是纯虚单位条件；所有J与z全称。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_1_spectral_choice_independent",
+    "actual": "LiLiuGoldbach16.proposition_6_1_spectral_choice_independent",
+    "label": "Proposition 6.1 / proposition_6_1_spectral_choice_independent",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2388,
+        2409
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ],
+    "tex_lines_directly_reviewed": "2395-2397",
+    "formula_or_clause": "对T任意两份正交特征基资料，平方谱乘积相同。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionChoice.lean",
+      "line": 104
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "单纯索引置换之外，补足Classical.choice谱选择的独立性。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_6_2_symmetries",
+    "actual": "LiLiuGoldbach16.proposition_6_2",
+    "label": "Proposition 6.2",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2443,
+        2476
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2443-2476",
+    "formula_or_clause": "X(0)=X(1)=1；反射、共轭、超平面反射；中心偶性；实x∉(0,1)时X(x)≥1。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletion.lean",
+      "line": 81
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "归一化均为1；四元数star是共轭；实值性由切片性质而非仅Re界独自保证。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_2_centered_product",
+    "actual": "LiLiuGoldbach16.proposition_6_2_centered_product",
+    "label": "Proposition 6.2 / proposition_6_2_centered_product",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2443,
+        2476
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2459-2465",
+    "formula_or_clause": "X(1/2+ξ)=∏(1−μ²/δ²+4μ²ξ²/δ²)。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "line": 98
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "有限乘积局部一致收敛到中心函数，系数与符号正确。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_2_critical_values",
+    "actual": "LiLiuGoldbach16.proposition_6_2_critical_values",
+    "label": "Proposition 6.2 / proposition_6_2_critical_values",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2443,
+        2476
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2466-2475",
+    "formula_or_clause": "X(1/2+It)=∏(1−μ²(1+4t²)/δ²)∈ℝ，与I无关。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "line": 154
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "实乘积及实数到ℍ嵌入精确；∀单位纯虚I，右端不含I。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_6_3_zeros",
+    "actual": "LiLiuGoldbach16.proposition_6_3",
+    "label": "Proposition 6.3",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2493-2511",
+    "formula_or_clause": "零点恰来自非零谱因子；非临界零点实且在(0,1)；例外谱索引有限。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralConsequences.lean",
+      "line": 33
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "↔排除无因子零点的无限积新零点；并非只证单向。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_3_three_cases",
+    "actual": "LiLiuGoldbach16.proposition_6_3_three_cases",
+    "label": "Proposition 6.3 / proposition_6_3_three_cases",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2493-2505",
+    "formula_or_clause": "d>1球面、d=1中心、0<d<1两实根。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionZeros.lean",
+      "line": 91
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "三个区间、1/2、平方根/2与非零μ条件齐全；中心重数由另一补充给出。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_3_factor_central_order",
+    "actual": "LiLiuGoldbach16.proposition_6_3_factor_central_order",
+    "label": "Proposition 6.3 / proposition_6_3_factor_central_order",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2501-2504",
+    "formula_or_clause": "d=1时单个因子的中心零点恰二重。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+      "line": 126
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "analyticOrderNatAt=2，不是仅Even。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_3_multiplicities",
+    "actual": "LiLiuGoldbach16.proposition_6_3_multiplicities",
+    "label": "Proposition 6.3 / proposition_6_3_multiplicities",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2493,
+        2511
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2506-2511",
+    "formula_or_clause": "反射与共轭保持复切片重数，中心阶偶数，单位四元数共轭保零球。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionMultiplicities.lean",
+      "line": 86
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "X(0)=1及entire排除identically-zero时analyticOrderNatAt默认值的歧义。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_6_1_dictionary",
+    "actual": "LiLiuGoldbach16.theorem_6_1",
+    "label": "Theorem 6.1",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2552,
+        2570
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2552-2570",
+    "formula_or_clause": "R⇔‖T‖≤δ；0<η<1/2时开半空间无零⇔‖T‖≤δ/[2√η(1−η)]；M界给η(M)。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/DictionaryApplication.lean",
+      "line": 34
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "开放半空间、非严格范数上界与严格η范围均保留；M>δ及‖T‖≤M齐全。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_theorem_6_1_abstract_dictionary",
+    "actual": "LiLiuGoldbach16.theorem_6_1_abstract_dictionary",
+    "label": "Theorem 6.1 / theorem_6_1_abstract_dictionary",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2552,
+        2570
+      ]
+    ],
+    "universe_params": [
+      "u"
+    ],
+    "tex_lines_directly_reviewed": "2552-2562",
+    "formula_or_clause": "任意真实可和平方谱资料的两项谱字典。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralDictionary.lean",
+      "line": 166
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "Nonempty SpectralData含真基、对角化、平方可和；δ>0显式，不是任意虚构序列。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_theorem_6_1_width_comparison",
+    "actual": "LiLiuGoldbach16.theorem_6_1_width_comparison",
+    "label": "Theorem 6.1 / theorem_6_1_width_comparison",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2552,
+        2570
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2563-2570;2591-2599",
+    "formula_or_clause": "δ²/(4M²)≤η(M)≤δ²/(2M²)。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+      "line": 24
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "δ>0,M>δ；给出原≍更具体的绝对常数，范围比η≤1/4更强。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_6_2_baseline",
+    "actual": "LiLiuGoldbach16.theorem_6_2",
+    "label": "Theorem 6.2",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2616,
+        2629
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2616-2629",
+    "formula_or_clause": "最终偶N满足GRH时‖T‖≤HS≪log²N且零区宽度≍S/(NlogN)。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "line": 108
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "∃正C,c在EvenEventually外；选择宽度精确cS/(NlogN)，隐含常数与阈值统一。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_6_4",
+    "actual": "LiLiuGoldbach16.lemma_6_4",
+    "label": "Lemma 6.4",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2655-2664",
+    "formula_or_clause": "所有0<σ≤β的奇字符均方平均≪log²N+σ⁻²。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/CharacterAverage.lean",
+      "line": 82
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "绝对C位于N、σ外；奇字符包括非本原字符；每项积分可积明示。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_zero_poisson_convergence",
+    "actual": "LiLiuGoldbach16.lemma_6_4_zero_poisson_convergence",
+    "label": "Lemma 6.4 / lemma_6_4_zero_poisson_convergence",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2668-2678",
+    "formula_or_clause": "Qχ(x,t)对所有非平凡零点按重数绝对收敛。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroSummability.lean",
+      "line": 122
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "ZeroIndex primitiveCharacter包含解析零点重数；x>0，无额外零间距假设。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_perron_residue",
+    "actual": "LiLiuGoldbach16.lemma_6_4_perron_residue",
+    "label": "Lemma 6.4 / lemma_6_4_perron_residue",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2722-2735",
+    "formula_or_clause": "(X^v−sqrt(X)^v)/(v²log sqrt X)在0的留数1。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralPoisson.lean",
+      "line": 43
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "X>1；亚纯与lim vK(v)=1，而非错误双极点/导数留数。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_poisson_action_spec",
+    "actual": "LiLiuGoldbach16.lemma_6_4_poisson_action_spec",
+    "label": "Lemma 6.4 / lemma_6_4_poisson_action_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2912-2929",
+    "formula_or_clause": "Pℓ非负、总质量1、可积；ℓ=0作用恒等，ℓ>0为卷积。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralPoisson.lean",
+      "line": 29
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "零参数没有直接套总函数P0=0；明确分支实现原文约定。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_6_4_poisson_convolution",
+    "actual": "LiLiuGoldbach16.lemma_6_4_poisson_convolution",
+    "label": "Lemma 6.4 / lemma_6_4_poisson_convolution",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2655,
+        2664
+      ],
+      [
+        2736,
+        2745
+      ],
+      [
+        2912,
+        2929
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2923-2929",
+    "formula_or_clause": "P1*Pℓ=P1+ℓ≤(1+ℓ)P1。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralPoissonConvolution.lean",
+      "line": 172
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "ℓ>0；卷积真可积；常数1+ℓ未遗漏。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_6_5",
+    "actual": "LiLiuGoldbach16.proposition_6_5",
+    "label": "Proposition 6.5",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2975,
+        2986
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2975-2986",
+    "formula_or_clause": "P,D正迹类；HS(P)≤trace(P)≪log²N+α⁻²；HS(D)≤trace(D)≪α⁻²；HS(K)≪α⁻²。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "∃正绝对常数置于∀N和其他变参数之前；无固定N依赖常数偷换。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "line": 23
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "三组全部保留，∃C在∀N外；变量α扩展还由ComponentNormBounds.component_bounds_of_average的∀a证实。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_5_components_spec",
+    "actual": "LiLiuGoldbach16.proposition_6_5_components_spec",
+    "label": "Proposition 6.5 / proposition_6_5_components_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2975,
+        2986
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2965-2986;3030-3039",
+    "formula_or_clause": "三分量均代表自己的边界核且T=P−D−K。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/ArithmeticComponentOperators.lean",
+      "line": 108
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "三个算子各有RepresentsKernel与每个内点/向量的绝对可积；符号顺序正确。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_6_5_diagonal_vector_spec",
+    "actual": "LiLiuGoldbach16.proposition_6_5_diagonal_vector_spec",
+    "label": "Proposition 6.5 / proposition_6_5_diagonal_vector_spec",
+    "tex_lines": [
+      [
+        1834,
+        1855
+      ],
+      [
+        2299,
+        2308
+      ],
+      [
+        2975,
+        2986
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3007-3018",
+    "formula_or_clause": "dn(s)=n^(−s)/(1+s)的Hardy向量、边界、π范数公式、rankOne约定。",
+    "standing_and_implicit_conditions": "算术谱结论固定偶N>e^10且GRH(N)；泛型谱结论显式真SpectralData/正迹类；宽度0<η<1/2，M>δ。均匀常数先于N量化。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/SpectralDiagonalVector.lean",
+      "line": 111
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "n≥1避开n=0；无GRH是强于原站立条件，纯分析结论合理；rankOne h=⟨h,d⟩d。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_7_1_mellin",
+    "actual": "LiLiuGoldbach16.lemma_7_1",
+    "label": "Lemma 7.1",
+    "tex_lines": [
+      [
+        3282,
+        3297
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3266-3297",
+    "formula_or_clause": "Mellin反演、紧σ区间均匀六次衰减、奇字符积分带负号。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/MellinCharacterShift.lean",
+      "line": 107
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "反演∀σ，字符式0<σ≤1/9且GRH，φ全条件；平均双积分见absolute_convergence补充。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_1_absolute_convergence",
+    "actual": "LiLiuGoldbach16.lemma_7_1_absolute_convergence",
+    "label": "Lemma 7.1 / lemma_7_1_absolute_convergence",
+    "tex_lines": [
+      [
+        3282,
+        3297
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3282-3297",
+    "formula_or_clause": "一重反演、字符积分、字符矩双积分真可积；P(N)等于双积分。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/MellinCharacterShift.lean",
+      "line": 153
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "原主lemma拆开的第二等式在本补充存在；两负号已抵消。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_7_2",
+    "actual": "LiLiuGoldbach16.lemma_7_2",
+    "label": "Lemma 7.2",
+    "tex_lines": [
+      [
+        3374,
+        3390
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3374-3390",
+    "formula_or_clause": "对角积分=D(N)，Beta积分=−cφS(N)。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/MellinModelDouble.lean",
+      "line": 66
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "无GRH符合TeX；N^(s+z)仅留在对角项，模型中抵消；负号正确。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_2_absolute_convergence",
+    "actual": "LiLiuGoldbach16.lemma_7_2_absolute_convergence",
+    "label": "Lemma 7.2 / lemma_7_2_absolute_convergence",
+    "tex_lines": [
+      [
+        3374,
+        3390
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3374-3390",
+    "formula_or_clause": "对角和Beta两项在ℝ²绝对可积。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/MellinModelDouble.lean",
+      "line": 77
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "非仅迭代积分可积，Fubini使用条件完整。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_2_convolutions",
+    "actual": "LiLiuGoldbach16.lemma_7_2_convolutions",
+    "label": "Lemma 7.2 / lemma_7_2_convolutions",
+    "tex_lines": [
+      [
+        3374,
+        3390
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3362-3370",
+    "formula_or_clause": "C0,J0可积；J0全正半轴写法等于∫0^y；J0(1)=cφ。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/Weights.lean",
+      "line": 115
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "support与对称性由IsWeight输入；全正半轴定义转换不是默认承认。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_7_3",
+    "actual": "LiLiuGoldbach16.proposition_7_3",
+    "label": "Proposition 7.3",
+    "tex_lines": [
+      [
+        3523,
+        3531
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3523-3531",
+    "formula_or_clause": "rσ=cφS−G，任意0<σ≤1/9。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/MellinResidual.lean",
+      "line": 89
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "保留符号及GRH，右侧无σ蕴含轮廓独立。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_7_3_absolute_convergence",
+    "actual": "LiLiuGoldbach16.proposition_7_3_absolute_convergence",
+    "label": "Proposition 7.3 / proposition_7_3_absolute_convergence",
+    "tex_lines": [
+      [
+        3523,
+        3531
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3523-3527",
+    "formula_or_clause": "残差双Mellin积分绝对可积。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/MellinResidual.lean",
+      "line": 98
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "ℝ² Integrable排除默认积分值偷换。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_7_4",
+    "actual": "LiLiuGoldbach16.proposition_7_4",
+    "label": "Proposition 7.4",
+    "tex_lines": [
+      [
+        3623,
+        3638
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3595-3638",
+    "formula_or_clause": "内轮廓无关连续泛函；Riesz范数=Q显式积分≤e²EV；Q=e²EV+Oφ(1/logN)。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/QuadraticFunctional.lean",
+      "line": 11
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "∀内σ不只固定1/9；CLM、Riesz等式、精确平方范数、统一界、余项全部保留。GRH未加是纯泛函结论更强。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_proposition_7_4_norm_integrals",
+    "actual": "LiLiuGoldbach16.proposition_7_4_norm_integrals",
+    "label": "Proposition 7.4 / proposition_7_4_norm_integrals",
+    "tex_lines": [
+      [
+        3623,
+        3638
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3623-3638",
+    "formula_or_clause": "V²/u与Q积分真可积。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/Weights.lean",
+      "line": 196
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "N>0、任意实a给更强纯分析结论；在目标域无假设缺口。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_7_1_quadratic",
+    "actual": "LiLiuGoldbach16.theorem_7_1",
+    "label": "Theorem 7.1",
+    "tex_lines": [
+      [
+        3710,
+        3722
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3710-3722",
+    "formula_or_clause": "cφS−G=⟨Tv,v⟩，|残差|≤Q‖T‖。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/QuadraticIdentity.lean",
+      "line": 120
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "精确有符号等式与常数因子；不是仅不等式；统一≪由uniform补充。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_theorem_7_1_uniform",
+    "actual": "LiLiuGoldbach16.theorem_7_1_uniform",
+    "label": "Theorem 7.1 / theorem_7_1_uniform",
+    "tex_lines": [
+      [
+        3710,
+        3722
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3710-3722",
+    "formula_or_clause": "|cφS−G|≤e²EV‖T‖。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/Main.lean",
+      "line": 16
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "明确仅依赖φ的常数，实现原≪φ并对全部许可N统一。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.Expected_7_5",
+    "actual": "LiLiuGoldbach16.lemma_7_5",
+    "label": "Lemma 7.5",
+    "tex_lines": [
+      [
+        3781,
+        3795
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3781-3795",
+    "formula_or_clause": "相对误差≪φ sqrt(log³N/(NηS))。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/QuadraticEstimates.lean",
+      "line": 37
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "C在∀N、η前；分母cφS；0<η≤1/4和零区假设保留。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_lemma_7_5_asymptotic",
+    "actual": "LiLiuGoldbach16.lemma_7_5_asymptotic",
+    "label": "Lemma 7.5 / lemma_7_5_asymptotic",
+    "tex_lines": [
+      [
+        3781,
+        3795
+      ]
+    ],
+    "tex_lines_directly_reviewed": "3790-3795",
+    "formula_or_clause": "NηS/log³N→∞蕴含相对渐近。",
+    "standing_and_implicit_conditions": "φ光滑、支撑[1/3,2/3]、0≤φ≤1、对称非零；Mellin N≥4偶、0<σ≤1/9；涉及字符残差需GRH；Hardy构造N>e^10。",
+    "quantifier_review": "∀φ,∀ε>0,∃B>0,∀N,η满足假设；B只可依φ,ε，不能依N,η。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Proofs/QuadraticEstimates.lean",
+      "line": 74
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "以∀ε∃B∀合格N,η的统一阈值形式实现，比任意单条趋∞序列足够且更强；未变成仅存在子序列。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_interiorLine_memLp",
+    "actual": "LiLiuGoldbach16.interiorLine_memLp",
+    "label": "Lemma 5.2 / interiorLine_memLp",
+    "tex_lines": [
+      [
+        1986,
+        2046
+      ],
+      [
+        2050,
+        2070
+      ]
+    ],
+    "tex_lines_directly_reviewed": "2005-2016;2050-2062",
+    "formula_or_clause": "所有内竖线的Fourier–Laplace限制属于L²。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Definitions.lean",
+      "line": 12
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "a<b、a<x<b；对任意频域ψ，无预先假设其像可积的循环。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  },
+  {
+    "expected": "TexAudit57.expect_boundaryTraces_exist",
+    "actual": "LiLiuGoldbach16.boundaryTraces_exist",
+    "label": "Lemma 5.2 / boundaryTraces_exist",
+    "tex_lines": [
+      [
+        1986,
+        2046
+      ],
+      [
+        2050,
+        2070
+      ]
+    ],
+    "tex_lines_directly_reviewed": "1995-2001;2030-2046;2063-2070",
+    "formula_or_clause": "每个Hardy向量两端都有L²拓扑极限。",
+    "standing_and_implicit_conditions": "算术应用固定偶N>e^10且GRH(N)；通用Hardy结论只需a<b，内点需a<Re(s)<b。NeZero N与ha可由大小条件推出。",
+    "quantifier_review": "逐一核对原TeX的全称范围、存在常数位置与前置条件；无发现实质弱化。",
+    "actual_source": {
+      "file": "LiLiuGoldbach/Definitions.lean",
+      "line": 28
+    },
+    "semantic_assessment": "consistent_after_stated_representation_bridges",
+    "semantic_note": "∃(left,right)同时满足两端comap nhdsWithin极限；不是无来源任选边界函数。",
+    "reference_to_actual_check": "Lean proof assignment compiled successfully; independent comparator run owned by root",
+    "tex_to_reference_check": "human semantic transcription, not machine-certified"
+  }
+]

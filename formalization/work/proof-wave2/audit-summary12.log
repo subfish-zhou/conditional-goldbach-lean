@@ -1,0 +1,25 @@
+{
+  "scope": "All original 102 theorem declarations plus public implementation helpers; transitive axioms collected by Lean.collectAxioms, including axioms in object definitions.",
+  "original_theorem_counts": {
+    "kernel_closed": 102,
+    "proof_written_dependencies_pending": 0,
+    "pending_direct_sorry": 0
+  },
+  "all_public_theorem_counts": {
+    "kernel_closed": 1354,
+    "proof_written_dependencies_pending": 0,
+    "pending_direct_sorry": 0
+  },
+  "original_definitions": 171,
+  "original_theorems": 102,
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unusual_axioms": [],
+  "main_results": {
+    "theorem_1_1": "kernel_closed",
+    "theorem_1_2": "kernel_closed"
+  }
+}

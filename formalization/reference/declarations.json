@@ -1,0 +1,1367 @@
+{
+  "Character": {
+    "kind": "abbrev",
+    "line": 26,
+    "code": "abbrev Character (N : ℕ) := DirichletCharacter ℂ N"
+  },
+  "mangoldt": {
+    "kind": "abbrev",
+    "line": 30,
+    "code": "abbrev mangoldt := ArithmeticFunction.vonMangoldt"
+  },
+  "prime": {
+    "kind": "abbrev",
+    "line": 31,
+    "code": "abbrev prime (n : ℕ) := Nat.Prime n"
+  },
+  "IsWeight": {
+    "kind": "def",
+    "line": 33,
+    "code": "def IsWeight (φ : ℝ → ℝ) : Prop :=\n  ContDiff ℝ ∞ φ ∧ Function.support φ ⊆ Icc (1 / 3) (2 / 3) ∧\n  (∀ u, 0 ≤ φ u ∧ φ u ≤ 1) ∧ (∀ u, φ u = φ (1 - u)) ∧ φ ≠ 0"
+  },
+  "companion": {
+    "kind": "def",
+    "line": 37,
+    "code": "def companion (φ : ℝ → ℝ) (u : ℝ) : ℝ := Real.sqrt u * φ u"
+  },
+  "derivativeWeight": {
+    "kind": "def",
+    "line": 39,
+    "code": "def derivativeWeight (φ : ℝ → ℝ) (u : ℝ) : ℝ :=\n  companion φ u - u * deriv (companion φ) u"
+  },
+  "weightMass": {
+    "kind": "def",
+    "line": 42,
+    "code": "def weightMass (φ : ℝ → ℝ) : ℝ := ∫ u in (0 : ℝ)..1, φ u ^ 2"
+  },
+  "C2": {
+    "kind": "def",
+    "line": 44,
+    "code": "def C2 : ℝ := MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct"
+  },
+  "singularSeries": {
+    "kind": "def",
+    "line": 46,
+    "code": "def singularSeries (N : ℕ) : ℝ :=\n  2 * MathlibNt.SieveTheory.SingularSeries.liuSingularSeries N"
+  },
+  "singularSeries_eq_existing": {
+    "kind": "theorem",
+    "line": 50,
+    "code": "theorem singularSeries_eq_existing (N : ℕ) :\n    singularSeries N = 2 * MathlibNt.SieveTheory.SingularSeries.liuSingularSeries N := by sorry"
+  },
+  "goldbach": {
+    "kind": "def",
+    "line": 53,
+    "code": "def goldbach (N : ℕ) (φ : ℝ → ℝ) : ℝ :=\n  (N : ℝ)⁻¹ * ∑ n ∈ Finset.range (N + 1),\n    if 0 < n ∧ n < N ∧ Nat.Coprime (n * (N - n)) N then\n      mangoldt n * mangoldt (N - n) * φ (n / N) * φ ((N - n : ℕ) / N)\n    else 0"
+  },
+  "diagonalMoment": {
+    "kind": "def",
+    "line": 59,
+    "code": "def diagonalMoment (N : ℕ) (φ : ℝ → ℝ) : ℝ :=\n  (N : ℝ)⁻¹ * ∑ n ∈ Finset.range (N + 1),\n    if Nat.Coprime n N then (mangoldt n) ^ 2 * φ (n / N) ^ 2 else 0"
+  },
+  "oddCharacters": {
+    "kind": "def",
+    "line": 63,
+    "code": "def oddCharacters (N : ℕ) [NeZero N] : Finset (Character N) :=\n  Finset.univ.filter (fun χ => χ (-1) = -1)"
+  },
+  "characterPolynomial": {
+    "kind": "def",
+    "line": 66,
+    "code": "def characterPolynomial {N : ℕ} (χ : Character N) (φ : ℝ → ℝ) : ℂ :=\n  (Real.sqrt N : ℂ)⁻¹ * ∑ n ∈ Finset.range (N + 1),\n    (mangoldt n : ℂ) * χ n * (φ (n / N) : ℂ)"
+  },
+  "characterMoment": {
+    "kind": "def",
+    "line": 70,
+    "code": "def characterMoment (N : ℕ) [NeZero N] (φ : ℝ → ℝ) : ℝ :=\n  2 / N.totient * ∑ χ ∈ oddCharacters N, ‖characterPolynomial χ φ‖ ^ 2"
+  },
+  "GRH": {
+    "kind": "def",
+    "line": 73,
+    "code": "def GRH (N : ℕ) : Prop :=\n  ∀ d : ℕ, ∀ (_ : NeZero d), d ∣ N → ∀ χ : Character d, χ.IsPrimitive →\n    ∀ ρ : ℂ, 0 < ρ.re → ρ.re < 1 → χ.LFunction ρ = 0 → ρ.re = 1 / 2"
+  },
+  "logDerivative": {
+    "kind": "def",
+    "line": 77,
+    "code": "def logDerivative {N : ℕ} [NeZero N] (χ : Character N) (s : ℂ) : ℂ :=\n  deriv χ.LFunction (1 / 2 + s) / χ.LFunction (1 / 2 + s)"
+  },
+  "characterKernel": {
+    "kind": "def",
+    "line": 80,
+    "code": "def characterKernel (N : ℕ) [NeZero N] (s z : ℂ) : ℂ :=\n  2 / N.totient * ∑ χ ∈ oddCharacters N,\n    logDerivative χ s * conj (logDerivative χ (conj z))"
+  },
+  "diagonalSeries": {
+    "kind": "def",
+    "line": 84,
+    "code": "def diagonalSeries (N : ℕ) (w : ℂ) : ℂ :=\n  ∑' n : ℕ, if 0 < n ∧ Nat.Coprime n N then\n    (mangoldt n : ℂ) ^ 2 / (n : ℂ) ^ (1 + w) else 0"
+  },
+  "densitySeries": {
+    "kind": "def",
+    "line": 88,
+    "code": "def densitySeries (N : ℕ) (w : ℂ) : ℂ :=\n  ∑' k : ℕ, if 0 < k then (singularSeries (k * N) : ℂ) / (k : ℂ) ^ w else 0"
+  },
+  "densityEulerProduct": {
+    "kind": "def",
+    "line": 91,
+    "code": "def densityEulerProduct (N : ℕ) (w : ℂ) : ℂ :=\n  ∏' p : ℕ, if p.Prime ∧ 2 < p ∧ ¬p ∣ N then\n    1 + (p : ℂ) ^ (-w) / ((p : ℂ) - 2) else 1"
+  },
+  "continuedDensity": {
+    "kind": "def",
+    "line": 95,
+    "code": "def continuedDensity (N : ℕ) (w : ℂ) : ℂ :=\n  singularSeries N * riemannZeta w * densityEulerProduct N w"
+  },
+  "betaKernel": {
+    "kind": "def",
+    "line": 98,
+    "code": "def betaKernel (s z : ℂ) : ℂ :=\n  betaIntegral (1 / 2 - s) (s + z) + betaIntegral (1 / 2 - z) (s + z) -\n    betaIntegral (1 / 2 - s) (1 / 2 - z)"
+  },
+  "gammaQuotient": {
+    "kind": "def",
+    "line": 102,
+    "code": "def gammaQuotient (s : ℂ) : ℂ :=\n  Gamma ((3 / 2 - s) / 2) / Gamma ((3 / 2 + s) / 2)"
+  },
+  "betaModel": {
+    "kind": "def",
+    "line": 105,
+    "code": "def betaModel (N : ℕ) (s z : ℂ) : ℂ :=\n  (N : ℂ) ^ (-(s + z)) * continuedDensity N (s + z) * betaKernel s z"
+  },
+  "continuedModel": {
+    "kind": "def",
+    "line": 108,
+    "code": "def continuedModel (N : ℕ) (s z : ℂ) : ℂ :=\n  singularSeries N * ((Real.pi : ℂ) / N) ^ (s + z) *\n    densityEulerProduct N (s + z) * riemannZeta (1 - s - z) *\n    gammaQuotient s * gammaQuotient z"
+  },
+  "residual": {
+    "kind": "def",
+    "line": 113,
+    "code": "def residual (N : ℕ) [NeZero N] (s z : ℂ) : ℂ :=\n  characterKernel N s z - diagonalSeries N (s + z) - continuedModel N s z"
+  },
+  "analyticDomain": {
+    "kind": "def",
+    "line": 116,
+    "code": "def analyticDomain : Set (ℂ × ℂ) :=\n  {p | 0 < p.1.re ∧ p.1.re < 3 / 2 ∧ 0 < p.2.re ∧ p.2.re < 3 / 2}"
+  },
+  "betaDomain": {
+    "kind": "def",
+    "line": 119,
+    "code": "def betaDomain : Set (ℂ × ℂ) :=\n  {p | p.1.re < 1 / 2 ∧ p.2.re < 1 / 2 ∧ 0 < (p.1 + p.2).re}"
+  },
+  "alpha": {
+    "kind": "def",
+    "line": 122,
+    "code": "def alpha (N : ℕ) (c : ℝ := 1) : ℝ := c / Real.log N"
+  },
+  "beta": {
+    "kind": "def",
+    "line": 124,
+    "code": "def beta : ℝ := 1 / 8"
+  },
+  "sigmaStar": {
+    "kind": "def",
+    "line": 126,
+    "code": "def sigmaStar : ℝ := 1 / 9"
+  },
+  "width": {
+    "kind": "def",
+    "line": 128,
+    "code": "def width (a : ℝ) : ℝ := beta - a"
+  },
+  "strip": {
+    "kind": "def",
+    "line": 130,
+    "code": "def strip (a b : ℝ) : Set ℂ := {s | a < s.re ∧ s.re < b}"
+  },
+  "line": {
+    "kind": "def",
+    "line": 132,
+    "code": "def line (x t : ℝ) : ℂ := (x : ℂ) + t * I"
+  },
+  "boundaryIntegral": {
+    "kind": "def",
+    "line": 134,
+    "code": "def boundaryIntegral (a b : ℝ) (f : ℂ → ℂ) : ℂ :=\n  (∫ t : ℝ, f (line a t)) + ∫ t : ℝ, f (line b t)"
+  },
+  "mellinWeight": {
+    "kind": "def",
+    "line": 137,
+    "code": "def mellinWeight (φ : ℝ → ℝ) (s : ℂ) : ℂ :=\n  mellin (fun u => (companion φ u : ℂ)) s"
+  },
+  "verticalMellin": {
+    "kind": "def",
+    "line": 141,
+    "code": "def verticalMellin (σ : ℝ) (f : ℂ → ℂ) : ℂ :=\n  (2 * (Real.pi : ℂ))⁻¹ * ∫ t : ℝ, f (line σ t)"
+  },
+  "residualIntegral": {
+    "kind": "def",
+    "line": 144,
+    "code": "def residualIntegral (N : ℕ) [NeZero N] (φ : ℝ → ℝ) (σ : ℝ) : ℂ :=\n  verticalMellin σ (fun s => verticalMellin σ (fun z =>\n    (N : ℂ) ^ (s + z) * mellinWeight φ s * mellinWeight φ z * residual N s z))"
+  },
+  "differenceConvolution": {
+    "kind": "def",
+    "line": 148,
+    "code": "def differenceConvolution (φ : ℝ → ℝ) (y : ℝ) : ℝ :=\n  ∫ u in Ioi (0 : ℝ), φ u * φ (u + y)"
+  },
+  "sumConvolution": {
+    "kind": "def",
+    "line": 151,
+    "code": "def sumConvolution (φ : ℝ → ℝ) (y : ℝ) : ℝ :=\n  ∫ u in Ioi (0 : ℝ), φ u * φ (y - u)"
+  },
+  "signedConvolution": {
+    "kind": "def",
+    "line": 154,
+    "code": "def signedConvolution (φ : ℝ → ℝ) (y : ℝ) : ℝ :=\n  2 * differenceConvolution φ y - sumConvolution φ y"
+  },
+  "hardyWeight": {
+    "kind": "def",
+    "line": 157,
+    "code": "def hardyWeight (a b τ : ℝ) : ℝ := Real.exp (2 * a * τ) + Real.exp (2 * b * τ)"
+  },
+  "hardyMeasure": {
+    "kind": "def",
+    "line": 159,
+    "code": "def hardyMeasure (a b : ℝ) : Measure ℝ :=\n  volume.withDensity (fun τ => ENNReal.ofReal (hardyWeight a b τ))"
+  },
+  "HardySpace": {
+    "kind": "abbrev",
+    "line": 162,
+    "code": "abbrev HardySpace (a b : ℝ) := Lp ℂ 2 (hardyMeasure a b)"
+  },
+  "fourierLaplace": {
+    "kind": "def",
+    "line": 164,
+    "code": "def fourierLaplace {a b : ℝ} (ψ : HardySpace a b) (s : ℂ) : ℂ :=\n  (Real.sqrt (2 * Real.pi) : ℂ)⁻¹ * ∫ τ : ℝ, ψ τ * Complex.exp (s * τ)"
+  },
+  "IsRawHardy": {
+    "kind": "def",
+    "line": 167,
+    "code": "def IsRawHardy (a b : ℝ) (f : ℂ → ℂ) : Prop :=\n  DifferentiableOn ℂ f (strip a b) ∧\n    ∃ C : ℝ, ∀ ε : ℝ, 0 < ε → ε < (b - a) / 2 →\n      Integrable (fun t : ℝ => ‖f (line (a + ε) t)‖ ^ 2 +\n        ‖f (line (b - ε) t)‖ ^ 2) ∧\n      (∫ t : ℝ, ‖f (line (a + ε) t)‖ ^ 2 + ‖f (line (b - ε) t)‖ ^ 2) ≤ C"
+  },
+  "rawHardyNormSq": {
+    "kind": "def",
+    "line": 175,
+    "code": "def rawHardyNormSq (a b : ℝ) (f : ℂ → ℂ) : ℝ :=\n  sSup {r | ∃ ε : ℝ, 0 < ε ∧ ε < (b - a) / 2 ∧\n    r = ∫ t : ℝ, ‖f (line (a + ε) t)‖ ^ 2 + ‖f (line (b - ε) t)‖ ^ 2}"
+  },
+  "interiorLine_memLp": {
+    "kind": "theorem",
+    "line": 179,
+    "code": "theorem interiorLine_memLp {a b x : ℝ} (hab : a < b)\n    (hx : x ∈ Ioo a b) (ψ : HardySpace a b) :\n    MemLp (fun t : ℝ => fourierLaplace ψ (line x t)) 2 volume := by sorry"
+  },
+  "interiorLine": {
+    "kind": "def",
+    "line": 183,
+    "code": "def interiorLine {a b : ℝ} (hab : a < b) (ψ : HardySpace a b)\n    (x : ℝ) (hx : x ∈ Ioo a b) : Lp ℂ 2 (volume : Measure ℝ) :=\n  (interiorLine_memLp hab hx ψ).toLp _"
+  },
+  "IsBoundaryTrace": {
+    "kind": "def",
+    "line": 188,
+    "code": "def IsBoundaryTrace {a b : ℝ} (hab : a < b) (ψ : HardySpace a b)\n    (left right : Lp ℂ 2 (volume : Measure ℝ)) : Prop :=\n  Tendsto (fun x : Ioo a b => interiorLine hab ψ x x.property)\n    (comap Subtype.val (nhdsWithin a (Ioo a b))) (𝓝 left) ∧\n  Tendsto (fun x : Ioo a b => interiorLine hab ψ x x.property)\n    (comap Subtype.val (nhdsWithin b (Ioo a b))) (𝓝 right)"
+  },
+  "boundaryTraces_exist": {
+    "kind": "theorem",
+    "line": 195,
+    "code": "theorem boundaryTraces_exist {a b : ℝ} (hab : a < b) (ψ : HardySpace a b) :\n    ∃ p : Lp ℂ 2 (volume : Measure ℝ) × Lp ℂ 2 (volume : Measure ℝ),\n      IsBoundaryTrace hab ψ p.1 p.2 := by sorry"
+  },
+  "boundaryTraces": {
+    "kind": "def",
+    "line": 199,
+    "code": "def boundaryTraces {a b : ℝ} (hab : a < b) (ψ : HardySpace a b) :=\n  Classical.choose (boundaryTraces_exist hab ψ)"
+  },
+  "paperInner": {
+    "kind": "def",
+    "line": 202,
+    "code": "def paperInner {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (u v : H) : ℂ := inner ℂ v u"
+  },
+  "weightedKernel": {
+    "kind": "def",
+    "line": 205,
+    "code": "def weightedKernel (N : ℕ) [NeZero N] (s z : ℂ) : ℂ :=\n  residual N s (conj z) / ((1 + s) * (1 + conj z))"
+  },
+  "kernelAction": {
+    "kind": "def",
+    "line": 208,
+    "code": "def kernelAction {a : ℝ} (ha : a < beta) (N : ℕ) [NeZero N]\n    (K : ℂ → ℂ → ℂ) (h : HardySpace a beta) (s : ℂ) : ℂ :=\n  (∫ t : ℝ, K s (line a t) * (boundaryTraces ha h).1 t) +\n  ∫ t : ℝ, K s (line beta t) * (boundaryTraces ha h).2 t"
+  },
+  "RepresentsKernel": {
+    "kind": "def",
+    "line": 213,
+    "code": "def RepresentsKernel {a : ℝ} (ha : a < beta) (N : ℕ) [NeZero N]\n    (K : ℂ → ℂ → ℂ) (T : HardySpace a beta →L[ℂ] HardySpace a beta) : Prop :=\n  ∀ h s, s ∈ strip a beta → fourierLaplace (T h) s = kernelAction ha N K h s"
+  },
+  "kernelOperator": {
+    "kind": "def",
+    "line": 218,
+    "code": "def kernelOperator {a : ℝ} (ha : a < beta) (N : ℕ) [NeZero N]\n    (K : ℂ → ℂ → ℂ) : HardySpace a beta →L[ℂ] HardySpace a beta :=\n  if h : ∃ T, RepresentsKernel ha N K T then Classical.choose h else 0"
+  },
+  "residualOperator": {
+    "kind": "def",
+    "line": 222,
+    "code": "def residualOperator {a : ℝ} (ha : a < beta) (N : ℕ) [NeZero N] :=\n  kernelOperator ha N (weightedKernel N)"
+  },
+  "arithmeticOperator": {
+    "kind": "def",
+    "line": 225,
+    "code": "def arithmeticOperator {a : ℝ} (ha : a < beta) (N : ℕ) [NeZero N] :=\n  kernelOperator ha N (fun s z => characterKernel N s (conj z) / ((1 + s) * (1 + conj z)))"
+  },
+  "diagonalOperator": {
+    "kind": "def",
+    "line": 228,
+    "code": "def diagonalOperator {a : ℝ} (ha : a < beta) (N : ℕ) [NeZero N] :=\n  kernelOperator ha N (fun s z => diagonalSeries N (s + conj z) / ((1 + s) * (1 + conj z)))"
+  },
+  "modelOperator": {
+    "kind": "def",
+    "line": 231,
+    "code": "def modelOperator {a : ℝ} (ha : a < beta) (N : ℕ) [NeZero N] :=\n  kernelOperator ha N (fun s z => continuedModel N s (conj z) / ((1 + s) * (1 + conj z)))"
+  },
+  "IsHilbertSchmidt": {
+    "kind": "def",
+    "line": 236,
+    "code": "def IsHilbertSchmidt {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (T : H →L[ℂ] H) : Prop :=\n  ∃ b : HilbertBasis ℕ ℂ H, Summable (fun j => ‖T (b j)‖ ^ 2)"
+  },
+  "hsNorm": {
+    "kind": "def",
+    "line": 240,
+    "code": "def hsNorm {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (T : H →L[ℂ] H) : ℝ :=\n  if h : ∃ b : HilbertBasis ℕ ℂ H, Summable (fun j => ‖T (b j)‖ ^ 2)\n  then Real.sqrt (∑' j, ‖T ((Classical.choose h) j)‖ ^ 2) else 0"
+  },
+  "IsPositiveTraceClass": {
+    "kind": "def",
+    "line": 245,
+    "code": "def IsPositiveTraceClass {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (T : H →L[ℂ] H) : Prop :=\n  T.IsSymmetric ∧ (∀ x, 0 ≤ (paperInner (T x) x).re) ∧\n  ∃ b : HilbertBasis ℕ ℂ H, Summable (fun j => (paperInner (T (b j)) (b j)).re)"
+  },
+  "positiveTrace": {
+    "kind": "def",
+    "line": 250,
+    "code": "def positiveTrace {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (T : H →L[ℂ] H) : ℝ :=\n  if h : ∃ b : HilbertBasis ℕ ℂ H, Summable (fun j => (paperInner (T (b j)) (b j)).re)\n  then ∑' j, (paperInner (T ((Classical.choose h) j)) ((Classical.choose h) j)).re else 0"
+  },
+  "SpectralData": {
+    "kind": "structure",
+    "line": 256,
+    "code": "structure SpectralData {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (T : H →L[ℂ] H) where\n  basis : HilbertBasis ℕ ℂ H\n  values : ℕ → ℝ\n  diagonal : ∀ j, T (basis j) = (values j : ℂ) • basis j\n  squareSummable : Summable (fun j => values j ^ 2)"
+  },
+  "eigenvalues": {
+    "kind": "def",
+    "line": 263,
+    "code": "def eigenvalues {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (T : H →L[ℂ] H) : ℕ → ℝ :=\n  if h : Nonempty (SpectralData T) then (Classical.choice h).values else 0"
+  },
+  "spectralScale": {
+    "kind": "def",
+    "line": 267,
+    "code": "def spectralScale (N : ℕ) : ℝ :=\n  Real.sqrt (singularSeries N / N) * Real.rpow (Real.log N) (3 / 2)"
+  },
+  "spectralComplex": {
+    "kind": "def",
+    "line": 270,
+    "code": "def spectralComplex {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (N : ℕ) (T : H →L[ℂ] H) (q : ℂ) : ℂ :=\n  ∏' j : ℕ, (1 - (4 * eigenvalues T j ^ 2 / spectralScale N ^ 2 : ℝ) * q * (1 - q))"
+  },
+  "spectralPartialQuaternion": {
+    "kind": "def",
+    "line": 274,
+    "code": "def spectralPartialQuaternion {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (N : ℕ) (T : H →L[ℂ] H) (q : Quaternion ℝ) (k : ℕ) : Quaternion ℝ :=\n  (List.range k).foldl (fun z j =>\n    z * (1 - (4 * eigenvalues T j ^ 2 / spectralScale N ^ 2 : ℝ) • (q * (1 - q)))) 1"
+  },
+  "spectralQuaternion": {
+    "kind": "def",
+    "line": 279,
+    "code": "def spectralQuaternion {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (N : ℕ) (T : H →L[ℂ] H) (q : Quaternion ℝ) : Quaternion ℝ :=\n  if h : ∃ y, Tendsto (spectralPartialQuaternion N T q) atTop (𝓝 y)\n  then Classical.choose h else 0"
+  },
+  "RealizationValid": {
+    "kind": "def",
+    "line": 284,
+    "code": "def RealizationValid (N : ℕ) (a : ℝ) : Prop :=\n  Even N ∧ 4 ≤ N ∧ GRH N ∧ 0 < a ∧ a < 1 / 10"
+  },
+  "normFunctional": {
+    "kind": "def",
+    "line": 287,
+    "code": "def normFunctional (N : ℕ) (φ : ℝ → ℝ) (a : ℝ) : ℝ :=\n  (2 * Real.pi)⁻¹ * ∫ u in Ioi (0 : ℝ),\n    Real.rpow (N * u) (2 * a) * derivativeWeight φ u ^ 2 /\n      (1 + Real.rpow (N * u) (-2 * (beta - a))) / u"
+  },
+  "weightEnergy": {
+    "kind": "def",
+    "line": 292,
+    "code": "def weightEnergy (φ : ℝ → ℝ) : ℝ :=\n  (2 * Real.pi)⁻¹ * ∫ u in Ioi (0 : ℝ), derivativeWeight φ u ^ 2 / u"
+  },
+  "functionalValue": {
+    "kind": "def",
+    "line": 295,
+    "code": "def functionalValue {a : ℝ} (N : ℕ) (φ : ℝ → ℝ) (σ : ℝ)\n    (h : HardySpace a beta) : ℂ :=\n  verticalMellin σ (fun s => (N : ℂ) ^ s * mellinWeight φ s * (1 + s) * fourierLaplace h s)"
+  },
+  "rieszVector": {
+    "kind": "def",
+    "line": 299,
+    "code": "def rieszVector {a : ℝ} (N : ℕ) (φ : ℝ → ℝ) : HardySpace a beta :=\n  if h : ∃ v : HardySpace a beta, ∀ f,\n      functionalValue N φ sigmaStar f = paperInner f v\n  then Classical.choose h else 0"
+  },
+  "evaluationVector": {
+    "kind": "def",
+    "line": 304,
+    "code": "def evaluationVector {a b : ℝ} (s : ℂ) : HardySpace a b :=\n  if h : ∃ v : HardySpace a b, ∀ f, fourierLaplace f s = paperInner f v\n  then Classical.choose h else 0"
+  },
+  "pointDistance": {
+    "kind": "def",
+    "line": 308,
+    "code": "def pointDistance (a b : ℝ) (s : ℂ) : ℝ := min (s.re - a) (b - s.re)"
+  },
+  "reproducingKernel": {
+    "kind": "def",
+    "line": 310,
+    "code": "def reproducingKernel (a b : ℝ) (s z : ℂ) : ℂ :=\n  (4 * ((b - a : ℝ) : ℂ))⁻¹ /\n    Complex.sin ((Real.pi : ℂ) * (s + conj z - 2 * a) / (2 * (b - a : ℝ)))"
+  },
+  "zeroFreeWidth": {
+    "kind": "def",
+    "line": 314,
+    "code": "def zeroFreeWidth (N : ℕ) (h : ℕ → ℝ) : ℝ :=\n  h N ^ 2 * Real.log N ^ 3 / (N * singularSeries N)"
+  },
+  "EvenEventually": {
+    "kind": "def",
+    "line": 317,
+    "code": "def EvenEventually (P : ℕ → Prop) : Prop := ∃ N₀ : ℕ, ∀ N ≥ N₀, Even N → P N"
+  },
+  "EvenTendstoInfinity": {
+    "kind": "def",
+    "line": 319,
+    "code": "def EvenTendstoInfinity (h : ℕ → ℝ) : Prop :=\n  ∀ B : ℝ, EvenEventually (fun N => B ≤ h N)"
+  },
+  "IsAdmissible": {
+    "kind": "def",
+    "line": 322,
+    "code": "def IsAdmissible (h : ℕ → ℝ) : Prop :=\n  (∀ N, Even N → 4 ≤ N → 0 < h N) ∧ EvenTendstoInfinity h ∧\n  EvenEventually (fun N => zeroFreeWidth N h ≤ 1 / 4)"
+  },
+  "SpectralR": {
+    "kind": "def",
+    "line": 327,
+    "code": "def SpectralR (N : ℕ) [NeZero N] (a : ℝ) (ha : a < beta) : Prop :=\n  ∀ q : Quaternion ℝ, spectralQuaternion N (residualOperator ha N) q = 0 → q.re = 1 / 2"
+  },
+  "SpectralZeroFree": {
+    "kind": "def",
+    "line": 330,
+    "code": "def SpectralZeroFree (N : ℕ) [NeZero N] (a : ℝ) (ha : a < beta) (η : ℝ) : Prop :=\n  ∀ q : Quaternion ℝ, 1 - η < q.re → spectralQuaternion N (residualOperator ha N) q ≠ 0"
+  },
+  "HypothesisR": {
+    "kind": "def",
+    "line": 334,
+    "code": "def HypothesisR : Prop := EvenEventually (fun N => GRH N →\n  ∀ (_hN : NeZero N) (ha : alpha N < beta), @SpectralR N _hN (alpha N) ha)"
+  },
+  "HypothesisS": {
+    "kind": "def",
+    "line": 337,
+    "code": "def HypothesisS (h : ℕ → ℝ) : Prop := IsAdmissible h ∧ EvenEventually (fun N => GRH N →\n  ∀ (_hN : NeZero N) (ha : alpha N < beta),\n    @SpectralZeroFree N _hN (alpha N) ha (zeroFreeWidth N h))"
+  },
+  "PrimePairCount": {
+    "kind": "def",
+    "line": 341,
+    "code": "def PrimePairCount (N : ℕ) : ℕ :=\n  ((Finset.range (N + 1)).filter (fun p => p.Prime ∧ (N - p).Prime ∧\n    (N : ℝ) / 3 ≤ p ∧ (p : ℝ) ≤ 2 * N / 3)).card"
+  },
+  "ZeroIndex": {
+    "kind": "def",
+    "line": 346,
+    "code": "def ZeroIndex {d : ℕ} [NeZero d] (χ : Character d) :=\n  {p : ℂ × ℕ // 0 < p.1.re ∧ p.1.re < 1 ∧ χ.LFunction p.1 = 0 ∧\n    p.2 < analyticOrderNatAt χ.LFunction p.1}"
+  },
+  "completedL": {
+    "kind": "def",
+    "line": 350,
+    "code": "def completedL {d : ℕ} [NeZero d] (χ : Character d) (u : ℂ) : ℂ :=\n  (d : ℂ) ^ ((u + 1) / 2) * χ.completedLFunction u"
+  },
+  "zeroDifference": {
+    "kind": "def",
+    "line": 353,
+    "code": "def zeroDifference {d : ℕ} [NeZero d] (χ : Character d) (u u₀ : ℂ) : ℂ :=\n  ∑' p : ZeroIndex χ, (1 / (u - p.val.1) - 1 / (u₀ - p.val.1))"
+  },
+  "eulerCorrection": {
+    "kind": "def",
+    "line": 356,
+    "code": "def eulerCorrection {N : ℕ} [NeZero N] (χ : Character N) (u : ℂ) : ℂ :=\n  ∑ p ∈ N.primeFactors, if ¬p ∣ χ.conductor then\n    χ.primitiveCharacter p * (Real.log p : ℂ) /\n      ((p : ℂ) ^ u - χ.primitiveCharacter p) else 0"
+  },
+  "zeroPoisson": {
+    "kind": "def",
+    "line": 361,
+    "code": "def zeroPoisson {N : ℕ} [NeZero N] (χ : Character N) (x t : ℝ) : ℝ :=\n  ∑' p : ZeroIndex χ.primitiveCharacter, x / (x ^ 2 + (t - p.val.1.im) ^ 2)"
+  },
+  "averagedLogDerivative": {
+    "kind": "def",
+    "line": 364,
+    "code": "def averagedLogDerivative (N : ℕ) [NeZero N] (σ : ℝ) : ℝ :=\n  2 / N.totient * ∑ χ ∈ oddCharacters N,\n    ∫ t : ℝ, ‖logDerivative χ (line σ t)‖ ^ 2 / (1 + t ^ 2)"
+  },
+  "NormallySummableOn": {
+    "kind": "def",
+    "line": 369,
+    "code": "def NormallySummableOn {ι X : Type*} [TopologicalSpace X]\n    (f : ι → X → ℂ) (U : Set X) : Prop :=\n  ∀ K : Set X, IsCompact K → K ⊆ U →\n    (∀ i, BddAbove {r : ℝ | ∃ x ∈ K, r = ‖f i x‖}) ∧\n    Summable (fun i => sSup {r : ℝ | ∃ x ∈ K, r = ‖f i x‖})"
+  },
+  "HermitianKernel": {
+    "kind": "def",
+    "line": 375,
+    "code": "def HermitianKernel (K : ℂ → ℂ → ℂ) : Prop := ∀ s z, K s z = conj (K z s)"
+  },
+  "PositiveKernel": {
+    "kind": "def",
+    "line": 377,
+    "code": "def PositiveKernel (K : ℂ → ℂ → ℂ) : Prop :=\n  ∀ n : ℕ, ∀ points coefficients : Fin n → ℂ,\n    0 ≤ (∑ i, ∑ j, coefficients i * conj (coefficients j) * K (points i) (points j)).re"
+  },
+  "BoundaryKernelSquareIntegral": {
+    "kind": "def",
+    "line": 381,
+    "code": "def BoundaryKernelSquareIntegral (a b : ℝ) (K : ℂ → ℂ → ℂ) : ℝ :=\n  ∑ x ∈ ({a, b} : Finset ℝ), ∑ y ∈ ({a, b} : Finset ℝ),\n    ∫ t : ℝ, ∫ u : ℝ, ‖K (line x t) (line y u)‖ ^ 2"
+  },
+  "IntrinsicEntire": {
+    "kind": "def",
+    "line": 385,
+    "code": "def IntrinsicEntire (F : Quaternion ℝ → Quaternion ℝ) : Prop :=\n  ∃ f : ℂ → ℂ, Differentiable ℂ f ∧ (∀ z, f (conj z) = conj (f z)) ∧\n    ∀ J : Quaternion ℝ, J.re = 0 → J ^ 2 = -1 → ∀ z : ℂ,\n      F ((z.re : Quaternion ℝ) + z.im • J) = (f z).re + (f z).im • J"
+  },
+  "CompactUniformLimit": {
+    "kind": "def",
+    "line": 390,
+    "code": "def CompactUniformLimit {X Y : Type*} [TopologicalSpace X] [NormedAddCommGroup Y]\n    (f : ℕ → X → Y) (g : X → Y) : Prop :=\n  ∀ K : Set X, IsCompact K → ∀ ε : ℝ, 0 < ε →\n    ∃ n₀, ∀ n ≥ n₀, ∀ x ∈ K, ‖f n x - g x‖ < ε"
+  },
+  "EvenAsymptotic": {
+    "kind": "def",
+    "line": 395,
+    "code": "def EvenAsymptotic (f g : ℕ → ℝ) : Prop :=\n  ∀ ε : ℝ, 0 < ε → EvenEventually (fun N => |f N / g N - 1| < ε)"
+  },
+  "spectralWidthFromBound": {
+    "kind": "def",
+    "line": 398,
+    "code": "def spectralWidthFromBound (N : ℕ) (M : ℝ) : ℝ :=\n  (1 - Real.sqrt (1 - spectralScale N ^ 2 / M ^ 2)) / 2"
+  },
+  "theorem_1_1_weight_exists": {
+    "kind": "theorem",
+    "line": 404,
+    "code": "theorem theorem_1_1_weight_exists : ∃ φ : ℝ → ℝ, IsWeight φ := by sorry"
+  },
+  "theorem_1_1": {
+    "kind": "theorem",
+    "line": 406,
+    "code": "theorem theorem_1_1 (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ h : ℕ → ℝ,\n      EvenEventually GRH → HypothesisS h →\n      EvenEventually (fun N => |goldbach N φ - weightMass φ * singularSeries N| ≤\n        C * singularSeries N / h N) ∧\n      EvenAsymptotic (fun N => goldbach N φ) (fun N => weightMass φ * singularSeries N) := by sorry"
+  },
+  "theorem_1_2": {
+    "kind": "theorem",
+    "line": 413,
+    "code": "theorem theorem_1_2 (φ : ℝ → ℝ) (hφ : IsWeight φ)\n    (hGRH : EvenEventually GRH) (hR : HypothesisR) :\n    ∃ C : ℝ, 0 < C ∧ EvenEventually (fun N =>\n      |goldbach N φ - weightMass φ * singularSeries N| ≤ C * spectralScale N) := by sorry"
+  },
+  "theorem_1_2_hypothesisR_implies_S": {
+    "kind": "theorem",
+    "line": 419,
+    "code": "theorem theorem_1_2_hypothesisR_implies_S (hR : HypothesisR)\n    (h : ℕ → ℝ) (hh : IsAdmissible h) : HypothesisS h := by sorry"
+  },
+  "primePair_consequence": {
+    "kind": "theorem",
+    "line": 423,
+    "code": "theorem primePair_consequence (φ : ℝ → ℝ) (hφ : IsWeight φ)\n    (hGRH : EvenEventually GRH) (hSpectral : HypothesisR ∨ ∃ h, HypothesisS h) :\n    ∃ C : ℝ, 0 < C ∧ EvenEventually (fun N =>\n      C * singularSeries N * N / Real.log N ^ 2 ≤ (PrimePairCount N : ℝ)) := by sorry"
+  },
+  "lemma_3_1": {
+    "kind": "theorem",
+    "line": 429,
+    "code": "theorem lemma_3_1 (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ (N : ℕ) (_ : NeZero N), Even N → 4 ≤ N →\n      goldbach N φ = diagonalMoment N φ - characterMoment N φ ∧\n      0 ≤ characterMoment N φ ∧ characterMoment N φ ≤ diagonalMoment N φ ∧\n      diagonalMoment N φ ≤ C * Real.log N := by sorry"
+  },
+  "lemma_3_1_odd_orthogonality": {
+    "kind": "theorem",
+    "line": 438,
+    "code": "theorem lemma_3_1_odd_orthogonality (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) (n m : ℕ) :\n    (2 / (N.totient : ℂ)) * ∑ χ ∈ oddCharacters N, χ n * conj (χ m) =\n      if Nat.Coprime (n * m) N then\n        (if (n : ZMod N) = m then (1 : ℂ) else 0) -\n          (if (n : ZMod N) = -(m : ZMod N) then 1 else 0)\n      else 0 := by sorry"
+  },
+  "arithmeticExpansionTerm": {
+    "kind": "def",
+    "line": 446,
+    "code": "def arithmeticExpansionTerm (N n m : ℕ) (s z : ℂ) : ℂ :=\n  if 0 < n ∧ 0 < m ∧ Nat.Coprime (n * m) N then\n    (mangoldt n : ℂ) * mangoldt m / ((n : ℂ) ^ (1 / 2 + s) * (m : ℂ) ^ (1 / 2 + z)) *\n      ((if (n : ZMod N) = m then 1 else 0) -\n        (if (n : ZMod N) = -(m : ZMod N) then 1 else 0)) else 0"
+  },
+  "proposition_3_2": {
+    "kind": "theorem",
+    "line": 452,
+    "code": "theorem proposition_3_2 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N) :\n    (∀ s z : ℂ, 1 / 2 < s.re → 1 / 2 < z.re →\n      Summable (fun p : ℕ × ℕ => ‖arithmeticExpansionTerm N p.1 p.2 s z‖) ∧\n      characterKernel N s z = ∑' p : ℕ × ℕ, arithmeticExpansionTerm N p.1 p.2 s z) ∧\n    (∀ z, MeromorphicOn (fun s => characterKernel N s z) Set.univ) ∧\n    (∀ s, MeromorphicOn (fun z => characterKernel N s z) Set.univ) ∧\n    (GRH N → DifferentiableOn ℂ (fun p : ℂ × ℂ => characterKernel N p.1 p.2)\n      {p | 0 < p.1.re ∧ 0 < p.2.re}) ∧\n    (∀ s z, characterKernel N s z = characterKernel N z s ∧\n      conj (characterKernel N s z) = characterKernel N (conj s) (conj z)) ∧\n    PositiveKernel (fun s z => characterKernel N s (conj z)) ∧\n    Module.finrank ℂ (Submodule.span ℂ (Set.range\n      (fun z : ℂ => fun s : ℂ => characterKernel N s (conj z)))) ≤ N.totient / 2 := by sorry"
+  },
+  "zeroWindow": {
+    "kind": "def",
+    "line": 466,
+    "code": "def zeroWindow {d : ℕ} [NeZero d] (χ : Character d) (t : ℝ) : Set (ZeroIndex χ) :=\n  {p | t ≤ p.val.1.im ∧ p.val.1.im < t + 1}"
+  },
+  "lemma_3_3": {
+    "kind": "theorem",
+    "line": 469,
+    "code": "theorem lemma_3_3 : ∃ C : ℝ, 0 < C ∧ ∀ d : ℕ, ∀ (_ : NeZero d), ∀ χ : Character d,\n    χ.IsPrimitive → χ (-1) = -1 →\n    (∀ u u₀ : ℂ, completedL χ u ≠ 0 → completedL χ u₀ ≠ 0 →\n      deriv (completedL χ) u / completedL χ u -\n        deriv (completedL χ) u₀ / completedL χ u₀ = zeroDifference χ u u₀) ∧\n    NormallySummableOn (fun p : ZeroIndex χ => fun u : ℂ × ℂ =>\n      1 / (u.1 - p.val.1) - 1 / (u.2 - p.val.1))\n      {u | completedL χ u.1 ≠ 0 ∧ completedL χ u.2 ≠ 0} ∧\n    (∀ t, (zeroWindow χ t).Finite ∧\n      ((zeroWindow χ t).ncard : ℝ) ≤ C * Real.log (d * (|t| + 2))) := by sorry"
+  },
+  "lemma_3_4": {
+    "kind": "theorem",
+    "line": 480,
+    "code": "theorem lemma_3_4 (δ M : ℝ) (hδ : 0 < δ) (hM : δ ≤ M) :\n    ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, ∀ (_ : NeZero N), 4 ≤ N → Even N → GRH N →\n      ∀ χ ∈ oddCharacters N,\n      (∀ s : ℂ, 0 < s.re → logDerivative χ s =\n        zeroDifference χ.primitiveCharacter (1 / 2 + s) 2 +\n        deriv χ.LFunction 2 / χ.LFunction 2 -\n        (deriv Gamma (3 / 4 + s / 2) / Gamma (3 / 4 + s / 2) -\n          deriv Gamma (3 / 2) / Gamma (3 / 2)) / 2 +\n        eulerCorrection χ (1 / 2 + s) - eulerCorrection χ 2) ∧\n      (∀ σ ∈ Icc δ M, ∀ t : ℝ,\n        ‖logDerivative χ (line σ t)‖ ≤ C * Real.log (N * (|t| + 2)) ^ 2) := by sorry"
+  },
+  "lemma_3_5": {
+    "kind": "theorem",
+    "line": 492,
+    "code": "theorem lemma_3_5 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (σ : ℝ) (hσ : 1 / 2 < σ) :\n    (characterMoment N φ : ℂ) = verticalMellin σ (fun s => verticalMellin σ (fun z =>\n      (N : ℂ) ^ (s + z) * mellinWeight φ s * mellinWeight φ z * characterKernel N s z)) ∧\n    ∀ n m : ℕ, 0 < n → 0 < m → n ≠ m →\n      (((n : ZMod N) = m) ↔\n        (∃ k : ℕ, 0 < k ∧ m = n + k * N) ∨ (∃ k : ℕ, 0 < k ∧ n = m + k * N)) ∧\n      (((n : ZMod N) = -(m : ZMod N)) ↔ ∃ k : ℕ, 0 < k ∧ n + m = k * N) := by sorry"
+  },
+  "lemma_4_1": {
+    "kind": "theorem",
+    "line": 502,
+    "code": "theorem lemma_4_1 (h : ℝ) (hh : 0 < h) (s z : ℂ) (hd : (s, z) ∈ betaDomain) :\n    (∫ x in Ioi (0 : ℝ), (x : ℂ) ^ (-1 / 2 - s) * (x + h : ℂ) ^ (-1 / 2 - z)) =\n      (h : ℂ) ^ (-(s + z)) * betaIntegral (1 / 2 - s) (s + z) ∧\n    (∫ x in Ioi (0 : ℝ), (x : ℂ) ^ (-1 / 2 - z) * (x + h : ℂ) ^ (-1 / 2 - s)) =\n      (h : ℂ) ^ (-(s + z)) * betaIntegral (1 / 2 - z) (s + z) ∧\n    (∫ x in Ioo (0 : ℝ) h, (x : ℂ) ^ (-1 / 2 - s) * (h - x : ℂ) ^ (-1 / 2 - z)) =\n      (h : ℂ) ^ (-(s + z)) * betaIntegral (1 / 2 - s) (1 / 2 - z) := by sorry"
+  },
+  "lemma_4_2": {
+    "kind": "theorem",
+    "line": 510,
+    "code": "theorem lemma_4_2 (s z : ℂ) (hd : (s, z) ∈ betaDomain) :\n    betaKernel s z = (2 : ℂ) ^ (1 - (s + z)) * Gamma (s + z) *\n      Complex.cos (Real.pi * (s + z) / 2) * gammaQuotient s * gammaQuotient z ∧\n    (∀ σ : ℝ, 0 < σ → σ ≤ 1 / 9 → s.re = σ → z.re = σ →\n      ‖betaKernel s z‖ ≤ ‖2 * betaIntegral (1 / 2 - σ) (2 * σ) +\n        betaIntegral (1 / 2 - σ) (1 / 2 - σ)‖) := by sorry"
+  },
+  "lemma_4_3": {
+    "kind": "theorem",
+    "line": 517,
+    "code": "theorem lemma_4_3 (N : ℕ) (hN : Even N) (hN4 : 4 ≤ N) :\n    (∀ w : ℂ, 0 < w.re → Summable (fun n : ℕ =>\n      if 0 < n ∧ Nat.Coprime n N then ‖(mangoldt n : ℂ) ^ 2 / (n : ℂ) ^ (1 + w)‖ else 0)) ∧\n    (∀ w : ℂ, 1 < w.re → densitySeries N w = continuedDensity N w) ∧\n    MeromorphicOn (continuedDensity N) {w | 0 < w.re} ∧\n    Tendsto (fun w : ℂ => (w - 1) * continuedDensity N w) (𝓝[≠] 1) (𝓝 ((N : ℂ) / N.totient)) ∧\n    1 < singularSeries N ∧ C2 * N / N.totient ≤ singularSeries N ∧\n    singularSeries N ≤ (N : ℝ) / N.totient := by sorry"
+  },
+  "lemma_4_3_uniform": {
+    "kind": "theorem",
+    "line": 527,
+    "code": "theorem lemma_4_3_uniform (lo hi : ℝ) (hlo : 0 < lo) (hhi : lo < hi) :\n    ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, Even N → 4 ≤ N →\n      (∀ w : ℂ, w.re ∈ Icc lo hi → 1 ≤ |w.im| →\n        ‖continuedDensity N w‖ ≤ C * (N : ℝ) / N.totient * (1 + |w.im|)) ∧\n      (N : ℝ) / N.totient ≤ C * Real.log (Real.log N) := by sorry"
+  },
+  "proposition_4_4": {
+    "kind": "theorem",
+    "line": 533,
+    "code": "theorem proposition_4_4 (N : ℕ) (hN : Even N) (hN4 : 4 ≤ N) :\n    (∀ s z : ℂ, (s, z) ∈ betaDomain → betaModel N s z = continuedModel N s z) ∧\n    DifferentiableOn ℂ (fun p : ℂ × ℂ => continuedModel N p.1 p.2) analyticDomain := by sorry"
+  },
+  "proposition_4_5": {
+    "kind": "theorem",
+    "line": 537,
+    "code": "theorem proposition_4_5 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N) :\n    DifferentiableOn ℂ (fun p : ℂ × ℂ => residual N p.1 p.2) analyticDomain ∧\n    (∀ s z : ℂ, residual N s z = residual N z s ∧\n      conj (residual N s z) = residual N (conj s) (conj z)) ∧\n    HermitianKernel (fun s z => residual N s (conj z)) := by sorry"
+  },
+  "wirtingerBar": {
+    "kind": "def",
+    "line": 544,
+    "code": "def wirtingerBar (f : ℂ → ℂ) (s : ℂ) : ℂ :=\n  (deriv (fun x : ℝ => f (s + x)) 0 + I * deriv (fun y : ℝ => f (s + y * I)) 0) / 2"
+  },
+  "wirtinger": {
+    "kind": "def",
+    "line": 547,
+    "code": "def wirtinger (f : ℂ → ℂ) (s : ℂ) : ℂ :=\n  (deriv (fun x : ℝ => f (s + x)) 0 - I * deriv (fun y : ℝ => f (s + y * I)) 0) / 2"
+  },
+  "proposition_5_1": {
+    "kind": "theorem",
+    "line": 550,
+    "code": "theorem proposition_5_1 (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) :\n    HermitianKernel (weightedKernel N) ∧\n    HermitianKernel (fun s z => residual N s (conj z)) ∧\n    DifferentiableOn ℂ (fun p : ℂ × ℂ => weightedKernel N p.1 (conj p.2)) analyticDomain ∧\n    (∃ U : Set (ℂ × ℂ), IsOpen U ∧\n      {p | alpha N ≤ p.1.re ∧ p.1.re ≤ beta ∧\n        alpha N ≤ p.2.re ∧ p.2.re ≤ beta} ⊆ U ∧\n      DifferentiableOn ℂ (fun p : ℂ × ℂ => residual N p.1 p.2) U ∧\n      DifferentiableOn ℂ (fun p : ℂ × ℂ => weightedKernel N p.1 (conj p.2)) U) ∧\n    (∀ s z : ℂ, (s, conj z) ∈ analyticDomain →\n      wirtingerBar (fun w => residual N w (conj z)) s = 0 ∧\n      wirtinger (fun w => residual N s (conj w)) z = 0) ∧\n    1 / 90 < sigmaStar - alpha N ∧ beta - sigmaStar = 1 / 72 := by sorry"
+  },
+  "lemma_5_2": {
+    "kind": "theorem",
+    "line": 565,
+    "code": "theorem lemma_5_2 (a b : ℝ) (hab : a < b) :\n    (∀ ψ : HardySpace a b, IsRawHardy a b (fourierLaplace ψ) ∧\n      rawHardyNormSq a b (fourierLaplace ψ) = ‖ψ‖ ^ 2 ∧\n      ‖ψ‖ ^ 2 = ‖(boundaryTraces hab ψ).1‖ ^ 2 + ‖(boundaryTraces hab ψ).2‖ ^ 2) ∧\n    (∀ f : ℂ → ℂ, IsRawHardy a b f →\n      ∃! ψ : HardySpace a b, ∀ s ∈ strip a b, fourierLaplace ψ s = f s) := by sorry"
+  },
+  "proposition_5_3": {
+    "kind": "theorem",
+    "line": 572,
+    "code": "theorem proposition_5_3 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) :\n    (∀ x ∈ ({alpha N, beta} : Finset ℝ), ∀ y ∈ ({alpha N, beta} : Finset ℝ),\n      MemLp (fun p : ℝ × ℝ => weightedKernel N (line x p.1) (line y p.2)) 2 volume) ∧\n    RepresentsKernel ha N (weightedKernel N) (residualOperator ha N) ∧\n    IsCompactOperator (residualOperator ha N) ∧ IsSelfAdjoint (residualOperator ha N) ∧\n    IsHilbertSchmidt (residualOperator ha N) ∧ Nonempty (SpectralData (residualOperator ha N)) ∧\n    (∑' j, eigenvalues (residualOperator ha N) j ^ 2) = hsNorm (residualOperator ha N) ^ 2 ∧\n    hsNorm (residualOperator ha N) ^ 2 = BoundaryKernelSquareIntegral (alpha N) beta (weightedKernel N) ∧\n    ‖residualOperator ha N‖ = sSup (Set.range (fun j => |eigenvalues (residualOperator ha N) j|)) ∧\n    (residualOperator ha N ≠ 0 → ∃ j, |eigenvalues (residualOperator ha N) j| = ‖residualOperator ha N‖) := by sorry"
+  },
+  "proposition_5_4": {
+    "kind": "theorem",
+    "line": 584,
+    "code": "theorem proposition_5_4 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) (s z : ℂ) (hs : s ∈ strip (alpha N) beta) (hz : z ∈ strip (alpha N) beta) :\n    (∀ h : HardySpace (alpha N) beta, fourierLaplace h s = paperInner h (evaluationVector s)) ∧\n    fourierLaplace (evaluationVector z : HardySpace (alpha N) beta) s = reproducingKernel (alpha N) beta s z ∧\n    ‖(evaluationVector s : HardySpace (alpha N) beta)‖ ^ 2 ≤ 1 / (8 * pointDistance (alpha N) beta s) ∧\n    ‖residual N s (conj z)‖ ≤ ‖residualOperator ha N‖ * ‖1 + s‖ * ‖1 + z‖ /\n      (8 * Real.sqrt (pointDistance (alpha N) beta s * pointDistance (alpha N) beta z)) := by sorry"
+  },
+  "positiveFredholmDet": {
+    "kind": "def",
+    "line": 597,
+    "code": "def positiveFredholmDet {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (A : H →L[ℂ] H) (t : ℂ) : ℂ :=\n  ∏' j : ℕ, (1 - t * (eigenvalues A j : ℂ))"
+  },
+  "fredholmSquareDet": {
+    "kind": "def",
+    "line": 601,
+    "code": "def fredholmSquareDet {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    (T : H →L[ℂ] H) (t : ℂ) : ℂ :=\n  positiveFredholmDet (T.comp T) t"
+  },
+  "proposition_6_1": {
+    "kind": "theorem",
+    "line": 605,
+    "code": "theorem proposition_6_1 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) :\n    CompactUniformLimit (fun k q => spectralPartialQuaternion N (residualOperator ha N) q k)\n      (spectralQuaternion N (residualOperator ha N)) ∧\n    IntrinsicEntire (spectralQuaternion N (residualOperator ha N)) ∧\n    (∀ q : ℂ, Multipliable (fun j : ℕ =>\n      1 - (4 * eigenvalues (residualOperator ha N) j ^ 2 / spectralScale N ^ 2 : ℝ) *\n        q * (1 - q))) ∧\n    IsPositiveTraceClass ((residualOperator ha N).comp (residualOperator ha N)) ∧\n    positiveTrace ((residualOperator ha N).comp (residualOperator ha N)) =\n      hsNorm (residualOperator ha N) ^ 2 ∧\n    (∀ q : ℂ, spectralComplex N (residualOperator ha N) q =\n      fredholmSquareDet (residualOperator ha N) (4 / spectralScale N ^ 2 * q * (1 - q))) := by sorry"
+  },
+  "proposition_6_2": {
+    "kind": "theorem",
+    "line": 619,
+    "code": "theorem proposition_6_2 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) :\n    let X := spectralQuaternion N (residualOperator ha N)\n    X 0 = 1 ∧ X 1 = 1 ∧ (∀ q, X (1 - q) = X q) ∧\n    (∀ q, X (star q) = star (X q)) ∧ (∀ q, X (1 - star q) = star (X q)) ∧\n    (∀ ξ, X (1 / 2 + ξ) = X (1 / 2 - ξ)) ∧\n    (∀ x : ℝ, x ∉ Ioo 0 1 → 1 ≤ (X x).re) := by sorry"
+  },
+  "proposition_6_3": {
+    "kind": "theorem",
+    "line": 627,
+    "code": "theorem proposition_6_3 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) :\n    (∀ q : Quaternion ℝ, spectralQuaternion N (residualOperator ha N) q = 0 ↔\n      ∃ j : ℕ, eigenvalues (residualOperator ha N) j ≠ 0 ∧\n        q * (1 - q) = (spectralScale N ^ 2 /\n          (4 * eigenvalues (residualOperator ha N) j ^ 2) : ℝ)) ∧\n    (∀ q : Quaternion ℝ, spectralQuaternion N (residualOperator ha N) q = 0 →\n      q.re ≠ 1 / 2 → q = (q.re : Quaternion ℝ) ∧ q.re ∈ Ioo 0 1) ∧\n    (∀ x : ℝ, spectralQuaternion N (residualOperator ha N) x = 0 → x ∈ Ioo 0 1) ∧\n    Set.Finite {j | spectralScale N < |eigenvalues (residualOperator ha N) j|} := by sorry"
+  },
+  "theorem_6_1": {
+    "kind": "theorem",
+    "line": 638,
+    "code": "theorem theorem_6_1 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) :\n    (SpectralR N (alpha N) ha ↔ ‖residualOperator ha N‖ ≤ spectralScale N) ∧\n    (∀ η : ℝ, 0 < η → η < 1 / 2 →\n      (SpectralZeroFree N (alpha N) ha η ↔\n        ‖residualOperator ha N‖ ≤ spectralScale N / (2 * Real.sqrt (η * (1 - η))))) ∧\n    (∀ M : ℝ, spectralScale N < M → ‖residualOperator ha N‖ ≤ M →\n      0 < spectralWidthFromBound N M ∧ spectralWidthFromBound N M < 1 / 2 ∧\n      SpectralZeroFree N (alpha N) ha (spectralWidthFromBound N M)) := by sorry"
+  },
+  "theorem_6_2": {
+    "kind": "theorem",
+    "line": 648,
+    "code": "theorem theorem_6_2 : ∃ C c : ℝ, 0 < C ∧ 0 < c ∧\n    EvenEventually (fun N => ∀ (_ : NeZero N) (ha : alpha N < beta), GRH N →\n      IsHilbertSchmidt (residualOperator ha N) ∧\n      ‖residualOperator ha N‖ ≤ hsNorm (residualOperator ha N) ∧\n      hsNorm (residualOperator ha N) ≤ C * Real.log N ^ 2 ∧\n      SpectralZeroFree N (alpha N) ha (c * singularSeries N / (N * Real.log N))) := by sorry"
+  },
+  "lemma_6_4": {
+    "kind": "theorem",
+    "line": 655,
+    "code": "theorem lemma_6_4 : ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, ∀ (_ : NeZero N),\n    Even N → Real.exp 10 < (N : ℝ) → GRH N → ∀ σ : ℝ, 0 < σ → σ ≤ beta →\n      (∀ χ ∈ oddCharacters N,\n        Integrable (fun t : ℝ => ‖logDerivative χ (line σ t)‖ ^ 2 / (1 + t ^ 2))) ∧\n      averagedLogDerivative N σ ≤ C * (Real.log N ^ 2 + σ⁻¹ ^ 2) := by sorry"
+  },
+  "proposition_6_5": {
+    "kind": "theorem",
+    "line": 661,
+    "code": "theorem proposition_6_5 : ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, ∀ (_ : NeZero N),\n    Even N → Real.exp 10 < (N : ℝ) → GRH N → ∀ ha : alpha N < beta,\n      let α := alpha N\n      let P := arithmeticOperator ha N\n      let D := diagonalOperator ha N\n      let K := modelOperator ha N\n      IsPositiveTraceClass P ∧ IsPositiveTraceClass D ∧ IsHilbertSchmidt K ∧\n      (hsNorm P ≤ positiveTrace P ∧\n        positiveTrace P ≤ C * (Real.log N ^ 2 + α⁻¹ ^ 2)) ∧\n      (hsNorm D ≤ positiveTrace D ∧ positiveTrace D ≤ C * α⁻¹ ^ 2) ∧\n      hsNorm K ≤ C * α⁻¹ ^ 2 := by sorry"
+  },
+  "proposition_6_5_components_spec": {
+    "kind": "theorem",
+    "line": 676,
+    "code": "theorem proposition_6_5_components_spec (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta) :\n    let α := alpha N\n    let P := arithmeticOperator ha N\n    let D := diagonalOperator ha N\n    let K := modelOperator ha N\n    let κP := fun s z : ℂ =>\n      characterKernel N s (conj z) / ((1 + s) * (1 + conj z))\n    let κD := fun s z : ℂ =>\n      diagonalSeries N (s + conj z) / ((1 + s) * (1 + conj z))\n    let κK := fun s z : ℂ =>\n      continuedModel N s (conj z) / ((1 + s) * (1 + conj z))\n    RepresentsKernel ha N κP P ∧\n    RepresentsKernel ha N κD D ∧\n    RepresentsKernel ha N κK K ∧\n    (∀ κ ∈ ([κP, κD, κK] : List (ℂ → ℂ → ℂ)),\n      ∀ (h : HardySpace α beta) (s : ℂ), s ∈ strip α beta →\n        Integrable (fun t : ℝ => κ s (line α t) * (boundaryTraces ha h).1 t) ∧\n        Integrable (fun t : ℝ => κ s (line beta t) * (boundaryTraces ha h).2 t)) ∧\n    residualOperator ha N = P - D - K := by sorry"
+  },
+  "lemma_7_1": {
+    "kind": "theorem",
+    "line": 698,
+    "code": "theorem lemma_7_1 (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    (∀ σ u : ℝ, 0 < u → (companion φ u : ℂ) =\n      verticalMellin σ (fun s => mellinWeight φ s * (u : ℂ) ^ (-s))) ∧\n    (∀ lo hi : ℝ, lo ≤ hi → ∃ C : ℝ, 0 < C ∧\n      ∀ σ ∈ Icc lo hi, ∀ t : ℝ, ‖mellinWeight φ (line σ t)‖ ≤ C * (1 + |t|)⁻¹ ^ 6) ∧\n    (∀ N : ℕ, ∀ (_ : NeZero N), Even N → 4 ≤ N → GRH N →\n      ∀ χ ∈ oddCharacters N, ∀ σ : ℝ, 0 < σ → σ ≤ 1 / 9 →\n        characterPolynomial χ φ = -verticalMellin σ (fun s =>\n          (N : ℂ) ^ s * mellinWeight φ s * logDerivative χ s)) := by sorry"
+  },
+  "lemma_7_2": {
+    "kind": "theorem",
+    "line": 708,
+    "code": "theorem lemma_7_2 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (σ : ℝ) (hσ : 0 < σ) (hσ' : σ ≤ 1 / 9) :\n    verticalMellin σ (fun s => verticalMellin σ (fun z =>\n      (N : ℂ) ^ (s + z) * mellinWeight φ s * mellinWeight φ z * diagonalSeries N (s + z))) =\n        diagonalMoment N φ ∧\n    verticalMellin σ (fun s => verticalMellin σ (fun z =>\n      mellinWeight φ s * mellinWeight φ z * continuedDensity N (s + z) * betaKernel s z)) =\n        -(weightMass φ * singularSeries N : ℝ) := by sorry"
+  },
+  "proposition_7_3": {
+    "kind": "theorem",
+    "line": 717,
+    "code": "theorem proposition_7_3 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N)\n    (hGRH : GRH N) (φ : ℝ → ℝ) (hφ : IsWeight φ) (σ : ℝ)\n    (hσ : 0 < σ) (hσ' : σ ≤ 1 / 9) :\n    residualIntegral N φ σ = (weightMass φ * singularSeries N - goldbach N φ : ℝ) := by sorry"
+  },
+  "proposition_7_4": {
+    "kind": "theorem",
+    "line": 722,
+    "code": "theorem proposition_7_4 (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    (∀ N : ℕ, Even N → Real.exp 10 < (N : ℝ) →\n      (∀ σ ∈ Ioo (alpha N) beta,\n        (∀ h : HardySpace (alpha N) beta,\n          Integrable (fun t : ℝ => (N : ℂ) ^ (line σ t) * mellinWeight φ (line σ t) *\n            (1 + line σ t) * fourierLaplace h (line σ t)) ∧\n          functionalValue N φ σ h = paperInner h (rieszVector N φ)) ∧\n        ∃ ℓ : HardySpace (alpha N) beta →L[ℂ] ℂ,\n          (∀ h, ℓ h = functionalValue N φ σ h) ∧\n          ‖ℓ‖ ^ 2 = normFunctional N φ (alpha N)) ∧\n      ‖(rieszVector N φ : HardySpace (alpha N) beta)‖ ^ 2 = normFunctional N φ (alpha N) ∧\n      normFunctional N φ (alpha N) ≤ Real.exp 2 * weightEnergy φ) ∧\n    (∃ C : ℝ, 0 < C ∧ EvenEventually (fun N =>\n      |normFunctional N φ (alpha N) - Real.exp 2 * weightEnergy φ| ≤ C / Real.log N)) := by sorry"
+  },
+  "theorem_7_1": {
+    "kind": "theorem",
+    "line": 737,
+    "code": "theorem theorem_7_1 (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (ha : alpha N < beta) :\n    (weightMass φ * singularSeries N - goldbach N φ : ℝ) =\n      paperInner (residualOperator ha N (rieszVector N φ)) (rieszVector N φ) ∧\n    |weightMass φ * singularSeries N - goldbach N φ| ≤\n      normFunctional N φ (alpha N) * ‖residualOperator ha N‖ := by sorry"
+  },
+  "lemma_7_5": {
+    "kind": "theorem",
+    "line": 745,
+    "code": "theorem lemma_7_5 (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, ∀ (_ : NeZero N), Even N →\n      Real.exp 10 < (N : ℝ) → GRH N → ∀ ha : alpha N < beta,\n      ∀ η : ℝ, 0 < η → η ≤ 1 / 4 → SpectralZeroFree N (alpha N) ha η →\n      |goldbach N φ - weightMass φ * singularSeries N| / (weightMass φ * singularSeries N) ≤\n        C * Real.sqrt (Real.log N ^ 3 / (N * η * singularSeries N)) := by sorry"
+  },
+  "proposition_A_1": {
+    "kind": "theorem",
+    "line": 753,
+    "code": "theorem proposition_A_1 (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : ℝ) (hc : 0 < c) :\n    (∀ N : ℕ, ∀ (_ : NeZero N), Even N → 4 ≤ N → Real.exp (10 * c) < (N : ℝ) → GRH N →\n      alpha N c < 1 / 10 ∧ 1 / 40 < width (alpha N c) ∧\n      1 / 90 < sigmaStar - alpha N c ∧ beta - sigmaStar = 1 / 72 ∧\n      (∀ σ ∈ Ioo (alpha N c) beta,\n        (∀ h : HardySpace (alpha N c) beta,\n          Integrable (fun t : ℝ => (N : ℂ) ^ (line σ t) * mellinWeight φ (line σ t) *\n            (1 + line σ t) * fourierLaplace h (line σ t)) ∧\n          functionalValue N φ σ h = paperInner h (rieszVector N φ)) ∧\n        ∃ ℓ : HardySpace (alpha N c) beta →L[ℂ] ℂ,\n          (∀ h, ℓ h = functionalValue N φ σ h) ∧\n          ‖ℓ‖ ^ 2 = normFunctional N φ (alpha N c)) ∧\n      ‖(rieszVector N φ : HardySpace (alpha N c) beta)‖ ^ 2 = normFunctional N φ (alpha N c) ∧\n      (∀ ha : alpha N c < beta,\n        IsCompactOperator (residualOperator ha N) ∧ IsSelfAdjoint (residualOperator ha N) ∧\n        IsHilbertSchmidt (residualOperator ha N) ∧\n        (∀ s z : ℂ, s ∈ strip (alpha N c) beta → z ∈ strip (alpha N c) beta →\n          ‖residual N s (conj z)‖ ≤ ‖residualOperator ha N‖ * ‖1 + s‖ * ‖1 + z‖ /\n            (8 * Real.sqrt (pointDistance (alpha N c) beta s * pointDistance (alpha N c) beta z))) ∧\n        (weightMass φ * singularSeries N - goldbach N φ : ℝ) =\n          paperInner (residualOperator ha N (rieszVector N φ)) (rieszVector N φ) ∧\n        |weightMass φ * singularSeries N - goldbach N φ| ≤\n          normFunctional N φ (alpha N c) * ‖residualOperator ha N‖) ∧\n      normFunctional N φ (alpha N c) ≤ Real.exp (2 * c) * weightEnergy φ) ∧\n    (∃ C : ℝ, 0 < C ∧ EvenEventually (fun N =>\n      |normFunctional N φ (alpha N c) - Real.exp (2 * c) * weightEnergy φ| ≤ C / Real.log N)) := by sorry"
+  },
+  "HypothesisRAt": {
+    "kind": "def",
+    "line": 780,
+    "code": "def HypothesisRAt (c : ℝ) : Prop := EvenEventually (fun N => GRH N →\n  ∀ (_ : NeZero N) (ha : alpha N c < beta), SpectralR N (alpha N c) ha)"
+  },
+  "HypothesisSAt": {
+    "kind": "def",
+    "line": 783,
+    "code": "def HypothesisSAt (c : ℝ) (h : ℕ → ℝ) : Prop := IsAdmissible h ∧\n  EvenEventually (fun N => GRH N → ∀ (_ : NeZero N) (ha : alpha N c < beta),\n    SpectralZeroFree N (alpha N c) ha (zeroFreeWidth N h))"
+  },
+  "proposition_A_2": {
+    "kind": "theorem",
+    "line": 787,
+    "code": "theorem proposition_A_2 (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : ℝ) (hc : 0 < c) :\n    (∀ N : ℕ, ∀ (_ : NeZero N), Even N → 4 ≤ N → Real.exp (10 * c) < (N : ℝ) → GRH N →\n      ∀ ha : alpha N c < beta,\n      (SpectralR N (alpha N c) ha ↔ ‖residualOperator ha N‖ ≤ spectralScale N) ∧\n      (∀ η : ℝ, 0 < η → η < 1 / 2 → (SpectralZeroFree N (alpha N c) ha η ↔\n        ‖residualOperator ha N‖ ≤ spectralScale N / (2 * Real.sqrt (η * (1 - η))))) ∧\n      (∀ h : ℕ → ℝ, 0 < h N → 0 < zeroFreeWidth N h → zeroFreeWidth N h ≤ 1 / 4 →\n        (SpectralZeroFree N (alpha N c) ha (zeroFreeWidth N h) ↔\n          ‖residualOperator ha N‖ ≤ singularSeries N / (2 * h N * Real.sqrt (1 - zeroFreeWidth N h))))) ∧\n    (∃ C c₀ : ℝ, 0 < C ∧ 0 < c₀ ∧\n      EvenEventually (fun N => ∀ (_ : NeZero N) (ha : alpha N c < beta), GRH N →\n        ‖residualOperator ha N‖ ≤ C * Real.log N ^ 2 ∧\n        SpectralZeroFree N (alpha N c) ha (c₀ * singularSeries N / (N * Real.log N))) ∧\n      (∀ h : ℕ → ℝ, HypothesisSAt c h →\n        EvenEventually (fun N => GRH N →\n          |goldbach N φ - weightMass φ * singularSeries N| ≤ C * singularSeries N / h N)) ∧\n      (HypothesisRAt c →\n        EvenEventually (fun N => GRH N →\n          |goldbach N φ - weightMass φ * singularSeries N| ≤ C * spectralScale N))) := by sorry"
+  },
+  "baselineBound": {
+    "kind": "def",
+    "line": 807,
+    "code": "def baselineBound (C : ℝ) (N : ℕ) (a : ℝ) : ℝ := C * (Real.log N ^ 2 + a⁻¹ ^ 2)"
+  },
+  "balanceFactor": {
+    "kind": "def",
+    "line": 809,
+    "code": "def balanceFactor (c : ℝ) : ℝ := Real.exp (2 * c) * (1 + c⁻¹ ^ 2)"
+  },
+  "lemma_A_3": {
+    "kind": "theorem",
+    "line": 811,
+    "code": "theorem lemma_A_3 (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    (∃ C L U : ℝ, 0 < C ∧ 0 < L ∧ 0 < U ∧\n      EvenEventually (fun N => ∀ (_ : NeZero N), GRH N → ∀ a : ℝ, 0 < a → a < 1 / 10 →\n        L * Real.rpow N (2 * a) ≤ normFunctional N φ a ∧\n        normFunctional N φ a ≤ U * Real.rpow N (2 * a) ∧\n        ∀ ha : a < beta, ‖residualOperator ha N‖ ≤ baselineBound C N a)) ∧\n    Tendsto balanceFactor (nhdsWithin 0 (Ioi 0)) atTop ∧ Tendsto balanceFactor atTop atTop := by sorry"
+  },
+  "poleCoefficient": {
+    "kind": "def",
+    "line": 819,
+    "code": "def poleCoefficient (N : ℕ) [NeZero N] (γ : ℝ) : ℝ :=\n  2 / N.totient * ∑ χ ∈ oddCharacters N,\n    (analyticOrderNatAt χ.LFunction (line (1 / 2) γ) : ℝ) ^ 2"
+  },
+  "proposition_A_4": {
+    "kind": "theorem",
+    "line": 823,
+    "code": "theorem proposition_A_4 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N)\n    (hGRH : GRH N) (γ : ℝ)\n    (hzero : ∃ χ ∈ oddCharacters N, χ.LFunction (line (1 / 2) γ) = 0) :\n    0 < poleCoefficient N γ ∧\n    (∀ ε : ℝ, 0 < ε → ∃ c₀ : ℝ, 0 < c₀ ∧ ∀ c : ℝ, 0 < c → c < c₀ →\n      ∀ ha : alpha N c < beta,\n        2 * poleCoefficient N γ * Real.log N / (1 + γ ^ 2) - ε ≤ c * ‖residualOperator ha N‖) ∧\n    (∃ z c₀ : ℝ, 0 < z ∧ 0 < c₀ ∧ c₀ ≤ Real.log N / 24 ∧\n      ∀ c : ℝ, 0 < c → c < c₀ → ∀ ha : alpha N c < beta,\n        z / c ≤ ‖residualOperator ha N‖ ∧ ¬SpectralR N (alpha N c) ha ∧\n        ∀ η : ℝ, 0 < η → η ≤ 1 / 4 → SpectralZeroFree N (alpha N c) ha η →\n          η ≤ spectralScale N ^ 2 * c ^ 2 / (3 * z ^ 2)) := by sorry"
+  },
+  "experimentN": {
+    "kind": "abbrev",
+    "line": 837,
+    "code": "abbrev experimentN : ℕ := 30030"
+  },
+  "cutoffPolynomial": {
+    "kind": "def",
+    "line": 839,
+    "code": "def cutoffPolynomial (t : ℝ) : ℝ :=\n  if t ≤ 0 then 0 else if 1 ≤ t then 1 else\n    ∑ j ∈ Finset.Icc 7 13, (Nat.choose 13 j : ℝ) * t ^ j * (1 - t) ^ (13 - j)"
+  },
+  "wideCutoff": {
+    "kind": "def",
+    "line": 843,
+    "code": "def wideCutoff (x : ℝ) : ℝ :=\n  cutoffPolynomial ((x - 16) / (1000 - 16)) *\n    cutoffPolynomial ((experimentN - x - 16) / (1000 - 16))"
+  },
+  "wideCompanion": {
+    "kind": "def",
+    "line": 847,
+    "code": "def wideCompanion (u : ℝ) : ℝ :=\n  if u ∈ Ioo (16 / experimentN : ℝ) (1 - 16 / experimentN : ℝ) then\n    Real.sqrt (1 - u) * wideCutoff (experimentN * u) /\n      Real.sqrt (Real.log (experimentN * u) * Real.log (experimentN * (1 - u))) else 0"
+  },
+  "wideWeight": {
+    "kind": "def",
+    "line": 852,
+    "code": "def wideWeight (u : ℝ) : ℝ := wideCompanion u / Real.sqrt u"
+  },
+  "wideCorrelation": {
+    "kind": "def",
+    "line": 854,
+    "code": "def wideCorrelation : ℝ := goldbach experimentN wideWeight"
+  },
+  "unorderedPrimePairs": {
+    "kind": "def",
+    "line": 856,
+    "code": "def unorderedPrimePairs : ℕ := ((Finset.range (experimentN + 1)).filter\n  (fun p => p.Prime ∧ (experimentN - p).Prime ∧ p ≤ experimentN - p)).card"
+  },
+  "edgeCorrection": {
+    "kind": "def",
+    "line": 859,
+    "code": "def edgeCorrection : ℝ := ∑ p ∈ Finset.range 1000,\n  if p.Prime ∧ (experimentN - p).Prime ∧ p ≤ experimentN - p\n  then 1 - wideCutoff p ^ 2 else 0"
+  },
+  "primePowerCorrection": {
+    "kind": "def",
+    "line": 863,
+    "code": "def primePowerCorrection : ℝ :=\n  ∑ p ∈ Finset.range (experimentN + 1), ∑ q ∈ Finset.range (experimentN + 1),\n    ∑ k ∈ Finset.range (experimentN + 1), ∑ l ∈ Finset.range (experimentN + 1),\n      if p.Prime ∧ q.Prime ∧ 0 < k ∧ 0 < l ∧ 2 ≤ max k l ∧\n        p ^ k + q ^ l = experimentN ∧ Nat.Coprime (p * q) experimentN\n      then wideCutoff (p ^ k) ^ 2 / (k * l : ℕ) else 0"
+  },
+  "countingCoefficient": {
+    "kind": "def",
+    "line": 870,
+    "code": "def countingCoefficient (n : ℕ) : ℝ := mangoldt n / Real.sqrt n * wideCompanion (n / experimentN)"
+  },
+  "countingIntegral": {
+    "kind": "def",
+    "line": 872,
+    "code": "def countingIntegral (χ : Character experimentN) : ℂ :=\n  verticalMellin 1 (fun s => (experimentN : ℂ) ^ s *\n    mellin (fun u => (wideCompanion u : ℂ)) s * logDerivative χ s)"
+  },
+  "diagonalCountingMoment": {
+    "kind": "def",
+    "line": 876,
+    "code": "def diagonalCountingMoment : ℝ := ∑ n ∈ Finset.range experimentN,\n  if Nat.Coprime n experimentN then countingCoefficient n ^ 2 else 0"
+  },
+  "approxSignedMoment": {
+    "kind": "def",
+    "line": 879,
+    "code": "def approxSignedMoment (Ihat : Character experimentN → ℂ) : ℝ :=\n  (5760 : ℝ)⁻¹ * (∑ χ : Character experimentN, (χ (-1)).re * ‖Ihat χ‖ ^ 2)"
+  },
+  "approxDiagonalMoment": {
+    "kind": "def",
+    "line": 882,
+    "code": "def approxDiagonalMoment (Ihat : Character experimentN → ℂ) : ℝ :=\n  (5760 : ℝ)⁻¹ * ∑ χ : Character experimentN, ‖Ihat χ‖ ^ 2"
+  },
+  "wideModelMass": {
+    "kind": "def",
+    "line": 885,
+    "code": "def wideModelMass : ℝ := ∫ u in (0 : ℝ)..1, wideWeight u * wideWeight (1 - u)"
+  },
+  "wideResidual": {
+    "kind": "def",
+    "line": 887,
+    "code": "def wideResidual : ℝ := wideModelMass * singularSeries experimentN - wideCorrelation"
+  },
+  "approxPrimeCount": {
+    "kind": "def",
+    "line": 889,
+    "code": "def approxPrimeCount (Ihat : Character experimentN → ℂ) : ℝ :=\n  (experimentN : ℝ) / 2 * approxSignedMoment Ihat - primePowerCorrection / 2 + edgeCorrection"
+  },
+  "countError": {
+    "kind": "def",
+    "line": 892,
+    "code": "def countError (Ihat : Character experimentN → ℂ) (ε : ℝ) : ℝ :=\n  (experimentN : ℝ) / 2 * (2 * Real.sqrt (approxDiagonalMoment Ihat) * ε + ε ^ 2)"
+  },
+  "proposition_B_1": {
+    "kind": "theorem",
+    "line": 895,
+    "code": "theorem proposition_B_1 :\n    ContDiff ℝ 6 wideCutoff ∧ (∀ x : ℝ, wideCutoff x = wideCutoff (experimentN - x)) ∧\n    (∀ x ∈ Icc (1000 : ℝ) (experimentN - 1000), wideCutoff x = 1) ∧\n    (∀ u ∈ Ioo (16 / experimentN : ℝ) (1 - 16 / experimentN : ℝ),\n      wideWeight u * wideWeight (1 - u) = wideCutoff (experimentN * u) ^ 2 /\n        (Real.log (experimentN * u) * Real.log (experimentN * (1 - u)))) ∧\n    (unorderedPrimePairs : ℝ) = (experimentN : ℝ) / 2 * wideCorrelation - primePowerCorrection / 2 + edgeCorrection := by sorry"
+  },
+  "lemma_B_2": {
+    "kind": "theorem",
+    "line": 903,
+    "code": "theorem lemma_B_2 :\n    (∀ χ : Character experimentN,\n      Integrable (fun t : ℝ => (experimentN : ℂ) ^ (line 1 t) *\n        mellin (fun u => (wideCompanion u : ℂ)) (line 1 t) * logDerivative χ (line 1 t)) ∧\n      countingIntegral χ = -∑ n ∈ Finset.range experimentN, (countingCoefficient n : ℂ) * χ n) ∧\n    wideCorrelation = approxSignedMoment countingIntegral ∧\n    diagonalCountingMoment = approxDiagonalMoment countingIntegral := by sorry"
+  },
+  "lemma_B_3": {
+    "kind": "theorem",
+    "line": 911,
+    "code": "theorem lemma_B_3 (Ihat : Character experimentN → ℂ) (ε : ℝ) (hε : 0 ≤ ε)\n    (herr : (5760 : ℝ)⁻¹ * ∑ χ : Character experimentN, ‖countingIntegral χ - Ihat χ‖ ^ 2 ≤ ε ^ 2) :\n    |wideCorrelation - approxSignedMoment Ihat| ≤\n      2 * Real.sqrt (approxDiagonalMoment Ihat) * ε + ε ^ 2 ∧\n    |(unorderedPrimePairs : ℝ) - approxPrimeCount Ihat| ≤ countError Ihat ε ∧\n    (unorderedPrimePairs : ℝ) ∈\n      Icc (approxPrimeCount Ihat - countError Ihat ε) (approxPrimeCount Ihat + countError Ihat ε) ∩\n        Set.range (fun k : ℤ => (k : ℝ)) := by sorry"
+  },
+  "wideFunctional": {
+    "kind": "def",
+    "line": 920,
+    "code": "def wideFunctional {a : ℝ} (h : HardySpace a beta) : ℂ :=\n  verticalMellin sigmaStar (fun s => (experimentN : ℂ) ^ s *\n    mellin (fun u => (wideCompanion u : ℂ)) s * (1 + s) * fourierLaplace h s)"
+  },
+  "wideRieszVector": {
+    "kind": "def",
+    "line": 924,
+    "code": "def wideRieszVector : HardySpace (alpha experimentN) beta :=\n  if h : ∃ v : HardySpace (alpha experimentN) beta, ∀ f, wideFunctional f = paperInner f v\n  then Classical.choose h else 0"
+  },
+  "proposition_B_4": {
+    "kind": "theorem",
+    "line": 928,
+    "code": "theorem proposition_B_4 (hGRH : GRH experimentN) (ha : alpha experimentN < beta) :\n    (∀ h : HardySpace (alpha experimentN) beta,\n      Integrable (fun t : ℝ => (experimentN : ℂ) ^ (line sigmaStar t) *\n        mellin (fun u => (wideCompanion u : ℂ)) (line sigmaStar t) *\n        (1 + line sigmaStar t) * fourierLaplace h (line sigmaStar t)) ∧\n      wideFunctional h = paperInner h wideRieszVector) ∧\n    (∃ ℓ : HardySpace (alpha experimentN) beta →L[ℂ] ℂ, ∀ h, ℓ h = wideFunctional h) ∧\n    (wideResidual : ℂ) = paperInner (residualOperator ha experimentN wideRieszVector) wideRieszVector := by sorry"
+  },
+  "spectralNode": {
+    "kind": "def",
+    "line": 937,
+    "code": "def spectralNode (i : Fin 2562) : ℂ :=\n  line (if i.val < 1281 then alpha experimentN else beta) (((i.val % 1281 : ℕ) : ℝ) / 16 - 40)"
+  },
+  "trapezoidWeight": {
+    "kind": "def",
+    "line": 940,
+    "code": "def trapezoidWeight (i : Fin 2562) : ℝ :=\n  (1 / 16) * if i.val % 1281 = 0 ∨ i.val % 1281 = 1280 then 1 / 2 else 1"
+  },
+  "finiteSpectralMatrix": {
+    "kind": "def",
+    "line": 943,
+    "code": "def finiteSpectralMatrix : Matrix (Fin 2562) (Fin 2562) ℂ :=\n  fun i j => (Real.sqrt (trapezoidWeight i) : ℂ) *\n    weightedKernel experimentN (spectralNode i) (spectralNode j) * Real.sqrt (trapezoidWeight j)"
+  },
+  "finiteSpectralFunction": {
+    "kind": "def",
+    "line": 947,
+    "code": "def finiteSpectralFunction (q : ℂ) : ℂ :=\n  Matrix.det (1 - (4 * q * (1 - q) / spectralScale experimentN ^ 2) •\n    (finiteSpectralMatrix * finiteSpectralMatrix))"
+  },
+  "IsFiniteSpectrum": {
+    "kind": "def",
+    "line": 952,
+    "code": "def IsFiniteSpectrum (ev : Fin 2562 → ℝ) : Prop :=\n  ∃ U : Matrix (Fin 2562) (Fin 2562) ℂ,\n    star U * U = 1 ∧ U * star U = 1 ∧\n    finiteSpectralMatrix = U * Matrix.diagonal (fun i => (ev i : ℂ)) * star U"
+  },
+  "finiteEigenvalues": {
+    "kind": "def",
+    "line": 957,
+    "code": "def finiteEigenvalues : Fin 2562 → ℝ :=\n  if h : ∃ ev, IsFiniteSpectrum ev then Classical.choose h else 0"
+  },
+  "finiteMatrixOpNorm": {
+    "kind": "def",
+    "line": 960,
+    "code": "def finiteMatrixOpNorm : ℝ :=\n  sSup {r : ℝ | ∃ x : EuclideanSpace ℂ (Fin 2562), ‖x‖ = 1 ∧\n    r = ‖(WithLp.toLp 2 (finiteSpectralMatrix.mulVec (WithLp.ofLp x)) : EuclideanSpace ℂ (Fin 2562))‖}"
+  },
+  "proposition_B_5": {
+    "kind": "theorem",
+    "line": 964,
+    "code": "theorem proposition_B_5 (hGRH : GRH experimentN) :\n    IsFiniteSpectrum finiteEigenvalues ∧\n    (∀ q : ℂ, finiteSpectralFunction q =\n      ∏ j : Fin 2562, (1 - (4 * finiteEigenvalues j ^ 2 / spectralScale experimentN ^ 2 : ℝ) * q * (1 - q))) ∧\n    (∀ q : ℂ, finiteSpectralFunction (1 - q) = finiteSpectralFunction q) ∧\n    (finiteMatrixOpNorm ≤ spectralScale experimentN →\n      ∀ q : ℂ, finiteSpectralFunction q = 0 → q.re = 1 / 2) := by sorry"
+  },
+  "betaGamma": {
+    "kind": "def",
+    "line": 985,
+    "code": "def betaGamma (u v : ℂ) : ℂ := Gamma u * Gamma v / Gamma (u + v)"
+  },
+  "BoundaryParameter": {
+    "kind": "abbrev",
+    "line": 988,
+    "code": "abbrev BoundaryParameter := Bool × ℝ"
+  },
+  "boundaryPoint": {
+    "kind": "def",
+    "line": 990,
+    "code": "def boundaryPoint (a b : ℝ) (p : BoundaryParameter) : ℂ :=\n  line (if p.1 then b else a) p.2"
+  },
+  "boundaryMeasure": {
+    "kind": "def",
+    "line": 993,
+    "code": "def boundaryMeasure : Measure BoundaryParameter :=\n  Measure.prod Measure.count (volume : Measure ℝ)"
+  },
+  "positiveDifferenceFamily": {
+    "kind": "def",
+    "line": 996,
+    "code": "def positiveDifferenceFamily (N n m k : ℕ) : Prop :=\n  0 < k ∧ m = n + k * N"
+  },
+  "negativeDifferenceFamily": {
+    "kind": "def",
+    "line": 999,
+    "code": "def negativeDifferenceFamily (N n m k : ℕ) : Prop :=\n  0 < k ∧ n = m + k * N"
+  },
+  "sumFamily": {
+    "kind": "def",
+    "line": 1002,
+    "code": "def sumFamily (N n m k : ℕ) : Prop :=\n  0 < k ∧ n + m = k * N"
+  },
+  "pairedZeroSum": {
+    "kind": "def",
+    "line": 1006,
+    "code": "def pairedZeroSum {N : ℕ} [NeZero N] (χ : Character N) (s : ℂ) : ℂ :=\n  ∑' p : ZeroIndex χ.primitiveCharacter,\n    (1 / (s - p.val.1.im * I) - 1 / (3 / 2 - p.val.1.im * I))"
+  },
+  "zeroMultiplicity": {
+    "kind": "def",
+    "line": 1010,
+    "code": "def zeroMultiplicity {N : ℕ} [NeZero N] (χ : Character N) (ρ : ℂ) : ℕ :=\n  analyticOrderNatAt χ.LFunction ρ"
+  },
+  "spectralRootParameter": {
+    "kind": "def",
+    "line": 1013,
+    "code": "def spectralRootParameter (N : ℕ) (μ : ℝ) : ℝ :=\n  spectralScale N ^ 2 / μ ^ 2"
+  },
+  "quaternionSlice": {
+    "kind": "def",
+    "line": 1016,
+    "code": "def quaternionSlice (J : Quaternion ℝ) : Set (Quaternion ℝ) :=\n  {q | ∃ x y : ℝ, q = (x : Quaternion ℝ) + y • J}"
+  },
+  "complexQuaternion": {
+    "kind": "def",
+    "line": 1019,
+    "code": "def complexQuaternion (z : ℂ) : Quaternion ℝ := ⟨z.re, z.im, 0, 0⟩"
+  },
+  "fueterOperator": {
+    "kind": "def",
+    "line": 1022,
+    "code": "def fueterOperator (F : ℂ → ℂ → ℂ) (s z : ℂ) : Quaternion ℝ :=\n  complexQuaternion (wirtingerBar (fun u => F u z) s) +\n    (⟨0, 0, 1, 0⟩ : Quaternion ℝ) * complexQuaternion (wirtinger (F s) z)"
+  },
+  "referenceLine": {
+    "kind": "def",
+    "line": 1026,
+    "code": "def referenceLine (N : ℕ) : ℝ := 2 / Real.log N"
+  },
+  "perronCutoff": {
+    "kind": "def",
+    "line": 1028,
+    "code": "def perronCutoff (N : ℕ) : ℝ := (N : ℝ) / 2"
+  },
+  "smoothedPerronWeight": {
+    "kind": "def",
+    "line": 1031,
+    "code": "def smoothedPerronWeight (X : ℝ) (n : ℕ) : ℝ :=\n  if (n : ℝ) ≤ Real.sqrt X then 1\n  else if (n : ℝ) ≤ X then Real.log (X / n) / Real.log (Real.sqrt X)\n  else 0"
+  },
+  "smoothedDirichletPolynomial": {
+    "kind": "def",
+    "line": 1036,
+    "code": "def smoothedDirichletPolynomial {N : ℕ} (χ : Character N) (X : ℝ) (u : ℂ) : ℂ :=\n  ∑ n ∈ Finset.range (⌊X⌋₊ + 1),\n    (mangoldt n : ℂ) * χ n * (n : ℂ) ^ (-u) * smoothedPerronWeight X n"
+  },
+  "smoothedPerronKernel": {
+    "kind": "def",
+    "line": 1040,
+    "code": "def smoothedPerronKernel (X : ℝ) (v : ℂ) : ℂ :=\n  ((X : ℂ) ^ v - (Real.sqrt X : ℂ) ^ v) / (v ^ 2 * Real.log (Real.sqrt X))"
+  },
+  "logDerivativeEnergy": {
+    "kind": "def",
+    "line": 1043,
+    "code": "def logDerivativeEnergy {N : ℕ} [NeZero N] (χ : Character N) (σ : ℝ) : ℝ :=\n  ∫ t : ℝ, ‖logDerivative χ (line σ t)‖ ^ 2 / (1 + t ^ 2)"
+  },
+  "poissonKernelReal": {
+    "kind": "def",
+    "line": 1047,
+    "code": "def poissonKernelReal (a t : ℝ) : ℝ := a / (Real.pi * (a ^ 2 + t ^ 2))"
+  },
+  "realConvolution": {
+    "kind": "def",
+    "line": 1049,
+    "code": "def realConvolution (f g : ℝ → ℝ) (t : ℝ) : ℝ :=\n  ∫ u : ℝ, f u * g (t - u)"
+  },
+  "poissonAction": {
+    "kind": "def",
+    "line": 1055,
+    "code": "def poissonAction (ℓ : ℝ) (f : ℝ → ℝ) : ℝ → ℝ :=\n  if ℓ = 0 then f else realConvolution (poissonKernelReal ℓ) f"
+  },
+  "diagonalVector": {
+    "kind": "def",
+    "line": 1058,
+    "code": "def diagonalVector (n : ℕ) (s : ℂ) : ℂ := (n : ℂ) ^ (-s) / (1 + s)"
+  },
+  "weightIntegral": {
+    "kind": "def",
+    "line": 1060,
+    "code": "def weightIntegral (φ : ℝ → ℝ) : ℝ := ∫ u in Ioi (0 : ℝ), φ u"
+  },
+  "functionalIntegrand": {
+    "kind": "def",
+    "line": 1062,
+    "code": "def functionalIntegrand (N : ℕ) (φ : ℝ → ℝ) (s : ℂ) : ℂ :=\n  (N : ℂ) ^ s * mellinWeight φ s * (1 + s)"
+  },
+  "availableNormMajorant": {
+    "kind": "def",
+    "line": 1066,
+    "code": "def availableNormMajorant (C : ℝ) (N : ℕ) (a : ℝ) : ℝ :=\n  C * (Real.log N ^ 2 + a ^ (-2 : ℤ))"
+  },
+  "baselineProductR": {
+    "kind": "def",
+    "line": 1070,
+    "code": "def baselineProductR (N : ℕ) (w : ℂ) : ℂ :=\n  (∏ p ∈ N.primeFactors, (1 - (p : ℂ) ^ (-1 - w))) *\n  ∏' p : ℕ, if p.Prime ∧ 2 < p ∧ ¬p ∣ N then\n    1 + (2 * (p : ℂ) ^ (-w) - (p : ℂ) ^ (-2 * w)) / ((p : ℂ) * ((p : ℂ) - 2))\n  else 1"
+  },
+  "wideMainIntegral": {
+    "kind": "def",
+    "line": 1076,
+    "code": "def wideMainIntegral : ℝ := singularSeries experimentN *\n  ∫ x in (16 : ℝ)..((experimentN : ℝ) / 2),\n    wideCutoff x ^ 2 / (Real.log x * Real.log ((experimentN : ℝ) - x))"
+  },
+  "HasMomentError": {
+    "kind": "def",
+    "line": 1080,
+    "code": "def HasMomentError (Ihat : Character experimentN → ℂ) (ε : ℝ) : Prop :=\n  0 ≤ ε ∧ (5760 : ℝ)⁻¹ * ∑ χ : Character experimentN,\n    ‖countingIntegral χ - Ihat χ‖ ^ 2 ≤ ε ^ 2"
+  },
+  "proposition_3_2_finite_rank": {
+    "kind": "theorem",
+    "line": 1098,
+    "code": "theorem proposition_3_2_finite_rank (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) :\n    FiniteDimensional ℂ (Submodule.span ℂ (Set.range\n      (fun z : ℂ => fun s : ℂ => characterKernel N s (conj z)))) := by sorry"
+  },
+  "lemma_3_4_normal_convergence": {
+    "kind": "theorem",
+    "line": 1103,
+    "code": "theorem lemma_3_4_normal_convergence (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N)\n    (χ : Character N) (hχ : χ ∈ oddCharacters N) :\n    NormallySummableOn (fun p : ZeroIndex χ.primitiveCharacter => fun s : ℂ =>\n      1 / (s - p.val.1.im * I) - 1 / (3 / 2 - p.val.1.im * I))\n      {s | 0 < s.re} := by sorry"
+  },
+  "lemma_3_5_absolute_convergence": {
+    "kind": "theorem",
+    "line": 1111,
+    "code": "theorem lemma_3_5_absolute_convergence (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) (φ : ℝ → ℝ) (hφ : IsWeight φ)\n    (σ : ℝ) (hσ : 1 / 2 < σ ∨ (GRH N ∧ 0 < σ ∧ σ ≤ 1 / 9)) :\n    Integrable (fun p : ℝ × ℝ =>\n      (N : ℂ) ^ (line σ p.1 + line σ p.2) *\n        mellinWeight φ (line σ p.1) * mellinWeight φ (line σ p.2) *\n        characterKernel N (line σ p.1) (line σ p.2)) := by sorry"
+  },
+  "lemma_3_5_small_sigma": {
+    "kind": "theorem",
+    "line": 1119,
+    "code": "theorem lemma_3_5_small_sigma (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (σ : ℝ) (hσ : 0 < σ) (hσ' : σ ≤ 1 / 9) :\n    (characterMoment N φ : ℂ) = verticalMellin σ (fun s => verticalMellin σ (fun z =>\n      (N : ℂ) ^ (s + z) * mellinWeight φ s * mellinWeight φ z * characterKernel N s z)) := by sorry"
+  },
+  "lemma_3_5_weight_support": {
+    "kind": "theorem",
+    "line": 1125,
+    "code": "theorem lemma_3_5_weight_support (N : ℕ) (hN : 0 < N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (n m k : ℕ)\n    (hn : φ ((n : ℝ) / N) ≠ 0) (hm : φ ((m : ℝ) / N) ≠ 0) :\n    ¬positiveDifferenceFamily N n m k ∧\n    ¬negativeDifferenceFamily N n m k ∧\n    (sumFamily N n m k ↔ k = 1 ∧ n + m = N) := by sorry"
+  },
+  "lemma_4_1_absolute_convergence": {
+    "kind": "theorem",
+    "line": 1132,
+    "code": "theorem lemma_4_1_absolute_convergence (h : ℝ) (hh : 0 < h)\n    (s z : ℂ) (hd : (s, z) ∈ betaDomain) :\n    IntegrableOn (fun x : ℝ => (x : ℂ) ^ (-1 / 2 - s) *\n      (x + h : ℂ) ^ (-1 / 2 - z)) (Ioi 0) ∧\n    IntegrableOn (fun x : ℝ => (x : ℂ) ^ (-1 / 2 - z) *\n      (x + h : ℂ) ^ (-1 / 2 - s)) (Ioi 0) ∧\n    IntegrableOn (fun x : ℝ => (x : ℂ) ^ (-1 / 2 - s) *\n      (h - x : ℂ) ^ (-1 / 2 - z)) (Ioo 0 h) := by sorry"
+  },
+  "lemma_4_3_density_convergence": {
+    "kind": "theorem",
+    "line": 1141,
+    "code": "theorem lemma_4_3_density_convergence (N : ℕ) (hN : Even N) (hN4 : 4 ≤ N) :\n    (∀ w : ℂ, 1 < w.re → Summable (fun k : ℕ =>\n      if 0 < k then ‖(singularSeries (k * N) : ℂ) / (k : ℂ) ^ w‖ else 0)) ∧\n    DifferentiableOn ℂ (continuedDensity N) {w | 0 < w.re ∧ w ≠ 1} := by sorry"
+  },
+  "lemma_5_2_closed_trace_space": {
+    "kind": "theorem",
+    "line": 1146,
+    "code": "theorem lemma_5_2_closed_trace_space (a b : ℝ) (hab : a < b) :\n    IsClosed (Set.range (fun ψ : HardySpace a b => boundaryTraces hab ψ)) := by sorry"
+  },
+  "proposition_5_4_exact_norm": {
+    "kind": "theorem",
+    "line": 1149,
+    "code": "theorem proposition_5_4_exact_norm (a b : ℝ) (hab : a < b)\n    (s : ℂ) (hs : s ∈ strip a b) :\n    ‖(evaluationVector s : HardySpace a b)‖ ^ 2 =\n      1 / (4 * (b - a) * Real.sin (Real.pi * (s.re - a) / (b - a))) := by sorry"
+  },
+  "spectralPartialQuaternionReindexed": {
+    "kind": "def",
+    "line": 1156,
+    "code": "def spectralPartialQuaternionReindexed {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] (N : ℕ) (T : H →L[ℂ] H)\n    (e : ℕ ≃ ℕ) (q : Quaternion ℝ) (k : ℕ) : Quaternion ℝ :=\n  (List.range k).foldl (fun acc j =>\n    acc * (1 - (4 * eigenvalues T (e j) ^ 2 / spectralScale N ^ 2 : ℝ) * q * (1 - q))) 1"
+  },
+  "proposition_6_1_enumeration": {
+    "kind": "theorem",
+    "line": 1162,
+    "code": "theorem proposition_6_1_enumeration (N : ℕ) [NeZero N]\n    (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) (e : ℕ ≃ ℕ) :\n    CompactUniformLimit (fun k q =>\n      spectralPartialQuaternionReindexed N (residualOperator ha N) e q k)\n      (spectralQuaternion N (residualOperator ha N)) ∧\n    (∀ q : ℂ, (∏' j : ℕ,\n      (1 - (4 * eigenvalues (residualOperator ha N) (e j) ^ 2 / spectralScale N ^ 2 : ℝ) *\n        q * (1 - q))) = spectralComplex N (residualOperator ha N) q) := by sorry"
+  },
+  "proposition_6_1_complex_slice": {
+    "kind": "theorem",
+    "line": 1172,
+    "code": "theorem proposition_6_1_complex_slice (N : ℕ) [NeZero N]\n    (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) (q : ℂ) :\n    spectralQuaternion N (residualOperator ha N) (complexQuaternion q) =\n      complexQuaternion (spectralComplex N (residualOperator ha N) q) := by sorry"
+  },
+  "centeredSpectralPartial": {
+    "kind": "def",
+    "line": 1178,
+    "code": "def centeredSpectralPartial {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] (N : ℕ) (T : H →L[ℂ] H)\n    (ξ : Quaternion ℝ) (k : ℕ) : Quaternion ℝ :=\n  (List.range k).foldl (fun acc j => acc *\n    (1 - (eigenvalues T j ^ 2 / spectralScale N ^ 2 : ℝ) +\n      (4 * eigenvalues T j ^ 2 / spectralScale N ^ 2 : ℝ) * ξ ^ 2)) 1"
+  },
+  "proposition_6_2_centered_product": {
+    "kind": "theorem",
+    "line": 1185,
+    "code": "theorem proposition_6_2_centered_product (N : ℕ) [NeZero N]\n    (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) :\n    CompactUniformLimit (fun k ξ => centeredSpectralPartial N (residualOperator ha N) ξ k)\n      (fun ξ => spectralQuaternion N (residualOperator ha N) (1 / 2 + ξ)) := by sorry"
+  },
+  "proposition_6_2_critical_values": {
+    "kind": "theorem",
+    "line": 1191,
+    "code": "theorem proposition_6_2_critical_values (N : ℕ) [NeZero N]\n    (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta)\n    (J : Quaternion ℝ) (hJre : J.re = 0) (hJnorm : ‖J‖ = 1) (t : ℝ) :\n    Multipliable (fun j : ℕ => (1 - eigenvalues (residualOperator ha N) j ^ 2 /\n        spectralScale N ^ 2 * (1 + 4 * t ^ 2) : ℝ)) ∧\n    spectralQuaternion N (residualOperator ha N) ((1 / 2 : Quaternion ℝ) + t • J) =\n      ((∏' j : ℕ, (1 - eigenvalues (residualOperator ha N) j ^ 2 /\n        spectralScale N ^ 2 * (1 + 4 * t ^ 2)) : ℝ) : Quaternion ℝ) := by sorry"
+  },
+  "proposition_6_3_three_cases": {
+    "kind": "theorem",
+    "line": 1203,
+    "code": "theorem proposition_6_3_three_cases (N : ℕ) [NeZero N]\n    (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) (q : Quaternion ℝ) :\n    spectralQuaternion N (residualOperator ha N) q = 0 ↔\n      ∃ j : ℕ, eigenvalues (residualOperator ha N) j ≠ 0 ∧\n        let d := spectralRootParameter N (eigenvalues (residualOperator ha N) j)\n        (1 < d ∧ q.re = 1 / 2 ∧ ‖q - (q.re : Quaternion ℝ)‖ = Real.sqrt (d - 1) / 2) ∨\n        (d = 1 ∧ q = 1 / 2) ∨\n        (0 < d ∧ d < 1 ∧\n          (q = ((1 / 2 - Real.sqrt (1 - d) / 2 : ℝ) : Quaternion ℝ) ∨\n           q = ((1 / 2 + Real.sqrt (1 - d) / 2 : ℝ) : Quaternion ℝ))) := by sorry"
+  },
+  "proposition_6_3_factor_central_order": {
+    "kind": "theorem",
+    "line": 1215,
+    "code": "theorem proposition_6_3_factor_central_order (N : ℕ) [NeZero N]\n    (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) (j : ℕ)\n    (hμ : eigenvalues (residualOperator ha N) j ≠ 0)\n    (hd : spectralRootParameter N (eigenvalues (residualOperator ha N) j) = 1) :\n    analyticOrderNatAt (fun q : ℂ =>\n      1 - (4 * eigenvalues (residualOperator ha N) j ^ 2 / spectralScale N ^ 2 : ℝ) *\n        q * (1 - q)) (1 / 2) = 2 := by sorry"
+  },
+  "proposition_6_3_multiplicities": {
+    "kind": "theorem",
+    "line": 1224,
+    "code": "theorem proposition_6_3_multiplicities (N : ℕ) [NeZero N]\n    (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N < beta) :\n    (∀ q : ℂ, analyticOrderNatAt (spectralComplex N (residualOperator ha N)) q =\n      analyticOrderNatAt (spectralComplex N (residualOperator ha N)) (1 - q)) ∧\n    (∀ q : ℂ, analyticOrderNatAt (spectralComplex N (residualOperator ha N)) q =\n      analyticOrderNatAt (spectralComplex N (residualOperator ha N)) (conj q)) ∧\n    Even (analyticOrderNatAt (spectralComplex N (residualOperator ha N)) (1 / 2)) ∧\n    (∀ q u : Quaternion ℝ, ‖u‖ = 1 →\n      spectralQuaternion N (residualOperator ha N) q = 0 →\n      spectralQuaternion N (residualOperator ha N) (u * q * star u) = 0) := by sorry"
+  },
+  "proposition_5_1_fueter_equation": {
+    "kind": "theorem",
+    "line": 1238,
+    "code": "theorem proposition_5_1_fueter_equation (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (s z : ℂ)\n    (hsz : (s, conj z) ∈ analyticDomain) :\n    fueterOperator (fun u v => residual N u (conj v)) s z = 0 := by sorry"
+  },
+  "lemma_5_2_representation_spec": {
+    "kind": "theorem",
+    "line": 1243,
+    "code": "theorem lemma_5_2_representation_spec (a b : ℝ) (hab : a < b) :\n    (∀ ψ : HardySpace a b,\n      (∀ s ∈ strip a b, Integrable (fun τ : ℝ => ψ τ * Complex.exp (s * τ))) ∧\n      IsBoundaryTrace hab ψ (boundaryTraces hab ψ).1 (boundaryTraces hab ψ).2 ∧\n      Integrable (fun τ : ℝ => ‖ψ τ‖ ^ 2 * hardyWeight a b τ) ∧\n      ‖ψ‖ ^ 2 = ∫ τ : ℝ, ‖ψ τ‖ ^ 2 * hardyWeight a b τ) ∧\n    (∀ ψ χ : HardySpace a b, ∀ s ∈ strip a b,\n      fourierLaplace (ψ + χ) s = fourierLaplace ψ s + fourierLaplace χ s) ∧\n    (∀ c : ℂ, ∀ ψ : HardySpace a b, ∀ s ∈ strip a b,\n      fourierLaplace (c • ψ) s = c * fourierLaplace ψ s) ∧\n    (∀ ψ χ : HardySpace a b,\n      boundaryTraces hab (ψ + χ) = boundaryTraces hab ψ + boundaryTraces hab χ) ∧\n    (∀ c : ℂ, ∀ ψ : HardySpace a b,\n      boundaryTraces hab (c • ψ) = c • boundaryTraces hab ψ) ∧\n    (∀ ψ χ : HardySpace a b, ‖ψ - χ‖ ^ 2 =\n      ‖(boundaryTraces hab ψ).1 - (boundaryTraces hab χ).1‖ ^ 2 +\n      ‖(boundaryTraces hab ψ).2 - (boundaryTraces hab χ).2‖ ^ 2) := by sorry"
+  },
+  "proposition_5_3_kernel_integrability": {
+    "kind": "theorem",
+    "line": 1261,
+    "code": "theorem proposition_5_3_kernel_integrability (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta) :\n    ∀ (h : HardySpace (alpha N) beta) (s : ℂ), s ∈ strip (alpha N) beta →\n      Integrable (fun t : ℝ => weightedKernel N s (line (alpha N) t) *\n        (boundaryTraces ha h).1 t) ∧\n      Integrable (fun t : ℝ => weightedKernel N s (line beta t) *\n        (boundaryTraces ha h).2 t) := by sorry"
+  },
+  "proposition_5_3_hs_basis_independent": {
+    "kind": "theorem",
+    "line": 1270,
+    "code": "theorem proposition_5_3_hs_basis_independent {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] [CompleteSpace H] (T : H →L[ℂ] H)\n    (hT : IsHilbertSchmidt T) (b : HilbertBasis ℕ ℂ H) :\n    Summable (fun j => ‖T (b j)‖ ^ 2) ∧\n    hsNorm T ^ 2 = ∑' j, ‖T (b j)‖ ^ 2 := by sorry"
+  },
+  "proposition_5_4_kernel_pairing": {
+    "kind": "theorem",
+    "line": 1276,
+    "code": "theorem proposition_5_4_kernel_pairing (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta)\n    (s z : ℂ) (hs : s ∈ strip (alpha N) beta) (hz : z ∈ strip (alpha N) beta) :\n    weightedKernel N s z =\n      paperInner (residualOperator ha N (evaluationVector z)) (evaluationVector s) := by sorry"
+  },
+  "proposition_5_4_fixed_contour": {
+    "kind": "theorem",
+    "line": 1282,
+    "code": "theorem proposition_5_4_fixed_contour : ∃ C : ℝ, 0 < C ∧\n    ∀ (N : ℕ) (_ : NeZero N), Even N → Real.exp 10 < (N : ℝ) → GRH N →\n      ∀ ha : alpha N < beta, ∀ v t : ℝ,\n        ‖residual N (line sigmaStar v) (line sigmaStar t)‖ ≤\n          C * ‖residualOperator ha N‖ * (1 + |v| + |t|) ^ 2 := by sorry"
+  },
+  "proposition_6_1_positive_fredholm_spec": {
+    "kind": "theorem",
+    "line": 1291,
+    "code": "theorem proposition_6_1_positive_fredholm_spec {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] [CompleteSpace H] (A : H →L[ℂ] H)\n    (hA : IsPositiveTraceClass A) :\n    IsCompactOperator A ∧ IsHilbertSchmidt A ∧ Nonempty (SpectralData A) ∧\n    (∀ j, 0 ≤ eigenvalues A j) ∧ Summable (eigenvalues A) ∧\n    positiveTrace A = ∑' j, eigenvalues A j ∧\n    (∀ b : HilbertBasis ℕ ℂ H,\n      Summable (fun j => (paperInner (A (b j)) (b j)).re) ∧\n      positiveTrace A = ∑' j, (paperInner (A (b j)) (b j)).re) ∧\n    (∀ t : ℂ, Multipliable (fun j : ℕ => 1 - t * (eigenvalues A j : ℂ))) := by sorry"
+  },
+  "proposition_6_1_square_determinant": {
+    "kind": "theorem",
+    "line": 1302,
+    "code": "theorem proposition_6_1_square_determinant (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta) :\n    let T := residualOperator ha N\n    Nonempty (SpectralData (T.comp T)) ∧\n    positiveTrace (T.comp T) = ∑' j, eigenvalues T j ^ 2 ∧\n    (∀ t : ℂ, Multipliable (fun j : ℕ => 1 - t * (eigenvalues T j : ℂ) ^ 2) ∧\n      fredholmSquareDet T t = ∏' j : ℕ, (1 - t * (eigenvalues T j : ℂ) ^ 2)) := by sorry"
+  },
+  "proposition_6_1_all_slices": {
+    "kind": "theorem",
+    "line": 1310,
+    "code": "theorem proposition_6_1_all_slices (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta)\n    (J : Quaternion ℝ) (hJre : J.re = 0) (hJsq : J ^ 2 = -1) (z : ℂ) :\n    spectralQuaternion N (residualOperator ha N) ((z.re : Quaternion ℝ) + z.im • J) =\n      ((spectralComplex N (residualOperator ha N) z).re : Quaternion ℝ) +\n        (spectralComplex N (residualOperator ha N) z).im • J := by sorry"
+  },
+  "proposition_6_1_spectral_choice_independent": {
+    "kind": "theorem",
+    "line": 1318,
+    "code": "theorem proposition_6_1_spectral_choice_independent {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] [CompleteSpace H] (T : H →L[ℂ] H)\n    (d₁ d₂ : SpectralData T) (t : ℂ) :\n    (∏' j : ℕ, (1 - t * (d₁.values j : ℂ) ^ 2)) =\n      ∏' j : ℕ, (1 - t * (d₂.values j : ℂ) ^ 2) := by sorry"
+  },
+  "diagonalHardyVector": {
+    "kind": "def",
+    "line": 1326,
+    "code": "def diagonalHardyVector {a : ℝ} (n : ℕ) : HardySpace a beta :=\n  if h : ∃ d : HardySpace a beta, ∀ s ∈ strip a beta,\n      fourierLaplace d s = diagonalVector n s\n  then Classical.choose h else 0"
+  },
+  "proposition_6_5_diagonal_vector_spec": {
+    "kind": "theorem",
+    "line": 1331,
+    "code": "theorem proposition_6_5_diagonal_vector_spec (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (ha : alpha N < beta) (n : ℕ) (hn : 1 ≤ n) :\n    let d : HardySpace (alpha N) beta := diagonalHardyVector n\n    (∀ s ∈ strip (alpha N) beta, fourierLaplace d s = diagonalVector n s) ∧\n    ((boundaryTraces ha d).1 =ᵐ[volume] fun t : ℝ => diagonalVector n (line (alpha N) t)) ∧\n    ((boundaryTraces ha d).2 =ᵐ[volume] fun t : ℝ => diagonalVector n (line beta t)) ∧\n    ‖d‖ ^ 2 = Real.pi * (Real.rpow n (-2 * alpha N) / (1 + alpha N) +\n      Real.rpow n (-2 * beta) / (1 + beta)) ∧\n    (∀ h : HardySpace (alpha N) beta,\n      InnerProductSpace.rankOne ℂ d d h = paperInner h d • d) := by sorry"
+  },
+  "lemma_6_4_zero_poisson_convergence": {
+    "kind": "theorem",
+    "line": 1342,
+    "code": "theorem lemma_6_4_zero_poisson_convergence (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N)\n    (χ : Character N) (hχ : χ ∈ oddCharacters N) (x t : ℝ) (hx : 0 < x) :\n    Summable (fun p : ZeroIndex χ.primitiveCharacter =>\n      x / (x ^ 2 + (t - p.val.1.im) ^ 2)) := by sorry"
+  },
+  "lemma_6_4_perron_residue": {
+    "kind": "theorem",
+    "line": 1350,
+    "code": "theorem lemma_6_4_perron_residue (X : ℝ) (hX : 1 < X) :\n    MeromorphicOn (smoothedPerronKernel X) Set.univ ∧\n    Tendsto (fun v : ℂ => v * smoothedPerronKernel X v)\n      (𝓝[≠] (0 : ℂ)) (𝓝 1) := by sorry"
+  },
+  "lemma_6_4_poisson_action_spec": {
+    "kind": "theorem",
+    "line": 1357,
+    "code": "theorem lemma_6_4_poisson_action_spec :\n    (∀ f : ℝ → ℝ, poissonAction 0 f = f) ∧\n    ∀ ℓ : ℝ, 0 < ℓ →\n      Integrable (poissonKernelReal ℓ) ∧\n      (∀ t : ℝ, 0 ≤ poissonKernelReal ℓ t) ∧\n      (∫ t : ℝ, poissonKernelReal ℓ t) = 1 ∧\n      ∀ f : ℝ → ℝ,\n        poissonAction ℓ f = realConvolution (poissonKernelReal ℓ) f := by sorry"
+  },
+  "lemma_6_4_poisson_convolution": {
+    "kind": "theorem",
+    "line": 1368,
+    "code": "theorem lemma_6_4_poisson_convolution (ℓ : ℝ) (hℓ : 0 < ℓ) (t : ℝ) :\n    Integrable (fun u : ℝ => poissonKernelReal 1 u * poissonKernelReal ℓ (t - u)) ∧\n    realConvolution (poissonKernelReal 1) (poissonKernelReal ℓ) t =\n      poissonKernelReal (1 + ℓ) t ∧\n    poissonKernelReal (1 + ℓ) t ≤ (1 + ℓ) * poissonKernelReal 1 t := by sorry"
+  },
+  "lemma_7_2_absolute_convergence": {
+    "kind": "theorem",
+    "line": 1375,
+    "code": "theorem lemma_7_2_absolute_convergence (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) (φ : ℝ → ℝ) (hφ : IsWeight φ)\n    (σ : ℝ) (hσ : 0 < σ) (hσ' : σ ≤ 1 / 9) :\n    Integrable (fun p : ℝ × ℝ =>\n      (N : ℂ) ^ (line σ p.1 + line σ p.2) *\n        mellinWeight φ (line σ p.1) * mellinWeight φ (line σ p.2) *\n        diagonalSeries N (line σ p.1 + line σ p.2)) ∧\n    Integrable (fun p : ℝ × ℝ =>\n      mellinWeight φ (line σ p.1) * mellinWeight φ (line σ p.2) *\n        continuedDensity N (line σ p.1 + line σ p.2) *\n        betaKernel (line σ p.1) (line σ p.2)) := by sorry"
+  },
+  "proposition_7_3_absolute_convergence": {
+    "kind": "theorem",
+    "line": 1387,
+    "code": "theorem proposition_7_3_absolute_convergence (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (σ : ℝ) (hσ : 0 < σ) (hσ' : σ ≤ 1 / 9) :\n    Integrable (fun p : ℝ × ℝ =>\n      (N : ℂ) ^ (line σ p.1 + line σ p.2) *\n        mellinWeight φ (line σ p.1) * mellinWeight φ (line σ p.2) *\n        residual N (line σ p.1) (line σ p.2)) := by sorry"
+  },
+  "lemma_A_3_balance": {
+    "kind": "theorem",
+    "line": 1402,
+    "code": "theorem lemma_A_3_balance (φ : ℝ → ℝ) (hφ : IsWeight φ) (C : ℝ) (hC : 0 < C) :\n    ∃ L U : ℝ, 0 < L ∧ 0 < U ∧ EvenEventually (fun N =>\n      ∀ c : ℝ, 0 < c → alpha N c < 1 / 10 →\n        L * Real.log N ^ 2 * balanceFactor c ≤\n          normFunctional N φ (alpha N c) * baselineBound C N (alpha N c) ∧\n        normFunctional N φ (alpha N c) * baselineBound C N (alpha N c) ≤\n          U * Real.log N ^ 2 * balanceFactor c ∧\n        ∀ h : ℕ → ℝ, 0 < h N →\n          L ^ 2 * h N ^ 2 * Real.log N ^ 4 / singularSeries N ^ 2 * balanceFactor c ^ 2 ≤\n            h N ^ 2 * (normFunctional N φ (alpha N c) * baselineBound C N (alpha N c)) ^ 2 /\n              singularSeries N ^ 2 ∧\n          h N ^ 2 * (normFunctional N φ (alpha N c) * baselineBound C N (alpha N c)) ^ 2 /\n              singularSeries N ^ 2 ≤\n            U ^ 2 * h N ^ 2 * Real.log N ^ 4 / singularSeries N ^ 2 * balanceFactor c ^ 2) := by sorry"
+  },
+  "lemma_5_2_boundary_inner": {
+    "kind": "theorem",
+    "line": 1418,
+    "code": "theorem lemma_5_2_boundary_inner (a b : ℝ) (hab : a < b) (h g : HardySpace a b) :\n    paperInner h g =\n      (∫ t : ℝ, (boundaryTraces hab h).1 t * conj ((boundaryTraces hab g).1 t)) +\n      ∫ t : ℝ, (boundaryTraces hab h).2 t * conj ((boundaryTraces hab g).2 t) := by sorry"
+  },
+  "localDensityFactor": {
+    "kind": "def",
+    "line": 1424,
+    "code": "def localDensityFactor (p h : ℕ) : ℝ :=\n  (1 - (if p ∣ h then 1 else 2) / (p : ℝ)) / (1 - (p : ℝ)⁻¹) ^ 2"
+  },
+  "lemma_4_1_local_density": {
+    "kind": "theorem",
+    "line": 1427,
+    "code": "theorem lemma_4_1_local_density (h : ℕ) (hh : Even h) (hpos : 0 < h) :\n    (∏' p : ℕ, if p.Prime then localDensityFactor p h else 1) = singularSeries h := by sorry"
+  },
+  "lemma_4_2_meromorphic": {
+    "kind": "theorem",
+    "line": 1434,
+    "code": "theorem lemma_4_2_meromorphic :\n    ∃ A B : ℂ × ℂ → ℂ,\n      Differentiable ℂ A ∧ Differentiable ℂ B ∧ B ≠ 0 ∧\n      ∀ p : ℂ × ℂ, B p ≠ 0 →\n        betaGamma (1 / 2 - p.1) (p.1 + p.2) +\n          betaGamma (1 / 2 - p.2) (p.1 + p.2) -\n          betaGamma (1 / 2 - p.1) (1 / 2 - p.2) = A p / B p ∧\n        (2 : ℂ) ^ (1 - (p.1 + p.2)) * Gamma (p.1 + p.2) *\n          Complex.cos (Real.pi * (p.1 + p.2) / 2) *\n          gammaQuotient p.1 * gammaQuotient p.2 = A p / B p := by sorry"
+  },
+  "proposition_3_2_joint_meromorphic": {
+    "kind": "theorem",
+    "line": 1448,
+    "code": "theorem proposition_3_2_joint_meromorphic (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) :\n    let B : ℂ × ℂ → ℂ := fun p => ∏ χ ∈ oddCharacters N,\n      χ.LFunction (1 / 2 + p.1) * χ.LFunction (1 / 2 + p.2)\n    Differentiable ℂ B ∧ B ≠ 0 ∧\n    (∃ A : ℂ × ℂ → ℂ, Differentiable ℂ A ∧\n      ∀ p : ℂ × ℂ, B p ≠ 0 → characterKernel N p.1 p.2 = A p / B p) ∧\n    DifferentiableOn ℂ (fun p : ℂ × ℂ => characterKernel N p.1 p.2)\n      {p | ∀ χ ∈ oddCharacters N,\n        χ.LFunction (1 / 2 + p.1) ≠ 0 ∧ χ.LFunction (1 / 2 + p.2) ≠ 0} := by sorry"
+  },
+  "lemma_3_4_paired_zero_sum": {
+    "kind": "theorem",
+    "line": 1460,
+    "code": "theorem lemma_3_4_paired_zero_sum (N : ℕ) [NeZero N]\n    (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N)\n    (χ : Character N) (hχ : χ ∈ oddCharacters N) (s : ℂ) (hs : 0 < s.re) :\n    zeroDifference χ.primitiveCharacter (1 / 2 + s) 2 = pairedZeroSum χ s := by sorry"
+  },
+  "lemma_4_1_signed_model": {
+    "kind": "theorem",
+    "line": 1467,
+    "code": "theorem lemma_4_1_signed_model (h : ℝ) (hh : 0 < h)\n    (s z : ℂ) (hd : (s, z) ∈ betaDomain) :\n    let I₁ := ∫ x in Ioi (0 : ℝ),\n      (x : ℂ) ^ (-1 / 2 - s) * (x + h : ℂ) ^ (-1 / 2 - z)\n    let I₂ := ∫ x in Ioi (0 : ℝ),\n      (x : ℂ) ^ (-1 / 2 - z) * (x + h : ℂ) ^ (-1 / 2 - s)\n    let I₃ := ∫ x in Ioo (0 : ℝ) h,\n      (x : ℂ) ^ (-1 / 2 - s) * (h - x : ℂ) ^ (-1 / 2 - z)\n    I₁ + I₂ - I₃ = (h : ℂ) ^ (-(s + z)) * betaKernel s z ∧\n    ∀ N k : ℕ, Even N → 4 ≤ N → 0 < k → h = (k * N : ℕ) →\n      (singularSeries (k * N) : ℂ) * (I₁ + I₂ - I₃) =\n        singularSeries (k * N) * (h : ℂ) ^ (-(s + z)) * betaKernel s z := by sorry"
+  },
+  "lemma_4_3_euler_product_convergence": {
+    "kind": "theorem",
+    "line": 1482,
+    "code": "theorem lemma_4_3_euler_product_convergence (N : ℕ) (hN : Even N) (hN4 : 4 ≤ N) :\n    NormallySummableOn (fun p : ℕ => fun w : ℂ =>\n      if p.Prime ∧ 2 < p ∧ ¬p ∣ N then (p : ℂ) ^ (-w) / ((p : ℂ) - 2) else 0)\n      {w | 0 < w.re} ∧\n    (∀ w : ℂ, 0 < w.re → Multipliable (fun p : ℕ =>\n      if p.Prime ∧ 2 < p ∧ ¬p ∣ N then\n        1 + (p : ℂ) ^ (-w) / ((p : ℂ) - 2) else 1)) ∧\n    DifferentiableOn ℂ (densityEulerProduct N) {w | 0 < w.re} ∧\n    DifferentiableOn ℂ (diagonalSeries N) {w | 0 < w.re} := by sorry"
+  },
+  "theorem_6_1_abstract_dictionary": {
+    "kind": "theorem",
+    "line": 1498,
+    "code": "theorem theorem_6_1_abstract_dictionary {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] [CompleteSpace H] (N : ℕ) (T : H →L[ℂ] H)\n    (hT : Nonempty (SpectralData T)) (hδ : 0 < spectralScale N) :\n    ((∀ q : Quaternion ℝ, spectralQuaternion N T q = 0 → q.re = 1 / 2) ↔\n      ‖T‖ ≤ spectralScale N) ∧\n    ∀ η : ℝ, 0 < η → η < 1 / 2 →\n      ((∀ q : Quaternion ℝ, 1 - η < q.re → spectralQuaternion N T q ≠ 0) ↔\n        ‖T‖ ≤ spectralScale N / (2 * Real.sqrt (η * (1 - η)))) := by sorry"
+  },
+  "theorem_6_1_width_comparison": {
+    "kind": "theorem",
+    "line": 1508,
+    "code": "theorem theorem_6_1_width_comparison (N : ℕ) (M : ℝ)\n    (hδ : 0 < spectralScale N) (hM : spectralScale N < M) :\n    spectralScale N ^ 2 / (4 * M ^ 2) ≤ spectralWidthFromBound N M ∧\n      spectralWidthFromBound N M ≤ spectralScale N ^ 2 / (2 * M ^ 2) := by sorry"
+  },
+  "theorem_7_1_uniform": {
+    "kind": "theorem",
+    "line": 1514,
+    "code": "theorem theorem_7_1_uniform (N : ℕ) [NeZero N] (hN : Even N)\n    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (ha : alpha N < beta) :\n    |weightMass φ * singularSeries N - goldbach N φ| ≤\n      Real.exp 2 * weightEnergy φ * ‖residualOperator ha N‖ := by sorry"
+  },
+  "lemma_A_3_width_ratio": {
+    "kind": "theorem",
+    "line": 1522,
+    "code": "theorem lemma_A_3_width_ratio (φ : ℝ → ℝ) (hφ : IsWeight φ)\n    (C : ℝ) (hC : 0 < C) :\n    ∃ L U : ℝ, 0 < L ∧ 0 < U ∧ EvenEventually (fun N =>\n      ∀ c h : ℝ, 0 < c → alpha N c < 1 / 10 → 0 < h →\n        let requiredNorm := singularSeries N / (h * normFunctional N φ (alpha N c))\n        let suppliedNorm := baselineBound C N (alpha N c)\n        let requiredWidth := spectralWidthFromBound N requiredNorm\n        let suppliedWidth := spectralWidthFromBound N suppliedNorm\n        0 < spectralScale N → spectralScale N < requiredNorm →\n        spectralScale N < suppliedNorm → requiredWidth ≤ 1 / 4 →\n        suppliedWidth ≤ 1 / 4 →\n          L * h ^ 2 * Real.log N ^ 4 / singularSeries N ^ 2 * balanceFactor c ^ 2 ≤\n            requiredWidth / suppliedWidth ∧\n          requiredWidth / suppliedWidth ≤\n            U * h ^ 2 * Real.log N ^ 4 / singularSeries N ^ 2 * balanceFactor c ^ 2) := by sorry"
+  },
+  "lemma_7_1_absolute_convergence": {
+    "kind": "theorem",
+    "line": 1546,
+    "code": "theorem lemma_7_1_absolute_convergence (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    (∀ σ u : ℝ, 0 < u → Integrable (fun t : ℝ =>\n      mellinWeight φ (line σ t) * (u : ℂ) ^ (-line σ t))) ∧\n    (∀ N : ℕ, ∀ (_ : NeZero N), Even N → 4 ≤ N → GRH N →\n      ∀ σ : ℝ, 0 < σ → σ ≤ 1 / 9 →\n        (∀ χ ∈ oddCharacters N, Integrable (fun t : ℝ =>\n          (N : ℂ) ^ (line σ t) * mellinWeight φ (line σ t) * logDerivative χ (line σ t))) ∧\n        Integrable (fun p : ℝ × ℝ =>\n          (N : ℂ) ^ (line σ p.1 + line σ p.2) * mellinWeight φ (line σ p.1) *\n            mellinWeight φ (line σ p.2) * characterKernel N (line σ p.1) (line σ p.2)) ∧\n        (characterMoment N φ : ℂ) = verticalMellin σ (fun s => verticalMellin σ (fun z =>\n          (N : ℂ) ^ (s + z) * mellinWeight φ s * mellinWeight φ z * characterKernel N s z))) := by sorry"
+  },
+  "lemma_7_2_convolutions": {
+    "kind": "theorem",
+    "line": 1561,
+    "code": "theorem lemma_7_2_convolutions (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    (∀ y : ℝ,\n      IntegrableOn (fun u : ℝ => φ u * φ (u + y)) (Ioi 0) ∧\n      IntegrableOn (fun u : ℝ => φ u * φ (y - u)) (Ioi 0) ∧\n      sumConvolution φ y = ∫ u in (0 : ℝ)..y, φ u * φ (y - u)) ∧\n    sumConvolution φ 1 = weightMass φ ∧ IntegrableOn φ (Ioi 0) := by sorry"
+  },
+  "proposition_7_4_norm_integrals": {
+    "kind": "theorem",
+    "line": 1570,
+    "code": "theorem proposition_7_4_norm_integrals (N : ℕ) (hN : 0 < N)\n    (φ : ℝ → ℝ) (hφ : IsWeight φ) (a : ℝ) :\n    IntegrableOn (fun u : ℝ => derivativeWeight φ u ^ 2 / u) (Ioi 0) ∧\n    IntegrableOn (fun u : ℝ =>\n      Real.rpow (N * u) (2 * a) * derivativeWeight φ u ^ 2 /\n        (1 + Real.rpow (N * u) (-2 * (beta - a))) / u) (Ioi 0) := by sorry"
+  },
+  "lemma_7_5_asymptotic": {
+    "kind": "theorem",
+    "line": 1579,
+    "code": "theorem lemma_7_5_asymptotic (φ : ℝ → ℝ) (hφ : IsWeight φ) :\n    ∀ ε : ℝ, 0 < ε → ∃ B : ℝ, 0 < B ∧\n      ∀ N : ℕ, ∀ (_ : NeZero N), Even N → Real.exp 10 < (N : ℝ) → GRH N →\n        ∀ ha : alpha N < beta, ∀ η : ℝ, 0 < η → η ≤ 1 / 4 →\n          SpectralZeroFree N (alpha N) ha η →\n          B ≤ N * η * singularSeries N / Real.log N ^ 3 →\n          |goldbach N φ / (weightMass φ * singularSeries N) - 1| < ε := by sorry"
+  },
+  "proposition_A_2_pointwise": {
+    "kind": "theorem",
+    "line": 1589,
+    "code": "theorem proposition_A_2_pointwise (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : ℝ) (hc : 0 < c) :\n    ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, ∀ (_ : NeZero N), Even N → 4 ≤ N →\n      Real.exp (10 * c) < (N : ℝ) → GRH N → ∀ ha : alpha N c < beta,\n        (∀ h : ℕ → ℝ, 0 < h N → 0 < zeroFreeWidth N h → zeroFreeWidth N h ≤ 1 / 4 →\n          SpectralZeroFree N (alpha N c) ha (zeroFreeWidth N h) →\n          |goldbach N φ - weightMass φ * singularSeries N| ≤ C * singularSeries N / h N) ∧\n        (SpectralR N (alpha N c) ha →\n          |goldbach N φ - weightMass φ * singularSeries N| ≤ C * spectralScale N) := by sorry"
+  },
+  "lemma_A_3_absolute_operator_bound": {
+    "kind": "theorem",
+    "line": 1600,
+    "code": "theorem lemma_A_3_absolute_operator_bound :\n    ∃ C : ℝ, 0 < C ∧ EvenEventually (fun N => ∀ (_ : NeZero N), GRH N →\n      ∀ a : ℝ, 0 < a → a < 1 / 10 → ∀ ha : a < beta,\n        ‖residualOperator ha N‖ ≤ baselineBound C N a) := by sorry"
+  },
+  "proposition_A_4_baseline_product": {
+    "kind": "theorem",
+    "line": 1607,
+    "code": "theorem proposition_A_4_baseline_product (N : ℕ) (hN : Even N) (hN4 : 4 ≤ N) :\n    (∃ ε : ℝ, 0 < ε ∧ ∀ w : ℂ, ‖w‖ < ε →\n      Multipliable (fun p : ℕ => if p.Prime ∧ 2 < p ∧ ¬p ∣ N then\n        1 + (2 * (p : ℂ) ^ (-w) - (p : ℂ) ^ (-2 * w)) / ((p : ℂ) * ((p : ℂ) - 2))\n        else 1) ∧ DifferentiableAt ℂ (baselineProductR N) w) ∧\n    (singularSeries N : ℂ) * baselineProductR N 0 = 1 := by sorry"
+  },
+  "lemma_B_3_main_integral": {
+    "kind": "theorem",
+    "line": 1616,
+    "code": "theorem lemma_B_3_main_integral :\n    wideMainIntegral = (experimentN : ℝ) * singularSeries experimentN * wideModelMass / 2 ∧\n    (unorderedPrimePairs : ℝ) = wideMainIntegral - (experimentN : ℝ) / 2 * wideResidual -\n      primePowerCorrection / 2 + edgeCorrection := by sorry"
+  },
+  "proposition_B_4_weight": {
+    "kind": "theorem",
+    "line": 1623,
+    "code": "theorem proposition_B_4_weight :\n    ContDiff ℝ 6 wideWeight ∧ HasCompactSupport wideWeight ∧\n    Function.support wideWeight ⊆ Ioo (0 : ℝ) 1 ∧\n    IntervalIntegrable (fun u : ℝ => wideWeight u * wideWeight (1 - u)) volume 0 1 ∧\n    IntervalIntegrable (fun x : ℝ => wideCutoff x ^ 2 /\n      (Real.log x * Real.log ((experimentN : ℝ) - x))) volume 16 ((experimentN : ℝ) / 2) := by sorry"
+  },
+  "proposition_A_1_operator_spec": {
+    "kind": "theorem",
+    "line": 1633,
+    "code": "theorem proposition_A_1_operator_spec (N : ℕ) [NeZero N] (hN : Even N)\n    (hN4 : 4 ≤ N) (c : ℝ) (hc : 0 < c) (hlarge : Real.exp (10 * c) < (N : ℝ))\n    (hGRH : GRH N) (ha : alpha N c < beta) :\n    (∀ x ∈ ({alpha N c, beta} : Finset ℝ), ∀ y ∈ ({alpha N c, beta} : Finset ℝ),\n      MemLp (fun p : ℝ × ℝ => weightedKernel N (line x p.1) (line y p.2)) 2 volume) ∧\n    RepresentsKernel ha N (weightedKernel N) (residualOperator ha N) ∧\n    Nonempty (SpectralData (residualOperator ha N)) ∧\n    (∀ (h : HardySpace (alpha N c) beta) (s : ℂ), s ∈ strip (alpha N c) beta →\n      Integrable (fun t : ℝ => weightedKernel N s (line (alpha N c) t) *\n        (boundaryTraces ha h).1 t) ∧\n      Integrable (fun t : ℝ => weightedKernel N s (line beta t) *\n        (boundaryTraces ha h).2 t)) := by sorry"
+  }
+}

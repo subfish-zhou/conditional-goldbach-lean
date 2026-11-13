@@ -1,0 +1,112 @@
+[
+  {
+    "id": "B-number-01",
+    "tex_lines": [
+      4341,
+      4345
+    ],
+    "claim": "75个边缘素数对、26个无序真素数幂对；E=44.35776816334822525…，Cpp/2=10.16758713116445818…",
+    "status": "not_formalized",
+    "scope": "命名B1之外的具体算例；B1只给精确符号恒等式。"
+  },
+  {
+    "id": "B-number-02",
+    "tex_lines": [
+      4389,
+      4403
+    ],
+    "claim": "h=0.1,T=1600；2^20 FFT网格；24阶Euler–Maclaurin、32高度重置；积分输出Jhat≈0.05799599193959489,Dhat≈0.29331844084848136",
+    "status": "not_formalized",
+    "scope": "未见存储5760个Ihat值、数值积分实现或该输出的有理证书绑定实际integralI。"
+  },
+  {
+    "id": "B-number-03",
+    "tex_lines": [
+      4408,
+      4419
+    ],
+    "claim": "HL预测积分≈908.1405628685、宽权A≈851.831147718741；65位数值积分及C2加速算法参数",
+    "status": "not_formalized",
+    "scope": "wideMainIntegral有精确定义，未认证该近似；传统HL积分的具体数值也未认证。"
+  },
+  {
+    "id": "B-number-04",
+    "tex_lines": [
+      4420,
+      4421
+    ],
+    "claim": "A−Cpp/2+E≈886.021328750925",
+    "status": "not_formalized",
+    "scope": "符号校正公式已覆盖；十进制数值未认证。"
+  },
+  {
+    "id": "B-number-05",
+    "tex_lines": [
+      4430,
+      4437
+    ],
+    "claim": "−N Bhat/2≈18.978671254276及rhat≈905.0000000052",
+    "status": "not_formalized",
+    "scope": "B3的Ihat为任意输入，尚无特定Ihat及该中心的证明。"
+  },
+  {
+    "id": "B-number-06",
+    "tex_lines": [
+      4475,
+      4486
+    ],
+    "claim": "3280个非零a_n；有限变换有理包围证明RMS积分误差<1.68935×10^−5",
+    "status": "not_formalized",
+    "scope": "这是应用B3得905最关键的未填输入；HasMomentError仅是定义，lemma_B_3将该界作为假设。"
+  },
+  {
+    "id": "B-number-07",
+    "tex_lines": [
+      4487,
+      4490
+    ],
+    "claim": "εr≈0.274758682716，外舍入[904.725241,905.274759]∩Z={905}",
+    "status": "not_formalized",
+    "scope": "没有在Lean中将真实积分误差传递到该具体区间；一般整数区间lemma不提供这项数值证书。"
+  },
+  {
+    "id": "B-number-08",
+    "tex_lines": [
+      4491,
+      4496
+    ],
+    "claim": "精确905无序对、1810有序对；直接有理求和与独立素数枚举双重检验",
+    "status": "not_formalized_in_audited_library",
+    "scope": "对活跃LiLiuGoldbach目录检索905未发现对应命题；可另补枚举证书，但不能代替积分误差认证。"
+  },
+  {
+    "id": "B-number-09",
+    "tex_lines": [
+      4501,
+      4505
+    ],
+    "claim": "α30030≈0.09699366",
+    "status": "approximation_not_formalized",
+    "scope": "精确α及1/9在条带内的证明已存在；仅该十进制展示未认证，不影响B4。"
+  },
+  {
+    "id": "B-number-10",
+    "tex_lines": [
+      4571,
+      4580
+    ],
+    "claim": "L′/L及Euler积数值实现、截止2×10^5；极端特征值≈−0.353421,0.357462；||C||/δ≈0.826864<1；δ≈0.432310239587548",
+    "status": "not_formalized",
+    "scope": "B5只证明若真实矩阵范数≤δ则零点在临界线；没有已认证的矩阵数值近似/范数上界。"
+  },
+  {
+    "id": "B-number-11",
+    "tex_lines": [
+      4577,
+      4599
+    ],
+    "claim": "截止10^5加倍时端点变化<3×10^−8；显示零点与图形使用完整计算谱",
+    "status": "not_formalized",
+    "scope": "图片和稳定性展示无形式数值证书；原文本身明确不认证无限算子R。"
+  }
+]

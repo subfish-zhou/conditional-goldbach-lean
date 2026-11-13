@@ -1,0 +1,302 @@
+{
+  "source": "work/full-audit/merged.lean",
+  "source_sha256": "e975fed3ae28d1d86181a341fea78ffcdc335867e70c60c374996a685216b628",
+  "scope": "17 previously unmapped implementation auxiliary definitions; read-only source review.",
+  "verdict": "All 17 pass for their actual paper domains and current supporting statements. No new mandatory code fix or missing validity obligation identified.",
+  "must_fix": [],
+  "definition_reviews": [
+    {
+      "declaration": "Character",
+      "suggested_family": "oddCharacters",
+      "source_pages": [
+        5,
+        15,
+        16
+      ],
+      "line": 26,
+      "definition": "abbrev Character (N : ℕ) := DirichletCharacter ℂ N",
+      "status": "passed",
+      "formula_and_quantifiers": "直接缩写DirichletCharacter ℂ N，未更改特征的乘法性、非单位零延拓或奇偶定义。",
+      "domain_and_totalization": "N=0的通用类型存在，但论文所有有限字符和都在NeZero N以及偶数N≥4域内，Finset.univ不会在模0无限域上被误用。",
+      "nonvacuity_review": "平凡特征保证类型非空；非平凡奇特征只在相应oddCharacters过滤中使用，不要求所有特征都奇。",
+      "validity_obligations": [
+        "Mathlib现有DirichletCharacter接口；无需新增存在性公理。"
+      ]
+    },
+    {
+      "declaration": "prime",
+      "suggested_family": "vonMangoldt",
+      "source_pages": [
+        2,
+        5
+      ],
+      "line": 31,
+      "definition": "abbrev prime (n : ℕ) := Nat.Prime n",
+      "status": "passed",
+      "formula_and_quantifiers": "prime n精确缩写Nat.Prime n，不把vonMangoldt非零当成素数。",
+      "domain_and_totalization": "域ℕ，0与1不是素数。",
+      "nonvacuity_review": "例如2是素数；该谓词不是人为不可能的条件。",
+      "validity_obligations": [
+        "无新增有效性义务。"
+      ]
+    },
+    {
+      "declaration": "betaDomain",
+      "suggested_family": "signedBeta",
+      "source_pages": [
+        20,
+        21
+      ],
+      "line": 119,
+      "definition": "def betaDomain : Set (ℂ × ℂ) :=\n  {p | p.1.re < 1 / 2 ∧ p.2.re < 1 / 2 ∧ 0 < (p.1 + p.2).re}",
+      "status": "passed",
+      "formula_and_quantifiers": "Re s<1/2、Re z<1/2、Re(s+z)>0，三个原Beta积分的全部且精确的共同收敛条件。",
+      "domain_and_totalization": "没有误加Re s>0或Re z>0；由已有三条件还能推出Re s,Re z>−1/2及Re(s+z)<1。",
+      "nonvacuity_review": "(s,z)=(1/8,1/8)是域内点。",
+      "validity_obligations": [
+        "lemma_4_1_absolute_convergence给出三项IntegrableOn；lemma_4_2只在此域把积分代表当作Beta值；全局亚纯另有共同整分母陈述。"
+      ]
+    },
+    {
+      "declaration": "line",
+      "suggested_family": "verticalIntegral",
+      "source_pages": [
+        5,
+        19,
+        25
+      ],
+      "line": 132,
+      "definition": "def line (x t : ℝ) : ℂ := (x : ℂ) + t * I",
+      "status": "passed",
+      "formula_and_quantifiers": "line x t=x+it，x为实部，t为独立高度变量，方向随t增大向上。",
+      "domain_and_totalization": "定义域ℝ×ℝ，无不合法除法或积分。ds=i dt只在verticalMellin中抵消2πi，而Hardy边界仍用dt。",
+      "nonvacuity_review": "任意实x,t均有对应复点。",
+      "validity_obligations": [
+        "verticalMellin保持1/(2π)，边界平方范数保持无1/(2π)的归一化。"
+      ]
+    },
+    {
+      "declaration": "RealizationValid",
+      "suggested_family": "residualOperator",
+      "source_pages": [
+        25,
+        53,
+        55
+      ],
+      "line": 284,
+      "definition": "def RealizationValid (N : ℕ) (a : ℝ) : Prop :=\n  Even N ∧ 4 ≤ N ∧ GRH N ∧ 0 < a ∧ a < 1 / 10",
+      "status": "passed",
+      "formula_and_quantifiers": "Even N、N≥4、GRH(N)、0<a<1/10；自动推出a<β=1/8。",
+      "domain_and_totalization": "这是变量左边界下的条件打包，未错误地把a固定为1/log N。合并稿除定义自身已无使用点，原主标签现明确使用论文N>e^10和固定alpha。",
+      "nonvacuity_review": "GRH是论文明确待假设条件，不能要求无条件证明整个谓词有实例；给定GRH(N)及合法偶数N后，a=1/20满足几何条件。不存在类似错误解析权的额外矛盾。",
+      "validity_obligations": [
+        "不需新增无条件RealizationValid存在定理；应在HTML标为辅助打包而非原文独立猜想。"
+      ]
+    },
+    {
+      "declaration": "EvenEventually",
+      "suggested_family": "admissibleH",
+      "source_pages": [
+        5,
+        54
+      ],
+      "line": 317,
+      "definition": "def EvenEventually (P : ℕ → Prop) : Prop := ∃ N₀ : ℕ, ∀ N ≥ N₀, Even N → P N",
+      "status": "passed",
+      "formula_and_quantifiers": "存在自然阈值N0，所有N≥N0且Even N满足P。量词顺序表达沿偶数趋无穷，包含阈值后并不预设GRH。",
+      "domain_and_totalization": "调用者通过P显式安放GRH蕴含或其它条件。有限初始N=0,2可以由阈值排除。",
+      "nonvacuity_review": "偶数集无界，因此最终性不是空滤子；对False不能通过选大阈值使陈述成立。",
+      "validity_obligations": [
+        "无需新增域假设；源Notation明确所有N极限沿偶数。"
+      ]
+    },
+    {
+      "declaration": "PrimePairCount",
+      "suggested_family": "goldbachCorrelation",
+      "source_pages": [
+        5
+      ],
+      "line": 341,
+      "definition": "def PrimePairCount (N : ℕ) : ℕ :=\n  ((Finset.range (N + 1)).filter (fun p => p.Prime ∧ (N - p).Prime ∧\n    (N : ℝ) / 3 ≤ p ∧ (p : ℝ) ≤ 2 * N / 3)).card",
+      "status": "passed",
+      "formula_and_quantifiers": "计数居中区间内的p，p与N−p均素数。p唯一确定有序对(p,N−p)，交换次序一般另计一次；p=N−p时恰计一次。",
+      "domain_and_totalization": "range(N+1)保证自然减法不截出伪解；素数条件进一步要求p与N−p≥2。p∈[N/3,2N/3]自动使N−p也在同一区间。原文计数无需互素过滤，因此这里没有加入它。",
+      "nonvacuity_review": "例如N=4时p=2给合法有序对；任意N非空不是定义要求，而是Goldbach结论的一部分。",
+      "validity_obligations": [
+        "primePair_consequence给出条件性的最终正下界；不应把普遍非空性作为前提。"
+      ]
+    },
+    {
+      "declaration": "HermitianKernel",
+      "suggested_family": "characterKernel",
+      "source_pages": [
+        17,
+        24,
+        26
+      ],
+      "line": 375,
+      "definition": "def HermitianKernel (K : ℂ → ℂ → ℂ) : Prop := ∀ s z, K s z = conj (K z s)",
+      "status": "passed",
+      "formula_and_quantifiers": "∀s,z，K(s,z)=conj(K(z,s))，与原文Hermitian约定一致。",
+      "domain_and_totalization": "全域谓词用于实际总化代表的对称性；实际解析用途在指定条带。",
+      "nonvacuity_review": "零核和所有Gram核均满足，不形成空类。",
+      "validity_obligations": [
+        "characterKernel由交换及同时共轭对称推出Hermitian；residual及weightedKernel另有显式Hermitian结论。"
+      ]
+    },
+    {
+      "declaration": "PositiveKernel",
+      "suggested_family": "characterKernel",
+      "source_pages": [
+        17
+      ],
+      "line": 377,
+      "definition": "def PositiveKernel (K : ℂ → ℂ → ℂ) : Prop :=\n  ∀ n : ℕ, ∀ points coefficients : Fin n → ℂ,\n    0 ≤ (∑ i, ∑ j, coefficients i * conj (coefficients j) * K (points i) (points j)).re",
+      "status": "passed",
+      "formula_and_quantifiers": "对任意有限点组和任意复系数，二次型实部非负；系数ci·conj(cj)与本文第一变量线性的Gram形式一致。",
+      "domain_and_totalization": "该谓词单独不要求二次型虚部为0。实际使用同时拥有Hermitian对称，保证二次型为实数，因而组合语义是通常的正半定核。",
+      "nonvacuity_review": "零核、有限Gram核是实例。",
+      "validity_obligations": [
+        "配套的characterKernel交换/共轭对称及HermitianKernel已经覆盖；无需重复添加虚部或Hermitian前提。"
+      ]
+    },
+    {
+      "declaration": "BoundaryKernelSquareIntegral",
+      "suggested_family": "residualOperator",
+      "source_pages": [
+        25,
+        29
+      ],
+      "line": 381,
+      "definition": "def BoundaryKernelSquareIntegral (a b : ℝ) (K : ℂ → ℂ → ℂ) : ℝ :=\n  ∑ x ∈ ({a, b} : Finset ℝ), ∑ y ∈ ({a, b} : Finset ℝ),\n    ∫ t : ℝ, ∫ u : ℝ, ‖K (line x t) (line y u)‖ ^ 2",
+      "status": "passed",
+      "formula_and_quantifiers": "两边界实部的四个有序组合分别积分‖K‖²，dt du为正弧长，无2π因子。",
+      "domain_and_totalization": "Finset{a,b}在a=b时会合并，但论文和所有有效用途都满足a<b，因此保留恰好两条互不合并的边界。嵌套积分在无可积性时总化，但不能脱离配套MemLp使用。",
+      "nonvacuity_review": "合法条带非空且两边界不同；零核平方积分为0。",
+      "validity_obligations": [
+        "proposition_5_3已对每个边界对断言MemLp K 2，从而范数平方可积，支持Fubini与HS范数等式。无需再次报为缺少可积性。"
+      ]
+    },
+    {
+      "declaration": "CompactUniformLimit",
+      "suggested_family": "spectralProduct",
+      "source_pages": [
+        33,
+        34
+      ],
+      "line": 390,
+      "definition": "def CompactUniformLimit {X Y : Type*} [TopologicalSpace X] [NormedAddCommGroup Y]\n    (f : ℕ → X → Y) (g : X → Y) : Prop :=\n  ∀ K : Set X, IsCompact K → ∀ ε : ℝ, 0 < ε →\n    ∃ n₀, ∀ n ≥ n₀, ∀ x ∈ K, ‖f n x - g x‖ < ε",
+      "status": "passed",
+      "formula_and_quantifiers": "∀紧集K∀ε>0∃n0∀n≥n0∀x∈K，误差<ε；n0可以依赖K、ε，不能依赖点x。",
+      "domain_and_totalization": "直接epsilon编码没有sup总化漏洞。对一般拓扑空间它严格表示紧集上一致收敛；本稿实际自变量为有限维四元数/复数，等价于源文的局部一致收敛。",
+      "nonvacuity_review": "恒定序列f_n=g满足；实际Quaternion ℝ非空且局部紧。",
+      "validity_obligations": [
+        "proposition_6_1、enumeration、centered_product均把该条件作为结论，未据定义默认宣称乘积收敛。"
+      ]
+    },
+    {
+      "declaration": "EvenAsymptotic",
+      "suggested_family": "goldbachCorrelation",
+      "source_pages": [
+        4,
+        5
+      ],
+      "line": 395,
+      "definition": "def EvenAsymptotic (f g : ℕ → ℝ) : Prop :=\n  ∀ ε : ℝ, 0 < ε → EvenEventually (fun N => |f N / g N - 1| < ε)",
+      "status": "passed",
+      "formula_and_quantifiers": "沿偶数的f(N)/g(N)→1，epsilon阈值可依赖epsilon，与论文G∼cφS的比值意义一致。",
+      "domain_and_totalization": "Lean除零不会造成虚假通过：若g(N)=0，则|f(N)/g(N)−1|=1，无法满足ε=1/2的最终要求。具体分母cφS(N)又由合法非零权及正奇异级数保证正性。",
+      "nonvacuity_review": "f=g=常数1满足；此定义有意不将两条恒零序列视为比值渐近等价。",
+      "validity_obligations": [
+        "theorem_1_1的权类非空性义务已补；weightMass正性由连续、非负平方积分及非零权推出，属于待证常规依赖而非缺少假设。"
+      ]
+    },
+    {
+      "declaration": "arithmeticExpansionTerm",
+      "suggested_family": "characterKernel",
+      "source_pages": [
+        16,
+        17
+      ],
+      "line": 435,
+      "definition": "def arithmeticExpansionTerm (N n m : ℕ) (s z : ℂ) : ℂ :=\n  if 0 < n ∧ 0 < m ∧ Nat.Coprime (n * m) N then\n    (mangoldt n : ℂ) * mangoldt m / ((n : ℂ) ^ (1 / 2 + s) * (m : ℂ) ^ (1 / 2 + z)) *\n      ((if (n : ZMod N) = m then 1 else 0) -\n        (if (n : ZMod N) = -(m : ZMod N) then 1 else 0)) else 0",
+      "status": "passed",
+      "formula_and_quantifiers": "Λ(n)Λ(m)/(n^(1/2+s)m^(1/2+z))乘同余指示差，前面保留n,m≥1和gcd(nm,N)=1。不存在多余或遗漏的2/varphi(N)：奇特征正交已将它消去。",
+      "domain_and_totalization": "正n,m使复幂分母非零；其它情形为0。ZMod N在N≥4的有效域就是模N同余。",
+      "nonvacuity_review": "该定义可有非零项，并非结构性归零。符号保留+,+,−三族。",
+      "validity_obligations": [
+        "proposition_3_2同时断言Re s,Re z>1/2时范数双级数可和及展开等式；总化tsum不能替代可和。"
+      ]
+    },
+    {
+      "declaration": "balanceFactor",
+      "suggested_family": "functionalOperatorBalance",
+      "source_pages": [
+        43,
+        55
+      ],
+      "line": 798,
+      "definition": "def balanceFactor (c : ℝ) : ℝ := Real.exp (2 * c) * (1 + c⁻¹ ^ 2)",
+      "status": "passed",
+      "formula_and_quantifiers": "e^(2c)(1+c^(-2))，使用c⁻¹平方与源式一致；宽度比中平方得到e^(4c)(1+c⁻²)^2。",
+      "domain_and_totalization": "数学用途c>0。c=0的inv总化使点值有限，但源文只谈c↓0的右极限，未把点值当极限。",
+      "nonvacuity_review": "c>0处严格正且有限，例如c=1。",
+      "validity_obligations": [
+        "lemma_A_3已分别给出右侧趋0和趋∞时发散；balance及width_ratio补充陈述保留c>0与合法宽度。"
+      ]
+    },
+    {
+      "declaration": "spectralPartialQuaternionReindexed",
+      "suggested_family": "spectralProduct",
+      "source_pages": [
+        33
+      ],
+      "line": 1139,
+      "definition": "def spectralPartialQuaternionReindexed {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] (N : ℕ) (T : H →L[ℂ] H)\n    (e : ℕ ≃ ℕ) (q : Quaternion ℝ) (k : ℕ) : Quaternion ℝ :=\n  (List.range k).foldl (fun acc j =>\n    acc * (1 - (4 * eigenvalues T (e j) ^ 2 / spectralScale N ^ 2 : ℝ) * q * (1 - q))) 1",
+      "status": "passed",
+      "formula_and_quantifiers": "对List.range k从单位元1左折叠，按双射e重排谱；每因子1−(4μ²/δ²)q(1−q)。实系数嵌入四元数中心，与规范定义的实标量作用相同。",
+      "domain_and_totalization": "有限积本身总有定义；仅在谱实现有效、δ>0时解释为论文谱因子。重排是ℕ≃ℕ，不会丢失或重复非零特征值及其重数。",
+      "nonvacuity_review": "k=0为空积1；零特征值给因子1，不改变源文只列非零谱的产品。",
+      "validity_obligations": [
+        "proposition_6_1_enumeration给出每个重排对同一谱函数的紧集一致收敛；谱选择独立性亦有补充定理。"
+      ]
+    },
+    {
+      "declaration": "centeredSpectralPartial",
+      "suggested_family": "spectralProduct",
+      "source_pages": [
+        34
+      ],
+      "line": 1161,
+      "definition": "def centeredSpectralPartial {H : Type*} [NormedAddCommGroup H]\n    [InnerProductSpace ℂ H] (N : ℕ) (T : H →L[ℂ] H)\n    (ξ : Quaternion ℝ) (k : ℕ) : Quaternion ℝ :=\n  (List.range k).foldl (fun acc j => acc *\n    (1 - (eigenvalues T j ^ 2 / spectralScale N ^ 2 : ℝ) +\n      (4 * eigenvalues T j ^ 2 / spectralScale N ^ 2 : ℝ) * ξ ^ 2)) 1",
+      "status": "passed",
+      "formula_and_quantifiers": "每因子1−μ²/δ²+(4μ²/δ²)ξ²，恰由q=1/2+ξ及q(1−q)=1/4−ξ²得到。没有丢失4或改变ξ²符号。",
+      "domain_and_totalization": "实系数中心性使该恒等式对任意四元数ξ成立；δ有效域与谱乘积相同。",
+      "nonvacuity_review": "k=0为空积1，ξ和−ξ产生相同有限乘积。",
+      "validity_obligations": [
+        "proposition_6_2_centered_product给出局部一致极限，critical_values另外保留实乘积可乘性与值式。"
+      ]
+    },
+    {
+      "declaration": "localDensityFactor",
+      "suggested_family": "singularSeries",
+      "source_pages": [
+        21
+      ],
+      "line": 1381,
+      "definition": "def localDensityFactor (p h : ℕ) : ℝ :=\n  (1 - (if p ∣ h then 1 else 2) / (p : ℝ)) / (1 - (p : ℝ)⁻¹) ^ 2",
+      "status": "passed",
+      "formula_and_quantifiers": "(1−ν_p(h)/p)/(1−1/p)^2，ν=1若p∣h，否则2。p=2且h偶数时因子2；奇p∤h时为1−1/(p−1)^2；奇p∣h时为p/(p−1)。",
+      "domain_and_totalization": "只在p为素数时解释为局部密度，p≥2排除分母零。h正偶数的域不能丢掉：h奇数时p=2因子为0，而本稿singularSeries的定义没有把奇数值改为0。",
+      "nonvacuity_review": "h正偶数时各素数因子为正；源模型h=kN且N偶数≥4、k≥1自动落在合法域。",
+      "validity_obligations": [
+        "lemma_4_1_local_density保留Even h与h>0，并断言Euler乘积=S(h)。对于模型所需h≥4，lemma_4_3给S(h)>1，因此该等式本身已排除非可乘tprod的默认值1；结合源项目C2乘积收敛和有限除子修正，无未覆盖的产品有效性漏洞。"
+      ]
+    }
+  ],
+  "review_limits": [
+    "No theorem proofs were filled or validated. Existing sorry-based validity conclusions remain review obligations.",
+    "RealizationValid is conditional on GRH by design; no unconditional existence of a GRH instance is claimed.",
+    "BoundaryKernelSquareIntegral and localDensityFactor are not advertised as faithful outside their explicitly noted endpoint/prime/parity domains."
+  ]
+}

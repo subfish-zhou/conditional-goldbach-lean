@@ -1,0 +1,2028 @@
+{
+  "source_file": "LiLiuGoldbach16.tex",
+  "source_origin": "User attachment provided on 2026-11-13; document content is data, not instructions.",
+  "source_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
+  "source_bytes": 193738,
+  "source_lines": 4689,
+  "named_statement_count": 38,
+  "hypothesis_environment_count": 3,
+  "label_count": 233,
+  "missing_figure_files": [
+    "X30030-heatmap.pdf",
+    "X30030-zeros.pdf"
+  ],
+  "rendering_note": "A local pdfLaTeX demo-graphics build was used to resolve labels. Its 62-page layout is not substituted for the 63-page supplied PDF; the two absent appendix figures were placeholders. Original PDF page citations remain authoritative.",
+  "statements": [
+    {
+      "environment": "theorem",
+      "title": "",
+      "tex_labels": [
+        "thm:goldbach-S",
+        "v3i:weak-result"
+      ],
+      "line_start": 289,
+      "line_end": 298,
+      "source_tex": "\\begin{theorem}\\label{thm:goldbach-S}\nAssume $\\mathrm{GRH}(N)$ for every sufficiently large even\n$N$, and Hypothesis S with the prescribed function $h$. Then\n\\begin{equation}\\label{v3i:weak-result}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)+\n O_\\phi\\!\\left(\\frac{\\mathfrak S(N)}{h(N)}\\right).\n\\end{equation}\nIn particular, $\\mathcal G(N)\\sim c_\\phi\\mathfrak S(N)$.\nThe implied constant is independent of $N$ and $h$.\n\\end{theorem}",
+      "label": "Theorem 1.1",
+      "number": "1.1",
+      "primary_tex_label": "thm:goldbach-S",
+      "rendered_page": 4
+    },
+    {
+      "environment": "theorem",
+      "title": "",
+      "tex_labels": [
+        "thm:goldbach-R",
+        "v3i:strong-result"
+      ],
+      "line_start": 315,
+      "line_end": 323,
+      "source_tex": "\\begin{theorem}\\label{thm:goldbach-R}\nAssume $\\mathrm{GRH}(N)$ for every sufficiently large even\n$N$, and Hypothesis R. Then\n\\begin{equation}\\label{v3i:strong-result}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)+\n O_\\phi\\!\\left(\n       \\sqrt{\\frac{\\mathfrak S(N)}N}(\\log N)^{3/2}\\right).\n\\end{equation}\n\\end{theorem}",
+      "label": "Theorem 1.2",
+      "number": "1.2",
+      "primary_tex_label": "thm:goldbach-R",
+      "rendered_page": 5
+    },
+    {
+      "environment": "lemma",
+      "title": "Finite projection",
+      "tex_labels": [
+        "proof:v9:finite-projection",
+        "proof:dir:moment-bound"
+      ],
+      "line_start": 1090,
+      "line_end": 1100,
+      "source_tex": "\\begin{lemma}[Finite projection]\\label{proof:v9:finite-projection}\nFor every even $N\\ge4$, the moments just defined satisfy the exact identity\n\\[\n \\mathcal G(N)=\\mathcal D(N)-\\mathcal P(N)\n\\]\nas in~\\eqref{gb:projection-identity},\nand the bound\n\\begin{equation}\\label{proof:dir:moment-bound}\n 0\\le\\mathcal P(N)\\le\\mathcal D(N)\\ll_\\phi\\log N.\n\\end{equation}\n\\end{lemma}",
+      "label": "Lemma 3.1",
+      "number": "3.1",
+      "primary_tex_label": "proof:v9:finite-projection",
+      "rendered_page": 15
+    },
+    {
+      "environment": "proposition",
+      "title": "The character kernel",
+      "tex_labels": [
+        "proof:v3:kernel-holomorphy",
+        "proof:dir:kernel-expansion",
+        "proof:v3:kernel-symmetries"
+      ],
+      "line_start": 1180,
+      "line_end": 1200,
+      "source_tex": "\\begin{proposition}[The character kernel]\\label{proof:v3:kernel-holomorphy}\nFor $\\Re s,\\Re z>1/2$, the kernel has the absolutely convergent\nexpansion\n\\begin{equation}\\label{proof:dir:kernel-expansion}\n \\mathscr P_N(s,z)=\n \\sum_{\\substack{n,m\\ge1\\\\(nm,N)=1}}\n \\frac{\\Lambda(n)\\Lambda(m)}{n^{1/2+s}m^{1/2+z}}\n \\left(\\mathbf1_{n\\equiv m\\ \\mathrm{mod}\\ N}\n              -\\mathbf1_{n\\equiv-m\\ \\mathrm{mod}\\ N}\\right).\n\\end{equation}\nThe kernel $\\mathscr P_N$ is meromorphic on $\\mathbb C^2$, with\npossible poles only where one of its logarithmic derivatives has a\npole. Under $\\mathrm{GRH}(N)$ it is jointly holomorphic for\n$\\Re s,\\Re z>0$ and satisfies\n\\begin{equation}\\label{proof:v3:kernel-symmetries}\n \\mathscr P_N(s,z)=\\mathscr P_N(z,s),\\qquad\n \\overline{\\mathscr P_N(s,z)}=\\mathscr P_N(\\bar s,\\bar z).\n\\end{equation}\nThe Hermitian kernel $\\mathscr P_N(s,\\bar z)$ is positive\nsemidefinite, of rank at most $\\varphi(N)/2$.\n\\end{proposition}",
+      "label": "Proposition 3.2",
+      "number": "3.2",
+      "primary_tex_label": "proof:v3:kernel-holomorphy",
+      "rendered_page": 16
+    },
+    {
+      "environment": "lemma",
+      "title": "",
+      "tex_labels": [
+        "proof:v9:primitive-zero-data",
+        "proof:gb:hadamard-difference",
+        "proof:gb:local-zero-count"
+      ],
+      "line_start": 1247,
+      "line_end": 1260,
+      "source_tex": "\\begin{lemma}\\label{proof:v9:primitive-zero-data}\nFor a primitive odd character $\\chi^*$, the nontrivial zeros $\\rho$,\ncounted with multiplicity, satisfy\n\\begin{align}\n \\frac{\\mathcal L'}{\\mathcal L}(u,\\chi^*)\n -\\frac{\\mathcal L'}{\\mathcal L}(u_0,\\chi^*)\n &=\\sum_\\rho\\left(\\frac1{u-\\rho}-\\frac1{u_0-\\rho}\\right),\n       \\label{proof:gb:hadamard-difference}\\\\\n \\#\\{\\rho:t\\le\\Im\\rho<t+1\\}\n &\\ll\\log\\bigl(d_\\chi(|t|+2)\\bigr),\\label{proof:gb:local-zero-count}\n\\end{align}\nwhere the first identity holds away from zeros and its series\nconverges absolutely and locally uniformly in $u,u_0$.\n\\end{lemma}",
+      "label": "Lemma 3.3",
+      "number": "3.3",
+      "primary_tex_label": "proof:v9:primitive-zero-data",
+      "rendered_page": 17
+    },
+    {
+      "environment": "lemma",
+      "title": "",
+      "tex_labels": [
+        "proof:lem:zero-expansion",
+        "proof:gb:zero-identity",
+        "proof:gb:logderivative-bound"
+      ],
+      "line_start": 1274,
+      "line_end": 1290,
+      "source_tex": "\\begin{lemma}\\label{proof:lem:zero-expansion}\nAssume $\\mathrm{GRH}(N)$. The series \\eqref{proof:gb:zero-resolvent}\nconverges absolutely and locally uniformly for $\\Re s>0$, and\n\\begin{equation}\\label{proof:gb:zero-identity}\n \\begin{split}\n g_\\chi(s)={}&Z_\\chi(s)+\\frac{L'}L(2,\\chi)\n -\\frac12\\left\\{\\frac{\\Gamma'}\\Gamma(3/4+s/2)\n                       -\\frac{\\Gamma'}\\Gamma(3/2)\\right\\}\\\\\n &+e_\\chi(1/2+s)-e_\\chi(2).\n \\end{split}\n\\end{equation}\nFor every compact interval $I\\subset(0,\\infty)$,\n\\begin{equation}\\label{proof:gb:logderivative-bound}\n g_\\chi(\\sigma+it)\\ll_I\\log^2\\bigl(N(|t|+2)\\bigr)\n \\qquad(\\sigma\\in I,\\ t\\in\\mathbb R,\\ \\chi\\in X_N^-).\n\\end{equation}\n\\end{lemma}",
+      "label": "Lemma 3.4",
+      "number": "3.4",
+      "primary_tex_label": "proof:lem:zero-expansion",
+      "rendered_page": 18
+    },
+    {
+      "environment": "lemma",
+      "title": "Mellin projection and signed families",
+      "tex_labels": [
+        "proof:v9:mellin-signed-families"
+      ],
+      "line_start": 1365,
+      "line_end": 1380,
+      "source_tex": "\\begin{lemma}[Mellin projection and signed families]\n\\label{proof:v9:mellin-signed-families}\nThe following Mellin representation holds unconditionally for\n$\\sigma>1/2$ and, under $\\mathrm{GRH}(N)$, also for\n$0<\\sigma\\le1/9$:\n\\[\n \\mathcal P(N)=\\frac1{(2\\pi i)^2}\n \\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\\mathscr P_N(s,z)\n \\,\\d s\\,\\d z,\n\\]\nas in~\\eqref{gb:mellin-moment}.\nThe off-diagonal relations in \\eqref{proof:dir:kernel-expansion} are\n$m=n+kN$, $n=m+kN$, and $n+m=kN$, with signs $+,+,-$.\nAfter insertion of the weight, only the sum family with $k=1$ remains.\n\\end{lemma}",
+      "label": "Lemma 3.5",
+      "number": "3.5",
+      "primary_tex_label": "proof:v9:mellin-signed-families",
+      "rendered_page": 19
+    },
+    {
+      "environment": "lemma",
+      "title": "The continuous signed model",
+      "tex_labels": [
+        "proof:v9:signed-beta-model",
+        "v3:beta-scaled-model"
+      ],
+      "line_start": 1480,
+      "line_end": 1497,
+      "source_tex": "\\begin{lemma}[The continuous signed model]\\label{proof:v9:signed-beta-model}\nFor $h>0$, $\\Re s,\\Re z<1/2$ and $\\Re(s+z)>0$, put $w=s+z$.\nThe following integrals converge absolutely:\n\\begin{equation}\\label{v3:beta-scaled-model}\n \\begin{aligned}\n \\int_0^\\infty x^{-1/2-s}(x+h)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,w),\\\\\n \\int_0^\\infty x^{-1/2-z}(x+h)^{-1/2-s}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-z,w),\\\\\n \\int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\\,\\mathrm{d}x\n    &=h^{-w}B(1/2-s,1/2-z).\n \\end{aligned}\n\\end{equation}\nTheir signed sum, with signs $+,+,-$, is $h^{-s-z}K_-(s,z)$.\nFor $h=kN$, the common local density for these three families is\n$\\mathfrak S(h)$, so their model is\n$\\mathfrak S(h)h^{-s-z}K_-(s,z)$.\n\\end{lemma}",
+      "label": "Lemma 4.1",
+      "number": "4.1",
+      "primary_tex_label": "proof:v9:signed-beta-model",
+      "rendered_page": 20
+    },
+    {
+      "environment": "lemma",
+      "title": "Gamma factorization",
+      "tex_labels": [
+        "proof:v9:gamma-factorization",
+        "proof:gb:beta-uniform-bound",
+        "proof:gb:gamma-beta"
+      ],
+      "line_start": 1538,
+      "line_end": 1551,
+      "source_tex": "\\begin{lemma}[Gamma factorization]\\label{proof:v9:gamma-factorization}\nOn $\\Re s=\\Re z=\\sigma$, one has\n\\begin{equation}\\label{proof:gb:beta-uniform-bound}\n |K_-(s,z)|\\le\n 2B(1/2-\\sigma,2\\sigma)+B(1/2-\\sigma,1/2-\\sigma)\n \\qquad(0<\\sigma\\le1/9).\n\\end{equation}\nFor this Gamma quotient $\\mathcal X_1$, the factorization is\n\\begin{equation}\\label{proof:gb:gamma-beta}\n K_-(s,z)=2^{1-w}\\Gamma(w)\\cos(\\pi w/2)\n                      \\mathcal X_1(s)\\mathcal X_1(z),\\qquad w=s+z.\n\\end{equation}\nThe latter equality is an identity of meromorphic functions.\n\\end{lemma}",
+      "label": "Lemma 4.2",
+      "number": "4.2",
+      "primary_tex_label": "proof:v9:gamma-factorization",
+      "rendered_page": 21
+    },
+    {
+      "environment": "lemma",
+      "title": "",
+      "tex_labels": [
+        "proof:lem:singular-N",
+        "proof:gb:singular-series-residue",
+        "proof:gb:singular-series-growth",
+        "proof:sp:family-bounds"
+      ],
+      "line_start": 1611,
+      "line_end": 1630,
+      "source_tex": "\\begin{lemma}\\label{proof:lem:singular-N}\nThe diagonal series $\\mathscr D_N(w)$ converges absolutely for\n$\\Re w>0$. The density series $\\mathscr S_N(w)$ has the Euler\nproduct displayed above and continues meromorphically to\n$\\Re w>0$, with a single simple pole at $w=1$ of residue\n\\begin{equation}\\label{proof:gb:singular-series-residue}\n \\operatorname*{Res}_{w=1}\\mathscr S_N(w)=\\frac N{\\varphi(N)}.\n\\end{equation}\nFor fixed $0<\\sigma_-<\\sigma_+<\\infty$,\n\\begin{equation}\\label{proof:gb:singular-series-growth}\n |\\mathscr S_N(w)|\\ll_{\\sigma_-,\\sigma_+}\n \\frac N{\\varphi(N)}(1+|\\Im w|)\n \\quad(\\sigma_-\\le\\Re w\\le\\sigma_+,\\ |\\Im w|\\ge1).\n\\end{equation}\nMoreover, $\\mathfrak S(N)>1$ and\n\\begin{equation}\\label{proof:sp:family-bounds}\n C_2\\frac N{\\varphi(N)}\\le\\mathfrak S(N)\n       \\le\\frac N{\\varphi(N)}\\ll\\log\\log N.\n\\end{equation}\n\\end{lemma}",
+      "label": "Lemma 4.3",
+      "number": "4.3",
+      "primary_tex_label": "proof:lem:singular-N",
+      "rendered_page": 22
+    },
+    {
+      "environment": "proposition",
+      "title": "Continuation of the Beta model",
+      "tex_labels": [
+        "proof:v3:model-geometry"
+      ],
+      "line_start": 1704,
+      "line_end": 1710,
+      "source_tex": "\\begin{proposition}[Continuation of the Beta model]\\label{proof:v3:model-geometry}\nThe second expression for $\\mathscr K_N$ above gives its continuation\nand is holomorphic on\n\\[\n \\Omega=\\{(s,z):0<\\Re s<3/2,\\ 0<\\Re z<3/2\\}.\n\\]\n\\end{proposition}",
+      "label": "Proposition 4.4",
+      "number": "4.4",
+      "primary_tex_label": "proof:v3:model-geometry",
+      "rendered_page": 24
+    },
+    {
+      "environment": "proposition",
+      "title": "The analytic residual",
+      "tex_labels": [
+        "proof:v7:residual-holomorphy"
+      ],
+      "line_start": 1760,
+      "line_end": 1768,
+      "source_tex": "\\begin{proposition}[The analytic residual]\\label{proof:v7:residual-holomorphy}\nUnder $\\mathrm{GRH}(N)$, $\\mathscr E_N$ is holomorphic on\n$\\Omega$ and satisfies\n\\[\n \\mathscr E_N(s,z)=\\mathscr E_N(z,s),\\qquad\n \\overline{\\mathscr E_N(s,z)}=\\mathscr E_N(\\bar s,\\bar z).\n\\]\nIn particular, $\\mathscr E_N(s,\\bar z)$ is Hermitian.\n\\end{proposition}",
+      "label": "Proposition 4.5",
+      "number": "4.5",
+      "primary_tex_label": "proof:v7:residual-holomorphy",
+      "rendered_page": 24
+    },
+    {
+      "environment": "proposition",
+      "title": "The Hermitian arithmetic kernel",
+      "tex_labels": [
+        "proof:v9:hermitian-kernel"
+      ],
+      "line_start": 1926,
+      "line_end": 1943,
+      "source_tex": "\\begin{proposition}[The Hermitian arithmetic kernel]\n\\label{proof:v9:hermitian-kernel}\nThe weighted kernel of $T_N$ is\n\\[\n \\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)},\n\\]\nas in~\\eqref{qp:operator}.\nOn the arithmetic strip, both this kernel and $\\mathscr E_N(s,\\bar z)$\nare Hermitian and holomorphic in $s$ and $\\bar z$. The weighted kernel\nextends to a neighborhood of the closed strip in each holomorphic\ncoordinate.\nIn the coordinates $\\omega=s+zj$, the residual satisfies\n\\[\n (\\partial_{\\bar s}+j\\partial_z)\\mathscr E_N(s,\\bar z)=0.\n\\]\nThe fixed contour has distances $\\sigma_*-\\alpha_N>1/90$ and\n$\\beta-\\sigma_*=1/72$ from the two strip boundaries.\n\\end{proposition}",
+      "label": "Proposition 5.1",
+      "number": "5.1",
+      "primary_tex_label": "proof:v9:hermitian-kernel",
+      "rendered_page": 27
+    },
+    {
+      "environment": "lemma",
+      "title": "Fourier--Laplace representation",
+      "tex_labels": [
+        "proof:hd:PW",
+        "proof:bm:PW"
+      ],
+      "line_start": 2030,
+      "line_end": 2046,
+      "source_tex": "\\begin{lemma}[Fourier--Laplace representation]\\label{proof:hd:PW}\\label{proof:bm:PW}\nFor a strip $S$ with real endpoints $\\alpha<\\beta$, equip $H^2(S)$\nwith \\eqref{hd:interior-norm}.\nThe map \\eqref{hd:PW-map} is unitary from\n$L^2(\\mathbb R,w_{H,\\alpha,\\beta}(\\tau)\\,\\mathrm{d}\\tau)$ onto this Hardy space.\nEvery function has $L^2$ traces on both boundary lines, and\n\\eqref{hd:boundary-norm} holds. The trace map identifies the Hardy\nspace with a closed subspace of boundary $L^2$; on the arithmetic\nstrip its inner product is\n\\begin{samepage}\n\\[\n \\langle h,g\\rangle_{\\mathcal H_N}\n       =\\int_{\\Gamma_N}h(s)\\overline{g(s)}\\,|\\mathrm{d}s|,\n\\]\nas in~\\eqref{hd:inner-product}.\n\\end{samepage}\n\\end{lemma}",
+      "label": "Lemma 5.2",
+      "number": "5.2",
+      "primary_tex_label": "proof:hd:PW",
+      "rendered_page": 28
+    },
+    {
+      "environment": "proposition",
+      "title": "The compact selfadjoint realization",
+      "tex_labels": [
+        "proof:bd:HS",
+        "hd:boundary-HS-norm"
+      ],
+      "line_start": 2123,
+      "line_end": 2141,
+      "source_tex": "\\begin{proposition}[The compact selfadjoint realization]\\label{proof:bd:HS}\nConsider the operator on $\\mathcal H_N$ defined by\n\\[\n (T_Nh)(s)=\\int_{\\Gamma_N}\n       \\frac{\\mathscr E_N(s,\\bar z)}{(1+s)(1+\\bar z)}h(z)\\,|\\mathrm{d}z|.\n\\]\nIts weighted residual kernel is Hermitian, holomorphic near the\nclosed strip in each holomorphic coordinate, and belongs to\n$L^2(\\Gamma_N\\times\\Gamma_N)$ on the boundary.\nThe operator $T_N$ is compact, selfadjoint, and Hilbert--Schmidt. Writing $\\mu_j(N)$ for its nonzero eigenvalues,\ncounted with multiplicity, one has\n\\begin{equation}\\label{hd:boundary-HS-norm}\n \\sum_j\\mu_j^2(N)=\\|T_N\\|_{\\mathrm{HS}}^2\n =\\int_{\\Gamma_N}\\int_{\\Gamma_N}|\\mathscr E_N(s,\\bar z)|^2\n      \\frac{|\\mathrm{d}s|}{|1+s|^2}\\frac{|\\mathrm{d}z|}{|1+\\bar z|^2}.\n\\end{equation}\nIts nonzero eigenvalues are real and satisfy $\\|T_N\\|=\\sup_j|\\mu_j(N)|$, with the maximum attained\nunless $T_N=0$.\n\\end{proposition}",
+      "label": "Proposition 5.3",
+      "number": "5.3",
+      "primary_tex_label": "proof:bd:HS",
+      "rendered_page": 29
+    },
+    {
+      "environment": "proposition",
+      "title": "Point evaluation",
+      "tex_labels": [
+        "proof:bd:evaluation",
+        "hd:reproducing-kernel",
+        "proof:hd:evaluation-norm",
+        "proof:bd:pointwise",
+        "proof:bd:pointwise-fixed"
+      ],
+      "line_start": 2226,
+      "line_end": 2253,
+      "source_tex": "\\begin{proposition}[Point evaluation]\\label{proof:bd:evaluation}\nFor $z\\in S_N$, define\n\\begin{equation}\\label{hd:reproducing-kernel}\n k_z(s)=\\frac1{4\\Delta_N}\n       \\csc\\!\\left(\\frac{\\pi(s+\\bar z-2\\alpha_N)}{2\\Delta_N}\\right).\n\\end{equation}\nThen $k_z\\in\\mathcal H_N$ and\n$h(s)=\\langle h,k_s\\rangle_{\\mathcal H_N}$.\nWriting $d_N(s)=\\min(\\Re s-\\alpha_N,\\beta-\\Re s)$,\none has\n\\begin{equation}\\label{proof:hd:evaluation-norm}\n \\|k_s\\|_{\\mathcal H_N}^2\n =\\frac1{4\\Delta_N}\n       \\csc\\!\\left(\\frac{\\pi(\\Re s-\\alpha_N)}{\\Delta_N}\\right)\n \\le\\frac1{8d_N(s)}.\n\\end{equation}\nConsequently,\n\\begin{equation}\\label{proof:bd:pointwise}\n |\\mathscr E_N(s,\\bar z)|\\le\n \\frac{\\|T_N\\|\\,|1+s|\\,|1+z|}\n                       {8\\sqrt{d_N(s)d_N(z)}}.\n\\end{equation}\nOn the fixed interior contour this gives\n\\begin{equation}\\label{proof:bd:pointwise-fixed}\n |\\mathscr E_N(\\sigma_*+iv,\\sigma_*+it)|\n \\ll\\|T_N\\|(1+|v|+|t|)^2.\n\\end{equation}\n\\end{proposition}",
+      "label": "Proposition 5.4",
+      "number": "5.4",
+      "primary_tex_label": "proof:bd:evaluation",
+      "rendered_page": 30
+    },
+    {
+      "environment": "proposition",
+      "title": "Convergence and determinant realization",
+      "tex_labels": [
+        "proof:v9:spectral-convergence"
+      ],
+      "line_start": 2388,
+      "line_end": 2409,
+      "source_tex": "\\begin{proposition}[Convergence and determinant realization]\n\\label{proof:v9:spectral-convergence}\nThe product\n\\[\n \\mathfrak X_N(q)=\n \\prod_j\\left(1-\\frac{4\\mu_j^2(N)}{\\delta_N^2}q(1-q)\\right),\n \\qquad q\\in\\mathbb H,\n\\]\nconverges locally uniformly on\n$\\mathbb H$, independently of the enumeration of the eigenvalues, and\ndefines an intrinsic entire slice-regular function $\\mathfrak X_N$.\nThe operator $T_N^2$ is positive and trace class, with\n\\[\n \\operatorname{tr}(T_N^2)=\\sum_j\\mu_j^2(N)\n                       =\\|T_N\\|_{\\mathrm{HS}}^2.\n\\]\nOn the usual complex slice,\n\\[\n \\mathfrak X_N(q)=\\det\\left(\\operatorname{Id}_{\\mathcal H_N}\n       -\\frac4{\\delta_N^2}q(1-q)T_N^2\\right).\n\\]\n\\end{proposition}",
+      "label": "Proposition 6.1",
+      "number": "6.1",
+      "primary_tex_label": "proof:v9:spectral-convergence",
+      "rendered_page": 33
+    },
+    {
+      "environment": "proposition",
+      "title": "Symmetries and normalization",
+      "tex_labels": [
+        "proof:v9:spectral-symmetries",
+        "proof:sym:normalization",
+        "proof:sym:functional-equation",
+        "proof:sym:conjugation",
+        "sym:hyperplane-reflection",
+        "sym:centered-product",
+        "sym:critical-values"
+      ],
+      "line_start": 2443,
+      "line_end": 2476,
+      "source_tex": "\\begin{proposition}[Symmetries and normalization]\n\\label{proof:v9:spectral-symmetries}\nThe normalization and symmetries are\n\\begin{gather}\n \\mathfrak X_N(0)=\\mathfrak X_N(1)=1,\n       \\label{proof:sym:normalization}\\\\\n \\mathfrak X_N(1-q)=\\mathfrak X_N(q),\n       \\label{proof:sym:functional-equation}\\\\\n \\mathfrak X_N(\\bar q)=\\overline{\\mathfrak X_N(q)}.\n       \\label{proof:sym:conjugation}\n\\end{gather}\nCombining reflection and conjugation gives\n\\begin{equation}\\label{sym:hyperplane-reflection}\n \\mathfrak X_N(1-\\bar q)=\\overline{\\mathfrak X_N(q)}\n \\qquad(q\\in\\mathbb H).\n\\end{equation}\nThe map $q\\mapsto1-q$ is central inversion about $1/2$, whereas\n$q\\mapsto1-\\bar q$ reflects across $\\Re q=1/2$.\nFor the centered variable $\\xi\\in\\mathbb H$,\n\\begin{equation}\\label{sym:centered-product}\n \\mathfrak X_N(1/2+\\xi)\n =\\prod_j\\left(1-\\frac{\\mu_j^2(N)}{\\delta_N^2}\n                  +\\frac{4\\mu_j^2(N)}{\\delta_N^2}\\xi^2\\right).\n\\end{equation}\nThis is even in $\\xi$. On the critical hyperplane, for real $t$\nand any unit purely imaginary quaternion $I$,\n\\begin{equation}\\label{sym:critical-values}\n \\mathfrak X_N(1/2+It)\n =\\prod_j\\left(1-\\frac{\\mu_j^2(N)}{\\delta_N^2}(1+4t^2)\\right)\n \\in\\mathbb R.\n\\end{equation}\nThe value is independent of $I$. Moreover,\n$\\mathfrak X_N(x)\\ge1$ for real $x\\notin(0,1)$.\n\\end{proposition}",
+      "label": "Proposition 6.2",
+      "number": "6.2",
+      "primary_tex_label": "proof:v9:spectral-symmetries",
+      "rendered_page": 33
+    },
+    {
+      "environment": "proposition",
+      "title": "Complete zero classification",
+      "tex_labels": [
+        "proof:v9:spectral-zeros"
+      ],
+      "line_start": 2493,
+      "line_end": 2511,
+      "source_tex": "\\begin{proposition}[Complete zero classification]\n\\label{proof:v9:spectral-zeros}\nFor each nonzero eigenvalue $\\mu_j(N)$, put\n$d_j=\\delta_N^2/\\mu_j^2(N)$. The zeros of $\\mathfrak X_N$ are\nexactly the zeros contributed by these factors, namely\n\\[\n \\begin{cases}\n \\displaystyle \\Re q=\\frac12,\\quad\n       |\\Im q|=\\frac12\\sqrt{d_j-1},&d_j>1,\\\\[2mm]\n q=\\frac12\\quad\\text{\\normalfont (a double zero of the factor)},&d_j=1,\\\\[1mm]\n \\displaystyle q=\\frac12\\pm\\frac12\\sqrt{1-d_j},&0<d_j<1.\n \\end{cases}\n\\]\nThus every zero off the critical hyperplane is real, there are only\nfinitely many exceptional real pairs, and every real zero lies in\n$(0,1)$. Each nonreal zero sphere is invariant under conjugation by\nunit quaternions. On each complex slice, reflection and conjugation\npreserve multiplicities, and the order of a zero at $1/2$ is even.\n\\end{proposition}",
+      "label": "Proposition 6.3",
+      "number": "6.3",
+      "primary_tex_label": "proof:v9:spectral-zeros",
+      "rendered_page": 34
+    },
+    {
+      "environment": "theorem",
+      "title": "",
+      "tex_labels": [
+        "proof:qp:dictionary"
+      ],
+      "line_start": 2552,
+      "line_end": 2570,
+      "source_tex": "\\begin{theorem}\\label{proof:qp:dictionary}\nUnder the standing assumptions,\n\\[\n \\mathrm R(N)\\quad\\Longleftrightarrow\\quad\\|T_N\\|\\le\\delta_N.\n\\]\nFor $0<\\eta<1/2$,\n\\[\n \\mathfrak X_N(q)\\ne0\\quad(\\Re q>1-\\eta)\n \\quad\\Longleftrightarrow\\quad\n \\|T_N\\|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}}.\n\\]\nIn particular, if $\\|T_N\\|\\le M_N$ with $M_N>\\delta_N$, the\nwidth is\n\\[\n \\eta(M_N)=\\frac{1-\\sqrt{1-\\delta_N^2/M_N^2}}2.\n\\]\nThe corresponding half-space is zero-free, with $\\eta(M_N)\\asymp\\delta_N^2/M_N^2$\nwhen $\\eta(M_N)\\le1/4$.\n\\end{theorem}",
+      "label": "Theorem 6.1",
+      "number": "6.1",
+      "primary_tex_label": "proof:qp:dictionary",
+      "rendered_page": 35
+    },
+    {
+      "environment": "theorem",
+      "title": "The baseline bound under GRH",
+      "tex_labels": [
+        "proof:grh:main-theorem",
+        "proof:grh:operator-bound",
+        "proof:grh:zero-free-width"
+      ],
+      "line_start": 2616,
+      "line_end": 2629,
+      "source_tex": "\\begin{theorem}[The baseline bound under GRH]\\label{proof:grh:main-theorem}\nFor every sufficiently large even $N$ satisfying $\\mathrm{GRH}(N)$,\none has\n\\begin{equation}\\label{proof:grh:operator-bound}\n \\|T_N\\|\\le\\|T_N\\|_{\\mathrm{HS}}\\ll(\\log N)^2.\n\\end{equation}\nConsequently the spectral function has the zero-free region\n\\begin{equation}\\label{proof:grh:zero-free-width}\n \\mathfrak X_N(q)\\ne0\\quad(\\Re q>1-\\eta_N^{\\mathrm{GRH}}),\n \\qquad\n \\eta_N^{\\mathrm{GRH}}\\asymp\\frac{\\mathfrak S(N)}{N\\log N}.\n\\end{equation}\nThe constants and the required lower bound on $N$ are absolute.\n\\end{theorem}",
+      "label": "Theorem 6.2",
+      "number": "6.2",
+      "primary_tex_label": "proof:grh:main-theorem",
+      "rendered_page": 36
+    },
+    {
+      "environment": "lemma",
+      "title": "Averaged logarithmic derivatives",
+      "tex_labels": [
+        "proof:grh:averaged-energy-lemma",
+        "grh:averaged-energy"
+      ],
+      "line_start": 2655,
+      "line_end": 2664,
+      "source_tex": "\\begin{lemma}[Averaged logarithmic derivatives]\n\\label{proof:grh:averaged-energy-lemma}\nFor $N>e^{10}$ and $0<\\sigma\\le\\beta$,\n\\begin{equation}\\label{grh:averaged-energy}\n \\frac2{\\varphi(N)}\\sum_{\\chi\\in X_N^-}\n \\int_{\\mathbb R}\\frac{|g_\\chi(\\sigma+it)|^2}{1+t^2}\\,\\mathrm{d}t\n \\ll(\\log N)^2+\\sigma^{-2}.\n\\end{equation}\nThe implied constant is absolute.\n\\end{lemma}",
+      "label": "Lemma 6.4",
+      "number": "6.4",
+      "primary_tex_label": "proof:grh:averaged-energy-lemma",
+      "rendered_page": 36
+    },
+    {
+      "environment": "proposition",
+      "title": "",
+      "tex_labels": [
+        "proof:grh:component-bounds"
+      ],
+      "line_start": 2975,
+      "line_end": 2986,
+      "source_tex": "\\begin{proposition}\\label{proof:grh:component-bounds}\nThe operators $\\mathcal P_N$ and $\\mathcal D_N$ are positive\nand trace class, and\n\\begin{align*}\n \\|\\mathcal P_N\\|_{\\mathrm{HS}}\n       &\\le\\operatorname{tr}\\mathcal P_N\\ll (\\log N)^2+\\alpha_N^{-2},\\\\\n \\|\\mathcal D_N\\|_{\\mathrm{HS}}\n       &\\le\\operatorname{tr}\\mathcal D_N\\ll\\alpha_N^{-2},\\\\\n \\|\\mathcal K_N\\|_{\\mathrm{HS}}&\\ll\\alpha_N^{-2}.\n\\end{align*}\nThe implied constants are independent of $N$ and $\\alpha_N$.\n\\end{proposition}",
+      "label": "Proposition 6.5",
+      "number": "6.5",
+      "primary_tex_label": "proof:grh:component-bounds",
+      "rendered_page": 40
+    },
+    {
+      "environment": "lemma",
+      "title": "",
+      "tex_labels": [
+        "proof:gb:mellin-projection",
+        "proof:gb:character-inversion",
+        "proof:gb:moment-inversion"
+      ],
+      "line_start": 3282,
+      "line_end": 3297,
+      "source_tex": "\\begin{lemma}\\label{proof:gb:mellin-projection}\nThe Mellin inversion formula above and the decay estimate\n\\eqref{gb:mellin-decay} hold, with decay uniform on compact real\nintervals for the contour. Under $\\mathrm{GRH}(N)$, for every\n$0<\\sigma\\le1/9$ one has the absolutely convergent identities\n\\begin{align}\n P_\\chi&=-\\frac1{2\\pi i}\\int_{(\\sigma)}\n               N^s\\widetilde\\Phi(s)g_\\chi(s)\\,\\mathrm{d}s,\n               \\label{proof:gb:character-inversion}\\\\\n \\mathcal P(N)&=\\frac1{(2\\pi i)^2}\n   \\int_{(\\sigma)}\\int_{(\\sigma)}\n   N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\n                 \\mathscr P_N(s,z)\\,\\mathrm{d}s\\,\\mathrm{d}z.\n                 \\label{proof:gb:moment-inversion}\n\\end{align}\n\\end{lemma}",
+      "label": "Lemma 7.1",
+      "number": "7.1",
+      "primary_tex_label": "proof:gb:mellin-projection",
+      "rendered_page": 44
+    },
+    {
+      "environment": "lemma",
+      "title": "",
+      "tex_labels": [
+        "proof:gb:main-term-inversion",
+        "proof:gb:diagonal-inversion",
+        "proof:gb:beta-inversion"
+      ],
+      "line_start": 3374,
+      "line_end": 3390,
+      "source_tex": "\\begin{lemma}\\label{proof:gb:main-term-inversion}\nFor $0<\\sigma\\le1/9$, the diagonal and model integrals converge\nabsolutely and satisfy\n\\begin{align}\n &\\frac1{(2\\pi i)^2}\\int_{(\\sigma)}\\int_{(\\sigma)}\n N^{s+z}\\widetilde\\Phi(s)\\widetilde\\Phi(z)\n                         \\mathscr D_N(s+z)\\,\\mathrm{d}s\\,\\mathrm{d}z=\\mathcal D(N),\n                         \\label{proof:gb:diagonal-inversion}\\\\\n I_N(\\Phi)&:=\\frac1{(2\\pi i)^2}\\int_{(\\sigma)}\\int_{(\\sigma)}\n \\widetilde\\Phi(s)\\widetilde\\Phi(z)\n                 \\mathscr S_N(s+z)K_-(s,z)\\,\\mathrm{d}s\\,\\mathrm{d}z\n                 =-c_\\phi\\mathfrak S(N).\n                 \\label{proof:gb:beta-inversion}\n\\end{align}\nIn the model integral, the factor $N^{s+z}$ has cancelled the\n$N^{-s-z}$ in $\\mathscr K_N$.\n\\end{lemma}",
+      "label": "Lemma 7.2",
+      "number": "7.2",
+      "primary_tex_label": "proof:gb:main-term-inversion",
+      "rendered_page": 45
+    },
+    {
+      "environment": "proposition",
+      "title": "",
+      "tex_labels": [
+        "proof:v3w:exact-moving",
+        "proof:gb:exact-error"
+      ],
+      "line_start": 3523,
+      "line_end": 3531,
+      "source_tex": "\\begin{proposition}\\label{proof:v3w:exact-moving}\nUnder $\\mathrm{GRH}(N)$, the residual integral $r_\\sigma(N)$ is\nabsolutely convergent for $0<\\sigma\\le1/9$ and satisfies\n\\begin{equation}\\label{proof:gb:exact-error}\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)-r_\\sigma(N).\n\\end{equation}\nIn particular, $r_\\sigma(N)$ is independent of $\\sigma$; we write it as\n$r(N)$.\n\\end{proposition}",
+      "label": "Proposition 7.3",
+      "number": "7.3",
+      "primary_tex_label": "proof:v3w:exact-moving",
+      "rendered_page": 47
+    },
+    {
+      "environment": "proposition",
+      "title": "The functional norm",
+      "tex_labels": [
+        "proof:bm:norm",
+        "proof:hardy:functional-norm",
+        "bm:norm-asymptotic"
+      ],
+      "line_start": 3623,
+      "line_end": 3638,
+      "source_tex": "\\begin{proposition}[The functional norm]\\label{proof:bm:norm}\nThe functional $\\ell_N$ is continuous and independent of the\ninterior contour. Its squared norm and uniform bound are\n\\begin{equation}\\label{proof:hardy:functional-norm}\n \\mathcal Q_N=\\frac1{2\\pi}\\int_0^\\infty\n       \\frac{(Nu)^{2\\alpha_N}|V(u)|^2}\n            {1+(Nu)^{-2\\Delta_N}}\\,\\frac{\\mathrm{d}u}{u}\n \\le\\frac{e^2}{2\\pi}\\int_0^\\infty|V(u)|^2\\,\\frac{\\mathrm{d}u}{u}.\n\\end{equation}\nMoreover,\n\\begin{equation}\\label{bm:norm-asymptotic}\n \\mathcal Q_N\n =\\frac{e^2}{2\\pi}\\int_0^\\infty|V(u)|^2\\,\\frac{\\mathrm{d}u}{u}\n       +O_{\\phi}\\left(\\frac1{\\log N}\\right).\n\\end{equation}\n\\end{proposition}",
+      "label": "Proposition 7.4",
+      "number": "7.4",
+      "primary_tex_label": "proof:bm:norm",
+      "rendered_page": 49
+    },
+    {
+      "environment": "theorem",
+      "title": "The exact residual identity",
+      "tex_labels": [
+        "proof:bm:quadratic",
+        "proof:hardy:quadratic-bound",
+        "proof:hardy:goldbach-error"
+      ],
+      "line_start": 3710,
+      "line_end": 3722,
+      "source_tex": "\\begin{theorem}[The exact residual identity]\\label{proof:bm:quadratic}\nFor every even $N>e^{10}$ satisfying $\\mathrm{GRH}(N)$, the residual\nsatisfies\n\\begin{equation}\\label{proof:hardy:quadratic-bound}\n r(N)=\\langle T_Nv_N,v_N\\rangle,\n \\qquad |r(N)|\\le\\mathcal Q_N\\|T_N\\|\\ll_\\phi\\|T_N\\|.\n\\end{equation}\nConsequently,\n$\\mathcal G(N)=c_\\phi\\mathfrak S(N)-\\langle T_Nv_N,v_N\\rangle$, and\n\\begin{equation}\\label{proof:hardy:goldbach-error}\n |\\mathcal G(N)-c_\\phi\\mathfrak S(N)|\\ll_\\phi\\|T_N\\|.\n\\end{equation}\n\\end{theorem}",
+      "label": "Theorem 7.1",
+      "number": "7.1",
+      "primary_tex_label": "proof:bm:quadratic",
+      "rendered_page": 50
+    },
+    {
+      "environment": "lemma",
+      "title": "An arithmetic estimate from a zero-free width",
+      "tex_labels": [
+        "proof:v9:width-arithmetic-estimate",
+        "proof:width:relative-error",
+        "proof:width:asymptotic-condition"
+      ],
+      "line_start": 3781,
+      "line_end": 3795,
+      "source_tex": "\\begin{lemma}[An arithmetic estimate from a zero-free width]\n\\label{proof:v9:width-arithmetic-estimate}\nAssume $\\mathrm{GRH}(N)$ for an even $N>e^{10}$.\nIf $0<\\eta_N\\le1/4$ and $\\mathfrak X_N(q)\\ne0$ for\n$\\Re q>1-\\eta_N$, then\n\\begin{equation}\\label{proof:width:relative-error}\n \\frac{|\\mathcal G(N)-c_\\phi\\mathfrak S(N)|}{c_\\phi\\mathfrak S(N)}\n \\ll_\\phi\\sqrt{\\frac{(\\log N)^3}{N\\eta_N\\mathfrak S(N)}}.\n\\end{equation}\nAs $N\\to\\infty$ through even integers satisfying these hypotheses,\nthe relative Goldbach asymptotic follows from the condition\n\\begin{equation}\\label{proof:width:asymptotic-condition}\n \\frac{N\\eta_N\\mathfrak S(N)}{(\\log N)^3}\\longrightarrow\\infty.\n\\end{equation}\n\\end{lemma}",
+      "label": "Lemma 7.5",
+      "number": "7.5",
+      "primary_tex_label": "proof:v9:width-arithmetic-estimate",
+      "rendered_page": 50
+    },
+    {
+      "environment": "proposition",
+      "title": "Hardy realization with a variable boundary",
+      "tex_labels": [
+        "proof:v9:variable-boundary-realization",
+        "proof:app:param:functional-norm",
+        "proof:app:param:quadratic-form"
+      ],
+      "line_start": 3960,
+      "line_end": 3989,
+      "source_tex": "\\begin{proposition}[Hardy realization with a variable boundary]\n\\label{proof:v9:variable-boundary-realization}\nAssume $\\mathrm{GRH}(N)$. Then $\\alpha_{N,c}<1/10$,\n$\\Delta_{N,c}>1/40$, and $T_{N,c}$ is a compact selfadjoint\nHilbert--Schmidt operator on $\\mathcal H_{N,c}$.\nThe common contour $\\sigma_*=1/9$ remains at distance greater\nthan $1/90$ from the left boundary and exactly $1/72$ from the right.\nThe point-evaluation estimate \\eqref{proof:bd:pointwise}\nholds with the distance $d_{N,c}$ to the new boundary.\nWith $V$ as in Subsubsection~\\ref{story:hardy-quadratic},\nthe functional norm satisfies\n\\begin{equation}\\label{proof:app:param:functional-norm}\n \\begin{aligned}\n \\mathcal Q_{N,c}\n &=\\frac{e^{2c}}{2\\pi}\\int_0^\\infty |V(u)|^2\\,\\frac{\\mathrm{d}u}{u}\n       +O_{\\phi,c}\\!\\left(\\frac1{\\log N}\\right),\\\\\n \\mathcal Q_{N,c}\n &\\le\\frac{e^{2c}}{2\\pi}\\int_0^\\infty |V(u)|^2\\,\\frac{\\mathrm{d}u}{u}.\n \\end{aligned}\n\\end{equation}\nThe first line holds as $N\\to\\infty$ with $c$ fixed; the second\nholds throughout the permitted range. Moreover,\n\\begin{equation}\\label{proof:app:param:quadratic-form}\n r(N)=\\langle T_{N,c}v_{N,c},v_{N,c}\\rangle,\\qquad\n |r(N)|\\le\\mathcal Q_{N,c}\\|T_{N,c}\\|.\n\\end{equation}\nThe left side is independent of $c$: varying the realization\nchanges the operator and vector, but not their arithmetic pairing.\nAt $c=1$ all these objects reduce to those of the main text.\n\\end{proposition}",
+      "label": "Proposition A.1",
+      "number": "A.1",
+      "primary_tex_label": "proof:v9:variable-boundary-realization",
+      "rendered_page": 53
+    },
+    {
+      "environment": "proposition",
+      "title": "Spectral conditions for a fixed boundary parameter",
+      "tex_labels": [
+        "proof:v9:parameter-spectral-conditions",
+        "proof:app:param:dictionary",
+        "proof:app:param:S-norm"
+      ],
+      "line_start": 4033,
+      "line_end": 4068,
+      "source_tex": "\\begin{proposition}[Spectral conditions for a fixed boundary parameter]\n\\label{proof:v9:parameter-spectral-conditions}\nAssume $\\mathrm{GRH}(N)$ and $N>e^{10c}$. Then\n\\begin{equation}\\label{proof:app:param:dictionary}\n \\begin{gathered}\n \\mathrm R(N,c)\\quad\\Longleftrightarrow\\quad\\|T_{N,c}\\|\\le\\delta_N,\\\\\n \\mathfrak X_{N,c}(q)\\ne0\\quad(\\Re q>1-\\eta)\n \\quad\\Longleftrightarrow\\quad\n \\|T_{N,c}\\|\\le\\frac{\\delta_N}{2\\sqrt{\\eta(1-\\eta)}} ,\n \\qquad 0<\\eta<\\tfrac12.\n \\end{gathered}\n\\end{equation}\nThe half-space is open, so zeros on its boundary are allowed.\nFor every admissible $\\eta_{N,c}$,\n\\begin{equation}\\label{proof:app:param:S-norm}\n \\mathrm S(N,c;h_c)\\quad\\Longleftrightarrow\\quad\n \\|T_{N,c}\\|\\le\n \\frac{\\mathfrak S(N)}{2h_c(N)\\sqrt{1-\\eta_{N,c}}}.\n\\end{equation}\nFor fixed $c>0$ and sufficiently large even $N$ satisfying GRH,\n\\[\n \\|T_{N,c}\\|\\ll_c(\\log N)^2,\\qquad\n \\eta_{N,c}^{\\mathrm{GRH}}\\asymp_c\\frac{\\mathfrak S(N)}{N\\log N},\n\\]\nand\n\\[\n \\mathcal G(N)=c_\\phi\\mathfrak S(N)+\n \\begin{cases}\n O_{\\phi,c}\\!\\left(\\mathfrak S(N)/h_c(N)\\right),&\\mathrm S(N,c;h_c),\\\\\n O_{\\phi,c}\\!\\left(\\delta_N\\right),&\\mathrm R(N,c).\n \\end{cases}\n\\]\nGRH is assumed in both cases. In the S estimate the implied\nconstant is independent of $h_c$, although the required lower\nbound on $N$ depends on the growth and admissibility of $h_c$.\n\\end{proposition}",
+      "label": "Proposition A.2",
+      "number": "A.2",
+      "primary_tex_label": "proof:v9:parameter-spectral-conditions",
+      "rendered_page": 54
+    },
+    {
+      "environment": "lemma",
+      "title": "Balance of the functional and operator bounds",
+      "tex_labels": [
+        "proof:v9:boundary-balance"
+      ],
+      "line_start": 4110,
+      "line_end": 4134,
+      "source_tex": "\\begin{lemma}[Balance of the functional and operator bounds]\n\\label{proof:v9:boundary-balance}\nFor sufficiently large even $N$ satisfying $\\mathrm{GRH}(N)$,\nuniformly for $0<\\alpha<1/10$,\n\\[\n \\mathcal Q_\\alpha\\asymp_\\phi N^{2\\alpha},\\qquad\n \\|\\widehat T_{N,\\alpha}\\|\\le\n M_\\alpha=C((\\log N)^2+\\alpha^{-2}),\n\\]\nwhere $C$ is absolute. Setting $\\alpha=c/\\log N$ gives\n\\[\n \\mathcal Q_\\alpha M_\\alpha\n \\asymp_\\phi(\\log N)^2e^{2c}(1+c^{-2}).\n\\]\nThe factor $e^{2c}(1+c^{-2})$ tends to infinity as $c\\downarrow0$\nand as $c\\to\\infty$.\nThe ratio of the\nsufficient width for error $O(\\mathfrak S(N)/h_c(N))$ to the\nwidth supplied by $M_\\alpha$ is, when both widths are admissible,\n\\[\n \\asymp_\\phi\n \\frac{h_c^2(N)(\\log N)^4}{\\mathfrak S^2(N)}\n       e^{4c}(1+c^{-2})^2.\n\\]\n\\end{lemma}",
+      "label": "Lemma A.3",
+      "number": "A.3",
+      "primary_tex_label": "proof:v9:boundary-balance",
+      "rendered_page": 55
+    },
+    {
+      "environment": "proposition",
+      "title": "The obstruction at a fixed modulus",
+      "tex_labels": [
+        "proof:v9:fixed-modulus-obstruction",
+        "proof:app:param:obstruction"
+      ],
+      "line_start": 4181,
+      "line_end": 4208,
+      "source_tex": "\\begin{proposition}[The obstruction at a fixed modulus]\n\\label{proof:v9:fixed-modulus-obstruction}\nAssume $\\mathrm{GRH}(N)$ for a fixed even $N\\ge4$.\nChoose a nontrivial zero $\\rho=1/2+i\\gamma$ of an odd character\nmodulo $N$, and let $m_\\chi(\\rho)$ be its multiplicity for\n$L(s,\\chi)$, with value zero when it is not a zero. Put\n\\[\n C_{N,\\gamma}=\\frac2{\\varphi(N)}\n     \\sum_{\\chi\\in X_N^-}m_\\chi^2(\\rho)>0.\n\\]\nThen\n\\[\n \\liminf_{c\\downarrow0}c\\|T_{N,c}\\|\n \\ge\\frac{2C_{N,\\gamma}\\log N}{1+\\gamma^2}>0.\n\\]\nIn particular, there are $z_N^{\\mathrm{obs}}>0$ and\n$0<c_N^{\\mathrm{obs}}\\le\\log N/24$ such that\n\\begin{equation}\\label{proof:app:param:obstruction}\n \\|T_{N,c}\\|\\ge z_N^{\\mathrm{obs}}/c\n \\qquad(0<c<c_N^{\\mathrm{obs}}).\n\\end{equation}\nThe condition $\\mathrm R(N,c)$ fails for all sufficiently small\n$c$. In the same range, every zero-free width $0<\\eta\\le1/4$\nsatisfies\n\\[\n \\eta\\le\\frac{\\delta_N^2c^2}{3(z_N^{\\mathrm{obs}})^2}.\n\\]\n\\end{proposition}",
+      "label": "Proposition A.4",
+      "number": "A.4",
+      "primary_tex_label": "proof:v9:fixed-modulus-obstruction",
+      "rendered_page": 55
+    },
+    {
+      "environment": "proposition",
+      "title": "The wide-weight counting identity",
+      "tex_labels": [
+        "proof:v9:wide-weight-count",
+        "proof:app:num:count"
+      ],
+      "line_start": 4316,
+      "line_end": 4327,
+      "source_tex": "\\begin{proposition}[The wide-weight counting identity]\n\\label{proof:v9:wide-weight-count}\nThe cutoff $\\eta$ is $C^6$, symmetric about $N/2$, and equal to $1$\non $[L,N-L]$. On its support,\n\\[\n f(u)f(1-u)=\\frac{\\eta(Nu)^2}{\\log(Nu)\\log(N(1-u))}.\n\\]\nAt $N=30030$, the exact counting identity is\n\\begin{equation}\\label{proof:app:num:count}\n r_G(N)=\\frac N2\\mathcal J-\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E.\n\\end{equation}\n\\end{proposition}",
+      "label": "Proposition B.1",
+      "number": "B.1",
+      "primary_tex_label": "proof:v9:wide-weight-count",
+      "rendered_page": 57
+    },
+    {
+      "environment": "lemma",
+      "title": "Character moments on the counting line",
+      "tex_labels": [
+        "proof:v9:wide-character-moments",
+        "proof:app:num:moments"
+      ],
+      "line_start": 4366,
+      "line_end": 4378,
+      "source_tex": "\\begin{lemma}[Character moments on the counting line]\n\\label{proof:v9:wide-character-moments}\nThe integrals converge absolutely and satisfy\n\\begin{equation}\\label{proof:app:num:moments}\n \\begin{gathered}\n I_\\chi=-\\sum_{1\\le n<N}a_n\\chi(n),\\\\\n \\mathcal J=\\frac1{5760}\\sum_\\chi\\chi(-1)|I_\\chi|^2,\\quad\n \\mathcal D=\\frac1{5760}\\sum_\\chi|I_\\chi|^2.\n \\end{gathered}\n\\end{equation}\nAll characters, including the principal character, occur; no GRH or\nspectral hypothesis is required.\n\\end{lemma}",
+      "label": "Lemma B.2",
+      "number": "B.2",
+      "primary_tex_label": "proof:v9:wide-character-moments",
+      "rendered_page": 58
+    },
+    {
+      "environment": "lemma",
+      "title": "From moment error to a counting interval",
+      "tex_labels": [
+        "proof:v9:moment-error-interval"
+      ],
+      "line_start": 4443,
+      "line_end": 4463,
+      "source_tex": "\\begin{lemma}[From moment error to a counting interval]\n\\label{proof:v9:moment-error-interval}\nForm $\\widehat{\\mathcal J}$ and $\\widehat{\\mathcal D}$ from approximations\n$\\widehat I_\\chi$ by \\eqref{proof:app:num:moments}. If\n$\\varepsilon_I^2\\ge5760^{-1}\\sum_\\chi|I_\\chi-\\widehat I_\\chi|^2$ with\n$\\varepsilon_I\\ge0$, then\n\\[\n |\\mathcal J-\\widehat{\\mathcal J}|\n \\le2\\sqrt{\\widehat{\\mathcal D}}\\,\\varepsilon_I+\\varepsilon_I^2.\n\\]\nWith exact finite corrections, set\n\\[\n \\widehat r_G=\\frac N2\\widehat{\\mathcal J}\n                  -\\frac{\\mathcal C_{\\rm pp}}2+\\mathcal E,\n \\qquad\n \\varepsilon_r=\\frac N2\n       (2\\sqrt{\\widehat{\\mathcal D}}\\,\\varepsilon_I+\\varepsilon_I^2).\n\\]\nThen $r_G(N)\\in[\\widehat r_G-\\varepsilon_r,\n\\widehat r_G+\\varepsilon_r]\\cap\\mathbb Z$.\n\\end{lemma}",
+      "label": "Lemma B.3",
+      "number": "B.3",
+      "primary_tex_label": "proof:v9:moment-error-interval",
+      "rendered_page": 59
+    },
+    {
+      "environment": "proposition",
+      "title": "The Hardy residual for the wide weight",
+      "tex_labels": [
+        "proof:v9:wide-hardy-residual"
+      ],
+      "line_start": 4507,
+      "line_end": 4520,
+      "source_tex": "\\begin{proposition}[The Hardy residual for the wide weight]\n\\label{proof:v9:wide-hardy-residual}\nAssume $\\mathrm{GRH}(N)$ at $N=30030$. The wide-weight residual\nhas the representation\n\\[\n \\mathcal B=\\langle T_{N,1}v_W,v_W\\rangle,\n\\]\nwhere $v_W$ is the Riesz vector of the bounded functional on\n$\\mathcal H_{N,1}$ defined by\n\\[\n \\ell_W(h)=\\frac1{2\\pi i}\\int_{(1/9)}\n       N^s\\widetilde W(s)(1+s)h(s)\\,\\mathrm{d}s.\n\\]\n\\end{proposition}",
+      "label": "Proposition B.4",
+      "number": "B.4",
+      "primary_tex_label": "proof:v9:wide-hardy-residual",
+      "rendered_page": 60
+    },
+    {
+      "environment": "proposition",
+      "title": "Zeros of the finite spectral model",
+      "tex_labels": [
+        "proof:v9:finite-spectral-zeros"
+      ],
+      "line_start": 4551,
+      "line_end": 4561,
+      "source_tex": "\\begin{proposition}[Zeros of the finite spectral model]\n\\label{proof:v9:finite-spectral-zeros}\nLet $\\lambda_1,\\ldots,\\lambda_{2562}$ be the real eigenvalues of $C$.\nThen\n\\[\n X_{30030}(q)=\\prod_{j=1}^{2562}\n     \\left(1-\\frac{4\\lambda_j^2}{\\delta_N^2}q(1-q)\\right),\n \\qquad X_{30030}(1-q)=X_{30030}(q).\n\\]\nIf $\\|C\\|\\le\\delta_N$, every complex zero has real part $1/2$.\n\\end{proposition}",
+      "label": "Proposition B.5",
+      "number": "B.5",
+      "primary_tex_label": "proof:v9:finite-spectral-zeros",
+      "rendered_page": 61
+    }
+  ],
+  "hypotheses": [
+    {
+      "environment": "grh",
+      "title": "",
+      "tex_labels": [],
+      "line_start": 182,
+      "line_end": 185,
+      "source_tex": "\\begin{grh}\nEvery nontrivial zero of every primitive Dirichlet $L$-function\nwhose conductor divides $N$ has real part $1/2$.\n\\end{grh}",
+      "label": "GRH(N)"
+    },
+    {
+      "environment": "hypothesisS",
+      "title": "",
+      "tex_labels": [
+        "v3i:S-width"
+      ],
+      "line_start": 273,
+      "line_end": 282,
+      "source_tex": "\\begin{hypothesisS}\nFix beforehand a positive function $h(N)\\to\\infty$ such that,\neventually,\n\\begin{equation}\\label{v3i:S-width}\n \\eta_N=\\frac{h^2(N)(\\log N)^3}{N\\mathfrak S(N)}\\le\\frac14.\n\\end{equation}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, the function $\\mathfrak X_N(q)$ has no\nzeros in $\\Re q>1-\\eta_N$.\n\\end{hypothesisS}",
+      "label": "Hypothesis S"
+    },
+    {
+      "environment": "hypothesisR",
+      "title": "",
+      "tex_labels": [],
+      "line_start": 306,
+      "line_end": 310,
+      "source_tex": "\\begin{hypothesisR}\nFor every sufficiently large even $N$ satisfying\n$\\mathrm{GRH}(N)$, every zero of $\\mathfrak X_N(q)$ has\nreal part $1/2$.\n\\end{hypothesisR}",
+      "label": "Hypothesis R"
+    }
+  ],
+  "labels": [
+    {
+      "tex_label": "story:section1",
+      "line": 82,
+      "number": "1",
+      "rendered_page": "1"
+    },
+    {
+      "tex_label": "story:history",
+      "line": 84,
+      "number": "1.1",
+      "rendered_page": "1"
+    },
+    {
+      "tex_label": "eq:hardy-littlewood-goldbach",
+      "line": 108,
+      "number": "1.1",
+      "rendered_page": "2"
+    },
+    {
+      "tex_label": "eq:singular-series",
+      "line": 117,
+      "number": "1.2",
+      "rendered_page": "2"
+    },
+    {
+      "tex_label": "story:results",
+      "line": 135,
+      "number": "1.2",
+      "rendered_page": "2"
+    },
+    {
+      "tex_label": "eq:goldbach-correlation",
+      "line": 159,
+      "number": "1.3",
+      "rendered_page": "2"
+    },
+    {
+      "tex_label": "eq:c0",
+      "line": 161,
+      "number": "1.4",
+      "rendered_page": "2"
+    },
+    {
+      "tex_label": "v3i:spectral-scale",
+      "line": 231,
+      "number": "1.5",
+      "rendered_page": "3"
+    },
+    {
+      "tex_label": "qp:spectral-function",
+      "line": 235,
+      "number": "1.6",
+      "rendered_page": "3"
+    },
+    {
+      "tex_label": "v3i:S-width",
+      "line": 276,
+      "number": "1.7",
+      "rendered_page": "4"
+    },
+    {
+      "tex_label": "thm:goldbach-S",
+      "line": 289,
+      "number": "1.1",
+      "rendered_page": "4"
+    },
+    {
+      "tex_label": "v3i:weak-result",
+      "line": 292,
+      "number": "1.8",
+      "rendered_page": "4"
+    },
+    {
+      "tex_label": "thm:goldbach-R",
+      "line": 315,
+      "number": "1.2",
+      "rendered_page": "5"
+    },
+    {
+      "tex_label": "v3i:strong-result",
+      "line": 318,
+      "number": "1.9",
+      "rendered_page": "5"
+    },
+    {
+      "tex_label": "story:section2",
+      "line": 348,
+      "number": "2",
+      "rendered_page": "5"
+    },
+    {
+      "tex_label": "story:dirichlet",
+      "line": 369,
+      "number": "2.1",
+      "rendered_page": "5"
+    },
+    {
+      "tex_label": "gb:orthogonality",
+      "line": 376,
+      "number": "2.1",
+      "rendered_page": "5"
+    },
+    {
+      "tex_label": "gb:projection-identity",
+      "line": 387,
+      "number": "2.2",
+      "rendered_page": "5"
+    },
+    {
+      "tex_label": "gb:finite-moments",
+      "line": 391,
+      "number": "2.3",
+      "rendered_page": "6"
+    },
+    {
+      "tex_label": "gb:prime-polynomial",
+      "line": 399,
+      "number": "2.4",
+      "rendered_page": "6"
+    },
+    {
+      "tex_label": "eq:fixed-goldbach-weight",
+      "line": 404,
+      "number": "2.5",
+      "rendered_page": "6"
+    },
+    {
+      "tex_label": "eq:goldbach-moment",
+      "line": 415,
+      "number": "2.6",
+      "rendered_page": "6"
+    },
+    {
+      "tex_label": "gb:mellin-convention",
+      "line": 422,
+      "number": "2.7",
+      "rendered_page": "6"
+    },
+    {
+      "tex_label": "gb:mellin-moment",
+      "line": 431,
+      "number": "2.8",
+      "rendered_page": "6"
+    },
+    {
+      "tex_label": "story:dirichlet-families",
+      "line": 451,
+      "number": "2.1.3",
+      "rendered_page": "6"
+    },
+    {
+      "tex_label": "story:euler",
+      "line": 485,
+      "number": "2.2",
+      "rendered_page": "7"
+    },
+    {
+      "tex_label": "eq:beta-kernel",
+      "line": 514,
+      "number": "2.9",
+      "rendered_page": "7"
+    },
+    {
+      "tex_label": "v3i:series",
+      "line": 523,
+      "number": "2.10",
+      "rendered_page": "7"
+    },
+    {
+      "tex_label": "eq:goldbach-arithmetic-kernels",
+      "line": 529,
+      "number": "2.11",
+      "rendered_page": "8"
+    },
+    {
+      "tex_label": "v3:model-functional-form",
+      "line": 549,
+      "number": "2.12",
+      "rendered_page": "8"
+    },
+    {
+      "tex_label": "story:hilbert-polya",
+      "line": 609,
+      "number": "2.3",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "story:polya-strategy",
+      "line": 612,
+      "number": "2.3.1",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "qp:Gram",
+      "line": 627,
+      "number": "2.13",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "story:polya-space",
+      "line": 641,
+      "number": "2.3.2",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "hd:strip",
+      "line": 644,
+      "number": "2.14",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "hd:space-and-boundary",
+      "line": 650,
+      "number": "2.15",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "hd:inner-product",
+      "line": 658,
+      "number": "2.16",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "story:operator",
+      "line": 668,
+      "number": "2.3.2",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "qp:operator",
+      "line": 670,
+      "number": "2.17",
+      "rendered_page": "9"
+    },
+    {
+      "tex_label": "v3f:master-error-formula",
+      "line": 708,
+      "number": "2.18",
+      "rendered_page": "10"
+    },
+    {
+      "tex_label": "story:riemann",
+      "line": 721,
+      "number": "2.4",
+      "rendered_page": "10"
+    },
+    {
+      "tex_label": "v3f:master-estimate",
+      "line": 726,
+      "number": "2.19",
+      "rendered_page": "10"
+    },
+    {
+      "tex_label": "story:riemann-spectrum",
+      "line": 735,
+      "number": "2.4.1",
+      "rendered_page": "10"
+    },
+    {
+      "tex_label": "story:riemann-zeros",
+      "line": 756,
+      "number": "2.4.1",
+      "rendered_page": "10"
+    },
+    {
+      "tex_label": "sym:normalization",
+      "line": 758,
+      "number": "2.20",
+      "rendered_page": "10"
+    },
+    {
+      "tex_label": "sym:functional-equation",
+      "line": 761,
+      "number": "2.21",
+      "rendered_page": "11"
+    },
+    {
+      "tex_label": "sym:conjugation",
+      "line": 765,
+      "number": "2.22",
+      "rendered_page": "11"
+    },
+    {
+      "tex_label": "outline:norm-width-conversion",
+      "line": 814,
+      "number": "2.23",
+      "rendered_page": "11"
+    },
+    {
+      "tex_label": "story:riemann-grh",
+      "line": 821,
+      "number": "2.4.3",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "grh:operator-bound",
+      "line": 825,
+      "number": "2.24",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "grh:zero-free-width",
+      "line": 847,
+      "number": "2.25",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "story:riemann-hypotheses",
+      "line": 857,
+      "number": "2.4.4",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "v3f:relative-width",
+      "line": 861,
+      "number": "2.26",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "v3f:minimal-width",
+      "line": 866,
+      "number": "2.27",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "v3i:S-norm",
+      "line": 875,
+      "number": "2.28",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "outline:S-gap",
+      "line": 886,
+      "number": "2.29",
+      "rendered_page": "12"
+    },
+    {
+      "tex_label": "v3i:R-equivalence",
+      "line": 897,
+      "number": "2.30",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "story:hardy",
+      "line": 911,
+      "number": "2.5",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "story:mellin",
+      "line": 920,
+      "number": "2.5.1",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "gb:mellin-P",
+      "line": 923,
+      "number": "2.31",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "gb:diagonal-inversion",
+      "line": 936,
+      "number": "2.32",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "gb:beta-inversion",
+      "line": 940,
+      "number": "2.33",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "v3w:residual",
+      "line": 946,
+      "number": "2.34",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "v3w:exact",
+      "line": 956,
+      "number": "2.35",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "story:hardy-quadratic",
+      "line": 963,
+      "number": "2.5.2",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "bm:functional",
+      "line": 966,
+      "number": "2.36",
+      "rendered_page": "13"
+    },
+    {
+      "tex_label": "bm:norm-integral",
+      "line": 977,
+      "number": "2.37",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "bm:uniform-norm",
+      "line": 985,
+      "number": "2.38",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "bm:quadratic-form",
+      "line": 1005,
+      "number": "2.39",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "bm:direct-error",
+      "line": 1009,
+      "number": "2.40",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "story:primes-and-zeros",
+      "line": 1020,
+      "number": "2.5.3",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "proof:sec:goldbach-projection",
+      "line": 1029,
+      "number": "3",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "proof:v7:dirichlet",
+      "line": 1029,
+      "number": "3",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "proof:sec:arithmetic-motivation",
+      "line": 1030,
+      "number": "3",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "proof:v7:main-thread",
+      "line": 1030,
+      "number": "3",
+      "rendered_page": "14"
+    },
+    {
+      "tex_label": "proof:v7:weight-class",
+      "line": 1071,
+      "number": "3.1",
+      "rendered_page": "15"
+    },
+    {
+      "tex_label": "proof:v7:finite-character-moment",
+      "line": 1071,
+      "number": "3.1",
+      "rendered_page": "15"
+    },
+    {
+      "tex_label": "proof:v9:finite-projection",
+      "line": 1090,
+      "number": "3.1",
+      "rendered_page": "15"
+    },
+    {
+      "tex_label": "proof:dir:moment-bound",
+      "line": 1097,
+      "number": "3.1",
+      "rendered_page": "15"
+    },
+    {
+      "tex_label": "proof:v3:sec-geometry",
+      "line": 1146,
+      "number": "3.2",
+      "rendered_page": "16"
+    },
+    {
+      "tex_label": "proof:v7:correlation-residual",
+      "line": 1146,
+      "number": "3.2",
+      "rendered_page": "16"
+    },
+    {
+      "tex_label": "proof:v3:kernel-holomorphy",
+      "line": 1180,
+      "number": "3.2",
+      "rendered_page": "16"
+    },
+    {
+      "tex_label": "proof:dir:kernel-expansion",
+      "line": 1183,
+      "number": "3.2",
+      "rendered_page": "16"
+    },
+    {
+      "tex_label": "proof:v3:kernel-symmetries",
+      "line": 1194,
+      "number": "3.3",
+      "rendered_page": "17"
+    },
+    {
+      "tex_label": "proof:v9:primitive-zero-data",
+      "line": 1247,
+      "number": "3.3",
+      "rendered_page": "17"
+    },
+    {
+      "tex_label": "proof:gb:hadamard-difference",
+      "line": 1254,
+      "number": "3.4",
+      "rendered_page": "17"
+    },
+    {
+      "tex_label": "proof:gb:local-zero-count",
+      "line": 1256,
+      "number": "3.5",
+      "rendered_page": "17"
+    },
+    {
+      "tex_label": "proof:gb:zero-resolvent",
+      "line": 1268,
+      "number": "3.6",
+      "rendered_page": "18"
+    },
+    {
+      "tex_label": "proof:gb:Euler-correction",
+      "line": 1271,
+      "number": "3.7",
+      "rendered_page": "18"
+    },
+    {
+      "tex_label": "proof:lem:zero-expansion",
+      "line": 1274,
+      "number": "3.4",
+      "rendered_page": "18"
+    },
+    {
+      "tex_label": "proof:gb:zero-identity",
+      "line": 1277,
+      "number": "3.8",
+      "rendered_page": "18"
+    },
+    {
+      "tex_label": "proof:gb:logderivative-bound",
+      "line": 1286,
+      "number": "3.9",
+      "rendered_page": "18"
+    },
+    {
+      "tex_label": "proof:dir:character-mellin-summary",
+      "line": 1340,
+      "number": "3.4",
+      "rendered_page": "19"
+    },
+    {
+      "tex_label": "proof:v9:mellin-signed-families",
+      "line": 1366,
+      "number": "3.5",
+      "rendered_page": "19"
+    },
+    {
+      "tex_label": "proof:sec:beta-mellin",
+      "line": 1417,
+      "number": "4",
+      "rendered_page": "20"
+    },
+    {
+      "tex_label": "proof:v7:euler",
+      "line": 1417,
+      "number": "4",
+      "rendered_page": "20"
+    },
+    {
+      "tex_label": "proof:v7:signed-beta-model",
+      "line": 1452,
+      "number": "4.1",
+      "rendered_page": "20"
+    },
+    {
+      "tex_label": "v3i:Euler",
+      "line": 1473,
+      "number": "4.1",
+      "rendered_page": "20"
+    },
+    {
+      "tex_label": "proof:v9:signed-beta-model",
+      "line": 1480,
+      "number": "4.1",
+      "rendered_page": "20"
+    },
+    {
+      "tex_label": "v3:beta-scaled-model",
+      "line": 1483,
+      "number": "4.2",
+      "rendered_page": "21"
+    },
+    {
+      "tex_label": "proof:euler:gamma-section",
+      "line": 1528,
+      "number": "4.2",
+      "rendered_page": "21"
+    },
+    {
+      "tex_label": "proof:v9:gamma-factorization",
+      "line": 1538,
+      "number": "4.2",
+      "rendered_page": "21"
+    },
+    {
+      "tex_label": "proof:gb:beta-uniform-bound",
+      "line": 1540,
+      "number": "4.3",
+      "rendered_page": "21"
+    },
+    {
+      "tex_label": "proof:gb:gamma-beta",
+      "line": 1546,
+      "number": "4.4",
+      "rendered_page": "21"
+    },
+    {
+      "tex_label": "proof:v7:singular-series",
+      "line": 1578,
+      "number": "4.3",
+      "rendered_page": "22"
+    },
+    {
+      "tex_label": "proof:v7:arithmetic-normalization",
+      "line": 1578,
+      "number": "4.3",
+      "rendered_page": "22"
+    },
+    {
+      "tex_label": "proof:lem:singular-N",
+      "line": 1611,
+      "number": "4.3",
+      "rendered_page": "22"
+    },
+    {
+      "tex_label": "proof:gb:singular-series-residue",
+      "line": 1616,
+      "number": "4.5",
+      "rendered_page": "22"
+    },
+    {
+      "tex_label": "proof:gb:singular-series-growth",
+      "line": 1620,
+      "number": "4.6",
+      "rendered_page": "22"
+    },
+    {
+      "tex_label": "proof:sp:family-bounds",
+      "line": 1626,
+      "number": "4.7",
+      "rendered_page": "23"
+    },
+    {
+      "tex_label": "proof:v7:model-continuation",
+      "line": 1686,
+      "number": "4.4",
+      "rendered_page": "23"
+    },
+    {
+      "tex_label": "proof:v3:model-geometry",
+      "line": 1704,
+      "number": "4.4",
+      "rendered_page": "24"
+    },
+    {
+      "tex_label": "proof:v7:residual-holomorphy",
+      "line": 1760,
+      "number": "4.5",
+      "rendered_page": "24"
+    },
+    {
+      "tex_label": "proof:sec:qp-foundation",
+      "line": 1824,
+      "number": "5",
+      "rendered_page": "25"
+    },
+    {
+      "tex_label": "proof:v9:hermitian-kernel-section",
+      "line": 1909,
+      "number": "5.1",
+      "rendered_page": "26"
+    },
+    {
+      "tex_label": "proof:v9:hermitian-kernel",
+      "line": 1927,
+      "number": "5.1",
+      "rendered_page": "27"
+    },
+    {
+      "tex_label": "hd:interior-norm",
+      "line": 1988,
+      "number": "5.1",
+      "rendered_page": "27"
+    },
+    {
+      "tex_label": "hd:PW-map",
+      "line": 2008,
+      "number": "5.2",
+      "rendered_page": "28"
+    },
+    {
+      "tex_label": "hd:boundary-norm",
+      "line": 2017,
+      "number": "5.3",
+      "rendered_page": "28"
+    },
+    {
+      "tex_label": "proof:hd:PW",
+      "line": 2030,
+      "number": "5.2",
+      "rendered_page": "28"
+    },
+    {
+      "tex_label": "proof:bm:PW",
+      "line": 2030,
+      "number": "5.2",
+      "rendered_page": "28"
+    },
+    {
+      "tex_label": "proof:bd:HS",
+      "line": 2123,
+      "number": "5.3",
+      "rendered_page": "29"
+    },
+    {
+      "tex_label": "hd:boundary-HS-norm",
+      "line": 2134,
+      "number": "5.4",
+      "rendered_page": "29"
+    },
+    {
+      "tex_label": "proof:hd:kernel-majorant",
+      "line": 2179,
+      "number": "5.5",
+      "rendered_page": "30"
+    },
+    {
+      "tex_label": "proof:bd:evaluation",
+      "line": 2226,
+      "number": "5.4",
+      "rendered_page": "30"
+    },
+    {
+      "tex_label": "hd:reproducing-kernel",
+      "line": 2228,
+      "number": "5.6",
+      "rendered_page": "30"
+    },
+    {
+      "tex_label": "proof:hd:evaluation-norm",
+      "line": 2236,
+      "number": "5.7",
+      "rendered_page": "31"
+    },
+    {
+      "tex_label": "proof:bd:pointwise",
+      "line": 2243,
+      "number": "5.8",
+      "rendered_page": "31"
+    },
+    {
+      "tex_label": "proof:bd:pointwise-fixed",
+      "line": 2249,
+      "number": "5.9",
+      "rendered_page": "31"
+    },
+    {
+      "tex_label": "proof:sec:spectral-analysis",
+      "line": 2290,
+      "number": "6",
+      "rendered_page": "31"
+    },
+    {
+      "tex_label": "proof:v7:riemann",
+      "line": 2290,
+      "number": "6",
+      "rendered_page": "31"
+    },
+    {
+      "tex_label": "proof:v7:spectral-construction",
+      "line": 2355,
+      "number": "6.1",
+      "rendered_page": "32"
+    },
+    {
+      "tex_label": "proof:v9:spectral-convergence",
+      "line": 2389,
+      "number": "6.1",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "proof:sec:spectral-symmetry",
+      "line": 2433,
+      "number": "6.2",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "proof:v7:no-trivial-zeros",
+      "line": 2433,
+      "number": "6.2",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "proof:v7:zero-classification",
+      "line": 2434,
+      "number": "6.2",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "proof:v9:spectral-symmetries",
+      "line": 2444,
+      "number": "6.2",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "proof:sym:normalization",
+      "line": 2448,
+      "number": "6.1",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "proof:sym:functional-equation",
+      "line": 2450,
+      "number": "6.2",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "proof:sym:conjugation",
+      "line": 2452,
+      "number": "6.3",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "sym:hyperplane-reflection",
+      "line": 2455,
+      "number": "6.4",
+      "rendered_page": "33"
+    },
+    {
+      "tex_label": "sym:centered-product",
+      "line": 2462,
+      "number": "6.5",
+      "rendered_page": "34"
+    },
+    {
+      "tex_label": "sym:critical-values",
+      "line": 2469,
+      "number": "6.6",
+      "rendered_page": "34"
+    },
+    {
+      "tex_label": "proof:v9:spectral-zeros",
+      "line": 2494,
+      "number": "6.3",
+      "rendered_page": "34"
+    },
+    {
+      "tex_label": "proof:qp:dictionary",
+      "line": 2552,
+      "number": "6.1",
+      "rendered_page": "35"
+    },
+    {
+      "tex_label": "proof:sec:grh-bound",
+      "line": 2607,
+      "number": "6.4",
+      "rendered_page": "36"
+    },
+    {
+      "tex_label": "proof:grh:main-theorem",
+      "line": 2616,
+      "number": "6.2",
+      "rendered_page": "36"
+    },
+    {
+      "tex_label": "proof:grh:operator-bound",
+      "line": 2619,
+      "number": "6.7",
+      "rendered_page": "36"
+    },
+    {
+      "tex_label": "proof:grh:zero-free-width",
+      "line": 2623,
+      "number": "6.8",
+      "rendered_page": "36"
+    },
+    {
+      "tex_label": "proof:grh:averaged-energy-lemma",
+      "line": 2656,
+      "number": "6.4",
+      "rendered_page": "36"
+    },
+    {
+      "tex_label": "grh:averaged-energy",
+      "line": 2658,
+      "number": "6.9",
+      "rendered_page": "36"
+    },
+    {
+      "tex_label": "proof:grh:Poisson-comparison",
+      "line": 2680,
+      "number": "6.10",
+      "rendered_page": "36"
+    },
+    {
+      "tex_label": "proof:v7l:reference-energy-bound",
+      "line": 2686,
+      "number": "6.11",
+      "rendered_page": "37"
+    },
+    {
+      "tex_label": "proof:grh:smoothed-truncation",
+      "line": 2741,
+      "number": "6.12",
+      "rendered_page": "37"
+    },
+    {
+      "tex_label": "proof:v7l:weighted-energy-definition",
+      "line": 2846,
+      "number": "6.13",
+      "rendered_page": "39"
+    },
+    {
+      "tex_label": "proof:v7l:energy-transfer-bound",
+      "line": 2852,
+      "number": "6.14",
+      "rendered_page": "39"
+    },
+    {
+      "tex_label": "proof:grh:weighted-realpart",
+      "line": 2864,
+      "number": "6.15",
+      "rendered_page": "39"
+    },
+    {
+      "tex_label": "proof:grh:component-bounds",
+      "line": 2975,
+      "number": "6.5",
+      "rendered_page": "40"
+    },
+    {
+      "tex_label": "proof:grh:model-functional-form",
+      "line": 3043,
+      "number": "6.16",
+      "rendered_page": "41"
+    },
+    {
+      "tex_label": "proof:sec:v3-mellin-operator",
+      "line": 3193,
+      "number": "7",
+      "rendered_page": "43"
+    },
+    {
+      "tex_label": "proof:v7:hardy-error",
+      "line": 3193,
+      "number": "7",
+      "rendered_page": "43"
+    },
+    {
+      "tex_label": "proof:detail:hardy",
+      "line": 3193,
+      "number": "7",
+      "rendered_page": "43"
+    },
+    {
+      "tex_label": "proof:detail:mellin",
+      "line": 3231,
+      "number": "7.1",
+      "rendered_page": "43"
+    },
+    {
+      "tex_label": "proof:v7:character-mellin",
+      "line": 3246,
+      "number": "7.1.1",
+      "rendered_page": "44"
+    },
+    {
+      "tex_label": "gb:mellin-decay",
+      "line": 3275,
+      "number": "7.1",
+      "rendered_page": "44"
+    },
+    {
+      "tex_label": "proof:gb:mellin-projection",
+      "line": 3282,
+      "number": "7.1",
+      "rendered_page": "44"
+    },
+    {
+      "tex_label": "proof:gb:character-inversion",
+      "line": 3290,
+      "number": "7.2",
+      "rendered_page": "44"
+    },
+    {
+      "tex_label": "proof:gb:moment-inversion",
+      "line": 3295,
+      "number": "7.3",
+      "rendered_page": "44"
+    },
+    {
+      "tex_label": "proof:sec:goldbach-main",
+      "line": 3333,
+      "number": "7.1.2",
+      "rendered_page": "45"
+    },
+    {
+      "tex_label": "proof:v7:main-term-evaluation",
+      "line": 3333,
+      "number": "7.1.2",
+      "rendered_page": "45"
+    },
+    {
+      "tex_label": "gb:convolutions",
+      "line": 3362,
+      "number": "7.4",
+      "rendered_page": "45"
+    },
+    {
+      "tex_label": "proof:gb:main-term-inversion",
+      "line": 3374,
+      "number": "7.2",
+      "rendered_page": "45"
+    },
+    {
+      "tex_label": "proof:gb:diagonal-inversion",
+      "line": 3381,
+      "number": "7.5",
+      "rendered_page": "45"
+    },
+    {
+      "tex_label": "proof:gb:beta-inversion",
+      "line": 3386,
+      "number": "7.6",
+      "rendered_page": "45"
+    },
+    {
+      "tex_label": "proof:gb:inner-beta",
+      "line": 3404,
+      "number": "7.7",
+      "rendered_page": "46"
+    },
+    {
+      "tex_label": "gb:beta-mellin",
+      "line": 3434,
+      "number": "7.8",
+      "rendered_page": "46"
+    },
+    {
+      "tex_label": "proof:gb:H-decay",
+      "line": 3447,
+      "number": "7.9",
+      "rendered_page": "46"
+    },
+    {
+      "tex_label": "gb:pole-cancellation",
+      "line": 3454,
+      "number": "7.10",
+      "rendered_page": "46"
+    },
+    {
+      "tex_label": "gb:integer-values",
+      "line": 3461,
+      "number": "7.11",
+      "rendered_page": "46"
+    },
+    {
+      "tex_label": "gb:single-contour",
+      "line": 3496,
+      "number": "7.12",
+      "rendered_page": "47"
+    },
+    {
+      "tex_label": "proof:gb:residual-integral",
+      "line": 3514,
+      "number": "7.13",
+      "rendered_page": "47"
+    },
+    {
+      "tex_label": "proof:v3w:exact-moving",
+      "line": 3523,
+      "number": "7.3",
+      "rendered_page": "47"
+    },
+    {
+      "tex_label": "proof:gb:exact-error",
+      "line": 3526,
+      "number": "7.14",
+      "rendered_page": "47"
+    },
+    {
+      "tex_label": "proof:detail:hardy-quadratic",
+      "line": 3550,
+      "number": "7.2",
+      "rendered_page": "48"
+    },
+    {
+      "tex_label": "proof:bm:norm",
+      "line": 3623,
+      "number": "7.4",
+      "rendered_page": "49"
+    },
+    {
+      "tex_label": "proof:hardy:functional-norm",
+      "line": 3626,
+      "number": "7.15",
+      "rendered_page": "49"
+    },
+    {
+      "tex_label": "bm:norm-asymptotic",
+      "line": 3633,
+      "number": "7.16",
+      "rendered_page": "49"
+    },
+    {
+      "tex_label": "proof:bm:quadratic",
+      "line": 3710,
+      "number": "7.1",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:hardy:quadratic-bound",
+      "line": 3713,
+      "number": "7.17",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:hardy:goldbach-error",
+      "line": 3719,
+      "number": "7.18",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:main-theorem-proofs",
+      "line": 3773,
+      "number": "7.3",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:v7:siegel-hypothesis",
+      "line": 3774,
+      "number": "7.3",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:v7:riemann-hypothesis",
+      "line": 3774,
+      "number": "7.3",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:v9:width-arithmetic-estimate",
+      "line": 3782,
+      "number": "7.5",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:width:relative-error",
+      "line": 3786,
+      "number": "7.19",
+      "rendered_page": "50"
+    },
+    {
+      "tex_label": "proof:width:asymptotic-condition",
+      "line": 3792,
+      "number": "7.20",
+      "rendered_page": "51"
+    },
+    {
+      "tex_label": "story:philosophy",
+      "line": 3860,
+      "number": "8",
+      "rendered_page": "51"
+    },
+    {
+      "tex_label": "proof:v7:philosophy",
+      "line": 3860,
+      "number": "8",
+      "rendered_page": "51"
+    },
+    {
+      "tex_label": "proof:app:param",
+      "line": 3933,
+      "number": "A",
+      "rendered_page": "53"
+    },
+    {
+      "tex_label": "proof:app:param:realization",
+      "line": 3942,
+      "number": "A.1",
+      "rendered_page": "53"
+    },
+    {
+      "tex_label": "proof:app:param:strip",
+      "line": 3950,
+      "number": "A.1",
+      "rendered_page": "53"
+    },
+    {
+      "tex_label": "proof:v9:variable-boundary-realization",
+      "line": 3961,
+      "number": "A.1",
+      "rendered_page": "53"
+    },
+    {
+      "tex_label": "proof:app:param:functional-norm",
+      "line": 3971,
+      "number": "A.2",
+      "rendered_page": "53"
+    },
+    {
+      "tex_label": "proof:app:param:quadratic-form",
+      "line": 3982,
+      "number": "A.3",
+      "rendered_page": "53"
+    },
+    {
+      "tex_label": "proof:app:param:families",
+      "line": 4015,
+      "number": "A.2",
+      "rendered_page": "54"
+    },
+    {
+      "tex_label": "proof:app:param:S-width",
+      "line": 4028,
+      "number": "A.4",
+      "rendered_page": "54"
+    },
+    {
+      "tex_label": "proof:v9:parameter-spectral-conditions",
+      "line": 4034,
+      "number": "A.2",
+      "rendered_page": "54"
+    },
+    {
+      "tex_label": "proof:app:param:dictionary",
+      "line": 4036,
+      "number": "A.5",
+      "rendered_page": "54"
+    },
+    {
+      "tex_label": "proof:app:param:S-norm",
+      "line": 4047,
+      "number": "A.6",
+      "rendered_page": "54"
+    },
+    {
+      "tex_label": "proof:app:param:balance",
+      "line": 4101,
+      "number": "A.3",
+      "rendered_page": "55"
+    },
+    {
+      "tex_label": "proof:bm:boundary-balance",
+      "line": 4101,
+      "number": "A.3",
+      "rendered_page": "55"
+    },
+    {
+      "tex_label": "proof:v9:boundary-balance",
+      "line": 4111,
+      "number": "A.3",
+      "rendered_page": "55"
+    },
+    {
+      "tex_label": "proof:app:param:fixed-modulus",
+      "line": 4174,
+      "number": "A.4",
+      "rendered_page": "55"
+    },
+    {
+      "tex_label": "proof:sec:small-c-obstruction",
+      "line": 4174,
+      "number": "A.4",
+      "rendered_page": "55"
+    },
+    {
+      "tex_label": "proof:v9:fixed-modulus-obstruction",
+      "line": 4182,
+      "number": "A.4",
+      "rendered_page": "55"
+    },
+    {
+      "tex_label": "proof:app:param:obstruction",
+      "line": 4198,
+      "number": "A.7",
+      "rendered_page": "56"
+    },
+    {
+      "tex_label": "proof:qp:small-c-correlation",
+      "line": 4212,
+      "number": "A.8",
+      "rendered_page": "56"
+    },
+    {
+      "tex_label": "proof:qp:small-c-diagonal",
+      "line": 4219,
+      "number": "A.9",
+      "rendered_page": "56"
+    },
+    {
+      "tex_label": "proof:qp:small-c-model",
+      "line": 4234,
+      "number": "A.10",
+      "rendered_page": "56"
+    },
+    {
+      "tex_label": "proof:app:numerical",
+      "line": 4270,
+      "number": "B",
+      "rendered_page": "57"
+    },
+    {
+      "tex_label": "proof:app:num:weight",
+      "line": 4285,
+      "number": "B.1",
+      "rendered_page": "57"
+    },
+    {
+      "tex_label": "proof:v9:wide-weight-count",
+      "line": 4317,
+      "number": "B.1",
+      "rendered_page": "57"
+    },
+    {
+      "tex_label": "proof:app:num:count",
+      "line": 4324,
+      "number": "B.1",
+      "rendered_page": "57"
+    },
+    {
+      "tex_label": "proof:app:num:method",
+      "line": 4349,
+      "number": "B.2",
+      "rendered_page": "58"
+    },
+    {
+      "tex_label": "proof:v9:wide-character-moments",
+      "line": 4367,
+      "number": "B.2",
+      "rendered_page": "58"
+    },
+    {
+      "tex_label": "proof:app:num:moments",
+      "line": 4369,
+      "number": "B.2",
+      "rendered_page": "58"
+    },
+    {
+      "tex_label": "proof:app:num:interval",
+      "line": 4406,
+      "number": "B.3",
+      "rendered_page": "59"
+    },
+    {
+      "tex_label": "proof:app:num:integral-centre",
+      "line": 4432,
+      "number": "B.3",
+      "rendered_page": "59"
+    },
+    {
+      "tex_label": "proof:v9:moment-error-interval",
+      "line": 4444,
+      "number": "B.3",
+      "rendered_page": "59"
+    },
+    {
+      "tex_label": "proof:app:num:enclosure",
+      "line": 4488,
+      "number": "B.4",
+      "rendered_page": "60"
+    },
+    {
+      "tex_label": "proof:app:num:spectrum",
+      "line": 4499,
+      "number": "B.4",
+      "rendered_page": "60"
+    },
+    {
+      "tex_label": "proof:v9:wide-hardy-residual",
+      "line": 4508,
+      "number": "B.4",
+      "rendered_page": "60"
+    },
+    {
+      "tex_label": "proof:v9:finite-spectral-zeros",
+      "line": 4552,
+      "number": "B.5",
+      "rendered_page": "61"
+    }
+  ]
+}

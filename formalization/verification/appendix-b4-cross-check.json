@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/hardy_traces",
+  "method": "Read-only comparison of original TeX, immutable reviewed theorem type, and completed proof data flow",
+  "tex_lines": [4280, 4335, 4422, 4430, 4499, 4533],
+  "reviewed_lean_line": 928,
+  "result": "No missing or weakened conditions, or mismatched definitions, found",
+  "checks": {
+    "support": "The actual interval (16/30030, 1-16/30030) is used; no substitution of the narrow main weight interval.",
+    "regularity": "Actual C6 regularity implies the C3 functional and C4 character-contour requirements; no C-infinity assumption is introduced.",
+    "mass": "The model uses the cross integral of f(u)*f(1-u), without a symmetry hypothesis or replacement by the square integral.",
+    "companion": "The equality companion wideWeight = wideCompanion holds on the full real line, including the zero extension.",
+    "riesz": "A genuine compactly supported density establishes existence before selecting the original wideRieszVector; the fallback zero branch is not used.",
+    "normalization": "The inner-product convention, 1/(2*pi) Mellin normalization, and cancellation of (1+s)(1+z) match the original definitions.",
+    "residual": "P = diagonal - correlation, D = diagonal, K = -singularSeries*crossMass, so P-D-K is exactly wideResidual.",
+    "hypotheses": "Only GRH experimentN and the original strip inequality are required. The reference line is located using a proved exp(10)<30030."
+  },
+  "kernel_validation": "Reported separately by the final build, collectAxioms audit, and reviewed-type preservation check."
+}

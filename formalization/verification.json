@@ -1,0 +1,1162 @@
+{
+  "stage": "All 102 reviewed theorem declarations kernel-closed with preserved types and definitions",
+  "build": {
+    "command": "flock /tmp/liliu-build.lock lake build",
+    "exit_code": 0,
+    "jobs": 9369,
+    "log": "work/proof-wave2/integration-build12.log",
+    "warning_note": "No original theorem has a transitive sorryAx dependency."
+  },
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "local_project_dependency": {
+    "package": "goldbach",
+    "path": "/home/azureuser/goldbach-lean",
+    "revision": "24490c2ab7787238f816d771c9176411dcbda503"
+  },
+  "original_theorem_counts": {
+    "kernel_closed": 102,
+    "proof_written_dependencies_pending": 0,
+    "pending_direct_sorry": 0
+  },
+  "all_public_theorem_counts": {
+    "kernel_closed": 1354,
+    "proof_written_dependencies_pending": 0,
+    "pending_direct_sorry": 0
+  },
+  "reviewed_type_checks": {
+    "count": 102,
+    "all_passed": true,
+    "method": "Lean definitional equality after mapping baseline namespace constants to the current namespace"
+  },
+  "reviewed_definition_checks": {
+    "count": 171,
+    "all_passed": true,
+    "method": "Original definition declarations and bodies compared modulo whitespace and inter-declaration comments"
+  },
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unusual_axioms": [],
+  "main_pending_dependencies": {
+    "LiLiuGoldbach16.theorem_1_1": [],
+    "LiLiuGoldbach16.theorem_1_2": [],
+    "LiLiuGoldbach16.primePair_consequence": []
+  },
+  "independent_final_assembly_review": "verification/main-assembly-cross-check.json",
+  "baseline": {
+    "lean_sha256": "bd3b94f0b7218b1675e5346ba36c05985ab161868f40e8524796912268f34261",
+    "tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125"
+  },
+  "source_files": [
+    {
+      "file": "LiLiuGoldbach/AnalyticPrerequisites.lean",
+      "sha256": "b3c0e0ab13d433cc710ce112470f111ac4575867bb49e47647309d04c6f61686"
+    },
+    {
+      "file": "LiLiuGoldbach/BaseDefinitions.lean",
+      "sha256": "7f45907d31aa7d58864d78e347adba216010f3b0b850eedc152773166e2d0171"
+    },
+    {
+      "file": "LiLiuGoldbach/CharacterEstimatePrerequisites.lean",
+      "sha256": "e50e4b8aaeb319ec26e09ab611735bfe545b3ea6fc750e3141d9241ef6a2ac45"
+    },
+    {
+      "file": "LiLiuGoldbach/Definitions.lean",
+      "sha256": "db3a3d01a22a18d71a30aa9f7f36a3aea38a797ec805ae0b750fae5b237e4633"
+    },
+    {
+      "file": "LiLiuGoldbach/EarlyAnalyticPrerequisites.lean",
+      "sha256": "33c9324d06527ba12c6fc9d2d732f73468837c396e1bbedeb2fc748e214d0b54"
+    },
+    {
+      "file": "LiLiuGoldbach/ModelMellinPrerequisites.lean",
+      "sha256": "1bde1170be0a8ac44d86f08c7b26bc5ead34c51c0bf3925ba34e2a60d66b39a2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/ArithmeticComponentOperators.lean",
+      "sha256": "011bc62aea3c19afb971abd69786ee7627bb7dd02ec39e04b27d796401776501"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/ArithmeticKernelRealization.lean",
+      "sha256": "9bed5798666132a08f5b60e6a0a9d8c0492b9e2fc34e0685bf0352a47647bf40"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/Asymptotics.lean",
+      "sha256": "24ecf9e3fa5c8ea8e31c0ad813435379044df8d1ad3a89ac61148df81695900b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/BalanceBounds.lean",
+      "sha256": "ebacf3a2262e45a281a560e273995fd020f6ad7cda9b1ba131e3278268747f30"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/BalanceLimits.lean",
+      "sha256": "29d7ed703b73531437a5a7c52c972e8567ae54d10c74a0fad2d083d43f4a350e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/BaselineEuler.lean",
+      "sha256": "887b05ffddc9febb10f2b207c66b68a61e0f63c0ca408a7ab22d92a0f219f3e2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/BaselineProductLink.lean",
+      "sha256": "484a53bb82a7b9373f69fd198e5749b42c8120a0b0842861639049c8537482e6"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/BetaIdentity.lean",
+      "sha256": "8425bca33448ae3bfcae4be66ca2e1842b5e6603f161ba833cab2b6f3a499b29"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/BetaIntegrals.lean",
+      "sha256": "26f8ad10324bd8eed77044841f5767ec28bdea6376e0c3147de160aee228ba68"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/BetaMeromorphic.lean",
+      "sha256": "05a0afda7f756aed825d1d2c52898e503e3b6387a8edea1f89aa3cf1a1ba0388"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CauchyBoundedLimit.lean",
+      "sha256": "b4b8b5837e8727a1753b37b1b90f3a6f524230d097945d331a6e728393b11ae5"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterAnalytic.lean",
+      "sha256": "b954298c048a8804823e229bfc915676d03ec1c24569fc678358d8c3593cdca6"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterAverage.lean",
+      "sha256": "89c0f44b3bc9c4b4f861e5996b3cc5c7651f58ebbdc111b0d07f64b29c83712d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterAverageAssembly.lean",
+      "sha256": "458f072aaa054dc5d5e63fa94adef10efca873f14b8a6a824bf1fad537a84b91"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterEulerBounds.lean",
+      "sha256": "e8dd696280b4cd2a92581d75cb351c3a4eb9ebc2b4e669289aad4a4dc25621d0"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterEulerCorrection.lean",
+      "sha256": "d68ef3ed11b93fc96ec7c149c37f1cc0a7ce1fc131b22c9038d6ba544e34ce73"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterGammaFactor.lean",
+      "sha256": "56809487be62cbb0a4ec77a2233a6b06fbc4672d3b01a05e606deaae857647a4"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterGramOperator.lean",
+      "sha256": "1c6387eb5f6c7f16c1e7f2ff73013bcb8a04687d5433284c31578174ffdde02f"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterGrowth.lean",
+      "sha256": "f7077508722c6bb8372d6e479c83f49b786701a9f1e721dd2bfcad98b8760fa1"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterGrowthFoundation.lean",
+      "sha256": "9f5bdee3b794b28886acf4b416579eb4c60cc2eac14b7402ae1553c5022f6c00"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterHalfPlane.lean",
+      "sha256": "3986472cc67227c99b665e1efe85a6bddbc523716d48930af72a25b0121f5132"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterHardyVectors.lean",
+      "sha256": "e95e715a327d327a8361776bd2ebece01ad548d18946853760022b24f80f4895"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterJoint.lean",
+      "sha256": "e2abef709cd492e2e589071628ffc5ac83538b1b68cf148caca65c8be328084a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterPoissonAnchor.lean",
+      "sha256": "f38106b905cb7af1390fba5696d7dd699eab3262276cb09d48e36c8496ba36bb"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterPoissonComparison.lean",
+      "sha256": "84e4bd64e48ef30073d7d9a0fbf74327648190153f7649d37924750131bcd13d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterPoissonIdentity.lean",
+      "sha256": "9b184b2629a6b04db8f2402d860bac09f2d1d706d040209a790790df140b7995"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterReferenceEnergy.lean",
+      "sha256": "2c01d73ec85aec6d6b52706f7fab70bd0ffd3ee8cd65aa806f06d87684e02b91"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterReferencePolynomial.lean",
+      "sha256": "d605f6b5a60f1038d87097191832df594c907a6724bf34633582d63d3e17577e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterSeries.lean",
+      "sha256": "a00daafc89b09b73a4a132a22bb7f10cd4276ede89f823ed7c22cd178f7e5859"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterShortPolynomial.lean",
+      "sha256": "64cbdaa734f262364de597f5e5db8801c4da61c9f9866add7e5d8ea3f03fd8bb"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterStripTrace.lean",
+      "sha256": "a7029fcce490be4fe0cc50668a813ef01557e7fdc717a4f5f6e617851319edc9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterTraceBounds.lean",
+      "sha256": "d8f9ceec63ca5ee765af32a89493d71e10665a9a2efc80189f2949fe390cb803"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroCompactSets.lean",
+      "sha256": "eb3c0bad4fd66f621f8850ef057d461a29b2f1f795ef57afaddfba999438b4f3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroCounting.lean",
+      "sha256": "84d2f7371a247db454896c2aaa2dec101b6a43ff688fa5976d3632534662868c"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroExpansion.lean",
+      "sha256": "4115374fff7935546c2e8cb725f3d095e72ceb1163b63ed5109009c36d39b1cb"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroLocalBounds.lean",
+      "sha256": "491fca9b85ecc2ce56ce9b6de428e6305d403e0f7822627dead91a39280f0ac1"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroMultiplicity.lean",
+      "sha256": "162d736998eb9a2a681ffe773c5fdbbc277e37ed2d9faa739b0b341f3c5f6c00"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroNormal.lean",
+      "sha256": "f3dfc672e26c47e49cdf469c542708e9c71c74d9550eb3273c1f71020a2dd1ad"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroReflection.lean",
+      "sha256": "c7e9e8182dce0ef4c2543bde37d21c378b6297fd6800e59d0dd55ca62f0c9737"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroShiftNormal.lean",
+      "sha256": "c87a9ebca827e4fc94171925ddc87339eab9a90d58b79324717d93b73dee6e1a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZeroSummability.lean",
+      "sha256": "12bcdd6affd859234e77c8ea958152fb944a6bc148919016fe69b0e7ee4517f5"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CharacterZerosCompact.lean",
+      "sha256": "2849dad93ab1135a7be1ded299fdd16be156ad70ebb03478683737d26513debd"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/Characters.lean",
+      "sha256": "4c4dcff045659f42e229125614dc5775346e9e2959487c15d618c6c9cf0b5fef"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CompletedLZeros.lean",
+      "sha256": "960d80224f000038883a02644c8d43632ef9b390bcb846ea10f617dd43ae493b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/ComponentNormBounds.lean",
+      "sha256": "c16244abcfc83bd5fe2f16d19941abcd4c94ec79829e1b05c1f8844ecab00854"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/CutoffSmooth.lean",
+      "sha256": "4687f2bbe42e2120c272afee56ac864c4f962e81ca910ae133020810accb9c45"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/DensityArithmetic.lean",
+      "sha256": "4094723e5aa21123125397fce1b7442f9d41928fecce512a19868ccf2faa2abb"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/DensityConvergence.lean",
+      "sha256": "93e507fe1851c146f156d9ada5b30790d8fc17441ad63ed5f1f28dda2695e56a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/DensityEuler.lean",
+      "sha256": "413ae9d351705d784460aec05f87537b7631d365836906fc4b3ae42f78abf346"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/DensityEulerIdentity.lean",
+      "sha256": "47eed5142303e114d4540db42ba84a058d50ffeaac822a41fb1a0942eef36268"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/DensityResidue.lean",
+      "sha256": "b88b2d04cabe862f31b75413ec78f479ead1ac517abb304a5785287a04867d2d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/DensitySeries.lean",
+      "sha256": "2c624af49fb62582edff6bed4ef74c0a79218d2d309cf689c713eab3a60567ef"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/DictionaryApplication.lean",
+      "sha256": "28f9aca77153f2070f067b520ea7095e2233afcc957d1d7dc457cd9c89bbd68e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/Elementary.lean",
+      "sha256": "88f42921a0f23d18e571f942a2ef0dddd1321f50e96a164753df18c75f686858"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteCharacterMoments.lean",
+      "sha256": "5f72ca247b4dba223c72560ebe0314292fe9960336cb9dec44ef11678ace6df7"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteCharacterShift.lean",
+      "sha256": "6ae8efa9327006ad0e6e6a55139e079f09ef2fd3ad3cb992195dff79238a1172"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteExperimentSpectrum.lean",
+      "sha256": "e3a9f6c26734f41ff1eb4cc72e9dcdeb71565ee0bf5287f57a05af4beb0f0c77"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteFunctional.lean",
+      "sha256": "f45fd96ce8a297865c6752b04115e2cebd76cfe0e937fbaa5b8a6c4fe24f7360"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteMellin.lean",
+      "sha256": "b543e4cb348c3cf38869dfac081de727c62768230ced09315d90173316fedb86"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteMellinDouble.lean",
+      "sha256": "d0edf80cff76ba723acfc60ec506d11c6837770234562af2a06ddc3ce7af2fd0"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteMellinProjection.lean",
+      "sha256": "b805f4baac497ab9f3987f8d45ca6fec372a7d133dd2d40be0ce2916bef59e65"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelBasic.lean",
+      "sha256": "c4d935ba4987066f8ab9ab0a0657d8f2822044a7ea627c2c659f3cfa027ed671"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelBetaConvolution.lean",
+      "sha256": "2f022e28555f7e7d8f68733bc04b9a410cbea95863288ed71a5b807ffecde9c7"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelBetaPairing.lean",
+      "sha256": "7f9962cf70bf697cab975be2e4d071cd8db16b49952cfebf33faab1538e99b21"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelBetaRelation.lean",
+      "sha256": "0cb8535688e1bf56593fec7fe7ba80ccd836481eb1539915cf5ce526506f9dba"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelBetaTransform.lean",
+      "sha256": "511faf4915ebaa9665da5e6be3fcdbae98ab2e3d05a0b1962a1ef44ba8e10ace"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelBound.lean",
+      "sha256": "206f394c31516afb768f854271d71d2a6e14c7d2224ece8c56255bc38d207998"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelConvolution.lean",
+      "sha256": "d7de01b62599ae52b2f7cc3f3fa67fbac9da07a9918c62c7f58e6f3f0a63242f"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelDouble.lean",
+      "sha256": "57cab8257c2d8412977f1f6e9bf6ef0a6a9b7d5134c5343e427f31caa4726d43"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelRemovable.lean",
+      "sha256": "bb3bd9fbc57a236e47354cf0e5735ee16418a2fa8a99d3016978e550658fe3a2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelSampling.lean",
+      "sha256": "9504d202f41a18c873a077927008482b4a8b59530a2bcbcab2ecbe6c2e17dfcc"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelShift.lean",
+      "sha256": "24780e4bfac08e27c5ee33afd1209875a98b3304159a09916bc51903e2322cd5"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteModelSingle.lean",
+      "sha256": "d79e8d26032690fd8da9d88b09a630ca57e7fed94b46ecd8cc3831ceca39bda2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/FiniteQuadratic.lean",
+      "sha256": "e5f239c7d74938c288b731210b1f2aeca222f06ea7c3ef4a21c02651d54143c0"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/GammaDerivativeLimit.lean",
+      "sha256": "4dba8b0ff79753ad355d8ca0e8967c3f92cfc02e06108c7443d764c9aa15e957"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/GammaDifference.lean",
+      "sha256": "c6f3ae1f2280be16fcf0233c7521f123a903f0739b92b7b4fb8a99bd9cd07b7d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/GammaQuotientBound.lean",
+      "sha256": "ba8edc2df3803bb6e58e0e72e920fb9c2589572d0d01def9f27cf6442be3c99d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/GammaResolventBounds.lean",
+      "sha256": "fbccaecd3809278c6208220c3aebbb6c1bbb0ab166c11babc5a21ebb6f033b7b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/GammaSequenceBounds.lean",
+      "sha256": "f3f761c236f49ccf6ffa9c02506c33e4058bfca51e1811b00d663030fdd5b424"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HadamardApproximation.lean",
+      "sha256": "4112e2da109bc9026ff16aaac7d417762cf62d3da4227a717308aff9882b4bf2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HadamardDiskFactor.lean",
+      "sha256": "07d6af3418dcf87d97063fff198bb5113b2bb8e2763d2cc27bff194e8a7f5959"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HadamardFactors.lean",
+      "sha256": "4d7b6509e17e13a766a7a1e0a0634ad8cc646c2b116ae54f7499743eddcfb780"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HadamardLimit.lean",
+      "sha256": "5c61dcd7fd59d82598ec8f82d7ddcadfae384898b0e462fe123595018cec3633"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HadamardLog.lean",
+      "sha256": "ddb23112b4188a2ceb86892a35adf254df5885767e9ced33f004cc1b564003f7"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HalfPlanePoisson.lean",
+      "sha256": "e0b380b7661ee0cccfc4a07caccb630a9ae25c62dc22419cd3ab28fa8a08dcfb"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HalfPlaneWeightedCauchy.lean",
+      "sha256": "8c01a7c99c97677966d378db0de92bf5e79f3bd4fb4066abc756ccb88b5b3693"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyArithmeticTheorems.lean",
+      "sha256": "0dd90718b84b8aeef068103900bf86a084682962c0f1a8d98cc9486bdc49221b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyBoundary.lean",
+      "sha256": "7f2c2ae31ab1b9c534419034825b2524d9cdd4460ffb81ca18903a6156e70a05"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyContinuousBoundary.lean",
+      "sha256": "3027e5a858fe02d4e378e0e99104d3cad5d1eb6d27582218d761005409a2aa6d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyContourShift.lean",
+      "sha256": "95cad80fe48b173d88764bf9d529044c75d08d9615e4f68bec2bb68bfa16fca8"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyConverse.lean",
+      "sha256": "15af84ebc301556270ebe3aef98c65d439263195ca1cf321dd83a3054938a765"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyEvaluation.lean",
+      "sha256": "e83e7393b5e1439f3f14d80251b5dce4422a842eca71691f224581faadd4866d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyFiniteGram.lean",
+      "sha256": "5d95e624b3e46f59a46a37554a7896cab2604f884ec04cdbd5f0507ce09e3a3d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyFourier.lean",
+      "sha256": "896c38d33d1d5d654b322df03d7b7056568d06427bbb0c57763f580411316da5"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyGaussian.lean",
+      "sha256": "c374a1e17f4462f7b0aca4596ae07cb08266effb070c6b178b1f009821e4d311"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyGaussianDensity.lean",
+      "sha256": "a4245180235a02facb9fda1e38f0dc7f47d040f2b2bb2aedffb865a75a912792"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyGaussianRepresentation.lean",
+      "sha256": "18bb66b6115f09189e1bc28e5bdcf78fe9980679a430899184c3841d2666e70c"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyGaussianSpace.lean",
+      "sha256": "f1c0c379beba054ea7b8706a888e0a714283b6d25cab016ac2f71dca59cd3b59"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyHolomorphic.lean",
+      "sha256": "4ad0433c7190f9ffba95609c65e9b06c09369826762a605e68eaa3536f20cbde"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyInterior.lean",
+      "sha256": "4dd6a1cd49873520c26535db6e6c75ebba65697588fe4a89fcf88db7a0bf920b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyKernelColumns.lean",
+      "sha256": "8f42229565f616a1628cfa80325f869f8555e973ba2e6f900733577c8d4d0a08"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyKernelMajorant.lean",
+      "sha256": "a790b9a948c4ac2fca82d4563a8f8b4615216990651907f29f88621dc8c33fe9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyKernelOperator.lean",
+      "sha256": "b3a3728fc1a964f29c9bef98a830e9a8b568575c138305e1c7251200031b755f"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyKernelPairing.lean",
+      "sha256": "6c044816790a1e7e1f1ec9bb9742e0e9610534fbbdfb4af7ab6f36968bb2d1c3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyKernelResidual.lean",
+      "sha256": "96a5cf540f9cc10119c46196f31c6ca2c148b3e5801ec5c2628e9a62735f36fb"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyRawLines.lean",
+      "sha256": "f3ee12d4e888bb1acb2d9eac8fa6d21cdf750438a5f6013a7abb89b6790374ae"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyRawNorm.lean",
+      "sha256": "3a7f8e5e87ef64e334df88fcb29965fb40eb7ea1020ade33835b83b282677f7a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyReproducing.lean",
+      "sha256": "bac4cbfcca4a11b6885eb9c2986e0f294e533188778cc3f21410e6fa0946da2a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyTraceAlgebra.lean",
+      "sha256": "d5d9b772b68da4f949303d727074cd2bbf890da4c4911a3d1fb0f50884049803"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyWeakLimit.lean",
+      "sha256": "ebcc90c9bbbbf7d371ddd5853f9698e13ce542c04bd99a63de6d1c1083aef57f"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HardyWeights.lean",
+      "sha256": "a1c8d9a9028a4a672216db5c9995df909d8c7550105c1cb3f271fc6f24895f3e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/HilbertSchmidtTriangle.lean",
+      "sha256": "8a3b6a6605c695f6a9a79304153bc7571407f786bc62c5777f067c94ff648f13"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/KernelAlgebra.lean",
+      "sha256": "372820e04e962b2e92abf318e8253f2ba2385c401381de2c27f15f0f6cccac16"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/KernelGrowthBounds.lean",
+      "sha256": "2df5bf563c5378f6f93edb479647969f06d8008eab6bc2c4e5edaacc1c1b83ce"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/KernelRegularity.lean",
+      "sha256": "d1bc95de141ae2db0239d51bd043458199de6ab79b3bdd31efcb8135fc576b19"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/LFunctionDomain.lean",
+      "sha256": "4c11a4ddbfb720e558f8559b174e757776d285398078f8192ce8d5a98eb939d3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/LogDerivativeDisk.lean",
+      "sha256": "23328b1a1a7e5320dc6ba5c389e544f641e301a554bb6d0d222b6c1d4dbbccc8"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/Main.lean",
+      "sha256": "123300a87a2a5c71a2e2dea1e35bd517e70b4bd585a1fcdbee4ffa58bdce7182"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinBasic.lean",
+      "sha256": "52622498db96cb45f8195e0485274e0a18cf50f4bbf08c8078d1c133ce5eb07f"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinBetaConvolution.lean",
+      "sha256": "55a7325ad996bbfa3da462a56334501f145e77b46fddeb91a8bdc1b58d05398d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinBetaInner.lean",
+      "sha256": "fe3862c3ccc51dc727e6d5e3b97e69f7b7cf15dc5aa6d01c29fa8386c90dfdb9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinBetaPairing.lean",
+      "sha256": "66eb7e586ad44babe4492b812dfdad205921c1d141deaf283f0bad03f67b3732"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinBetaRelation.lean",
+      "sha256": "1abe5724d5b3a29e56c1f7dd812e5b9e04e500bd7ee225ae8121e705d78fc049"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinCharacterShift.lean",
+      "sha256": "985b34f94d0786ca3c20d580e763b0f5bf26afd504570f881b7f7498fa9543bd"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinCompactPositive.lean",
+      "sha256": "98b36d890cb580db5160ba10d83951d88e24544c9a95dc38a757a138a3e855f9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinContourShift.lean",
+      "sha256": "d3209f8b8229ba20e11bb9e8bd1c0458792efe6a5692dc393bf941ba2c553a06"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinConvolution.lean",
+      "sha256": "e333c02ff34c6333b3a8f512a7fe68e6470b8b2abfe4cd9af87ee729439ab323"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinConvolutionTransform.lean",
+      "sha256": "8c04fad2b705286f5376a069084974b23cf9d695109f5eecdb850d7a08b78fed"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinDiagonal.lean",
+      "sha256": "967688a11f5f0d9e404121fc37f2af410d2c70db10a0052a2db063fb81b506f0"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinDifferentiation.lean",
+      "sha256": "22741818a23a41e57ee6acaeced91aefdb02ba8ec3af72fd4f6acf95f624139c"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinDoubleSeries.lean",
+      "sha256": "2053778fc63179b2cb39e80d8750e04bad29da624e9960d8756feed313e83952"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinModelBound.lean",
+      "sha256": "c2f09e998c8e8c8f812cbfeed17ad5408a06f74c5e9862b959c3e1b21a610cd1"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinModelDouble.lean",
+      "sha256": "efdf7ed5837060586416198b64e6a9739ca45bdff135470d0a9f441db61cc8eb"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinModelRemovable.lean",
+      "sha256": "fd5fb07bc9089a3b2be28ab5ce3accfd0b3a8be44758bb30405dfab4e8e47636"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinModelSampling.lean",
+      "sha256": "d0087f0752c53321d1689e78f43bccff25571f5773fc30c3f7f601e87fd808fd"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinModelShift.lean",
+      "sha256": "3a2728867418b3f187a5d240d0a5b10d1d00ae17bbf5bdf477b6adbeceae4edd"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinModelSingle.lean",
+      "sha256": "c5ec46b3da59f89ac28fd8d51c5ccacc75ede40f28c6258f96a0e64ef9b2b7e2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinMoment.lean",
+      "sha256": "e2f36b37753c96639b0ca636555641aca5e0760d8f47037f8dbbb51337102c5c"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinMomentComplete.lean",
+      "sha256": "d157978c8902d5677667d181dab1b572871b7c172b615b361509119b99de75e8"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinProjection.lean",
+      "sha256": "c9111099edb0a3de7ab7121af481459f22f9382c3fc6cad7619092a28df1b7b9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinResidual.lean",
+      "sha256": "77a5b589168595b8951405141c66f55192d39d3a8f00588e6ad907dff372f825"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MellinTestInversion.lean",
+      "sha256": "2ac1077dcea40007a3ccae61d2dbed6e6819bbd6a097ba6015a14b6d8023c5a0"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/ModelContinuation.lean",
+      "sha256": "2c977b98cac57fd6ad4bab74c298ba9263db637620b8f5cc4a96c6c397229d47"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/MomentError.lean",
+      "sha256": "518ca630d3e8d95a6778e3b2984650c0d991e12e08801c2f1c20ef07f241fae3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoissonWeightedEnergy.lean",
+      "sha256": "d6ffe2a4a462dda828e5f5dd1682c75596bbc8d7b35508ad46decf65a5849257"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleCharacterKernel.lean",
+      "sha256": "e01b9a87e0654ad0ade05511995fbdea12bfac418b4fcacd1095067f252b86dd"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleDiagonalComparison.lean",
+      "sha256": "261c3d56b8f85788c6dcc8b40cae048467a8847ce20d49c9f3abb3f44dd5a41e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleLogDerivative.lean",
+      "sha256": "7d1691187474d948cc5e21698b9f511f95e2649640004c280f83f51b842ca939"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleLowerBound.lean",
+      "sha256": "73f85ac3cf85c8d469a3eae161db591559dfe5d4636893b363aaa9527b5ff219"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleModel.lean",
+      "sha256": "4fe7e27d832b5b4198c6f6cd04916a6e7b8e11ceab2a6ae4528325c9f329f871"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleObstruction.lean",
+      "sha256": "65e85f93cfa7196e3641c09919e0b4caf09506e0fdacbed6f81ac0cdab64b213"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleSpectralObstruction.lean",
+      "sha256": "bffbdedb3de9a8c89290d97f6dc466e6abbd2a2d43ebbe16ec83801c342f7507"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PoleZeta.lean",
+      "sha256": "349f48bf9450e29009f9bf441673b90fe25df5fe5d8a4ad7248f5b0201d77e1d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PrimePairs.lean",
+      "sha256": "1516af3f6c2f03efd8a70634285f6da42c5cb1c5330512e2547c34c740970958"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PrimePowerDouble.lean",
+      "sha256": "d4adc3eb5279ea7f04e0b346611b8947aa5cce483e317754108f9472f10a224a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PrimePowerReindex.lean",
+      "sha256": "9956fb0b4591b8bf31d2abb0177dff0aa5e3312cd8b61aa7ee993206aa66ba99"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/PrimePowers.lean",
+      "sha256": "3730b96d5dfebe81af62c541ef684430b2b35aee4139029ce07a1bb4b3734753"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuadraticAsymptotic.lean",
+      "sha256": "c8c00776a0af811f25c35d43a931c7b81c7b3f1c0194f39ddd9d03d48ccc0597"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuadraticDensity.lean",
+      "sha256": "dc7a30736079bec2832516f82699916da3345d09afd16ecead95c9625a150af1"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuadraticEstimates.lean",
+      "sha256": "e5cde112df8302d7b7cdd158a10674df190ae4ff9ae3e0846ed87d03ff9d4406"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuadraticFunctional.lean",
+      "sha256": "e3d9467b4a82d8ae72cc6cf098d9996f74a8cb69f72a72f5a53dd47de69eac37"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuadraticIdentity.lean",
+      "sha256": "356d3311434ed5dd7383e340c04d8de2da028cd55a3bb55813cdaa1d56cc6877"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuadraticNormChange.lean",
+      "sha256": "5304b182a2971c6704c2104c2b851d7053aa56cf9e78387428a206df2f92a02b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuadraticRiesz.lean",
+      "sha256": "4f8a115d028301af0c4e38d1133b4d37bc856877558661fb929030cf2d8e87f6"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/QuantitativeBounds.lean",
+      "sha256": "e98868d83e92bffcc8cb2493b9a02f0a1a252047e65977b3042a2d5a5301d6c5"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/ResidualAnalytic.lean",
+      "sha256": "4656eece2bcc4580c914b7795aa9be147a5172a217d599e83edeb718980d4118"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SignedFamilies.lean",
+      "sha256": "f930c046e6b5a1412b54131e44459bbeaa438a4c27382e74b9c63baa8d4d6bde"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SingularBounds.lean",
+      "sha256": "f835eb66888de4c140ee6ecd8f7f2ced0ffa2ca68ab19a25c9b9969e65b2974c"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SingularDensity.lean",
+      "sha256": "2aa923d3fe6f88becdb452a8192ba4fbb1d771620df9d2d61a52021426bf8655"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SingularLower.lean",
+      "sha256": "c17ea82957db5638557e952fa41e4c93a007de7ebe94d491fc4827b3c5429617"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralAlgebra.lean",
+      "sha256": "5a9c972aa139d2b892944415df3a2e777c952cb1ca32876f7b6d17e3ea02c1c5"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralBasisExistence.lean",
+      "sha256": "66de5d07a9534c43635e21e96f6da40a6b4be36fd82f98f1351f5234bc11f0f3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralBoundaryBlocks.lean",
+      "sha256": "b43365b2603509c6bc1ad867b7185d687aace67ab4a6de914441ff101e93f9e4"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletedLGrowth.lean",
+      "sha256": "10eb954de08b24f05d463a1bc990b21dab67ca2574d2f78bd68c1c7a87e706b7"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletion.lean",
+      "sha256": "8044d0c2138f7e9928ee67656b7fd1caa8d345212cb30ddb3219486737d8a294"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionChoice.lean",
+      "sha256": "0ab0f36bff2e8c6abdef06a9cf719904290e61ebe770806172f1a053ae4a596e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionDeterminant.lean",
+      "sha256": "c6d8642bded9469b9524440811104292981469360c9e042910c2bc8609991445"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionIdentities.lean",
+      "sha256": "28aa6c8f7b9e045d44b5151d406dc1211bc0bd3bd16c3b8a8a422693dac41607"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionMultiplicities.lean",
+      "sha256": "1316ca794f66f5bbc36d327efc99acea608e295c95d26660b75105d122c4e560"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionTrace.lean",
+      "sha256": "7365946104696c06b4f853a94b5e3eca26d42d8595dfe78736535a4008ef386e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionUniform.lean",
+      "sha256": "79e874042e91334c65601584fe69d9be1a47131404752dea4610ce22cfac75dc"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompletionZeros.lean",
+      "sha256": "3dabbeb45f330efae9e8ff6ba7dc8a085cd9001532e9fec2e395463ef992d7cf"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralCompression.lean",
+      "sha256": "7f51cee595ad944d73e2586835002a7c027b5d9bab91aa6836137a4576590150"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralConsequences.lean",
+      "sha256": "14041a38f2d39cbd1ac769ddbaa1cbac2ba6d8076585f5783e972e1d04508212"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralDiagonalBound.lean",
+      "sha256": "190d73db144c6f08158d5de189faf0d6e05f7e79496dcd8885cdd2f38a4065b9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralDiagonalOperator.lean",
+      "sha256": "421152eb2eefb5f22c05cfed2d606371287fb04fdbe88967e99b3815c2b2a890"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralDiagonalTrace.lean",
+      "sha256": "5b02abb2c111ad67615a442fa301d02eeb7baabc04e0124953b636c7c4275f1b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralDiagonalVector.lean",
+      "sha256": "08bd705f2d59faa1c02e8f018ee987eeb757e2fb13d0f208f3af278baa875a4b"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralDictionary.lean",
+      "sha256": "25a7bafc495ec4038b0ded7c7537c4db14d283ba385300ffef54fe59acafef19"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralHardyCompression.lean",
+      "sha256": "431f02f7c35e59a6fd3533d165c6782f97f2e3e1c05bf752863f18314080f9d3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralHardyRankSeries.lean",
+      "sha256": "4dfe3fee469f2774add0edcf8e1d0168d62cd187fae016135ff4d0a06dbd4bad"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralHilbertSchmidt.lean",
+      "sha256": "61b9ac02710ec10a7336926d551858185ccb635fe4df59c06f0bb8c089da0407"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralHilbertSchmidtCompact.lean",
+      "sha256": "e0ce53798988f4b25adb5874fc7674b63fb75428b9b03bd2ea60bc257324d7b1"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralL2BasisExistence.lean",
+      "sha256": "06d16fd83fd2ea9c02249ec38191239d219f5e7f86e8cdba9824f8095d9f2fe7"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralL2Kernel.lean",
+      "sha256": "1531deff3afcac998581b5fde0e205fbfff9f3a2917f1d6e1f98863f1ad00cfa"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralL2KernelAdjoint.lean",
+      "sha256": "75b796187d7a3d4d22a14fa52d32c9158e170bf7e1a23b883181e8a1af914397"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralL2KernelBasis.lean",
+      "sha256": "dc79b1b3fd3738d7eb314ab4a03c99eab69863fc673b087c0efd42a9ba62bb98"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralModelBound.lean",
+      "sha256": "024a9deff4bb226f8fe6677af277498882f7e71f66ebb9e34d08f1cb01b62d50"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralModelEuler.lean",
+      "sha256": "c1424f54b414b6648a98797cc26e6a0aeb5ab870b7fc431aaaefc0bbce1c8a36"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralModelGrowth.lean",
+      "sha256": "e5514ef6b17dbb330c0c2bf8a1c5dbc42f61cb3f5c071e15eefdf560715f2419"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralModelOperator.lean",
+      "sha256": "e0e2781b6c485fcc07c13543969cfa6c9c4d1f5a3b5a618353009e3e3114dca5"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralNormAttainment.lean",
+      "sha256": "8f5d718a62eb581ebba24a00a04ad9305c8474e344221338b0ae875cc9aa61b4"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronBounds.lean",
+      "sha256": "6f6e7f3dbc5136d2bc9349cd579acd9190af83ba9f027a2444f1d2c4b671e38e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronEuler.lean",
+      "sha256": "54c8cce3bca04ffd1055769a56d3077e03bb49f1bbfebd42d104336a9393558c"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronFubini.lean",
+      "sha256": "2f412c9ee49cfd6ce740d05475a7b87e466e350ab81d0ec4b7517b1dd0b93037"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronGamma.lean",
+      "sha256": "d7d06e4ffb7070e6bd3d92546bbabd01c4248b444c7b288b44dfa25b0dd82134"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronIntegral.lean",
+      "sha256": "dcb4d156959a5587a558c36f0087391eab6fc72e1b733d03f54ef9000dcba835"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronPoleIntegral.lean",
+      "sha256": "bdc06b0996c3d717d0ae86326258fe9340b6d30c0a7e1b0986277d8f015d5617"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronSeries.lean",
+      "sha256": "c374a33da104a93d2d013daf16aeba9baeb627b67eb65e50d3bed41f15dcc351"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPerronTruncation.lean",
+      "sha256": "51241252b5f9caec5df2a78dd6bbc4117c92551b5c3a5bfc6bb5a7a357b172ca"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPoisson.lean",
+      "sha256": "01c5946c42199c45f4e48c9cb57a1d4d9e9ecb07a6fadd21b12ab20e298658a6"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPoissonConvolution.lean",
+      "sha256": "d8b28286d4e63a567b6a90866139ce1050a92a262c8c3dd1050315ca137062e3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPositiveFredholm.lean",
+      "sha256": "3278b36c5d019d09c4bc1fee9e696fcafcafc8427a496f1e49fffc283cbfc04d"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralPositiveTrace.lean",
+      "sha256": "fcc0ca32cce6dae0c68ed1d786e8ed81da01c65ebba760c4259e45161d1a6eb3"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralProductBasis.lean",
+      "sha256": "c24e9fc1acb0f71194db545ac07b996f6d6b3e3cc81243796a5933897cc61144"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralProducts.lean",
+      "sha256": "36f13f13150a9f0942d45bacb549f954f8caf93f41cdc899cae4428e16bdc315"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralQuantitative.lean",
+      "sha256": "ef8844fe3854c2828613380ec46e7d2c91e3dad853b2d4baa907b1053aab44be"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralRankOneSeries.lean",
+      "sha256": "adb37f3f3d009ac7a2b65e8d77956b05d6a899936db8932dcd63a2134cffe987"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralTraceBounds.lean",
+      "sha256": "c99a562457859462cb611fd94d60ae31d48847b9df5ff7f4f54e6a8360ec049a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/SpectralZeroPower.lean",
+      "sha256": "1dbde17190909a95d025d1d3944ea9614e7445c1e54de89a4eab0e463c91d6e4"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/TotientLogLog.lean",
+      "sha256": "3681ab573363e2ee4711e531bec6372455aa239d684e60fb9f22033c032019a9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/VariableComponentOperators.lean",
+      "sha256": "03d4067053cc5d9f846b1c1b55ca4248ad31646bc41b6c4c180dc4dbe01ca0a4"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/VariableConsequences.lean",
+      "sha256": "234eb887cf8375d9435f6fb4be4c33478b24a519308074fe4003d530ebcfd98a"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/VariableQuadratic.lean",
+      "sha256": "2099e564c5b2403ba9e2066c5395a029799521fa2665784ae4b65696525187b4"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/VariableStripOperators.lean",
+      "sha256": "49398b57d2767f9e45ecbe9b486b6550798d32463acac06f7a71480a1b3db76f"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/VariableWeightAsymptotic.lean",
+      "sha256": "f9c19c3e1f38e688f5eec264cd13c7b84e4f8f539beede8f554cfe04f15629a2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/VariableWeightNorm.lean",
+      "sha256": "6dc3cc0e41416a51a10858238c4b44692bec5103f5ae49a4e076467d8a418a01"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WeightNorm.lean",
+      "sha256": "fd0a23b6947c50e5bc9a00c0b4c9a74479e5c83032c222371f031c98f87bb486"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WeightedComponentKernel.lean",
+      "sha256": "2c2f6b7c5c4a6b363aa2e5c663da5101b66c6b101dfc7feb48902b0a7eb56bd9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/Weights.lean",
+      "sha256": "0acc85245591c271c26b3b8203becdf41c1c3fe43056385bade69daaa6567c27"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideCounting.lean",
+      "sha256": "79330bdec3e067504efb924d2bbbe01a20c322c5248e223c09c50fb85d0b5ee9"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideError.lean",
+      "sha256": "e435d8a0a5b64658c4c666c0872126c3fc6b95ec3e08b81be73ed52f9106dbf1"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideFunctional.lean",
+      "sha256": "8058fba2f60fd441162203ae32b3bab13ab7476e14bb376b3053b3e289b8f61e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideMainIntegral.lean",
+      "sha256": "ac9f0df1d4d525467a5166dc50b1099a4d1c3fe85105af987422aa413b3b1241"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideMellinArithmetic.lean",
+      "sha256": "c88df357b9a7c28e1bdd0eacefd00165e62458eaa991f0641c2bdf60458c8ca8"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideMellinModel.lean",
+      "sha256": "767fecc9e211e46ba0ac0164b25bfbd37cbb34d922806b5e6be1b922aca6300f"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideMellinResidual.lean",
+      "sha256": "907cf8c8459fa8f9674343022b9d12e346a43572335c109b69e28487f8be78ae"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideModelData.lean",
+      "sha256": "30ea4c6ef61dc028b79db46003b5a4541c6cb48a7c855de30a2bb051a53b9c8e"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideMoments.lean",
+      "sha256": "bbb88b54fd8f291b0bdfbd2ef1b4e3e34ffb530501bde7b18f576d4e0918154c"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WidePrimePairs.lean",
+      "sha256": "f7ab0021a86f8fde17e86e56981488c9a2f927746d47b52ec548e88cbd5f52a8"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WidePrimePowerCount.lean",
+      "sha256": "9c8261ac87223cdef2e06153de3c02be918ec35f4d21e7aa476d6b3c80d40aa2"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideQuadratic.lean",
+      "sha256": "ee3fad03592cbd72317e86fe1eb7a58f62b1d1fa06c8f3936c4d7d2b40cef0d7"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/WideWeight.lean",
+      "sha256": "5044f8b43074308d5eab6059081868e41c70e99518d098901456c3104fbe6abd"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/ZetaGrowth.lean",
+      "sha256": "a0c9a1259e6344eff38344c6141b4911bd4a925bfe0b225d63859cf6cb2c7dbe"
+    },
+    {
+      "file": "LiLiuGoldbach/Proofs/ZetaTruncation.lean",
+      "sha256": "065b46435d0cd6b88100f8b10692c70c8c02af20cde506c5e50cd793217b14b6"
+    },
+    {
+      "file": "LiLiuGoldbach/Remaining.lean",
+      "sha256": "3bd766e9d910fc0364954d1b444087c4842b4038b002e1af29c9d4fa4d21efbd"
+    },
+    {
+      "file": "LiLiuGoldbach/ResidualMellinPrerequisites.lean",
+      "sha256": "a5cf3c2673424a97df93cd176d41905dd58ecd7c041d0d39b93aa0f28b4fc523"
+    }
+  ],
+  "evidence_files": [
+    {
+      "file": "work/proof-wave2/integration-build12.log",
+      "sha256": "f01758b0b6919909a1bacc114c3ecd06d9e60c5130914150ae87ff19ad54eb23"
+    },
+    {
+      "file": "proof-status.json",
+      "sha256": "137caf9e55ab8a2314139efa0d17c6aba995fab5488d4abee000ebd34f2cc11f"
+    },
+    {
+      "file": "proof-status-raw.json",
+      "sha256": "4e1e79762bfb5e8b2ef9b48d221db1af5c8b978ecb58e3220797ed812bfeebeb"
+    },
+    {
+      "file": "reviewed-types.json",
+      "sha256": "276db5d528e6631e26dc2705f793ac7327595584861c8c19e4a28b61d86c0cb1"
+    },
+    {
+      "file": "reviewed-definitions.json",
+      "sha256": "fdaf5130cb44aa55d97cecd9d2963890f7ad25d30f150409149bbe772b74ed93"
+    },
+    {
+      "file": "source-coverage.json",
+      "sha256": "b36fa4930a5d83e7f95061e7b813922d5cbcd09d61211362def07f77a44c2ae9"
+    },
+    {
+      "file": "progress-verification.json",
+      "sha256": "573798f48b4a6d6f1807f9250ffc09283c8fe1801cea737875db40c301411697"
+    },
+    {
+      "file": "progress-browser-verification.json",
+      "sha256": "8d7e682b8a4cbc557f1cfc93cd1f100b7b239ec6201ec3b458d7dce69a1189bd"
+    },
+    {
+      "file": "progress.html",
+      "sha256": "384194df5fe029a962844ae4698178811ef84d43cd3c845ab29fd70f1d701e52"
+    },
+    {
+      "file": "README.md",
+      "sha256": "55ed0df174db07ac4f009052a8d66fca0a55d77cb769e80bedff164c436f9a36"
+    },
+    {
+      "file": "verification/appendix-b4-cross-check.json",
+      "sha256": "0ce383aae66946b294fa9eb65146215b06ae3884a58ca5b2e861ec2f289b70c0"
+    },
+    {
+      "file": "work/proof-wave2/audit-summary12.log",
+      "sha256": "f09d49204b0e570d83094edef625c873840f7fafd49a5621293136ae2a807fae"
+    },
+    {
+      "file": "work/proof-wave2/types-summary12.log",
+      "sha256": "ff891d8cb5ebe5c0e8336a1b88324aeb77ab571776a7d907946ec1b0eb87f046"
+    },
+    {
+      "file": "work/proof-wave2/definitions-summary12.log",
+      "sha256": "385d0f52bf07b1125d471415a4551fccf8dceb5b971ea093b5576cb6783927e6"
+    },
+    {
+      "file": "work/proof-wave2/html-build12.log",
+      "sha256": "573798f48b4a6d6f1807f9250ffc09283c8fe1801cea737875db40c301411697"
+    },
+    {
+      "file": "work/proof-wave2/html-browser12.log",
+      "sha256": "8d7e682b8a4cbc557f1cfc93cd1f100b7b239ec6201ec3b458d7dce69a1189bd"
+    }
+  ],
+  "ui": {
+    "errors": [],
+    "network": [],
+    "source_hashes_match": true,
+    "input_sha256": "137caf9e55ab8a2314139efa0d17c6aba995fab5488d4abee000ebd34f2cc11f",
+    "html_sha256": "384194df5fe029a962844ae4698178811ef84d43cd3c845ab29fd70f1d701e52",
+    "initial_visible": 102,
+    "original_counts": [
+      "102",
+      "0",
+      "0"
+    ],
+    "warning": "102 条原审阅定理（含附录）的传递依赖均未检出 sorryAx；完整类型及原定义已核对。",
+    "types": "102 个原审阅定理的完整类型已通过 Lean 定义等同性检查；证明及其传递依赖也已全部核验。",
+    "math": 956,
+    "source_exact": true,
+    "closed_visible": 102,
+    "dependencies_pending_visible": 0,
+    "added_visible": 1252,
+    "definitions_visible": 231,
+    "mobile_width": 390
+  },
+  "limits": [
+    "GRH and the paper S/R hypotheses remain explicit assumptions; no unconditional Goldbach or RH claim.",
+    "1354 closed public theorem/lemma declarations include helpers; original paper statement status is tracked separately.",
+    "Original audit HTML and original review archive remain historical statement-review snapshots.",
+    "This package requires the existing goldbach project and the pinned Lean/Mathlib environment to compile."
+  ],
+  "appendix_b4_cross_check": "verification/appendix-b4-cross-check.json"
+}

@@ -1,0 +1,59 @@
+{
+  "status": "certified_by_lean_kernel",
+  "theorem": "TexAuditAB.Numeric.unorderedPrimePairs_eq_905",
+  "theorem_type": "LiLiuGoldbach16.unorderedPrimePairs = 905",
+  "lean_file": "NumericCrossCheck.lean",
+  "lean_file_sha256": "9afaafe5c299b53eae3db31dd68d19148d14bcdcf5276e1c805cf98f31933738",
+  "command": "timeout 180s lake env lean verification/independent-audit/appendices/NumericCrossCheck.lean",
+  "exit_code": 0,
+  "log_file": "numeric-cross-check.log",
+  "log_sha256": "36063a2b0b4b2176f6dcae5b8a3d441844ff6cfdc6c01fe043bff46d34ab8a73",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "axiom_whitelist_check": "passed",
+  "native_decide_used": false,
+  "trustCompiler_used": false,
+  "new_axioms_or_sorry": false,
+  "main_library_modified": false,
+  "method": [
+    "Prove trialPrime n = true iff Nat.Prime n via Nat.prime_def_le_sqrt.",
+    "Use decide +kernel to check the exact finite set cardinality on p = 0,...,30030, testing p <= 30030-p first.",
+    "Prove equality with the ACTUAL LiLiuGoldbach16.unorderedPrimePairs finite set by extensionality and trialPrime_iff.",
+    "Compose the actual-definition bridge with the kernel-checked cardinality 905."
+  ],
+  "scope": "An additional, unconditional independent prime-enumeration certificate for the exact count 905 at N=30030.",
+  "not_certified": [
+    "Stored 5760 character-integral approximations",
+    "Actual RMS moment error < 1.68935e-5",
+    "Application of Lemma B.3 to produce [904.725241,905.274759]",
+    "Exact finite-correction decimal approximations",
+    "Finite spectral numerical eigenvalues or ||C|| <= delta"
+  ],
+  "relation_to_original_audit": "The original audited main library had no count=905 theorem. This NEW audit-only supplement now proves that integer by direct enumeration. It does not complete the original integral-error certification route and does not modify the original library or frozen Reference.lean.",
+  "attempts": [
+    {
+      "method": "Direct decide +kernel on the actual noncomputable finite-count definition",
+      "timeout_seconds": 90,
+      "exit_code": 124,
+      "status": "timeout"
+    },
+    {
+      "method": "Equivalent square-root trial-primality finite count",
+      "timeout_seconds": 90,
+      "exit_code": 124,
+      "status": "timeout; final axiom message was printed but the process did not finish, so not accepted as success"
+    },
+    {
+      "method": "Same square-root trial-primality certificate, full check allowed to finish",
+      "timeout_seconds": 180,
+      "exit_code": 0,
+      "status": "passed"
+    }
+  ],
+  "actual_definition_source": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Definitions.lean",
+  "actual_definition_source_sha256": "db3a3d01a22a18d71a30aa9f7f36a3aea38a797ec805ae0b750fae5b237e4633",
+  "external_comparator": "Root agent will independently replay this new theorem in the real Lean comparator."
+}

@@ -1,0 +1,92 @@
+{
+  "tool": "Lean 4.35.0 built-in lake comparator",
+  "sandbox": "bwrap enabled; extra read-only mounts for the two local Lake path dependencies",
+  "sandbox_adapter_sha256": "7ec58c362ad99d23e72295b61d40cb7f20bcc43b891a04c262328b9bf78a18fd",
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "runs": [
+    {
+      "name": "independent-full-types-build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "TexAuditComparator.CheckTypes"
+      ],
+      "exit_code": 0,
+      "start_utc": "2026-11-13T18:26:49.773185+00:00",
+      "wall_seconds": 5.061341498047113,
+      "log": "independent-full-types-build.log",
+      "log_sha256": "e6114a77e5d654a5bd56e3e0723b04966cf71c1d6347efc4ef60b61e9dbff98f"
+    },
+    {
+      "name": "comparator",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "comparator.json"
+      ],
+      "exit_code": 0,
+      "start_utc": "2026-11-13T18:26:54.835396+00:00",
+      "wall_seconds": 557.291805960238,
+      "log": "comparator.log",
+      "log_sha256": "fdb3030aa27a7688d03f4fe8c2d14d4248b381f6e469d28bdf035c16bb1cdc39"
+    },
+    {
+      "name": "control-condition",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-condition.json"
+      ],
+      "exit_code": 1,
+      "start_utc": "2026-11-13T18:36:12.128089+00:00",
+      "wall_seconds": 4.571054354310036,
+      "log": "control-condition.log",
+      "log_sha256": "9baf77427cae2851003223277e94a4d96ce06b489ddd8091736806e07b09e5c5"
+    },
+    {
+      "name": "control-quantifier",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-quantifier.json"
+      ],
+      "exit_code": 1,
+      "start_utc": "2026-11-13T18:36:16.699608+00:00",
+      "wall_seconds": 4.509090404957533,
+      "log": "control-quantifier.log",
+      "log_sha256": "d858bfbdc2920cd54f7b6eae038c1e04b88edc235ec702ee2982d60a0009acee"
+    },
+    {
+      "name": "control-definition",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-definition.json"
+      ],
+      "exit_code": 1,
+      "start_utc": "2026-11-13T18:36:21.209214+00:00",
+      "wall_seconds": 5.072135377675295,
+      "log": "control-definition.log",
+      "log_sha256": "43214dbe9c91f11333750700724fcdc8f284549c8e28c9a81f63e3a32cebc532"
+    }
+  ],
+  "library_sources_unchanged": true,
+  "reference_sources_unchanged": true,
+  "statement_count": 103,
+  "definition_body_count": 96,
+  "semantic_bridge_count": 18,
+  "comparator_target_count": 218,
+  "all_independent_full_types_equal": true,
+  "accepted": true,
+  "negative_controls_rejected": true,
+  "staged_references_match_frozen_sources": true
+}

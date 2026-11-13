@@ -1,0 +1,22 @@
+Resolving dependencies
+Building TexAuditComparator.ControlConditionChallenge
+⚠ [2/2] Replayed TexAuditComparator.ControlConditionChallenge
+warning: TexAuditComparator/ControlConditionChallenge.lean:2:25: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (2 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ComparatorControl.check, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from TexAuditComparator.ControlConditionChallenge
+Building TexAuditComparator.ControlConditionSolution
+⚠ [2/2] Replayed TexAuditComparator.ControlConditionSolution
+warning: TexAuditComparator/ControlConditionSolution.lean:2:25: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (2 jobs).
+error: Challenge and solution theorem statement do not match: 'ComparatorControl.check'
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ComparatorControl.check, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from TexAuditComparator.ControlConditionSolution

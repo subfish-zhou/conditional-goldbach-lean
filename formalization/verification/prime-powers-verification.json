@@ -1,0 +1,39 @@
+{
+  "file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/LiLiuGoldbach/Proofs/PrimePowers.lean",
+  "source_sha256": "3730b96d5dfebe81af62c541ef684430b2b35aee4139029ce07a1bb4b3734753",
+  "new_definitions": [
+    "badGoldbachMass"
+  ],
+  "new_definition_semantics": "Exact original goldbach summand, retaining original range/coprimality/two weights, restricted to at least one nonprime entry.",
+  "theorems": [
+    "mangoldt_le_log_of_le",
+    "sum_nonprime_mangoldt_eq_psi_sub_theta",
+    "badGoldbachMass_le_psi_sub_theta",
+    "badGoldbachMass_le_sqrt",
+    "goldbach_le_badGoldbachMass_add_primePairCount"
+  ],
+  "all_theorem_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx_dependencies": 0,
+  "source_sorry_count": 0,
+  "typecheck_exit_code": 0,
+  "build_log": "work/proof-wave1/prime-powers-build.log",
+  "axiom_log": "work/proof-wave1/prime-powers-axioms.log",
+  "uses_existing": [
+    "Chebyshev.psi_sub_theta_eq_sum_not_prime",
+    "Chebyshev.psi_sub_theta_le",
+    "ArithmeticFunction.vonMangoldt_le_log",
+    "ArithmeticFunction.vonMangoldt_nonneg",
+    "Finset.sum_range_reflect"
+  ],
+  "bounds": [
+    "badGoldbachMass ≤ (2 log N / N)(psi(N)-theta(N))",
+    "badGoldbachMass ≤ 4 (log N)^2 / sqrt N",
+    "goldbach ≤ badGoldbachMass + (log N)^2/N * PrimePairCount"
+  ],
+  "original_definitions_changed": false,
+  "final_primePair_consequence": "Not implemented here; parent integrates eventual arguments and the paper main theorems."
+}

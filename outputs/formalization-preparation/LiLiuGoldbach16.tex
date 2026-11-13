@@ -1,0 +1,4689 @@
+\documentclass[12pt,a4paper]{amsart}
+\usepackage{amsfonts,amssymb,amsxtra,amsthm,amsmath,amscd,mathrsfs,cite}
+\numberwithin{equation}{section}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{hypertexnames=false,bookmarksdepth=3}
+\makeatletter
+\@ifundefined{subjclassname@2020}{%
+  \@namedef{subjclassname@2020}{%
+    \textup{2020} Mathematics Subject Classification}%
+}{}
+\makeatother
+\textwidth=160mm
+\oddsidemargin=0mm
+\evensidemargin=0mm
+\emergencystretch=1em
+\raggedbottom
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\addtocounter{footnote}{1}
+\def\e{{\rm e}}
+\def\d{\,{\rm d}}
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\def\le{\leqslant}
+\def\ge{\geqslant}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem*{grh}{\(\mathrm{GRH}(N)\)}
+\newtheorem*{hypothesisR}{Hypothesis R}
+\newtheorem*{hypothesisS}{Hypothesis S}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\begin{document}
+\title[A conditional proof of the Goldbach conjecture]{A conditional proof of the Goldbach conjecture}
+\author{Jiamin Li \& Jianya Liu}
+\address{Jiamin Li\\
+Mathematical Research Center\\
+Shandong University\\
+Jinan, Shandong 250100\\
+P. R. China}
+\email{lijiamin@mail.sdu.edu.cn}
+\address{Jianya Liu\\
+State Key Laboratory of Cryptography and Digital Economy Security \& Mathematical Research Center\\
+Shandong University\\
+Jinan, Shandong 250100\\
+P. R. China}
+\email{jyliu@sdu.edu.cn}
+\date{}
+\keywords{Goldbach conjecture, Beta function, Dirichlet $L$-functions,
+	quaternionic spectral function, Riemann hypothesis}
+\subjclass[2020]{Primary 11P32; Secondary 11M06, 47B15}
+\maketitle
+
+\begin{flushright}
+\begin{minipage}{0.82\textwidth}
+\small\itshape
+``The famous problem of which I propose to speak tonight is
+probably as difficult as any of the unsolved problems of
+mathematics, and my lecture cannot be entirely easy.''
+\par\smallskip
+\raggedleft\normalfont
+---G.~H.~Hardy, \emph{Goldbach's Theorem}~\cite[p.~1]{Hardy1922}
+\end{minipage}
+\end{flushright}
+
+\begin{abstract} 
+	We give what is, to our knowledge, the first conditional proof of the binary Goldbach conjecture for all sufficiently large even integers, assuming the generalized Riemann hypothesis for Dirichlet \(L\)-functions together with either of two additional spectral hypotheses. Our approach is fundamentally different from the classical sieve and circle methods. For each even integer \(N\), odd Dirichlet characters modulo \(N\) give an exact projection of a smoothed Goldbach correlation. Subtracting the exact diagonal and a model built from Euler’s beta function isolates an arithmetic residual, which under GRH defines a compact selfadjoint Hilbert–Schmidt operator on a Hardy space. An exact quadratic-form identity expresses the weighted Goldbach error in terms of this operator. Its spectrum defines a symmetric quaternionic function whose zero locations determine the operator norm. A prescribed zero-free region yields the weighted Hardy–Littlewood asymptotic \(\mathcal G(N)\sim c_\phi\mathfrak S(N)\). Under the stronger hypothesis that all spectral zeros have real part \(1/2\), we obtain
+	\[
+	\mathcal G(N)=c_\phi\mathfrak S(N)
+	+O_\phi\!\left(
+	\sqrt{\frac{\mathfrak S(N)}{N}}(\log N)^{3/2}
+	\right).
+	\]
+	Here \(\mathcal G(N)\) is the normalized weighted Goldbach correlation, \(\mathfrak S(N)\) is the Goldbach singular series, and \(c_\phi=\int_0^1\phi(u)^2\,du\) for a fixed nonzero, nonnegative, symmetric smooth weight supported in \([1/3,2/3]\). Under either spectral hypothesis together with GRH, every sufficiently large even integer \(N\) has \(\gg_\phi\mathfrak S(N)N/(\log N)^2\) ordered representations as a sum of two primes in \([N/3,2N/3]\). The method also extends naturally to other problems in additive number theory.
+\end{abstract}
+
+\section{Introduction and statement of results}\label{story:section1}
+
+\subsection{Historical background}\label{story:history}
+
+Goldbach's conjecture, proposed in 1742~\cite{GoldbachEuler1742},
+states that every even integer
+$N\ge4$ is a sum of two primes. The classical approaches to
+this problem are the circle method and sieve methods.
+For the related ternary problem, in 1923 Hardy and
+Littlewood~\cite{HL23} used the circle method to show, under a
+quasi-Riemann Hypothesis, that every sufficiently large odd
+integer is a sum of three primes; Vinogradov~\cite{Vin37}
+removed this hypothesis in 1937. For the binary problem, R\'enyi's prime $+$ almost-prime
+theorem~\cite{Ren48} was followed by Chen's $(1+2)$ theorem~\cite{Chen6673}
+and theorem $(1+1.9)$ of the authors~\cite{LiLiu19}.
+The latter gives $N=p_1+r p_2$ for sufficiently
+large even $N$, with $p_1, p_2$ prime and $r=1$ or prime satisfying
+$r\le p_2^{0.9}$. Despite these advances, neither the circle
+method nor sieve methods have so far resolved the binary
+Goldbach conjecture. An excellent
+account of these classical methods and their principal results
+is given in the monograph of Chengdong Pan and Chengbiao
+Pan~\cite{PanPan}.
+
+Beyond existence, Hardy and Littlewood~\cite{HL23} conjectured
+the following weighted asymptotic formula:
+\begin{equation}\label{eq:hardy-littlewood-goldbach}
+ \frac1N\sum_{\substack{m,n\ge1\\m+n=N}}
+       \Lambda(m)\Lambda(n)\sim\mathfrak S(N)
+ \qquad(N\to\infty,\ N\ \text{even}),
+\end{equation}
+where the von Mangoldt function is defined by $\Lambda(n)=\log p$
+if $n=p^k$ for a prime $p$ and an
+integer $k\ge1$, and $\Lambda(n)=0$ otherwise. The singular
+series is
+\begin{equation}\label{eq:singular-series}
+ \mathfrak S(N)=2C_2\prod_{\substack{p\mid N\\p>2}}
+                      \frac{p-1}{p-2},\qquad
+ C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right).
+\end{equation}
+The singular series records the local arithmetic densities of
+prime pairs.
+
+No proof of the binary conjecture
+is known under the generalized Riemann Hypothesis (GRH) alone,
+even when GRH is assumed for all Dirichlet $L$-functions.
+Under this hypothesis, Hardy and Littlewood~\cite{HL24V}
+obtained the classical exceptional-set bound
+$E(x)\ll_\varepsilon x^{1/2+\varepsilon}$ for every
+$\varepsilon>0$, where $E(x)$ counts the even integers
+$4\le N\le x$ that are not sums of two primes. This estimate
+does not exclude exceptions altogether.
+
+\subsection{Our results}\label{story:results}
+
+We give a conditional proof of the binary Goldbach conjecture
+for all sufficiently large even integers by supplementing GRH
+with either of two spectral hypotheses.
+Our route is fundamentally different from the circle method and
+sieve methods. We draw directly on the classical ideas of
+Dirichlet, Euler, Hilbert and P\'olya, Riemann, and Hardy.
+Starting from the Goldbach problem, we use odd characters to
+isolate the correlation and the Beta model to define its residual.
+Under GRH, the residual yields a selfadjoint operator. Zeros of
+its spectral function control the norm; a Hardy quadratic-form
+identity transfers this control to the Goldbach error.
+
+More precisely, we establish conditional asymptotic formulas
+for a weighted form of the Hardy--Littlewood prediction.
+Fix a nonzero function
+$\phi\in C_c^\infty(\mathbb R)$ supported in $[1/3,2/3]$,
+with $0\le\phi\le1$ and $\phi(u)=\phi(1-u)$. For even
+$N\ge4$, write
+\begin{align}
+ \mathcal G(N)&=\frac1N
+   \sum_{\substack{n+m=N\\(nm,N)=1}}
+       \Lambda(n)\Lambda(m)\phi(n/N)\phi(m/N),
+       \label{eq:goldbach-correlation}\\
+ c_\phi&=\int_0^1\phi^2(u)\,\mathrm{d}u>0,
+       \label{eq:c0}
+\end{align}
+The sum runs over ordered pairs of positive integers and gives a
+normalized weighted count for the Goldbach equation $n+m=N$.
+Our aim is to prove, under our hypotheses, that $\mathcal G(N)>0$
+for all sufficiently large even $N$, with a positive contribution
+from prime pairs remaining after the removal of proper prime powers.
+The expected main term is $c_\phi\mathfrak S(N)$, with the same singular series
+\eqref{eq:singular-series} as in \eqref{eq:hardy-littlewood-goldbach}.
+
+Gauss's congruences gave arithmetic a unifying language.
+Here the decisive choice is to fix the modulus at the very integer
+$N$ to be represented. Within this one modulus, Dirichlet's odd
+characters reveal Goldbach, an arithmetic operator $T_N$ becomes
+accessible, and its spectrum produces a quaternionic function in
+Riemann's spirit. Each $N$ thus carries an arithmetic world of its
+own. This is our departure from the usual sieve and circle-method
+routes.
+
+For each $N$, the construction uses the following part of GRH.
+
+\begin{grh}
+Every nontrivial zero of every primitive Dirichlet $L$-function
+whose conductor divides $N$ has real part $1/2$.
+\end{grh}
+
+The following five steps connect the arithmetic and spectral sides of the proof.
+
+\emph{Dirichlet.} The elementary sign $\chi(-1)=-1$ is decisive:
+odd-character orthogonality separates equal from opposite residue
+classes, and the support of the weight makes the latter exactly
+$n+m=N$.
+Logarithmic derivatives of $L$-functions turn our exact projection
+into a two-variable arithmetic kernel.
+
+\emph{Euler.} The Beta model encodes the off-diagonal geometry
+and recovers the Goldbach main term; subtracting the exact diagonal
+and this model isolates the residual. The theory of several complex
+variables reveals striking phenomena; natural arithmetic examples
+help make them clear.
+As Lebl~\cite[\S1.1]{LeblSCV} writes,
+``There is something very special about the holomorphic
+category.'' Here the Beta model supplies an example dictated by
+arithmetic. After continuation and conjugation in the second
+variable, the model and its residual are Fueter regular. In coordinates
+$\omega=s+zj$, the residual satisfies
+\[
+ (\partial_{\bar s}+j\partial_z)\mathscr E_N(s,\bar z)=0.
+\]
+The four real coordinates retain the two-variable geometry of
+the prime-pair problem.
+
+\emph{Hilbert--P\'olya.} The idea of Hilbert--P\'olya seeks a selfadjoint
+operator to prove a Riemann Hypothesis. We reverse this approach:
+assuming GRH, we use such an operator to derive arithmetic consequences.
+For $N>e^{10}>22026$ satisfying $\mathrm{GRH}(N)$, we realize the
+Hilbert--P\'olya idea in the Goldbach setting by explicitly constructing
+the selfadjoint operator $T_N$ from the residual in \eqref{qp:operator}.
+This operator is compact and Hilbert--Schmidt; the construction is
+detailed in Subsection~\ref{story:hilbert-polya}. We then use either of
+the additional spectral hypotheses below to bound its operator norm.
+The resulting bound makes the arithmetic error
+$|\mathcal G(N)-c_\phi\mathfrak S(N)|$ smaller than the positive main term
+$c_\phi\mathfrak S(N)$ for all sufficiently large even $N$.
+
+\emph{Riemann.} Riemann connected primes with a complex function.
+For prime pairs, our passage to a function of four real variables
+goes through the operator: the function is built from its spectrum.
+Write $\mu_j(N)$ for the nonzero real eigenvalues of $T_N$,
+with multiplicity, so that $\sum_j\mu_j^2(N)<\infty$. Set
+\begin{equation}\label{v3i:spectral-scale}
+ \delta_N=\sqrt{\frac{\mathfrak S(N)}N}(\log N)^{3/2}.
+\end{equation}
+Define the symmetric spectral function
+\begin{equation}\label{qp:spectral-function}
+ \mathfrak X_N(q)=
+ \prod_j\left(1-\frac{4\mu_j^2(N)}{\delta_N^2}q(1-q)\right),
+ \qquad q\in\mathbb H,
+\end{equation}
+where $\mathbb H$ denotes the quaternions and $\Re q$ denotes
+the real part of $q$. The product converges locally uniformly; an empty
+product is $1$. Its symmetry under $q\mapsto1-q$ is similar to that of
+Riemann's completed function~\cite{Riemann1859}.
+This is an intrinsic slice-regular function of the
+spectral variable $q$; the Fueter regularity above concerns the
+arithmetic coordinates. The locations of its zeros determine the
+magnitudes of the nonzero eigenvalues and hence $\|T_N\|$.
+Bounds on this norm control $|\mathcal G(N)-c_\phi\mathfrak S(N)|$
+through the Hardy quadratic-form identity below.
+
+\emph{Hardy.} Linnik's dispersion method~\cite{Linnik1963}
+exemplifies the power of quadratic estimates in additive problems.
+Here the key step is to express the exact signed error
+as a quadratic form in a Hardy space. The weight determines $v_N$ with
+$\|v_N\|^2\ll_\phi1$. Before applying Cauchy--Schwarz, we have the exact identity
+\[
+ c_\phi\mathfrak S(N)-\mathcal G(N)=\langle T_Nv_N,v_N\rangle.
+\]
+Applying Cauchy--Schwarz then gives an upper bound for the absolute error:
+\[
+ |\langle T_Nv_N,v_N\rangle|
+ \le\|T_N\|\,\|v_N\|^2\ll_\phi\|T_N\|.
+\]
+Appendix~\ref{proof:app:numerical} tests the counting method numerically
+at $N=30030$, recovering the exact number of Goldbach representations.
+Section~\ref{story:section2} develops these five steps.
+
+To turn the last inequality into arithmetic estimates, we now
+formulate two conditions on the zeros of $\mathfrak X_N$ that
+give bounds for $\|T_N\|$. The first, Hypothesis S, excludes zeros
+sufficiently close to $1$ and yields an asymptotic formula.
+
+\begin{hypothesisS}
+Fix beforehand a positive function $h(N)\to\infty$ such that,
+eventually,
+\begin{equation}\label{v3i:S-width}
+ \eta_N=\frac{h^2(N)(\log N)^3}{N\mathfrak S(N)}\le\frac14.
+\end{equation}
+For every sufficiently large even $N$ satisfying
+$\mathrm{GRH}(N)$, the function $\mathfrak X_N(q)$ has no
+zeros in $\Re q>1-\eta_N$.
+\end{hypothesisS}
+
+In fact, GRH alone already gives a zero-free region for $\mathfrak X_N$
+of the same form. Its width, however, falls short of that required by
+Hypothesis S, so the resulting estimate is not strong enough to make
+the Goldbach error $o(\mathfrak S(N))$.
+
+\begin{theorem}\label{thm:goldbach-S}
+Assume $\mathrm{GRH}(N)$ for every sufficiently large even
+$N$, and Hypothesis S with the prescribed function $h$. Then
+\begin{equation}\label{v3i:weak-result}
+ \mathcal G(N)=c_\phi\mathfrak S(N)+
+ O_\phi\!\left(\frac{\mathfrak S(N)}{h(N)}\right).
+\end{equation}
+In particular, $\mathcal G(N)\sim c_\phi\mathfrak S(N)$.
+The implied constant is independent of $N$ and $h$.
+\end{theorem}
+
+Although Hypothesis S already suffices for our present purpose
+of obtaining Goldbach representations, we nevertheless venture
+the following stronger, ultimate conjecture on the spectral zeros.
+Together with GRH, it would yield what we expect to be the best
+possible remainder bound in the weighted Goldbach asymptotic formula.
+
+\begin{hypothesisR}
+For every sufficiently large even $N$ satisfying
+$\mathrm{GRH}(N)$, every zero of $\mathfrak X_N(q)$ has
+real part $1/2$.
+\end{hypothesisR}
+
+Hypothesis R implies Hypothesis S for every admissible choice
+of $h$ and gives the following sharper estimate.
+
+\begin{theorem}\label{thm:goldbach-R}
+Assume $\mathrm{GRH}(N)$ for every sufficiently large even
+$N$, and Hypothesis R. Then
+\begin{equation}\label{v3i:strong-result}
+ \mathcal G(N)=c_\phi\mathfrak S(N)+
+ O_\phi\!\left(
+       \sqrt{\frac{\mathfrak S(N)}N}(\log N)^{3/2}\right).
+\end{equation}
+\end{theorem}
+
+Either theorem gives
+$\gg_\phi\mathfrak S(N)N/(\log N)^2$ ordered representations
+$N=p_1+p_2$, with both primes in $[N/3,2N/3]$, for every
+sufficiently large even $N$.
+
+The method developed here also extends naturally to other additive
+problems. These extensions will be discussed in future work.
+
+\medskip\noindent\textit{Notation.}
+We use standard notation from analytic number theory. In
+particular, $p$ denotes a prime, $(a,b)$ the greatest common
+divisor of $a$ and $b$, and $d\mid n$ divisibility.
+The symbols $\Lambda$, $\varphi$, and $\mu$ denote the von
+Mangoldt, Euler totient, and M\"obius functions, respectively.
+The notations $O,o,\ll,\gg,\asymp$, and $\sim$ have their
+standard asymptotic meanings; subscripts indicate the allowed
+dependence of implied constants.
+We write $\mathbf1_{\mathcal A}$ for the indicator of the
+condition $\mathcal A$, and $\int_{(\sigma)}$ for integration
+upwards along $\Re s=\sigma$.
+All logarithms are natural, and all limits in $N$ are taken
+through even integers.
+
+\section{Idea and outline of the proof}\label{story:section2}
+
+The proof has two tasks: represent
+$c_\phi\mathfrak S(N)-\mathcal G(N)$ as a quadratic form of
+$T_N$ at a vector of uniformly bounded norm, and obtain the
+required bound for $\|T_N\|$ from a condition on spectral zeros.
+The construction uses $\mathrm{GRH}(N)$; the additional norm
+bound comes from Hypothesis S or R.
+
+The five steps below complete the argument. We will prove the analytic
+results used here in
+Sections~\ref{proof:sec:goldbach-projection}--\ref{proof:sec:v3-mellin-operator}.
+We introduce notation as it enters the construction. In the final Hardy
+step, we will establish the exact quadratic-form identity and a bound for
+$\|v_N\|$ that is uniform in $N$. These results convert the bound for $\|T_N\|$ into
+the required estimate for the Goldbach error. Removing the contribution
+of proper prime powers then yields representations of $N$ as a sum of
+two primes for all sufficiently large even $N$.
+We retain the fixed weights and arithmetic notation of Section~\ref{story:section1}.
+
+\subsection{Dirichlet: an exact projection of the Goldbach correlation}
+\label{story:dirichlet}
+
+\subsubsection{The finite projection}
+
+The relation $n+m=N$ implies $n\equiv-m\ \mathrm{mod}\ N$. Let $X_N^-$ be
+all odd characters modulo $N$, including imprimitive characters,
+extended by $0$ at nonunits. Their orthogonality gives
+\begin{equation}\label{gb:orthogonality}
+ \frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+          \chi(n)\overline{\chi(m)}
+ =\mathbf1_{(nm,N)=1}
+    \left(\mathbf1_{n\equiv m\ \mathrm{mod}\ N}
+               -\mathbf1_{n\equiv-m\ \mathrm{mod}\ N}\right).
+\end{equation}
+On the support of the weight, $|n-m|\le N/3$ and
+$2N/3\le n+m\le4N/3$. The two congruences thus mean $n=m$
+and $n+m=N$, respectively. Multiplying by
+$\Lambda(n)\Lambda(m)\phi(n/N)\phi(m/N)/N$ and summing gives
+\begin{equation}\label{gb:projection-identity}
+ \mathcal G(N)=\mathcal D(N)-\mathcal P(N),
+\end{equation}
+where
+\begin{equation}\label{gb:finite-moments}
+ \begin{aligned}
+ \mathcal D(N)&=\frac1N\sum_{(n,N)=1}\Lambda^2(n)\phi^2(n/N),\\
+ \mathcal P(N)&=\frac2{\varphi(N)}
+       \sum_{\chi\in X_N^-}|P_\chi|^2,
+ \end{aligned}
+\end{equation}
+and
+\begin{equation}\label{gb:prime-polynomial}
+ P_\chi=\sum_{n\ge1}\frac{\Lambda(n)\chi(n)}{\sqrt n}\Phi(n/N)
+        =\frac1{\sqrt N}\sum_{n\ge1}\Lambda(n)\chi(n)\phi(n/N).
+\end{equation}
+Here the companion weight used throughout is defined by
+\begin{equation}\label{eq:fixed-goldbach-weight}
+ \Phi(u)=\sqrt u\,\phi(u).
+\end{equation}
+The factor $1/\sqrt N$ gives the required normalization after
+squaring. We will prove the unconditional projection identity in
+Lemma~\ref{proof:v9:finite-projection}. It reduces the problem
+to estimating the character moment relative to the exact diagonal.
+
+\subsubsection{The analytic kernel and Mellin inversion}
+
+For $\Re s,\Re z>1/2$, define
+\begin{equation}\label{eq:goldbach-moment}
+ \mathscr P_N(s,z)=\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+       \frac{L'}L(1/2+s,\chi)
+       \frac{L'}L(1/2+z,\bar\chi).
+\end{equation}
+The variables $s,z$ are independent, and the bar conjugates only
+the character. We write $w=s+z$. Use the Mellin convention
+\begin{equation}\label{gb:mellin-convention}
+ \widetilde{\Phi}(s)=\int_0^\infty \Phi(u)u^{s-1}\d u,
+ \quad
+ \Phi(u)=\frac1{2\pi i}\int_{(\sigma)}\widetilde{\Phi}(s)u^{-s}\d s
+ \quad(\sigma\in\mathbb R).
+\end{equation}
+The series $-L'/L(1/2+s,\chi)=\sum_n\Lambda(n)\chi(n)n^{-1/2-s}$
+and Mellin inversion represent $P_\chi$ by an integral. Applying
+this to $P_\chi P_{\bar\chi}=|P_\chi|^2$ and averaging gives
+\begin{equation}\label{gb:mellin-moment}
+ \mathcal P(N)=\frac1{(2\pi i)^2}
+ \int_{(\sigma)}\int_{(\sigma)}
+ N^{s+z}\widetilde{\Phi}(s)\widetilde{\Phi}(z)\mathscr P_N(s,z)
+          \,\mathrm ds\,\mathrm dz.
+\end{equation}
+The two minus signs cancel. This formula holds
+unconditionally for $\sigma>1/2$ by absolute convergence.
+
+Under $\mathrm{GRH}(N)$, all inducing primitive characters have
+their nontrivial zeros on $\Re s=1/2$. Since odd characters are
+nonprincipal, $L'/L(1/2+s,\chi)$ is holomorphic for $\Re s>0$.
+We will prove the joint holomorphy of $\mathscr P_N$ in
+Proposition~\ref{proof:v3:kernel-holomorphy} and extend
+\eqref{gb:mellin-moment} to $0<\sigma\le1/9$ in
+Lemma~\ref{proof:v9:mellin-signed-families}, where we will justify
+the contour shift using the required growth estimates.
+GRH enters through this contour shift.
+
+\subsubsection{The families to be modeled}
+\label{story:dirichlet-families}
+
+For $\Re s,\Re z>1/2$, the unweighted analytic kernel has the
+absolutely convergent expansion
+\[
+ \mathscr P_N(s,z)=
+ \sum_{\substack{n,m\ge1\\(nm,N)=1}}
+ \frac{\Lambda(n)\Lambda(m)}{n^{1/2+s}m^{1/2+z}}
+ \left(\mathbf1_{n\equiv m\ \mathrm{mod}\ N}
+              -\mathbf1_{n\equiv-m\ \mathrm{mod}\ N}\right).
+\]
+We will prove this identity in
+Proposition~\ref{proof:v3:kernel-holomorphy} using the
+logarithmic-derivative series and odd-character orthogonality.
+The positive congruence gives the diagonal $n=m$ and two difference
+families; the negative congruence gives the sum family. The three
+off-diagonal families are therefore
+\[
+ \begin{array}{c|c}
+ \text{relation},\ k\ge1 & \text{sign in }\mathscr P_N\\ \hline
+ m=n+kN & +\\
+ n=m+kN & +\\
+ n+m=kN & -
+ \end{array}
+\]
+After Mellin inversion restores the weight, its support gives
+$|n-m|\le N/3$ and $n+m\le4N/3$. Thus both difference families
+and the sum terms with $k\ge2$ vanish; among the off-diagonal
+families, only $n+m=N$ remains. Before this inversion, however,
+the analytic model must retain all three families. In the next step,
+we will keep the diagonal exactly and model their signed contribution;
+subtracting this model will isolate the Goldbach error.
+
+\subsection{Euler: the Beta model and the analytic residual}
+\label{story:euler}
+
+\subsubsection{The signed continuous model}
+
+By \eqref{gb:projection-identity}, a model for $\mathscr P_N$ must
+have weighted integral $\mathcal D(N)-c_\phi\mathfrak S(N)$.
+We retain the exact diagonal and model the three off-diagonal
+families using their local densities and Euler's Beta integral.
+
+Consider the three families in the table in
+Subsection~\ref{story:dirichlet-families}. Fix $k\ge1$ and set $h=kN$.
+In the first two rows, $h=|n-m|$ is the positive difference; in the
+third, $h=n+m$ is the sum. All three have the same local-density
+factor $\mathfrak S(h)$. For $0<\Re s,\Re z<1/2$ and $w=s+z$,
+their continuous integrals, in the order of the table, are
+\[
+ \begin{aligned}
+ \int_0^\infty x^{-1/2-s}(x+h)^{-1/2-z}\,\mathrm{d}x
+    &=h^{-w}B(1/2-s,w),\\
+ \int_0^\infty x^{-1/2-z}(x+h)^{-1/2-s}\,\mathrm{d}x
+    &=h^{-w}B(1/2-z,w),\\
+ \int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\,\mathrm{d}x
+    &=h^{-w}B(1/2-s,1/2-z).
+ \end{aligned}
+\]
+We will prove these evaluations and derive the common density factor
+in Lemma~\ref{proof:v9:signed-beta-model}. Combining the three terms
+with the signs $+,+,-$ from the table gives the model
+$\mathfrak S(h)h^{-w}K_-(s,z)$, where
+\begin{equation}\label{eq:beta-kernel}
+ K_-(s,z)=B(1/2-s,s+z)+B(1/2-z,s+z)
+                         -B(1/2-s,1/2-z).
+\end{equation}
+Here $B(s,z)=\Gamma(s)\Gamma(z)/\Gamma(s+z)$ is Euler's Beta function.
+The local-density calculation specifies this continuous model without
+assuming an asymptotic formula for prime pairs.
+
+To collect the scales $h=kN$, introduce
+\begin{equation}\label{v3i:series}
+ \mathscr S_N(w)=\sum_{k\ge1}\frac{\mathfrak S(kN)}{k^w}
+ \quad(\Re w>1).
+\end{equation}
+The exact diagonal, the density Euler product, and the resulting
+off-diagonal model are
+\begin{equation}\label{eq:goldbach-arithmetic-kernels}
+ \begin{aligned}
+ {\mathscr D}_N(w)&=\sum_{\substack{n\ge1\\(n,N)=1}}
+                           \frac{\Lambda^2(n)}{n^{1+w}},\\
+ \mathscr S_N(w)&=\mathfrak S(N)\zeta(w)P_N(w),
+ \quad P_N(w)=\prod_{\substack{p>2\\p\nmid N}}
+                       \left(1+\frac{p^{-w}}{p-2}\right),\\
+ {\mathscr K}_N(s,z)&=N^{-s-z}\mathscr S_N(s+z)K_-(s,z).
+ \end{aligned}
+\end{equation}
+The factor $N^{-w}$ comes from $(kN)^{-w}$; $P_N$ is an Euler
+product, distinct from $P_\chi$. We will prove the Euler product identity
+$\mathscr S_N(w)=\mathfrak S(N)\zeta(w)P_N(w)$ for the density series
+in Lemma~\ref{proof:lem:singular-N}. There we will also continue
+$\mathscr S_N$ meromorphically to $\Re w>0$, allowing its use on the
+Beta contours.
+
+\subsubsection{Continuation and the exact main term}
+
+Gamma factorization and the zeta functional equation give
+\begin{equation}\label{v3:model-functional-form}
+ {\mathscr K}_N(s,z)=\mathfrak S(N)\left(\frac\pi N\right)^{s+z}
+ P_N(s+z)\zeta(1-s-z)\mathcal X_1(s)\mathcal X_1(z),
+\end{equation}
+where $\mathcal X_1(s)=\Gamma((3/2-s)/2)/\Gamma((3/2+s)/2)$.
+We will prove in Proposition~\ref{proof:v3:model-geometry} that this
+expression is holomorphic on $0<\Re s,\Re z<3/2$, unconditionally.
+
+When the weight is restored, $N^{s+z}$ cancels the model's
+$N^{-s-z}$. At integer scales, support and symmetry give
+\[
+ \int_0^\infty\phi(u)\phi(u+k)\d u=0\quad(k\ge1),
+ \qquad
+ \int_0^k\phi(u)\phi(k-u)\d u=
+ \begin{cases}
+ c_\phi,&k=1,\\
+ 0,&k\ge2.
+ \end{cases}
+\]
+Hence only the negative sum term at $k=1$ survives, with density
+$\mathfrak S(N)$. For the continued model this evaluation requires
+a contour shift: the combined continuous mass of the two difference
+terms and the negative sum term is zero, cancelling the density
+series pole at $w=1$. We will justify this contour shift and prove
+the following identity for $0<\sigma\le1/9$ in
+Lemma~\ref{proof:gb:main-term-inversion}:
+\[
+ \frac1{(2\pi i)^2}\int_{(\sigma)}\int_{(\sigma)}
+ N^{s+z}\widetilde{\Phi}(s)\widetilde{\Phi}(z)
+ {\mathscr K}_N(s,z)\,\d s\,\d z
+ =-c_\phi\mathfrak S(N).
+\]
+We will also evaluate the diagonal integral as $\mathcal D(N)$ in the same lemma.
+Thus the model has exactly the required weighted integral.
+
+\subsubsection{The arithmetic residual}
+
+Define
+\[
+ \mathscr E_N(s,z)
+ =\mathscr P_N(s,z)-{\mathscr D}_N(s+z)-{\mathscr K}_N(s,z).
+\]
+We will prove in Proposition~\ref{proof:v7:residual-holomorphy} that,
+under $\mathrm{GRH}(N)$, the residual is holomorphic on
+$0<\Re s,\Re z<3/2$. Combining the kernels'
+three Mellin evaluations with \eqref{gb:projection-identity} gives
+\[
+ \mathcal G(N)=c_\phi\mathfrak S(N)
+ -\frac1{(2\pi i)^2}\int_{(\sigma)}\int_{(\sigma)}
+ N^{s+z}\widetilde{\Phi}(s)\widetilde{\Phi}(z)
+ \mathscr E_N(s,z)\,\d s\,\d z.
+\]
+Indeed, the residual integral equals
+$\mathcal P(N)-\mathcal D(N)+c_\phi\mathfrak S(N)
+=c_\phi\mathfrak S(N)-\mathcal G(N)$, fixing the sign.
+The task is now to bound this integral by $o(\mathfrak S(N))$.
+We next express it as a quadratic form of a compact selfadjoint
+operator, whose norm will control the error.
+
+\subsection{Hilbert--P\'olya: reversing the direction of dependence}
+\label{story:hilbert-polya}
+
+\subsubsection{The spectral strategy and the role of GRH}
+\label{story:polya-strategy}
+
+The Hilbert--P\'olya programme seeks a selfadjoint realization
+whose real spectral parameters would place zeta zeros on the
+critical line. Here the direction is reversed: for even
+$N>e^{10}$ we assume $\mathrm{GRH}(N)$, construct an operator
+from the arithmetic residual, and ask how its spectrum controls
+Goldbach. GRH supplies holomorphy; the further spectral hypotheses
+will supply smallness.
+
+Indeed, every odd character is nonprincipal, and GRH makes
+$g_\chi(s)=L'/L(1/2+s,\chi)$ holomorphic for $\Re s>0$.
+Together with the diagonal and the continued Beta model, this
+makes $\mathscr E_N$ holomorphic on $0<\Re s,\Re z<3/2$.
+Conjugating its second variable gives a Hermitian kernel, since
+\begin{equation}\label{qp:Gram}
+ \mathscr P_N(s,\bar z)=\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+                 g_\chi(s)\overline{g_\chi(z)},
+ \quad g_\chi(s)=\frac{L'}L(1/2+s,\chi),
+\end{equation}
+and the diagonal and Beta model have the same symmetry.
+Thus
+\[
+ \mathscr E_N(s,\bar z)=\overline{\mathscr E_N(z,\bar s)}.
+\]
+Subtraction need not preserve positivity, so eigenvalues of either
+sign must be allowed.
+
+\subsubsection{The Hardy strip and the operator}
+\label{story:polya-space}
+
+Set
+\begin{equation}\label{hd:strip}
+ \alpha_N=\frac1{\log N},\quad \beta=\frac18,\quad \sigma_*=\frac19,
+ \quad \Delta_N=\beta-\alpha_N,\quad
+ S_N=\{s:\alpha_N<\Re s<\beta\},
+\end{equation}
+and write
+\begin{equation}\label{hd:space-and-boundary}
+ \mathcal H_N=H^2(S_N),\quad
+ \Gamma_N=(\alpha_N+i\mathbb R)\,\sqcup\,(\beta+i\mathbb R).
+\end{equation}
+Here $\mathcal H_N$ consists of holomorphic functions whose paired
+vertical $L^2$ means remain bounded as the two lines approach
+the boundaries. Their traces form a closed subspace of
+$L^2(\Gamma_N)$, with inner product
+\begin{equation}\label{hd:inner-product}
+ \langle h,g\rangle_{\mathcal H_N}
+       =\int_{\Gamma_N}h(s)\overline{g(s)}\,|\mathrm{d}s|,
+\end{equation}
+linear in the first variable. Both boundaries carry positive arc
+length, with no $1/(2\pi)$ factor. The choice
+$\alpha_N<1/10$ leaves $\sigma_*$ strictly inside the strip and
+keeps $N^{2\alpha_N}=e^2$, which will make the weight functional
+uniformly bounded.
+
+\label{story:operator}
+Insert decay at large heights and define
+\begin{equation}\label{qp:operator}
+ (T_Nh)(s)=\int_{\Gamma_N}
+       \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}h(z)\,|\mathrm{d}z|.
+\end{equation}
+We will prove in Proposition~\ref{proof:bd:HS} that the boundary
+kernel is square integrable and that the operator maps into the
+Hardy trace space. Hermitian symmetry then makes $T_N$
+selfadjoint; square integrability makes it Hilbert--Schmidt and
+hence compact. Consequently its nonzero eigenvalues $\mu_j(N)$,
+counted with multiplicity, satisfy
+\[
+ \mu_j(N)\in\mathbb R,\qquad
+ \sum_j\mu_j^2(N)=\|T_N\|_{\mathrm{HS}}^2<\infty,
+ \qquad \|T_N\|=\sup_j|\mu_j(N)|.
+\]
+The last supremum is understood as zero when $T_N=0$.
+These facts hold for fixed $N$; the arithmetic question is the
+size of this norm as $N$ varies.
+
+\subsubsection{The bridge to the arithmetic error}
+
+For $\alpha_N<\sigma\le1/9$, we define the linear functional
+$\ell_N:\mathcal H_N\to\mathbb C$ using the Mellin transform
+$\widetilde\Phi$ of the companion weight $\Phi$ from
+\eqref{eq:fixed-goldbach-weight}:
+\[
+ \ell_N(h)=\frac1{2\pi i}\int_{(\sigma)}
+       N^s\widetilde\Phi(s)(1+s)h(s)\,\mathrm{d}s.
+\]
+It has a Riesz vector $v_N$, characterized by
+$\ell_N(h)=\langle h,v_N\rangle$, with
+$\mathcal Q_N:=\|v_N\|^2\ll_\phi1$ uniformly in $N$.
+We will verify this bound and derive the following identity for the
+residual in Subsection~\ref{story:hardy-quadratic}:
+\[
+ \mathcal G(N)=c_\phi\mathfrak S(N)-\langle T_Nv_N,v_N\rangle.
+\]
+Now Cauchy--Schwarz gives
+\begin{equation}\label{v3f:master-error-formula}
+ |\mathcal G(N)-c_\phi\mathfrak S(N)|
+ \le\|T_Nv_N\|\,\|v_N\|
+ \le\mathcal Q_N\|T_N\|.
+\end{equation}
+Thus $\|T_N\|=o(\mathfrak S(N))$ suffices for the relative
+asymptotic, while $\|T_N\|\le\delta_N$ gives the error
+$O_\phi(\delta_N)$ in Theorem~\ref{thm:goldbach-R}.
+Before applying the inequality, the quadratic form remains the
+exact arithmetic correction. We next express the required norm
+bounds as conditions on spectral zeros.
+
+\subsection{Riemann: spectral zeros and operator norm bounds}
+\label{story:riemann}
+
+For even $N>e^{10}$ satisfying $\mathrm{GRH}(N)$, inequality
+\eqref{v3f:master-error-formula}, together with $\mathcal Q_N\ll_\phi1$,
+gives the master estimate
+\begin{equation}\label{v3f:master-estimate}
+ |\mathcal G(N)-c_\phi\mathfrak S(N)|\ll_\phi\|T_N\|.
+\end{equation}
+Thus bounding the operator norm directly controls the error in the
+weighted Goldbach count. We will express the required norm bounds as
+conditions on spectral zeros and derive the two asymptotic formulas
+under Hypotheses S and R, respectively.
+
+\subsubsection{The spectral product and its zeros}
+\label{story:riemann-spectrum}
+
+Recall $\delta_N^2=\mathfrak S(N)(\log N)^3/N$ and the product
+\eqref{qp:spectral-function}:
+\[
+ \mathfrak X_N(q)=\prod_j
+ \left(1-\frac{4\mu_j^2(N)}{\delta_N^2}q(1-q)\right).
+\]
+The squared eigenvalues are summable, so the product converges
+locally uniformly. On the usual complex slice, it has the Fredholm
+determinant representation
+\[
+ \mathfrak X_N(q)=\det\!\left(\operatorname{Id}
+              -4\delta_N^{-2}q(1-q)T_N^2\right).
+\]
+Its real coefficients give a consistent intrinsic slice-regular
+extension to $q\in\mathbb H$. This spectral variable is independent
+of the arithmetic variables $(s,z)$; its regularity is distinct
+from the Fueter regularity of $\mathscr E_N(s,\bar z)$ in the
+coordinates $\omega=s+zj$.
+
+\label{story:riemann-zeros}
+The factors immediately give
+\begin{equation}\label{sym:normalization}
+ \mathfrak X_N(0)=\mathfrak X_N(1)=1,
+\end{equation}
+\begin{equation}\label{sym:functional-equation}
+ \mathfrak X_N(1-q)=\mathfrak X_N(q),
+\end{equation}
+and
+\begin{equation}\label{sym:conjugation}
+ \mathfrak X_N(\bar q)=\overline{\mathfrak X_N(q)}.
+\end{equation}
+For real $q\notin(0,1)$ every factor is at least $1$, so there
+are no real zeros there. To find all zeros, put
+$d_j=\delta_N^2/\mu_j^2(N)$ and write $q=x+yI$, where
+$x,y\in\mathbb R$ and $I$ is a unit imaginary quaternion.
+The factor equation is
+\[
+ q(1-q)=x(1-x)+y^2+(1-2x)yI=d_j/4.
+\]
+Its imaginary part forces $x=1/2$ whenever $y\ne0$, and the
+remaining quadratic gives
+\[
+ \begin{cases}
+ \Re q=\frac12,\quad |\Im q|=\frac12\sqrt{d_j-1},&d_j>1,\\[1mm]
+ q=\frac12\quad\text{(a double zero of the factor)},&d_j=1,\\[1mm]
+ q=\frac12\pm\frac12\sqrt{1-d_j},&0<d_j<1.
+ \end{cases}
+\]
+The nonreal zeros form two-spheres on $\Re q=1/2$; every zero
+off that hyperplane is real and comes from $|\mu_j|>\delta_N$.
+Compactness allows only finitely many such exceptional pairs.
+Absolute convergence excludes additional zeros of the infinite
+product. We will give the convergence argument and prove the full
+symmetry statements in Section~\ref{proof:sec:spectral-analysis}.
+
+\subsubsection{The zero--norm dictionary}
+
+Fix $0<\eta<1/2$. Only the larger root of an exceptional pair
+can enter $\Re q>1-\eta$. Keeping it outside means
+\[
+ \frac12+\frac12\sqrt{1-\delta_N^2/\mu_j^2}
+ \le1-\eta,
+\]
+which is equivalent to
+\[
+ |\mu_j|\le\frac{\delta_N}{2\sqrt{\eta(1-\eta)}}.
+\]
+Nonexceptional eigenvalues already satisfy this inequality.
+Taking the supremum therefore gives the exact dictionary
+\[
+ \mathfrak X_N(q)\ne0\ (\Re q>1-\eta)
+ \quad\Longleftrightarrow\quad
+ \|T_N\|\le\frac{\delta_N}{2\sqrt{\eta(1-\eta)}}.
+\]
+The half-space is open, so boundary zeros and equality in the
+norm bound are allowed. In particular, a bound
+$\|T_N\|\le M_N$ with $M_N>\delta_N$ guarantees width
+\begin{equation}\label{outline:norm-width-conversion}
+ \eta(M_N)=\frac{1-\sqrt{1-\delta_N^2/M_N^2}}2,
+ \qquad \eta(M_N)(1-\eta(M_N))=\frac{\delta_N^2}{4M_N^2}.
+\end{equation}
+Thus the width has order $\delta_N^2/M_N^2$.
+
+\subsubsection{What GRH alone supplies}
+\label{story:riemann-grh}
+
+In Theorem~\ref{proof:grh:main-theorem}, we will prove the uniform
+analytic estimate
+\begin{equation}\label{grh:operator-bound}
+ \|T_N\|\le\|T_N\|_{\mathrm{HS}}\ll(\log N)^2
+\end{equation}
+for sufficiently large even $N$ satisfying $\mathrm{GRH}(N)$.
+Its proof splits the operator according to
+\[
+ \mathscr E_N=\mathscr P_N-\mathscr D_N-\mathscr K_N.
+\]
+Writing $\mathcal P_N$, $\mathcal D_N$, and $\mathcal K_N$
+for these three kernels with the weighting and integration of
+\eqref{qp:operator}, one has
+\[
+ T_N=\mathcal P_N-\mathcal D_N-\mathcal K_N.
+\]
+The character average controls the first component, positivity
+controls the diagonal, and the continued Beta formula controls
+the model. Their separate estimates each have size
+$O((\log N)^2)$ at $\alpha_N=1/\log N$; they do not measure
+cancellation between the components.
+
+Putting $M_N=C(\log N)^2$ in the dictionary gives a guaranteed
+zero-free region
+\begin{equation}\label{grh:zero-free-width}
+ \Re q>1-\eta_N^{\mathrm{GRH}},\qquad
+ \eta_N^{\mathrm{GRH}}\asymp\frac{\mathfrak S(N)}{N\log N}.
+\end{equation}
+The constant is chosen sufficiently small using the absolute
+constant implied in \eqref{grh:operator-bound}. This available norm
+bound is too large to make the Goldbach error smaller than its
+main term; S and R impose the required improvement.
+
+\subsubsection{Completing the implications of S and R}
+\label{story:riemann-hypotheses}
+
+For any zero-free width $0<\eta_N\le1/4$, the dictionary and
+the master estimate \eqref{v3f:master-estimate} give
+\begin{equation}\label{v3f:relative-width}
+ \frac{|\mathcal G(N)-c_\phi\mathfrak S(N)|}{c_\phi\mathfrak S(N)}
+ \ll_\phi\sqrt{\frac{(\log N)^3}{N\eta_N\mathfrak S(N)}}.
+\end{equation}
+It therefore suffices for the asymptotic that
+\begin{equation}\label{v3f:minimal-width}
+ \frac{N\eta_N\mathfrak S(N)}{(\log N)^3}\longrightarrow\infty.
+\end{equation}
+Writing the left side as $h(N)^2$ explains precisely the scale
+chosen in Hypothesis S.
+
+\emph{Hypothesis S.} Write $\mathrm S(N;h)$ for its zero-exclusion
+assertion at the fixed modulus, with the prescribed admissible
+$h$ and width \eqref{v3i:S-width}. Substitution gives
+\begin{equation}\label{v3i:S-norm}
+ \mathrm S(N;h)\quad\Longleftrightarrow\quad
+ \|T_N\|\le\frac{\mathfrak S(N)}{2h(N)\sqrt{1-\eta_N}}.
+\end{equation}
+Since $1-\eta_N\ge3/4$, the master estimate
+\eqref{v3f:master-estimate} proves
+$\mathcal G(N)=c_\phi\mathfrak S(N)+O_\phi(\mathfrak S(N)/h(N))$,
+which is Theorem~\ref{thm:goldbach-S}. The implied constant is
+independent of $N$ and $h$; the required lower bound on $N$
+may depend on $\phi$ and the preassigned function $h$. The gain over the available
+GRH width is
+\begin{equation}\label{outline:S-gap}
+ \frac{\eta_N}{\eta_N^{\mathrm{GRH}}}
+ \asymp h^2(N)\frac{(\log N)^4}{\mathfrak S^2(N)}\longrightarrow\infty,
+\end{equation}
+using $\mathfrak S(N)\ll\log\log N$.
+The excluded zeros are real pairs near the endpoints; the
+Siegel-zero analogy concerns their location, without asserting
+uniqueness, simplicity, or repulsion.
+
+\emph{Hypothesis R.} Write $\mathrm R(N)$ for its assertion
+at the fixed modulus. The zero classification shows directly that
+\begin{equation}\label{v3i:R-equivalence}
+ \mathrm R(N)\quad\Longleftrightarrow\quad\|T_N\|\le\delta_N.
+\end{equation}
+The master estimate \eqref{v3f:master-estimate} therefore gives
+$\mathcal G(N)=c_\phi\mathfrak S(N)+O_\phi(\delta_N)$,
+proving Theorem~\ref{thm:goldbach-R}. All exceptional real pairs
+are excluded, so R also implies S for every admissible choice of
+$h$.
+
+In the following Hardy subsection, we will establish the
+exact quadratic-form identity and the uniform bound for $\|v_N\|$
+needed to convert the spectral estimates into these arithmetic conclusions.
+
+\subsection{Hardy: the arithmetic error as an exact quadratic form}
+\label{story:hardy}
+
+The final step evaluates the residual at the vector selected by the
+Goldbach weight. We obtain an exact identity first; Cauchy--Schwarz
+then turns it into the estimate needed for the two theorems.
+Throughout, assume $\mathrm{GRH}(N)$ and $N>e^{10}$, with
+$\Phi(u)=\sqrt u\,\phi(u)$ as in \eqref{eq:fixed-goldbach-weight}.
+
+\subsubsection{Mellin inversion and the arithmetic residual}
+\label{story:mellin}
+
+Mellin inversion of the prime polynomial gives
+\begin{equation}\label{gb:mellin-P}
+ P_\chi=-\frac1{2\pi i}\int_{(\sigma)}
+    N^s\widetilde{\Phi}(s)\frac{L'}L(1/2+s,\chi)\,\mathrm ds.
+\end{equation}
+It holds first on $\sigma=1$ by absolute convergence, and then
+on $0<\sigma\le1/9$: GRH excludes poles between the contours,
+while the smooth weight makes the horizontal integrals vanish.
+Multiplying the formulas for $\chi$ and $\bar\chi$ and averaging
+over $X_N^-$ proves \eqref{gb:mellin-moment} on these lines.
+The two subtracted kernels have the evaluations
+\begin{align}
+ \frac1{(2\pi i)^2}\int_{(\sigma)}\int_{(\sigma)}
+  N^{s+z}\widetilde{\Phi}(s)\widetilde{\Phi}(z){\mathscr D}_N(s+z)\,\d s\,\d z
+ &=\mathcal D(N),\label{gb:diagonal-inversion}\\
+ \frac1{(2\pi i)^2}\int_{(\sigma)}\int_{(\sigma)}
+  \widetilde{\Phi}(s)\widetilde{\Phi}(z)
+  \mathscr S_N(s+z)K_-(s,z)\,\d s\,\d z
+ &=-c_\phi\mathfrak S(N).\label{gb:beta-inversion}
+\end{align}
+We will prove both evaluations in
+Lemma~\ref{proof:gb:main-term-inversion}.
+
+The residual integral is therefore
+\begin{equation}\label{v3w:residual}
+ \begin{aligned}
+ r_\sigma(N)&=\frac1{(2\pi i)^2}
+ \int_{(\sigma)}\int_{(\sigma)}
+ N^{s+z}\widetilde\Phi(s)\widetilde\Phi(z)\mathscr E_N(s,z)
+ \,\mathrm ds\,\mathrm dz\\
+ &=\mathcal P(N)-\mathcal D(N)+c_\phi\mathfrak S(N).
+ \end{aligned}
+\end{equation}
+The exact projection \eqref{gb:projection-identity} now yields
+\begin{equation}\label{v3w:exact}
+ \mathcal G(N)=c_\phi\mathfrak S(N)-r_\sigma(N).
+\end{equation}
+In particular, this signed discrepancy is independent of $\sigma$;
+write it as $r(N)$.
+
+\subsubsection{The residual as a quadratic form}
+\label{story:hardy-quadratic}
+
+For an interior line $\alpha_N<\sigma<\beta$, define
+\begin{equation}\label{bm:functional}
+ \ell_N(h)=\frac1{2\pi i}\int_{(\sigma)}
+          N^s\widetilde\Phi(s)(1+s)h(s)\,\mathrm{d}s,
+ \qquad h\in\mathcal H_N.
+\end{equation}
+The factor $1+s$ compensates for the denominator inserted in
+the operator kernel. Put $V(u)=\Phi(u)-u\Phi'(u)$, so that
+$\widetilde V(s)=(1+s)\widetilde\Phi(s)$.
+We will prove the following formula for the exact squared norm in
+Proposition~\ref{proof:bm:norm}, using the Fourier--Laplace
+representation of the strip Hardy space:
+\begin{equation}\label{bm:norm-integral}
+ \mathcal Q_N:=\|\ell_N\|^2
+ =\frac1{2\pi}\int_0^\infty
+       \frac{(Nu)^{2\alpha_N}|V(u)|^2}
+            {1+(Nu)^{-2\Delta_N}}\,\frac{\mathrm{d}u}{u}.
+\end{equation}
+This representation also proves independence of the interior contour.
+Since $\alpha_N=1/\log N$ and $V$ is supported in $[1/3,2/3]$,
+\begin{equation}\label{bm:uniform-norm}
+ \mathcal Q_N\le\frac{e^2}{2\pi}
+       \int_0^\infty|\Phi(u)-u\Phi'(u)|^2\,\frac{\mathrm{d}u}{u}
+       \ll_\phi1.
+\end{equation}
+The choice of the moving strip thus prevents a loss growing with $N$.
+
+Let $v_N$ be the Riesz vector, with
+$\ell_N(h)=\langle h,v_N\rangle$ and
+$\|v_N\|^2=\mathcal Q_N$; the inner product is linear in its first
+entry. Let $k_z$ be the evaluation vector, defined by
+$h(z)=\langle h,k_z\rangle$. The operator kernel is
+\[
+ \langle T_Nk_z,k_s\rangle
+   =\frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}.
+\]
+Apply $\ell_N$ to each kernel variable, conjugating the second.
+The factors $1+s$ and $1+\bar z$ cancel; the reality of $\Phi$
+then converts the second contour to the holomorphic Mellin contour.
+This recovers precisely \eqref{v3w:residual}, and hence
+\begin{equation}\label{bm:quadratic-form}
+ r(N)=\langle T_Nv_N,v_N\rangle.
+\end{equation}
+Only now do we estimate. Cauchy--Schwarz gives
+\begin{equation}\label{bm:direct-error}
+ |r(N)|\le\|T_Nv_N\|\,\|v_N\|
+       \le\mathcal Q_N\|T_N\|\ll_\phi\|T_N\|.
+\end{equation}
+Together with \eqref{v3w:exact}, this proves the master estimate
+\eqref{v3f:master-estimate} and hence
+Theorems~\ref{thm:goldbach-S} and \ref{thm:goldbach-R} under S and R.
+Retaining the signed quadratic form gives the exact weighted
+Goldbach identity.
+
+\subsubsection{Goldbach representations}
+\label{story:primes-and-zeros}
+
+Goldbach representations follow readily from either
+Theorem~\ref{thm:goldbach-S} or Theorem~\ref{thm:goldbach-R}:
+under its hypotheses, every sufficiently large even integer $N$
+can be written as $N=p_1+p_2$, with $p_1,p_2$ prime,
+and the number of representations is $\gg_\phi N(\log N)^{-2}$.
+
+\section{Dirichlet: an exact projection of the Goldbach correlation}
+\label{proof:sec:goldbach-projection}\label{proof:v7:dirichlet}
+\label{proof:sec:arithmetic-motivation}\label{proof:v7:main-thread}
+
+We express the weighted Goldbach correlation as the difference
+between a diagonal moment and a moment over odd characters modulo $N$.
+The identity is finite and unconditional. We then pass to logarithmic
+derivatives of Dirichlet $L$-functions and use GRH to move the Mellin
+contours into the region needed for the continuous model.
+
+Fix the weight $\phi$ used in \eqref{eq:goldbach-correlation}
+and its companion $\Phi$ defined by \eqref{eq:fixed-goldbach-weight}.
+The symbol $\varphi(N)$ denotes Euler's
+totient, whereas $\phi$ always denotes the weight. With $\Lambda$
+the von Mangoldt function, the correlation to be studied is
+\[
+ \mathcal G(N)=\frac1N
+ \sum_{\substack{n+m=N\\(nm,N)=1}}
+       \Lambda(n)\Lambda(m)\phi(n/N)\phi(m/N),
+\]
+as in~\eqref{eq:goldbach-correlation}.
+The sum runs over ordered pairs of positive integers. Its expected
+main term is $c_\phi\mathfrak S(N)$, where
+\[
+ c_\phi=\int_0^1\phi^2(u)\,\d u,
+\]
+as in~\eqref{eq:c0},
+and
+\[
+ \mathfrak S(N)=2C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2},
+ \qquad C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right),
+\]
+as in~\eqref{eq:singular-series}.
+We write
+\[
+ X_N^-=\{\chi\ \mathrm{mod}\ N:\chi(-1)=-1\}
+\]
+for all odd characters modulo $N$, including imprimitive characters,
+and extend each character by zero when its argument is not coprime
+to $N$. These conventions account for the coprimality condition in
+the projection below.
+
+\subsection{The finite projection and its size}
+\label{proof:v7:weight-class}\label{proof:v7:finite-character-moment}
+
+We will study the two moments
+\[
+ \begin{aligned}
+ \mathcal D(N)&=\frac1N\sum_{(n,N)=1}\Lambda^2(n)\phi^2(n/N),\\
+ \mathcal P(N)&=\frac2{\varphi(N)}\sum_{\chi\in X_N^-}|P_\chi|^2,
+ \end{aligned}
+\]
+as in~\eqref{gb:finite-moments},
+where $P_\chi$ is the character polynomial
+\[
+ P_\chi=\sum_{n\ge1}\frac{\Lambda(n)\chi(n)}{\sqrt n}\Phi(n/N)
+       =\frac1{\sqrt N}\sum_{n\ge1}\Lambda(n)\chi(n)\phi(n/N),
+\]
+as in~\eqref{gb:prime-polynomial}.
+Thus $\mathcal D(N)$ retains equal indices, while $\mathcal P(N)$
+averages the squared character sums with the same normalization.
+
+\begin{lemma}[Finite projection]\label{proof:v9:finite-projection}
+For every even $N\ge4$, the moments just defined satisfy the exact identity
+\[
+ \mathcal G(N)=\mathcal D(N)-\mathcal P(N)
+\]
+as in~\eqref{gb:projection-identity},
+and the bound
+\begin{equation}\label{proof:dir:moment-bound}
+ 0\le\mathcal P(N)\le\mathcal D(N)\ll_\phi\log N.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The selector $(1-\chi(-1))/2$ in the full character sum gives
+\[
+ \frac2{\varphi(N)}\sum_{\chi\in X_N^-}\chi(n)\overline{\chi(m)}
+ =\frac1{\varphi(N)}\sum_{\chi\ \mathrm{mod}\ N}
+       (1-\chi(-1))\chi(n)\overline{\chi(m)}.
+\]
+Full character orthogonality gives, with the coprimality restriction
+coming from the zero extension,
+\[
+ \frac2{\varphi(N)}\sum_{\chi\in X_N^-}\chi(n)\overline{\chi(m)}
+ =\mathbf1_{(nm,N)=1}
+   \left(\mathbf1_{n\equiv m\ \mathrm{mod}\ N}
+              -\mathbf1_{n\equiv-m\ \mathrm{mod}\ N}\right),
+\]
+as in~\eqref{gb:orthogonality}.
+If the weight is nonzero, $N/3\le n,m\le2N/3$, so
+$|n-m|\le N/3$ and $2N/3\le n+m\le4N/3$.
+The only permitted multiples of $N$ are therefore $0$ for $n-m$
+and $N$ for $n+m$. Thus
+\[
+ \mathbf1_{(nm,N)=1}\mathbf1_{n+m=N}
+ =\mathbf1_{(n,N)=1}\mathbf1_{n=m}
+  -\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+                 \chi(n)\overline{\chi(m)}
+\]
+on this support. Multiply by
+$\Lambda(n)\Lambda(m)\phi(n/N)\phi(m/N)/N$ and sum.
+The diagonal is $\mathcal D(N)$, while the character term factors
+as $P_\chi P_{\bar\chi}=|P_\chi|^2$, since $\phi$ is real.
+This proves the finite projection with its exact normalization.
+Since both $\mathcal G(N)$ and $\mathcal P(N)$ are nonnegative,
+$0\le\mathcal P(N)\le\mathcal D(N)$. Chebyshev's estimate
+$\sum_{n\le x}\Lambda(n)\ll x$ gives
+\[
+ \mathcal D(N)\le\frac{\log N}{N}\sum_{n\le N}\Lambda(n)\ll\log N.
+\]
+This proves the lemma.
+\end{proof}
+
+The arithmetic problem is to estimate the difference between these
+two moments at the smaller scale $\mathfrak S(N)$.
+
+\subsection{Holomorphy of the character kernel}
+\label{proof:v3:sec-geometry}\label{proof:v7:correlation-residual}
+
+To insert the Mellin weight into both character polynomials, we use
+the two-variable kernel
+\[
+ \mathscr P_N(s,z)=\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+                    g_\chi(s)g_{\bar\chi}(z),
+\]
+as in~\eqref{eq:goldbach-moment},
+where $g_\chi$ is the logarithmic derivative
+\[
+ g_\chi(s)=\frac{L'}L(1/2+s,\chi),
+\]
+as in~\eqref{qp:Gram}.
+The variables $s,z$ are independent; conjugation here acts only on
+the character. Thus $\mathscr P_N(s,z)$ is holomorphic in both
+variables wherever the logarithmic derivatives are holomorphic.
+The Hermitian kernel used later is $\mathscr P_N(s,\bar z)$:
+it is holomorphic in the first variable and antiholomorphic in
+the second, as is usual for kernels on spaces of holomorphic functions. We keep these two
+forms distinct when applying Mellin inversion.
+
+Write $\chi^*$ for the primitive character inducing $\chi$ and
+$d_\chi\mid N$ for its conductor. In this section,
+$\mathrm{GRH}(N)$ means that every nontrivial zero of every
+primitive Dirichlet $L$-function whose conductor divides $N$
+has real part $1/2$. On $\Re s>1$,
+$L(s,\chi)=\sum_{n\ge1}\chi(n)n^{-s}$, and its logarithmic derivative is
+\[
+ -\frac{L'}L(1/2+s,\chi)
+ =\sum_{n\ge1}\frac{\Lambda(n)\chi(n)}{n^{1/2+s}}
+ \qquad(\Re s>1/2).
+\]
+
+\begin{proposition}[The character kernel]\label{proof:v3:kernel-holomorphy}
+For $\Re s,\Re z>1/2$, the kernel has the absolutely convergent
+expansion
+\begin{equation}\label{proof:dir:kernel-expansion}
+ \mathscr P_N(s,z)=
+ \sum_{\substack{n,m\ge1\\(nm,N)=1}}
+ \frac{\Lambda(n)\Lambda(m)}{n^{1/2+s}m^{1/2+z}}
+ \left(\mathbf1_{n\equiv m\ \mathrm{mod}\ N}
+              -\mathbf1_{n\equiv-m\ \mathrm{mod}\ N}\right).
+\end{equation}
+The kernel $\mathscr P_N$ is meromorphic on $\mathbb C^2$, with
+possible poles only where one of its logarithmic derivatives has a
+pole. Under $\mathrm{GRH}(N)$ it is jointly holomorphic for
+$\Re s,\Re z>0$ and satisfies
+\begin{equation}\label{proof:v3:kernel-symmetries}
+ \mathscr P_N(s,z)=\mathscr P_N(z,s),\qquad
+ \overline{\mathscr P_N(s,z)}=\mathscr P_N(\bar s,\bar z).
+\end{equation}
+The Hermitian kernel $\mathscr P_N(s,\bar z)$ is positive
+semidefinite, of rank at most $\varphi(N)/2$.
+\end{proposition}
+
+\begin{proof}
+Expand both logarithmic derivatives in their absolutely convergent
+Dirichlet series and apply the odd-character orthogonality formula
+proved above.
+The two signs from the logarithmic derivatives cancel; the remaining
+minus sign comes from the odd-character projection. This proves
+\eqref{proof:dir:kernel-expansion}.
+
+Every odd character is nonprincipal, so its $L$-function is entire
+and its logarithmic derivative is meromorphic, with poles at the zeros.
+Under GRH the nontrivial zeros lie on $\Re s=1/2$; the primitive
+trivial zeros are negative odd integers, and the additional Euler-factor
+zeros of imprimitive characters lie on $\Re s=0$. Hence each
+$g_\chi(s)$ is holomorphic for $\Re s>0$.
+The character sum is finite, so products of these one-variable
+functions are jointly holomorphic on the product domain.
+No limiting interchange is needed to pass from the individual
+logarithmic derivatives to the kernel.
+
+Conjugation gives $g_{\bar\chi}(\bar z)=\overline{g_\chi(z)}$.
+Consequently the Hermitian form of the kernel is
+\[
+ \mathscr P_N(s,\bar z)=\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+                    g_\chi(s)\overline{g_\chi(z)},
+\]
+as in~\eqref{qp:Gram}.
+This Gram representation proves positivity and the rank bound,
+since $|X_N^-|=\varphi(N)/2$. Reindexing by
+$\chi\mapsto\bar\chi$ gives \eqref{proof:v3:kernel-symmetries}.
+This proves the proposition.
+\end{proof}
+
+\subsection{Bounds for logarithmic derivatives under GRH}
+
+The contour shifts require vertical bounds on fixed positive strips.
+We derive them from the primitive zero expansion, retaining the Euler
+factors that distinguish a character modulo $N$ from its inducing character.
+
+For a primitive odd character $\chi^*$ of conductor $d_\chi$, write
+\[
+ \mathcal L(u,\chi^*)=(d_\chi/\pi)^{(u+1)/2}
+ \Gamma((u+1)/2)L(u,\chi^*).
+\]
+For the following results, see~\cite{IK2004}.
+
+\begin{lemma}\label{proof:v9:primitive-zero-data}
+For a primitive odd character $\chi^*$, the nontrivial zeros $\rho$,
+counted with multiplicity, satisfy
+\begin{align}
+ \frac{\mathcal L'}{\mathcal L}(u,\chi^*)
+ -\frac{\mathcal L'}{\mathcal L}(u_0,\chi^*)
+ &=\sum_\rho\left(\frac1{u-\rho}-\frac1{u_0-\rho}\right),
+       \label{proof:gb:hadamard-difference}\\
+ \#\{\rho:t\le\Im\rho<t+1\}
+ &\ll\log\bigl(d_\chi(|t|+2)\bigr),\label{proof:gb:local-zero-count}
+\end{align}
+where the first identity holds away from zeros and its series
+converges absolutely and locally uniformly in $u,u_0$.
+\end{lemma}
+
+Under $\mathrm{GRH}(N)$, the nontrivial zeros of $L(s,\chi^*)$
+have the form $1/2+i\gamma_\chi$, where $\chi^*$ is the primitive
+character inducing $\chi$. Set
+\begin{align}
+ Z_\chi(s)&=\sum_{\gamma_\chi}
+   \left(\frac1{s-i\gamma_\chi}-\frac1{3/2-i\gamma_\chi}\right),
+       &&\Re s>0,\label{proof:gb:zero-resolvent}\\
+ e_\chi(u)&=\sum_{\substack{p\mid N\\p\nmid d_\chi}}
+       \frac{\chi^*(p)\log p}{p^u-\chi^*(p)},
+       &&\Re u>0.\label{proof:gb:Euler-correction}
+\end{align}
+
+\begin{lemma}\label{proof:lem:zero-expansion}
+Assume $\mathrm{GRH}(N)$. The series \eqref{proof:gb:zero-resolvent}
+converges absolutely and locally uniformly for $\Re s>0$, and
+\begin{equation}\label{proof:gb:zero-identity}
+ \begin{split}
+ g_\chi(s)={}&Z_\chi(s)+\frac{L'}L(2,\chi)
+ -\frac12\left\{\frac{\Gamma'}\Gamma(3/4+s/2)
+                       -\frac{\Gamma'}\Gamma(3/2)\right\}\\
+ &+e_\chi(1/2+s)-e_\chi(2).
+ \end{split}
+\end{equation}
+For every compact interval $I\subset(0,\infty)$,
+\begin{equation}\label{proof:gb:logderivative-bound}
+ g_\chi(\sigma+it)\ll_I\log^2\bigl(N(|t|+2)\bigr)
+ \qquad(\sigma\in I,\ t\in\mathbb R,\ \chi\in X_N^-).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The paired summand in \eqref{proof:gb:zero-resolvent} is
+$(3/2-s)/((s-i\gamma_\chi)(3/2-i\gamma_\chi))$.
+The local zero count therefore proves locally uniform absolute
+convergence. Apply \eqref{proof:gb:hadamard-difference} at
+$u=1/2+s$ and $u_0=2$. The conductor terms cancel.
+Subtracting the Gamma terms and using
+\[
+ L(u,\chi)=L(u,\chi^*)
+       \prod_{\substack{p\mid N\\p\nmid d_\chi}}
+                           (1-\chi^*(p)p^{-u})
+\]
+gives \eqref{proof:gb:zero-identity}.
+On a compact subset of the right half-plane, the real parts stay
+uniformly positive. Thus the finitely many low zeros cannot spoil
+the local uniform convergence of the paired series.
+
+For the bound, let $I=[\delta,M]$ with $\delta>0$ and put
+$T=|t|+2$. For $|\gamma_\chi|\le2T$, group each fraction in
+\eqref{proof:gb:zero-resolvent} by unit distance from its imaginary
+part. Equation~\eqref{proof:gb:local-zero-count} gives
+\[
+ \ll_I\log\bigl(N(T+2)\bigr)
+       \left(1+\sum_{1\le j\le3T+2}\frac1j\right)
+ \ll_I\log^2\bigl(N(T+2)\bigr).
+\]
+The denominators nearest $t$ are bounded below by $\delta$.
+For $|\gamma_\chi|>2T$, keep the paired fractions together:
+their difference is $O_I(T/|\gamma_\chi|^2)$.
+Dyadic summation and \eqref{proof:gb:local-zero-count} give a total
+$O_I(\log(N(T+2)))$ from this range.
+Here $d_\chi\le N$ makes the zero-count bound uniform in the
+inducing conductor, so the implied constant depends only on $I$.
+
+The remaining terms in \eqref{proof:gb:zero-identity} are smaller.
+The series at $u=2$ is bounded absolutely, Stirling's formula bounds
+the Gamma difference by $O_I(\log T)$, and
+\[
+ |e_\chi(u)|\le\sum_{p\mid N}\frac{\log p}{p^{1/2+\delta}-1}
+       \le\frac{\log N}{2^{1/2+\delta}-1}
+       \qquad(\Re u\ge1/2+\delta).
+\]
+The same estimate at $u=2$ gives $e_\chi(2)\ll\log N$.
+This proves \eqref{proof:gb:logderivative-bound}.
+This proves the lemma.
+\end{proof}
+
+\subsection{Mellin inversion and the signed families}
+\label{proof:dir:character-mellin-summary}
+
+We connect the unconditional finite projection to the contours used
+in the model calculation and identify the three signed families.
+
+For the companion weight $\Phi$ defined in \eqref{eq:fixed-goldbach-weight},
+our Mellin transform and inversion conventions are
+\[
+ \widetilde\Phi(s)=\int_0^\infty\Phi(u)u^{s-1}\,\d u,
+ \qquad
+ \Phi(u)=\frac1{2\pi i}\int_{(\sigma)}
+              \widetilde\Phi(s)u^{-s}\,\d s
+ \quad(\sigma\in\mathbb R),
+\]
+as in~\eqref{gb:mellin-convention},
+where $\int_{(\sigma)}$ is directed upwards along $\Re s=\sigma$.
+Smoothness and compact support give, in particular,
+\[
+ \widetilde\Phi(\sigma+it)\ll_{\phi,I}(1+|t|)^{-6}
+ \quad(\sigma\in I),
+\]
+for every fixed compact real interval $I$. The transform inserts
+the weight into the logarithmic-derivative series, and its decay
+controls the integrals when the contour is moved.
+
+\begin{lemma}[Mellin projection and signed families]
+\label{proof:v9:mellin-signed-families}
+The following Mellin representation holds unconditionally for
+$\sigma>1/2$ and, under $\mathrm{GRH}(N)$, also for
+$0<\sigma\le1/9$:
+\[
+ \mathcal P(N)=\frac1{(2\pi i)^2}
+ \int_{(\sigma)}\int_{(\sigma)}
+ N^{s+z}\widetilde\Phi(s)\widetilde\Phi(z)\mathscr P_N(s,z)
+ \,\d s\,\d z,
+\]
+as in~\eqref{gb:mellin-moment}.
+The off-diagonal relations in \eqref{proof:dir:kernel-expansion} are
+$m=n+kN$, $n=m+kN$, and $n+m=kN$, with signs $+,+,-$.
+After insertion of the weight, only the sum family with $k=1$ remains.
+\end{lemma}
+
+\begin{proof}
+For $\sigma>1/2$, the absolutely convergent logarithmic-derivative
+series and the rapid decay of $\widetilde\Phi$ justify termwise
+Mellin inversion:
+\[
+ P_\chi=-\frac1{2\pi i}\int_{(\sigma)}
+       N^s\widetilde\Phi(s)\frac{L'}L(1/2+s,\chi)\,\d s,
+\]
+as in~\eqref{gb:mellin-P}.
+The factor $N^s$ comes from $(n/N)^{-s}$. Apply the same formula
+to $P_{\bar\chi}$, multiply, and average over $X_N^-$.
+The two minus signs cancel, and absolute convergence permits the
+product integrals and finite character sum to be interchanged.
+This proves the displayed Mellin representation on the initial contours.
+Under GRH, Proposition~\ref{proof:v3:kernel-holomorphy} excludes
+poles between any positive contour and this initial contour.
+Lemma~\ref{proof:lem:zero-expansion} gives logarithmic growth on
+the intervening fixed strip, whereas $\widetilde\Phi$ decays faster
+than every power. The horizontal sides of the contour rectangles
+therefore tend to zero, and the vertical integrals converge absolutely.
+Moving the contours successively proves the stated continuation.
+
+Separating equal from unequal indices in the first congruence of
+\eqref{proof:dir:kernel-expansion} gives the diagonal and the two
+positive difference families. The second congruence gives the negative
+sum family. On the support of the weight, $|n-m|\le N/3$ and
+$2N/3\le n+m\le4N/3$. Thus both difference families and all sums
+with $k\ge2$ have zero weighted contribution.
+This proves the lemma.
+\end{proof}
+
+The signed combination of all three families must remain
+in the analytic kernel. It supplies the cancellation used by the Euler model.
+
+\section{Euler: the Beta model and the analytic residual}
+\label{proof:sec:beta-mellin}\label{proof:v7:euler}
+
+We construct a continuous model for the off-diagonal part of the
+character kernel and subtract it, together with the exact diagonal,
+to obtain an analytic residual. The model is specified by the
+three arithmetic relations and their local densities. Its
+construction does not assume an asymptotic formula for prime pairs.
+
+Throughout this section, $N\ge4$ is even and $w=s+z$.
+The character kernel is
+\[
+ \mathscr P_N(s,z)=\frac2{\varphi(N)}
+ \sum_{\substack{\chi\ \mathrm{mod}\ N\\\chi(-1)=-1}}
+ \frac{L'}L(1/2+s,\chi)\frac{L'}L(1/2+z,\bar\chi),
+\]
+as in~\eqref{eq:goldbach-moment},
+where all characters, including imprimitive ones, are extended
+by zero at nonunits. Its expansion
+\eqref{proof:dir:kernel-expansion} has the diagonal $n=m$ and
+the three remaining families
+\[
+ m=n+kN,\qquad n=m+kN,\qquad n+m=kN\qquad(k\ge1),
+\]
+with signs $+,+,-$, respectively. We keep the diagonal exactly and
+assign to each remaining family its continuous integral multiplied
+by the local density $\mathfrak S(kN)$. For any even $h$, this density is
+\[
+ \mathfrak S(h)=2C_2\prod_{\substack{p\mid h\\p>2}}\frac{p-1}{p-2},
+ \qquad C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right),
+\]
+as in~\eqref{eq:singular-series}.
+The factorizations below continue the resulting signed model to
+the same domain as the arithmetic kernel.
+
+\subsection{The signed Beta combination}
+\label{proof:v7:signed-beta-model}
+
+Fix $h=kN$ with $k\ge1$. For the relations $m=n+h$, $n=m+h$
+and $n+m=h$, replace $(n,m)$ by $(x,x+h)$, $(x+h,x)$ and
+$(x,h-x)$, respectively. Integrating the corresponding power weight
+$n^{-1/2-s}m^{-1/2-z}$ over $x>0$ in the first two cases and
+$0<x<h$ in the third gives the three integrals in
+\eqref{v3:beta-scaled-model}. Scaling $x=ht$ produces the common
+factor $h^{-s-z}$. The signs $+,+,-$ from the character projection
+then give the Beta combination
+\[
+ K_-(s,z)=B(1/2-s,s+z)+B(1/2-z,s+z)
+                         -B(1/2-s,1/2-z),
+\]
+as in~\eqref{eq:beta-kernel}.
+
+Euler's Gamma function is
+$\Gamma(s)=\int_0^\infty e^{-t}t^{s-1}\d t$ for $\Re s>0$,
+with meromorphic continuation, and
+$B(s,z)=\int_0^1t^{s-1}(1-t)^{z-1}\d t$ for $\Re s,\Re z>0$.
+The change of variable $u=yt$ gives, for $y>0$,
+\begin{equation}\label{v3i:Euler}
+ \int_0^y u^{s-1}(y-u)^{z-1}\d u
+ =B(s,z)y^{s+z-1},\quad
+ B(s,z)=\frac{\Gamma(s)\Gamma(z)}{\Gamma(s+z)}
+ \quad(\Re s,\Re z>0).
+\end{equation}
+
+\begin{lemma}[The continuous signed model]\label{proof:v9:signed-beta-model}
+For $h>0$, $\Re s,\Re z<1/2$ and $\Re(s+z)>0$, put $w=s+z$.
+The following integrals converge absolutely:
+\begin{equation}\label{v3:beta-scaled-model}
+ \begin{aligned}
+ \int_0^\infty x^{-1/2-s}(x+h)^{-1/2-z}\,\mathrm{d}x
+    &=h^{-w}B(1/2-s,w),\\
+ \int_0^\infty x^{-1/2-z}(x+h)^{-1/2-s}\,\mathrm{d}x
+    &=h^{-w}B(1/2-z,w),\\
+ \int_0^h x^{-1/2-s}(h-x)^{-1/2-z}\,\mathrm{d}x
+    &=h^{-w}B(1/2-s,1/2-z).
+ \end{aligned}
+\end{equation}
+Their signed sum, with signs $+,+,-$, is $h^{-s-z}K_-(s,z)$.
+For $h=kN$, the common local density for these three families is
+$\mathfrak S(h)$, so their model is
+$\mathfrak S(h)h^{-s-z}K_-(s,z)$.
+\end{lemma}
+
+\begin{proof}
+For both sums and differences, the two entries exclude one
+residue class modulo $p$ if $p\mid h$ and two otherwise.
+Relative to independent prime densities, the correction is
+\[
+ \frac{1-\nu_p(h)/p}{(1-1/p)^2},\qquad
+ \nu_p(h)=\begin{cases}1,&p\mid h,\\2,&p\nmid h.\end{cases}
+\]
+Since $h=kN$ is even, the product is
+\[
+ 2C_2\prod_{\substack{p\mid h\\p>2}}\frac{p-1}{p-2}
+ =\mathfrak S(h).
+\]
+In particular, $N\mid h$ makes the factors at primes dividing $N$
+consistent with the coprimality restriction in the arithmetic kernel.
+The substitutions $x=ht/(1-t)$ and $x=ht$ prove the three
+identities in \eqref{v3:beta-scaled-model}. For example,
+\[
+ \int_0^\infty x^{-1/2-s}(x+h)^{-1/2-z}\,\mathrm{d}x
+ =h^{-s-z}\int_0^1t^{-1/2-s}(1-t)^{s+z-1}\,\mathrm{d}t.
+\]
+The conditions $\Re s,\Re z<1/2$ control the finite endpoints,
+and $\Re(s+z)>0$ controls infinity. In their common region,
+the signed sum is therefore $h^{-s-z}K_-(s,z)$, with
+$K_-$ as defined at the start of this subsection.
+This proves the lemma.
+\end{proof}
+
+\subsection{Gamma factorization}
+\label{proof:euler:gamma-section}
+
+Reflection and duplication separate the signed Beta expression
+into a factor in $w=s+z$ and one Gamma quotient in each variable.
+Define the one-variable factor
+\[
+ \mathcal X_1(s)=\frac{\Gamma((3/2-s)/2)}{\Gamma((3/2+s)/2)}.
+\]
+The following lemma gives a bound and a Gamma factorization for $K_-(s,z)$.
+
+\begin{lemma}[Gamma factorization]\label{proof:v9:gamma-factorization}
+On $\Re s=\Re z=\sigma$, one has
+\begin{equation}\label{proof:gb:beta-uniform-bound}
+ |K_-(s,z)|\le
+ 2B(1/2-\sigma,2\sigma)+B(1/2-\sigma,1/2-\sigma)
+ \qquad(0<\sigma\le1/9).
+\end{equation}
+For this Gamma quotient $\mathcal X_1$, the factorization is
+\begin{equation}\label{proof:gb:gamma-beta}
+ K_-(s,z)=2^{1-w}\Gamma(w)\cos(\pi w/2)
+                      \mathcal X_1(s)\mathcal X_1(z),\qquad w=s+z.
+\end{equation}
+The latter equality is an identity of meromorphic functions.
+\end{lemma}
+
+\begin{proof}
+Taking absolute values in the definition of $K_-(s,z)$ and applying
+the triangle inequality proves \eqref{proof:gb:beta-uniform-bound}.
+For the factorization, put $r=1/2-s$, $t=1/2-z$, so $r+t+w=1$.
+Reflection gives
+\[
+ K_-(s,z)=\frac{\Gamma(r)\Gamma(t)\Gamma(w)}\pi
+             (\sin\pi r+\sin\pi t-\sin\pi w),
+\]
+whereas duplication and reflection give
+\[
+ \mathcal X_1(s)=\frac{2^{1-r}}{\sqrt\pi}
+                    \Gamma(r)\sin(\pi r/2).
+\]
+Use the corresponding expression for $z,t$ and the identity
+\[
+ \sin\pi r+\sin\pi t-\sin\pi w
+ =4\sin(\pi r/2)\sin(\pi t/2)\cos(\pi w/2).
+\]
+This proves \eqref{proof:gb:gamma-beta} initially away from poles and
+then as a meromorphic identity.
+This proves the lemma.
+\end{proof}
+
+\subsection{The density series and its bounds}
+\label{proof:v7:singular-series}\label{proof:v7:arithmetic-normalization}
+
+We now collect the densities at all scales $h=kN$ and record the
+exact diagonal. The corresponding Dirichlet series are
+\[
+ \begin{aligned}
+ \mathscr D_N(w)&=\sum_{\substack{n\ge1\\(n,N)=1}}
+                       \frac{\Lambda^2(n)}{n^{1+w}}
+                       &&(\Re w>0),\\
+ \mathscr S_N(w)&=\sum_{k\ge1}\frac{\mathfrak S(kN)}{k^w}
+                       &&(\Re w>1),
+ \end{aligned}
+\]
+as in~\eqref{eq:goldbach-arithmetic-kernels} and~\eqref{v3i:series}.
+The former records the exact arithmetic diagonal; the latter collects
+the local densities $\mathfrak S(kN)$. The density series is
+initially defined for $\Re w>1$, whereas the three Beta integrals
+have $0<\Re w<1$ in their common domain. To use the density factor
+there, we first continue it by the Euler product, which we restate here:
+\[
+ \mathscr S_N(w)=\mathfrak S(N)\zeta(w)P_N(w),
+\]
+where $P_N$ is the Euler product
+\[
+ P_N(w)=\prod_{\substack{p>2\\p\nmid N}}
+                  \left(1+\frac{p^{-w}}{p-2}\right),
+\]
+as in~\eqref{eq:goldbach-arithmetic-kernels}.
+This Euler product is distinct from the character polynomial
+$P_\chi$ of the preceding section.
+Separating the zeta factor identifies the pole at $w=1$; controlling
+the remaining product gives bounds uniform in the modulus.
+
+\begin{lemma}\label{proof:lem:singular-N}
+The diagonal series $\mathscr D_N(w)$ converges absolutely for
+$\Re w>0$. The density series $\mathscr S_N(w)$ has the Euler
+product displayed above and continues meromorphically to
+$\Re w>0$, with a single simple pole at $w=1$ of residue
+\begin{equation}\label{proof:gb:singular-series-residue}
+ \operatorname*{Res}_{w=1}\mathscr S_N(w)=\frac N{\varphi(N)}.
+\end{equation}
+For fixed $0<\sigma_-<\sigma_+<\infty$,
+\begin{equation}\label{proof:gb:singular-series-growth}
+ |\mathscr S_N(w)|\ll_{\sigma_-,\sigma_+}
+ \frac N{\varphi(N)}(1+|\Im w|)
+ \quad(\sigma_-\le\Re w\le\sigma_+,\ |\Im w|\ge1).
+\end{equation}
+Moreover, $\mathfrak S(N)>1$ and
+\begin{equation}\label{proof:sp:family-bounds}
+ C_2\frac N{\varphi(N)}\le\mathfrak S(N)
+       \le\frac N{\varphi(N)}\ll\log\log N.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Absolute convergence of the diagonal follows from
+$\Lambda^2(n)\le\log^2n$. The function
+$\mathfrak S(kN)/\mathfrak S(N)$ is multiplicative in $k$.
+At $p^j$, $j\ge1$, its value is $1$ if $p\mid N$ and
+$(p-1)/(p-2)$ otherwise. Thus the local factor is
+$(1-p^{-w})^{-1}$ in the first case and
+$(1+p^{-w}/(p-2))/(1-p^{-w})$ in the second. This proves the
+Euler product for $\Re w>1$.
+
+For every $\delta>0$, the product $P_N(w)$ is holomorphic and
+uniformly bounded in $N$ on $\Re w\ge\delta$, since
+$\sum_{p>2}p^{-\delta}/(p-2)<\infty$.
+Omitting the primes dividing $N$ only decreases this absolute
+majorant. At $w=1$ all Euler factors are positive, so they do not
+cancel the pole of the zeta factor.
+Only the pole of $\zeta(w)$ at $1$ remains. The identity
+\[
+ \left(1-\frac1{(p-1)^2}\right)
+ \left(1+\frac1{p(p-2)}\right)=1
+\]
+gives \eqref{proof:gb:singular-series-residue} and
+\[
+ \mathfrak S(N)=\frac N{\varphi(N)}
+ \prod_{\substack{p>2\\p\nmid N}}
+             \left(1-\frac1{(p-1)^2}\right).
+\]
+The remaining product lies between $C_2$ and $1$.
+Also $C_2>\prod_{m=2}^\infty(1-m^{-2})=1/2$, so
+$\mathfrak S(N)\ge2C_2>1$.
+
+Euler summation yields
+\[
+ \zeta(w)=\frac w{w-1}
+       -w\int_1^\infty\{x\}x^{-w-1}\,\mathrm{d}x
+       \qquad(\Re w>0,\ w\ne1).
+\]
+Together with the product bound this proves
+\eqref{proof:gb:singular-series-growth}.
+Finally, split the prime divisors of $N$ at $y=\log N$.
+Mertens' product estimate bounds the contribution of $p\le y$
+by $O(\log y)$. There are at most $\log N/\log y$ prime divisors above $y$,
+and each contributes $O(1/y)$ to the logarithm of the product. In particular,
+\[
+ \log\prod_{\substack{p\mid N\\p>y}}(1-1/p)^{-1}
+ \ll\frac{\log N}{y\log y}=\frac1{\log y}.
+\]
+This proves the last bound in \eqref{proof:sp:family-bounds}; the bounded
+initial range is absorbed into the constant. The use of Mertens'
+estimate is the standard one in \cite{IK2004}.
+This proves the lemma.
+\end{proof}
+
+\subsection{Continuation of the model}
+\label{proof:v7:model-continuation}
+
+We now combine the two factorizations. This removes the apparent
+pole at $s+z=1$ and gives the domain for the residual operator.
+With the continued density factor, define the off-diagonal model by
+\[
+ \mathscr K_N(s,z)=N^{-w}\mathscr S_N(w)K_-(s,z),\qquad w=s+z,
+\]
+as in~\eqref{eq:goldbach-arithmetic-kernels}.
+The equivalent form to be proved is
+\[
+ \mathscr K_N(s,z)=\mathfrak S(N)\left(\frac\pi N\right)^w
+       P_N(w)\zeta(1-w)\mathcal X_1(s)\mathcal X_1(z),
+\]
+as in~\eqref{v3:model-functional-form}.
+The second expression makes holomorphy beyond the original Beta
+integral domain visible factor by factor.
+
+\begin{proposition}[Continuation of the Beta model]\label{proof:v3:model-geometry}
+The second expression for $\mathscr K_N$ above gives its continuation
+and is holomorphic on
+\[
+ \Omega=\{(s,z):0<\Re s<3/2,\ 0<\Re z<3/2\}.
+\]
+\end{proposition}
+
+\begin{proof}
+Insert \eqref{proof:gb:gamma-beta} and the density Euler product into
+$\mathscr K_N(s,z)=N^{-w}\mathscr S_N(w)K_-(s,z)$.
+The zeta functional equation
+\[
+ \zeta(1-w)=2(2\pi)^{-w}\Gamma(w)\cos(\pi w/2)\zeta(w)
+\]
+gives the asserted functional form of the model.
+The density identity has already been continued to the initial
+Beta domain. Thus the substitution uses established meromorphic
+identities, rather than interchanging the density series with an
+integral outside its region of absolute convergence.
+On $\Omega$, $P_N(s+z)$ converges locally uniformly and neither
+Gamma quotient has a pole: each numerator has argument with
+positive real part, and the reciprocal Gamma function is entire.
+The pole of $\zeta(1-s-z)$ would require $s+z=0$, outside
+$\Omega$. Hence the model is holomorphic there.
+This proves the proposition.
+\end{proof}
+
+\subsection{Holomorphy and symmetry of the residual}
+
+The residual is the exact difference between the character kernel
+and its diagonal and off-diagonal model:
+
+\[
+ \mathscr E_N(s,z)=\mathscr P_N(s,z)
+                  -\mathscr D_N(s+z)-\mathscr K_N(s,z).
+\]
+Here $\mathscr P_N$ is the character kernel at the start of this
+section. Its exact diagonal is
+\[
+ \mathscr D_N(w)=\sum_{(n,N)=1}\Lambda^2(n)n^{-1-w},
+\]
+as in~\eqref{eq:goldbach-arithmetic-kernels},
+and $\mathscr K_N$ is the continued model.
+We now assume $\mathrm{GRH}(N)$: every nontrivial zero of every
+primitive Dirichlet $L$-function of conductor dividing $N$ lies on
+$\Re s=1/2$. Proposition~\ref{proof:v3:kernel-holomorphy} then
+gives holomorphy of $\mathscr P_N$ for $\Re s,\Re z>0$;
+the other two terms have just been treated unconditionally.
+Their common domain is
+$\Omega=\{(s,z):0<\Re s<3/2,\ 0<\Re z<3/2\}$.
+As with the character kernel, $\mathscr E_N(s,z)$ is the form
+holomorphic in both variables, while $\mathscr E_N(s,\bar z)$
+is the Hermitian form used in the kernel of the integral operator
+$T_N$ defined in~\eqref{qp:operator}.
+
+\begin{proposition}[The analytic residual]\label{proof:v7:residual-holomorphy}
+Under $\mathrm{GRH}(N)$, $\mathscr E_N$ is holomorphic on
+$\Omega$ and satisfies
+\[
+ \mathscr E_N(s,z)=\mathscr E_N(z,s),\qquad
+ \overline{\mathscr E_N(s,z)}=\mathscr E_N(\bar s,\bar z).
+\]
+In particular, $\mathscr E_N(s,\bar z)$ is Hermitian.
+\end{proposition}
+
+\begin{proof}
+Subtract the diagonal and model from $\mathscr P_N$.
+Proposition~\ref{proof:v3:kernel-holomorphy} and
+Proposition~\ref{proof:v3:model-geometry}, together with
+Lemma~\ref{proof:lem:singular-N}, prove
+holomorphy. The diagonal has real coefficients and depends only on
+$s+z$; the Beta model is symmetric in $s,z$ and commutes with
+simultaneous conjugation. Equation~\eqref{proof:v3:kernel-symmetries}
+therefore gives both residual identities.
+The subtraction is exact, so these analytic conclusions require
+no estimate for the size or sign of the residual.
+This proves the proposition.
+\end{proof}
+
+The next section realizes this residual as a compact selfadjoint
+operator. To state the arithmetic identity that this construction
+will control, recall the fixed nonzero weight
+$\phi\in C_c^\infty(\mathbb R)$, with $0\le\phi\le1$,
+support in $[1/3,2/3]$, and $\phi(u)=\phi(1-u)$. Put
+\[
+ \Phi(u)=\sqrt u\,\phi(u),\qquad
+ \widetilde\Phi(s)=\int_0^\infty\Phi(u)u^{s-1}\,\d u,
+ \qquad c_\phi=\int_0^1\phi^2(u)\,\d u,
+\]
+as in~\eqref{eq:fixed-goldbach-weight}, \eqref{gb:mellin-convention}, and~\eqref{eq:c0}.
+For $0<\sigma\le1/9$, define
+\[
+ r_\sigma(N)=\frac1{(2\pi i)^2}
+ \int_{(\sigma)}\int_{(\sigma)}
+ N^{s+z}\widetilde\Phi(s)\widetilde\Phi(z)
+ \mathscr E_N(s,z)\,\d s\,\d z,
+\]
+as in~\eqref{v3w:residual},
+where both contours are directed upwards.
+Section~\ref{proof:sec:v3-mellin-operator} will evaluate the
+model integral as $-c_\phi\mathfrak S(N)$ and the diagonal
+integral as $\mathcal D(N)$. Combined with the finite identity
+$\mathcal G(N)=\mathcal D(N)-\mathcal P(N)$, these evaluations give
+\[
+ \mathcal G(N)=c_\phi\mathfrak S(N)-r_\sigma(N),
+\]
+as in~\eqref{v3w:exact},
+where $\mathcal G(N)$ is the weighted Goldbach correlation
+\[
+ \mathcal G(N)=\frac1N
+ \sum_{\substack{n+m=N\\(nm,N)=1}}
+ \Lambda(n)\Lambda(m)\phi(n/N)\phi(m/N),
+\]
+as in~\eqref{eq:goldbach-correlation}.
+Thus the signed discrepancy $r_\sigma(N)$ is independent of
+$\sigma$. The remaining task is to express it as a quadratic
+form and bound it by the norm of the residual operator.
+
+\section{Hilbert--P\'olya: a compact selfadjoint realization}
+\label{proof:sec:qp-foundation}
+
+We realize the arithmetic residual as an integral operator on a
+space of holomorphic functions. The main analytic point is that its
+boundary integral produces the two traces of a single holomorphic
+function on the strip. Once this is established, the Hermitian
+symmetry and square integrability of the kernel give a compact
+selfadjoint operator. Point evaluation will then recover the
+residual from this operator.
+
+Throughout, $N>e^{10}$ is even, and we assume $\mathrm{GRH}(N)$:
+every nontrivial zero of every primitive Dirichlet $L$-function
+whose conductor divides $N$ has real part $1/2$.
+The construction concerns fixed $N$ unless uniformity is stated.
+We use the strip and boundary conventions
+\[
+ \begin{gathered}
+ \alpha_N=\frac1{\log N},\qquad \beta=\frac18,\qquad
+ \sigma_*=\frac19,\qquad \Delta_N=\beta-\alpha_N,\\
+ S_N=\{s:\alpha_N<\Re s<\beta\},\qquad
+ \mathcal H_N=H^2(S_N),\\
+ \Gamma_N=(\alpha_N+i\mathbb R)\,\sqcup\,(\beta+i\mathbb R),\qquad
+ \langle h,g\rangle_{\mathcal H_N}
+       =\int_{\Gamma_N}h(s)\overline{g(s)}\,|\mathrm{d}s|,
+ \end{gathered}
+\]
+as in~\eqref{hd:strip}, \eqref{hd:space-and-boundary}, and~\eqref{hd:inner-product}.
+Here $H^2(S_N)$ is the strip Hardy space, whose definition and
+boundary traces are given below. The inner product is linear in
+its first variable. Both lines carry positive arc length $\mathrm{d}t$,
+with no contour orientation and no factor $1/(2\pi)$.
+The choice of endpoints places $\sigma_*$ strictly inside $S_N$
+and gives $N^{2\alpha_N}=e^2$; this last identity will be used to
+bound the Mellin functional uniformly in $N$.
+
+For reference, we collect the three arithmetic kernels entering the operator.
+Let $X_N^- = \{\chi\ \mathrm{mod}\ N:\chi(-1)=-1\}$, including imprimitive
+characters and extending each character by zero at nonunits. The kernels are
+\[
+ \begin{aligned}
+ \mathscr P_N(s,z)&=\frac2{\varphi(N)}
+              \sum_{\chi\in X_N^-}g_\chi(s)g_{\bar\chi}(z),\\
+ \mathscr D_N(w)&=\sum_{\substack{n\ge1\\(n,N)=1}}
+                     \frac{\Lambda^2(n)}{n^{1+w}},\\
+ \mathscr K_N(s,z)&=\mathfrak S(N)\left(\frac\pi N\right)^{s+z}
+ P_N(s+z)\zeta(1-s-z)\mathcal X_1(s)\mathcal X_1(z),
+ \end{aligned}
+\]
+as in~\eqref{eq:goldbach-moment}, \eqref{eq:goldbach-arithmetic-kernels}, and~\eqref{v3:model-functional-form},
+where $g_\chi$ is the logarithmic derivative
+\[
+ g_\chi(s)=\frac{L'}L(1/2+s,\chi),
+\]
+as in~\eqref{qp:Gram}.
+The kernel $\mathscr K_N$ is the continued Beta model. Its factors are
+\[
+ \begin{gathered}
+ \mathfrak S(N)=2C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2},
+ \qquad C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right),\\
+ P_N(w)=\prod_{\substack{p>2\\p\nmid N}}
+          \left(1+\frac{p^{-w}}{p-2}\right),\qquad
+ \mathcal X_1(s)=\frac{\Gamma((3/2-s)/2)}{\Gamma((3/2+s)/2)}.
+ \end{gathered}
+\]
+The singular-series and Euler-product definitions are as in
+\eqref{eq:singular-series} and~\eqref{eq:goldbach-arithmetic-kernels},
+respectively. Here $\Lambda$ is the von Mangoldt function and $\varphi(N)$ is
+Euler's totient. Under $\mathrm{GRH}(N)$, the preceding section
+shows that
+\[
+ \mathscr E_N(s,z)=\mathscr P_N(s,z)
+                  -\mathscr D_N(s+z)-\mathscr K_N(s,z)
+\]
+is holomorphic on $0<\Re s,\Re z<3/2$. The integral operator to
+be justified is
+\[
+ (T_Nh)(s)=\int_{\Gamma_N}
+       \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}
+       h(z)\,|\mathrm{d}z|,
+\]
+as in~\eqref{qp:operator}.
+The denominators provide decay on the infinite boundary lines;
+conjugation in the second variable supplies the Hermitian symmetry.
+
+\subsection{The Hermitian kernel on the arithmetic strip}
+\label{proof:v9:hermitian-kernel-section}
+
+We apply the holomorphy and symmetry of $\mathscr E_N$ on the
+strip $S_N$ just defined. Its two holomorphic variables become the
+first variable and the conjugate of the second in the integral
+kernel: $\mathscr E_N(s,\bar z)$ is holomorphic in $s$ and
+antiholomorphic in $z$. The Hermitian condition is
+$\mathscr E_N(s,\bar z)=\overline{\mathscr E_N(z,\bar s)}$.
+
+The additional term \emph{Fueter regular} refers here to a
+quaternionic first-order differential equation. Write
+$\omega=s+zj$, with $s,z\in\mathbb C$ and $j^2=-1$, $ij=-ji$.
+In these coordinates the equation we use is
+$(\partial_{\bar s}+j\partial_z)F=0$. For the present kernel,
+holomorphy in $s$ and antiholomorphy in $z$ make the two
+derivatives vanish separately.
+
+\begin{proposition}[The Hermitian arithmetic kernel]
+\label{proof:v9:hermitian-kernel}
+The weighted kernel of $T_N$ is
+\[
+ \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)},
+\]
+as in~\eqref{qp:operator}.
+On the arithmetic strip, both this kernel and $\mathscr E_N(s,\bar z)$
+are Hermitian and holomorphic in $s$ and $\bar z$. The weighted kernel
+extends to a neighborhood of the closed strip in each holomorphic
+coordinate.
+In the coordinates $\omega=s+zj$, the residual satisfies
+\[
+ (\partial_{\bar s}+j\partial_z)\mathscr E_N(s,\bar z)=0.
+\]
+The fixed contour has distances $\sigma_*-\alpha_N>1/90$ and
+$\beta-\sigma_*=1/72$ from the two strip boundaries.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{proof:v7:residual-holomorphy} gives holomorphy
+on $0<\Re s,\Re z<3/2$ and the identities
+\[
+ \mathscr E_N(s,z)=\mathscr E_N(z,s),\qquad
+ \overline{\mathscr E_N(s,z)}=\mathscr E_N(\bar s,\bar z).
+\]
+They imply $\mathscr E_N(s,\bar z)
+=\overline{\mathscr E_N(z,\bar s)}$, the Hermitian symmetry needed here.
+The denominator $(1+s)(1+\bar z)$ has no zeros near the closed
+strip and preserves these properties. Holomorphy in $s$ and
+$\bar z$ makes both derivatives in the displayed equation zero,
+proving the stated Fueter regularity.
+Finally, $\alpha_N<1/10$, $\sigma_*=1/9$ and $\beta=1/8$
+give the two distances.
+This proves the proposition.
+\end{proof}
+
+Here the arithmetic coordinates are the two complex Mellin variables
+$s$ and $z$, viewed as the four real coordinates
+$(\Re s,\Im s,\Re z,\Im z)$ of $\omega=s+zj$. For fixed $N$,
+the Fueter equation for $\mathscr E_N(s,\bar z)$ holds because its
+holomorphy in $s$ and antiholomorphy in $z$ make
+$\partial_{\bar s}\mathscr E_N(s,\bar z)$ and
+$\partial_z\mathscr E_N(s,\bar z)$ vanish separately.
+The spectral variable $q$ in $\mathfrak X_N(q)$ is introduced
+independently of $(s,z)$. The spectral argument below uses the
+selfadjoint operator $T_N$ on a complex Hilbert space and its real
+eigenvalues; no positivity is asserted for the residual.
+
+\subsection{Hardy boundary traces}
+
+In the usual disk Hardy space $H^2$, one controls the $L^2$
+means on concentric circles and obtains an $L^2$ value on the
+boundary circle. A strip has two boundary components, so the
+corresponding norm here is the sum of two squared $L^2$ norms.
+There is also a compatibility condition: the two boundary
+functions must come from the same holomorphic function in the
+interior. Thus the boundary realization occupies a subspace of
+$L^2(\mathbb R)\oplus L^2(\mathbb R)$.
+
+Precisely, for $S=\{s:\alpha<\Re s<\beta\}$, define $H^2(S)$
+to consist of the holomorphic functions $h$ on $S$ for which
+\begin{equation}\label{hd:interior-norm}
+ \|h\|_{H^2(S)}^2
+ =\sup_{0<\varepsilon<(\beta-\alpha)/2}
+ \int_{\mathbb R}\left(
+ |h(\alpha+\varepsilon+it)|^2+
+ |h(\beta-\varepsilon+it)|^2\right)\,\mathrm{d}t<\infty.
+\end{equation}
+The boundary values below are understood as $L^2$ limits:
+\[
+ h_\alpha=\lim_{x\downarrow\alpha}h(x+i\,\cdot),\qquad
+ h_\beta=\lim_{x\uparrow\beta}h(x+i\,\cdot).
+\]
+Their existence is part of the next lemma, so no pointwise
+boundary smoothness is required in the definition.
+
+The Fourier--Laplace representation makes the compatibility of
+the two boundaries explicit. Set
+$w_{H,\alpha,\beta}(\tau)=e^{2\alpha\tau}+e^{2\beta\tau}$.
+For $\psi\in L^2(\mathbb R,w_{H,\alpha,\beta}(\tau)\,\mathrm{d}\tau)$,
+define
+\begin{equation}\label{hd:PW-map}
+ (\mathcal U_H\psi)(s)=\frac1{\sqrt{2\pi}}
+       \int_{\mathbb R}\psi(\tau)e^{s\tau}\,\mathrm{d}\tau.
+\end{equation}
+On the vertical line $s=x+it$, this is the inverse Fourier
+transform of $e^{x\tau}\psi(\tau)$. The same density $\psi$
+therefore describes both boundaries, with factors $e^{\alpha\tau}$
+and $e^{\beta\tau}$. Plancherel accounts for the two terms in
+$w_{H,\alpha,\beta}$ and gives the boundary norm identity
+\begin{equation}\label{hd:boundary-norm}
+ \|h\|_{H^2(S)}^2
+ =\|h_\alpha\|_{L^2(\mathbb R)}^2
+   +\|h_\beta\|_{L^2(\mathbb R)}^2
+ =\int_{\mathbb R}|\psi(\tau)|^2
+                     w_{H,\alpha,\beta}(\tau)\,\mathrm{d}\tau.
+\end{equation}
+This fixes our normalization: each boundary contributes its
+ordinary $L^2(\mathbb R,\mathrm{d}t)$ norm, without an averaging factor.
+On the arithmetic strip, write
+$w_{H,N}(\tau)=w_{H,\alpha_N,\beta}(\tau)$.
+The general endpoints will also be used in Appendix~\ref{proof:app:param}.
+
+\begin{lemma}[Fourier--Laplace representation]\label{proof:hd:PW}\label{proof:bm:PW}
+For a strip $S$ with real endpoints $\alpha<\beta$, equip $H^2(S)$
+with \eqref{hd:interior-norm}.
+The map \eqref{hd:PW-map} is unitary from
+$L^2(\mathbb R,w_{H,\alpha,\beta}(\tau)\,\mathrm{d}\tau)$ onto this Hardy space.
+Every function has $L^2$ traces on both boundary lines, and
+\eqref{hd:boundary-norm} holds. The trace map identifies the Hardy
+space with a closed subspace of boundary $L^2$; on the arithmetic
+strip its inner product is
+\begin{samepage}
+\[
+ \langle h,g\rangle_{\mathcal H_N}
+       =\int_{\Gamma_N}h(s)\overline{g(s)}\,|\mathrm{d}s|,
+\]
+as in~\eqref{hd:inner-product}.
+\end{samepage}
+\end{lemma}
+
+\begin{proof}
+For an interior $x$, the quotient
+$e^{2x\tau}/w_{H,\alpha,\beta}(\tau)$ decays exponentially at
+both ends. Cauchy--Schwarz therefore justifies the integral in
+\eqref{hd:PW-map} and its derivatives locally uniformly.
+On a compact substrip, the same exponential domination remains
+integrable after multiplication by any fixed power of $\tau$.
+This justifies differentiation under the integral. It defines a holomorphic function $h$, and Plancherel gives
+\[
+ \int_{\mathbb R}|h(x+it)|^2\,\mathrm{d}t
+   =\int_{\mathbb R}|\psi(\tau)|^2e^{2x\tau}\,\mathrm{d}\tau.
+\]
+As $x$ approaches an endpoint $x_0$, dominated convergence gives
+$e^{x\tau}\psi\to e^{x_0\tau}\psi$ in $L^2$; the squared
+difference is bounded by $4|\psi|^2w_{H,\alpha,\beta}$.
+Plancherel then gives the boundary traces.
+
+Convexity yields
+\[
+ e^{2(\alpha+\varepsilon)\tau}+e^{2(\beta-\varepsilon)\tau}
+ \le e^{2\alpha\tau}+e^{2\beta\tau}
+ \qquad(0<\varepsilon<(\beta-\alpha)/2).
+\]
+Taking $\varepsilon\downarrow0$ proves that the paired supremum
+equals the boundary norm, and hence that the map is isometric.
+
+Conversely, for a Hardy function $h$, take the $L^2$ Fourier
+transform $\widehat h_x$ of $h(x+i\,\cdot)$ with the convention
+\[
+ \widehat h_x(\tau)=(2\pi)^{-1/2}
+       \int h(x+it)e^{-it\tau}\,\mathrm{d}t.
+\]
+The Cauchy--Riemann equation gives
+$\partial_x\widehat h_x=\tau\widehat h_x$ in distributions.
+Thus $e^{-x\tau}\widehat h_x(\tau)$ is independent of $x$
+on compact frequency intervals. These representations agree on
+overlaps and define a measurable function $\psi$.
+Plancherel and Fatou, along a sequence of paired lines tending
+to the boundaries, give
+\[
+ \int_{\mathbb R}|\psi(\tau)|^2w_{H,\alpha,\beta}(\tau)\,\mathrm{d}\tau
+ \le\|h\|_{H^2(S)}^2.
+\]
+The forward construction therefore applies. Fourier inversion
+identifies its image with $h$ almost everywhere, and holomorphy
+gives equality everywhere. This proves surjectivity. The boundary
+norm identity makes the trace map an isometry from a complete Hilbert
+space, so its image in boundary $L^2$ is closed. Polarization gives
+the stated boundary inner product.
+This proves the lemma.
+\end{proof}
+
+\subsection{The compact selfadjoint operator}
+
+For an integral operator on an $L^2$ space, a square-integrable
+kernel gives a Hilbert--Schmidt operator: its squared
+Hilbert--Schmidt norm is the integral of the squared absolute
+value of the kernel. This is the integral-kernel form of
+$\sum_{j,k}|a_{jk}|^2$ for a matrix. Here the boundary has two
+components, so that integral has four contributions, according
+to the choices of the first and second boundary lines.
+
+For fixed $N$, recall that $\mathcal H_N=H^2(S_N)$ consists of
+holomorphic functions on $S_N=\{s:\alpha_N<\Re s<\beta\}$ whose
+paired vertical $L^2$ means remain bounded as the two lines approach
+the boundary. By Lemma~\ref{proof:hd:PW}, we identify this Hardy
+space isometrically with its closed trace subspace in $L^2(\Gamma_N)$.
+To construct $T_N$ on $\mathcal H_N$, we will show that the boundary
+integral operator $\widetilde T_N$ associated with the weighted
+residual maps $L^2(\Gamma_N)$ into this trace subspace.
+Hermitian symmetry will then imply that $\widetilde T_N$ vanishes
+on $\mathcal H_N^\perp$. Its restriction $T_N$ to $\mathcal H_N$
+therefore has the same Hilbert--Schmidt norm as $\widetilde T_N$,
+which gives the equality in the following proposition.
+
+\begin{proposition}[The compact selfadjoint realization]\label{proof:bd:HS}
+Consider the operator on $\mathcal H_N$ defined by
+\[
+ (T_Nh)(s)=\int_{\Gamma_N}
+       \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}h(z)\,|\mathrm{d}z|.
+\]
+Its weighted residual kernel is Hermitian, holomorphic near the
+closed strip in each holomorphic coordinate, and belongs to
+$L^2(\Gamma_N\times\Gamma_N)$ on the boundary.
+The operator $T_N$ is compact, selfadjoint, and Hilbert--Schmidt. Writing $\mu_j(N)$ for its nonzero eigenvalues,
+counted with multiplicity, one has
+\begin{equation}\label{hd:boundary-HS-norm}
+ \sum_j\mu_j^2(N)=\|T_N\|_{\mathrm{HS}}^2
+ =\int_{\Gamma_N}\int_{\Gamma_N}|\mathscr E_N(s,\bar z)|^2
+      \frac{|\mathrm{d}s|}{|1+s|^2}\frac{|\mathrm{d}z|}{|1+\bar z|^2}.
+\end{equation}
+Its nonzero eigenvalues are real and satisfy $\|T_N\|=\sup_j|\mu_j(N)|$, with the maximum attained
+unless $T_N=0$.
+\end{proposition}
+
+\begin{proof}
+Holomorphy and symmetry follow from
+Proposition~\ref{proof:v7:residual-holomorphy}, since the closed strip
+lies inside its domain. For integrability, constants may depend
+on $N$. For the arithmetic component, conjugation of the second
+variable gives the Gram identity
+\[
+ \mathscr P_N(s,\bar z)=\frac2{\varphi(N)}
+       \sum_{\chi\in X_N^-}g_\chi(s)\overline{g_\chi(z)},
+ \qquad g_\chi(s)=\frac{L'}L(1/2+s,\chi),
+\]
+as in~\eqref{qp:Gram}.
+Lemma~\ref{proof:lem:zero-expansion} bounds these logarithmic
+derivatives on the fixed strip by
+\[
+ |g_\chi(x+iv)|\ll_N\log^2(2+|v|)
+       \qquad(\alpha_N\le x\le\beta).
+\]
+The nonnegative coefficients of the diagonal series give
+$|\mathscr D_N(s+\bar z)|\le\mathscr D_N(2\alpha_N)$ on the
+closed strip. The continued model has the factorization
+\[
+ \mathscr K_N(s,\bar z)=\mathfrak S(N)
+ \left(\frac\pi N\right)^{s+\bar z}P_N(s+\bar z)
+ \zeta(1-s-\bar z)\mathcal X_1(s)\mathcal X_1(\bar z).
+\]
+The Euler product $P_N$ and the Gamma quotients $\mathcal X_1$
+are bounded on the strip for fixed $N$, leaving the zeta factor
+to control. For
+$3/4\le\Re s\le1-2\alpha_N$, Euler summation at
+$X=2+|\Im s|$ gives
+$|\zeta(s)|\ll_N(1+|\Im s|)^{1/4}$: the finite sum and
+integral term are $O_N(X^{1-\Re s})$, and the remainder is
+$O(|s|X^{-\Re s}/\Re s)$.
+Using $1+|v-t|\le(1+|v|)(1+|t|)$ and absorbing logarithms
+into these powers, we obtain
+\begin{equation}\label{proof:hd:kernel-majorant}
+ \left|\frac{\mathscr E_N(x+iv,y-it)}{(1+x+iv)(1+y-it)}\right|^2
+ \ll_N(1+|v|)^{-3/2}(1+|t|)^{-3/2}
+ \quad(\alpha_N\le x,y\le\beta).
+\end{equation}
+This majorant is integrable on all four boundary products and
+uniform across the closed strip.
+
+The boundary kernel defines a selfadjoint Hilbert--Schmidt
+operator $\widetilde T_N$ on $L^2(\Gamma_N)$.
+For $h$ in that space, Cauchy--Schwarz and
+\eqref{proof:hd:kernel-majorant} give uniform vertical $L^2$ bounds
+for the integral
+\[
+ \int_{\Gamma_N}
+       \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}h(z)\,|\mathrm{d}z|.
+\]
+Local domination and Morera's theorem give holomorphy. Dominated convergence of the
+squared kernel differences gives its $L^2$ boundary limits.
+Lemma~\ref{proof:hd:PW} therefore places its range in the Hardy trace space.
+
+Selfadjointness and the range inclusion imply that $\widetilde T_N$
+annihilates the orthogonal complement of the trace space.
+Indeed, pairing the image of an orthogonal vector with any
+boundary $L^2$ vector gives zero: selfadjointness transfers the
+operator to the latter vector, whose image lies in the trace space. Hence on
+$L^2(\Gamma_N)=\mathcal H_N\oplus\mathcal H_N^\perp$ it is
+$T_N\oplus0$. The Hilbert--Schmidt kernel identity and the
+compact selfadjoint spectral theorem now give
+\eqref{hd:boundary-HS-norm} for $T_N$ itself, as well as the
+reality of the eigenvalues and the asserted operator norm formula.
+This proves the proposition.
+\end{proof}
+
+\subsection{Point evaluation and the arithmetic residual}
+
+An arbitrary $L^2$ function has no well-defined value at a
+specified point. In this Hardy space, holomorphy makes interior
+point evaluation a bounded functional. Its Riesz vector $k_z$
+satisfies $h(z)=\langle h,k_z\rangle$ and is called the
+\emph{reproducing kernel} at $z$. For the disk with normalized
+boundary measure, it is $(1-s\bar z)^{-1}$; our strip gives
+the cosecant formula below, with a constant determined by our
+boundary measure. Applying these evaluation vectors in both
+variables will recover the arithmetic kernel as a matrix element
+of $T_N$.
+
+\begin{proposition}[Point evaluation]\label{proof:bd:evaluation}
+For $z\in S_N$, define
+\begin{equation}\label{hd:reproducing-kernel}
+ k_z(s)=\frac1{4\Delta_N}
+       \csc\!\left(\frac{\pi(s+\bar z-2\alpha_N)}{2\Delta_N}\right).
+\end{equation}
+Then $k_z\in\mathcal H_N$ and
+$h(s)=\langle h,k_s\rangle_{\mathcal H_N}$.
+Writing $d_N(s)=\min(\Re s-\alpha_N,\beta-\Re s)$,
+one has
+\begin{equation}\label{proof:hd:evaluation-norm}
+ \|k_s\|_{\mathcal H_N}^2
+ =\frac1{4\Delta_N}
+       \csc\!\left(\frac{\pi(\Re s-\alpha_N)}{\Delta_N}\right)
+ \le\frac1{8d_N(s)}.
+\end{equation}
+Consequently,
+\begin{equation}\label{proof:bd:pointwise}
+ |\mathscr E_N(s,\bar z)|\le
+ \frac{\|T_N\|\,|1+s|\,|1+z|}
+                       {8\sqrt{d_N(s)d_N(z)}}.
+\end{equation}
+On the fixed interior contour this gives
+\begin{equation}\label{proof:bd:pointwise-fixed}
+ |\mathscr E_N(\sigma_*+iv,\sigma_*+it)|
+ \ll\|T_N\|(1+|v|+|t|)^2.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{proof:hd:PW}, the evaluation vector at $z$ has coefficient
+$(2\pi)^{-1/2}e^{\bar z\tau}/w_{H,N}(\tau)$ in the weighted
+Fourier space. The conjugate of $z$ in this coefficient is forced by the
+convention that the inner product is linear in its first variable. Its inverse transform is
+\[
+ k_z(s)=\frac1{2\pi}\int_{\mathbb R}
+       \frac{e^{(s+\bar z)\tau}}
+                  {e^{2\alpha_N\tau}+e^{2\beta\tau}}\,\mathrm{d}\tau.
+\]
+With $t=e^{2\Delta_N\tau}$ and
+$\lambda=(s+\bar z-2\alpha_N)/(2\Delta_N)$, this becomes
+\[
+ \frac1{4\pi\Delta_N}\int_0^\infty
+             \frac{t^{\lambda-1}}{1+t}\,\mathrm{d}t
+ =\frac{B(\lambda,1-\lambda)}{4\pi\Delta_N},
+ \qquad 0<\Re\lambda<1.
+\]
+Euler's reflection identity proves \eqref{hd:reproducing-kernel}.
+Evaluation at $s=z$ and
+$\sin(\pi t)\ge2\min(t,1-t)$, $0\le t\le1$, give
+\eqref{proof:hd:evaluation-norm}.
+
+Applying reproduction in both variables yields
+\[
+ \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}
+      =\langle T_Nk_z,k_s\rangle_{\mathcal H_N}.
+\]
+Cauchy--Schwarz proves \eqref{proof:bd:pointwise}. The distances of
+$\sigma_*$ from both boundaries are at least $1/90$, giving
+\eqref{proof:bd:pointwise-fixed} after conjugating the second argument.
+This proves the proposition.
+\end{proof}
+
+\section{Riemann: spectral zeros and operator norm bounds}
+\label{proof:sec:spectral-analysis}\label{proof:v7:riemann}
+
+The residual operator converts the Goldbach error into a spectral
+question: how large can its eigenvalues be? We encode their magnitudes
+as zeros of a product. Its quadratic factors will make the relation
+between zero location and operator norm explicit. We then establish
+the norm bound available under GRH and examine the scale of the left
+Hardy boundary. The resulting spectral estimates will be used in
+the next section to prove the main theorems.
+
+Throughout, $N>e^{10}$ is even and satisfies $\mathrm{GRH}(N)$.
+We recall the Hardy space and operator
+\[
+ \begin{gathered}
+ \mathcal H_N=H^2(S_N),\qquad
+ S_N=\{s:\alpha_N<\Re s<\beta\},\qquad
+ \alpha_N=\frac1{\log N},\quad\beta=\frac18,\\
+ (T_Nh)(s)=\int_{\Gamma_N}
+ \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}h(z)\,|\mathrm{d}z|,
+ \end{gathered}
+\]
+as in~\eqref{hd:strip}, \eqref{hd:space-and-boundary}, and~\eqref{qp:operator}.
+Here
+$\Gamma_N=(\alpha_N+i\mathbb R)\sqcup(\beta+i\mathbb R)$,
+both lines carrying positive arc length. The elements of $\mathcal H_N$
+are holomorphic functions whose paired interior $L^2$ means remain
+bounded. Their traces on the two boundaries give the norm
+\[
+ \|h\|_{\mathcal H_N}^2
+ =\int_{\mathbb R}|h(\alpha_N+it)|^2\,\mathrm{d}t
+  +\int_{\mathbb R}|h(\beta+it)|^2\,\mathrm{d}t.
+\]
+The two traces must come from the same holomorphic function; they
+cannot be chosen independently. The residual in the kernel is
+\[
+ \mathscr E_N(s,z)=\mathscr P_N(s,z)
+                    -\mathscr D_N(s+z)-\mathscr K_N(s,z),
+\]
+where $\mathscr P_N$ is the odd-character correlation,
+$\mathscr D_N$ is its exact diagonal, and $\mathscr K_N$ is the
+continued Beta model. Their explicit formulas are recalled when we
+estimate the three components below.
+Proposition~\ref{proof:bd:HS} makes $T_N$
+compact, selfadjoint, and Hilbert--Schmidt. Its nonzero eigenvalues
+$\mu_j(N)$, counted with multiplicity, are real, with
+\[
+ \sum_j\mu_j^2(N)<\infty,\qquad
+ \|T_N\|=\sup_j|\mu_j(N)|.
+\]
+The supremum is zero when $T_N=0$. The Goldbach singular series is
+\[
+ \mathfrak S(N)=2C_2\prod_{\substack{p\mid N\\p>2}}\frac{p-1}{p-2},
+ \qquad C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right),
+\]
+as in~\eqref{eq:singular-series}.
+We use the scale
+\[
+ \delta_N=\sqrt{\frac{\mathfrak S(N)}N}(\log N)^{3/2},
+ \qquad \delta_N^2=\frac{\mathfrak S(N)(\log N)^3}{N},
+\]
+as in~\eqref{v3i:spectral-scale}.
+We encode the size of these eigenvalues relative to $\delta_N$;
+the Dirichlet zeros enter through GRH and are a separate set of data.
+
+\subsection{Convergence of the spectral product}
+\label{proof:v7:spectral-construction}
+
+Define the spectral function by
+\[
+ \mathfrak X_N(q)=\prod_j
+   \left(1-\frac{4\mu_j^2(N)}{\delta_N^2}q(1-q)\right),
+ \qquad q\in\mathbb H,
+\]
+as in~\eqref{qp:spectral-function}.
+The empty product is equal to one. Here $\mathbb H$ denotes the
+quaternions. For a unit purely imaginary quaternion $I$, write
+$\mathbb C_I=\{x+yI:x,y\in\mathbb R\}$. All factors at a fixed
+$q\in\mathbb C_I$ lie in this commutative complex plane.
+
+The term \emph{intrinsic entire slice regular} has a concrete meaning
+here: the same real-coefficient power series defines an entire
+function on every complex slice $\mathbb C_I$. It preserves each
+slice and respects conjugation. This regularity concerns the spectral
+variable $q$; the Fueter regularity of $\mathscr E_N(s,\bar z)$
+concerns the separate arithmetic coordinates.
+
+The ordinary Fredholm determinant extends the finite-dimensional formula
+\[
+ \det(\operatorname{Id}-tA)=\prod_j(1-ta_j)
+\]
+to a trace-class operator $A$, with eigenvalues $a_j$.
+For positive compact $A$,
+trace class means
+$\sum_j a_j<\infty$, which ensures convergence of that product.
+Here $T_N$ is known to be Hilbert--Schmidt, so its squared eigenvalues
+are summable. Consequently we use $A=T_N^2$, whose eigenvalues are
+$a_j=\mu_j(N)^2$, and obtain an ordinary Fredholm determinant.
+
+\begin{proposition}[Convergence and determinant realization]
+\label{proof:v9:spectral-convergence}
+The product
+\[
+ \mathfrak X_N(q)=
+ \prod_j\left(1-\frac{4\mu_j^2(N)}{\delta_N^2}q(1-q)\right),
+ \qquad q\in\mathbb H,
+\]
+converges locally uniformly on
+$\mathbb H$, independently of the enumeration of the eigenvalues, and
+defines an intrinsic entire slice-regular function $\mathfrak X_N$.
+The operator $T_N^2$ is positive and trace class, with
+\[
+ \operatorname{tr}(T_N^2)=\sum_j\mu_j^2(N)
+                       =\|T_N\|_{\mathrm{HS}}^2.
+\]
+On the usual complex slice,
+\[
+ \mathfrak X_N(q)=\det\left(\operatorname{Id}_{\mathcal H_N}
+       -\frac4{\delta_N^2}q(1-q)T_N^2\right).
+\]
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{proof:bd:HS}, $\sum_j\mu_j^2(N)<\infty$.
+On a compact subset of $\mathbb H$, each factor differs from $1$ by
+at most a fixed multiple of $\mu_j^2(N)$. Thus the product converges
+locally uniformly and is independent of the enumeration of the spectrum.
+Within each complex slice its factors commute and are holomorphic.
+Their real coefficients give the same real Taylor series on every slice,
+so the limit is intrinsic and slice regular.
+
+The spectral theorem gives
+\[
+ \operatorname{tr}(T_N^2)=\sum_j\mu_j^2(N)
+                       =\|T_N\|_{\mathrm{HS}}^2<\infty.
+\]
+Hence $T_N^2$ is positive and trace class, and its Fredholm determinant
+is exactly the product $\mathfrak X_N(q)$ on the usual complex slice. The operator and its determinant are therefore formed
+on the complex Hilbert space $\mathcal H_N$; the real coefficients
+then extend the scalar function to the other slices.
+This proves the proposition.
+\end{proof}
+
+\subsection{Symmetries and zeros}
+\label{proof:sec:spectral-symmetry}\label{proof:v7:no-trivial-zeros}
+\label{proof:v7:zero-classification}
+
+The quadratic factors determine both the symmetries and all zeros.
+On a single complex slice the nonreal roots occur in conjugate
+pairs. Allowing the imaginary unit $I$ to vary turns such a pair
+into a sphere with fixed real part and fixed imaginary length.
+The exceptional roots are real pairs, and only these affect the
+norm criterion.
+
+\begin{proposition}[Symmetries and normalization]
+\label{proof:v9:spectral-symmetries}
+The normalization and symmetries are
+\begin{gather}
+ \mathfrak X_N(0)=\mathfrak X_N(1)=1,
+       \label{proof:sym:normalization}\\
+ \mathfrak X_N(1-q)=\mathfrak X_N(q),
+       \label{proof:sym:functional-equation}\\
+ \mathfrak X_N(\bar q)=\overline{\mathfrak X_N(q)}.
+       \label{proof:sym:conjugation}
+\end{gather}
+Combining reflection and conjugation gives
+\begin{equation}\label{sym:hyperplane-reflection}
+ \mathfrak X_N(1-\bar q)=\overline{\mathfrak X_N(q)}
+ \qquad(q\in\mathbb H).
+\end{equation}
+The map $q\mapsto1-q$ is central inversion about $1/2$, whereas
+$q\mapsto1-\bar q$ reflects across $\Re q=1/2$.
+For the centered variable $\xi\in\mathbb H$,
+\begin{equation}\label{sym:centered-product}
+ \mathfrak X_N(1/2+\xi)
+ =\prod_j\left(1-\frac{\mu_j^2(N)}{\delta_N^2}
+                  +\frac{4\mu_j^2(N)}{\delta_N^2}\xi^2\right).
+\end{equation}
+This is even in $\xi$. On the critical hyperplane, for real $t$
+and any unit purely imaginary quaternion $I$,
+\begin{equation}\label{sym:critical-values}
+ \mathfrak X_N(1/2+It)
+ =\prod_j\left(1-\frac{\mu_j^2(N)}{\delta_N^2}(1+4t^2)\right)
+ \in\mathbb R.
+\end{equation}
+The value is independent of $I$. Moreover,
+$\mathfrak X_N(x)\ge1$ for real $x\notin(0,1)$.
+\end{proposition}
+
+\begin{proof}
+The invariance of $q(1-q)$ under $q\mapsto1-q$ proves
+\eqref{proof:sym:functional-equation}. Real coefficients give
+\eqref{proof:sym:conjugation}, and combining the two gives
+\eqref{sym:hyperplane-reflection}. Evaluation at $0$ and $1$ proves
+\eqref{proof:sym:normalization}. Finally,
+$(1/2+\xi)(1/2-\xi)=1/4-\xi^2$ gives the centered product
+\eqref{sym:centered-product}; taking $\xi=It$ gives
+\eqref{sym:critical-values}. All identities pass from finite products
+to the limit by local uniform convergence.
+For real $x\notin(0,1)$, each factor is at least one, giving the
+asserted lower bound.
+This proves the proposition.
+\end{proof}
+
+\begin{proposition}[Complete zero classification]
+\label{proof:v9:spectral-zeros}
+For each nonzero eigenvalue $\mu_j(N)$, put
+$d_j=\delta_N^2/\mu_j^2(N)$. The zeros of $\mathfrak X_N$ are
+exactly the zeros contributed by these factors, namely
+\[
+ \begin{cases}
+ \displaystyle \Re q=\frac12,\quad
+       |\Im q|=\frac12\sqrt{d_j-1},&d_j>1,\\[2mm]
+ q=\frac12\quad\text{\normalfont (a double zero of the factor)},&d_j=1,\\[1mm]
+ \displaystyle q=\frac12\pm\frac12\sqrt{1-d_j},&0<d_j<1.
+ \end{cases}
+\]
+Thus every zero off the critical hyperplane is real, there are only
+finitely many exceptional real pairs, and every real zero lies in
+$(0,1)$. Each nonreal zero sphere is invariant under conjugation by
+unit quaternions. On each complex slice, reflection and conjugation
+preserve multiplicities, and the order of a zero at $1/2$ is even.
+\end{proposition}
+
+\begin{proof}
+For the ratio $d_j=\delta_N^2/\mu_j^2(N)$ just defined, a
+factor vanishes when $q(1-q)=d_j/4$. Writing $q=x+yI$ gives
+\[
+ q(1-q)=x(1-x)+y^2+(1-2x)yI.
+\]
+If $y\ne0$, this forces $x=1/2$ and $y^2=(d_j-1)/4$.
+The equation is independent of $I$, which gives the stated two-sphere.
+For real $q$, the ordinary quadratic formula gives the exceptional
+pair when $d_j<1$ and the double central root when $d_j=1$.
+For $x\notin(0,1)$, every factor is at least $1$, so there are no
+other real zeros.
+
+There are no zeros arising solely from the infinite product. Indeed,
+at a point where all factors $1-u_j$ are nonzero, choose $J$ such that
+$|u_j|\le1/2$ for $j\ge J$. Then
+\[
+ \prod_{j\ge J}|1-u_j|
+ \ge\prod_{j\ge J}(1-|u_j|)>0,
+\]
+because $\sum_j|u_j|<\infty$ and
+$\log(1-|u_j|)\ge-2|u_j|$. The finite preceding product is nonzero.
+Compactness also allows only finitely many eigenvalues with
+$|\mu_j|>\delta_N$, so there are only finitely many exceptional pairs.
+On each complex slice, conjugation and reflection preserve multiplicity;
+at $1/2$ the order is even by the centered product.
+Conjugation by a unit quaternion preserves the real part and the
+length of the imaginary part, so it preserves each nonreal zero sphere.
+This proves the proposition.
+\end{proof}
+
+\subsection{From a zero-free region to a norm bound}
+
+The zero classification turns the exclusion condition into an exact
+bound for the largest eigenvalue modulus. The excluded half-space is
+open, so equality is allowed in the norm bound. Here
+$\mathrm R(N)$ denotes the assertion that every zero of
+$\mathfrak X_N$ has real part $1/2$.
+
+\begin{theorem}\label{proof:qp:dictionary}
+Under the standing assumptions,
+\[
+ \mathrm R(N)\quad\Longleftrightarrow\quad\|T_N\|\le\delta_N.
+\]
+For $0<\eta<1/2$,
+\[
+ \mathfrak X_N(q)\ne0\quad(\Re q>1-\eta)
+ \quad\Longleftrightarrow\quad
+ \|T_N\|\le\frac{\delta_N}{2\sqrt{\eta(1-\eta)}}.
+\]
+In particular, if $\|T_N\|\le M_N$ with $M_N>\delta_N$, the
+width is
+\[
+ \eta(M_N)=\frac{1-\sqrt{1-\delta_N^2/M_N^2}}2.
+\]
+The corresponding half-space is zero-free, with $\eta(M_N)\asymp\delta_N^2/M_N^2$
+when $\eta(M_N)\le1/4$.
+\end{theorem}
+
+\begin{proof}
+A factor has zeros off the critical hyperplane exactly when
+$|\mu_j|>\delta_N$. Taking the supremum of the eigenvalue magnitudes
+proves the first equivalence, including the zero operator.
+The preceding product argument shows that these are all possible zeros.
+It is therefore enough to test the spectral factors individually; no
+separate condition on the limiting product is needed.
+
+Only the larger root of an exceptional pair can enter
+$\Re q>1-\eta$. Its exclusion is equivalent to
+\[
+ \frac12+\frac12\sqrt{1-\frac{\delta_N^2}{\mu_j^2}}\le1-\eta,
+ \quad\text{or}\quad
+ |\mu_j|\le\frac{\delta_N}{2\sqrt{\eta(1-\eta)}}.
+\]
+Squaring is reversible because $1-2\eta>0$. Nonexceptional eigenvalues
+already satisfy the latter bound, which proves the second equivalence.
+Finally, suppose $\|T_N\|\le M_N$ with $M_N>\delta_N$.
+Choosing $\eta\in(0,1/2)$ to satisfy
+$2\sqrt{\eta(1-\eta)}=\delta_N/M_N$ gives the stated width
+$\eta(M_N)$, and the second equivalence ensures that the
+corresponding half-space is zero-free. Rationalizing yields
+\[
+ \eta(M_N)=\frac{\delta_N^2/M_N^2}
+ {2\left(1+\sqrt{1-\delta_N^2/M_N^2}\right)}.
+\]
+The denominator lies between $2$ and $4$, so
+$\eta(M_N)\asymp\delta_N^2/M_N^2$.
+This proves the theorem.
+\end{proof}
+
+We use this conversion to compare the proved GRH estimate with the
+stronger bounds required by S and R.
+
+\subsection{GRH proves a baseline zero-free region}
+\label{proof:sec:grh-bound}
+
+We estimate the odd-character correlation, the diagonal, and the
+Beta model separately. An average of squared logarithmic derivatives
+controls the first component; positivity controls the second; and
+the continued model formula controls the third. These bounds give
+a zero-free region without requiring cancellation between the
+components of the residual.
+
+\begin{theorem}[The baseline bound under GRH]\label{proof:grh:main-theorem}
+For every sufficiently large even $N$ satisfying $\mathrm{GRH}(N)$,
+one has
+\begin{equation}\label{proof:grh:operator-bound}
+ \|T_N\|\le\|T_N\|_{\mathrm{HS}}\ll(\log N)^2.
+\end{equation}
+Consequently the spectral function has the zero-free region
+\begin{equation}\label{proof:grh:zero-free-width}
+ \mathfrak X_N(q)\ne0\quad(\Re q>1-\eta_N^{\mathrm{GRH}}),
+ \qquad
+ \eta_N^{\mathrm{GRH}}\asymp\frac{\mathfrak S(N)}{N\log N}.
+\end{equation}
+The constants and the required lower bound on $N$ are absolute.
+\end{theorem}
+
+For this proof, retain $N>e^{10}$ and take the auxiliary reference line
+$\sigma_{\mathrm{ref}}=2/\log N<1/5$. This line may lie to the right
+of the Hardy boundary $\beta=1/8$; the auxiliary Poisson comparison
+below is therefore established for $0<x\le1/5$. The Hardy strip
+keeps its boundaries $\alpha_N$ and $\beta$ and its fixed interior
+line $\sigma_*=1/9$.
+The required estimate must be uniform as the left boundary approaches
+the critical line; compactness for each fixed $N$ is not enough.
+
+\subsubsection{An averaged bound for logarithmic derivatives}
+
+The correlation component requires a mean-square bound that remains
+uniform as the left Hardy boundary approaches the critical line.
+We first prove such a bound on a reference line by smoothing a short
+Dirichlet polynomial, then transfer it to the required lines using
+the positive zero sum and Poisson kernels. Here $X_N^-$ consists
+of all odd characters modulo $N$, including imprimitive ones, and
+\[
+ g_\chi(s)=\frac{L'}L(1/2+s,\chi).
+\]
+For each $\chi$, write $\chi^*$ for its primitive inducing character
+and $d_\chi\mid N$ for the conductor. Under GRH its nontrivial
+zeros are $1/2+i\gamma_\chi$, counted with multiplicity.
+
+\begin{lemma}[Averaged logarithmic derivatives]
+\label{proof:grh:averaged-energy-lemma}
+For $N>e^{10}$ and $0<\sigma\le\beta$,
+\begin{equation}\label{grh:averaged-energy}
+ \frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+ \int_{\mathbb R}\frac{|g_\chi(\sigma+it)|^2}{1+t^2}\,\mathrm{d}t
+ \ll(\log N)^2+\sigma^{-2}.
+\end{equation}
+The implied constant is absolute.
+\end{lemma}
+
+\begin{proof}
+\emph{The reference line.}
+Fix $\chi\in X_N^-$, and let $\chi^*$ denote the primitive
+Dirichlet character inducing $\chi$, of conductor $d_\chi\mid N$.
+Write $1/2+i\gamma_\chi$ for the nontrivial zeros of
+$L(s,\chi^*)$, and define
+\[
+ Q_\chi(x,t)=\sum_{\gamma_\chi}
+             \frac{x}{x^2+(t-\gamma_\chi)^2},
+ \qquad x>0,\quad t\in\mathbb R.
+\]
+The sum runs over all such ordinates $\gamma_\chi$, with each zero
+counted according to its multiplicity.
+We first establish the comparison
+\begin{equation}\label{proof:grh:Poisson-comparison}
+ |Q_\chi(x,t)-\Re g_\chi(x+it)|
+       \ll\log\bigl(N(|t|+2)\bigr)
+ \qquad(0<x\le1/5)
+\end{equation}
+and the reference-line estimate
+\begin{equation}\label{proof:v7l:reference-energy-bound}
+ \frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+ \int_{\mathbb R}\frac{|g_\chi(\sigma_{\mathrm{ref}}+it)|^2}{1+t^2}\,\mathrm{d}t
+ \ll(\log N)^2.
+\end{equation}
+Compare the logarithmic-derivative formulas from the Hadamard
+products at $u=1/2+x+it$ and $u_0=2+it$.
+For the completed primitive function
+$\mathcal L(u,\chi^*)=(d_\chi/\pi)^{(u+1)/2}
+\Gamma((u+1)/2)L(u,\chi^*)$, the identity in
+Lemma~\ref{proof:v9:primitive-zero-data} reads
+\[
+ \frac{\mathcal L'}{\mathcal L}(u,\chi^*)
+ -\frac{\mathcal L'}{\mathcal L}(u_0,\chi^*)
+ =\sum_\rho\left(\frac1{u-\rho}-\frac1{u_0-\rho}\right).
+\]
+Taking real parts gives $Q_\chi(x,t)-Q_\chi(3/2,t)$ on the
+right. The conductor terms cancel, leaving the logarithmic
+derivatives of $L$ and a Gamma difference on the left.
+The reference sum satisfies
+$Q_\chi(3/2,t)\ll\log\bigl(d_\chi(|t|+2)\bigr)$:
+group its terms according to
+$m\le|t-\gamma_\chi|<m+1$ and use
+the unit-interval bound in Lemma~\ref{proof:v9:primitive-zero-data},
+\[
+ \#\{\rho:v\le\Im\rho<v+1\}
+ \ll\log\bigl(d_\chi(|v|+2)\bigr),
+\]
+with the summable factor $(1+m^2)^{-1}$.
+The logarithmic derivative at $2+it$
+is uniformly bounded by its Dirichlet series. The Gamma
+difference is uniformly bounded for $0<x\le1/5$, and the imprimitive
+Euler corrections contribute $O(\log N)$, as in
+Lemma~\ref{proof:lem:zero-expansion}. These observations prove
+\eqref{proof:grh:Poisson-comparison} without any zero-spacing assumption.
+
+For the reference-line estimate, set $X=N/2$ and $x=\sqrt X$
+and use the smoothed Dirichlet polynomial
+\[
+ P_{\chi,X}(u)=
+ \sum_{n\le X}\Lambda(n)\chi(n)n^{-u}w_X(n).
+\]
+Its cutoff weight is
+\[
+ w_X(n)=\begin{cases}
+ 1,&n\le x,\\
+ \log(X/n)/\log x,&x<n\le X,\\
+ 0,&n>X.
+ \end{cases}
+\]
+For $u=1/2+\sigma+it$, the Perron kernel
+$(X^v-x^v)/(v^2\log x)$ has a simple pole of residue $1$
+at zero. In particular, there is no derivative term at that
+point. The residue of $-L'/L(u+v,\chi)$ at a zero
+$v=\rho-u$ of multiplicity $m$ is $-m$. Shifting the contour gives
+\begin{equation}\label{proof:grh:smoothed-truncation}
+ -\frac{L'}L(u,\chi)-P_{\chi,X}(u)
+ =\frac1{\log x}\sum_\rho
+          \frac{X^{\rho-u}-x^{\rho-u}}{(\rho-u)^2}.
+\end{equation}
+The sum includes, with multiplicity, the primitive nontrivial and
+trivial zeros and the zeros of the additional Euler factors.
+For primes $p\mid N$ with $p\nmid d_\chi$, these zeros have
+real part zero and ordinates
+$(\arg\chi^*(p)+2\pi k)/\log p$, $k\in\mathbb Z$.
+Since $\chi$ is odd, there is no pole at $u=1$. For the contour
+shift, choose left vertical lines on which $\Re(u+v)$ is a negative
+even integer. The local zero count permits horizontal ordinates
+of size $T$ at distance $\gg1/\log(N(T+2))$ from the zero ordinates,
+including those of the Euler factors. On each fixed horizontal
+segment, the logarithmic derivative is then
+$O(\log^2(N(T+2)))$, so its integral against the Perron kernel
+tends to zero. First let the height tend to infinity, then move
+the left line to minus infinity. The functional equation bounds the
+logarithmic derivative on these lines; $x>1$ supplies exponential
+decay on the left. The quadratic denominator and the local zero
+count give absolute convergence of the nontrivial and Euler
+zero sums. The trivial-zero sum has additional geometric decay.
+
+The nontrivial-zero contribution is bounded by
+$\epsilon_\sigma Q_\chi(\sigma,t)$, where
+\[
+ \epsilon_\sigma=
+       \frac{x^{-\sigma}+X^{-\sigma}}{\sigma\log x}.
+\]
+The remaining zeros contribute
+$O((\log N/\log x)x^{-1/2-\sigma})$, uniformly in $t$.
+Here the Euler zeros are the zeros of the additional factors
+$1-\chi^*(p)p^{-u}$, where $p$ ranges over the prime divisors
+of $N$ that do not divide $d_\chi$. Since $|\chi^*(p)|=1$,
+the zeros of each such factor are
+\[
+ \rho_{p,k}=i\left(t_p+\frac{2\pi k}{\log p}\right),
+ \qquad t_p=\frac{\arg\chi^*(p)}{\log p},\quad k\in\mathbb Z.
+\]
+Thus, for each fixed prime $p$, their ordinates have spacing
+$2\pi/\log p$, which gives
+\[
+ \sum_{k\in\mathbb Z}
+ \frac1{(1/2+\sigma)^2+(t-t_p-2\pi k/\log p)^2}
+ \ll 1+\log p.
+\]
+Since $\sum_{p\mid N}(1+\log p)\ll\log N$, summing over these
+primes gives the stated error bound. The primitive trivial zeros
+give a smaller bound.
+At the reference line, put
+\[
+ a_N=\sigma_{\mathrm{ref}}\log x
+     =1-\frac{\log2}{\log N}>\frac9{10}.
+\]
+Thus
+\[
+ \epsilon_{\sigma_{\mathrm{ref}}}
+ =\frac{e^{-a_N}+e^{-2a_N}}{a_N}
+ \le\frac{10}{9}\left(e^{-9/10}+e^{-9/5}\right)<\frac23.
+\]
+The comparison \eqref{proof:grh:Poisson-comparison} therefore allows the logarithmic
+derivative on the right of \eqref{proof:grh:smoothed-truncation} to be
+absorbed into the left side. Explicitly, the comparison
+$Q_\chi(\sigma_{\mathrm{ref}},t)\le |g_\chi(\sigma_{\mathrm{ref}}+it)|+
+C\log(N(|t|+2))$ gives
+\[
+ (1-\epsilon_{\sigma_{\mathrm{ref}}})|g_\chi(\sigma_{\mathrm{ref}}+it)|
+ \le |P_{\chi,X}(1/2+\sigma_{\mathrm{ref}}+it)|
+       +C\log(N(|t|+2)).
+\]
+The bound $1-\epsilon_{\sigma_{\mathrm{ref}}}>1/3$ is uniform in $N$,
+the character, and the height. Hence
+\[
+ |g_\chi(\sigma_{\mathrm{ref}}+it)|
+ \ll |P_{\chi,X}(1/2+\sigma_{\mathrm{ref}}+it)|
+                      +\log\bigl(N(|t|+2)\bigr).
+\]
+Odd-character orthogonality leaves exactly the diagonal for this
+polynomial: $n,m\le N/2$, and $w_X(N/2)=0$ removes the possible
+endpoint term.
+Thus averaging removes every oscillatory cross term before the
+integration in height. The resulting estimate does not require a bound
+for an individual character polynomial.
+Hence
+\[
+ \frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+ |P_{\chi,X}(1/2+\sigma+it)|^2
+ =\sum_{(n,N)=1}\frac{\Lambda^2(n)w_X^2(n)}{n^{1+2\sigma}}
+ \ll\sigma^{-2}.
+\]
+For the last step, Chebyshev's bound gives
+$B(u):=\sum_{n\le u}\Lambda^2(n)\ll u\log(2u)$, so partial summation yields
+\[
+ \sum_{n\ge1}\frac{\Lambda^2(n)}{n^{1+2\sigma}}
+ =(1+2\sigma)\int_1^\infty\frac{B(u)}{u^{2+2\sigma}}\,\mathrm{d}u
+ \ll\int_1^\infty\frac{\log(2u)}{u^{1+2\sigma}}\,\mathrm{d}u
+ \ll\sigma^{-2}.
+\]
+Average the square of the preceding pointwise bound and integrate
+against $(1+t^2)^{-1}$. The diagonal estimate then shows that the
+left side of \eqref{proof:v7l:reference-energy-bound} is $O((\log N)^2)$.
+
+\emph{Transfer to the Hardy boundaries.}
+For each character, write
+\begin{equation}\label{proof:v7l:weighted-energy-definition}
+ \mathscr E_\chi(\sigma)=
+ \int_{\mathbb R}\frac{|g_\chi(\sigma+it)|^2}{1+t^2}\,\mathrm{d}t.
+\end{equation}
+For $0<\sigma\le\beta$ and any $0<\sigma_{\mathrm{ref}}\le1/5$,
+we claim that
+\begin{equation}\label{proof:v7l:energy-transfer-bound}
+ \mathscr E_\chi(\sigma)\ll
+ \begin{cases}
+ (\sigma_{\mathrm{ref}}/\sigma)^2
+    \bigl(\mathscr E_\chi(\sigma_{\mathrm{ref}})+(\log N)^2\bigr),
+       &\sigma\le\sigma_{\mathrm{ref}},\\
+ \mathscr E_\chi(\sigma_{\mathrm{ref}}),&\sigma_{\mathrm{ref}}\le\sigma.
+ \end{cases}
+\end{equation}
+For any $0<\sigma\le\beta$, we first relate the
+weighted norm of the full logarithmic derivative to that of its
+real part:
+\begin{equation}\label{proof:grh:weighted-realpart}
+ \int_{\mathbb R}\frac{|g_\chi(\sigma+it)|^2}{1+t^2}\,\mathrm{d}t
+ \le2\int_{\mathbb R}
+       \frac{|\Re g_\chi(\sigma+it)|^2}{1+t^2}\,\mathrm{d}t
+       +\pi|g_\chi(\sigma+1)|^2.
+\end{equation}
+To apply Parseval with the present weight, use the disk function
+\[
+ G(\zeta)=g_\chi\!\left(\sigma+\frac{1+\zeta}{1-\zeta}\right).
+\]
+Here the disk Hardy space $H^2$ uses one circular boundary:
+bounded radial square means are equivalent to square summability
+of the Taylor coefficients. The Cayley map converts its normalized
+boundary measure into the weight used in the displayed inequality.
+The GRH logarithmic-derivative bound and the absolutely
+convergent Dirichlet series farther to the right give
+\[
+ |G(\zeta)|\ll_{N,\sigma}\log^2(2+|1-\zeta|^{-1}).
+\]
+This bound gives uniformly bounded radial square means, so $G\in H^2$.
+With normalized circle measure, if $G(\zeta)=\sum a_n\zeta^n$, then
+\[
+ \|G\|_2^2=2\|\Re G\|_2^2-\Re(a_0^2).
+\]
+The Cayley map sends that measure to $\mathrm{d}t/(\pi(1+t^2))$.
+This change of variables and $-\Re(a_0^2)\le|a_0|^2$ give
+\eqref{proof:grh:weighted-realpart}; its last term is uniformly
+$O(1)$ by the Dirichlet series at $3/2+\sigma$.
+
+For $0<\sigma\le\min(\sigma_{\mathrm{ref}},\beta)$, positivity gives
+$Q_\chi(\sigma,t)\le(\sigma_{\mathrm{ref}}/\sigma)Q_\chi(\sigma_{\mathrm{ref}},t)$.
+Writing $K=\sigma_{\mathrm{ref}}/\sigma\ge1$,
+\eqref{proof:grh:Poisson-comparison} implies
+\[
+ |\Re g_\chi(\sigma+it)|
+ \le K|g_\chi(\sigma_{\mathrm{ref}}+it)|
+       +C(K+1)\log\bigl(N(|t|+2)\bigr).
+\]
+Square this inequality and integrate against $(1+t^2)^{-1}$.
+Since $\int_{\mathbb R}\log^2(|t|+2)(1+t^2)^{-1}\,\mathrm{d}t<\infty$,
+the integrated logarithmic error is $O((\log N)^2)$.
+Applying \eqref{proof:grh:weighted-realpart} therefore gives
+\[
+ \mathscr E_\chi(\sigma)\ll
+ K^2\bigl(\mathscr E_\chi(\sigma_{\mathrm{ref}})+(\log N)^2\bigr).
+\]
+The bounded center term is absorbed since $K\ge1$ and $N\ge4$.
+This proves the first case of \eqref{proof:v7l:energy-transfer-bound}.
+For $\sigma\ge\sigma_{\mathrm{ref}}$, the disk $H^2$ estimate bounds
+the squared modulus by the Poisson integral of its boundary squared
+modulus. This is the harmonic majorant used here. Under the same
+Cayley change of variable it becomes
+\[
+ |g_\chi(\sigma+it)|^2
+ \le(P_\ell*|g_\chi(\sigma_{\mathrm{ref}}+i\,\cdot)|^2)(t),\qquad
+ P_\ell(t)=\frac{\ell}{\pi(\ell^2+t^2)},\quad \ell=\sigma-\sigma_{\mathrm{ref}}.
+\]
+Here $*$ denotes convolution in $t$; for $\ell=0$ the formula is
+understood as the identity. The disk $H^2$ boundary representation
+has no additional point mass at the point corresponding to infinity.
+Multiply the resulting majorant by $\pi P_1(t)$ and integrate.
+By nonnegativity, Tonelli's theorem permits interchanging the two integrals.
+Then $P_1*P_\ell=P_{1+\ell}$ and $P_{1+\ell}\le(1+\ell)P_1$ give
+$\mathscr E_\chi(\sigma)\le(1+\ell)\mathscr E_\chi(\sigma_{\mathrm{ref}})$.
+The factor is bounded since $0\le \ell\le\beta$. This proves the
+second case of \eqref{proof:v7l:energy-transfer-bound}.
+
+\emph{The character average.}
+Set $\sigma_{\mathrm{ref}}=2/\log N$.
+Equation~\eqref{proof:v7l:reference-energy-bound} bounds the weighted
+square integrals of the logarithmic derivatives on this line,
+averaged over all odd characters modulo $N$:
+\[
+ \frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+       \mathscr E_\chi(\sigma_{\mathrm{ref}})
+ =\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+       \int_{\mathbb R}
+       \frac{|g_\chi(\sigma_{\mathrm{ref}}+it)|^2}{1+t^2}\,\mathrm{d}t
+ \ll(\log N)^2.
+\]
+For $0<\sigma\le\min(\sigma_{\mathrm{ref}},\beta)$, average the first case of
+\eqref{proof:v7l:energy-transfer-bound} over the odd characters.
+With $K=\sigma_{\mathrm{ref}}/\sigma$, this gives
+$O(K^2(\log N)^2)=O(\sigma^{-2})$ on the left of the reference line.
+Here $K^2(\log N)^2=4\sigma^{-2}$ and
+$2|X_N^-|/\varphi(N)=1$, so the additional $(\log N)^2$
+term has the same bound after averaging.
+For $\sigma_{\mathrm{ref}}\le\sigma\le\beta$, average the second case of
+\eqref{proof:v7l:energy-transfer-bound} to obtain $O((\log N)^2)$.
+These two ranges prove \eqref{grh:averaged-energy} with the
+asserted uniform constant.
+This proves the lemma.
+\end{proof}
+
+\subsubsection{The three components of the residual operator}
+
+We apply the averaged estimate to the correlation operator and
+bound the diagonal and Beta-model operators on the same Hardy space.
+Positivity gives trace bounds for the first two components; the
+continued Beta model is controlled through its boundary kernel.
+
+The three components act by boundary integration against the
+respective kernels
+\[
+ \frac{\mathscr P_N(s,\bar z)}{(1+s)(1+\bar z)},\qquad
+ \frac{\mathscr D_N(s+\bar z)}{(1+s)(1+\bar z)},\qquad
+ \frac{\mathscr K_N(s,\bar z)}{(1+s)(1+\bar z)}.
+\]
+We denote these operators by $\mathcal P_N$, $\mathcal D_N$, and
+$\mathcal K_N$, so that
+$T_N=\mathcal P_N-\mathcal D_N-\mathcal K_N$.
+\begin{proposition}\label{proof:grh:component-bounds}
+The operators $\mathcal P_N$ and $\mathcal D_N$ are positive
+and trace class, and
+\begin{align*}
+ \|\mathcal P_N\|_{\mathrm{HS}}
+       &\le\operatorname{tr}\mathcal P_N\ll (\log N)^2+\alpha_N^{-2},\\
+ \|\mathcal D_N\|_{\mathrm{HS}}
+       &\le\operatorname{tr}\mathcal D_N\ll\alpha_N^{-2},\\
+ \|\mathcal K_N\|_{\mathrm{HS}}&\ll\alpha_N^{-2}.
+\end{align*}
+The implied constants are independent of $N$ and $\alpha_N$.
+\end{proposition}
+
+\begin{proof}
+For the correlation component, the Gram representation is
+\[
+ \mathscr P_N(s,\bar z)=\frac2{\varphi(N)}
+       \sum_{\chi\in X_N^-}g_\chi(s)\overline{g_\chi(z)},
+\]
+as in~\eqref{qp:Gram}.
+It makes $\mathcal P_N$ positive and finite rank.
+The boundary norm is the sum over $\Re s=\alpha_N$ and
+$\Re s=\beta$, with $|1+s|^{-2}\asymp(1+|\Im s|^2)^{-1}$.
+Thus the averaged bound for weighted square integrals in
+\eqref{grh:averaged-energy} applies to each boundary and gives
+\[
+ \|\mathcal P_N\|_{\mathrm{HS}}
+ \le\operatorname{tr}\mathcal P_N
+ =\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+       \left\|\frac{g_\chi(s)}{1+s}\right\|_{\mathcal H_N}^2
+ \ll (\log N)^2+\alpha_N^{-2}.
+\]
+For the diagonal component, recall from
+\eqref{eq:goldbach-arithmetic-kernels} that
+$\mathscr D_N(w)=\sum_{(n,N)=1}\Lambda^2(n)n^{-1-w}$,
+and set $d_n(s)=n^{-s}/(1+s)$.
+Each $d_n$ belongs to $\mathcal H_N$, and
+\[
+ \|d_n\|^2=\pi\left(\frac{n^{-2\alpha_N}}{1+\alpha_N}
+                  +\frac{n^{-2\beta}}{1+\beta}\right).
+\]
+Because the inner product is linear in its first variable,
+$d_n\otimes d_n$ denotes the operator
+$h\mapsto\langle h,d_n\rangle d_n$.
+The positive rank-one series
+$\sum_{(n,N)=1}\Lambda^2(n)n^{-1}d_n\otimes d_n$
+therefore has total trace
+\[
+ \operatorname{tr}\mathcal D_N
+ =\pi\left(\frac{\mathscr D_N(2\alpha_N)}{1+\alpha_N}
+                     +\frac{\mathscr D_N(2\beta)}{1+\beta}\right)
+ \ll\alpha_N^{-2}.
+\]
+The bound $\sum_{n\le u}\Lambda^2(n)\ll u\log(2u)$ and partial
+summation give $\mathscr D_N(2\sigma)\ll\sigma^{-2}$ for
+$0<\sigma\le\beta$. Hence the rank-one series converges in trace
+norm and defines $\mathcal D_N$ with the required diagonal kernel.
+For this positive series, convergence in trace norm means that the
+sum of the traces of the omitted terms tends to zero; it implies
+convergence in operator norm as well. The operators
+$\mathcal P_N$ and $\mathcal D_N$ act on
+$\mathcal H_N$, as does $T_N$ by Proposition~\ref{proof:bd:HS}.
+The identity $\mathscr E_N=\mathscr P_N-\mathscr D_N-\mathscr K_N$ shows that
+$\mathcal K_N=\mathcal P_N-\mathcal D_N-T_N$ has the boundary
+kernel corresponding to $\mathscr K_N$.
+
+For the model component, the arithmetic and analytic factors are
+separated as follows:
+\begin{equation}\label{proof:grh:model-functional-form}
+ \mathscr K_N(s,\bar z)=\mathfrak S(N)
+ \left(\frac\pi N\right)^{s+\bar z}P_N(s+\bar z)
+ \zeta(1-s-\bar z)\mathcal X_1(s)\mathcal X_1(\bar z),
+\end{equation}
+as in~\eqref{v3:model-functional-form}.
+Here
+\[
+ P_N(w)=\prod_{\substack{p>2\\p\nmid N}}
+       \left(1+\frac{p^{-w}}{p-2}\right),\qquad
+ \mathcal X_1(s)=\frac{\Gamma((3/2-s)/2)}{\Gamma((3/2+s)/2)}.
+\]
+We estimate these factors uniformly as the left boundary approaches
+zero. Let $0<\sigma\le2\beta$ and put
+$P_*(\sigma)=\prod_{p>2}(1+p^{-\sigma}/(p-2))$.
+The convergent product comparison
+\[
+ \left(1+\frac{p^{-\sigma}}{p-2}\right)(1-p^{-1-\sigma})
+ \le1+\frac2{p(p-2)}
+\]
+gives $P_*(\sigma)\ll\zeta(1+\sigma)\ll\sigma^{-1}$.
+Moreover,
+\[
+ \mathfrak S(N)P_N(\sigma)
+ =2C_2P_*(\sigma)
+   \prod_{\substack{p\mid N\\p>2}}
+        \frac{p-1}{p-2+p^{-\sigma}}.
+\]
+Each finite factor is at most $p^\sigma$, and
+$\prod_{p\mid N}p\le N$. Hence, for $\Re w=\sigma$ in this range,
+$|N^{-w}\mathfrak S(N)P_N(w)|\ll\sigma^{-1}$.
+To bound the zeta factor, apply Euler summation at
+$R=2+|\tau|$. The truncated sum and the pole term are each
+$O(R^\sigma/\sigma)$, and the remainder is $O(R^\sigma)$.
+Consequently
+$|\zeta(1-\sigma-i\tau)|\ll\sigma^{-1}(2+|\tau|)^{2\beta}$
+for $0<\sigma\le2\beta$. Stirling's formula gives
+$\mathcal X_1(s)\ll(1+|\Im s|)^{-\Re s}$ uniformly for
+$0\le\Re s\le\beta$, in particular a uniform bound there.
+The functional form
+\eqref{proof:grh:model-functional-form} therefore bounds the squared
+model kernel on each boundary product by
+\[
+ C\alpha_N^{-4}
+ \frac{(2+|t-y|)^{4\beta}}{(1+t^2)(1+y^2)}.
+\]
+The displayed majorant is integrable because $4\beta<1$; explicitly,
+\[
+ \int_{\mathbb R}
+ \frac{\mathrm{d}t}{(1+t^2)(1+(t-u)^2)}=\frac{2\pi}{4+u^2}.
+\]
+Thus the boundary-kernel operator has Hilbert--Schmidt norm
+$O(\alpha_N^{-2})$.
+The preceding identity identifies the restriction of this
+boundary-kernel operator to the Hardy trace space with
+$\mathcal K_N$. Restricting an operator to a closed subspace
+cannot increase its Hilbert--Schmidt norm, which proves the
+model bound.
+
+This proves the proposition.
+\end{proof}
+
+\subsubsection{Proof of the baseline spectral zero-free theorem}
+
+The triangle inequality gives the operator bound; the zero--norm
+conversion then gives the stated width.
+
+\begin{proof}[Proof of Theorem~\ref{proof:grh:main-theorem}]
+Applying the triangle inequality to the three bounds in
+Proposition~\ref{proof:grh:component-bounds} gives
+\[
+ \begin{aligned}
+ \|T_N\|_{\mathrm{HS}}
+ &\le\|\mathcal P_N\|_{\mathrm{HS}}
+      +\|\mathcal D_N\|_{\mathrm{HS}}
+      +\|\mathcal K_N\|_{\mathrm{HS}}\\
+ &\ll (\log N)^2+\alpha_N^{-2}\ll (\log N)^2.
+ \end{aligned}
+\]
+Combining this with $\|T_N\|\le\|T_N\|_{\mathrm{HS}}$ proves
+\eqref{proof:grh:operator-bound}.
+
+Choose $\eta_N^{\mathrm{GRH}}$ to be a sufficiently small
+absolute multiple of
+$\mathfrak S(N)/(N\log N)$. Since $\mathfrak S(N)\ll\log\log N$, this width
+tends to zero and lies in $(0,1/2)$ for sufficiently large $N$.
+Using $\delta_N^2=\mathfrak S(N)(\log N)^3/N$, the corresponding
+norm bound is
+\[
+ \frac{\delta_N}
+      {2\sqrt{\eta_N^{\mathrm{GRH}}(1-\eta_N^{\mathrm{GRH}})}}
+ \ge\frac{\delta_N}{2\sqrt{\eta_N^{\mathrm{GRH}}}}.
+\]
+The right-hand side is a fixed multiple of $(\log N)^2$.
+Choosing the width's constant sufficiently small makes this multiple
+large enough to dominate the operator bound.
+The choice is made once, using the absolute constant in the operator
+estimate, and hence remains uniform as the modulus varies.
+Theorem~\ref{proof:qp:dictionary} then gives the stated zero-free half-space,
+including its quaternionic extension. The chosen width has the
+order asserted in \eqref{proof:grh:zero-free-width}.
+This proves the theorem.
+\end{proof}
+
+\subsection{The scale of the left Hardy boundary}
+
+The normalization used above also balances the available analytic
+estimates. Keep $\beta=1/8$ fixed, let $0<\alpha<1/10$, and write
+$\widehat T_{N,\alpha}$ for the operator on this strip and
+$\mathcal Q_\alpha$ for the squared norm of its Mellin functional.
+The proof of Proposition~\ref{proof:grh:component-bounds} applies
+with $\alpha$ in place of $\alpha_N$. The Fourier calculation in
+Proposition~\ref{proof:bm:norm}, performed with the same endpoints,
+gives
+\[
+ \mathcal Q_\alpha=\frac1{2\pi}\int_0^\infty
+ \frac{(Nu)^{2\alpha}|\Phi(u)-u\Phi'(u)|^2}
+      {1+(Nu)^{-2(\beta-\alpha)}}\,\frac{\mathrm{d}u}{u}.
+\]
+On the fixed support, $u^{2\alpha}$ is bounded above and below
+uniformly for $0<\alpha<1/10$, and the denominator lies between
+one and two for sufficiently large $N$. Consequently,
+\[
+ \mathcal Q_\alpha\asymp_\phi N^{2\alpha},\qquad
+ \|\widehat T_{N,\alpha}\|\le M_\alpha
+ :=C\bigl((\log N)^2+\alpha^{-2}\bigr).
+\]
+The constants are uniform in $\alpha$ in this range, for
+sufficiently large $N$. For left boundary $\alpha$, the
+Cauchy--Schwarz argument in \eqref{v3f:master-error-formula} gives
+an error bound $\mathcal Q_\alpha\|\widehat T_{N,\alpha}\|$.
+Setting $x=\alpha\log N$, we have
+\[
+ \mathcal Q_\alpha M_\alpha
+ \asymp_\phi(\log N)^2e^{2x}(1+x^{-2}).
+\]
+The last factor tends to infinity both as $x\downarrow0$ and
+as $x\to\infty$, and has a positive finite minimum in between.
+Thus $\alpha\asymp1/\log N$ gives the best order obtainable
+from these separate bounds; it does not assert optimality of
+the actual residual norm. The chosen $\alpha_N=1/\log N$
+also gives $N^{2\alpha_N}=e^2$.
+Appendix~\ref{proof:app:param} develops the parameter dependence.
+
+The next section proves the exact quadratic-form identity and the
+uniform functional bound, then combines them with the spectral
+estimates to bound the Goldbach error and prove
+Theorems~\ref{thm:goldbach-S} and \ref{thm:goldbach-R}.
+
+\section{Hardy: the arithmetic error as an exact quadratic form}
+\label{proof:sec:v3-mellin-operator}\label{proof:v7:hardy-error}\label{proof:detail:hardy}
+
+We express the signed error in the weighted Goldbach correlation as
+an exact quadratic form of the residual operator. The construction
+has two parts: Mellin inversion identifies the arithmetic error,
+and a bounded functional on the Hardy space selects the vector at
+which the operator gives that error. We then combine the Hardy
+and spectral estimates to bound the relative Goldbach error in
+terms of a zero-free width and prove the two main theorems.
+
+Throughout, $N\ge4$ is even. The weight $\phi$ is a fixed nonzero
+function in $C_c^\infty(\mathbb R)$ supported in $[1/3,2/3]$, with
+$0\le\phi\le1$ and $\phi(u)=\phi(1-u)$. Put
+\[
+ \Phi(u)=\sqrt u\,\phi(u),\qquad
+ c_\phi=\int_0^1\phi(u)^2\,\mathrm{d}u.
+\]
+The arithmetic quantities to be compared are
+\[
+ \begin{aligned}
+ \mathcal G(N)&=\frac1N
+   \sum_{\substack{n+m=N\\(nm,N)=1}}
+       \Lambda(n)\Lambda(m)\phi(n/N)\phi(m/N),\\
+ \mathfrak S(N)&=2C_2\prod_{\substack{p\mid N\\p>2}}
+                           \frac{p-1}{p-2},\qquad
+ C_2=\prod_{p>2}\left(1-\frac1{(p-1)^2}\right),
+ \end{aligned}
+\]
+as in~\eqref{eq:goldbach-correlation} and~\eqref{eq:singular-series}.
+The sum is over ordered pairs of positive integers. Whenever
+$\mathrm{GRH}(N)$ is assumed, it means that every nontrivial zero
+of every primitive Dirichlet $L$-function whose conductor divides
+$N$ has real part $1/2$. The Hardy construction will additionally
+require $N>e^{10}$.
+Our target is $c_\phi\mathfrak S(N)-\mathcal G(N)$; retaining its
+sign gives an exact identity before any norm estimate is applied.
+
+\subsection{Mellin inversion and the arithmetic residual}
+\label{proof:detail:mellin}
+
+We evaluate the character, diagonal, and model integrals on a common
+Mellin contour. Their combination will represent the same arithmetic
+discrepancy on every permitted contour. The residual is formed by
+subtracting the exact diagonal and the continuous model from the
+character kernel:
+\[
+ \mathscr E_N(s,z)=\mathscr P_N(s,z)
+                    -\mathscr D_N(s+z)-\mathscr K_N(s,z).
+\]
+We evaluate these three terms in order, keeping the same Mellin
+normalization in each.
+
+\subsubsection{The character integral}
+\label{proof:v7:character-mellin}
+
+The odd-character family is
+$X_N^-=\{\chi\ \mathrm{mod}\ N:\chi(-1)=-1\}$, with all characters extended
+by zero at nonunits. The character moment is
+\[
+ \mathcal P(N)=\frac2{\varphi(N)}
+                 \sum_{\chi\in X_N^-}|P_\chi|^2.
+\]
+Here each character contributes the polynomial
+\[
+ P_\chi=\sum_{n\ge1}
+       \frac{\Lambda(n)\chi(n)}{\sqrt n}\Phi(n/N).
+\]
+Writing $g_\chi(s)=L'/L(1/2+s,\chi)$, the analytic kernel is
+\[
+ \mathscr P_N(s,z)=\frac2{\varphi(N)}\sum_{\chi\in X_N^-}
+                          g_\chi(s)g_{\bar\chi}(z).
+\]
+Here $s$ and $z$ are independent holomorphic variables. We use the
+Mellin convention
+\[
+ \widetilde\Phi(s)=\int_0^\infty\Phi(u)u^{s-1}\,\mathrm{d}u,
+ \qquad
+ \Phi(u)=\frac1{2\pi i}\int_{(\sigma)}\widetilde\Phi(s)u^{-s}\,\mathrm{d}s.
+\]
+Here $\int_{(\sigma)}$ runs upward along $\Re s=\sigma$; the same
+tilde notation and Mellin convention apply to the other weights below.
+The decay needed for the contour shifts is
+\begin{equation}\label{gb:mellin-decay}
+ \widetilde{\Phi}(\sigma+it)\ll_{\phi,I}(1+|t|)^{-6}
+ \quad(\sigma\in I),
+\end{equation}
+for every fixed compact real interval $I$. We prove this estimate
+together with the character inversion below.
+
+\begin{lemma}\label{proof:gb:mellin-projection}
+The Mellin inversion formula above and the decay estimate
+\eqref{gb:mellin-decay} hold, with decay uniform on compact real
+intervals for the contour. Under $\mathrm{GRH}(N)$, for every
+$0<\sigma\le1/9$ one has the absolutely convergent identities
+\begin{align}
+ P_\chi&=-\frac1{2\pi i}\int_{(\sigma)}
+               N^s\widetilde\Phi(s)g_\chi(s)\,\mathrm{d}s,
+               \label{proof:gb:character-inversion}\\
+ \mathcal P(N)&=\frac1{(2\pi i)^2}
+   \int_{(\sigma)}\int_{(\sigma)}
+   N^{s+z}\widetilde\Phi(s)\widetilde\Phi(z)
+                 \mathscr P_N(s,z)\,\mathrm{d}s\,\mathrm{d}z.
+                 \label{proof:gb:moment-inversion}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Write the Mellin transform as the Fourier integral of
+$e^{\sigma x}\Phi(e^x)$. This function has fixed compact support, and
+six integrations by parts give the asserted decay uniformly for
+$\sigma$ in a compact real interval. Fourier inversion then gives
+the absolutely convergent Mellin inversion formula.
+
+On $\Re s=1$, absolute convergence follows from
+$\sum_n\Lambda(n)n^{-3/2}<\infty$. Mellin decay therefore
+permits termwise inversion and proves \eqref{proof:gb:character-inversion} on that line.
+For an odd character, the inducing primitive $L$-function is entire.
+Under GRH its nontrivial zeros lie on $\Re u=1/2$; its trivial zeros
+and the zeros of the removed Euler factors lie in $\Re u\le0$.
+Thus $L'/L(1/2+s,\chi)$ has no poles between $\sigma$ and $1$.
+
+On the horizontal sides of the contour rectangle, the bound in
+Lemma~\ref{proof:lem:zero-expansion} gives
+\[
+ \left|N^s\widetilde\Phi(s)\frac{L'}L(1/2+s,\chi)\right|
+ \ll_{\phi,\sigma}N(1+T)^{-6}\log^2\bigl(N(T+2)\bigr),
+ \qquad s=x\pm iT,\quad\sigma\le x\le1.
+\]
+For fixed $N$ and $\sigma$, these contributions vanish as $T\to\infty$.
+The contour is shifted for each fixed modulus and positive left line.
+Uniformity in the moving arithmetic boundary is supplied later by the
+Hardy estimates, rather than by this shift.
+Cauchy's theorem proves the shifted identity. Multiplying the formulas
+for $\chi$ and $\bar\chi$, then averaging over $X_N^-$, proves
+\eqref{proof:gb:moment-inversion}: $\overline{P_\chi}=P_{\bar\chi}$,
+the two minus signs cancel, and absolute convergence permits Fubini.
+This proves the lemma.
+\end{proof}
+
+\subsubsection{The diagonal and Beta integrals}
+\label{proof:sec:goldbach-main}\label{proof:v7:main-term-evaluation}
+
+The diagonal and continuous-model kernels are
+\[
+ \mathscr D_N(w)=\sum_{\substack{n\ge1\\(n,N)=1}}
+                    \frac{\Lambda(n)^2}{n^{1+w}},\qquad
+ \mathscr K_N(s,z)=N^{-s-z}\mathscr S_N(s+z)K_-(s,z).
+\]
+The corresponding finite diagonal is
+\[
+ \mathcal D(N)=N^{-1}\sum_{(n,N)=1}\Lambda(n)^2\phi(n/N)^2.
+\]
+The density series and signed Beta factor are
+\[
+ \begin{aligned}
+ \mathscr S_N(w)&=\sum_{k\ge1}\mathfrak S(kN)k^{-w}
+                                      \quad(\Re w>1),\\
+ K_-(s,z)&=B(1/2-s,s+z)+B(1/2-z,s+z)
+                           -B(1/2-s,1/2-z).
+ \end{aligned}
+\]
+Here $B(s,z)=\Gamma(s)\Gamma(z)/\Gamma(s+z)$ is Euler's Beta
+function. Lemma~\ref{proof:lem:singular-N} continues $\mathscr S_N$
+to $\Re w>0$, with only a simple pole at $w=1$. In the range of
+the contours below, $\mathscr K_N$ means the continued model
+constructed in Section~\ref{proof:v7:euler}.
+
+To encode the two positive difference families and the negative
+sum family, define the following convolutions:
+\begin{equation}\label{gb:convolutions}
+ \begin{aligned}
+ C_0(y)&=\int_0^\infty\phi(u)\phi(u+y)\d u,\qquad
+ J_0(y)=\int_0^y\phi(u)\phi(y-u)\d u,\\
+ H_0(y)&=2C_0(y)-J_0(y),\qquad J_0(1)=c_\phi.
+ \end{aligned}
+\end{equation}
+The value $J_0(1)=c_\phi$ follows from $\phi(u)=\phi(1-u)$.
+Write $\widetilde H_0$ for the Mellin transform of $H_0$.
+The Beta--Mellin relation below reduces the model integral to one
+Mellin variable, and a contour shift then gives its value.
+
+\begin{lemma}\label{proof:gb:main-term-inversion}
+For $0<\sigma\le1/9$, the diagonal and model integrals converge
+absolutely and satisfy
+\begin{align}
+ &\frac1{(2\pi i)^2}\int_{(\sigma)}\int_{(\sigma)}
+ N^{s+z}\widetilde\Phi(s)\widetilde\Phi(z)
+                         \mathscr D_N(s+z)\,\mathrm{d}s\,\mathrm{d}z=\mathcal D(N),
+                         \label{proof:gb:diagonal-inversion}\\
+ I_N(\Phi)&:=\frac1{(2\pi i)^2}\int_{(\sigma)}\int_{(\sigma)}
+ \widetilde\Phi(s)\widetilde\Phi(z)
+                 \mathscr S_N(s+z)K_-(s,z)\,\mathrm{d}s\,\mathrm{d}z
+                 =-c_\phi\mathfrak S(N).
+                 \label{proof:gb:beta-inversion}
+\end{align}
+In the model integral, the factor $N^{s+z}$ has cancelled the
+$N^{-s-z}$ in $\mathscr K_N$.
+\end{lemma}
+
+\begin{proof}
+Since $|\mathscr D_N(s+z)|\le\mathscr D_N(2\sigma)$ on the product
+contour, Mellin decay permits termwise integration of its Dirichlet
+series. Inversion in both variables gives
+\[
+ \sum_{(n,N)=1}\frac{\Lambda(n)^2}{n}\Phi(n/N)^2
+ =\frac1N\sum_{(n,N)=1}\Lambda(n)^2\phi(n/N)^2
+ =\mathcal D(N),
+\]
+which proves \eqref{proof:gb:diagonal-inversion}.
+
+For the model, Euler's integral gives
+\begin{equation}\label{proof:gb:inner-beta}
+ \begin{aligned}
+ \int_0^r u^{-1/2-s}(r-u)^{w-1}\d u
+ &=r^{w-1/2-s}B(1/2-s,w),\\
+ \int_0^\infty u^{-1/2-s}(u+r)^{w-1}\d u
+ &=r^{w-1/2-s}B(1/2-s,1/2+s-w).
+ \end{aligned}
+\end{equation}
+Both identities are absolutely convergent when
+$\Re s=\sigma$ and $0<\Re w<1/2+\sigma$.
+Insert Mellin inversion for $\phi(u)=u^{-1/2}\Phi(u)$ into the
+convolution transforms. The substitutions $r=u+y$ for $C_0$ and
+$y=u+r$ for $J_0$, followed by \eqref{proof:gb:inner-beta}, give
+\[
+ \begin{aligned}
+ \widetilde C_0(w)
+ &=\frac1{2\pi i}\int_{(\sigma)}
+   \widetilde\Phi(s)\widetilde\Phi(w-s)B(1/2-s,w)\d s,\\
+ \widetilde J_0(w)
+ &=\frac1{2\pi i}\int_{(\sigma)}
+   \widetilde\Phi(s)\widetilde\Phi(w-s)
+   B(1/2-s,1/2+s-w)\d s.
+ \end{aligned}
+\]
+Here $r$ remains in the fixed support of $\phi$, while the real-part
+versions of \eqref{proof:gb:inner-beta} and the integrability of
+$\widetilde\Phi$ justify the interchanges. On $\Re w=2\sigma$,
+replacing $s$ by $w-s$ gives the second Beta term for $C_0$.
+Adding these two expressions and subtracting the expression for $J_0$
+gives, for $0<\eta\le1/9$ and $\Re w=2\eta$,
+\begin{equation}\label{gb:beta-mellin}
+ \widetilde H_0(w)=\frac1{2\pi i}\int_{(\eta)}
+ \widetilde{\Phi}(s)\widetilde{\Phi}(w-s)K_-(s,w-s)\d s.
+\end{equation}
+
+The support of $\phi$ makes $C_0$ vanish for $y>1/3$ and $J_0$
+vanish outside $[2/3,4/3]$. Their derivatives through order six are
+bounded, so $\widetilde H_0$ is holomorphic for $\Re w>0$.
+For every compact interval $I\subset(0,\infty)$, the derivatives
+through order six of $e^{\sigma x}H_0(e^x)$ are integrable uniformly
+for $\sigma\in I$: they decay exponentially as $x\to-\infty$ and
+vanish for large positive $x$. All boundary terms vanish, so six
+integrations by parts give
+\begin{equation}\label{proof:gb:H-decay}
+ \widetilde H_0(\sigma+it)\ll_{\phi,I}(1+|t|)^{-6}
+ \qquad(\sigma\in I,\ t\in\mathbb R).
+\end{equation}
+Put $a_0=\int_0^\infty\phi(u)\,\mathrm{d}u$. Integration over the positive
+quadrant assigns half the product integral to $C_0$ and all of it
+to $J_0$, giving
+\begin{equation}\label{gb:pole-cancellation}
+ \int_0^\infty C_0(y)\d y=\frac{a_0^2}{2},
+ \quad
+ \int_0^\infty J_0(y)\d y=a_0^2,
+ \quad\widetilde H_0(1)=0.
+\end{equation}
+The support restrictions separately give the integer values
+\begin{equation}\label{gb:integer-values}
+ C_0(k)=0\ (k\geq1),\quad
+ J_0(k)=0\ (k\geq2),\quad H_0(1)=-c_\phi.
+\end{equation}
+
+On the original product contour, Euler's integral bounds the three
+Beta factors uniformly, while
+$\mathscr S_N(2\sigma+it)\ll_{N,\sigma}1+|t|$.
+The model integrand is therefore dominated by a constant times
+\[
+ (1+|v|)^{-6}(1+|y|)^{-6}(1+|v+y|),
+\]
+an integrable function on $\mathbb R^2$. The change of variables
+$(v,y)\mapsto(v,v+y)$ has Jacobian $1$, so Fubini and
+\eqref{gb:beta-mellin} give the single-contour expression
+\[
+ I_N(\Phi)=\frac1{2\pi i}\int_{(2\sigma)}
+                  \mathscr S_N(w)\widetilde H_0(w)\,\mathrm{d}w,
+ \qquad w=s+z.
+\]
+This absolute majorant permits the change of variables before either
+integration is evaluated. It also shows that the orientation and the
+normalization are unchanged when the two heights are replaced by their sum.
+
+The possible pole at $w=1$ is removable in the product
+$\mathscr S_N(w)\widetilde H_0(w)$, because $\mathscr S_N$ has a
+simple pole there and $\widetilde H_0(1)=0$.
+Applying \eqref{proof:gb:singular-series-growth} and
+\eqref{proof:gb:H-decay} on $I=[2\sigma,3/2]\subset(0,\infty)$ gives
+horizontal integrals
+$O_{N,\phi,\sigma}(T^{-5})$. We may therefore move the $w$-contour
+to $\Re w=3/2$. On that line the density series
+$\mathscr S_N(w)=\sum_{k\ge1}\mathfrak S(kN)k^{-w}$
+converges absolutely. Termwise Mellin inversion
+therefore completes the evaluation:
+\begin{equation}\label{gb:single-contour}
+ \begin{aligned}
+ I_N(\Phi)&=\frac1{2\pi i}\int_{(2\sigma)}
+       \mathscr S_N(w)\widetilde H_0(w)\,\d w\\
+       &=\sum_{k\ge1}\mathfrak S(kN)H_0(k)
+        =-c_\phi\mathfrak S(N).
+ \end{aligned}
+\end{equation}
+Only $k=1$ survives by \eqref{gb:integer-values}, proving
+\eqref{proof:gb:beta-inversion}. The pole cancellation concerns
+$\widetilde H_0(1)$; the surviving sampled value is $H_0(1)$.
+This proves the lemma.
+\end{proof}
+
+\subsubsection{The arithmetic discrepancy}
+
+We can now combine the three evaluations without any further contour
+argument. Write the residual integral as
+\begin{equation}\label{proof:gb:residual-integral}
+ r_\sigma(N)=\frac1{(2\pi i)^2}
+   \int_{(\sigma)}\int_{(\sigma)}
+   N^{s+z}\widetilde\Phi(s)\widetilde\Phi(z)
+                              \mathscr E_N(s,z)\,\mathrm{d}s\,\mathrm{d}z.
+\end{equation}
+The signs of the three kernels are essential: the model is subtracted
+in $\mathscr E_N$, but its own weighted integral is negative.
+
+\begin{proposition}\label{proof:v3w:exact-moving}
+Under $\mathrm{GRH}(N)$, the residual integral $r_\sigma(N)$ is
+absolutely convergent for $0<\sigma\le1/9$ and satisfies
+\begin{equation}\label{proof:gb:exact-error}
+ \mathcal G(N)=c_\phi\mathfrak S(N)-r_\sigma(N).
+\end{equation}
+In particular, $r_\sigma(N)$ is independent of $\sigma$; we write it as
+$r(N)$.
+\end{proposition}
+
+\begin{proof}
+Lemmas~\ref{proof:gb:mellin-projection} and \ref{proof:gb:main-term-inversion}
+evaluate the three terms of the residual as
+\[
+ r_\sigma(N)=\mathcal P(N)-\mathcal D(N)+c_\phi\mathfrak S(N).
+\]
+The identity $\mathcal G(N)=\mathcal D(N)-\mathcal P(N)$ from
+Lemma~\ref{proof:v9:finite-projection} gives
+\eqref{proof:gb:exact-error}. Its arithmetic side has no contour parameter.
+The model enters with the opposite sign to its own Mellin evaluation
+because it is subtracted in the residual kernel.
+The convergence constants may depend on $N$ and $\sigma$;
+the uniform estimate follows from the Hardy norm below.
+This proves the proposition.
+\end{proof}
+
+\subsection{The residual as a quadratic form}
+\label{proof:detail:hardy-quadratic}
+
+For even $N>e^{10}$ satisfying $\mathrm{GRH}(N)$, we construct a
+vector $v_N$ of uniformly bounded norm such that
+$r(N)=\langle T_Nv_N,v_N\rangle$. This transfers the spectral
+estimates to the arithmetic discrepancy without a factor growing
+with $N$. We use the strip and boundary
+\[
+ \begin{gathered}
+ \alpha_N=\frac1{\log N},\qquad \beta=\frac18,\qquad
+ \sigma_*=\frac19,\qquad \Delta_N=\beta-\alpha_N,\\
+ S_N=\{s:\alpha_N<\Re s<\beta\},\qquad
+ \Gamma_N=(\alpha_N+i\mathbb R)\sqcup(\beta+i\mathbb R).
+ \end{gathered}
+\]
+The Hardy space $\mathcal H_N=H^2(S_N)$ consists of holomorphic
+functions with bounded paired vertical $L^2$ means as the two lines
+approach the boundary. As proved in Lemma~\ref{proof:hd:PW}, its
+boundary traces $h_{\alpha_N},h_\beta$ have norm
+\[
+ \|h\|_{\mathcal H_N}^2
+ =\int_{\mathbb R}|h_{\alpha_N}(t)|^2\,\mathrm{d}t
+  +\int_{\mathbb R}|h_\beta(t)|^2\,\mathrm{d}t.
+\]
+Thus both boundary lines contribute to the norm, and the two traces
+must come from the same holomorphic function in the strip. The
+inner product is
+$\langle h,g\rangle=\int_{\Gamma_N}h(s)\overline{g(s)}\,|\mathrm{d}s|$,
+linear in its first variable. Both boundaries carry positive arc
+length, with no factor $1/(2\pi)$. On this space the compact
+selfadjoint operator constructed in Proposition~\ref{proof:bd:HS} is
+\[
+ (T_Nh)(s)=\int_{\Gamma_N}
+     \frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}h(z)\,|\mathrm{d}z|.
+\]
+The next argument restores the weight to this normalized kernel.
+
+\subsubsection{The functional norm}
+
+Define the linear functional
+\[
+ \ell_N(h)=\frac1{2\pi i}\int_{(\sigma)}
+       N^s\widetilde\Phi(s)(1+s)h(s)\,\mathrm{d}s.
+\]
+Here $\alpha_N<\sigma<\beta$. The bound proved below gives a
+unique Riesz vector $v_N\in\mathcal H_N$ characterized by
+$\ell_N(h)=\langle h,v_N\rangle$. Write
+$\mathcal Q_N=\|\ell_N\|^2=\|v_N\|_{\mathcal H_N}^2$.
+For the calculation of this norm, introduce the companion weight
+\[
+ V(u)=\Phi(u)-u\Phi'(u).
+\]
+We use the Fourier--Laplace representation
+of Lemma~\ref{proof:hd:PW}:
+\[
+ \begin{aligned}
+ (\mathcal U_H\psi)(s)
+   &=\frac1{\sqrt{2\pi}}
+       \int_{\mathbb R}\psi(\tau)e^{s\tau}\,\mathrm{d}\tau,\\
+ \|\mathcal U_H\psi\|_{\mathcal H_N}^2
+   &=\int_{\mathbb R}|\psi(\tau)|^2w_{H,N}(\tau)\,\mathrm{d}\tau.
+ \end{aligned}
+\]
+Here $\psi$ ranges over $L^2(\mathbb R,w_{H,N}(\tau)\,\mathrm{d}\tau)$,
+with weight
+\[
+ w_{H,N}(\tau)=e^{2\alpha_N\tau}+e^{2\beta\tau}.
+\]
+Its two terms correspond to the two boundary lines in the Hardy norm.
+This representation identifies
+both the norm and the contour independence of $\ell_N$; the factor
+$1+s$ in the functional is encoded by $V$.
+
+\begin{proposition}[The functional norm]\label{proof:bm:norm}
+The functional $\ell_N$ is continuous and independent of the
+interior contour. Its squared norm and uniform bound are
+\begin{equation}\label{proof:hardy:functional-norm}
+ \mathcal Q_N=\frac1{2\pi}\int_0^\infty
+       \frac{(Nu)^{2\alpha_N}|V(u)|^2}
+            {1+(Nu)^{-2\Delta_N}}\,\frac{\mathrm{d}u}{u}
+ \le\frac{e^2}{2\pi}\int_0^\infty|V(u)|^2\,\frac{\mathrm{d}u}{u}.
+\end{equation}
+Moreover,
+\begin{equation}\label{bm:norm-asymptotic}
+ \mathcal Q_N
+ =\frac{e^2}{2\pi}\int_0^\infty|V(u)|^2\,\frac{\mathrm{d}u}{u}
+       +O_{\phi}\left(\frac1{\log N}\right).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Integration by parts gives
+$\widetilde V(s)=(1+s)\widetilde\Phi(s)$; the compact support of
+$\Phi$ removes the boundary term.
+Apply the Fourier--Laplace representation
+\eqref{hd:PW-map}--\eqref{hd:boundary-norm}, first to a density
+$\psi$ of compact support. Fubini and Mellin inversion give
+\[
+ \begin{aligned}
+ \ell_N(\mathcal U_H\psi)
+ &=\frac1{\sqrt{2\pi}}\int_{\mathbb R}\psi(\tau)
+   \left\{\frac1{2\pi i}\int_{(\sigma)}
+        \widetilde V(s)(Ne^\tau)^s\,\mathrm{d}s\right\}\,\mathrm{d}\tau\\
+ &=\frac1{\sqrt{2\pi}}\int_{\mathbb R}
+        \psi(\tau)V(e^{-\tau}/N)\,\mathrm{d}\tau.
+ \end{aligned}
+\]
+The first interchange is absolute because $\widetilde V$ is integrable
+on the contour and $\psi$ has compact support. In $L^2(w_{H,N})$,
+the last integral has squared norm
+\[
+ \frac1{2\pi}\int_{\mathbb R}
+        \frac{|V(e^{-\tau}/N)|^2}{w_{H,N}(\tau)}\,\mathrm{d}\tau.
+\]
+Weighted Cauchy--Schwarz gives the upper bound, with equality for a
+density proportional to
+$\overline{V(e^{-\tau}/N)}/w_{H,N}(\tau)$. This density has compact
+support for each fixed $N$, so the norm is exact.
+The weight is strictly positive, so this equality case is admissible
+in the weighted space. Its norm is finite because its support is compact.
+
+Compactly supported densities are dense in the weighted space.
+The original contour integral is also continuous there:
+$e^{2\sigma\tau}\le w_{H,N}(\tau)$ bounds restriction to the
+interior line in $L^2$, and $(1+s)\widetilde\Phi(s)$ is square
+integrable. The two expressions therefore agree for every Hardy
+vector. The density expression proves contour independence.
+
+The substitution $\tau=-\log(Nu)$ gives the $u$-integral in
+\eqref{proof:hardy:functional-norm}. On the fixed support of $V$,
+\[
+ (Nu)^{2\alpha_N}
+ =e^2\{1+O_\phi((\log N)^{-1})\},\qquad
+ (Nu)^{-2\Delta_N}=O_\phi(N^{-1/4}),
+\]
+which proves \eqref{bm:norm-asymptotic}. Finally,
+$(Nu)^{2\alpha_N}=e^2u^{2/\log N}\le e^2$ and the denominator in
+\eqref{proof:hardy:functional-norm} is at least $1$ on this support.
+This proves the uniform bound in~\eqref{proof:hardy:functional-norm},
+hence $\mathcal Q_N\ll_\phi1$.
+This proves the proposition.
+\end{proof}
+
+\subsubsection{Recovering the quadratic form}
+
+Proposition~\ref{proof:bd:evaluation} gives the evaluation vectors
+\[
+ k_z(s)=\frac1{4\Delta_N}
+       \csc\!\left(\frac{\pi(s+\bar z-2\alpha_N)}{2\Delta_N}\right),
+ \qquad h(s)=\langle h,k_s\rangle.
+\]
+It also identifies the residual with the matrix elements of $T_N$:
+\[
+ \langle T_Nk_z,k_s\rangle
+       =\frac{\mathscr E_N(s,\bar z)}{(1+s)(1+\bar z)}.
+\]
+Thus applying the weight functional to the evaluation vectors will
+restore exactly the two Mellin factors. The conjugations are fixed
+by the convention for the inner product.
+
+\begin{theorem}[The exact residual identity]\label{proof:bm:quadratic}
+For every even $N>e^{10}$ satisfying $\mathrm{GRH}(N)$, the residual
+satisfies
+\begin{equation}\label{proof:hardy:quadratic-bound}
+ r(N)=\langle T_Nv_N,v_N\rangle,
+ \qquad |r(N)|\le\mathcal Q_N\|T_N\|\ll_\phi\|T_N\|.
+\end{equation}
+Consequently,
+$\mathcal G(N)=c_\phi\mathfrak S(N)-\langle T_Nv_N,v_N\rangle$, and
+\begin{equation}\label{proof:hardy:goldbach-error}
+ |\mathcal G(N)-c_\phi\mathfrak S(N)|\ll_\phi\|T_N\|.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Put $\Psi_N(s)=N^s\widetilde\Phi(s)(1+s)$ and fix
+$\sigma=\sigma_*=1/9$. The reproducing property and uniqueness of
+the Riesz vector give
+\[
+ v_N=\frac1{2\pi}\int_{\mathbb R}
+       \overline{\Psi_N(\sigma+iy)}k_{\sigma+iy}\,\mathrm{d}y.
+\]
+This is a Bochner integral, an integral of Hilbert-space vectors
+defined by convergence in the Hilbert norm. In the present setting
+it is the norm limit of the integrals over bounded intervals;
+integrability of the vector norms ensures that this limit exists.
+Indeed, \eqref{proof:hd:evaluation-norm} gives
+$\|k_s\|^2\le[8\min(\Re s-\alpha_N,\beta-\Re s)]^{-1}$.
+At $\Re s=\sigma_*$ both distances are at least $1/90$, so
+$\sup_y\|k_{\sigma_*+iy}\|^2\le45/4$, while $\Psi_N$ is integrable
+by Mellin decay. The coefficient is conjugated because the inner product
+is conjugate-linear in its second entry.
+When expanding the quadratic form, one may first perform both integrations
+over bounded intervals.
+The evaluation bound then permits passage to the full lines by dominated
+convergence, preserving the order of the two inner-product entries.
+
+The kernel identity established in the proof of
+Proposition~\ref{proof:bd:evaluation} yields
+\[
+ \langle T_Nv_N,v_N\rangle
+ =\frac1{(2\pi)^2}\int_{\mathbb R^2}
+ \Psi_N(\sigma+ix)\overline{\Psi_N(\sigma+iy)}
+ \frac{\mathscr E_N(\sigma+ix,\sigma-iy)}
+      {(1+\sigma+ix)(1+\sigma-iy)}\,\mathrm{d}x\,\mathrm{d}y.
+\]
+The same evaluation bound gives absolute convergence. Since $\Phi$
+is real, $\overline{\Psi_N(\sigma+iy)}=\Psi_N(\sigma-iy)$.
+Replace $y$ by $-y$; reversing the limits cancels the sign from $\mathrm{d}y$.
+Both Mellin variables now run upward, and their factors $1+s$ and
+$1+z$ cancel the kernel denominators. The remaining integral is
+exactly the residual integral in~\eqref{proof:gb:residual-integral}.
+This proves the identity in~\eqref{proof:hardy:quadratic-bound}.
+
+Cauchy--Schwarz and Proposition~\ref{proof:bm:norm} give
+$|r(N)|\le\|T_N\|\,\|v_N\|^2=\mathcal Q_N\|T_N\|$.
+Combining this with \eqref{proof:gb:exact-error} gives
+\eqref{proof:hardy:goldbach-error}, the estimate used for
+Theorems~\ref{thm:goldbach-S} and \ref{thm:goldbach-R}.
+This proves the theorem.
+\end{proof}
+
+\subsection{Proofs of the main theorems}
+\label{proof:main-theorem-proofs}
+\label{proof:v7:siegel-hypothesis}\label{proof:v7:riemann-hypothesis}
+
+We now combine the spectral bounds of Theorem~\ref{proof:qp:dictionary}
+with the Hardy estimate of Theorem~\ref{proof:bm:quadratic}.
+The following lemma expresses the relative Goldbach error in terms
+of a zero-free width and gives a criterion for the asymptotic formula.
+
+\begin{lemma}[An arithmetic estimate from a zero-free width]
+\label{proof:v9:width-arithmetic-estimate}
+Assume $\mathrm{GRH}(N)$ for an even $N>e^{10}$.
+If $0<\eta_N\le1/4$ and $\mathfrak X_N(q)\ne0$ for
+$\Re q>1-\eta_N$, then
+\begin{equation}\label{proof:width:relative-error}
+ \frac{|\mathcal G(N)-c_\phi\mathfrak S(N)|}{c_\phi\mathfrak S(N)}
+ \ll_\phi\sqrt{\frac{(\log N)^3}{N\eta_N\mathfrak S(N)}}.
+\end{equation}
+As $N\to\infty$ through even integers satisfying these hypotheses,
+the relative Goldbach asymptotic follows from the condition
+\begin{equation}\label{proof:width:asymptotic-condition}
+ \frac{N\eta_N\mathfrak S(N)}{(\log N)^3}\longrightarrow\infty.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Insert the bound
+$\|T_N\|\le\delta_N/(2\sqrt{\eta_N(1-\eta_N)})$
+from Theorem~\ref{proof:qp:dictionary} into the Hardy estimate in
+Theorem~\ref{proof:bm:quadratic} and divide by
+$c_\phi\mathfrak S(N)$.
+Using $\delta_N^2=\mathfrak S(N)(\log N)^3/N$ and
+$1-\eta_N\ge3/4$ gives \eqref{proof:width:relative-error}.
+Under \eqref{proof:width:asymptotic-condition}, the right-hand side
+of \eqref{proof:width:relative-error} tends to zero.
+This proves the lemma.
+\end{proof}
+
+We now prove Theorems~\ref{thm:goldbach-S} and \ref{thm:goldbach-R}
+under Hypotheses S and R, respectively.
+
+\begin{proof}[Proof of Theorem~\ref{thm:goldbach-S}]
+Hypothesis S excludes zeros in $\Re q>1-\eta_N$, with the
+prescribed width
+\[
+ \eta_N=\frac{h(N)^2(\log N)^3}{N\mathfrak S(N)}\le\frac14,
+ \qquad h(N)\longrightarrow\infty,
+\]
+as in~\eqref{v3i:S-width}.
+Here $h$ is fixed in advance. Substitution in
+Theorem~\ref{proof:qp:dictionary} gives
+\[
+ \|T_N\|\le\frac{\mathfrak S(N)}{2h(N)\sqrt{1-\eta_N}}
+          \le\frac{\mathfrak S(N)}{\sqrt3\,h(N)}.
+\]
+The estimate in Theorem~\ref{proof:bm:quadratic} now gives
+\[
+ \mathcal G(N)=c_\phi\mathfrak S(N)
+                   +O_\phi\!\left(\frac{\mathfrak S(N)}{h(N)}\right),
+\]
+as in~\eqref{v3i:weak-result}.
+Its implied constant depends only on $\phi$; the required lower
+bound on $N$ may depend on the admissibility and growth of $h$.
+Since $h(N)\to\infty$, the error is $o(\mathfrak S(N))$;
+if $h(N)/\mathfrak S(N)\to\infty$, it is also $o(1)$.
+This proves the theorem.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:goldbach-R}]
+Hypothesis R puts every spectral zero on $\Re q=1/2$.
+By Theorem~\ref{proof:qp:dictionary}, this is equivalent to
+$\|T_N\|\le\delta_N$. The estimate in
+Theorem~\ref{proof:bm:quadratic} yields
+\[
+ \mathcal G(N)=c_\phi\mathfrak S(N)
+ +O_\phi\!\left(\sqrt{\frac{\mathfrak S(N)}N}(\log N)^{3/2}\right),
+\]
+as in~\eqref{v3i:strong-result}.
+The zero classification also shows that R implies S for every
+prescribed admissible width: all exceptional real pairs have been
+excluded. The functional symmetries alone provide no such norm bound.
+This proves the theorem.
+\end{proof}
+
+The next section places these results alongside the twin-prime
+problem and discusses the possible scope of classical methods.
+
+\section{Goldbach, twin primes, and classical methods}
+\label{story:philosophy}\label{proof:v7:philosophy}
+
+Goldbach's conjecture and the twin-prime conjecture both concern
+the simultaneous primality of two linear expressions, but their
+arithmetic questions are different. The twin-prime conjecture asks
+for infinitely many prime pairs $(p,p+2)$, with the difference fixed.
+Goldbach's conjecture asks for a prime pair $(p,N-p)$ for every even
+$N\ge4$; its asymptotic version requires uniform control as the
+target $N$ varies.
+
+The twin-prime problem fits the general orbit-and-polynomial
+formulation of the affine sieve of Bourgain, Gamburd, and
+Sarnak~\cite{BGS2010}. For example, let
+\[
+ U=\begin{pmatrix}1&1\\0&1\end{pmatrix},\qquad
+ v=\binom01,\qquad F(x,y)=x(x+2y).
+\]
+Then $\langle U\rangle v=\{(n,1)^{\mathsf T}:n\in\mathbb Z\}$ and
+$F(U^nv)=n(n+2)$. The desired prime pairs are therefore the orbit
+points with $n>1$ at which both linear factors are prime.
+This is a unipotent orbit; the expansion theorems for semisimple
+groups do not apply to it directly.
+
+For Goldbach, the corresponding polynomial is $F_N(n)=n(N-n)$,
+and the relevant positive range is finite for each fixed $N$.
+The polynomial, the range, and the local congruence data all vary
+with $N$. An orbit description is still possible, but obtaining
+representations for every sufficiently large even target requires
+estimates uniform in this varying family. This distinction matters
+when comparing the two conjectures through a common sieve framework.
+
+We do not know whether sufficiently ingenious refinements of sieve
+methods or the circle method can yield the Goldbach asymptotic
+formula. The present difficulties do not warrant excluding this
+possibility.
+
+\begin{samepage}
+The central advance of this paper is the exact identification of the
+signed Goldbach error with a quadratic form of the residual operator.
+For every even $N>e^{10}$ satisfying $\mathrm{GRH}(N)$,
+Theorem~\ref{proof:bm:quadratic} gives
+\[
+ c_\phi\mathfrak S(N)-\mathcal G(N)
+ =\langle T_Nv_N,v_N\rangle.
+\]
+\end{samepage}
+The operator $T_N$ is compact and selfadjoint, and the vector $v_N$
+determined by the weight satisfies $\|v_N\|^2\ll_\phi1$.
+The identity thus retains the full signed arithmetic discrepancy and
+transfers operator norm bounds to error bounds without a factor
+growing with $N$. Hypotheses S and R enter only after this identity
+has been established: they control $\|T_N\|$ and hence the size of
+the inner product. They yield, respectively, the relative asymptotic
+formula of Theorem~\ref{thm:goldbach-S} and the sharper remainder of
+Theorem~\ref{thm:goldbach-R}.
+
+Nor can we rule out that sieve methods might produce a positive
+lower bound sufficient to establish Goldbach representations,
+even without the full asymptotic formula. In pursuing such lower
+bounds, we have found some remarkable phenomena, whose analysis
+will be presented elsewhere.
+
+\medskip
+\noindent
+{\bf Acknowledgements}. The authors are supported by the National Key
+Research and Development Program of China (No. 2021YFA1000700), the
+National Natural Science Foundation of China (Nos. 12631001 \& 123B2001),
+and the Key R\&D Program of Shandong Province, China (No. 2026ZLYS01).
+\medskip
+
+\clearpage
+\appendix
+
+\section{Dependence on the strip parameter}\label{proof:app:param}
+
+The main text fixes $\alpha_N=1/\log N$. To discuss that choice,
+we introduce the family $\alpha_{N,c}=c/\log N$, so the main
+normalization is $c=1$. We track the dependence of the Hardy
+realization and spectral conditions on $c$, then distinguish
+fixed-$c$ asymptotics from the limit $c\downarrow0$ at fixed $N$.
+
+\subsection{The Hardy realization with a variable boundary}
+\label{proof:app:param:realization}
+
+We construct the Hardy realization as the left boundary varies
+and identify its unchanged arithmetic pairing. The arithmetic
+weights and residual kernel remain those of the main text, while
+the Hardy space, operator and representing vector acquire $c$.
+
+Fix $c>0$ and an even $N\ge4$ with $N>e^{10c}$. Put
+\begin{equation}\label{proof:app:param:strip}
+ \alpha_{N,c}=\frac{c}{\log N},\qquad
+ \Delta_{N,c}=\beta-\alpha_{N,c}.
+\end{equation}
+Use \eqref{hd:strip}, \eqref{hd:space-and-boundary}, \eqref{qp:operator} and
+\eqref{bm:functional} with this left boundary to obtain
+$S_{N,c}$, $\mathcal H_{N,c}$, $\Gamma_{N,c}$, $T_{N,c}$ and
+$\ell_{N,c}$; write $v_{N,c}$ for the Riesz vector and
+$\mathcal Q_{N,c}=\|v_{N,c}\|^2$.
+
+\begin{proposition}[Hardy realization with a variable boundary]
+\label{proof:v9:variable-boundary-realization}
+Assume $\mathrm{GRH}(N)$. Then $\alpha_{N,c}<1/10$,
+$\Delta_{N,c}>1/40$, and $T_{N,c}$ is a compact selfadjoint
+Hilbert--Schmidt operator on $\mathcal H_{N,c}$.
+The common contour $\sigma_*=1/9$ remains at distance greater
+than $1/90$ from the left boundary and exactly $1/72$ from the right.
+The point-evaluation estimate \eqref{proof:bd:pointwise}
+holds with the distance $d_{N,c}$ to the new boundary.
+With $V$ as in Subsubsection~\ref{story:hardy-quadratic},
+the functional norm satisfies
+\begin{equation}\label{proof:app:param:functional-norm}
+ \begin{aligned}
+ \mathcal Q_{N,c}
+ &=\frac{e^{2c}}{2\pi}\int_0^\infty |V(u)|^2\,\frac{\mathrm{d}u}{u}
+       +O_{\phi,c}\!\left(\frac1{\log N}\right),\\
+ \mathcal Q_{N,c}
+ &\le\frac{e^{2c}}{2\pi}\int_0^\infty |V(u)|^2\,\frac{\mathrm{d}u}{u}.
+ \end{aligned}
+\end{equation}
+The first line holds as $N\to\infty$ with $c$ fixed; the second
+holds throughout the permitted range. Moreover,
+\begin{equation}\label{proof:app:param:quadratic-form}
+ r(N)=\langle T_{N,c}v_{N,c},v_{N,c}\rangle,\qquad
+ |r(N)|\le\mathcal Q_{N,c}\|T_{N,c}\|.
+\end{equation}
+The left side is independent of $c$: varying the realization
+changes the operator and vector, but not their arithmetic pairing.
+At $c=1$ all these objects reduce to those of the main text.
+\end{proposition}
+
+\begin{proof}
+The inequalities for the strip and contour follow from
+$\alpha_{N,c}=c/\log N<1/10$, $\beta=1/8$ and $\sigma_*=1/9$.
+The proof of Proposition~\ref{proof:bd:HS} applies on every such closed
+strip, and the Fourier--Laplace and point-evaluation arguments
+apply to arbitrary strip endpoints. This proves the operator
+properties and the stated pointwise estimate.
+
+In \eqref{bm:norm-integral}, $N^{2\alpha_{N,c}}=e^{2c}$.
+On the fixed support of $V$ in $(0,1)$, the denominator is at
+least one and $u^{2\alpha_{N,c}}\le1$, giving the upper bound
+in \eqref{proof:app:param:functional-norm}. For fixed $c$,
+$u^{2\alpha_{N,c}}=1+O_{\phi,c}(1/\log N)$ uniformly on this
+support, while the remaining denominator tends uniformly to one
+with a power saving in $N$. This gives its asymptotic formula.
+The proof of Theorem~\ref{proof:bm:quadratic}, on the same fixed
+interior contour, gives \eqref{proof:app:param:quadratic-form}.
+Its arithmetic side depends only on the residual and the weight,
+so it is independent of $c$. The specialization at $c=1$ follows
+from the definitions.
+This proves the proposition.
+\end{proof}
+
+\subsection{Spectral conditions and their quantifiers}
+\label{proof:app:param:families}
+
+We establish the zero--norm correspondence for each realization
+and state its asymptotic consequences with $c$ fixed before $N$
+grows. This order of quantifiers is essential for the estimates.
+
+Let $\mathfrak X_{N,c}$ be the product
+\eqref{qp:spectral-function} formed from $T_{N,c}$, retaining the
+scale \eqref{v3i:spectral-scale}, which is independent of $c$.
+Use $\mathrm R(N,c)$ and $\mathrm S(N,c;h_c)$ for the corresponding
+conditions of Section~\ref{story:section1}.
+For each fixed $c>0$, preassign a positive $h_c$ on the even
+integers, tending to infinity and satisfying
+\begin{equation}\label{proof:app:param:S-width}
+ \eta_{N,c}=\frac{h_c^2(N)(\log N)^3}{N\mathfrak S(N)}\le\frac14
+\end{equation}
+eventually.
+
+\begin{proposition}[Spectral conditions for a fixed boundary parameter]
+\label{proof:v9:parameter-spectral-conditions}
+Assume $\mathrm{GRH}(N)$ and $N>e^{10c}$. Then
+\begin{equation}\label{proof:app:param:dictionary}
+ \begin{gathered}
+ \mathrm R(N,c)\quad\Longleftrightarrow\quad\|T_{N,c}\|\le\delta_N,\\
+ \mathfrak X_{N,c}(q)\ne0\quad(\Re q>1-\eta)
+ \quad\Longleftrightarrow\quad
+ \|T_{N,c}\|\le\frac{\delta_N}{2\sqrt{\eta(1-\eta)}} ,
+ \qquad 0<\eta<\tfrac12.
+ \end{gathered}
+\end{equation}
+The half-space is open, so zeros on its boundary are allowed.
+For every admissible $\eta_{N,c}$,
+\begin{equation}\label{proof:app:param:S-norm}
+ \mathrm S(N,c;h_c)\quad\Longleftrightarrow\quad
+ \|T_{N,c}\|\le
+ \frac{\mathfrak S(N)}{2h_c(N)\sqrt{1-\eta_{N,c}}}.
+\end{equation}
+For fixed $c>0$ and sufficiently large even $N$ satisfying GRH,
+\[
+ \|T_{N,c}\|\ll_c(\log N)^2,\qquad
+ \eta_{N,c}^{\mathrm{GRH}}\asymp_c\frac{\mathfrak S(N)}{N\log N},
+\]
+and
+\[
+ \mathcal G(N)=c_\phi\mathfrak S(N)+
+ \begin{cases}
+ O_{\phi,c}\!\left(\mathfrak S(N)/h_c(N)\right),&\mathrm S(N,c;h_c),\\
+ O_{\phi,c}\!\left(\delta_N\right),&\mathrm R(N,c).
+ \end{cases}
+\]
+GRH is assumed in both cases. In the S estimate the implied
+constant is independent of $h_c$, although the required lower
+bound on $N$ depends on the growth and admissibility of $h_c$.
+\end{proposition}
+
+\begin{proof}
+The proof of Theorem~\ref{proof:qp:dictionary} uses only compactness,
+selfadjointness and the Hilbert--Schmidt property, supplied here
+by Proposition~\ref{proof:v9:variable-boundary-realization}.
+It therefore proves \eqref{proof:app:param:dictionary} for
+$\mathfrak X_{N,c}$. Substituting \eqref{proof:app:param:S-width}
+and the scale \eqref{v3i:spectral-scale} gives
+\eqref{proof:app:param:S-norm}.
+
+In the component estimates of
+Proposition~\ref{proof:grh:component-bounds}, replacing
+$1/\log N$ by $c/\log N$ changes the constants to ones depending
+on the fixed $c$ and gives $\|T_{N,c}\|\ll_c(\log N)^2$.
+The zero--norm correspondence then supplies the stated GRH width.
+Combining \eqref{proof:app:param:quadratic-form} with the upper
+bound in \eqref{proof:app:param:functional-norm} gives the two
+arithmetic estimates. For S, use $1-\eta_{N,c}\ge3/4$;
+the functional bound is independent of $h_c$. For R, use
+$\|T_{N,c}\|\le\delta_N$.
+This proves the proposition.
+\end{proof}
+
+The eventual hypotheses assert these conditions for all sufficiently
+large even $N$ satisfying $\mathrm{GRH}(N)$, with lower bounds
+$N_0(c)$ and $N_0(c,h_c)$ on $N$. Neither these lower bounds nor
+the admissibility and divergence of $h_c$ need be uniform in $c$.
+The main hypotheses are their specializations at $c=1$.
+These conclusions concern sufficiently large $N$; covering every
+even $N\ge4$ requires a separate check of the finite initial range.
+
+\subsection{Why the boundary has order \texorpdfstring{$1/\log N$}{1/log N}}
+\label{proof:app:param:balance}\label{proof:bm:boundary-balance}
+
+The comparison in Subsection~6.5 balances the
+functional norm against the available operator bound. Here we
+justify its uniformity and record the dependence on $c$.
+
+Use $\widehat T_{N,\alpha}$, $\mathcal Q_\alpha$ and $M_\alpha$
+from that comparison, with $0<\alpha<1/10$.
+
+\begin{lemma}[Balance of the functional and operator bounds]
+\label{proof:v9:boundary-balance}
+For sufficiently large even $N$ satisfying $\mathrm{GRH}(N)$,
+uniformly for $0<\alpha<1/10$,
+\[
+ \mathcal Q_\alpha\asymp_\phi N^{2\alpha},\qquad
+ \|\widehat T_{N,\alpha}\|\le
+ M_\alpha=C((\log N)^2+\alpha^{-2}),
+\]
+where $C$ is absolute. Setting $\alpha=c/\log N$ gives
+\[
+ \mathcal Q_\alpha M_\alpha
+ \asymp_\phi(\log N)^2e^{2c}(1+c^{-2}).
+\]
+The factor $e^{2c}(1+c^{-2})$ tends to infinity as $c\downarrow0$
+and as $c\to\infty$.
+The ratio of the
+sufficient width for error $O(\mathfrak S(N)/h_c(N))$ to the
+width supplied by $M_\alpha$ is, when both widths are admissible,
+\[
+ \asymp_\phi
+ \frac{h_c^2(N)(\log N)^4}{\mathfrak S^2(N)}
+       e^{4c}(1+c^{-2})^2.
+\]
+\end{lemma}
+
+\begin{proof}
+The denominator of \eqref{bm:norm-integral} lies between one and
+two on the fixed support for large $N$, and $u^{2\alpha}$ is
+bounded above and below there, uniformly in $\alpha$.
+This proves $\mathcal Q_\alpha\asymp_\phi N^{2\alpha}$.
+The component estimates with left boundary $\alpha$ give
+$M_\alpha=C((\log N)^2+\alpha^{-2})$ with an absolute $C$.
+Substitution of $\alpha=c/\log N$ gives the stated product.
+As $c\downarrow0$, its factor $e^{2c}(1+c^{-2})$ is at least
+$c^{-2}$; as $c\to\infty$, it is at least $e^{2c}$.
+This proves divergence at both ends.
+
+For widths at most $1/4$, Theorem~\ref{proof:qp:dictionary}
+makes a width comparable to $\delta_N^2/M^2$ equivalent to
+a norm bound of size $M$. The stated arithmetic error is ensured
+by a norm bound of size $\mathfrak S(N)/(h_c(N)\mathcal Q_\alpha)$
+by the Cauchy--Schwarz argument in
+\eqref{v3f:master-error-formula} with left boundary $\alpha$,
+retaining the factor $\mathcal Q_\alpha$.
+Dividing this sufficient width by the width supplied by $M_\alpha$
+therefore gives
+\[
+ \asymp_\phi
+ \frac{h_c^2(N)\mathcal Q_\alpha^2M_\alpha^2}
+      {\mathfrak S^2(N)},
+\]
+which is the asserted ratio.
+This proves the lemma.
+\end{proof}
+
+Lemma~\ref{proof:v9:boundary-balance} shows that a fixed positive
+$c$ gives the best order
+available from these bounds; they do not select a universal
+optimal constant.
+Changing $c$ therefore changes the constants, not the logarithmic
+gap in the available estimates.
+
+\subsection{The obstruction at a fixed modulus}
+\label{proof:app:param:fixed-modulus}\label{proof:sec:small-c-obstruction}
+
+We examine the different limit in which $N$ is fixed and
+$c\downarrow0$. A pole of a logarithmic derivative supplies
+a lower bound for the residual operator norm and obstructs
+a zero-free width uniform in $c$.
+
+\begin{proposition}[The obstruction at a fixed modulus]
+\label{proof:v9:fixed-modulus-obstruction}
+Assume $\mathrm{GRH}(N)$ for a fixed even $N\ge4$.
+Choose a nontrivial zero $\rho=1/2+i\gamma$ of an odd character
+modulo $N$, and let $m_\chi(\rho)$ be its multiplicity for
+$L(s,\chi)$, with value zero when it is not a zero. Put
+\[
+ C_{N,\gamma}=\frac2{\varphi(N)}
+     \sum_{\chi\in X_N^-}m_\chi^2(\rho)>0.
+\]
+Then
+\[
+ \liminf_{c\downarrow0}c\|T_{N,c}\|
+ \ge\frac{2C_{N,\gamma}\log N}{1+\gamma^2}>0.
+\]
+In particular, there are $z_N^{\mathrm{obs}}>0$ and
+$0<c_N^{\mathrm{obs}}\le\log N/24$ such that
+\begin{equation}\label{proof:app:param:obstruction}
+ \|T_{N,c}\|\ge z_N^{\mathrm{obs}}/c
+ \qquad(0<c<c_N^{\mathrm{obs}}).
+\end{equation}
+The condition $\mathrm R(N,c)$ fails for all sufficiently small
+$c$. In the same range, every zero-free width $0<\eta\le1/4$
+satisfies
+\[
+ \eta\le\frac{\delta_N^2c^2}{3(z_N^{\mathrm{obs}})^2}.
+\]
+\end{proposition}
+
+\begin{proof}
+At $s=\sigma+i\gamma$, Laurent expansion gives
+\begin{equation}\label{proof:qp:small-c-correlation}
+ \mathscr P_N(s,\bar s)=\frac{C_{N,\gamma}}{\sigma^2}
+                         +O_{N,\gamma}(\sigma^{-1}).
+\end{equation}
+The difference between $\mathscr D_N(w)$ and
+$(\zeta'/\zeta)'(1+w)$ consists of higher prime powers and
+corrections at primes dividing $N$, and is analytic near zero. Hence
+\begin{equation}\label{proof:qp:small-c-diagonal}
+ \mathscr D_N(2\sigma)=\frac1{4\sigma^2}+O_N(1).
+\end{equation}
+For the model, factor $P_N(w)=\zeta(1+w)R_N(w)$, where
+\[
+ R_N(w)=\prod_{p\mid N}(1-p^{-1-w})
+ \prod_{\substack{p>2\\p\nmid N}}
+ \left(1+\frac{2p^{-w}-p^{-2w}}{p(p-2)}\right).
+\]
+This product is analytic near zero, and its Euler factors give
+$\mathfrak S(N)R_N(0)=1$. Consequently
+$\mathfrak S(N)P_N(2\sigma)=1/(2\sigma)+O_N(1)$.
+Using $|\mathcal X_1(i\gamma)|=1$ and
+$\zeta(1-2\sigma)=-1/(2\sigma)+O(1)$ in
+\eqref{v3:model-functional-form}, we obtain
+\begin{equation}\label{proof:qp:small-c-model}
+ \mathscr K_N(s,\bar s)=-\frac1{4\sigma^2}
+                         +O_{N,\gamma}(\sigma^{-1}).
+\end{equation}
+The quadratic singularities of the diagonal and model cancel, so
+\[
+ \mathscr E_N(s,\bar s)=\frac{C_{N,\gamma}}{\sigma^2}
+                         +O_{N,\gamma}(\sigma^{-1}).
+\]
+
+Take $\sigma=2c/\log N=2\alpha_{N,c}$. For $c<\log N/24$,
+the distance to the strip boundary is $\sigma/2$.
+The general-strip version of \eqref{proof:bd:pointwise} gives
+\[
+ \|T_{N,c}\|\ge
+ \frac{4\sigma|\mathscr E_N(s,\bar s)|}{|1+s|^2}.
+\]
+Since $c/\sigma=\log N/2$, the residual expansion proves the
+stated lower limit and hence \eqref{proof:app:param:obstruction}.
+Since $\delta_N$ is fixed, $\mathrm R(N,c)$ fails for sufficiently
+small $c$. Likewise, a zero-free width $0<\eta\le1/4$ must satisfy
+\[
+ \frac{z_N^{\mathrm{obs}}}{c}
+ \le\frac{\delta_N}{2\sqrt{\eta(1-\eta)}},
+ \qquad
+ \eta\le\frac{\delta_N^2c^2}{3(z_N^{\mathrm{obs}})^2}.
+\]
+Here the last inequality uses $1-\eta\ge3/4$.
+This proves the proposition.
+\end{proof}
+
+No positive width is uniform in this fixed-modulus limit.
+This does not decide the eventual validity of R or S with $c$
+fixed before $N$ tends to infinity.
+
+\section{A numerical experiment at \texorpdfstring{$N=30030$}{N=30030}}
+\label{proof:app:numerical}
+
+We recover the number of unordered Goldbach representations of $30030$
+from character integrals, exact finite corrections, and an error interval
+containing a unique integer, and compare the calculation with the classical
+Hardy--Littlewood integral prediction. This route uses finite prime and
+prime-power data for corrections and error checks, without requiring an
+enumeration of all Goldbach pairs. The count is unconditional; its Hardy
+interpretation and the finite spectral picture assume $\mathrm{GRH}(N)$.
+
+Throughout, $N=30030=2\cdot3\cdot5\cdot7\cdot11\cdot13$ and
+$\varphi(N)=5760$. The counting moments use all $5760$ characters;
+the Hardy residual uses the $2880$ odd characters.
+
+\subsection{A wide weight and exact finite corrections}
+\label{proof:app:num:weight}
+
+A wider weight than $\phi$ is needed to count all representations.
+Reciprocal logarithms remove the von Mangoldt weights, with finite
+corrections for proper prime powers and the cutoff near the endpoints.
+Set $A=16$ and $L=1000$. We use the cutoff
+\[
+ \eta(x)=P\!\left(\frac{x-A}{L-A}\right)
+          P\!\left(\frac{N-x-A}{L-A}\right),
+\]
+where $P(t)=0$ for $t\le0$, $P(t)=1$ for $t\ge1$, and
+\[
+ P(t)=\sum_{j=7}^{13}\binom{13}{j}t^j(1-t)^{13-j}
+ \qquad(0<t<1).
+\]
+With zero extension off the support, put
+\[
+ W(u)=\frac{\sqrt{1-u}\,\eta(Nu)}
+                {\sqrt{\log(Nu)\log(N(1-u))}},\qquad f(u)=\frac{W(u)}{\sqrt u},
+\]
+and define
+\[
+ \mathcal J=\frac1N\sum_{\substack{n+m=N\\(nm,N)=1}}
+        \Lambda(n)\Lambda(m)f(n/N)f(m/N).
+\]
+Let $r_G(N)$ count unordered prime pairs. Write
+$\mathcal E=\sum_{p\le q,\ p+q=N,\ p<L}(1-\eta(p)^2)$, with $p,q$ prime,
+and let $\mathcal C_{\rm pp}$ be the ordered sum of
+$\eta(p^k)^2/(k\ell)$ over $p^k+q^\ell=N$, $(pq,N)=1$, $k,\ell\ge1$,
+$\max(k,\ell)\ge2$.
+
+\begin{proposition}[The wide-weight counting identity]
+\label{proof:v9:wide-weight-count}
+The cutoff $\eta$ is $C^6$, symmetric about $N/2$, and equal to $1$
+on $[L,N-L]$. On its support,
+\[
+ f(u)f(1-u)=\frac{\eta(Nu)^2}{\log(Nu)\log(N(1-u))}.
+\]
+At $N=30030$, the exact counting identity is
+\begin{equation}\label{proof:app:num:count}
+ r_G(N)=\frac N2\mathcal J-\frac{\mathcal C_{\rm pp}}2+\mathcal E.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Since $P'(t)=12012t^6(1-t)^6$, its first six derivatives match the
+constant extensions. The cutoff properties and the formula for $f$ follow.
+A prime-power pair contributes $\eta(p^k)^2/(k\ell)$ to $N\mathcal J$;
+subtracting $\mathcal C_{\rm pp}$ leaves the weighted ordered prime pairs.
+Every prime pair is coprime to $N$: otherwise a common prime divisor
+would force $N=2p$. Also, $N/2=15015$ is not a prime power.
+Division by two therefore counts unordered pairs, and $\mathcal E$
+restores the missing edge weights.
+This proves the proposition.
+\end{proof}
+
+Exact rational evaluation of the $75$ edge pairs and $26$ unordered
+proper-prime-power pairs gives
+\[
+ \mathcal E=44.35776816334822525\ldots,\qquad
+ \mathcal C_{\rm pp}/2=10.16758713116445818\ldots.
+\]
+
+\subsection{Character integrals and their numerical evaluation}
+\label{proof:app:num:method}
+
+Using the Mellin convention \eqref{gb:mellin-convention}, we
+evaluate the character integrals
+\[
+ I_\chi=\frac1{2\pi}\int_{\mathbb R}N^{1+it}\widetilde W(1+it)
+       \frac{L'}L(3/2+it,\chi)\,\mathrm{d}t.
+\]
+We also use the diagonal moment
+\[
+ \mathcal D=\sum_{\substack{1\le n<N\\(n,N)=1}}a_n^2,
+\]
+where the coefficients are
+\[
+ a_n=\frac{\Lambda(n)}{\sqrt n}W(n/N).
+\]
+
+\begin{lemma}[Character moments on the counting line]
+\label{proof:v9:wide-character-moments}
+The integrals converge absolutely and satisfy
+\begin{equation}\label{proof:app:num:moments}
+ \begin{gathered}
+ I_\chi=-\sum_{1\le n<N}a_n\chi(n),\\
+ \mathcal J=\frac1{5760}\sum_\chi\chi(-1)|I_\chi|^2,\quad
+ \mathcal D=\frac1{5760}\sum_\chi|I_\chi|^2.
+ \end{gathered}
+\end{equation}
+All characters, including the principal character, occur; no GRH or
+spectral hypothesis is required.
+\end{lemma}
+
+\begin{proof}
+The line $\Re(1/2+s)=3/2$ gives absolute convergence of $L'/L$.
+The $C^6$ Mellin decay permits termwise inversion, yielding the finite sum.
+Orthogonality selects $n+m=N$ in $\mathcal J$ and $n=m$ in $\mathcal D$,
+since $0<n,m<N$ on the support. For $n+m=N$,
+$a_na_m=N^{-1}\Lambda(n)\Lambda(m)f(n/N)f(m/N)$, proving the normalization.
+This proves the lemma.
+\end{proof}
+
+We integrate with mesh $h=0.1$ and height $T=1600$, using full weights
+at the two outer endpoints. A Fourier transform of the weight in the
+logarithmic variable, sampled on $2^{20}$ points over a period $2\pi/h$,
+supplies the Mellin values. The Hurwitz formula for $L$ and $L'$ uses
+$24$ Euler--Maclaurin corrections and a height-dependent cutoff chosen
+from the remainder bound. Phase recurrences are reset every $32$ heights.
+Character transforms on cyclic groups of orders $2,4,6,10,12$ give all
+$5760$ values; conjugation supplies negative heights. The integrated
+moments are
+\[
+ \widehat{\mathcal J}\approx0.05799599193959489,\qquad
+ \widehat{\mathcal D}\approx0.29331844084848136.
+\]
+The finite identity in \eqref{proof:app:num:moments} will be used to
+check their error, without presupposing a representation count.
+
+\subsection{The main integral, residual, and integer enclosure}
+\label{proof:app:num:interval}
+
+The classical Hardy--Littlewood prediction and the wide-weight main
+integral are, respectively,
+\begin{align*}
+ \mathfrak S(N)\int_2^{N/2}\frac{\mathrm{d}x}{\log x\log(N-x)}
+     &\approx908.1405628685,\\
+ \mathcal A:=\mathfrak S(N)\int_A^{N/2}
+             \frac{\eta(x)^2\,\mathrm{d}x}{\log x\log(N-x)}
+     &\approx851.831147718741.
+\end{align*}
+These use $65$-digit quadrature split at the cutoff transition;
+$C_2$ is evaluated by an accelerated zeta product, removing primes up
+to $97$ and retaining logarithmic terms through order $60$.
+The wide-weight main term with finite corrections is
+$\mathcal A-\mathcal C_{\rm pp}/2+\mathcal E\approx886.021328750925$.
+Put $c_f=\int_0^1f(u)f(1-u)\,\mathrm{d}u$ and
+$\mathcal B=\mathfrak S(N)c_f-\mathcal J$. Since
+$\mathcal A=N\mathfrak S(N)c_f/2$, the identity \eqref{proof:app:num:count}
+also reads
+\[
+ r_G(N)=\mathcal A-\frac N2\mathcal B
+                   -\frac{\mathcal C_{\rm pp}}2+\mathcal E.
+\]
+The integrated moments give the residual contribution
+$-N\widehat{\mathcal B}/2\approx18.978671254276$, and hence
+\begin{equation}\label{proof:app:num:integral-centre}
+ \begin{aligned}
+ \widehat r_G
+ &\approx851.831147718741+18.978671254276\\
+ &\hspace{8mm}-10.167587131164+44.357768163348\\
+ &\approx905.0000000052.
+ \end{aligned}
+\end{equation}
+This displays the correction to the main integral. To turn the numerical
+value into an exact count, we bound the error in the character moment.
+
+\begin{lemma}[From moment error to a counting interval]
+\label{proof:v9:moment-error-interval}
+Form $\widehat{\mathcal J}$ and $\widehat{\mathcal D}$ from approximations
+$\widehat I_\chi$ by \eqref{proof:app:num:moments}. If
+$\varepsilon_I^2\ge5760^{-1}\sum_\chi|I_\chi-\widehat I_\chi|^2$ with
+$\varepsilon_I\ge0$, then
+\[
+ |\mathcal J-\widehat{\mathcal J}|
+ \le2\sqrt{\widehat{\mathcal D}}\,\varepsilon_I+\varepsilon_I^2.
+\]
+With exact finite corrections, set
+\[
+ \widehat r_G=\frac N2\widehat{\mathcal J}
+                  -\frac{\mathcal C_{\rm pp}}2+\mathcal E,
+ \qquad
+ \varepsilon_r=\frac N2
+       (2\sqrt{\widehat{\mathcal D}}\,\varepsilon_I+\varepsilon_I^2).
+\]
+Then $r_G(N)\in[\widehat r_G-\varepsilon_r,
+\widehat r_G+\varepsilon_r]\cap\mathbb Z$.
+\end{lemma}
+
+\begin{proof}
+Writing $e_\chi=I_\chi-\widehat I_\chi$ and using $|\chi(-1)|=1$,
+the difference of the moments is bounded by the average of
+$2|\widehat I_\chi||e_\chi|+|e_\chi|^2$.
+Cauchy--Schwarz gives the stated bound; \eqref{proof:app:num:count}
+and integrality give the enclosure. The term $\mathcal A$ cancels,
+so its quadrature error does not enter this interval.
+This proves the lemma.
+\end{proof}
+
+For the error check, the $3280$ nonzero coefficients $a_n$ are enclosed
+using rational bounds for logarithms and square roots. Discrete logarithms
+to the roots $(2,2,3,2,2)$ modulo $(3,5,7,11,13)$ place them in the
+character-transform array. Rational enclosures of the roots of unity
+and each transform stage, compared with the stored integral approximations,
+give
+\[
+ \left(\frac1{5760}\sum_\chi|I_\chi-\widehat I_\chi|^2\right)^{1/2}
+ <\varepsilon_I=1.68935\times10^{-5}.
+\]
+This finite-transform check bounds the total integral error, including
+quadrature, tails, $L$-evaluation and roundoff. It yields
+$\varepsilon_r\approx0.274758682716$; outward rounding gives
+\begin{equation}\label{proof:app:num:enclosure}
+ [904.725241,\ 905.274759]\cap\mathbb Z=\{905\}.
+\end{equation}
+Thus the integral value $905.0000000052$ determines the exact integer
+$905$, compared with the Hardy--Littlewood prediction $908.1405628685$.
+As a final check, direct rational summation in \eqref{proof:app:num:count}
+and a separate prime enumeration both give $905$ unordered pairs
+($1810$ ordered pairs). This enumeration is a check on the count already
+certified from the integrals and finite corrections.
+
+\subsection{The Hardy interpretation and the spectral picture}
+\label{proof:app:num:spectrum}
+
+We now take $c=1$ in Appendix~\ref{proof:app:param}, as in the main text.
+Here $\alpha_{N,1}=1/\log N\approx0.09699366$, so the Hardy line
+$\sigma_*=1/9$ lies between $\alpha_{N,1}$ and $\beta=1/8$.
+Under GRH the same operator $T_{N,1}$ realizes the wide-weight residual;
+changing the weight changes its testing vector.
+
+\begin{proposition}[The Hardy residual for the wide weight]
+\label{proof:v9:wide-hardy-residual}
+Assume $\mathrm{GRH}(N)$ at $N=30030$. The wide-weight residual
+has the representation
+\[
+ \mathcal B=\langle T_{N,1}v_W,v_W\rangle,
+\]
+where $v_W$ is the Riesz vector of the bounded functional on
+$\mathcal H_{N,1}$ defined by
+\[
+ \ell_W(h)=\frac1{2\pi i}\int_{(1/9)}
+       N^s\widetilde W(s)(1+s)h(s)\,\mathrm{d}s.
+\]
+\end{proposition}
+
+\begin{proof}
+The real weight $f$ is $C^6$ with compact support in $(0,1)$.
+Define $C_f$, $J_f$, and $H_f$ by \eqref{gb:convolutions},
+with $f$ in place of $\phi$. At integer arguments, they satisfy
+$C_f(k)=0$ for $k\ge1$, $J_f(k)=0$ for $k\ge2$, and $J_f(1)=c_f$;
+integration also gives $\widetilde H_f(1)=0$.
+These identities and $C^6$ Mellin decay justify model inversion and
+boundedness of $\ell_W$. Applying the odd-character argument of
+Section~\ref{proof:sec:v3-mellin-operator} gives the quadratic identity
+with the unchanged residual kernel.
+This proves the proposition.
+\end{proof}
+
+The principal-character integral remains on its absolute-convergence
+line; this identification does not invoke Hypothesis R.
+For the finite spectral model, use $2562$ nodes on the two boundary
+lines at height $40$ with mesh $1/16$. The positive trapezoidal weights
+$w_i$ have half weight at the endpoints and no $1/(2\pi)$ factor.
+The finite spectral function is
+\[
+ X_{30030}(q):=\det\!\left(I-\frac{4q(1-q)}{\delta_N^2}C^2\right),
+\]
+where $C=(C_{ij})$ is the matrix with entries
+\[
+ C_{ij}=\sqrt{w_i}\,
+ \frac{\mathscr E_N(s_i,\overline{s_j})}{(1+s_i)(1+\overline{s_j})}
+ \sqrt{w_j}.
+\]
+
+\begin{proposition}[Zeros of the finite spectral model]
+\label{proof:v9:finite-spectral-zeros}
+Let $\lambda_1,\ldots,\lambda_{2562}$ be the real eigenvalues of $C$.
+Then
+\[
+ X_{30030}(q)=\prod_{j=1}^{2562}
+     \left(1-\frac{4\lambda_j^2}{\delta_N^2}q(1-q)\right),
+ \qquad X_{30030}(1-q)=X_{30030}(q).
+\]
+If $\|C\|\le\delta_N$, every complex zero has real part $1/2$.
+\end{proposition}
+
+\begin{proof}
+Unitary diagonalization gives the product and symmetry. For
+$\lambda_j\ne0$, the zeros satisfy $q(1-q)=\delta_N^2/(4\lambda_j^2)$,
+whose roots have real part $1/2$ when $|\lambda_j|\le\delta_N$.
+A zero eigenvalue contributes the constant factor one.
+This proves the proposition.
+\end{proof}
+
+Boundary $L'/L$ values use the Hurwitz formula and character FFT with
+$64$ direct terms and $24$ Euler--Maclaurin corrections. Extracting zeta
+factors accelerates the prime corrections in $\mathscr D_N$ and $P_N$.
+At prime cutoff $2\times10^5$, the extreme eigenvalues are approximately
+$-0.353421$ and $0.357462$, with
+$\|C\|/\delta_N\approx0.826864<1$ and
+$\delta_N=0.432310239587548\ldots$. Doubling the cutoff from $10^5$
+changes either endpoint by less than $3\times10^{-8}$.
+The computed finite-model zeros therefore lie on the critical line.
+
+\begin{center}
+ \begin{minipage}{0.93\textwidth}
+ \centering
+ \includegraphics[width=0.7742\linewidth]{X30030-heatmap.pdf}
+ \par\smallskip
+ {\small\raggedright
+ \textbf{Figure B.1.} The finite spectral product
+ $\log_{10}|X_{30030}(q)|$; the circles mark its displayed zeros.\par}
+ \medskip
+ \includegraphics[width=0.7742\linewidth]{X30030-zeros.pdf}
+ \par\smallskip
+ {\small\raggedright
+ \textbf{Figure B.2.} The displayed zeros of $X_{30030}(q)$.
+ Both figures use the full computed eigenvalue list.\par}
+ \end{minipage}
+\end{center}
+Cutoff stability and pointwise high-precision checks do not bound the
+full operator's truncation or discretization error. The figures illustrate
+the finite spectral model; they do not certify Hypothesis R for $T_{30030,1}$.
+
+\begin{thebibliography}{99}
+
+\bibitem{BGS2010}
+J.~Bourgain, A.~Gamburd, and P.~Sarnak,
+\emph{Affine linear sieve, expanders, and sum-product},
+Invent. Math. \textbf{179} (2010), no.~3, 559--644.
+
+\bibitem{Chen6673}
+J.~R.~Chen,
+\emph{On the representation of a large even integer as the sum
+of a prime and the product of at most two primes},
+Kexue Tongbao \textbf{17} (1966), 385--386 (in Chinese);
+Sci. Sinica \textbf{16} (1973), 157--176.
+
+\bibitem{GoldbachEuler1742}
+P.-H.~Fuss (ed.),
+\emph{Correspondance math\'ematique et physique de quelques
+c\'el\`ebres g\'eom\`etres du XVIIIe si\`ecle},
+vol.~1, St.~P\'etersbourg, 1843, pp.~125--129
+(Goldbach--Euler letters of 7 and 30 June 1742).
+
+\bibitem{Hardy1922}
+G.~H.~Hardy,
+\emph{Goldbach's theorem},
+Mat. Tidsskr. B (1922), 1--16.
+
+\bibitem{HL23}
+G.~H.~Hardy and J.~E.~Littlewood,
+\emph{Some problems of `Partitio numerorum'; III:
+On the expression of a number as a sum of primes},
+Acta Math. \textbf{44} (1923), 1--70.
+
+\bibitem{HL24V}
+G.~H.~Hardy and J.~E.~Littlewood,
+\emph{Some problems of `Partitio numerorum'; V:
+A further contribution to the study of Goldbach's problem},
+Proc. Lond. Math. Soc. (2) \textbf{22} (1924), 46--56.
+
+\bibitem{IK2004}
+H.~Iwaniec and E.~Kowalski,
+\emph{Analytic Number Theory},
+American Mathematical Society Colloquium Publications, vol.~53,
+American Mathematical Society, Providence, RI, 2004.
+
+\bibitem{LeblSCV}
+J.~Lebl,
+\emph{Tasty Bits of Several Complex Variables},
+\href{https://math.libretexts.org/Bookshelves/Analysis/Tasty_Bits_of_Several_Complex_Variables_(Lebl)/01:_Holomorphic_Functions_in_Several_Variables/1.01:_Onto_Several_Variables}
+{\S1.1, ``Onto Several Variables''}, online edition.
+
+\bibitem{LiLiu19}
+J.~Li and J.~Liu,
+\emph{Theorem $(1+1.9)$ on the Goldbach Conjecture},
+\href{https://arxiv.org/abs/2606.05224}{arXiv:2606.05224} (2026).
+
+\bibitem{Linnik1963}
+Yu.~V.~Linnik,
+\emph{The Dispersion Method in Binary Additive Problems},
+translated by S.~Schuur,
+Translations of Mathematical Monographs, vol.~4,
+American Mathematical Society, Providence, RI, 1963.
+
+\bibitem{PanPan}
+C.~D.~Pan and C.~B.~Pan,
+\emph{Goldbach Conjecture},
+Science Press, Beijing, 1981 (in Chinese); 1992 (English edition).
+
+\bibitem{Ren48}
+A.~R\'enyi,
+\emph{\"Uber die Darstellung der geraden Zahlen als Summe einer
+Primzahl und einer Fast-Primzahl},
+Izv. Akad. Nauk SSSR Ser. Mat. \textbf{12} (1948), no.~1, 57--78.
+
+\bibitem{Riemann1859}
+B.~Riemann,
+\emph{Ueber die Anzahl der Primzahlen unter einer gegebenen Gr\"osse},
+Monatsberichte der Berliner Akademie (1859), 671--680.
+English translation by D.~R.~Wilkins (1998),
+\href{https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Zeta/EZeta.pdf}
+{\emph{On the number of prime numbers less than a given quantity}}.
+
+\bibitem{Vin37}
+I.~M.~Vinogradov,
+\emph{Representation of an odd number as a sum of three primes},
+Dokl. Akad. Nauk SSSR \textbf{15} (1937), 291--294.
+
+\end{thebibliography}
+
+\end{document}

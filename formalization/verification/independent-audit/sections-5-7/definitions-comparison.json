@@ -1,0 +1,184 @@
+[
+  {
+    "expected": "TexAudit57.RawHardy",
+    "actual": "LiLiuGoldbach16.IsRawHardy",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "RawHardy = IsRawHardy"
+  },
+  {
+    "expected": "TexAudit57.RawNormSquared",
+    "actual": "LiLiuGoldbach16.rawHardyNormSq",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "RawNormSquared = rawHardyNormSq"
+  },
+  {
+    "expected": "TexAudit57.PW",
+    "actual": "LiLiuGoldbach16.fourierLaplace",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "PW = fourierLaplace"
+  },
+  {
+    "expected": "TexAudit57.TracePair",
+    "actual": "LiLiuGoldbach16.IsBoundaryTrace",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "TracePair = IsBoundaryTrace"
+  },
+  {
+    "expected": "TexAudit57.WeightedResidual",
+    "actual": "LiLiuGoldbach16.weightedKernel",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "WeightedResidual = weightedKernel"
+  },
+  {
+    "expected": "TexAudit57.Reproducer",
+    "actual": "LiLiuGoldbach16.reproducingKernel",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Reproducer = reproducingKernel"
+  },
+  {
+    "expected": "TexAudit57.Distance",
+    "actual": "LiLiuGoldbach16.pointDistance",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Distance = pointDistance"
+  },
+  {
+    "expected": "TexAudit57.RootRatio",
+    "actual": "LiLiuGoldbach16.spectralRootParameter",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "RootRatio = spectralRootParameter"
+  },
+  {
+    "expected": "TexAudit57.Slice",
+    "actual": "LiLiuGoldbach16.quaternionSlice",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Slice = quaternionSlice"
+  },
+  {
+    "expected": "TexAudit57.SliceEntire",
+    "actual": "LiLiuGoldbach16.IntrinsicEntire",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "SliceEntire = IntrinsicEntire"
+  },
+  {
+    "expected": "TexAudit57.ZeroSum",
+    "actual": "LiLiuGoldbach16.zeroPoisson",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "ZeroSum = zeroPoisson"
+  },
+  {
+    "expected": "TexAudit57.Energy",
+    "actual": "LiLiuGoldbach16.logDerivativeEnergy",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Energy = logDerivativeEnergy"
+  },
+  {
+    "expected": "TexAudit57.AverageEnergy",
+    "actual": "LiLiuGoldbach16.averagedLogDerivative",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "AverageEnergy = averagedLogDerivative"
+  },
+  {
+    "expected": "TexAudit57.ReferenceLine",
+    "actual": "LiLiuGoldbach16.referenceLine",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "ReferenceLine = referenceLine"
+  },
+  {
+    "expected": "TexAudit57.Cutoff",
+    "actual": "LiLiuGoldbach16.smoothedPerronWeight",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Cutoff = smoothedPerronWeight"
+  },
+  {
+    "expected": "TexAudit57.Perron",
+    "actual": "LiLiuGoldbach16.smoothedPerronKernel",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Perron = smoothedPerronKernel"
+  },
+  {
+    "expected": "TexAudit57.Poisson",
+    "actual": "LiLiuGoldbach16.poissonKernelReal",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Poisson = poissonKernelReal"
+  },
+  {
+    "expected": "TexAudit57.Convolution",
+    "actual": "LiLiuGoldbach16.realConvolution",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Convolution = realConvolution"
+  },
+  {
+    "expected": "TexAudit57.DiagonalVector",
+    "actual": "LiLiuGoldbach16.diagonalVector",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "DiagonalVector = diagonalVector"
+  },
+  {
+    "expected": "TexAudit57.Difference",
+    "actual": "LiLiuGoldbach16.differenceConvolution",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Difference = differenceConvolution"
+  },
+  {
+    "expected": "TexAudit57.SumOnPositiveHalfLine",
+    "actual": "LiLiuGoldbach16.sumConvolution",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "SumOnPositiveHalfLine = sumConvolution"
+  },
+  {
+    "expected": "TexAudit57.Signed",
+    "actual": "LiLiuGoldbach16.signedConvolution",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Signed = signedConvolution"
+  },
+  {
+    "expected": "TexAudit57.V",
+    "actual": "LiLiuGoldbach16.derivativeWeight",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "V = derivativeWeight"
+  },
+  {
+    "expected": "TexAudit57.Q",
+    "actual": "LiLiuGoldbach16.normFunctional",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Q = normFunctional"
+  },
+  {
+    "expected": "TexAudit57.EnergyV",
+    "actual": "LiLiuGoldbach16.weightEnergy",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "EnergyV = weightEnergy"
+  },
+  {
+    "expected": "TexAudit57.Psi",
+    "actual": "LiLiuGoldbach16.functionalIntegrand",
+    "universe_params": [],
+    "comparison_kind": "definition_body",
+    "label": "Psi = functionalIntegrand"
+  }
+]
