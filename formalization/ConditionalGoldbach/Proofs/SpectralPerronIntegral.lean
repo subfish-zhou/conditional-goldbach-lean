@@ -7,7 +7,6 @@ public import ConditionalGoldbach.Proofs.HardyContourShift
 @[expose] public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology FourierTransform Convolution
 open MeasureTheory Filter Set Complex

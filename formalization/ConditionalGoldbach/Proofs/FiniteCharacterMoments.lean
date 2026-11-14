@@ -5,7 +5,6 @@ public import ConditionalGoldbach.Proofs.Characters
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
 open MeasureTheory Filter Set Complex

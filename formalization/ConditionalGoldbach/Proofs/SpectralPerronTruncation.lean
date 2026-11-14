@@ -10,7 +10,6 @@ public import ConditionalGoldbach.Proofs.CharacterZeroExpansion
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
@@ -159,7 +158,7 @@ lemma smoothed_truncation_bound_of_gamma_integral {N : ℕ} [NeZero N]
     funext τ
     congr 2
     dsimp [v]
-    ring
+    ring_nf
   have hGi' : Integrable (fun τ => K τ * G τ) := hGi
   have h₁ : Integrable (fun τ => (-logDerivative χ s)*K τ-K τ*Z τ) := hgi0.sub hZi
   have h₂ : Integrable (fun τ => (-logDerivative χ s)*K τ-K τ*Z τ+K τ*G τ) := h₁.add hGi'

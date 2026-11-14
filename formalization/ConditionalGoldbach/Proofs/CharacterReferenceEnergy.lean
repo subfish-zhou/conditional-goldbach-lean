@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.CharacterReferencePolynomial
 /-! The reference-line energy estimate from a pointwise smoothed-polynomial estimate. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 1000000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

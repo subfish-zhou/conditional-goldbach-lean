@@ -9,8 +9,6 @@ public import ConditionalGoldbach.Proofs.ZetaTruncation
 The generic kernel foundations are independent of the application theorems. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

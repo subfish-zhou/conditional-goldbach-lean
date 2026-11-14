@@ -2,7 +2,7 @@ module
 
 public import Mathlib.Analysis.CStarAlgebra.Classes
 public import Mathlib.Analysis.Complex.CauchyIntegral
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Derivative convergence from pointwise convergence and a common circular majorant. -/
 public section

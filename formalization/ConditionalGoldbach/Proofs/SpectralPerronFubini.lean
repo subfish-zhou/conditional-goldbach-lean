@@ -8,7 +8,6 @@ public import ConditionalGoldbach.Proofs.HardyKernelMajorant
 @[expose] public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex

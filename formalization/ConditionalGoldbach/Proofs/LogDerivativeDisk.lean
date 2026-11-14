@@ -5,7 +5,7 @@ public import Mathlib.Analysis.CStarAlgebra.Classes
 public import Mathlib.Analysis.Complex.BorelCaratheodory
 public import Mathlib.Analysis.Complex.HasPrimitives
 public import Mathlib.Analysis.Complex.Liouville
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Quantitative logarithmic derivatives on a zero-free disk, via a genuine analytic logarithm. -/
 public section

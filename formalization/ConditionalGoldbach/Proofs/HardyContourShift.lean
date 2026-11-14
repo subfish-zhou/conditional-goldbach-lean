@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.HardyRawLines
 /-! Contour shifting with integrable horizontal slices, used for Gaussian regularizations. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

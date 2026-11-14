@@ -38,4 +38,5 @@ run_cmd do
       ("type_constants", toJson (info.type.getUsedConstants.map Name.toString)),
       ("value_constants", toJson ((value.map Expr.getUsedConstants).getD #[] |>.map Name.toString)),
       ("contains_sorry_directly", toJson ((value.map Expr.hasSorry).getD false))]
-  liftIO <| IO.FS.writeFile "proof-status-raw.json" (Json.arr rows).pretty
+  let output ← liftIO <| IO.getEnv "CONDITIONAL_GOLDBACH_AUDIT_OUTPUT"
+  liftIO <| IO.FS.writeFile (output.getD "proof-status-raw.json") (Json.arr rows).pretty

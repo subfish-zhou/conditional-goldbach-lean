@@ -25,9 +25,8 @@ lemma LFunction_polynomial_bound {q : ℕ} [NeZero q] (χ : Character q) (hχ : 
 lemma LFunction_sub_one_norm_bound {q : ℕ} [NeZero q] (χ : Character q)
     (s : ℂ) (hs : 1 < s.re) : ‖χ.LFunction s - 1‖ ≤ 1/(s.re-1) := by
   have hsumm := χ.LSeriesSummable_of_one_lt_re hs
-  have hsummnorm := hsumm.norm
   have htail : Summable (fun n : ℕ => LSeries.term (fun n : ℕ => χ n) s (n+2)) :=
-    (summable_nat_add_iff 2).mpr hsumm
+    (summable_nat_add_iff (f := LSeries.term (fun n : ℕ => χ n) s) 2).mpr hsumm
   have hseries : χ.LFunction s - 1 = ∑' n : ℕ, LSeries.term (fun n : ℕ => χ n) s (n+2) := by
     rw [DirichletCharacter.LFunction_eq_LSeries χ hs]
     have he := hsumm.sum_add_tsum_nat_add 2
@@ -40,7 +39,7 @@ lemma LFunction_sub_one_norm_bound {q : ℕ} [NeZero q] (χ : Character q)
   have hreal : Summable (fun n : ℕ => (n : ℝ)^(-s.re)) :=
     Real.summable_nat_rpow.mpr (by linarith)
   have htailreal : Summable (fun n : ℕ => ((n+2 : ℕ) : ℝ)^(-s.re)) :=
-    (summable_nat_add_iff 2).mpr hreal
+    (summable_nat_add_iff (f := fun n : ℕ => (n : ℝ) ^ (-s.re)) 2).mpr hreal
   have hsumtail : (∑' n : ℕ, ((n+2 : ℕ) : ℝ)^(-s.re)) ≤ 1/(s.re-1) := by
     have he := hreal.sum_add_tsum_nat_add 2
     have hp : (∑ k ∈ Finset.range 2, (k : ℝ)^(-s.re)) = 1 := by

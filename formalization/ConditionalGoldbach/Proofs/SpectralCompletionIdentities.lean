@@ -41,7 +41,9 @@ theorem spectralQuaternion_reindexed_compactUniformLimit (N : ℕ) (T : H →L[�
   have he : HasProdUniformlyOn (fun j (q : ℂ) =>
       1 - (4 * eigenvalues T (e j) ^ 2 / spectralScale N ^ 2 : ℝ) * q * (1 - q))
       (spectralComplex N T) (Metric.closedBall 0 B) := by
-    exact (e.hasProd_iff).2 hu
+    exact (e.hasProd_iff (f := fun j =>
+      UniformOnFun.ofFun {Metric.closedBall (0 : ℂ) B} (fun q : ℂ =>
+        1 - (4 * eigenvalues T j ^ 2 / spectralScale N ^ 2 : ℝ) * q * (1 - q)))).2 hu
   obtain ⟨n₀, hn₀⟩ := eventually_atTop.1
     ((Metric.tendstoUniformlyOn_iff.1 he.tendstoUniformlyOn_finsetRange) ε hε)
   refine ⟨n₀, fun n hn q hq => ?_⟩

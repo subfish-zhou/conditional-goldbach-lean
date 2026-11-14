@@ -6,9 +6,9 @@
 
 ## 编译时加载
 
-`ConditionalGoldbach` 入口加载 6,803 个模块，其中 3,801 个来自 Mathlib。源码扫描与 Lean 编译后的导入图给出的模块集合一致。
+`ConditionalGoldbach` 入口加载 6,807 个模块，其中 3,801 个来自 Mathlib。源码扫描与 Lean 编译后的导入图给出的模块集合一致。
 
-本轮定义拆分前分别为 6,914 和 3,929 个模块。Hardy 边界与纯 Hilbert–Schmidt 迹模块的导入闭包均已去掉 `goldbach-lean` 数论依赖；完整项目的外部数学依赖保持如下范围。完整计时、源码快照和测量方法见[改造报告](quality-convolution.zh.md)。
+相对 `cb16bfc` 增加的四个模块均为本地库模块，Mathlib 与 `goldbach-lean` 导入数量不变。独立的几何、L²/Fourier 和谱数据入口均不依赖 `goldbach-lean`。参见[本轮质量与测量报告](quality-library.zh.md)及[导入指南](imports.zh.md)。
 
 本项目直接导入4个非Mathlib数学模块：
 

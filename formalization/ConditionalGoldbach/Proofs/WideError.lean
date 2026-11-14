@@ -6,7 +6,6 @@ public import ConditionalGoldbach.Proofs.MomentError
 public section
 
 set_option autoImplicit false
-set_option maxRecDepth 10000
 noncomputable section
 open scoped BigOperators
 open Set

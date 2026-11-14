@@ -5,7 +5,7 @@
   "definition_body_comparisons": 48,
   "source_tex_sha256": "0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125",
   "comparator_record": "../comparator-result.json",
-  "comparator_sha256": "08f241a7693773d6ad28a4c4da250f3156bbc59650875eca8440448e4d2ef8e9",
+  "comparator_sha256": "4ff62fa5a26c3ca737810bd9569829187fea73a154da7569440010f7e18f6f2e",
   "current_comparator_accepted": true,
   "all_independent_full_types_equal": true,
   "frozen_reference_files": {

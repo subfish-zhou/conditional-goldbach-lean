@@ -6,7 +6,7 @@ Lean 4 proofs of the reviewed Li–Liu statements, including the analytic, Hardy
 
 ## Current status
 
-**102 of 102 reviewed declarations** have complete transitive proof dependencies. The ledger records 0 declarations with written proofs and pending dependencies, and 0 direct placeholders. Across all public theorems and auxiliary results, **1386** have complete proof dependencies.
+**102 of 102 reviewed declarations** have complete transitive proof dependencies. The ledger records 0 declarations with written proofs and pending dependencies, and 0 direct placeholders. Across all public theorems and auxiliary results, **1400** have complete proof dependencies.
 
 The 102 reviewed declarations cover the paper's 38 named results and their supporting clauses. The review also tracks 171 original definitions.
 
@@ -24,6 +24,8 @@ Run from this directory:
 lake update
 lake exe cache get
 lake --wfail build
+python3 scripts/check_project.py
+python3 scripts/check_public_api.py
 python3 scripts/check_entrypoints.py
 python3 scripts/audit_proofs.py
 python3 scripts/check_reviewed_types.py
@@ -38,13 +40,17 @@ HTML generation uses the optional packages in `requirements-review.txt` and `pac
 
 See [choosing an import](../docs/imports.md) for isolated consumers and enforced dependency boundaries.
 
+See the [development and public-interface guide](../docs/development.md) for daily checks, the complete release sequence and CI.
+
 ## Library map
 
 | Modules | Content |
 |---|---|
 | `Definitions/*.lean` | Reviewed objects split into arithmetic, analytic, Hardy, Hilbert, spectral, and experiment modules |
 | `BaseDefinitions.lean`, `Definitions.lean` | Compatibility entry points reexporting the original reviewed definitions |
-| `Proofs/SpectralDataAlgebra.lean` | Hilbert-space coordinate and norm identities used by the spectral proofs |
+| `Analysis/L2Fourier.lean` | Mathlib-only Fourier and L² dilation interfaces |
+| `Analysis/SpectralData.lean` | Shared Hilbert coordinate and norm identities |
+| `Proofs/HardyFourier.lean`, `Proofs/SpectralDataAlgebra.lean` | Compatibility entrypoints for the shared analysis interfaces |
 | `Proofs/MellinDoubleDiagonal.lean` | Shared double-Mellin diagonalization and density-factor extraction |
 | `Proofs/MellinBetaConvolutionCore.lean` | Shared Beta–Mellin convolution proofs with weight-specific wrappers |
 | `Proofs/Weights.lean`, `WeightNorm.lean` | Smooth weights, positive mass, support, convolutions, and norm integrals |
@@ -64,6 +70,8 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 - `reviewed-types.json`: definitional-equality checks compare all 102 complete theorem types against the statement snapshot, after mapping its namespace.
 - `reviewed-definitions.json`: checks the declarations and bodies of the 171 reviewed definitions, ignoring whitespace and comments between declarations.
 - `verification/entrypoints.json`: isolated consumer exports, compiled import inventories, and dependency budgets.
+- `verification/public-api.json`: all 1621 frozen public declaration types, including binder names, order and implicitness.
+- `verification/proof-policy.json`: source reachability and scoped elaboration options.
 - `verification.json`: consolidated build and verification records.
 - [Independent source audit](verification/independent-audit/report.html): original-TeX review, representation bridges, and comparator results.
 
@@ -73,7 +81,7 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 
 - [interiorLine_memLp](ConditionalGoldbach/Definitions/HardyTraces.lean#L15)
 - [boundaryTraces_exist](ConditionalGoldbach/Definitions/HardyTraces.lean#L31)
-- [proposition_6_5_components_spec](ConditionalGoldbach/Proofs/ArithmeticComponentOperators.lean#L112)
+- [proposition_6_5_components_spec](ConditionalGoldbach/Proofs/ArithmeticComponentOperators.lean#L110)
 - [lemma_A_3_balance](ConditionalGoldbach/Proofs/BalanceBounds.lean#L40)
 - [lemma_A_3_width_ratio](ConditionalGoldbach/Proofs/BalanceBounds.lean#L97)
 - [proposition_A_4_baseline_product](ConditionalGoldbach/Proofs/BaselineEuler.lean#L126)
@@ -83,7 +91,7 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 - [lemma_4_1_signed_model](ConditionalGoldbach/Proofs/BetaIntegrals.lean#L200)
 - [lemma_4_2_meromorphic](ConditionalGoldbach/Proofs/BetaMeromorphic.lean#L133)
 - [proposition_3_2](ConditionalGoldbach/Proofs/CharacterAnalytic.lean#L114)
-- [lemma_6_4](ConditionalGoldbach/Proofs/CharacterAverage.lean#L85)
+- [lemma_6_4](ConditionalGoldbach/Proofs/CharacterAverage.lean#L84)
 - [proposition_3_2_joint_meromorphic](ConditionalGoldbach/Proofs/CharacterJoint.lean#L59)
 - [lemma_3_4_paired_zero_sum](ConditionalGoldbach/Proofs/CharacterSeries.lean#L66)
 - [lemma_3_4](ConditionalGoldbach/Proofs/CharacterZeroExpansion.lean#L57)
@@ -96,18 +104,18 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 - [lemma_4_3](ConditionalGoldbach/Proofs/DensityEulerIdentity.lean#L103)
 - [theorem_6_1](ConditionalGoldbach/Proofs/DictionaryApplication.lean#L37)
 - [singularSeries_eq_existing](ConditionalGoldbach/Proofs/Elementary.lean#L16)
-- [proposition_B_5](ConditionalGoldbach/Proofs/FiniteExperimentSpectrum.lean#L145)
+- [proposition_B_5](ConditionalGoldbach/Proofs/FiniteExperimentSpectrum.lean#L152)
 - [lemma_3_3](ConditionalGoldbach/Proofs/HadamardLimit.lean#L114)
-- [proposition_5_3](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L37)
-- [proposition_5_4_kernel_pairing](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L58)
-- [proposition_5_3_kernel_integrability](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L66)
-- [proposition_5_4](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L77)
-- [proposition_5_4_fixed_contour](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L90)
-- [lemma_5_2](ConditionalGoldbach/Proofs/HardyConverse.lean#L47)
-- [proposition_5_4_exact_norm](ConditionalGoldbach/Proofs/HardyReproducing.lean#L140)
-- [lemma_5_2_representation_spec](ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean#L128)
-- [lemma_5_2_closed_trace_space](ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean#L185)
-- [lemma_5_2_boundary_inner](ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean#L201)
+- [proposition_5_3](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L35)
+- [proposition_5_4_kernel_pairing](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L56)
+- [proposition_5_3_kernel_integrability](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L64)
+- [proposition_5_4](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L75)
+- [proposition_5_4_fixed_contour](ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean#L88)
+- [lemma_5_2](ConditionalGoldbach/Proofs/HardyConverse.lean#L45)
+- [proposition_5_4_exact_norm](ConditionalGoldbach/Proofs/HardyReproducing.lean#L138)
+- [lemma_5_2_representation_spec](ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean#L126)
+- [lemma_5_2_closed_trace_space](ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean#L183)
+- [lemma_5_2_boundary_inner](ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean#L199)
 - [proposition_3_2_finite_rank](ConditionalGoldbach/Proofs/KernelAlgebra.lean#L111)
 - [proposition_5_1](ConditionalGoldbach/Proofs/KernelRegularity.lean#L101)
 - [proposition_5_1_fueter_equation](ConditionalGoldbach/Proofs/KernelRegularity.lean#L150)
@@ -140,12 +148,12 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 - [theorem_6_1_width_comparison](ConditionalGoldbach/Proofs/SpectralAlgebra.lean#L29)
 - [proposition_6_3_factor_central_order](ConditionalGoldbach/Proofs/SpectralAlgebra.lean#L131)
 - [proposition_6_2](ConditionalGoldbach/Proofs/SpectralCompletion.lean#L85)
-- [proposition_6_1_spectral_choice_independent](ConditionalGoldbach/Proofs/SpectralCompletionChoice.lean#L109)
+- [proposition_6_1_spectral_choice_independent](ConditionalGoldbach/Proofs/SpectralCompletionChoice.lean#L108)
 - [proposition_6_1_square_determinant](ConditionalGoldbach/Proofs/SpectralCompletionDeterminant.lean#L41)
 - [proposition_6_1](ConditionalGoldbach/Proofs/SpectralCompletionDeterminant.lean#L50)
-- [proposition_6_1_enumeration](ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean#L58)
-- [proposition_6_2_centered_product](ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean#L103)
-- [proposition_6_2_critical_values](ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean#L157)
+- [proposition_6_1_enumeration](ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean#L60)
+- [proposition_6_2_centered_product](ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean#L105)
+- [proposition_6_2_critical_values](ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean#L159)
 - [proposition_6_3_multiplicities](ConditionalGoldbach/Proofs/SpectralCompletionMultiplicities.lean#L91)
 - [proposition_6_3_three_cases](ConditionalGoldbach/Proofs/SpectralCompletionZeros.lean#L95)
 - [proposition_6_3](ConditionalGoldbach/Proofs/SpectralConsequences.lean#L38)
@@ -162,17 +170,17 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 - [proposition_A_2](ConditionalGoldbach/Proofs/VariableConsequences.lean#L23)
 - [proposition_A_1](ConditionalGoldbach/Proofs/VariableQuadratic.lean#L58)
 - [proposition_A_2_pointwise](ConditionalGoldbach/Proofs/VariableQuadratic.lean#L120)
-- [proposition_A_1_operator_spec](ConditionalGoldbach/Proofs/VariableStripOperators.lean#L161)
+- [proposition_A_1_operator_spec](ConditionalGoldbach/Proofs/VariableStripOperators.lean#L159)
 - [theorem_1_1_weight_exists](ConditionalGoldbach/Proofs/Weights.lean#L58)
 - [lemma_3_5_weight_support](ConditionalGoldbach/Proofs/Weights.lean#L79)
 - [lemma_7_2_convolutions](ConditionalGoldbach/Proofs/Weights.lean#L127)
 - [proposition_7_4_norm_integrals](ConditionalGoldbach/Proofs/Weights.lean#L207)
-- [lemma_B_3](ConditionalGoldbach/Proofs/WideError.lean#L15)
-- [lemma_B_3_main_integral](ConditionalGoldbach/Proofs/WideMainIntegral.lean#L69)
+- [lemma_B_3](ConditionalGoldbach/Proofs/WideError.lean#L14)
+- [lemma_B_3_main_integral](ConditionalGoldbach/Proofs/WideMainIntegral.lean#L67)
 - [proposition_B_4](ConditionalGoldbach/Proofs/WideMellinResidual.lean#L61)
-- [lemma_B_2](ConditionalGoldbach/Proofs/WideMoments.lean#L88)
-- [proposition_B_1](ConditionalGoldbach/Proofs/WidePrimePowerCount.lean#L147)
-- [proposition_B_4_weight](ConditionalGoldbach/Proofs/WideWeight.lean#L167)
+- [lemma_B_2](ConditionalGoldbach/Proofs/WideMoments.lean#L86)
+- [proposition_B_1](ConditionalGoldbach/Proofs/WidePrimePowerCount.lean#L145)
+- [proposition_B_4_weight](ConditionalGoldbach/Proofs/WideWeight.lean#L165)
 
 ## Pending reviewed declarations
 
@@ -198,6 +206,7 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 - [baselineBound](ConditionalGoldbach/Definitions/Asymptotics.lean#L46): `definition`.
 - [balanceFactor](ConditionalGoldbach/Definitions/Asymptotics.lean#L48): `definition`.
 - [availableNormMajorant](ConditionalGoldbach/Definitions/Asymptotics.lean#L50): `definition`.
+- [boundaryIntegral](ConditionalGoldbach/Definitions/BoundaryIntegral.lean#L15): `definition`.
 - [Character](ConditionalGoldbach/Definitions/Characters.lean#L19): `definition`.
 - [oddCharacters](ConditionalGoldbach/Definitions/Characters.lean#L24): `definition`.
 - [characterPolynomial](ConditionalGoldbach/Definitions/Characters.lean#L27): `definition`.
@@ -250,17 +259,16 @@ See [choosing an import](../docs/imports.md) for isolated consumers and enforced
 - [IsFiniteSpectrum](ConditionalGoldbach/Definitions/FiniteSpectrum.lean#L32): `definition`.
 - [finiteEigenvalues](ConditionalGoldbach/Definitions/FiniteSpectrum.lean#L37): `definition`.
 - [finiteMatrixOpNorm](ConditionalGoldbach/Definitions/FiniteSpectrum.lean#L40): `definition`.
-- [analyticDomain](ConditionalGoldbach/Definitions/Geometry.lean#L16): `definition`.
-- [betaDomain](ConditionalGoldbach/Definitions/Geometry.lean#L19): `definition`.
-- [alpha](ConditionalGoldbach/Definitions/Geometry.lean#L22): `definition`.
-- [beta](ConditionalGoldbach/Definitions/Geometry.lean#L24): `definition`.
-- [sigmaStar](ConditionalGoldbach/Definitions/Geometry.lean#L26): `definition`.
-- [width](ConditionalGoldbach/Definitions/Geometry.lean#L28): `definition`.
-- [strip](ConditionalGoldbach/Definitions/Geometry.lean#L30): `definition`.
-- [line](ConditionalGoldbach/Definitions/Geometry.lean#L32): `definition`.
-- [boundaryIntegral](ConditionalGoldbach/Definitions/Geometry.lean#L34): `definition`.
-- [pointDistance](ConditionalGoldbach/Definitions/Geometry.lean#L37): `definition`.
-- [referenceLine](ConditionalGoldbach/Definitions/Geometry.lean#L39): `definition`.
+- [analyticDomain](ConditionalGoldbach/Definitions/GeometryCore.lean#L15): `definition`.
+- [betaDomain](ConditionalGoldbach/Definitions/GeometryCore.lean#L18): `definition`.
+- [alpha](ConditionalGoldbach/Definitions/GeometryCore.lean#L21): `definition`.
+- [beta](ConditionalGoldbach/Definitions/GeometryCore.lean#L23): `definition`.
+- [sigmaStar](ConditionalGoldbach/Definitions/GeometryCore.lean#L25): `definition`.
+- [width](ConditionalGoldbach/Definitions/GeometryCore.lean#L27): `definition`.
+- [strip](ConditionalGoldbach/Definitions/GeometryCore.lean#L29): `definition`.
+- [line](ConditionalGoldbach/Definitions/GeometryCore.lean#L31): `definition`.
+- [pointDistance](ConditionalGoldbach/Definitions/GeometryCore.lean#L33): `definition`.
+- [referenceLine](ConditionalGoldbach/Definitions/GeometryCore.lean#L35): `definition`.
 - [hardyWeight](ConditionalGoldbach/Definitions/Hardy.lean#L18): `definition`.
 - [hardyMeasure](ConditionalGoldbach/Definitions/Hardy.lean#L20): `definition`.
 - [HardySpace](ConditionalGoldbach/Definitions/Hardy.lean#L23): `definition`.

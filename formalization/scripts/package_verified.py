@@ -26,7 +26,7 @@ def add(base, names):
 
 
 add(ROOT, [
-    'verification.json', 'package.json', 'requirements-review.txt',
+    'verification.json', 'package.json', 'package-lock.json', 'requirements-review.txt',
     'verification/current-audits.json', 'scripts/check_naming_migration.py', 'scripts/write_progress_report.py',
     'scripts/verify_project.py', 'scripts/refresh_dependency_records.py',
     'reference/Reviewed.lean', 'reference/declarations.json', 'reference/inventory.json',
@@ -40,7 +40,11 @@ add(workspace, ['README.md', 'README.zh.md', 'docs/dependencies.md', 'docs/depen
                 'docs/quality-before-build.log', 'docs/quality-after-build.log',
                 'docs/quality-convolution.md', 'docs/quality-convolution.zh.md',
                 'docs/quality-convolution.json', 'docs/quality-convolution-baseline.tar.gz',
-                'docs/imports.md', 'docs/imports.zh.md'])
+                'docs/imports.md', 'docs/imports.zh.md', 'docs/development.md', 'docs/development.zh.md',
+                'docs/quality-library.md', 'docs/quality-library.zh.md', 'docs/quality-library.json',
+                'docs/release-comparison.md', 'docs/release-comparison.zh.md',
+                'docs/release-comparison.json', 'docs/release-before-build.log', 'docs/release-after-build.log',
+                '.github/workflows/verify.yml'])
 audit = ROOT / AUDIT
 add(audit, [
     'README.txt', 'README.zh.txt', 'package_audit.py', 'measure_build.py',

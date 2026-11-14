@@ -10,7 +10,6 @@ and the primitive functional equation. -/
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
@@ -200,7 +199,7 @@ theorem completedLFunction_disk_growth {d : ℕ} [NeZero d] (χ : Character d)
         apply Real.exp_le_exp.mpr
         have ht := growth_scale_successor hR
         dsimp [X]
-        convert mul_le_mul_of_nonneg_left ht (show (0 : ℝ) ≤ 3 by norm_num) using 1 <;> ring
+        convert mul_le_mul_of_nonneg_left ht (show (0 : ℝ) ≤ 3 by norm_num) using 1 <;> ring_nf
       have hpower : ‖(d : ℂ)^((1 - s) - 1 / 2)‖ ≤ Real.exp ((2 * Real.log d) * X) := by
         rw [Complex.norm_natCast_cpow_of_pos (Nat.pos_of_ne_zero (NeZero.ne d)),
           Real.rpow_def_of_pos hd0]

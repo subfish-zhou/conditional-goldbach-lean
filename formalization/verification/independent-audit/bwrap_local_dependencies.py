@@ -6,9 +6,18 @@ Add read-only mounts after the home cover, before comparator's writable mounts.
 All original namespace, environment, network and writable-path options survive.
 """
 from pathlib import Path
-import os, sys
+import ctypes
+import json
+import os
+import signal
+import subprocess
+import sys
+import time
 
 args=sys.argv[1:]
+trace = os.environ.get('CONDITIONAL_GOLDBACH_COMPARATOR_TRACE')
+if args[:1] == ['--trace-file']:
+    trace, args = args[1], args[2:]
 assert '--unshare-all' in args and '--clearenv' in args and '--die-with-parent' in args
 assert '--tmpfs' in args and '/home' in args
 project=Path(__file__).resolve().parents[2]
@@ -28,4 +37,25 @@ for directory in sorted(dependencies, key=lambda p: (len(p.parts), str(p))):
         mounts.append(directory)
 insert=args.index('--bind') if '--bind' in args else args.index('--setenv')
 extra=[part for directory in mounts for part in ['--ro-bind',str(directory),str(directory)]]
-os.execv('/usr/bin/bwrap',['bwrap']+args[:insert]+extra+args[insert:])
+command = ['/usr/bin/bwrap'] + args[:insert] + extra + args[insert:]
+if not trace:
+    os.execv(command[0], command)
+
+# Preserve the original --die-with-parent behavior through this timing parent.
+# The sandbox's namespaces, environment clearing and mount permissions are
+# unchanged; the trace is written by the host-side parent after the child exits.
+parent = os.getppid()
+libc = ctypes.CDLL(None, use_errno=True)
+if libc.prctl(1, signal.SIGTERM, 0, 0, 0) != 0:  # PR_SET_PDEATHSIG
+    raise OSError(ctypes.get_errno(), 'Cannot preserve comparator parent-death semantics')
+if os.getppid() != parent:
+    raise SystemExit(1)
+start = time.monotonic()
+result = subprocess.run(command)
+inner = args[args.index('--') + 1:]
+row = dict(command=inner, wall_seconds=time.monotonic() - start, exit_code=result.returncode)
+with open(trace, 'a') as output:
+    output.write(json.dumps(row) + '\n')
+if result.returncode < 0:
+    os.kill(os.getpid(), -result.returncode)
+raise SystemExit(result.returncode)

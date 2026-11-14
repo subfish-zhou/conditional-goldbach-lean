@@ -9,8 +9,6 @@ The Hardy membership and exact boundary traces of each column are explicit hypot
 these are the analytic inputs required before double reproduction can be used. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 400000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

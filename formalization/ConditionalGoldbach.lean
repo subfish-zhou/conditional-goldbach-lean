@@ -1,3 +1,4 @@
 module
 
 public import ConditionalGoldbach.Remaining
+public import ConditionalGoldbach.Proofs.SpectralDataAlgebra

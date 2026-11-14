@@ -64,7 +64,7 @@ lemma normFunctional_pointwise_asymptotic (N : ℕ) (hlarge : Real.exp 16 < (N :
     have hLp : Real.log N ≤ 8 * Real.rpow (N : ℝ) (1 / 8 : ℝ) := by
       rw [Real.rpow_eq_pow, Real.rpow_def_of_pos hNr]
       have h := Real.add_one_le_exp (Real.log N / 8)
-      convert (show Real.log N ≤ 8 * Real.exp (Real.log N / 8) by linarith) using 1; congr 1; ring
+      convert (show Real.log N ≤ 8 * Real.exp (Real.log N / 8) by linarith) using 1; congr 1; ring_nf
     apply (le_div_iff₀ hLpos).2
     change (N : ℝ) ^ (-(1 / 8 : ℝ)) * Real.log N ≤ 8
     rw [Real.rpow_neg hNr.le, inv_mul_eq_div]

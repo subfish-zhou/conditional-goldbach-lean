@@ -1,6 +1,6 @@
 module
 
-public import ConditionalGoldbach.Definitions.Geometry
+public import ConditionalGoldbach.Definitions.GeometryCore
 public import Mathlib.MeasureTheory.Integral.Bochner.Basic
 public import Mathlib.MeasureTheory.Measure.Haar.OfBasis
 

@@ -8,8 +8,6 @@ public import Mathlib.Analysis.Normed.Module.WeakDual
 /-! Weak compactness closes uniformly bounded Fourier–Laplace families under pointwise limits. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex
@@ -46,8 +44,9 @@ lemma hardy_bounded_pointwise_limit {a b C : ℝ} (ψ : ℕ → HardySpace a b)
       exact (evaluationVector_spec hs (ψ n)).symm
     have hEχ : E v = fourierLaplace χ s := by
       rw [evaluationVector_spec hs]
-      change conj (v (evaluationVector s)) = inner ℂ (evaluationVector s) χ
-      rw [← InnerProductSpace.toDual_symm_apply (𝕜 := ℂ)]
+      change conj (v.toStrongDual (evaluationVector s)) = inner ℂ (evaluationVector s) χ
+      rw [← InnerProductSpace.toDual_symm_apply (𝕜 := ℂ)
+        (x := evaluationVector s) (y := v.toStrongDual)]
       exact inner_conj_symm _ _
     have hEf : Tendsto E (Filter.map u atTop) (𝓝 (f s)) := by
       rw [tendsto_map'_iff]

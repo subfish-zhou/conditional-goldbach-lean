@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.CharacterReferenceEnergy
 /-! The half-plane weighted real-part estimate for actual logarithmic derivatives. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 1000000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

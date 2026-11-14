@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 import time
 
 AUDIT = Path(__file__).resolve().parent
@@ -14,7 +15,7 @@ STAGED = AUDIT / 'comparator-project'
 sys.path.insert(0, str(PROJECT / 'scripts'))
 from verification_inputs import (  # noqa: E402
     COMPARATOR_AXIOMS, CONTROLS, FULL_TYPE_CHECK, build_inputs, comparator_inputs, comparator_targets,
-    pinned_dependencies, read_json, sha256,
+    pinned_dependencies, read_json, sha256, verification_tool_inputs,
 )
 
 
@@ -32,7 +33,8 @@ def main():
     dependencies = pinned_dependencies(PROJECT)
     if (build['exit_code'] != 0 or build['input_hashes'] != current_build_inputs
             or build['dependency_revisions'] != dependencies
-            or frozen != read_json(AUDIT / 'frozen-source-hashes.json')):
+            or frozen != read_json(AUDIT / 'frozen-source-hashes.json')
+            or build.get('verification_tool_hashes') != verification_tool_inputs(PROJECT)):
         raise ValueError('Comparator inputs differ from the recorded build')
     if any(sha256(AUDIT / name) != expected
            for name, expected in manifest['frozen_references'].items()):
@@ -46,13 +48,31 @@ def main():
         started = datetime.datetime.now(datetime.timezone.utc).isoformat()
         start = time.monotonic()
         log = AUDIT / (name + '.log')
-        with log.open('w') as stream:
-            result = subprocess.run(command, cwd=STAGED, env=env, stdout=stream,
-                                    stderr=subprocess.STDOUT)
+        phases = AUDIT / (name + '-phases.jsonl')
+        phases.unlink(missing_ok=True)
+        # Lean invokes COMPARATOR_BWRAP via `env -i`, so a trace environment
+        # variable cannot reach the adapter. A temporary executable passes the
+        # host-side trace path as an argument without altering the sandbox env.
+        with tempfile.TemporaryDirectory(prefix='comparator-trace-', dir=PROJECT / '.lake') as tmp:
+            launcher = Path(tmp) / 'bwrap-trace'
+            adapter = str(AUDIT / 'bwrap_local_dependencies.py')
+            launcher.write_text('#!/usr/bin/python3\nimport os, sys\n'
+                + f'os.execv({adapter!r}, [{adapter!r}, "--trace-file", {str(phases)!r}, *sys.argv[1:]])\n')
+            launcher.chmod(0o700)
+            with log.open('w') as stream:
+                result = subprocess.run(command, cwd=STAGED,
+                                        env=env | {'COMPARATOR_BWRAP': str(launcher)},
+                                        stdout=stream, stderr=subprocess.STDOUT)
+        if name != 'independent-full-types-build' and (not phases.exists() or phases.stat().st_size == 0):
+            raise ValueError('Comparator sandbox phase log was not produced: ' + name)
         row = dict(name=name, command=command, exit_code=result.returncode, start_utc=started,
                    wall_seconds=time.monotonic() - start, log=log.name, log_sha256=sha256(log))
+        if phases.exists():
+            row['sandbox_phases'] = [json.loads(line) for line in phases.read_text().splitlines()]
+            row['phase_log'] = phases.name
+            row['phase_log_sha256'] = sha256(phases)
         runs.append(row)
-        print(json.dumps(row), flush=True)
+        print(json.dumps({key: value for key, value in row.items() if key != 'sandbox_phases'}), flush=True)
         return result.returncode
 
     type_file = AUDIT / 'independent-full-types.json'

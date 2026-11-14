@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
 /-! Poisson representation and the square majorant on a right half-plane. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 1000000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

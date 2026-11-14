@@ -4,8 +4,8 @@ public import ConditionalGoldbach.Definitions.Model
 public import Mathlib.MeasureTheory.Group.Prod
 public import Mathlib.MeasureTheory.Integral.Prod
 public import Mathlib.MeasureTheory.Measure.Lebesgue.EqHaar
-public import Mathlib.Tactic.Push
-public import Mathlib.Tactic.Ring
+import Mathlib.Tactic.Push
+import Mathlib.Tactic.Ring
 
 /-! Diagonalization and factor extraction for double vertical Mellin integrals. -/
 public section

@@ -6,8 +6,8 @@ A Lean 4 formalization of the Li–Liu paper's conditional Goldbach results and 
 
 ## Results
 
-- All **102 reviewed declarations**, covering the paper's 38 named results, have complete proofs. The transitive axiom audit covers **1,386 public theorems and auxiliary results**.
-- The main library contains **271 Lean files and 30,774 lines**, including comments and blank lines, excluding dependencies and audit code.
+- All **102 reviewed declarations**, covering the paper's 38 named results, have complete proofs. The transitive axiom audit covers **1,400 public theorems and auxiliary results**.
+- The main library contains **275 Lean files and 30,739 lines**, including comments and blank lines, excluding dependencies and audit code.
 - Three independent reviews checked the original TeX. All **103 independently stated propositions** passed full type checks; the Lean comparator accepted **218 targets**, including propositions, definition equalities, representation bridges, and the counting certificate. Three deliberately altered controls were rejected.
 - A direct enumeration certificate proves that **30030 has 905 unordered prime-pair representations**, using `decide +kernel`.
 
@@ -34,9 +34,11 @@ The package uses Git dependencies. See [dependency details](docs/dependencies.md
 
 The proof library uses Lean's module system and preserves unfolding for its public definitions. Unused proof parameters have a leading `_`. If you pass an affected parameter by name, use its new spelling, such as `_hN` in `lemma_3_1_odd_orthogonality`.
 
-See the [latest refactor measurements](docs/quality-convolution.md) for source size, import closures, and build/proof timing comparisons.
+See the [latest refactor measurements](docs/quality-library.md) for source size, import closures, and build/proof timing comparisons.
 
 See the [comparison with the previous GitHub release](docs/release-comparison.md) for cumulative source counts, clean-output build timings, dependency sizes, and verification changes.
+
+See the [development and public-interface guide](docs/development.md) for daily checks, release verification, CI, and reusable analysis.
 
 See [choosing an import](docs/imports.md) for main-theorem, prime-pair, definition, and finite-spectrum consumers with checked import boundaries.
 
@@ -55,7 +57,7 @@ To reproduce the build, proof and dependency audits, full comparator run, and ma
 python3 formalization/scripts/verify_project.py
 ```
 
-Then render and browser-check both report languages before running `update_verification.py` and `package_verified.py`. The runner checks the Lake dependency checkouts against the pinned revisions and records the source, comparator configuration, and audit output hashes. The report checks use these hashes so the evidence can be verified after copying or extracting it.
+Then run `python3 formalization/scripts/render_verified.py` to render and browser-check both report languages and bind the evidence, followed by `python3 formalization/scripts/test_verification.py` and `python3 formalization/scripts/package_verified.py`. The runner checks the Lake dependency checkouts against the pinned revisions and records the source, comparator configuration, and audit output hashes. The report checks use these hashes so the evidence can be verified after copying or extracting it.
 
 To rerun the independent comparator using the current build records:
 
@@ -69,7 +71,7 @@ The permitted axioms are `propext`, `Classical.choice`, and `Quot.sound`. Audit 
 
 Mathematical review connects the TeX to the independent Lean reference. The comparator then checks that reference against actual theorem types, definition bodies, and proof axioms.
 
-The HTML reports work offline. To regenerate and check them, install the optional dependencies in `formalization/requirements-review.txt` and `formalization/package.json`, then run `npx playwright install chromium` from `formalization`.
+The HTML reports work offline. To regenerate and check them, install the optional Python dependencies in `formalization/requirements-review.txt` and run `npm ci` in `formalization/`, then run `npx playwright install chromium` from `formalization`.
 
 ## Verification records
 

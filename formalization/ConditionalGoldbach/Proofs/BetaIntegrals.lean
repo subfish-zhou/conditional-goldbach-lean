@@ -2,7 +2,7 @@ module
 
 public import ConditionalGoldbach.Definitions.Model
 public import Mathlib.Analysis.LocallyConvex.AbsConvexOpen
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! The three exact beta integrals and their absolute convergence. -/
 public section
@@ -162,7 +162,7 @@ lemma beta_sum_integrable (h : ℝ) (hh : 0 < h) (s z : ℂ)
           ((h : ℂ) ^ (-1 / 2 - z) * ((1 - x / h : ℝ) : ℂ) ^ (-1 / 2 - z)) := by
         rw [Complex.cpow_add _ _ hc]
         simp only [Complex.ofReal_sub, Complex.ofReal_one]
-        ring
+        ring_nf
       _ = (h * (x / h) : ℝ) ^ (-1 / 2 - s) * (h * (1 - x / h) : ℝ) ^ (-1 / 2 - z) := by
         simp only [Complex.ofReal_mul]
         rw [Complex.mul_cpow_ofReal_nonneg hh.le hxh,

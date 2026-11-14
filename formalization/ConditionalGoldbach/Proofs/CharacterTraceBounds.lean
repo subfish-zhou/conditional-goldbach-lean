@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.CharacterGramOperator
 /-! Comparison of the arithmetic trace with the two averaged logarithmic-derivative energies. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 800000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex InnerProductSpace

@@ -13,7 +13,7 @@ import time
 from project_sources import library_sources
 from verification_inputs import (
     BUILD_COMMAND, DECLARATIONS, DEPENDENCY_OUTPUTS, PUBLICATION, build_inputs, fingerprints,
-    pinned_dependencies,
+    pinned_dependencies, verification_tool_inputs,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -63,6 +63,7 @@ def main():
             if label == 'build':
                 record['input_hashes'] = input_hashes
                 record['dependency_revisions'] = dependency_revisions
+                record['verification_tool_hashes'] = tool_hashes
                 record['lean_num_threads'] = 2
                 record['lock_file'] = LOCK
                 jobs = re.search(r'Build completed successfully \((\d+) jobs\)', log_path.read_text())
@@ -81,11 +82,14 @@ def main():
         fcntl.flock(lock, fcntl.LOCK_EX)
         input_hashes = build_inputs(ROOT)
         dependency_revisions = pinned_dependencies(ROOT)
+        tool_hashes = verification_tool_inputs(ROOT)
         write_json(record_path, runs)
         run('build', list(BUILD_COMMAND), 'verification/current-build.log', audit_step=False)
         run('entrypoints', ['python3', 'scripts/check_entrypoints.py'],
             'verification/current-entrypoints.log', outputs=('verification/entrypoints.json',))
         for label, script, outputs in [
+            ('proof-policy', 'check_proof_policy.py', ('verification/proof-policy.json',)),
+            ('public-api', 'check_public_api.py', ('verification/public-api.json',)),
             ('definitions', 'check_definitions.py', ('reviewed-definitions.json',)),
             ('types', 'check_reviewed_types.py', ('reviewed-types.json',)),
             ('axioms', 'audit_proofs.py', ('proof-status.json', 'proof-status-raw.json')),
@@ -110,7 +114,8 @@ def main():
 
     run('comparator', ['python3', AUDIT + 'run_comparator.py'], 'verification/current-comparator.log',
         outputs=(AUDIT + 'comparator-result.json', AUDIT + 'independent-full-types.json'))
-    if build_inputs(ROOT) != input_hashes or pinned_dependencies(ROOT) != dependency_revisions:
+    if (build_inputs(ROOT) != input_hashes or pinned_dependencies(ROOT) != dependency_revisions
+            or verification_tool_inputs(ROOT) != tool_hashes):
         raise ValueError('Build inputs changed during the comparator run')
     run('summary', ['python3', 'scripts/refresh_audit_summary.py'],
         'verification/current-summary.log', audit_step=False)

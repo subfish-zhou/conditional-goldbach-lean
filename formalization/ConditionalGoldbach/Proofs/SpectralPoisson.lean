@@ -3,7 +3,7 @@ module
 public import ConditionalGoldbach.Definitions.Characters
 public import ConditionalGoldbach.Definitions.Hardy
 public import Mathlib.Analysis.Meromorphic.Basic
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 public section
 

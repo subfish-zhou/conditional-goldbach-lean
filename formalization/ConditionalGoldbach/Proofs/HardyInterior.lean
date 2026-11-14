@@ -6,7 +6,6 @@ public import ConditionalGoldbach.Proofs.HardyWeights
 /-! The Fourier–Laplace transform has an L² restriction to every interior vertical line. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
 noncomputable section
 open MeasureTheory Filter Set Complex FourierTransform
 namespace ConditionalGoldbach
@@ -41,6 +40,6 @@ lemma hardy_interiorLine_memLp {a b x : ℝ} (_hab : a < b)
   funext t
   rw [fourierLaplace_line_eq_classical_fourier]
   congr 2
-  ring
+  ring_nf
 
 end ConditionalGoldbach

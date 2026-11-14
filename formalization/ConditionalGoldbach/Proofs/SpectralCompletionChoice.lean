@@ -34,7 +34,6 @@ theorem SpectralData.exists_value_eq {T : H →L[ℂ] H}
   obtain ⟨j, hj⟩ := hex
   exact ⟨j, (d₁.value_eq_of_inner_ne_zero d₂ i j hj).symm⟩
 
-set_option maxHeartbeats 600000 in
 /-- Absolutely summable spectral statistics are independent of the diagonal basis.
 The proof uses Parseval twice; it does not posit a permutation of infinite eigenvalue lists. -/
 theorem SpectralData.spectralStatistic_independent {T : H →L[ℂ] H}

@@ -1,7 +1,7 @@
 module
 
 public import ConditionalGoldbach.Definitions.Model
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Absolute convergence and holomorphy of the diagonal Dirichlet series. -/
 public section

@@ -1,11 +1,11 @@
 module
 
 public import Mathlib.Data.ZMod.Basic
-public import Mathlib.Tactic.Bound
-public import Mathlib.Tactic.LinearCombination
-public import Mathlib.Tactic.NoncommRing
-public import Mathlib.Tactic.NormNum.RealSqrt
-public import Mathlib.Tactic.Positivity
+import Mathlib.Tactic.Bound
+import Mathlib.Tactic.LinearCombination
+import Mathlib.Tactic.NoncommRing
+import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.Positivity
 
 /-! The three disjoint arithmetic families used by Mellin projection. -/
 public section

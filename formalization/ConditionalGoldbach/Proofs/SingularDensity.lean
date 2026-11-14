@@ -1,7 +1,7 @@
 module
 
 public import ConditionalGoldbach.Definitions.Arithmetic
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Exact local factors and arithmetic bounds for the source singular series. -/
 public section

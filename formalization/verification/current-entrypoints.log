@@ -1,6 +1,9 @@
-ConditionalGoldbach {'total': 6803, 'local': 271, 'mathlib': 3801, 'goldbach': 57}
-ConditionalGoldbach.Definitions {'total': 5469, 'local': 20, 'mathlib': 3510, 'goldbach': 3}
-ConditionalGoldbach.Proofs.Main {'total': 6441, 'local': 141, 'mathlib': 3615, 'goldbach': 16}
-ConditionalGoldbach.Proofs.PrimePairs {'total': 6444, 'local': 144, 'mathlib': 3615, 'goldbach': 16}
-ConditionalGoldbach.Proofs.FiniteExperimentSpectrum {'total': 5512, 'local': 35, 'mathlib': 3538, 'goldbach': 3}
+ConditionalGoldbach {'total': 6807, 'local': 275, 'mathlib': 3801, 'goldbach': 57}
+ConditionalGoldbach.Definitions {'total': 5472, 'local': 23, 'mathlib': 3510, 'goldbach': 3}
+ConditionalGoldbach.Proofs.Main {'total': 6442, 'local': 142, 'mathlib': 3615, 'goldbach': 16}
+ConditionalGoldbach.Proofs.PrimePairs {'total': 6445, 'local': 145, 'mathlib': 3615, 'goldbach': 16}
+ConditionalGoldbach.Proofs.FiniteExperimentSpectrum {'total': 5513, 'local': 36, 'mathlib': 3538, 'goldbach': 3}
+ConditionalGoldbach.Definitions.GeometryCore {'total': 3577, 'local': 1, 'mathlib': 1696, 'goldbach': 0}
+ConditionalGoldbach.Analysis.L2Fourier {'total': 4876, 'local': 1, 'mathlib': 2939, 'goldbach': 0}
+ConditionalGoldbach.Analysis.SpectralData {'total': 4136, 'local': 2, 'mathlib': 2198, 'goldbach': 0}
 All isolated consumers, import boundaries and budgets passed.

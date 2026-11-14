@@ -7,8 +7,6 @@ public import ConditionalGoldbach.Proofs.SpectralL2BasisExistence
 /-! Hardy kernel columns determine the entire range and the exact action of the boundary operator. -/
 @[expose] public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

@@ -5,8 +5,8 @@
     "scripts/refresh_dependency_records.py"
   ],
   "exit_code": 0,
-  "start_utc": "2026-11-14T11:56:22.796709+00:00",
-  "wall_seconds": 29.767183296382427,
+  "start_utc": "2026-11-14T15:35:59.225022+00:00",
+  "wall_seconds": 36.932578440755606,
   "log": "verification/current-dependency-records.log",
   "log_sha256": "c04e5ac17ffa78cb98bec563f455026c68e0a8e610a2c00f868e0a035bebc27a"
 }

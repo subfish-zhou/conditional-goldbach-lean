@@ -5,9 +5,12 @@ Universe parameter names are alpha-renamed positionally before comparison, with 
 This checks preservation of the complete reviewed theorem statements.
 """
 from pathlib import Path
-import json,subprocess
+import json,subprocess,argparse
 
 ROOT=Path(__file__).resolve().parents[1];WORK=ROOT/'reference'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--output-dir',type=Path,default=ROOT)
+output=parser.parse_args().output_dir.resolve();output.mkdir(parents=True,exist_ok=True)
 source=(WORK/'Reviewed.lean').read_text().replace('ConditionalGoldbach','ReviewBaseline')
 source='import ConditionalGoldbach\n'+source
 names=[n for n,r in json.loads((WORK/'declarations.json').read_text()).items() if r['kind']=='theorem']
@@ -38,11 +41,11 @@ run_cmd do
     rows := rows.push <| Json.mkObj [("name",toJson newName.toString),("reviewed_type_preserved",toJson ok)]
     unless ok do throwError "Reviewed theorem type changed: {s}"
   liftIO <| IO.FS.writeFile "__OUTPUT__" (Json.arr rows).pretty
-'''.replace('__NAMES__',checks.rstrip(',\n')).replace('__OUTPUT__',str(ROOT/'reviewed-types.json'))
+'''.replace('__NAMES__',checks.rstrip(',\n')).replace('__OUTPUT__',str(output/'reviewed-types.json'))
 path=ROOT/'scripts/ReviewedTypes.lean';path.write_text(source+'\n'+script)
-(ROOT/'reviewed-types.json').unlink(missing_ok=True)
-with (ROOT/'reviewed-types.log').open('w') as log:
+(output/'reviewed-types.json').unlink(missing_ok=True)
+with (output/'reviewed-types.log').open('w') as log:
  p=subprocess.run(['lake','env','lean',str(path.relative_to(ROOT))],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
 if p.returncode:raise SystemExit('Type preservation check failed; see reviewed-types.log')
-rows=json.loads((ROOT/'reviewed-types.json').read_text());assert len(rows)==102 and all(r['reviewed_type_preserved'] for r in rows)
+rows=json.loads((output/'reviewed-types.json').read_text());assert len(rows)==102 and all(r['reviewed_type_preserved'] for r in rows)
 print('All 102 reviewed theorem types are definitionally equal to their current types.')

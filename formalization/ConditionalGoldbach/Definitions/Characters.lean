@@ -1,7 +1,7 @@
 module
 
 public import ConditionalGoldbach.Definitions.Arithmetic
-public import ConditionalGoldbach.Definitions.Geometry
+public import ConditionalGoldbach.Definitions.GeometryCore
 public import Mathlib.Analysis.Analytic.Order
 public import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
 public import Mathlib.NumberTheory.LSeries.DirichletContinuation

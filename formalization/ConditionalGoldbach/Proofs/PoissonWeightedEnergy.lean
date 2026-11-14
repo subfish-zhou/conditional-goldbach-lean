@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.CharacterHalfPlane
 /-! Weighted Poisson contraction and its application to logarithmic-derivative energies. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 1000000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

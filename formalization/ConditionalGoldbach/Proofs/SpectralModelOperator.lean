@@ -8,8 +8,6 @@ public import ConditionalGoldbach.Proofs.SpectralTraceBounds
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
-set_option backward.isDefEq.respectTransparency false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex

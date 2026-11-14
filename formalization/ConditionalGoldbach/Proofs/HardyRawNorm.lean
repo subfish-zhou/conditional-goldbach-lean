@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.HardyHolomorphic
 public section
 
 set_option autoImplicit false
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 800000
 noncomputable section
 open MeasureTheory Filter Set Complex FourierTransform
 open scoped Topology

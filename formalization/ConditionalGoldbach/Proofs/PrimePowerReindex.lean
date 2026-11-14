@@ -6,7 +6,6 @@ public import Mathlib.Data.Nat.Prime.Int
 @[expose] public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators
 namespace ConditionalGoldbach

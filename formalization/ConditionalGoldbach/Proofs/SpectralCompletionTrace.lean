@@ -1,6 +1,6 @@
 module
 
-public import ConditionalGoldbach.Proofs.SpectralDataAlgebra
+public import ConditionalGoldbach.Analysis.SpectralData
 
 @[expose] public section
 

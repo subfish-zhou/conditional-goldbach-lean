@@ -2,7 +2,7 @@ module
 
 public import ConditionalGoldbach.Definitions.Asymptotics
 public import ConditionalGoldbach.Definitions.Characters
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 public section
 

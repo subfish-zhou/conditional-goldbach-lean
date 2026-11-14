@@ -1,14 +1,12 @@
 module
 
-public import Mathlib.Tactic.NormNum.Prime
+import Mathlib.Tactic.NormNum.Prime
 
 public import ConditionalGoldbach.Proofs.WideWeight
 
 @[expose] public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
-set_option maxRecDepth 10000
 noncomputable section
 open scoped BigOperators
 namespace ConditionalGoldbach

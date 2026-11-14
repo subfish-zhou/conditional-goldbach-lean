@@ -3,8 +3,8 @@
   "errors": [],
   "network": [],
   "source_hashes_match": true,
-  "input_sha256": "a90d1830f3031c71927b26f3d2f7cebe522cb9593b9a24f37ee74e4fdabf834a",
-  "html_sha256": "c79843a9bb32e89cb8dbf9600d6008f78c14f69acb9d5d5d8bbcc5366d04f439",
+  "input_sha256": "af6e06a502e18fd6f7cd061b9c4fd8bdc22f8272c72abaf844eabf98a09819cd",
+  "html_sha256": "855a7eb53cf03da9999301f9a5c3f93b552f975cff5c4ca5d687893fece54cbf",
   "initial_visible": 102,
   "original_counts": [
     "102",
@@ -13,11 +13,12 @@
   ],
   "warning": "102 条原审阅定理（含附录）的传递依赖均未检出 sorryAx；完整类型及原定义已核对。",
   "types": "102 个原审阅定理的完整类型已通过 Lean 定义等同性检查；证明及其传递依赖也已全部核验。",
-  "math": 970,
+  "math": 968,
+  "title_math": 3,
   "source_exact": true,
   "closed_visible": 102,
   "dependencies_pending_visible": 0,
-  "added_visible": 1284,
-  "definitions_visible": 235,
+  "added_visible": 1298,
+  "definitions_visible": 238,
   "mobile_width": 390
 }

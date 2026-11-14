@@ -7,7 +7,6 @@ public import ConditionalGoldbach.Proofs.DensitySeries
 public section
 
 set_option autoImplicit false
-set_option backward.isDefEq.respectTransparency false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
 open MeasureTheory Filter Set Complex

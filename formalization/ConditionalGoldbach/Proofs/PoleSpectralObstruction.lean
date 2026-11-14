@@ -6,7 +6,6 @@ public import ConditionalGoldbach.Proofs.VariableQuadratic
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
@@ -36,7 +35,7 @@ lemma pole_spectral_obstruction (N : ℕ) [NeZero N] (hN4 : 4 ≤ N) (hGRH : GRH
   have hlarge : spectralScale N < z/c := by
     apply (lt_div_iff₀ hc).mpr
     have hh := (lt_div_iff₀ (by positivity : 0 < spectralScale N+1)).mp hcz
-    nlinarith
+    nlinarith only [hh, hc]
   refine ⟨hbound,fun hR => (not_lt_of_ge (hbound.trans (hdict.1.mp hR))) hlarge,?_⟩
   intro η hη hη4 hzero
   have hη1 : 0 < 1-η := by linarith
@@ -50,12 +49,17 @@ lemma pole_spectral_obstruction (N : ℕ) [NeZero N] (hN4 : 4 ≤ N) (hGRH : GRH
   have hsquared : 4*z^2*(η*(1-η)) ≤ spectralScale N^2*c^2 := by
     calc
       _ = (z*(2*Real.sqrt (η*(1-η))))*(z*(2*Real.sqrt (η*(1-η)))) := by
-        nlinarith [mul_nonneg (sq_nonneg z) (sq_nonneg (Real.sqrt (η*(1-η))))]
+        calc
+          _ = z ^ 2 * (2 * Real.sqrt (η * (1 - η))) ^ 2 := by
+            rw [mul_pow, hsqrt]
+            ring
+          _ = _ := by ring
       _ ≤ (spectralScale N*c)*(spectralScale N*c) := hsq
       _ = _ := by ring
   have hηsmall : 3*z^2*η ≤ 4*z^2*(η*(1-η)) := by
-    nlinarith [mul_nonneg (by positivity : 0 ≤ z^2*η) (show 0 ≤ 1-4*η by linarith)]
+    nlinarith only [mul_nonneg (by positivity : 0 ≤ z^2*η)
+      (show 0 ≤ 1-4*η by linarith only [hη4])]
   apply (le_div_iff₀ (by positivity : 0 < 3*z^2)).mpr
-  nlinarith
+  simpa only [mul_comm η] using hηsmall.trans hsquared
 
 end ConditionalGoldbach

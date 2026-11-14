@@ -115,7 +115,7 @@ theorem finiteFunctionalValue_density {a : ℝ} (N : ℕ) (hN : 0 < N)
       simp_rw [← integral_const_mul]
       apply integral_congr_ae
       filter_upwards [] with t
-      ring
+      ring_nf
     _ = K * L * ∫ τ : ℝ, ∫ t : ℝ, F t τ := by rw [integral_integral_swap hF]
     _ = L * ∫ τ : ℝ, K * (∫ t : ℝ, F t τ) := by rw [integral_const_mul]; ring
     _ = _ := by simp_rw [hi]; rfl

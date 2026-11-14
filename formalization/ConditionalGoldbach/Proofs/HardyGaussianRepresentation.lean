@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.HardyGaussianSpace
 /-! Fourier inversion identifies each Gaussian density with its holomorphic regularization. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex FourierTransform
@@ -52,7 +50,7 @@ lemma fourierLaplace_of_classical_fourier_density {a b x : ℝ} (hx : x ∈ Ioo 
     convert hscaled using 1
     funext τ
     dsimp [c]
-    ring
+    ring_nf
   have hf : 𝓕 (fun τ : ℝ => (Real.exp (x * τ) : ℂ) * ψ τ) (-t / (2 * Real.pi)) =
       k * ((|c⁻¹| : ℝ) : ℂ) * 𝓕 (𝓕 g) (-t) := by
     rw [Real.fourier_congr_ae hcoef]
@@ -61,7 +59,7 @@ lemma fourierLaplace_of_classical_fourier_density {a b x : ℝ} (hx : x ∈ Ioo 
       funext τ
       congr 2
       dsimp [c]
-      ring
+      ring_nf
     rw [hfun, classical_fourier_const_mul]
     rw [classical_fourier_real_rescale (𝓕 g) hc]
     have he : (-t / (2 * Real.pi)) / c = -t := by dsimp [c]; field_simp

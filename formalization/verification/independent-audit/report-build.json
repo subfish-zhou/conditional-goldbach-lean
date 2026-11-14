@@ -1,11 +1,11 @@
 {
   "language": "en",
-  "html_sha256": "e85ef0ddbfc8a5ea502885c02153ff55009e98f7277cff32043d7f609125f1a0",
+  "html_sha256": "aa607781b8cc1bcebd67340b89765df66dd3ce834ad94ca31325d4ce5b66dde6",
   "bytes": 4796947,
   "statement_cards": 103,
   "math_count": 885,
   "math_errors": [],
-  "current_build_sha256": "34c9789da4bb576c53e3f771eca570068ad309e441be11311deee41b5780b14b",
-  "comparator_result_sha256": "08f241a7693773d6ad28a4c4da250f3156bbc59650875eca8440448e4d2ef8e9",
-  "proof_status_sha256": "a90d1830f3031c71927b26f3d2f7cebe522cb9593b9a24f37ee74e4fdabf834a"
+  "current_build_sha256": "ebdd3905d8e80822675e9de41fb3ca01a5a96fcb83345c4cd3858e14946090ab",
+  "comparator_result_sha256": "4ff62fa5a26c3ca737810bd9569829187fea73a154da7569440010f7e18f6f2e",
+  "proof_status_sha256": "af6e06a502e18fd6f7cd061b9c4fd8bdc22f8272c72abaf844eabf98a09819cd"
 }

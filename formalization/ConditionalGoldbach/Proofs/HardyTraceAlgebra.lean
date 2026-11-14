@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Definitions.Hilbert
 /-! Linear boundary representation and its exact norm normalization. -/
 @[expose] public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 800000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

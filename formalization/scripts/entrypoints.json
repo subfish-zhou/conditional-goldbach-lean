@@ -10,8 +10,8 @@
       ],
       "forbid_prefixes": [],
       "max_imports": {
-        "total": 6803,
-        "local": 271,
+        "total": 6807,
+        "local": 275,
         "mathlib": 3801,
         "goldbach": 57
       }
@@ -25,8 +25,8 @@
       ],
       "forbid_prefixes": [],
       "max_imports": {
-        "total": 5469,
-        "local": 20,
+        "total": 5472,
+        "local": 23,
         "mathlib": 3510,
         "goldbach": 3
       },
@@ -50,8 +50,8 @@
         "ConditionalGoldbach.Proofs.PrimePairs"
       ],
       "max_imports": {
-        "total": 6441,
-        "local": 141,
+        "total": 6442,
+        "local": 142,
         "mathlib": 3615,
         "goldbach": 16
       }
@@ -68,8 +68,8 @@
         "ConditionalGoldbach.Proofs.TotientLogLog"
       ],
       "max_imports": {
-        "total": 6444,
-        "local": 144,
+        "total": 6445,
+        "local": 145,
         "mathlib": 3615,
         "goldbach": 16
       }
@@ -86,11 +86,79 @@
         "ConditionalGoldbach.Proofs.TotientLogLog"
       ],
       "max_imports": {
-        "total": 5512,
-        "local": 35,
+        "total": 5513,
+        "local": 36,
         "mathlib": 3538,
         "goldbach": 3
       }
+    },
+    {
+      "module": "ConditionalGoldbach.Definitions.GeometryCore",
+      "declarations": [
+        "ConditionalGoldbach.strip",
+        "ConditionalGoldbach.line",
+        "ConditionalGoldbach.alpha"
+      ],
+      "forbid_prefixes": [
+        "MathlibNt",
+        "AnalyticNumberTheory",
+        "PrimeNumberTheoremAnd",
+        "Goldbach",
+        "ConditionalGoldbach.Proofs",
+        "ConditionalGoldbach.Definitions.BoundaryIntegral",
+        "Mathlib.MeasureTheory.Integral"
+      ],
+      "max_imports": {
+        "total": 3577,
+        "local": 1,
+        "mathlib": 1696,
+        "goldbach": 0
+      },
+      "example": ""
+    },
+    {
+      "module": "ConditionalGoldbach.Analysis.L2Fourier",
+      "declarations": [
+        "ConditionalGoldbach.Analysis.classical_fourier_eq_L2_ae",
+        "ConditionalGoldbach.Analysis.rescaleL2_norm_sq",
+        "ConditionalGoldbach.Analysis.physicalFourierL2_norm_sq"
+      ],
+      "forbid_prefixes": [
+        "MathlibNt",
+        "AnalyticNumberTheory",
+        "PrimeNumberTheoremAnd",
+        "Goldbach",
+        "ConditionalGoldbach.Proofs",
+        "ConditionalGoldbach.Definitions"
+      ],
+      "max_imports": {
+        "total": 4876,
+        "local": 1,
+        "mathlib": 2939,
+        "goldbach": 0
+      },
+      "example": "open MeasureTheory in\nexample (f : Lp ℂ 2 (volume : Measure ℝ)) :\n    ‖ConditionalGoldbach.Analysis.physicalFourierL2 f‖ = ‖f‖ :=\n  (sq_eq_sq₀ (norm_nonneg _) (norm_nonneg _)).mp\n    (ConditionalGoldbach.Analysis.physicalFourierL2_norm_sq f)"
+    },
+    {
+      "module": "ConditionalGoldbach.Analysis.SpectralData",
+      "declarations": [
+        "ConditionalGoldbach.SpectralData.repr_apply",
+        "ConditionalGoldbach.SpectralData.norm_le_iff"
+      ],
+      "forbid_prefixes": [
+        "MathlibNt",
+        "AnalyticNumberTheory",
+        "PrimeNumberTheoremAnd",
+        "Goldbach",
+        "ConditionalGoldbach.Proofs"
+      ],
+      "max_imports": {
+        "total": 4136,
+        "local": 2,
+        "mathlib": 2198,
+        "goldbach": 0
+      },
+      "example": "example {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]\n    {T : H →L[ℂ] H} (d : ConditionalGoldbach.SpectralData T)\n    (M : ℝ) (hM : 0 ≤ M) (h : ∀ j, |d.values j| ≤ M) (x : H) : ‖T x‖ ≤ M * ‖x‖ :=\n  (T.le_opNorm x).trans (mul_le_mul_of_nonneg_right (d.norm_le M hM h) (norm_nonneg x))"
     }
   ]
 }

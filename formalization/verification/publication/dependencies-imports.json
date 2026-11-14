@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T11:44:28.299761+00:00",
+  "generated_at_utc": "2026-11-14T15:29:15.969572+00:00",
   "entry_module": "ConditionalGoldbach",
   "method": "Recursive traversal of current explicit Lean import headers, with nested block and line comments removed. Counts include the entry module. Implicit prelude imports are not added; reachable explicit imports are fully resolved. A module import does not establish that its theorems are used in a proof.",
   "line_count_definition": "physical_lines counts splitlines(); nonblank_noncomment_lines counts lines with text after removing nested Lean block comments and line comments, preserving string literals.",
@@ -246,9 +246,9 @@
       "nonblank_noncomment_lines": 8028
     },
     "conditionalGoldbach": {
-      "modules": 271,
-      "physical_lines": 30774,
-      "nonblank_noncomment_lines": 27535
+      "modules": 275,
+      "physical_lines": 30739,
+      "nonblank_noncomment_lines": 27455
     },
     "goldbach": {
       "modules": 57,
@@ -278,6 +278,41 @@
   },
   "direct_external_imports": [
     {
+      "from_module": "ConditionalGoldbach.Analysis.L2Fourier",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/L2Fourier.lean",
+      "line": 3,
+      "to_module": "Mathlib.Analysis.Fourier.LpSpace",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.L2Fourier",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/L2Fourier.lean",
+      "line": 4,
+      "to_module": "Mathlib.Tactic.NormNum.RealSqrt",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.SpectralData",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/SpectralData.lean",
+      "line": 4,
+      "to_module": "Mathlib.Tactic.Linarith",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.SpectralData",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/SpectralData.lean",
+      "line": 5,
+      "to_module": "Mathlib.Tactic.NormNum",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.SpectralData",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/SpectralData.lean",
+      "line": 6,
+      "to_module": "Mathlib.Tactic.Ring",
+      "to_package": "mathlib"
+    },
+    {
       "from_module": "ConditionalGoldbach.Definitions.Arithmetic",
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Arithmetic.lean",
       "line": 3,
@@ -301,6 +336,20 @@
     {
       "from_module": "ConditionalGoldbach.Definitions.Asymptotics",
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Asymptotics.lean",
+      "line": 5,
+      "to_module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Definitions.BoundaryIntegral",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/BoundaryIntegral.lean",
+      "line": 4,
+      "to_module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Definitions.BoundaryIntegral",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/BoundaryIntegral.lean",
       "line": 5,
       "to_module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
       "to_package": "mathlib"
@@ -362,17 +411,17 @@
       "to_package": "mathlib"
     },
     {
-      "from_module": "ConditionalGoldbach.Definitions.Geometry",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Geometry.lean",
+      "from_module": "ConditionalGoldbach.Definitions.GeometryCore",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/GeometryCore.lean",
       "line": 3,
-      "to_module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "to_module": "Mathlib.Analysis.SpecialFunctions.Log.Basic",
       "to_package": "mathlib"
     },
     {
-      "from_module": "ConditionalGoldbach.Definitions.Geometry",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Geometry.lean",
+      "from_module": "ConditionalGoldbach.Definitions.GeometryCore",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/GeometryCore.lean",
       "line": 4,
-      "to_module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
+      "to_module": "Mathlib.Basic.Complex.Basic",
       "to_package": "mathlib"
     },
     {
@@ -702,20 +751,6 @@
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HalfPlaneWeightedCauchy.lean",
       "line": 5,
       "to_module": "Mathlib.Analysis.Complex.RemovableSingularity",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.HardyFourier",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyFourier.lean",
-      "line": 3,
-      "to_module": "Mathlib.Analysis.Fourier.LpSpace",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.HardyFourier",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyFourier.lean",
-      "line": 4,
-      "to_module": "Mathlib.Tactic.NormNum.RealSqrt",
       "to_package": "mathlib"
     },
     {
@@ -1108,27 +1143,6 @@
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralCompletionUniform.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDataAlgebra.lean",
-      "line": 4,
-      "to_module": "Mathlib.Tactic.Linarith",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDataAlgebra.lean",
-      "line": 5,
-      "to_module": "Mathlib.Tactic.NormNum",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDataAlgebra.lean",
-      "line": 6,
-      "to_module": "Mathlib.Tactic.Ring",
       "to_package": "mathlib"
     },
     {
@@ -6433,13 +6447,59 @@
     "ConditionalGoldbach": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach.lean",
-      "physical_lines": 3,
-      "nonblank_noncomment_lines": 2,
-      "sha256": "f7525ca589969d6a0f3bbd7b3acbc832661b1d0706119dbcb23ccb287c79a255",
+      "physical_lines": 4,
+      "nonblank_noncomment_lines": 3,
+      "sha256": "1c3e0e8c7aaa4841e4198da4a5b8e90af5169e6cafc97c410f41216c39e0fc49",
       "imports": [
         {
           "module": "ConditionalGoldbach.Remaining",
           "line": 3
+        },
+        {
+          "module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
+          "line": 4
+        }
+      ]
+    },
+    "ConditionalGoldbach.Analysis.L2Fourier": {
+      "package": "conditionalGoldbach",
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/L2Fourier.lean",
+      "physical_lines": 171,
+      "nonblank_noncomment_lines": 125,
+      "sha256": "edd75e2fd89afbcd03482a186346b9759453f9a2a68cb1e788eb39ff752e0511",
+      "imports": [
+        {
+          "module": "Mathlib.Analysis.Fourier.LpSpace",
+          "line": 3
+        },
+        {
+          "module": "Mathlib.Tactic.NormNum.RealSqrt",
+          "line": 4
+        }
+      ]
+    },
+    "ConditionalGoldbach.Analysis.SpectralData": {
+      "package": "conditionalGoldbach",
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/SpectralData.lean",
+      "physical_lines": 102,
+      "nonblank_noncomment_lines": 82,
+      "sha256": "5252e3ac4a18644e5e8928b772a29df10822258ef84ee613d766032928e52059",
+      "imports": [
+        {
+          "module": "ConditionalGoldbach.Definitions.Hilbert",
+          "line": 3
+        },
+        {
+          "module": "Mathlib.Tactic.Linarith",
+          "line": 4
+        },
+        {
+          "module": "Mathlib.Tactic.NormNum",
+          "line": 5
+        },
+        {
+          "module": "Mathlib.Tactic.Ring",
+          "line": 6
         }
       ]
     },
@@ -6593,10 +6653,31 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Asymptotics.lean",
       "physical_lines": 53,
       "nonblank_noncomment_lines": 37,
-      "sha256": "ee8e95a965c66cab728991ec5fd984c1df59d7ac0228ecfe83be028591658a7b",
+      "sha256": "fb7e2032a640ef4d225ae782deaa26ac29c621d5371eee18294e00ad421a6e32",
       "imports": [
         {
-          "module": "ConditionalGoldbach.Definitions.Geometry",
+          "module": "ConditionalGoldbach.Definitions.GeometryCore",
+          "line": 3
+        },
+        {
+          "module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+          "line": 4
+        },
+        {
+          "module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
+          "line": 5
+        }
+      ]
+    },
+    "ConditionalGoldbach.Definitions.BoundaryIntegral": {
+      "package": "conditionalGoldbach",
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/BoundaryIntegral.lean",
+      "physical_lines": 18,
+      "nonblank_noncomment_lines": 12,
+      "sha256": "a52c4b40267830733301e0a5c51be2ea8f1955a503e6124b284a33b1840d0327",
+      "imports": [
+        {
+          "module": "ConditionalGoldbach.Definitions.GeometryCore",
           "line": 3
         },
         {
@@ -6614,14 +6695,14 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Characters.lean",
       "physical_lines": 104,
       "nonblank_noncomment_lines": 75,
-      "sha256": "092756c0ae56c4f906765c8747d1e7e3d21a9985c82a1c827003a07a175c12a8",
+      "sha256": "f8bada47e545c2c77659a4d599456cfe875bee3441233bc5f891c76a51a562a8",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Arithmetic",
           "line": 3
         },
         {
-          "module": "ConditionalGoldbach.Definitions.Geometry",
+          "module": "ConditionalGoldbach.Definitions.GeometryCore",
           "line": 4
         },
         {
@@ -6707,16 +6788,33 @@
     "ConditionalGoldbach.Definitions.Geometry": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Geometry.lean",
-      "physical_lines": 41,
-      "nonblank_noncomment_lines": 25,
-      "sha256": "eb251e04e685a61001a09c6656f818da986fefb1b55a6bc7416dd07dc39fceb5",
+      "physical_lines": 6,
+      "nonblank_noncomment_lines": 3,
+      "sha256": "9ff184b0f337d3f02634783dbadbe87f20ec6b27220175d9605b19fa0f321537",
       "imports": [
         {
-          "module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+          "module": "ConditionalGoldbach.Definitions.GeometryCore",
           "line": 3
         },
         {
-          "module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
+          "module": "ConditionalGoldbach.Definitions.BoundaryIntegral",
+          "line": 4
+        }
+      ]
+    },
+    "ConditionalGoldbach.Definitions.GeometryCore": {
+      "package": "conditionalGoldbach",
+      "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/GeometryCore.lean",
+      "physical_lines": 37,
+      "nonblank_noncomment_lines": 22,
+      "sha256": "5122feff6f22b43986be5aa26388a6cfd6a610f29277e46a3811ddfe6a763943",
+      "imports": [
+        {
+          "module": "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+          "line": 3
+        },
+        {
+          "module": "Mathlib.Basic.Complex.Basic",
           "line": 4
         }
       ]
@@ -6726,10 +6824,10 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Hardy.lean",
       "physical_lines": 67,
       "nonblank_noncomment_lines": 46,
-      "sha256": "735860e34cc61923f20d23a88ccba4c92fd2964388ed8a800dd412501492a9e6",
+      "sha256": "92bb04646fdb5a3590bc88945018d423ef8022210c898986a6420a60ecee5795",
       "imports": [
         {
-          "module": "ConditionalGoldbach.Definitions.Geometry",
+          "module": "ConditionalGoldbach.Definitions.GeometryCore",
           "line": 3
         },
         {
@@ -6893,10 +6991,10 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Weights.lean",
       "physical_lines": 56,
       "nonblank_noncomment_lines": 38,
-      "sha256": "4062539ab54f77dc8c0bc90076711cf174409a31926c361dca77295b04e083af",
+      "sha256": "de9ac7f65b796944c6e26e71ff5b01b2ca047337cb385e7b34860f2d78e836b7",
       "imports": [
         {
-          "module": "ConditionalGoldbach.Definitions.Geometry",
+          "module": "ConditionalGoldbach.Definitions.GeometryCore",
           "line": 3
         },
         {
@@ -6938,9 +7036,9 @@
     "ConditionalGoldbach.Proofs.ArithmeticComponentOperators": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/ArithmeticComponentOperators.lean",
-      "physical_lines": 158,
-      "nonblank_noncomment_lines": 147,
-      "sha256": "6d3454320f278de3206edf3984db25c0305569757a3ab8dc60cd4ebaa3b3ef42",
+      "physical_lines": 156,
+      "nonblank_noncomment_lines": 145,
+      "sha256": "f90c3221a39597ff421eba99b3069f36c9cf6ddc59e26037df1a98cd753d92ad",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.WeightedComponentKernel",
@@ -6955,9 +7053,9 @@
     "ConditionalGoldbach.Proofs.ArithmeticKernelRealization": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/ArithmeticKernelRealization.lean",
-      "physical_lines": 93,
-      "nonblank_noncomment_lines": 84,
-      "sha256": "1691e2cf98998241d6f57ac0332e3d38eaaccfed4fcd372ee71579eac528eeaf",
+      "physical_lines": 91,
+      "nonblank_noncomment_lines": 82,
+      "sha256": "0c3426225224743e09a735f3913e49af11776947cc2ef9eef356aed56d901855",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.KernelGrowthBounds",
@@ -7040,9 +7138,9 @@
     "ConditionalGoldbach.Proofs.BaselineProductLink": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BaselineProductLink.lean",
-      "physical_lines": 88,
-      "nonblank_noncomment_lines": 82,
-      "sha256": "9e5c56170fee78589c834d203ae5f833b019b4c0bc0e146c2c586f4c33caad00",
+      "physical_lines": 87,
+      "nonblank_noncomment_lines": 81,
+      "sha256": "1e977493ba15de01889a845cd3e547316685054316eb36a3b8b490b717ae17b4",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.BaselineEuler",
@@ -7059,7 +7157,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIdentity.lean",
       "physical_lines": 233,
       "nonblank_noncomment_lines": 216,
-      "sha256": "5ae0cab79a3ca32b18fbd7610dfcf166aac08371a96ee539fa846fc464d7f518",
+      "sha256": "865e514f9a32401b9c26b3d69e9b43530fa995a72e302ea3d95d5d1f8506d6f6",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Model",
@@ -7076,7 +7174,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/BetaIntegrals.lean",
       "physical_lines": 222,
       "nonblank_noncomment_lines": 206,
-      "sha256": "43f8aa5124e2023e41eafccf77a3b91c826ab083ec6a7a427fd77b1622be5033",
+      "sha256": "248beef4ef76c78f23cfeaa163625d5d38a7156e3a3e8bac4eea6e186c80a6c7",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Model",
@@ -7114,7 +7212,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CauchyBoundedLimit.lean",
       "physical_lines": 61,
       "nonblank_noncomment_lines": 55,
-      "sha256": "07e437bbe23f75a5d98eaf128bfb584aef2c7cab0134b2a44f5f8f444d3bd4b1",
+      "sha256": "9200dc2e72a368efdf6df2a66151a4bf254159c6c784d33239046d176d46ca5c",
       "imports": [
         {
           "module": "Mathlib.Analysis.CStarAlgebra.Classes",
@@ -7158,9 +7256,9 @@
     "ConditionalGoldbach.Proofs.CharacterAverage": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterAverage.lean",
-      "physical_lines": 93,
-      "nonblank_noncomment_lines": 84,
-      "sha256": "8e58c8018880f5c39477b93a2fcbfa3bfdce7d7e43858baa2493989b6b0421b5",
+      "physical_lines": 92,
+      "nonblank_noncomment_lines": 83,
+      "sha256": "640a2dffca6b5b98f1a44350f47cecf974f532d69d05408d5b278a53044f6cd5",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPerronGamma",
@@ -7183,9 +7281,9 @@
     "ConditionalGoldbach.Proofs.CharacterAverageAssembly": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterAverageAssembly.lean",
-      "physical_lines": 206,
-      "nonblank_noncomment_lines": 195,
-      "sha256": "9e9473a03c6411a38a541a5dae827db09e7a8dc19ac66604ffdc9a0958fc5a7f",
+      "physical_lines": 204,
+      "nonblank_noncomment_lines": 193,
+      "sha256": "1b45b1b896c58499b5b7c5f62bc28dc78ebf9768c0c9f6a28650b689c1460b02",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.PoissonWeightedEnergy",
@@ -7239,9 +7337,9 @@
     "ConditionalGoldbach.Proofs.CharacterGramOperator": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterGramOperator.lean",
-      "physical_lines": 92,
-      "nonblank_noncomment_lines": 86,
-      "sha256": "91e16fdd77c5af5dfc0a4ad03cdb0b934d502f91c490dd0ff054806a8839c44e",
+      "physical_lines": 90,
+      "nonblank_noncomment_lines": 84,
+      "sha256": "abdf258d6a05aad9e66cc92017bac4fd0954693c891194a9710d3368b0e29bb5",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyFiniteGram",
@@ -7256,9 +7354,9 @@
     "ConditionalGoldbach.Proofs.CharacterGrowth": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterGrowth.lean",
-      "physical_lines": 107,
-      "nonblank_noncomment_lines": 101,
-      "sha256": "0167b9f8b6102835fe970ab9a53fc304740d38ad7e4676de8c7f53da1038c32c",
+      "physical_lines": 113,
+      "nonblank_noncomment_lines": 107,
+      "sha256": "fda153f471b2d2ad98c95ade119296ef04760bda16007aff7a6537a462d562a2",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.LogDerivativeDisk",
@@ -7273,9 +7371,9 @@
     "ConditionalGoldbach.Proofs.CharacterGrowthFoundation": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean",
-      "physical_lines": 72,
-      "nonblank_noncomment_lines": 64,
-      "sha256": "07b88e29429f18e72081f80a9891ce5a6d786d899cc3633f1cb30085b1810776",
+      "physical_lines": 71,
+      "nonblank_noncomment_lines": 63,
+      "sha256": "b543dc65b58de65d0aa737d1630e5a5af4add6a99170326758c0145ce437d452",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.LFunctionDomain",
@@ -7294,9 +7392,9 @@
     "ConditionalGoldbach.Proofs.CharacterHalfPlane": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterHalfPlane.lean",
-      "physical_lines": 90,
-      "nonblank_noncomment_lines": 81,
-      "sha256": "e61b94a7452f918b23ac8a3db3d7440dcc99648000ebe02efdf3710547f612c8",
+      "physical_lines": 88,
+      "nonblank_noncomment_lines": 79,
+      "sha256": "b41289688012d7e9190f7823e21856e9a9a9d3918e496c365776023102cf23de",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy",
@@ -7311,9 +7409,9 @@
     "ConditionalGoldbach.Proofs.CharacterHardyVectors": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterHardyVectors.lean",
-      "physical_lines": 80,
-      "nonblank_noncomment_lines": 70,
-      "sha256": "e9aa9bcbe22d58a1a49b2606cbe3b044c64c43f4a1766da5bc980fe33458bed1",
+      "physical_lines": 78,
+      "nonblank_noncomment_lines": 68,
+      "sha256": "6d804494e8b652bc2a1ab8f1a187acfe9a846819599a761900a235d0a7dbbeb5",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyArithmeticTheorems",
@@ -7345,9 +7443,9 @@
     "ConditionalGoldbach.Proofs.CharacterPoissonAnchor": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterPoissonAnchor.lean",
-      "physical_lines": 145,
-      "nonblank_noncomment_lines": 135,
-      "sha256": "00b2dbac2acb1a39eb1341d1b1728bab9521f4431210104bbdaee1f630a22232",
+      "physical_lines": 143,
+      "nonblank_noncomment_lines": 133,
+      "sha256": "05dbf7628d1ace2545c2179205a19e3137033535144411b1692756f11c7ff5a2",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterZeroSummability",
@@ -7400,9 +7498,9 @@
     "ConditionalGoldbach.Proofs.CharacterReferenceEnergy": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterReferenceEnergy.lean",
-      "physical_lines": 230,
-      "nonblank_noncomment_lines": 217,
-      "sha256": "064d0887643fb360274a21361ab13c12433356aa1e5e5e68a18137a2d990bf1e",
+      "physical_lines": 228,
+      "nonblank_noncomment_lines": 215,
+      "sha256": "99c8b4f60ea3cc81158db70c1dc01e2edee4d1391c2d12df8168c095ea453098",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterReferencePolynomial",
@@ -7413,9 +7511,9 @@
     "ConditionalGoldbach.Proofs.CharacterReferencePolynomial": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterReferencePolynomial.lean",
-      "physical_lines": 73,
-      "nonblank_noncomment_lines": 66,
-      "sha256": "5b90e6312cd5dbdaacc83cc2176890a0cff3e5705969fd4c88fe494869501a70",
+      "physical_lines": 71,
+      "nonblank_noncomment_lines": 64,
+      "sha256": "a0544cc07b2457ce78b78b1eebef9889a60c14780128669a179be09e61b61f2c",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterShortPolynomial",
@@ -7447,9 +7545,9 @@
     "ConditionalGoldbach.Proofs.CharacterShortPolynomial": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterShortPolynomial.lean",
-      "physical_lines": 150,
-      "nonblank_noncomment_lines": 139,
-      "sha256": "e8f9cafbac8edc17f69d48afce1cc8402697d28d7b34f962744eed473c0a50ce",
+      "physical_lines": 148,
+      "nonblank_noncomment_lines": 137,
+      "sha256": "16726b0a6a5ee76f04091474e01e7de191fa2f03ccc38483a95a3863860fd3b6",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterTraceBounds",
@@ -7460,9 +7558,9 @@
     "ConditionalGoldbach.Proofs.CharacterStripTrace": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterStripTrace.lean",
-      "physical_lines": 163,
-      "nonblank_noncomment_lines": 154,
-      "sha256": "2bc3ca3d4b73eda56cb371f2ab7cb4572a4c06ef46c36bef250f766c8db44f62",
+      "physical_lines": 161,
+      "nonblank_noncomment_lines": 152,
+      "sha256": "f72c77a0111f8638d0950e6a9585a944f307afc5efa10ded3fb0ff37b28686b6",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterTraceBounds",
@@ -7473,9 +7571,9 @@
     "ConditionalGoldbach.Proofs.CharacterTraceBounds": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterTraceBounds.lean",
-      "physical_lines": 109,
-      "nonblank_noncomment_lines": 99,
-      "sha256": "29d72cec9efb1d174252c86474489585836e1c1499e95e887aed46f0240cdd13",
+      "physical_lines": 107,
+      "nonblank_noncomment_lines": 97,
+      "sha256": "ef817ed23600aa2a9520a783967c0e12d082f18b33cd0e7be051214bb9e91609",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterGramOperator",
@@ -7555,7 +7653,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CharacterZeroLocalBounds.lean",
       "physical_lines": 104,
       "nonblank_noncomment_lines": 95,
-      "sha256": "e64fdfb45ddf6e4452c35a9d811e6bf642e0eb9c9cea85ae559f2dba2a3309fc",
+      "sha256": "d2b6cb81417e343971f05c036d402a4f9bb7953f31705cbc911cfa824640adda",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterZeroCounting",
@@ -7666,7 +7764,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Characters.lean",
       "physical_lines": 380,
       "nonblank_noncomment_lines": 336,
-      "sha256": "7293a5d1da86d7e2e925210286fadc24ba374935e6c64db1120d7e4e53ed3a4f",
+      "sha256": "c2923b89cb0c669ea4eb269837d9a008e8d0e3b69c9de028325833d345441cdc",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Characters",
@@ -7735,9 +7833,9 @@
     "ConditionalGoldbach.Proofs.CutoffSmooth": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/CutoffSmooth.lean",
-      "physical_lines": 113,
-      "nonblank_noncomment_lines": 101,
-      "sha256": "51a5c5dc38a4b89f24fc51e1b60e096491b26086e53e258d106901d9d39bda30",
+      "physical_lines": 111,
+      "nonblank_noncomment_lines": 99,
+      "sha256": "a1c43e7b506c7e2f7e30cd87684b428352c22ba5121beb177acbee0fa3eb8d97",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Experiment",
@@ -7847,7 +7945,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/DensitySeries.lean",
       "physical_lines": 73,
       "nonblank_noncomment_lines": 63,
-      "sha256": "9572035dc33e189ae244e1f6b670ce9123586193c8922319c04bbd3e488cb875",
+      "sha256": "58228962dd6b6a43443ad3eab64fcdf011cc1e7e2224f2487bc066ddfc1611d9",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Model",
@@ -7881,7 +7979,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Elementary.lean",
       "physical_lines": 59,
       "nonblank_noncomment_lines": 46,
-      "sha256": "1e2c0527b8edf38ee708a2c3c43c9fda12f7aeb3882b5374d249491638fd80b1",
+      "sha256": "ddb943f3fb41222097ab95fcd4afae712d042b630064c1971558538f3c13dda8",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Asymptotics",
@@ -7900,9 +7998,9 @@
     "ConditionalGoldbach.Proofs.FiniteCharacterMoments": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteCharacterMoments.lean",
-      "physical_lines": 99,
-      "nonblank_noncomment_lines": 91,
-      "sha256": "d26bcb639d0116cef5c6e41d6c4dbe537c13918696dfcec67cabb110f246fd78",
+      "physical_lines": 98,
+      "nonblank_noncomment_lines": 90,
+      "sha256": "7fb78f9b9774b842b91d0bc7c8ddf6e7a5cce209e7fb3d13792192d6e24a48bb",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.Characters",
@@ -7930,9 +8028,9 @@
     "ConditionalGoldbach.Proofs.FiniteExperimentSpectrum": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteExperimentSpectrum.lean",
-      "physical_lines": 155,
-      "nonblank_noncomment_lines": 141,
-      "sha256": "0a7f916e6ac4c64936f91a2e6ad3b0410d388c308df6965e78f1c27084772309",
+      "physical_lines": 162,
+      "nonblank_noncomment_lines": 147,
+      "sha256": "aafe1cd03c576ab49975f38b6c90706693f60ba84d654dc7376df2b27fadecf2",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.FiniteSpectrum",
@@ -7957,7 +8055,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteFunctional.lean",
       "physical_lines": 162,
       "nonblank_noncomment_lines": 145,
-      "sha256": "a2448d5f7365e80864e29d45c0be99049643e3624af6ac666bb8b7011568a26d",
+      "sha256": "2ad096eaceb96d1ef23309e8ed3703c749e44ad02b6bc97e0ae4bc60019aad84",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteMellin",
@@ -7972,9 +8070,9 @@
     "ConditionalGoldbach.Proofs.FiniteMellin": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteMellin.lean",
-      "physical_lines": 173,
-      "nonblank_noncomment_lines": 160,
-      "sha256": "fcbf2e8de0ebac0c3ca272d9c5aa1fc693256c6f30072c59cefe7d3164d78ba2",
+      "physical_lines": 172,
+      "nonblank_noncomment_lines": 159,
+      "sha256": "764f92f9b40b5f8e0f9a67d1c2dd80ccb9ea59d9d35fe1834ac5ec1ae41e2f98",
       "imports": [
         {
           "module": "Mathlib.Analysis.MellinInversion",
@@ -8023,9 +8121,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelBasic": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelBasic.lean",
-      "physical_lines": 136,
-      "nonblank_noncomment_lines": 120,
-      "sha256": "dd10a5dfee2756340d2366368deb0bbed0a07635dcf5f95d673289b5b993a7a6",
+      "physical_lines": 135,
+      "nonblank_noncomment_lines": 119,
+      "sha256": "93e54b518d0ab6120dd8c4152409512e8d96a2cdefd54ab2ba783f80e4071919",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteMellinProjection",
@@ -8104,9 +8202,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelBound": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelBound.lean",
-      "physical_lines": 82,
-      "nonblank_noncomment_lines": 76,
-      "sha256": "662c4e2e2d5a25a7a3dc523f7cc02a38d8b96eaba072defb63fbce5b8ad77d10",
+      "physical_lines": 81,
+      "nonblank_noncomment_lines": 75,
+      "sha256": "3064948a776786b17cf5404d07f4dca61d85c50b1e73c478ebc857842a841ecb",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteModelBasic",
@@ -8121,9 +8219,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelConvolution": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelConvolution.lean",
-      "physical_lines": 256,
-      "nonblank_noncomment_lines": 232,
-      "sha256": "2a8fd71dba615307282bd221a52961abb08870bc3a7b2aad18d55d5125b413c0",
+      "physical_lines": 255,
+      "nonblank_noncomment_lines": 231,
+      "sha256": "65e48874db5bbf59abb008226aa91523d70f3070876f3db3d41fd17df59f0e98",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteModelBasic",
@@ -8134,9 +8232,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelDouble": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelDouble.lean",
-      "physical_lines": 28,
-      "nonblank_noncomment_lines": 22,
-      "sha256": "b6ed9000003897d5f7c69150de38cf3578069a5339dd215798eb0d7c4ae8cd53",
+      "physical_lines": 27,
+      "nonblank_noncomment_lines": 21,
+      "sha256": "4be228528b2ae76071e6fd45d82d46451f8a902216cb4f47b7bbd520e813883c",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteModelBetaRelation",
@@ -8159,9 +8257,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelRemovable": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelRemovable.lean",
-      "physical_lines": 82,
-      "nonblank_noncomment_lines": 71,
-      "sha256": "39ab25ac4a440eca9b66021213ce311ec83fbb41b52d3d309534ef286458823c",
+      "physical_lines": 81,
+      "nonblank_noncomment_lines": 70,
+      "sha256": "7da7bc0fcb4ca83493c8dd6e0acd814fd1b2d2b5d76112e0809bb27ccae0aa40",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteModelSampling",
@@ -8176,9 +8274,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelSampling": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelSampling.lean",
-      "physical_lines": 68,
-      "nonblank_noncomment_lines": 60,
-      "sha256": "e887992cf7fc858d39b5d8d0355ca919d2c80d0054e623e5833b158eeb8df6fa",
+      "physical_lines": 67,
+      "nonblank_noncomment_lines": 59,
+      "sha256": "3189eadcbc214f4db4f86fb69ba937b2e74c1bedbb42717c30497b092e356a31",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteModelConvolution",
@@ -8193,9 +8291,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelShift": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelShift.lean",
-      "physical_lines": 45,
-      "nonblank_noncomment_lines": 39,
-      "sha256": "2e2d104dc278d5482d5cf86b2c98f37bee1bff8ba8d952b9afa3d01e553fd488",
+      "physical_lines": 44,
+      "nonblank_noncomment_lines": 38,
+      "sha256": "36559c027f246cc264a1626500ec155838528cb74e3e508674408dd8ebcdff19",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteModelRemovable",
@@ -8210,9 +8308,9 @@
     "ConditionalGoldbach.Proofs.FiniteModelSingle": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/FiniteModelSingle.lean",
-      "physical_lines": 25,
-      "nonblank_noncomment_lines": 20,
-      "sha256": "94a5f5269d681908fcc20efbeb973a75e12ab6c0ba6ed47e0789fcfe85df8764",
+      "physical_lines": 24,
+      "nonblank_noncomment_lines": 19,
+      "sha256": "10aed133f11a31e0fd533fa8811c36dc7c2bab5a339c9c96ee339cd4214a8192",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteModelShift",
@@ -8278,9 +8376,9 @@
     "ConditionalGoldbach.Proofs.GammaQuotientBound": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/GammaQuotientBound.lean",
-      "physical_lines": 81,
-      "nonblank_noncomment_lines": 73,
-      "sha256": "7d9ebf8179f83d0ff551a18c20c8c630627370ee175325a97ba61eb8965d224a",
+      "physical_lines": 79,
+      "nonblank_noncomment_lines": 71,
+      "sha256": "e86775ab23fb0bf79354963fca55f3fa2f834231ca4bc60029f24965643ef236",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.ModelContinuation",
@@ -8406,9 +8504,9 @@
     "ConditionalGoldbach.Proofs.HalfPlanePoisson": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HalfPlanePoisson.lean",
-      "physical_lines": 195,
-      "nonblank_noncomment_lines": 184,
-      "sha256": "0bc83b5fa0e0a8d8cf0415582ae003b9a5b68772bbd280f5e76ecb9b6c4dada9",
+      "physical_lines": 193,
+      "nonblank_noncomment_lines": 182,
+      "sha256": "26816d8d0c35b6e2720074d25fd48740a9aa165ff84f8bc381dd2f5e5fe0d2f3",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy",
@@ -8423,9 +8521,9 @@
     "ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HalfPlaneWeightedCauchy.lean",
-      "physical_lines": 347,
-      "nonblank_noncomment_lines": 326,
-      "sha256": "0d4279cdf416b76b35d73e6da7438482bd369f016ec9d3fa9099c5a1a37cb062",
+      "physical_lines": 345,
+      "nonblank_noncomment_lines": 324,
+      "sha256": "73c9240a79849c691d619ce6b3c2eeb1b6834685eba532cd152cf6f58ce9e80d",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterTraceBounds",
@@ -8444,9 +8542,9 @@
     "ConditionalGoldbach.Proofs.HardyArithmeticTheorems": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyArithmeticTheorems.lean",
-      "physical_lines": 100,
-      "nonblank_noncomment_lines": 86,
-      "sha256": "cd5f7f50d9fd3dfaaf933b451ccdd60cb9d4af7b98d6befbcd4a7eb05d3dc33c",
+      "physical_lines": 98,
+      "nonblank_noncomment_lines": 84,
+      "sha256": "7e8f8fcf6015ab0e57b7b0e147cbe70c101c60091c9445d7d8af79636f701d0e",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.ArithmeticKernelRealization",
@@ -8469,9 +8567,9 @@
     "ConditionalGoldbach.Proofs.HardyBoundary": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyBoundary.lean",
-      "physical_lines": 255,
-      "nonblank_noncomment_lines": 225,
-      "sha256": "e9c32a78c98a1f9bcc098db843ba5f78df904fec0c075a24d2d3420798cdd273",
+      "physical_lines": 170,
+      "nonblank_noncomment_lines": 152,
+      "sha256": "f291301de8469649af7e2477d0823329aabaab1a56110ec191afa22054d156c0",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyInterior",
@@ -8482,9 +8580,9 @@
     "ConditionalGoldbach.Proofs.HardyContinuousBoundary": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyContinuousBoundary.lean",
-      "physical_lines": 151,
-      "nonblank_noncomment_lines": 140,
-      "sha256": "2023454bc31c05d29dcef2bc9e03463d3dd09038f0dec5336345d620eea3a1ca",
+      "physical_lines": 149,
+      "nonblank_noncomment_lines": 138,
+      "sha256": "f77439f00a6ca7bf1700440e7d684fdc234992b8d9a21cbea7d468f2ac92a67b",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyConverse",
@@ -8495,9 +8593,9 @@
     "ConditionalGoldbach.Proofs.HardyContourShift": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyContourShift.lean",
-      "physical_lines": 94,
-      "nonblank_noncomment_lines": 86,
-      "sha256": "c89b59cb0387a9072b9c8bf4d8a323d37feae07d0afd8ad1e6cac6742fda30ae",
+      "physical_lines": 92,
+      "nonblank_noncomment_lines": 84,
+      "sha256": "70fd06d6d73ccb76ad3f1cc8729b32a07043fdd0cb6f32849dd92f087815badb",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyRawLines",
@@ -8508,9 +8606,9 @@
     "ConditionalGoldbach.Proofs.HardyConverse": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyConverse.lean",
-      "physical_lines": 62,
-      "nonblank_noncomment_lines": 53,
-      "sha256": "9a4ece62c6a173463feae4a575874b150628e2e495a1232b27e61bd45a6a7df0",
+      "physical_lines": 60,
+      "nonblank_noncomment_lines": 51,
+      "sha256": "fa932462a1144cabf094b122a6c5c08de0b93975890fc1f8394bbf0bf661fa32",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyGaussianRepresentation",
@@ -8525,9 +8623,9 @@
     "ConditionalGoldbach.Proofs.HardyEvaluation": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyEvaluation.lean",
-      "physical_lines": 197,
-      "nonblank_noncomment_lines": 174,
-      "sha256": "01614f9980078206a26cf1c7f03281d331b12f613ae5353609549b7e5c3abf78",
+      "physical_lines": 195,
+      "nonblank_noncomment_lines": 172,
+      "sha256": "b788f60908a81733368a944e6f1918d24c07ad47155df9b35098463cd8a596e7",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Operators",
@@ -8542,9 +8640,9 @@
     "ConditionalGoldbach.Proofs.HardyFiniteGram": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyFiniteGram.lean",
-      "physical_lines": 62,
-      "nonblank_noncomment_lines": 56,
-      "sha256": "96ace050630137c4e3bf277e0e29b69046ef609ac3e41dbc1fc3813d02adc0f1",
+      "physical_lines": 60,
+      "nonblank_noncomment_lines": 54,
+      "sha256": "a4d675724a2e16c62733a8e3a533f0cf07be7c6c8e6a813d0b2f87d7d17e072b",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterHardyVectors",
@@ -8555,26 +8653,22 @@
     "ConditionalGoldbach.Proofs.HardyFourier": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyFourier.lean",
-      "physical_lines": 65,
-      "nonblank_noncomment_lines": 54,
-      "sha256": "61bb2bbaf4dcb3fd3b73c1d6177f0ee568fe6dc7b505c5dbbccc8bfd870b3b9d",
+      "physical_lines": 33,
+      "nonblank_noncomment_lines": 23,
+      "sha256": "8352437dcc8f733a770845703f84b6920a481b69a161c2c10c393e3c043d896d",
       "imports": [
         {
-          "module": "Mathlib.Analysis.Fourier.LpSpace",
+          "module": "ConditionalGoldbach.Analysis.L2Fourier",
           "line": 3
-        },
-        {
-          "module": "Mathlib.Tactic.NormNum.RealSqrt",
-          "line": 4
         }
       ]
     },
     "ConditionalGoldbach.Proofs.HardyGaussian": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyGaussian.lean",
-      "physical_lines": 143,
-      "nonblank_noncomment_lines": 127,
-      "sha256": "e252067ae840c7e308e017e8a4e7e096a42ea0df70ed3164cb3bdb02e5e431b3",
+      "physical_lines": 141,
+      "nonblank_noncomment_lines": 125,
+      "sha256": "9afacb8e97c37d668b96cc1bf69b096772eda6b89af875e58156352958d4dfce",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyContourShift",
@@ -8585,9 +8679,9 @@
     "ConditionalGoldbach.Proofs.HardyGaussianDensity": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyGaussianDensity.lean",
-      "physical_lines": 156,
-      "nonblank_noncomment_lines": 142,
-      "sha256": "7efd0badec3604e463944d4e76ce8ac422108aa58403829f91341f952a32bcd4",
+      "physical_lines": 154,
+      "nonblank_noncomment_lines": 140,
+      "sha256": "2410b79cf59c99edd893565adec4c7c82becfd8cde914f8b8e8ea572195ada8c",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyGaussian",
@@ -8598,9 +8692,9 @@
     "ConditionalGoldbach.Proofs.HardyGaussianRepresentation": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyGaussianRepresentation.lean",
-      "physical_lines": 99,
-      "nonblank_noncomment_lines": 89,
-      "sha256": "7105a7ef308b1a2fcb94e310ed22e1649648164700d8c38f09cb0a9d74f0007f",
+      "physical_lines": 97,
+      "nonblank_noncomment_lines": 87,
+      "sha256": "61cf44968504912381be298b8385a3699da8cb6c1865cdc6b6bcfe1712201b81",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyGaussianSpace",
@@ -8611,9 +8705,9 @@
     "ConditionalGoldbach.Proofs.HardyGaussianSpace": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyGaussianSpace.lean",
-      "physical_lines": 137,
-      "nonblank_noncomment_lines": 126,
-      "sha256": "4478f10cde383f6728cbf7930b86542c3719d6b0bc6937378c1d950876771151",
+      "physical_lines": 135,
+      "nonblank_noncomment_lines": 124,
+      "sha256": "ebb98f378f6de11fa411f38a31ee8e78bfd266872aab81ceb9a6e3d4aa0b9aab",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyGaussianDensity",
@@ -8624,9 +8718,9 @@
     "ConditionalGoldbach.Proofs.HardyHolomorphic": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyHolomorphic.lean",
-      "physical_lines": 89,
-      "nonblank_noncomment_lines": 81,
-      "sha256": "f052c01c2f5392b7971690a145f88986b60e9728b75e4b1cfe440cd64c05f89b",
+      "physical_lines": 87,
+      "nonblank_noncomment_lines": 79,
+      "sha256": "d6796779030c7f3bb408a16eaebb63086469a6e46b3c2617545996d56c6ea9b4",
       "imports": [
         {
           "module": "Mathlib.Analysis.Calculus.ParametricIntegral",
@@ -8641,9 +8735,9 @@
     "ConditionalGoldbach.Proofs.HardyInterior": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyInterior.lean",
-      "physical_lines": 46,
-      "nonblank_noncomment_lines": 39,
-      "sha256": "926b3729ae1a7eb2c21c90bf489450797bc2f4b756c399968931c0aab9e950b1",
+      "physical_lines": 45,
+      "nonblank_noncomment_lines": 38,
+      "sha256": "f74be7c1aec23f30361f56c43ed632035d429a5625400723805b6f16e7d4edf6",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyFourier",
@@ -8658,9 +8752,9 @@
     "ConditionalGoldbach.Proofs.HardyKernelColumns": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelColumns.lean",
-      "physical_lines": 226,
-      "nonblank_noncomment_lines": 208,
-      "sha256": "32df9281f3d983897bff5ea596e27edca81877b0f30c8988329739ef648394d3",
+      "physical_lines": 224,
+      "nonblank_noncomment_lines": 206,
+      "sha256": "99a4d2beb75592cd42cb26d27bf0a0750488e83e7bad87542598bba82739a7d9",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyContinuousBoundary",
@@ -8679,9 +8773,9 @@
     "ConditionalGoldbach.Proofs.HardyKernelMajorant": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelMajorant.lean",
-      "physical_lines": 82,
-      "nonblank_noncomment_lines": 74,
-      "sha256": "dafa6d50a3ac04d3366aa4bfa19d724fcbc79daf162178f7b6dc2625914c6ebd",
+      "physical_lines": 80,
+      "nonblank_noncomment_lines": 72,
+      "sha256": "ddbbb3a91fb74977c4873ecbfc7bb348ca5edc5fafb89dd8522cd2ed19352836",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyKernelColumns",
@@ -8696,9 +8790,9 @@
     "ConditionalGoldbach.Proofs.HardyKernelOperator": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelOperator.lean",
-      "physical_lines": 112,
-      "nonblank_noncomment_lines": 90,
-      "sha256": "a00abc52971891f18c5f3a2b7e743f9f004b54f43fb0850f9a26a9e88ac88226",
+      "physical_lines": 110,
+      "nonblank_noncomment_lines": 88,
+      "sha256": "a7ad028e5ccd88eb5bc90a6878dc232b35dae993d9431c4f7e4680bb110528de",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Operators",
@@ -8721,9 +8815,9 @@
     "ConditionalGoldbach.Proofs.HardyKernelPairing": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelPairing.lean",
-      "physical_lines": 62,
-      "nonblank_noncomment_lines": 53,
-      "sha256": "9831957f45190af8de9650111fe7a15b0a94d78dbe157a2e9891645f6ba180b9",
+      "physical_lines": 60,
+      "nonblank_noncomment_lines": 51,
+      "sha256": "b4971827f6d6dd034daad8e6cf2ed407b544316d4c03123e7b2c014204dca580",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Asymptotics",
@@ -8742,9 +8836,9 @@
     "ConditionalGoldbach.Proofs.HardyKernelResidual": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyKernelResidual.lean",
-      "physical_lines": 117,
-      "nonblank_noncomment_lines": 107,
-      "sha256": "e2bb0165fabb6555a388cd4e2575110b8b90936e81c98a8ebf92495f9552b390",
+      "physical_lines": 115,
+      "nonblank_noncomment_lines": 105,
+      "sha256": "076dc6376b5fb0dc0fbdb58d12480e808f4de44742bfd929310d9dcef804ed15",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyReproducing",
@@ -8759,9 +8853,9 @@
     "ConditionalGoldbach.Proofs.HardyRawLines": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyRawLines.lean",
-      "physical_lines": 127,
-      "nonblank_noncomment_lines": 117,
-      "sha256": "77c5dd72a098942e227a5bc09ab12dbb77ad02dc4f01f0196e468c612d4c4efb",
+      "physical_lines": 125,
+      "nonblank_noncomment_lines": 115,
+      "sha256": "16f936874adfbef3b2552c5dc70aded4d7a8f00677a394de67cf91dcea8f78d2",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyReproducing",
@@ -8772,9 +8866,9 @@
     "ConditionalGoldbach.Proofs.HardyRawNorm": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyRawNorm.lean",
-      "physical_lines": 201,
-      "nonblank_noncomment_lines": 183,
-      "sha256": "b9992d9ec9a80cf23ff3f0607b5a6135927ada2685fbff1c1a1c9d9ce9e4e740",
+      "physical_lines": 199,
+      "nonblank_noncomment_lines": 181,
+      "sha256": "c03d10d4fc4fd9f08c41929f31c1d6c67ddf8ac971a973e950b393e0869e9d05",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyHolomorphic",
@@ -8785,9 +8879,9 @@
     "ConditionalGoldbach.Proofs.HardyReproducing": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyReproducing.lean",
-      "physical_lines": 205,
-      "nonblank_noncomment_lines": 189,
-      "sha256": "656b98f6079b4c28e61d4714fb5dbcd65eadfc215bbac48e978bf00d6a4e74c0",
+      "physical_lines": 203,
+      "nonblank_noncomment_lines": 187,
+      "sha256": "13f66074129525156f8ddf43af424e94192f57dad4aea3cab0ff660d0d6f3dab",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyEvaluation",
@@ -8802,9 +8896,9 @@
     "ConditionalGoldbach.Proofs.HardyTraceAlgebra": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyTraceAlgebra.lean",
-      "physical_lines": 235,
-      "nonblank_noncomment_lines": 210,
-      "sha256": "c0051835db5f4c8a2e467db5a52b2152ee1018b6a9c01663064c6437b562f79a",
+      "physical_lines": 233,
+      "nonblank_noncomment_lines": 208,
+      "sha256": "9e7be1dff6722ae30bf080a0c3b2d55d292b33b0545c72a08b934d9cbe78abb8",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.HardyTraces",
@@ -8819,9 +8913,9 @@
     "ConditionalGoldbach.Proofs.HardyWeakLimit": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyWeakLimit.lean",
-      "physical_lines": 62,
-      "nonblank_noncomment_lines": 55,
-      "sha256": "bcfd8a6131f3829d3c846f45d4d31ac11c82b2d4cb6123302ad121cd3c5db80b",
+      "physical_lines": 61,
+      "nonblank_noncomment_lines": 54,
+      "sha256": "447d405b89ec32cc08499e10bed82b28b8e634a00f5f22cb11e5ffca78130c4e",
       "imports": [
         {
           "module": "Mathlib.Analysis.InnerProductSpace.Dual",
@@ -8840,9 +8934,9 @@
     "ConditionalGoldbach.Proofs.HardyWeights": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyWeights.lean",
-      "physical_lines": 123,
-      "nonblank_noncomment_lines": 106,
-      "sha256": "07fab63b38fa6066fc256c9bd981920d4c507a696515f7d942fa344f0cc9d28e",
+      "physical_lines": 122,
+      "nonblank_noncomment_lines": 105,
+      "sha256": "4e32b96e01a74aada4b8adb0f2369f301e46c959a218a740eca269ddc9f63aab",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Hardy",
@@ -8891,9 +8985,9 @@
     "ConditionalGoldbach.Proofs.KernelGrowthBounds": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/KernelGrowthBounds.lean",
-      "physical_lines": 229,
-      "nonblank_noncomment_lines": 217,
-      "sha256": "b7fe43209cb4f48659aab96c2d3323d3c6021f8f88e51c1e390a046090ee1add",
+      "physical_lines": 227,
+      "nonblank_noncomment_lines": 215,
+      "sha256": "4692cacc0d9b43dca0a299021a4f056c51853831ca1d460753a8e3e66201da64",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Operators",
@@ -8943,7 +9037,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/LFunctionDomain.lean",
       "physical_lines": 142,
       "nonblank_noncomment_lines": 106,
-      "sha256": "b20201d38ce02349631f614eeb303aa591ac5fe94ba6f66d8913d5f578124bea",
+      "sha256": "14dd8ad1c8be77c43548852edb7593eeb9697ce2f45f51cd1da2310d223c313d",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Characters",
@@ -8968,7 +9062,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/LogDerivativeDisk.lean",
       "physical_lines": 108,
       "nonblank_noncomment_lines": 100,
-      "sha256": "2f80f56a2246932e69af342d4fe4016eb7858ff860b1fce03818bf8d1bef147d",
+      "sha256": "d8197065041e86ec95c5f0a1e301978d648a353bb8d550f2fde21750b509cce1",
       "imports": [
         {
           "module": "Mathlib.Algebra.Order.Star.Real",
@@ -9215,9 +9309,9 @@
     "ConditionalGoldbach.Proofs.MellinDiagonal": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinDiagonal.lean",
-      "physical_lines": 160,
-      "nonblank_noncomment_lines": 149,
-      "sha256": "8ee33349e8bf2a6787511e4175ff84ee828e2923e9911b6bb4ddf68eff1772e0",
+      "physical_lines": 159,
+      "nonblank_noncomment_lines": 148,
+      "sha256": "028af9ac323360592aeb97696601273043e5d43f28155598f21c6d0d7629e0bc",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.MellinDoubleSeries",
@@ -9247,7 +9341,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/MellinDoubleDiagonal.lean",
       "physical_lines": 83,
       "nonblank_noncomment_lines": 73,
-      "sha256": "e027b94314c1452a3e4890d3a2703456eaa4ddf767cb43d4a1ec9624e9ad03f4",
+      "sha256": "42331033be326b093e32f869e120b4881874986c6c3d71e63bb4700eaae6663c",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Model",
@@ -9524,9 +9618,9 @@
     "ConditionalGoldbach.Proofs.PoissonWeightedEnergy": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PoissonWeightedEnergy.lean",
-      "physical_lines": 139,
-      "nonblank_noncomment_lines": 130,
-      "sha256": "b0eb4c545bbf44adf3b17ecb1d00cbd12713adac798781fe0d13562f7bfce4dc",
+      "physical_lines": 137,
+      "nonblank_noncomment_lines": 128,
+      "sha256": "aaa76719f4ede2638291604dcebbdbaab249fc14df04b69b1ab74a8e57990471",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HalfPlanePoisson",
@@ -9655,9 +9749,9 @@
     "ConditionalGoldbach.Proofs.PoleSpectralObstruction": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PoleSpectralObstruction.lean",
-      "physical_lines": 61,
-      "nonblank_noncomment_lines": 55,
-      "sha256": "dc761d6c29152f0f8a36fd5ca11bccacdc92e3d4616b657ebd6829990e9e6065",
+      "physical_lines": 65,
+      "nonblank_noncomment_lines": 59,
+      "sha256": "6b4825b63d72c38fe709062e819e080783068b7929da12f47a2a84b054a105bf",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.VariableQuadratic",
@@ -9710,9 +9804,9 @@
     "ConditionalGoldbach.Proofs.PrimePowerDouble": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PrimePowerDouble.lean",
-      "physical_lines": 91,
-      "nonblank_noncomment_lines": 84,
-      "sha256": "b910998dbf0b368840aaff5a672a9161a5ba06579848f1eeb7a70f26a4779bdb",
+      "physical_lines": 90,
+      "nonblank_noncomment_lines": 83,
+      "sha256": "1ec948aa391c5cb1845786d3a5c145ff43b9b01f0c35d69a9b7df1ebf39b471e",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.PrimePowerReindex",
@@ -9723,9 +9817,9 @@
     "ConditionalGoldbach.Proofs.PrimePowerReindex": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/PrimePowerReindex.lean",
-      "physical_lines": 95,
-      "nonblank_noncomment_lines": 85,
-      "sha256": "929641a9b4401336421af676fd1e294864592e0a9eb68a98f350fec14de2615e",
+      "physical_lines": 94,
+      "nonblank_noncomment_lines": 84,
+      "sha256": "382342f554ee3a81ef7b7413afdac74fd821866f868df59d83b20d29386b7a87",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.PrimePowers",
@@ -9759,7 +9853,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuadraticAsymptotic.lean",
       "physical_lines": 144,
       "nonblank_noncomment_lines": 136,
-      "sha256": "e6470c0e44b9c7be8c335edea48328d870f1009018fbc855c1cfb3abf0d8df6b",
+      "sha256": "3240b3747eb2c291b051556f1836697bcd768bef2d7a5f7c20da95f02ba2c0ad",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.WeightNorm",
@@ -9776,7 +9870,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuadraticDensity.lean",
       "physical_lines": 129,
       "nonblank_noncomment_lines": 114,
-      "sha256": "0bab02bc24b6be697fa965658c74a3d6f3c59f41a30bb3cb38db310d1566f475",
+      "sha256": "0e679a36ad83814d8b70509c83f5b4de1b33226d5dc4bfb7da15ca94789877f7",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Operators",
@@ -9842,9 +9936,9 @@
     "ConditionalGoldbach.Proofs.QuadraticNormChange": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/QuadraticNormChange.lean",
-      "physical_lines": 74,
-      "nonblank_noncomment_lines": 67,
-      "sha256": "8b950b3270132d413f5b30e756a0abe15c54bb3283ae13e6f0257b5f17f56fc7",
+      "physical_lines": 73,
+      "nonblank_noncomment_lines": 66,
+      "sha256": "c6758ac77b173d0fa7aff02a2f9512958ef26f9c24be52fbe21d7028b95af318",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.QuadraticRiesz",
@@ -9912,7 +10006,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SignedFamilies.lean",
       "physical_lines": 59,
       "nonblank_noncomment_lines": 52,
-      "sha256": "3fe7b2fbe25990feeabf0188c7e7b94ca3e479bd3dddf909a6813f97ec9d8412",
+      "sha256": "1953ed2276ca37b00f39ac57136df3dff6aae6a221cf95d01d9f1e34ad443830",
       "imports": [
         {
           "module": "Mathlib.Data.ZMod.Basic",
@@ -9962,7 +10056,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SingularDensity.lean",
       "physical_lines": 72,
       "nonblank_noncomment_lines": 62,
-      "sha256": "3cbaed1a9bdce16c0e25be1b07877a20d6f5ac696600e9355cd48133719c143d",
+      "sha256": "67b09e6e71689d29fb832b438da4d6ab9e27e43bfef34e087f1364f643146897",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Arithmetic",
@@ -9979,7 +10073,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SingularLower.lean",
       "physical_lines": 62,
       "nonblank_noncomment_lines": 54,
-      "sha256": "8a98acf384dc2675e29581879df29d99abeaf47556d89d7261064c823f479b27",
+      "sha256": "7d2a6078c4de9e4924dc2c0c8f4c91313786b9beb6123fbabef0054cf8f66b74",
       "imports": [
         {
           "module": "Mathlib.Tactic.NormNum.Prime",
@@ -9996,10 +10090,10 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralAlgebra.lean",
       "physical_lines": 204,
       "nonblank_noncomment_lines": 172,
-      "sha256": "1cbfd2db4ae62ee0ab02decd89b06dfcfafc32f0ea32dfaa3825d0ffaa5ce0da",
+      "sha256": "266a51eeb89eeaab6d6a2f5136fb13e60c76fd2397f6440111edfc160614e074",
       "imports": [
         {
-          "module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
+          "module": "ConditionalGoldbach.Analysis.SpectralData",
           "line": 3
         },
         {
@@ -10040,9 +10134,9 @@
     "ConditionalGoldbach.Proofs.SpectralBoundaryBlocks": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralBoundaryBlocks.lean",
-      "physical_lines": 160,
-      "nonblank_noncomment_lines": 139,
-      "sha256": "34f28dc6e2b60082b2462765ad8963082e90ae2ebaa513035ffff4bb9e0f3ace",
+      "physical_lines": 159,
+      "nonblank_noncomment_lines": 138,
+      "sha256": "280ec1d993987e6ec6b80bc930c74f6f6f4b532ff97ac4606f2ca202466475fe",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Asymptotics",
@@ -10069,9 +10163,9 @@
     "ConditionalGoldbach.Proofs.SpectralCompletedLGrowth": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralCompletedLGrowth.lean",
-      "physical_lines": 273,
-      "nonblank_noncomment_lines": 255,
-      "sha256": "20bb2e4ca1638b965bfcc6b5ae923af9492eab1ce606a7fdad1a1552c67ce6dd",
+      "physical_lines": 272,
+      "nonblank_noncomment_lines": 254,
+      "sha256": "1074a8235016dd439d74d7337eccb30314324811a81b35c0f500f8dc40f3508e",
       "imports": [
         {
           "module": "Mathlib.Analysis.Real.Pi.Bounds",
@@ -10107,9 +10201,9 @@
     "ConditionalGoldbach.Proofs.SpectralCompletionChoice": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralCompletionChoice.lean",
-      "physical_lines": 120,
-      "nonblank_noncomment_lines": 105,
-      "sha256": "d18702385fe94d85a8ed24b0dbb8d36c00e694f06bea7ef6b8b0ac492b492d69",
+      "physical_lines": 119,
+      "nonblank_noncomment_lines": 104,
+      "sha256": "879ecfefa40468938136f971ff7b2c905c4c6a91a20e77b8e008c262b2f8f39d",
       "imports": [
         {
           "module": "Mathlib.Analysis.SpecialFunctions.Log.Summable",
@@ -10141,9 +10235,9 @@
     "ConditionalGoldbach.Proofs.SpectralCompletionIdentities": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralCompletionIdentities.lean",
-      "physical_lines": 169,
-      "nonblank_noncomment_lines": 155,
-      "sha256": "18486f3a4edcad5297907e9d3e310c4168f36724fe5c2a5a4ff3be14b6678c69",
+      "physical_lines": 171,
+      "nonblank_noncomment_lines": 157,
+      "sha256": "27e091a1f6bf5786d55e51c6cc0dbe5a5b3e562274e1706817eb9fa57f6579ab",
       "imports": [
         {
           "module": "Mathlib.Topology.Algebra.InfiniteSum.UniformOn",
@@ -10177,10 +10271,10 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralCompletionTrace.lean",
       "physical_lines": 132,
       "nonblank_noncomment_lines": 110,
-      "sha256": "384ea7584767e08650b482729529eb151bda5ac4ab38e6ef227f40787f71fadc",
+      "sha256": "e60e821a28ef12183f65b1666be94de2bbc7cfa527f685a2760950d25c345409",
       "imports": [
         {
-          "module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
+          "module": "ConditionalGoldbach.Analysis.SpectralData",
           "line": 3
         }
       ]
@@ -10244,25 +10338,13 @@
     "ConditionalGoldbach.Proofs.SpectralDataAlgebra": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDataAlgebra.lean",
-      "physical_lines": 102,
-      "nonblank_noncomment_lines": 82,
-      "sha256": "551e89b43d91b7df0fc2e3830045d587a4ecbbc4f581b305ecebc0db2be16c53",
+      "physical_lines": 5,
+      "nonblank_noncomment_lines": 2,
+      "sha256": "cb2c0d7a7ae4bd34767832407a3604e7e5401497822fe9dbb5c38888fc2a947f",
       "imports": [
         {
-          "module": "ConditionalGoldbach.Definitions.Hilbert",
+          "module": "ConditionalGoldbach.Analysis.SpectralData",
           "line": 3
-        },
-        {
-          "module": "Mathlib.Tactic.Linarith",
-          "line": 4
-        },
-        {
-          "module": "Mathlib.Tactic.NormNum",
-          "line": 5
-        },
-        {
-          "module": "Mathlib.Tactic.Ring",
-          "line": 6
         }
       ]
     },
@@ -10539,9 +10621,9 @@
     "ConditionalGoldbach.Proofs.SpectralModelEuler": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralModelEuler.lean",
-      "physical_lines": 189,
-      "nonblank_noncomment_lines": 175,
-      "sha256": "8b8116a45fc40f22cbb1a71f7a1dd54ffe9d16582e4e176efbf8a5df90afdde5",
+      "physical_lines": 188,
+      "nonblank_noncomment_lines": 174,
+      "sha256": "8032e2253358065d12de44f3358a9ae1b72f9516e26665fdac0c21afef25b414",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.DensityEulerIdentity",
@@ -10556,9 +10638,9 @@
     "ConditionalGoldbach.Proofs.SpectralModelGrowth": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralModelGrowth.lean",
-      "physical_lines": 151,
-      "nonblank_noncomment_lines": 140,
-      "sha256": "67cc7db90265633715e7180457d345f01811fed566f1cef5c0cd668efea31eaf",
+      "physical_lines": 150,
+      "nonblank_noncomment_lines": 139,
+      "sha256": "a9c11f01cb27ade6fc7884ad676ad8d1a6fe61a069068e74ad02a00ae446e082",
       "imports": [
         {
           "module": "Mathlib.Analysis.Real.Pi.Bounds",
@@ -10581,9 +10663,9 @@
     "ConditionalGoldbach.Proofs.SpectralModelOperator": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralModelOperator.lean",
-      "physical_lines": 128,
-      "nonblank_noncomment_lines": 119,
-      "sha256": "d4502f103e96cc3048732f983ea702e6647e71573a65c42b84c07fc1737aae8a",
+      "physical_lines": 126,
+      "nonblank_noncomment_lines": 117,
+      "sha256": "b99a928467bbd59dfd56785bd310944300e44589f428850c6de03218cb5db9a3",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralModelGrowth",
@@ -10615,9 +10697,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronBounds": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronBounds.lean",
-      "physical_lines": 181,
-      "nonblank_noncomment_lines": 166,
-      "sha256": "fcae1804f5bd3457a4f3ef2f53b4e0b0db5ceacb6cb04df068bc8135f024d672",
+      "physical_lines": 180,
+      "nonblank_noncomment_lines": 165,
+      "sha256": "2518c037879ced06ab7e2bf758afb90ddde7f271524c9863a7711a25c2d0df55",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPoisson",
@@ -10636,9 +10718,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronEuler": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronEuler.lean",
-      "physical_lines": 214,
-      "nonblank_noncomment_lines": 202,
-      "sha256": "90c1cf9ec86830db231ef6e080e3d805ad05a7d049c3f00594522c0b5efd624e",
+      "physical_lines": 212,
+      "nonblank_noncomment_lines": 200,
+      "sha256": "2aa034b9373f8fa641906016a473eb0986ed46b71f87fdcc9ee70dcd86c1d7f1",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPerronIntegral",
@@ -10657,9 +10739,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronFubini": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronFubini.lean",
-      "physical_lines": 280,
-      "nonblank_noncomment_lines": 262,
-      "sha256": "883f36aac2d495d17a049cac5acadded7d7733de2c3fc1c9679f07af502f483e",
+      "physical_lines": 279,
+      "nonblank_noncomment_lines": 261,
+      "sha256": "84989ce14382d101197ff3c14311bb49a07c91f067e89d2b7ff63ee1336c4c80",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPerronPoleIntegral",
@@ -10678,9 +10760,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronGamma": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronGamma.lean",
-      "physical_lines": 240,
-      "nonblank_noncomment_lines": 227,
-      "sha256": "40899e9a48603be40d6a5331dbf2fc064105cf00b97c5a8cf8156ebcf0edf951",
+      "physical_lines": 238,
+      "nonblank_noncomment_lines": 225,
+      "sha256": "8f465463c6a3f68d72dd50ee5afb33f83bbaf37b83aea2d3fe01ea06d934cc69",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPerronFubini",
@@ -10695,9 +10777,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronIntegral": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronIntegral.lean",
-      "physical_lines": 222,
-      "nonblank_noncomment_lines": 202,
-      "sha256": "e8c04cfb1aeceb16376b08368f3685ec440d3b2706a1bd03f3839b75fc2fa6b2",
+      "physical_lines": 221,
+      "nonblank_noncomment_lines": 201,
+      "sha256": "285e806be0860918333cb42fef58259b9c4b27771d432eba90466f1c28e458b6",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPoissonConvolution",
@@ -10712,9 +10794,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronPoleIntegral": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronPoleIntegral.lean",
-      "physical_lines": 257,
-      "nonblank_noncomment_lines": 239,
-      "sha256": "8c90a7822b72a65283f209d58fd3fe555d06da74de3881a1201ce20d94290928",
+      "physical_lines": 256,
+      "nonblank_noncomment_lines": 238,
+      "sha256": "309277fcff799f3dae31db9c239a3b0ed1c6835608aacc202af3be49c60d2de6",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPerronIntegral",
@@ -10725,9 +10807,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronSeries": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronSeries.lean",
-      "physical_lines": 101,
-      "nonblank_noncomment_lines": 94,
-      "sha256": "61296d63b336cf7d78fe25eab116b0ab1f57555850887cd103f9da6262685030",
+      "physical_lines": 100,
+      "nonblank_noncomment_lines": 93,
+      "sha256": "20c2af39099d896895736f64c9cb0c3f48d556082b60134ffde77d0df673ef78",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPerronIntegral",
@@ -10742,9 +10824,9 @@
     "ConditionalGoldbach.Proofs.SpectralPerronTruncation": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPerronTruncation.lean",
-      "physical_lines": 191,
-      "nonblank_noncomment_lines": 181,
-      "sha256": "2d2d3f25320ade059ef8546181caabf8ea499a32c6ae3f82b7cf78c60f2b51d3",
+      "physical_lines": 190,
+      "nonblank_noncomment_lines": 180,
+      "sha256": "c81b500e621c91b1e5a6dc140bc4fbe8bc8d9991983d70a6e66edad3f5ea74f4",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.SpectralPerronFubini",
@@ -10773,7 +10855,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralPoisson.lean",
       "physical_lines": 87,
       "nonblank_noncomment_lines": 75,
-      "sha256": "e117c69c354dc0b3fd214f1e6867066d9a69818275483a93c8b47ef6895b23ac",
+      "sha256": "1fc71120cd2e262f19682de096339ddc3f199f2f8e98021c2ad57a7a26f281c8",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Characters",
@@ -10956,9 +11038,9 @@
     "ConditionalGoldbach.Proofs.SpectralZeroPower": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralZeroPower.lean",
-      "physical_lines": 121,
-      "nonblank_noncomment_lines": 111,
-      "sha256": "4e3d5bb8eacdf5b06efa892f6d075f504634ea3ab90a9d9d7b620ac6c31baa35",
+      "physical_lines": 120,
+      "nonblank_noncomment_lines": 110,
+      "sha256": "27ddd77836f474167a3b66f964adf5ecd541d53a25a7824248006262a0fbbd4a",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CharacterZeroSummability",
@@ -10986,9 +11068,9 @@
     "ConditionalGoldbach.Proofs.VariableComponentOperators": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableComponentOperators.lean",
-      "physical_lines": 101,
-      "nonblank_noncomment_lines": 94,
-      "sha256": "1498c95beadb2251b8416b393b4bd88c0ba0eed57bde0d46426eed0bf3ee501e",
+      "physical_lines": 99,
+      "nonblank_noncomment_lines": 92,
+      "sha256": "1820a514fac8312165ff73ff73714e4d42b62cc88840d6b9b064d9ea312a77b3",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.ArithmeticComponentOperators",
@@ -11041,9 +11123,9 @@
     "ConditionalGoldbach.Proofs.VariableStripOperators": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableStripOperators.lean",
-      "physical_lines": 181,
-      "nonblank_noncomment_lines": 162,
-      "sha256": "324ae6d7b3f70d9ca80433d6a04dec96110c2e8e28e2c64325446ce906b8d97a",
+      "physical_lines": 179,
+      "nonblank_noncomment_lines": 160,
+      "sha256": "d8d1b1a4689c1d1c259293494c93cb9b2452424e8a8b273fee2b8f2ae886c087",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.HardyKernelResidual",
@@ -11072,7 +11154,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/VariableWeightAsymptotic.lean",
       "physical_lines": 142,
       "nonblank_noncomment_lines": 134,
-      "sha256": "4af068b171740e225ef4fc27abb0a97e9ca87a4cc3664577cd180ae58f587d95",
+      "sha256": "4b62494705c94c7367d069a47aee347e99b24397bc8904178cd049e30b238080",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.VariableWeightNorm",
@@ -11113,9 +11195,9 @@
     "ConditionalGoldbach.Proofs.WeightedComponentKernel": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WeightedComponentKernel.lean",
-      "physical_lines": 142,
-      "nonblank_noncomment_lines": 130,
-      "sha256": "a148e843e4cc39ebfbaee23cdbfb23fbcc02bed08434cdbeb3598a80d81af83b",
+      "physical_lines": 140,
+      "nonblank_noncomment_lines": 128,
+      "sha256": "8d6eafa4710fb5647558121dce6150d65de346006b3a56659e6db03a4d69aebf",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.ArithmeticKernelRealization",
@@ -11128,7 +11210,7 @@
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/Weights.lean",
       "physical_lines": 252,
       "nonblank_noncomment_lines": 227,
-      "sha256": "389408b398962f4af1e5311d07702cbb1e4664835ebbbf7ad61c58f8e1bac39c",
+      "sha256": "f83ddd26cc4099b689212935024eb34b4e93fbc008213c1651f5f0cd739d80d0",
       "imports": [
         {
           "module": "ConditionalGoldbach.Definitions.Arithmetic",
@@ -11163,9 +11245,9 @@
     "ConditionalGoldbach.Proofs.WideCounting": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideCounting.lean",
-      "physical_lines": 83,
-      "nonblank_noncomment_lines": 74,
-      "sha256": "51dec9c4893876c7dea02622aa137d1e760f983f072f2b9d387543a0d9585b10",
+      "physical_lines": 82,
+      "nonblank_noncomment_lines": 73,
+      "sha256": "87b5f183c46870783f35415d7436e2e6431b587b7eab1870918cedec3d07330b",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.WideWeight",
@@ -11180,9 +11262,9 @@
     "ConditionalGoldbach.Proofs.WideError": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideError.lean",
-      "physical_lines": 37,
-      "nonblank_noncomment_lines": 32,
-      "sha256": "97626a213256395aa349b5ff303a79b247dc96e4af6fb8a8f9d2136582527f72",
+      "physical_lines": 36,
+      "nonblank_noncomment_lines": 31,
+      "sha256": "6442efe3e8fcedd63bb29f70a770e9ff41a154dc4b3c67944d601e80587d50fe",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.WidePrimePowerCount",
@@ -11197,9 +11279,9 @@
     "ConditionalGoldbach.Proofs.WideFunctional": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideFunctional.lean",
-      "physical_lines": 64,
-      "nonblank_noncomment_lines": 52,
-      "sha256": "e31b3350005392c9eba623e83c298c80e0bca35ceede8702b1d266ce5548d8f4",
+      "physical_lines": 63,
+      "nonblank_noncomment_lines": 51,
+      "sha256": "ffaa309b0d04d0e7210185793fa5e1c4d7feb92e48c14569d8e366d08ade4b65",
       "imports": [
         {
           "module": "Mathlib.Analysis.InnerProductSpace.Dual",
@@ -11222,9 +11304,9 @@
     "ConditionalGoldbach.Proofs.WideMainIntegral": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMainIntegral.lean",
-      "physical_lines": 82,
-      "nonblank_noncomment_lines": 74,
-      "sha256": "65c0f42478d2881aaa84805bfdcbc4b2687d44ba2139819709fd42c66cc4a8fc",
+      "physical_lines": 80,
+      "nonblank_noncomment_lines": 72,
+      "sha256": "cb3691e97dca6c9371a508fa2892d36466d4d8848d6ea2fc997c2e67d77fe6c3",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.WidePrimePowerCount",
@@ -11235,9 +11317,9 @@
     "ConditionalGoldbach.Proofs.WideMellinArithmetic": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMellinArithmetic.lean",
-      "physical_lines": 132,
-      "nonblank_noncomment_lines": 120,
-      "sha256": "1874fe6d9b9bd84af3e8c07b1462b28e9a8f99d4323c71733d9f2d3c6619efba",
+      "physical_lines": 131,
+      "nonblank_noncomment_lines": 119,
+      "sha256": "e24af2d846458067541dd08738ab29aeb011974e25eceaf7e9147cea38ad48f8",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.FiniteCharacterShift",
@@ -11315,9 +11397,9 @@
     "ConditionalGoldbach.Proofs.WideMoments": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideMoments.lean",
-      "physical_lines": 97,
-      "nonblank_noncomment_lines": 86,
-      "sha256": "5e40cc930a52692c1992041d587288395e9266492a04aa52d878e7cb1aacab62",
+      "physical_lines": 95,
+      "nonblank_noncomment_lines": 84,
+      "sha256": "8340e8a65a1c40cd8b67a7c9087889cd8f005adaa10ab74dc4e323be24faab26",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.WideCounting",
@@ -11332,9 +11414,9 @@
     "ConditionalGoldbach.Proofs.WidePrimePairs": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WidePrimePairs.lean",
-      "physical_lines": 122,
-      "nonblank_noncomment_lines": 111,
-      "sha256": "f853adddb5570e476d60671604293487f654290db5667adefbdafc8ea43d882d",
+      "physical_lines": 120,
+      "nonblank_noncomment_lines": 109,
+      "sha256": "0448d2d92ac301da68be71619dc679a584f8eeb75d199f0d7e961a225d6c0f3a",
       "imports": [
         {
           "module": "Mathlib.Tactic.NormNum.Prime",
@@ -11349,9 +11431,9 @@
     "ConditionalGoldbach.Proofs.WidePrimePowerCount": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WidePrimePowerCount.lean",
-      "physical_lines": 168,
-      "nonblank_noncomment_lines": 154,
-      "sha256": "a58b7bd2ba35cad22719013087eca835e85a052f7fc47f83621e67a2ca3eed4a",
+      "physical_lines": 166,
+      "nonblank_noncomment_lines": 152,
+      "sha256": "ba9eab9fbdd50cf42a06a0de72ce40ff6bd4c43380d1a74e91032127a56203d4",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.WidePrimePairs",
@@ -11383,9 +11465,9 @@
     "ConditionalGoldbach.Proofs.WideWeight": {
       "package": "conditionalGoldbach",
       "path": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/WideWeight.lean",
-      "physical_lines": 180,
-      "nonblank_noncomment_lines": 158,
-      "sha256": "c2cc31a055baf85ecccf483a46ad82ee5aa6fda41a1e0f434e83c14bbf1ab770",
+      "physical_lines": 178,
+      "nonblank_noncomment_lines": 156,
+      "sha256": "1d9c8cc3a111e82fbddf6503a9b7a12da376ce69c053d7b03786852f50ac1c1e",
       "imports": [
         {
           "module": "ConditionalGoldbach.Proofs.CutoffSmooth",
@@ -156367,8 +156449,8 @@
   },
   "compiled_environment_crosscheck": {
     "evidence_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/publication/declaration-audit/imported-modules.json",
-    "source_module_count": 6803,
-    "compiled_environment_module_count": 6803,
+    "source_module_count": 6807,
+    "compiled_environment_module_count": 6807,
     "source_only_modules": [],
     "compiled_environment_only_modules": [],
     "exact_match": true

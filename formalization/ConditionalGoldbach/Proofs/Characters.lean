@@ -5,7 +5,7 @@ public import ConditionalGoldbach.Definitions.Weights
 public import Mathlib.Algebra.Order.Star.Int
 public import Mathlib.NumberTheory.Chebyshev
 public import Mathlib.RingTheory.SimpleRing.Principal
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-!
 # Finite character projection

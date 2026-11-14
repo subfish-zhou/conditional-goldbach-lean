@@ -47,7 +47,10 @@ def enforce(entry, modules):
 
 
 def main():
-    argparse.ArgumentParser(description=__doc__).parse_args()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output-dir', type=Path, default=OUTPUT.parent)
+    output = parser.parse_args().output_dir.resolve() / OUTPUT.name
+    output.parent.mkdir(parents=True, exist_ok=True)
     policy_bytes = POLICY.read_bytes()
     entries = json.loads(policy_bytes)['entries']
     inputs = build_inputs(ROOT)
@@ -55,15 +58,16 @@ def main():
     with tempfile.TemporaryDirectory(prefix='entrypoints-', dir=ROOT / '.lake') as tmp:
         tmp = Path(tmp)
         for entry in entries:
-            output = tmp / 'modules.json'
-            output.unlink(missing_ok=True)
+            inventory = tmp / 'modules.json'
+            inventory.unlink(missing_ok=True)
             source = 'import ' + entry['module'] + '\n\n'
             source += '\n'.join('#check @' + n for n in entry['declarations']) + '\n\n'
+            source += entry.get('example', '') + '\n\n'
             source += '''open Lean Elab Command in
 run_cmd do
   let env ← getEnv
   let names := env.header.moduleNames.map Name.toString
-  liftIO <| IO.FS.writeFile ''' + json.dumps(str(output)) + ''' (toJson names).pretty
+  liftIO <| IO.FS.writeFile ''' + json.dumps(str(inventory)) + ''' (toJson names).pretty
 '''
             probe = tmp / 'Consumer.lean'
             probe.write_text(source)
@@ -72,16 +76,17 @@ run_cmd do
                                     capture_output=True, text=True)
             if result.returncode:
                 raise RuntimeError(f"{entry['module']} consumer failed:\n{result.stdout}{result.stderr}")
-            modules = set(json.loads(output.read_text()))
+            modules = set(json.loads(inventory.read_text()))
             counts = enforce(entry, modules)
             rows.append(dict(module=entry['module'], declarations=entry['declarations'],
+                             example=entry.get('example', ''),
                              counts=counts, imported_modules=sorted(modules),
-                             consumer_source=source.replace(str(output), '<temporary modules.json>'),
+                             consumer_source=source.replace(str(inventory), '<temporary modules.json>'),
                              diagnostics=result.stdout + result.stderr))
             print(entry['module'], counts, flush=True)
     if build_inputs(ROOT) != inputs or POLICY.read_bytes() != policy_bytes:
         raise RuntimeError('Build inputs or entrypoint policy changed during the check')
-    OUTPUT.write_text(json.dumps(dict(
+    output.write_text(json.dumps(dict(
         policy_sha256=hashlib.sha256(policy_bytes).hexdigest(), input_hashes=inputs,
         dependency_revisions=manifest_revisions(ROOT),
         counting='Compiled imported modules, including the selected entrypoint. '

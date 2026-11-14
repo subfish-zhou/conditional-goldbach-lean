@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.GammaDifference
 /-! Absolute summation of the Gamma resolvents in the smoothed Perron integral. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 1200000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex
@@ -76,7 +74,7 @@ lemma gamma_perron_resolvent_bound {X c : ℝ} (hX : 1 < X) (hc : 0 < c)
     have hh2 := inv_anti₀ hm hBn
     calc
       _ ≤ m⁻¹*‖v‖*m⁻¹ := by gcongr
-      _ = _ := by ring
+      _ = _ := by ring_nf
   have hmean := two_bounds_geometric_mean (norm_nonneg ((v+a)⁻¹-a⁻¹)) hv hm h1 h2
   have hK := smoothedPerronKernel_norm_bound hX c t
   have hN := perron_line_inverse_bound hc t

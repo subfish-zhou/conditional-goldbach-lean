@@ -6,7 +6,6 @@ public import ConditionalGoldbach.Proofs.CharacterZeroSummability
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open Set Complex Filter

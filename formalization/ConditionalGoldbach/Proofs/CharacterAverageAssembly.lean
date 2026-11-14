@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.CharacterPoissonAnchor
 /-! The final uniform mean-square estimate, with its two analytic inputs exposed. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 1200000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

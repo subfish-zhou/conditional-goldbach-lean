@@ -1,4 +1,7 @@
 """Audit all project-owned Lean constants and locate public declarations."""
+import argparse
+import os
+from pathlib import Path
 import hashlib
 import json
 import subprocess
@@ -32,12 +35,17 @@ def counts(rows):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output-dir', type=Path, default=ROOT)
+    output = parser.parse_args().output_dir.resolve()
+    output.mkdir(parents=True, exist_ok=True)
     baseline = json.loads((ROOT / 'reference/declarations.json').read_text())
-    raw = ROOT / 'proof-status-raw.json'
+    raw = output / 'proof-status-raw.json'
     raw.unlink(missing_ok=True)
-    with (ROOT / 'audit.log').open('w') as log:
+    with (output / 'audit.log').open('w') as log:
         result = subprocess.run(['lake', 'env', 'lean', 'scripts/ProofAudit.lean'], cwd=ROOT,
-                                stdout=log, stderr=subprocess.STDOUT)
+                                stdout=log, stderr=subprocess.STDOUT,
+                                env=os.environ | {'CONDITIONAL_GOLDBACH_AUDIT_OUTPUT': str(raw)})
     if result.returncode:
         raise SystemExit('Audit elaboration failed. See audit.log.')
     records = json.loads(raw.read_text())
@@ -102,7 +110,7 @@ def main():
         'main_results': {name: public['ConditionalGoldbach.' + name]['status']
                          for name in ('theorem_1_1', 'theorem_1_2')},
     }
-    (ROOT / 'proof-status.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    (output / 'proof-status.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({key: value for key, value in report.items()
                       if key not in ('declarations', 'source_files')}, ensure_ascii=False, indent=2))
     if unusual or admissions:

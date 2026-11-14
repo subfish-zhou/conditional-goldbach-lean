@@ -8,8 +8,6 @@ public import Mathlib.Analysis.Matrix.Spectrum
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 600000
-set_option maxRecDepth 10000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
 open Matrix Set Complex
@@ -56,11 +54,17 @@ lemma unitary_column_eigenvector {n : Type*} [Fintype n] [DecidableEq n]
   have hi := congrArg (fun M : Matrix n n ℂ => M i j) hh
   simpa [Matrix.mul_apply,Matrix.mulVec,dotProduct,Matrix.diagonal_apply,Pi.smul_apply,smul_eq_mul,mul_comm] using hi
 
+private lemma matrix_toEuclidean_apply {n : Type*} [Fintype n] [DecidableEq n]
+    (A : Matrix n n ℂ) (x : EuclideanSpace ℂ n) :
+    A.toEuclideanLin.toContinuousLinearMap x = WithLp.toLp 2 (A.mulVec (WithLp.ofLp x)) := rfl
+
 lemma finiteEigenvalue_le_norm (j : Fin 2562) : |finiteEigenvalues j| ≤ finiteMatrixOpNorm := by
   obtain ⟨U,hU,hU',hA⟩ := finiteEigenvalues_spec
   let T : EuclideanSpace ℂ (Fin 2562) →L[ℂ] EuclideanSpace ℂ (Fin 2562) :=
     finiteSpectralMatrix.toEuclideanLin.toContinuousLinearMap
-  have hT (x : EuclideanSpace ℂ (Fin 2562)) : T x = WithLp.toLp 2 (finiteSpectralMatrix.mulVec (WithLp.ofLp x)) := rfl
+  have hT (x : EuclideanSpace ℂ (Fin 2562)) :
+      T x = WithLp.toLp 2 (finiteSpectralMatrix.mulVec (WithLp.ofLp x)) :=
+    matrix_toEuclidean_apply finiteSpectralMatrix x
   have hb : BddAbove {r : ℝ | ∃ x : EuclideanSpace ℂ (Fin 2562), ‖x‖=1 ∧
       r=‖(WithLp.toLp 2 (finiteSpectralMatrix.mulVec (WithLp.ofLp x)) : EuclideanSpace ℂ (Fin 2562))‖} := by
     refine ⟨‖T‖,?_⟩
@@ -96,9 +100,12 @@ lemma finiteSpectralFunction_product (q : ℂ) :
   change Matrix.det (1-k • (finiteSpectralMatrix*finiteSpectralMatrix))=_
   rw [he,Matrix.det_mul,Matrix.det_mul]
   have hdiag : 1-k • (D*D) = Matrix.diagonal (fun i => 1-k*(finiteEigenvalues i : ℂ)^2) := by
-    ext i j
-    simp [D,Matrix.diagonal_apply,Matrix.one_apply,smul_eq_mul]
-    split_ifs <;> simp_all [pow_two]
+    dsimp only [D]
+    rw [Matrix.diagonal_mul_diagonal, ← Matrix.diagonal_smul, ← Matrix.diagonal_one,
+      Matrix.diagonal_sub]
+    apply congrArg (Matrix.diagonal (n := Fin 2562))
+    funext i
+    simp only [Pi.smul_apply, smul_eq_mul, pow_two]
   rw [hdiag,Matrix.det_diagonal]
   calc
     _ = (∏ i, (1-k*(finiteEigenvalues i : ℂ)^2))*(Matrix.det U*Matrix.det (star U)) := by ring

@@ -30,7 +30,9 @@ lemma logDerivative_uniform_bound (δ M : ℝ) (hδ : 0 < δ) (hM : δ ≤ M) :
   have hNr : (4 : ℝ) ≤ N := by exact_mod_cast hN
   have hNpos : 0 < (N : ℝ) := by linarith
   let X : ℝ := (N : ℝ)*(|t|+2)
-  have hX : 8 ≤ X := by dsimp [X]; nlinarith [abs_nonneg t]
+  have hX : 8 ≤ X := by
+    dsimp only [X]
+    nlinarith only [hNr, mul_nonneg hNpos.le (abs_nonneg t)]
   have hXpos : 0 < X := by linarith
   let c : ℂ := ((M+3 : ℝ) : ℂ)+(t : ℂ)*I
   let f : ℂ → ℂ := fun u => χ.LFunction (c+u)
@@ -65,8 +67,10 @@ lemma logDerivative_uniform_bound (δ M : ℝ) (hδ : 0 < δ) (hM : δ ≤ M) :
     have hnorm := norm_add_le c u
     have hunorm := mem_ball_zero_iff.mp hu
     have hscl : 1+2*‖c+u‖ ≤ A*(|t|+2) := by
-      dsimp [A,R] at *
-      nlinarith [abs_nonneg t, mul_nonneg hMpos.le (abs_nonneg t)]
+      dsimp only [A]
+      dsimp only [R] at hunorm
+      nlinarith only [hnorm, hcnorm, hunorm, hδ, hMpos, abs_nonneg t,
+        mul_nonneg hMpos.le (abs_nonneg t)]
     calc
       ‖f u‖ ≤ (N : ℝ)*(1+‖c+u‖/(c+u).re) := hpoly
       _ ≤ (N : ℝ)*(A*(|t|+2)) := mul_le_mul_of_nonneg_left (by linarith) hNpos.le
@@ -76,7 +80,9 @@ lemma logDerivative_uniform_bound (δ M : ℝ) (hδ : 0 < δ) (hM : δ ≤ M) :
     rw [he, Complex.norm_real, Real.norm_eq_abs, abs_of_nonpos (by linarith [hσ.2])]
     dsimp [r]
     linarith [hσ.1]
-  have hU : (1/2 : ℝ) < A*X := by dsimp [A]; nlinarith
+  have hU : (1/2 : ℝ) < A*X := by
+    dsimp only [A]
+    nlinarith only [hX, mul_nonneg hMpos.le hXpos.le]
   have hb := logDerivative_disk_bound f R r (A*X) (1/2) hR hr hrR (by norm_num) hU
     hF hnon hflower hupper z hz
   have hdf : deriv f z = deriv χ.LFunction (1/2+line σ t) := by
@@ -97,8 +103,8 @@ lemma logDerivative_uniform_bound (δ M : ℝ) (hδ : 0 < δ) (hM : δ ≤ M) :
       have h := Real.log_le_sub_one_of_pos (by positivity : 0 < 2*A)
       linarith
     have hlogA' : Real.log (2*A) ≤ (2*A)*Real.log X :=
-      hlogA.trans (by nlinarith)
-    have hlogpow : Real.log X ≤ Real.log X^2 := by nlinarith
+      hlogA.trans (le_mul_of_one_le_right (by positivity) hlog)
+    have hlogpow : Real.log X ≤ Real.log X^2 := by nlinarith only [hlog]
     calc
       _ ≤ (2*A+1)*Real.log X := by linarith
       _ ≤ _ := mul_le_mul_of_nonneg_left hlogpow (by positivity)

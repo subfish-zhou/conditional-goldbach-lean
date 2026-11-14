@@ -51,14 +51,24 @@ with tempfile.TemporaryDirectory(prefix='quality-evidence-') as temporary:
            replace_target, 'Comparator target inventory differs')
     reject(verifier.AUDIT + 'comparator-project/control-condition.json',
            append_byte, 'Comparator inputs changed since the run')
+    reject(verifier.AUDIT + 'comparator-phases.jsonl', append_byte,
+           'Comparator phase timings differ')
     reject('reviewed-types.json', append_byte, 'Audit output changed since the run')
-    reject('scripts/entrypoints.json', append_byte, 'Entrypoint policy changed since the run')
+    reject('verification/public-api.json', append_byte, 'Audit output changed since the run')
+    reject('reference/public-api.json', append_byte, 'Build inputs differ')
+    reject('scripts/check_public_api.py', append_byte, 'Verification tools differ')
+    reject('scripts/entrypoints.json', append_byte, 'Verification tools differ')
     reject('verification/entrypoints.json', append_byte,
            'Audit output changed since the run: entrypoints')
     reject(verifier.PUBLICATION + 'dependencies-imports.json', append_byte,
            'Audit output changed since the run: dependency-imports')
     reject('ConditionalGoldbach/Proofs/Main.lean', append_byte, 'Build inputs differ')
     assert verifier.validate_current_evidence()['comparator']['comparator_target_count'] == 218
+
+    from check_proof_policy import violations
+    assert violations('set_option maxHeartbeats 800000\nlemma example : True := by trivial')
+    assert violations('set_option backward.isDefEq.respectTransparency false\n')
+    assert not violations('set_option maxHeartbeats 400000 in\nlemma example : True := by trivial')
 
     entries = json.loads((verifier.ROOT / 'scripts/entrypoints.json').read_text())['entries']
     policy = {entry['module']: entry for entry in entries}

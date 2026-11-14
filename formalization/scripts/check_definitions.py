@@ -4,8 +4,11 @@ text, including hypotheses and body, must match the reviewed snapshot.
 """
 from pathlib import Path
 from project_sources import library_sources, source_declarations
-import re,json,hashlib
+import re,json,hashlib,argparse
 ROOT=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--output-dir',type=Path,default=ROOT)
+output=parser.parse_args().output_dir.resolve();output.mkdir(parents=True,exist_ok=True)
 base=json.loads((ROOT/'reference/declarations.json').read_text())
 command=re.compile(r'^(?:(?:noncomputable|private|protected|local)\s+)*(?:def|abbrev|theorem|lemma|structure|instance|namespace|end|open|attribute|set_option|section|import)\b')
 current={}
@@ -36,5 +39,5 @@ for n,r in base.items():
  equal=normal(r['code'])==normal(current[n]);assert equal,n
  rows.append({'name':'ConditionalGoldbach.'+n,'reviewed_definition_preserved':equal,'normalized_sha256':hashlib.sha256(normal(current[n]).encode()).hexdigest()})
 assert len(rows)==171
-(ROOT/'reviewed-definitions.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
+(output/'reviewed-definitions.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
 print('All 171 reviewed definition bodies are unchanged (ignoring whitespace).')

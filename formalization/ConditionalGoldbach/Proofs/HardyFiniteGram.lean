@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.CharacterHardyVectors
 /-! Finite Gram kernels are represented by finite sums of positive rank-one maps. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 800000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex InnerProductSpace

@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.FiniteCharacterMoments
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
-set_option maxRecDepth 10000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
 open MeasureTheory Filter Set Complex

@@ -6,13 +6,13 @@
     "pending_direct_sorry": 0
   },
   "all_public_theorem_counts": {
-    "kernel_closed": 1386,
+    "kernel_closed": 1400,
     "proof_written_dependencies_pending": 0,
     "pending_direct_sorry": 0
   },
   "original_definitions": 171,
   "original_theorems": 102,
-  "compiled_constants": 2965,
+  "compiled_constants": 2974,
   "standard_axioms": [
     "Classical.choice",
     "Quot.sound",

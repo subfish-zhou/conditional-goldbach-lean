@@ -7,7 +7,7 @@ import re
 from project_sources import ROOT, declaration_owner, library_sources
 from verification_inputs import (
     BUILD_COMMAND, COMPARATOR_AXIOMS, DECLARATIONS, DEPENDENCY_OUTPUTS, FULL_TYPE_CHECK, PUBLICATION,
-    build_inputs, comparator_inputs, comparator_targets, manifest_revisions,
+    build_inputs, comparator_inputs, comparator_targets, manifest_revisions, verification_tool_inputs,
 )
 
 AUDIT = 'verification/independent-audit/'
@@ -77,10 +77,17 @@ def validate_current_evidence():
             'The build did not record the pinned dependency revisions')
     for name in build['input_hashes']:
         include(name)
+    require(build.get('verification_tool_hashes') == verification_tool_inputs(ROOT),
+            'Verification tools differ from the recorded run. Rerun verify_project.py.')
+    for name in build['verification_tool_hashes']:
+        include(name)
 
     audits = read(include('verification/current-audits.json'))
     audit_steps = unique_rows(audits, 'label')
     expected_steps = {
+        'proof-policy': (['python3', 'scripts/check_proof_policy.py'],
+            'verification/current-proof-policy.log'),
+        'public-api': (['python3', 'scripts/check_public_api.py'], 'verification/current-public-api.log'),
         'entrypoints': (['python3', 'scripts/check_entrypoints.py'],
             'verification/current-entrypoints.log'),
         'definitions': (['python3', 'scripts/check_definitions.py'], 'verification/current-definitions.log'),
@@ -106,6 +113,8 @@ def validate_current_evidence():
         require(digest(include(log)) == row['log_sha256'], f'Current audit log hash changed: {label}')
 
     audit_outputs = {
+        'proof-policy': ['verification/proof-policy.json'],
+        'public-api': ['verification/public-api.json'],
         'entrypoints': ['verification/entrypoints.json'],
         'definitions': ['reviewed-definitions.json'],
         'types': ['reviewed-types.json'],
@@ -116,6 +125,21 @@ def validate_current_evidence():
     for label, paths in audit_outputs.items():
         require(audit_steps[label].get('output_hashes') == {name: digest(include(name)) for name in paths},
                 f'Audit output changed since the run: {label}')
+
+    api = read('verification/public-api.json')
+    api_baseline = read('reference/public-api.json')
+    require(api['all_preserved'] is True and api['input_hashes'] == build['input_hashes'] and
+            api['reference_sha256'] == digest('reference/public-api.json') and
+            api['count'] == len(api_baseline['names']) and
+            api['signatures'] == api_baseline['signatures'], 'Public API compatibility evidence differs')
+    from check_proof_policy import violations
+    production_sources = [ROOT / 'ConditionalGoldbach.lean', *library_sources(ROOT)]
+    policy_check = read('verification/proof-policy.json')
+    require(policy_check == dict(production_files=len(production_sources),
+                no_global_overrides=True, all_sources_reachable=True) and
+            not any(violations(p.read_text()) for p in production_sources) and
+            set(production_sources) == {ROOT / 'ConditionalGoldbach.lean',
+                *(ROOT / 'ConditionalGoldbach').rglob('*.lean')}, 'Production proof policy differs')
 
     from check_entrypoints import enforce
     entrypoints = read('verification/entrypoints.json')
@@ -130,6 +154,7 @@ def validate_current_evidence():
     for entry in policy:
         consumer = consumers[entry['module']]
         require(consumer['declarations'] == entry['declarations'] and
+                consumer['example'] == entry.get('example', '') and
                 consumer['counts'] == enforce(entry, set(consumer['imported_modules'])),
                 'Entrypoint exports or import counts differ')
 
@@ -208,6 +233,15 @@ def validate_current_evidence():
         log = include(AUDIT + row['log'])
         require(row['exit_code'] == exit_code and digest(log) == row['log_sha256'],
                 f'Comparator run or log failed: {name}')
+        if name != 'independent-full-types-build':
+            require(bool(row.get('sandbox_phases')) and 'phase_log' in row,
+                    f'Missing comparator sandbox phase timings: {name}')
+        if 'phase_log' in row:
+            phase_log = include(AUDIT + row['phase_log'])
+            require(digest(phase_log) == row['phase_log_sha256'] and
+                    row['sandbox_phases'] == [json.loads(line) for line in
+                        (ROOT / phase_log).read_text().splitlines()],
+                    f'Comparator phase timings differ: {name}')
         require(datetime.fromisoformat(row['start_utc']) >= build_start,
                 f'Comparator run predates current build: {name}')
         if name.startswith('control-'):
@@ -314,11 +348,14 @@ def validate_current_evidence():
     require(tex_sha256 == '0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125',
             'Source paper bytes changed')
     for name in ['README.md', 'README.zh.md', 'lakefile.toml', 'lake-manifest.json', 'lean-toolchain',
+                 'package.json', 'package-lock.json', 'requirements-review.txt',
                  'verification/README.md', 'verification/README.zh.md', 'reference/inventory.json',
                  'reference/statements-math-en.json', 'reference/statements-math-zh.json',
                  'scripts/check_definitions.py', 'scripts/check_reviewed_types.py', 'scripts/audit_proofs.py',
                  'scripts/ProofAudit.lean', 'scripts/test_verification.py',
                  'scripts/check_entrypoints.py', 'scripts/entrypoints.json',
+                 'scripts/check_public_api.py', 'scripts/check_proof_policy.py', 'scripts/check_project.py',
+                 'scripts/review_page.js', 'scripts/render_verified.py',
                  'scripts/project_sources.py', 'scripts/verification_inputs.py', 'scripts/build_progress.py', 'scripts/test_progress.cjs',
                  'scripts/update_verification.py', 'scripts/package_verified.py', 'scripts/refresh_audit_summary.py',
                  'scripts/verify_project.py', 'scripts/refresh_dependency_records.py',

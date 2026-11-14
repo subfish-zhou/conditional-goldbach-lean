@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.HardyGaussian
 /-! The classical Fourier density of a Gaussian-regularized Hardy function. -/
 @[expose] public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex FourierTransform
@@ -118,7 +116,7 @@ lemma hardyGaussianDensity_weighted_memLp {a b x ε : ℝ} (hab : a < b) {f : �
   funext τ
   rw [hardyGaussianDensity_weighted_line hab hf hx hε]
   congr 2
-  ring
+  ring_nf
 
 lemma hardyGaussianDensity_line_integral {a b x ε : ℝ} (hab : a < b) {f : ℂ → ℂ}
     (hf : IsRawHardy a b f) (hx : x ∈ Ioo a b) (hε : 0 < ε) :

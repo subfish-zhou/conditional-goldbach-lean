@@ -8,7 +8,7 @@ from project_sources import library_sources
 
 BUILD_INPUTS = ('lean-toolchain', 'lakefile.toml', 'lake-manifest.json')
 BUILD_COMMAND = ('lake', '--wfail', 'build')
-REVIEW_INPUTS = ('reference/Reviewed.lean', 'reference/declarations.json')
+REVIEW_INPUTS = ('reference/Reviewed.lean', 'reference/declarations.json', 'reference/public-api.json')
 CONTROLS = ('condition', 'quantifier', 'definition')
 COMPARATOR_AXIOMS = frozenset(('propext', 'Classical.choice', 'Quot.sound'))
 FULL_TYPE_CHECK = ('lake', 'lean', 'TexAuditComparator/CheckTypes.lean')
@@ -41,6 +41,17 @@ def build_inputs(project):
 
 def manifest_revisions(project):
     return {row['name']: row['rev'] for row in read_json(project / 'lake-manifest.json')['packages']}
+
+
+def verification_tool_inputs(project):
+    """Bind the actual verification and rendering tools, excluding generated probes."""
+    paths = {Path('scripts/ProofAudit.lean'), Path('package.json'), Path('package-lock.json'),
+             Path('requirements-review.txt'), Path(PUBLICATION + 'audit_imports.py'),
+             Path(DECLARATIONS + 'DeclarationAudit.lean'), Path(DECLARATIONS + 'analyze.py')}
+    for directory in ('scripts', 'verification/independent-audit'):
+        for suffix in (('py', 'js', 'cjs', 'json') if directory == 'scripts' else ('py', 'js', 'cjs')):
+            paths.update(p.relative_to(project) for p in (project / directory).glob('*.' + suffix))
+    return fingerprints(project, paths)
 
 
 def pinned_dependencies(project):

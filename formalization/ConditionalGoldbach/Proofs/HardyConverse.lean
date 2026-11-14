@@ -8,8 +8,6 @@ The inverse direction uses Gaussian regularization, contour shifting, Fourier in
 and weak compactness. No boundary regularity or distributional identity is assumed. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

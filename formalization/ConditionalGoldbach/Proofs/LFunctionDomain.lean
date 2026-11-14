@@ -3,7 +3,7 @@ module
 public import ConditionalGoldbach.Definitions.Characters
 public import Mathlib.Analysis.Calculus.Deriv.Star
 public import Mathlib.NumberTheory.LSeries.Nonvanishing
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-!
 # L-function nonvanishing on the GRH half-plane

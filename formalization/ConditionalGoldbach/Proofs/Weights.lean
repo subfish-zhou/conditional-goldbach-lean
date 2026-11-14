@@ -5,7 +5,7 @@ public import ConditionalGoldbach.Definitions.Weights
 public import Mathlib.Algebra.Order.Ring.Star
 public import Mathlib.Algebra.Order.Star.Real
 public import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 public import Mathlib.Topology.UniformSpace.Uniformizable
 
 /-! Smooth weights, positive mass, and the elementary support separation. -/

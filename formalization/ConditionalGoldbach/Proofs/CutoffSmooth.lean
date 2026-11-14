@@ -2,13 +2,11 @@ module
 
 public import ConditionalGoldbach.Definitions.Experiment
 public import Mathlib.Analysis.Calculus.Deriv.Slope
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 @[expose] public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
-set_option maxRecDepth 10000
 noncomputable section
 open scoped BigOperators Topology
 open Filter Set
@@ -79,7 +77,7 @@ lemma cutoffPolynomial_eq_positive_parts (t : ℝ) :
   · rw [max_eq_right ht,max_eq_right (by linarith : t-1≤0)]
     norm_num [cutoffPolynomialCore]
   · rw [max_eq_left (by linarith : 0≤t),max_eq_left (by linarith : 0≤t-1)]
-    convert (cutoffPolynomialCore_reflection t).symm using 1; congr 1; ring
+    convert (cutoffPolynomialCore_reflection t).symm using 1; congr 1; ring_nf
   · rw [max_eq_left (by linarith : 0≤t),max_eq_right (by linarith : t-1≤0)]
     simp only [neg_zero,cutoffPolynomialCore_sum]
     norm_num [cutoffPolynomialCore]

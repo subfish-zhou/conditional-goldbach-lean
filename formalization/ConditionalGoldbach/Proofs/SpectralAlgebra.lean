@@ -1,6 +1,6 @@
 module
 
-public import ConditionalGoldbach.Proofs.SpectralDataAlgebra
+public import ConditionalGoldbach.Analysis.SpectralData
 public import ConditionalGoldbach.Definitions.Hypotheses
 public import Mathlib.Algebra.Ring.IsFormallyReal
 

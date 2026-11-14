@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.WidePrimePowerCount
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
-set_option backward.isDefEq.respectTransparency false
 noncomputable section
 open scoped BigOperators Topology
 open MeasureTheory Set

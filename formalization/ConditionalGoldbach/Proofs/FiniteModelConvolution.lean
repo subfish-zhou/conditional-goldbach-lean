@@ -6,7 +6,6 @@ public import ConditionalGoldbach.Proofs.FiniteModelBasic
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff Convolution
 open MeasureTheory Filter Set Complex

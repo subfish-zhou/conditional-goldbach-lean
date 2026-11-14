@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.KernelRegularity
 /-! The residual estimate and fixed-contour bound obtained from exact kernel reproduction. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

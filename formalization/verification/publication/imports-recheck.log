@@ -36,9 +36,9 @@
       "nonblank_noncomment_lines": 8028
     },
     "conditionalGoldbach": {
-      "modules": 271,
-      "physical_lines": 30774,
-      "nonblank_noncomment_lines": 27535
+      "modules": 275,
+      "physical_lines": 30739,
+      "nonblank_noncomment_lines": 27455
     },
     "goldbach": {
       "modules": 57,
@@ -68,6 +68,41 @@
   },
   "direct_external_imports": [
     {
+      "from_module": "ConditionalGoldbach.Analysis.L2Fourier",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/L2Fourier.lean",
+      "line": 3,
+      "to_module": "Mathlib.Analysis.Fourier.LpSpace",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.L2Fourier",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/L2Fourier.lean",
+      "line": 4,
+      "to_module": "Mathlib.Tactic.NormNum.RealSqrt",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.SpectralData",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/SpectralData.lean",
+      "line": 4,
+      "to_module": "Mathlib.Tactic.Linarith",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.SpectralData",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/SpectralData.lean",
+      "line": 5,
+      "to_module": "Mathlib.Tactic.NormNum",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Analysis.SpectralData",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Analysis/SpectralData.lean",
+      "line": 6,
+      "to_module": "Mathlib.Tactic.Ring",
+      "to_package": "mathlib"
+    },
+    {
       "from_module": "ConditionalGoldbach.Definitions.Arithmetic",
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Arithmetic.lean",
       "line": 3,
@@ -91,6 +126,20 @@
     {
       "from_module": "ConditionalGoldbach.Definitions.Asymptotics",
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Asymptotics.lean",
+      "line": 5,
+      "to_module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Definitions.BoundaryIntegral",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/BoundaryIntegral.lean",
+      "line": 4,
+      "to_module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "to_package": "mathlib"
+    },
+    {
+      "from_module": "ConditionalGoldbach.Definitions.BoundaryIntegral",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/BoundaryIntegral.lean",
       "line": 5,
       "to_module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
       "to_package": "mathlib"
@@ -152,17 +201,17 @@
       "to_package": "mathlib"
     },
     {
-      "from_module": "ConditionalGoldbach.Definitions.Geometry",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Geometry.lean",
+      "from_module": "ConditionalGoldbach.Definitions.GeometryCore",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/GeometryCore.lean",
       "line": 3,
-      "to_module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "to_module": "Mathlib.Analysis.SpecialFunctions.Log.Basic",
       "to_package": "mathlib"
     },
     {
-      "from_module": "ConditionalGoldbach.Definitions.Geometry",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/Geometry.lean",
+      "from_module": "ConditionalGoldbach.Definitions.GeometryCore",
+      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Definitions/GeometryCore.lean",
       "line": 4,
-      "to_module": "Mathlib.MeasureTheory.Measure.Haar.OfBasis",
+      "to_module": "Mathlib.Basic.Complex.Basic",
       "to_package": "mathlib"
     },
     {
@@ -492,20 +541,6 @@
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HalfPlaneWeightedCauchy.lean",
       "line": 5,
       "to_module": "Mathlib.Analysis.Complex.RemovableSingularity",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.HardyFourier",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyFourier.lean",
-      "line": 3,
-      "to_module": "Mathlib.Analysis.Fourier.LpSpace",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.HardyFourier",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/HardyFourier.lean",
-      "line": 4,
-      "to_module": "Mathlib.Tactic.NormNum.RealSqrt",
       "to_package": "mathlib"
     },
     {
@@ -898,27 +933,6 @@
       "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralCompletionUniform.lean",
       "line": 3,
       "to_module": "Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDataAlgebra.lean",
-      "line": 4,
-      "to_module": "Mathlib.Tactic.Linarith",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDataAlgebra.lean",
-      "line": 5,
-      "to_module": "Mathlib.Tactic.NormNum",
-      "to_package": "mathlib"
-    },
-    {
-      "from_module": "ConditionalGoldbach.Proofs.SpectralDataAlgebra",
-      "from_file": "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/ConditionalGoldbach/Proofs/SpectralDataAlgebra.lean",
-      "line": 6,
-      "to_module": "Mathlib.Tactic.Ring",
       "to_package": "mathlib"
     },
     {

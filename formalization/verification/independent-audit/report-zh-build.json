@@ -1,11 +1,11 @@
 {
   "language": "zh",
-  "html_sha256": "ed2fefc561be3fe5b60ae7dacd447e9516eb3a0ef28be27604b58321d025ee3c",
+  "html_sha256": "779cb788b1d6c4a80ee561478ddd7b45dab06cfb01c4d4a215c0a2c0a8739e69",
   "bytes": 4951492,
   "statement_cards": 103,
   "math_count": 998,
   "math_errors": [],
-  "current_build_sha256": "34c9789da4bb576c53e3f771eca570068ad309e441be11311deee41b5780b14b",
-  "comparator_result_sha256": "08f241a7693773d6ad28a4c4da250f3156bbc59650875eca8440448e4d2ef8e9",
-  "proof_status_sha256": "a90d1830f3031c71927b26f3d2f7cebe522cb9593b9a24f37ee74e4fdabf834a"
+  "current_build_sha256": "ebdd3905d8e80822675e9de41fb3ca01a5a96fcb83345c4cd3858e14946090ab",
+  "comparator_result_sha256": "4ff62fa5a26c3ca737810bd9569829187fea73a154da7569440010f7e18f6f2e",
+  "proof_status_sha256": "af6e06a502e18fd6f7cd061b9c4fd8bdc22f8272c72abaf844eabf98a09819cd"
 }

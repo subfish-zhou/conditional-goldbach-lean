@@ -2,12 +2,11 @@ module
 
 public import ConditionalGoldbach.Definitions.Hardy
 public import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
-public import Mathlib.Tactic.NormNum.RealSqrt
+import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Weighted square-integrability on the closed Hardy strip. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
 noncomputable section
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach

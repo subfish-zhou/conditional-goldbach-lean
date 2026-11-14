@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.CharacterZeroSummability
 /-! A uniform logarithmic bound for the zero Poisson sum at a fixed positive width. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 1000000
 set_option autoImplicit false
 noncomputable section
 open Filter Set Complex

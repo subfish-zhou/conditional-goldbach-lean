@@ -1,6 +1,6 @@
 module
 
-public import ConditionalGoldbach.Definitions.Geometry
+public import ConditionalGoldbach.Definitions.GeometryCore
 public import Mathlib.Analysis.MellinTransform
 
 /-! Weights definitions used by the conditional Goldbach formalization. -/

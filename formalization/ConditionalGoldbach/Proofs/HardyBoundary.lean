@@ -5,58 +5,11 @@ public import ConditionalGoldbach.Proofs.HardyInterior
 /-! Construction of the endpoint Fourier–Laplace traces by L² limits. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 800000
 noncomputable section
 open MeasureTheory Filter Set Complex FourierTransform
 open scoped Topology
 namespace ConditionalGoldbach
-
-private def realScaleMeasure (c : ℝ) : Measure ℝ := ENNReal.ofReal |c⁻¹| • volume
-
-private lemma realScale_measurePreserving {c : ℝ} (hc : c ≠ 0) :
-    MeasurePreserving (fun t : ℝ => c * t) volume (realScaleMeasure c) :=
-  ⟨by fun_prop, Real.map_volume_mul_left hc⟩
-
-private def rescaleL2 (c : ℝ) (hc : c ≠ 0) (f : Lp ℂ 2 (volume : Measure ℝ)) :
-    Lp ℂ 2 (volume : Measure ℝ) :=
-  Lp.compMeasurePreserving (fun t : ℝ => c * t) (realScale_measurePreserving hc)
-    (Lp.LpToLpOfMeasureLeSMul ENNReal.ofReal_ne_top
-      (show realScaleMeasure c ≤ ENNReal.ofReal |c⁻¹| • volume from le_rfl) f)
-
-private lemma rescaleL2_continuous (c : ℝ) (hc : c ≠ 0) : Continuous (rescaleL2 c hc) :=
-  (Lp.isometry_compMeasurePreserving (E := ℂ) (p := 2)
-    (realScale_measurePreserving hc)).continuous.comp
-    (Lp.LpToLpOfMeasureLeSMul ENNReal.ofReal_ne_top
-      (show realScaleMeasure c ≤ ENNReal.ofReal |c⁻¹| • volume from le_rfl)).continuous
-
-private lemma rescaleL2_coe (c : ℝ) (hc : c ≠ 0) (f : Lp ℂ 2 (volume : Measure ℝ)) :
-    rescaleL2 c hc f =ᵐ[volume] (fun t => f (c * t)) := by
-  refine (Lp.coeFn_compMeasurePreserving _ (realScale_measurePreserving hc)).trans ?_
-  exact (realScale_measurePreserving hc).quasiMeasurePreserving.ae_eq_comp
-    (Lp.coeFn_LpToLpOfMeasureLeSMul ENNReal.ofReal_ne_top
-      (show realScaleMeasure c ≤ ENNReal.ofReal |c⁻¹| • volume from le_rfl) f)
-
-private def physicalFourierL2 (f : Lp ℂ 2 (volume : Measure ℝ)) : Lp ℂ 2 (volume : Measure ℝ) :=
-  (Real.sqrt (2 * Real.pi) : ℂ)⁻¹ •
-    rescaleL2 (-(2 * Real.pi)⁻¹)
-      (neg_ne_zero.mpr (inv_ne_zero (mul_ne_zero (by norm_num) Real.pi_ne_zero))) (𝓕 f)
-
-private lemma physicalFourierL2_continuous : Continuous physicalFourierL2 := by
-  unfold physicalFourierL2
-  exact ((rescaleL2_continuous (-(2 * Real.pi)⁻¹) _).comp
-    (continuous_fourier : Continuous (fun f : Lp ℂ 2 (volume : Measure ℝ) => 𝓕 f))).const_smul ((Real.sqrt (2 * Real.pi) : ℂ)⁻¹)
-
-private lemma L2_norm_sq_integral (f : Lp ℂ 2 (volume : Measure ℝ)) :
-    ‖f‖ ^ 2 = ∫ t : ℝ, ‖f t‖ ^ 2 := by
-  rw [← real_inner_self_eq_norm_sq, L2.inner_def]
-  simp only [real_inner_self_eq_norm_sq]
-
-private lemma toLp_norm_eq_sqrt_integral {f : ℝ → ℂ} (hf : MemLp f 2) :
-    ‖hf.toLp f‖ = Real.sqrt (∫ t : ℝ, ‖f t‖ ^ 2) := by
-  rw [← Real.sqrt_sq (norm_nonneg (hf.toLp f)), L2_norm_sq_integral]
-  congr 1
-  exact integral_congr_ae (hf.coeFn_toLp.fun_comp (fun z : ℂ => ‖z‖ ^ 2))
+open Analysis
 
 private def hardyLineDensity {a b : ℝ} (ψ : HardySpace a b) (x : Icc a b) :
     Lp ℂ 2 (volume : Measure ℝ) :=
@@ -113,25 +66,6 @@ private lemma hardyLineDensity_continuous {a b : ℝ} (ψ : HardySpace a b) :
   exact toLp_norm_eq_sqrt_integral (hfx.sub hfy)
 
 
-private lemma physicalFourierL2_coe_classical {f : ℝ → ℂ}
-    (hf : Integrable f) (hf2 : MemLp f 2) :
-    physicalFourierL2 (hf2.toLp f) =ᵐ[volume] (fun t : ℝ =>
-      (Real.sqrt (2 * Real.pi) : ℂ)⁻¹ * 𝓕 f (-t / (2 * Real.pi))) := by
-  let c : ℝ := -(2 * Real.pi)⁻¹
-  have hc : c ≠ 0 := neg_ne_zero.mpr (inv_ne_zero (mul_ne_zero (by norm_num) Real.pi_ne_zero))
-  have hq : QuasiMeasurePreserving (fun t : ℝ => c * t) volume volume :=
-    (realScale_measurePreserving hc).quasiMeasurePreserving.mono_right Measure.smul_absolutelyContinuous
-  have he := hq.ae_eq_comp (classical_fourier_eq_L2_ae hf hf2)
-  filter_upwards [Lp.coeFn_smul ((Real.sqrt (2 * Real.pi) : ℂ)⁻¹)
-    (rescaleL2 c hc (𝓕 (hf2.toLp f))), rescaleL2_coe c hc (𝓕 (hf2.toLp f)), he] with t ht hr he
-  change (_ • rescaleL2 c hc (𝓕 (hf2.toLp f))) t = _
-  rw [ht]
-  simp only [Pi.smul_apply, smul_eq_mul, Function.comp_apply] at hr he ⊢
-  rw [hr, ← he]
-  congr 2
-  dsimp [c]
-  ring
-
 private def hardyCompletedLine {a b : ℝ} (ψ : HardySpace a b) (x : Icc a b) :
     Lp ℂ 2 (volume : Measure ℝ) := physicalFourierL2 (hardyLineDensity ψ x)
 
@@ -177,25 +111,6 @@ theorem hardy_boundaryTraces_exist {a b : ℝ} (hab : a < b) (ψ : HardySpace a 
     have h := ((hardyCompletedLine_continuous ψ).tendsto ⟨b, ⟨hab.le, le_rfl⟩⟩).comp he
     simpa only [Function.comp_def, hardyCompletedLine_interior hab ψ] using h
 
-
-private lemma rescaleL2_norm_sq (c : ℝ) (hc : c ≠ 0) (f : Lp ℂ 2 (volume : Measure ℝ)) :
-    ‖rescaleL2 c hc f‖ ^ 2 = |c⁻¹| * ‖f‖ ^ 2 := by
-  rw [L2_norm_sq_integral]
-  calc
-    _ = ∫ t : ℝ, ‖f (c * t)‖ ^ 2 :=
-      integral_congr_ae ((rescaleL2_coe c hc f).fun_comp (fun z : ℂ => ‖z‖ ^ 2))
-    _ = |c⁻¹| * ∫ t : ℝ, ‖f t‖ ^ 2 := by
-      simpa only [smul_eq_mul] using (Measure.integral_comp_mul_left (fun t : ℝ => ‖f t‖ ^ 2) c)
-    _ = _ := by rw [← L2_norm_sq_integral]
-
-private lemma physicalFourierL2_norm_sq (f : Lp ℂ 2 (volume : Measure ℝ)) :
-    ‖physicalFourierL2 f‖ ^ 2 = ‖f‖ ^ 2 := by
-  unfold physicalFourierL2
-  rw [norm_smul, mul_pow, rescaleL2_norm_sq, Lp.norm_fourier_eq]
-  simp only [norm_inv, Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg (Real.sqrt_nonneg _),
-    inv_pow, Real.sq_sqrt (by positivity : 0 ≤ 2 * Real.pi), inv_neg, inv_inv,
-    abs_neg, abs_of_pos (by positivity : 0 < 2 * Real.pi)]
-  field_simp
 
 private lemma hardyCompletedLine_norm_sq {a b : ℝ} (ψ : HardySpace a b) (x : Icc a b) :
     ‖hardyCompletedLine ψ x‖ ^ 2 = ∫ τ : ℝ, ‖ψ τ‖ ^ 2 * Real.exp (2 * x.val * τ) := by

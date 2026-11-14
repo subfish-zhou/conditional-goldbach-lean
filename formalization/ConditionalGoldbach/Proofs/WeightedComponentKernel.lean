@@ -5,8 +5,6 @@ public import ConditionalGoldbach.Proofs.ArithmeticKernelRealization
 /-! Reusable weighted component kernels on the same Hardy strip. -/
 @[expose] public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 800000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

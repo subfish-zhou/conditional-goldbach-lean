@@ -9,8 +9,6 @@ public import ConditionalGoldbach.Proofs.HardyKernelMajorant
 /-! The arithmetic Hardy realization from its two explicit vertical growth estimates. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 800000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

@@ -7,8 +7,6 @@ public import Mathlib.Analysis.SpecialFunctions.Log.Deriv
 public section
 
 set_option autoImplicit false
-set_option maxHeartbeats 800000
-set_option maxRecDepth 10000
 noncomputable section
 open scoped BigOperators Topology ContDiff
 open Filter Set MeasureTheory

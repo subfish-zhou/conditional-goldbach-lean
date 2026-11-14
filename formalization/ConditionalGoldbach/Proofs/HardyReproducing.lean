@@ -6,8 +6,6 @@ public import ConditionalGoldbach.Proofs.BetaIntegrals
 /-! Exact evaluation of the strip reproducing kernel, including its normalization. -/
 public section
 
-set_option backward.isDefEq.respectTransparency false
-set_option maxHeartbeats 600000
 set_option autoImplicit false
 noncomputable section
 open MeasureTheory Filter Set Complex

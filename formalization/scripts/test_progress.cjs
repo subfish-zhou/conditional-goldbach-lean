@@ -35,7 +35,17 @@ for(const r of audit.source_files)if(hash(path.join(root,r.file))!==r.sha256)thr
  report.warning=await page.locator('#main-warning').innerText();check(report.warning.includes(zh?(mainClosed?'传递依赖均未检出 sorryAx':'尚未端到端完成'):(mainClosed?'no sorryAx in their transitive dependencies':'remain incomplete')),'main completeness status');
  report.types=await page.locator('#type-note').innerText();check(report.types.includes(zh?'已通过':'pass Lean definitional-equality checks'),'type preservation checked');
  report.math=await page.locator('.katex').count();check(report.math>100,'math rendering');
- report.source_exact=await page.evaluate(()=>{const d=JSON.parse(document.querySelector('#progress-data').textContent);return d.records.every(r=>{const node=document.getElementById(r.id);return Array.from(node.querySelectorAll('.code-line')).map(x=>x.textContent).join('\n')===r.code})});check(report.source_exact,'highlighted actual source');
+ check(await page.locator('.item').count()===102,'initial DOM contains only the active scope');
+ report.title_math=await page.locator('.item h2 .katex').count();
+ check(!zh||report.title_math>0,'LaTeX in Chinese declaration titles is rendered');
+ const exactScope=()=>page.evaluate(()=>{
+  const d=JSON.parse(document.querySelector('#progress-data').textContent),lookup=new Map(d.records.map(r=>[r.name,r]));
+  return Array.from(document.querySelectorAll('.item')).every(node=>Array.from(node.querySelectorAll('.code-line')).map(x=>x.textContent).join('\n')===lookup.get(node.dataset.name).code);
+ });
+ report.source_exact=await exactScope();
+ for(const scope of ['all','definitions']){await page.locator(`[data-scope="${scope}"]`).click();report.source_exact=report.source_exact&&await exactScope()}
+ check(report.source_exact,'highlighted actual source across every scope');
+ await page.locator('[data-scope="original"]').click();
  await page.locator('.filter-line [data-status="kernel_closed"]').click();report.closed_visible=await visible();check(report.closed_visible===counts.kernel_closed,'closed original');
  await page.locator('.filter-line [data-status="proof_written_dependencies_pending"]').click();report.dependencies_pending_visible=await visible();check(report.dependencies_pending_visible===counts.proof_written_dependencies_pending,'pending dependency original');
  for(const n of ['theorem_1_1','theorem_1_2'])check(await page.locator('#decl-ConditionalGoldbach-'+n).isVisible()===!mainClosed,n+' pending filter matches audit');
@@ -44,8 +54,14 @@ for(const r of audit.source_files)if(hash(path.join(root,r.file))!==r.sha256)thr
  await page.locator('#search').fill('');await page.locator('[data-scope="definitions"]').click();report.definitions_visible=await visible();check(report.definitions_visible===definitions,'actual definitions');
  await page.locator('[data-scope="original"]').click();await page.locator('#search').fill('lemma_7_2_convolutions');check(await page.locator('#decl-ConditionalGoldbach-lemma_7_2_convolutions').isVisible(),'reviewed supplementary theorem');
  await page.locator('#search').fill('');const critical=page.locator('#critical [data-jump]').first();const jump=await critical.count()?critical:page.locator('#main-status [data-jump]').first();const target=await jump.getAttribute('data-jump');await jump.click();check(await page.locator('#decl-'+target.replace(/\./g,'-')).isVisible(),'jump to audited declaration');
+ await page.locator('[data-scope="definitions"]').click();await page.waitForTimeout(1900);check(errors.length===0,'removing a jumped-to item before its highlight timer completes');
  await page.locator('[data-scope="original"]').click();await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:path.join(root,zh?'progress-zh-desktop.png':'progress-desktop.png')});
  await page.setViewportSize({width:390,height:844});await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:path.join(root,zh?'progress-zh-mobile.png':'progress-mobile.png')});
+ await page.goto('file://'+path.join(root,pageFile)+'#decl-ConditionalGoldbach-badGoldbachMass_le_sqrt');
+ await page.waitForSelector('#decl-ConditionalGoldbach-badGoldbachMass_le_sqrt');
+ check(await page.locator('#decl-ConditionalGoldbach-badGoldbachMass_le_sqrt').isVisible(),'fragment navigation loads helper');
+ await page.reload();await page.waitForSelector('#decl-ConditionalGoldbach-badGoldbachMass_le_sqrt');
+ check(await page.locator('#decl-ConditionalGoldbach-badGoldbachMass_le_sqrt').isVisible(),'initial deep link loads helper');
  report.mobile_width=await page.evaluate(()=>document.documentElement.scrollWidth);check(report.mobile_width===390,'mobile overflow');
  check(errors.length===0,'JS errors');check(network.length===0,'network requests');
  fs.writeFileSync(path.join(root,zh?'progress-zh-browser-verification.json':'progress-browser-verification.json'),JSON.stringify(report,null,2)+'\n');await browser.close();console.log(JSON.stringify(report,null,2));
