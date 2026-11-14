@@ -36,6 +36,8 @@ The proof library uses Lean's module system and preserves unfolding for its publ
 
 See the [latest refactor measurements](docs/quality-convolution.md) for source size, import closures, and build/proof timing comparisons.
 
+See the [comparison with the previous GitHub release](docs/release-comparison.md) for cumulative source counts, clean-output build timings, dependency sizes, and verification changes.
+
 See [choosing an import](docs/imports.md) for main-theorem, prime-pair, definition, and finite-spectrum consumers with checked import boundaries.
 
 ## Read and verify

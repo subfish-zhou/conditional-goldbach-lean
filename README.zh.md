@@ -15,6 +15,8 @@ Li–Liu 论文条件 Goldbach 结论及其分析、算子和谱理论基础的 
 
 [本轮改造与性能对比](docs/quality-convolution.zh.md)列出了源码规模、导入闭包和编译、证明耗时。
 
+[与推送前 GitHub 版本的对比](docs/release-comparison.zh.md)汇总累计源码变化、全量重编译耗时、依赖规模及验证质量变化。
+
 ## 构建
 
 ```bash
