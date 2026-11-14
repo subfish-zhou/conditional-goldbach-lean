@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroLocalBounds
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroLocalBounds
 
 /-! Summability of the zero measures obtained from the proved local counts. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -60,7 +64,7 @@ lemma primitive_zero_floor_square_summable {d : ℕ} [NeZero d] (χ : Character 
   have hfinite (k : ℤ) : (zeroWindow χ k).Finite := (hc k).1
   have hsums (k : ℤ) : (∑' p : zeroWindow χ k, f p) =
       ((zeroWindow χ k).ncard : ℝ)*(1+|(k : ℝ)|)⁻¹^2 := by
-    letI := (hfinite k).fintype
+    let := (hfinite k).fintype
     have he (p : zeroWindow χ k) : f p = (1+|(k : ℝ)|)⁻¹^2 := by
       dsimp [f]
       rw [Int.floor_eq_iff.mpr p.property]
@@ -68,14 +72,14 @@ lemma primitive_zero_floor_square_summable {d : ℕ} [NeZero d] (χ : Character 
     rw [tsum_fintype, Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
     congr 2
     exact (Nat.card_eq_fintype_card).symm
-  refine ⟨fun k => by letI := (hfinite k).fintype; exact (hasSum_fintype _).summable, ?_⟩
+  refine ⟨fun k => by let := (hfinite k).fintype; exact (hasSum_fintype _).summable, ?_⟩
   simp_rw [hsums]
   have hs := (summable_logarithmic_zero_majorant d (Nat.one_le_iff_ne_zero.mpr (NeZero.ne d))).mul_left C
   apply hs.of_nonneg_of_le
   · intro k; positivity
   intro k
   have hbound := mul_le_mul_of_nonneg_right (hc k).2 (sq_nonneg ((1+|(k : ℝ)|)⁻¹))
-  convert hbound using 1 <;> simp only [div_eq_mul_inv, inv_pow] <;> ring
+  convert hbound using 1; simp only [div_eq_mul_inv, inv_pow]; ring
 
 lemma primitive_zero_square_summable {d : ℕ} [NeZero d] (χ : Character d)
     (hχ : χ ≠ 1) (hprim : χ.IsPrimitive) :
@@ -119,8 +123,8 @@ lemma primitive_zero_poisson_summable {d : ℕ} [NeZero d] (χ : Character d)
   nlinarith
 
 attribute [local instance] conductorNeZero in
-theorem lemma_6_4_zero_poisson_convergence (N : ℕ) [NeZero N] (hN : Even N)
-    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N)
+theorem lemma_6_4_zero_poisson_convergence (N : ℕ) [NeZero N] (_hN : Even N)
+    (_hlarge : Real.exp 10 < (N : ℝ)) (_hGRH : GRH N)
     (χ : Character N) (hχ : χ ∈ oddCharacters N) (x t : ℝ) (hx : 0 < x) :
     Summable (fun p : ZeroIndex χ.primitiveCharacter =>
       x / (x ^ 2 + (t - p.val.1.im) ^ 2)) := by

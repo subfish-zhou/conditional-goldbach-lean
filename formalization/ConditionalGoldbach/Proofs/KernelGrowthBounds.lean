@@ -1,8 +1,13 @@
-import ConditionalGoldbach.Proofs.GammaQuotientBound
-import ConditionalGoldbach.Proofs.ZetaGrowth
-import ConditionalGoldbach.Proofs.Elementary
+module
+
+public import ConditionalGoldbach.Definitions.Operators
+public import Mathlib.Analysis.Real.Pi.Bounds
+public import ConditionalGoldbach.Proofs.GammaQuotientBound
+public import ConditionalGoldbach.Proofs.ZetaGrowth
 
 /-! Quantitative component bounds for the Hardy kernel on a fixed closed strip. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -49,7 +54,7 @@ lemma diagonalSeries_uniform_bound (N : ℕ) {a : ℝ} (ha : 0 < a) :
   apply Summable.tsum_le_tsum _ hs.norm hd
   intro n
   by_cases hn : 0 < n ∧ Nat.Coprime n N
-  · simp only [d, if_pos hn, norm_div]
+  · simp only [d, ite_eq_left hn, norm_div]
     apply div_le_div_of_nonneg_left (norm_nonneg _)
       (Complex.norm_natCast_cpow_pos_of_pos hn.1 _)
     rw [Complex.norm_natCast_cpow_of_pos hn.1, Complex.norm_natCast_cpow_of_pos hn.1]
@@ -88,7 +93,7 @@ lemma one_add_line_norm_lower {x : ℝ} (hx : 0 ≤ x) (t : ℝ) :
   have hi := Complex.abs_im_le_norm (1 + line x t)
   simp only [line, Complex.add_re, Complex.one_re, Complex.ofReal_re,
     Complex.mul_re, Complex.ofReal_im, Complex.I_re, Complex.I_im, mul_zero,
-    zero_mul, sub_zero, add_zero, Complex.add_im, Complex.one_im,
+    sub_zero, add_zero, Complex.add_im, Complex.one_im,
     Complex.mul_im, mul_one, zero_add] at hr hi
   rw [abs_of_nonneg (by linarith : 0 ≤ 1 + x)] at hr
   unfold line
@@ -130,7 +135,7 @@ lemma weightedKernel_power_bound_of_residual {a b : ℝ} (ha : 0 ≤ a)
             (1 + |t|) ^ (1 / 4 : ℝ) / (1 + |t|) := by
           rw [show - (3 / 4 : ℝ) = 1 / 4 - 1 by norm_num, Real.rpow_sub ht0, Real.rpow_one]
         rw [hv, ht]
-        field_simp <;> ring
+        field_simp; ring
   have hsq := (sq_le_sq₀ (norm_nonneg _) (by positivity)).mpr hnorm
   have hp (u : ℝ) (hu : 0 < 1 + |u|) :
       ((1 + |u|) ^ (- (3 / 4 : ℝ))) ^ 2 = (1 + |u|) ^ (- (3 / 2 : ℝ)) := by
@@ -138,7 +143,7 @@ lemma weightedKernel_power_bound_of_residual {a b : ℝ} (ha : 0 ≤ a)
     norm_num
   simpa only [mul_pow, hp v hv0, hp t ht0, show (4 : ℝ)^2 = 16 by norm_num] using hsq
 
-lemma continuedModel_power_bound {a : ℝ} (ha : 0 < a) (hab : a < beta)
+lemma continuedModel_power_bound {a : ℝ} (ha : 0 < a) (_hab : a < beta)
     (N : ℕ) (hN : 4 ≤ N) (Z : ℝ) (hZ : 0 ≤ Z)
     (hζ : ∀ w : ℂ, w.re ∈ Icc (3 / 4) (1 - 2 * a) →
       ‖riemannZeta w‖ ≤ Z * (1 + |w.im|) ^ (1 / 4 : ℝ)) :

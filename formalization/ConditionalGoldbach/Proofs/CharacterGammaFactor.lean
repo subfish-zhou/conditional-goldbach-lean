@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CompletedLZeros
+module
+
+public import ConditionalGoldbach.Proofs.CompletedLZeros
 
 /-! Exact logarithmic derivatives of the completed odd-character Gamma factors. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

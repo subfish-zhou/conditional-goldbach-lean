@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.MellinProjection
-import ConditionalGoldbach.Proofs.CharacterAnalytic
-import ConditionalGoldbach.Proofs.SignedFamilies
+module
+
+public import ConditionalGoldbach.Proofs.MellinProjection
+public import ConditionalGoldbach.Proofs.CharacterAnalytic
+public import ConditionalGoldbach.Proofs.SignedFamilies
 
 /-! The initial double Mellin projection of the odd-character moment. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -94,7 +98,7 @@ theorem characterMoment_mellin_initial_integrable (N : ℕ) [NeZero N]
     (character_mellin_initial_integrable (star χ) φ hφ σ hσ)
 
 
-theorem lemma_3_5 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N)
+theorem lemma_3_5 (N : ℕ) [NeZero N] (_hN : Even N) (_hN4 : 4 ≤ N)
     (φ : ℝ → ℝ) (hφ : IsWeight φ) (σ : ℝ) (hσ : 1 / 2 < σ) :
     (characterMoment N φ : ℂ) = verticalMellin σ (fun s => verticalMellin σ (fun z =>
       (N : ℂ) ^ (s + z) * mellinWeight φ s * mellinWeight φ z * characterKernel N s z)) ∧

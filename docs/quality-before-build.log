@@ -1,0 +1,358 @@
+ℹ [4082/4357] Replayed MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLAbelWeightVariation
+info: MathlibNt/AnalyticNumberTheory/DirichletL/DirichletLAbelWeightVariation.lean:88:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: MathlibNt/AnalyticNumberTheory/DirichletL/DirichletLAbelWeightVariation.lean:235:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4298/4552] Built ConditionalGoldbach.BaseDefinitions (2.1s)
+ℹ [4299/4552] Built ConditionalGoldbach.Proofs.BetaIntegrals (2.8s)
+info: ConditionalGoldbach/Proofs/BetaIntegrals.lean:165:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4300/4552] Built ConditionalGoldbach.Proofs.BetaIdentity (3.1s)
+✔ [4301/4552] Built ConditionalGoldbach.Proofs.HardyWeights (2.0s)
+✔ [4302/4552] Built ConditionalGoldbach.Proofs.HardyFourier (2.2s)
+✔ [4303/4552] Built ConditionalGoldbach.Proofs.MellinBetaInner (2.1s)
+ℹ [4304/4552] Built ConditionalGoldbach.Proofs.HardyInterior (1.9s)
+info: ConditionalGoldbach/Proofs/HardyInterior.lean:44:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+ℹ [4305/4552] Built ConditionalGoldbach.Proofs.HardyBoundary (5.7s)
+info: ConditionalGoldbach/Proofs/HardyBoundary.lean:133:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4306/4552] Built ConditionalGoldbach.Definitions (3.5s)
+✔ [4307/4552] Built ConditionalGoldbach.Proofs.SignedFamilies (1.9s)
+✔ [4308/4552] Built ConditionalGoldbach.Proofs.BetaMeromorphic (2.6s)
+ℹ [4309/4552] Built ConditionalGoldbach.Proofs.CutoffSmooth (2.6s)
+info: ConditionalGoldbach/Proofs/CutoffSmooth.lean:81:71: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4310/4552] Built ConditionalGoldbach.Proofs.SpectralPoisson (2.4s)
+✔ [4311/4552] Built ConditionalGoldbach.Proofs.CauchyBoundedLimit (2.3s)
+✔ [4312/4552] Built ConditionalGoldbach.Proofs.Weights (3.3s)
+✔ [4313/4552] Built ConditionalGoldbach.Proofs.LogDerivativeDisk (2.8s)
+✔ [4314/4552] Built ConditionalGoldbach.Proofs.SpectralAlgebra (3.6s)
+✔ [4315/4552] Built ConditionalGoldbach.Proofs.HardyTraceAlgebra (3.5s)
+✔ [4316/4552] Built ConditionalGoldbach.Proofs.LFunctionDomain (2.1s)
+✔ [4317/4552] Built ConditionalGoldbach.Proofs.Elementary (2.2s)
+✔ [4318/4552] Built ConditionalGoldbach.Proofs.Characters (3.4s)
+✔ [4319/4552] Built ConditionalGoldbach.Proofs.SingularDensity (1.0s)
+✔ [4320/4552] Built ConditionalGoldbach.Proofs.DensitySeries (2.1s)
+✔ [4321/4552] Built ConditionalGoldbach.Proofs.WideWeight (2.9s)
+✔ [4322/4552] Built ConditionalGoldbach.Proofs.SpectralPoissonConvolution (2.6s)
+✔ [4323/4552] Built ConditionalGoldbach.Proofs.WeightNorm (2.2s)
+✔ [4324/4552] Built ConditionalGoldbach.Proofs.PrimePowers (2.5s)
+✔ [4325/4552] Built ConditionalGoldbach.Proofs.MellinBasic (2.4s)
+✔ [4326/4552] Built ConditionalGoldbach.Proofs.MellinConvolution (2.6s)
+✔ [4327/4552] Built ConditionalGoldbach.Proofs.HadamardLog (2.3s)
+✔ [4328/4552] Built ConditionalGoldbach.Proofs.SpectralProducts (2.5s)
+✔ [4329/4552] Built ConditionalGoldbach.Proofs.HardyHolomorphic (2.4s)
+✔ [4330/4552] Built ConditionalGoldbach.Proofs.CharacterZerosCompact (1.9s)
+✔ [4331/4552] Built ConditionalGoldbach.Proofs.SpectralCompletionTrace (8.7s)
+✔ [4332/4552] Built ConditionalGoldbach.Proofs.Asymptotics (1.9s)
+✔ [4333/4552] Built ConditionalGoldbach.Proofs.CharacterGrowthFoundation (6.9s)
+✔ [4334/4552] Built ConditionalGoldbach.Proofs.SingularLower (2.4s)
+✔ [4335/4552] Built ConditionalGoldbach.Proofs.FiniteCharacterMoments (2.2s)
+✔ [4336/4552] Built ConditionalGoldbach.Proofs.KernelAlgebra (2.3s)
+✔ [4337/4552] Built ConditionalGoldbach.Proofs.SingularBounds (2.1s)
+✔ [4338/4552] Built ConditionalGoldbach.Proofs.CharacterSeries (3.9s)
+✔ [4339/4552] Built ConditionalGoldbach.Proofs.PoleDiagonalComparison (2.3s)
+✔ [4340/4552] Built ConditionalGoldbach.Proofs.DensityEuler (2.3s)
+✔ [4341/4552] Built ConditionalGoldbach.Proofs.WidePrimePairs (2.1s)
+ℹ [4342/4552] Built ConditionalGoldbach.Proofs.QuadraticAsymptotic (3.3s)
+info: ConditionalGoldbach/Proofs/QuadraticAsymptotic.lean:67:94: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4343/4552] Built ConditionalGoldbach.Proofs.PrimePowerReindex (2.2s)
+✔ [4344/4552] Built ConditionalGoldbach.Proofs.MellinBetaPairing (2.3s)
+✔ [4345/4552] Built ConditionalGoldbach.Proofs.MellinContourShift (2.3s)
+✔ [4346/4552] Built ConditionalGoldbach.Proofs.MellinDifferentiation (2.7s)
+✔ [4347/4552] Built ConditionalGoldbach.Proofs.HadamardFactors (2.2s)
+✔ [4348/4552] Built ConditionalGoldbach.Proofs.HardyRawNorm (3.3s)
+✔ [4349/4552] Built ConditionalGoldbach.Proofs.SpectralDictionary (4.3s)
+✔ [4350/4552] Built ConditionalGoldbach.Proofs.CharacterZeroReflection (2.0s)
+✔ [4351/4552] Built ConditionalGoldbach.Proofs.SpectralPositiveTrace (2.6s)
+✔ [4352/4552] Built ConditionalGoldbach.Proofs.SpectralCompletionChoice (5.9s)
+✔ [4353/4552] Built ConditionalGoldbach.Proofs.CharacterZeroCounting (5.1s)
+✔ [4354/4552] Built ConditionalGoldbach.Proofs.SpectralHilbertSchmidt (8.8s)
+✔ [4355/4552] Built ConditionalGoldbach.Proofs.MellinProjection (2.7s)
+✔ [4356/4552] Built ConditionalGoldbach.Proofs.CharacterAnalytic (2.1s)
+✔ [4357/4552] Built ConditionalGoldbach.Proofs.CharacterGrowth (7.8s)
+✔ [4358/4552] Built ConditionalGoldbach.Proofs.DensityResidue (2.2s)
+✔ [4359/4552] Built ConditionalGoldbach.Proofs.ModelContinuation (2.3s)
+✔ [4360/4552] Built ConditionalGoldbach.Proofs.PrimePowerDouble (2.1s)
+✔ [4361/4552] Built ConditionalGoldbach.Proofs.MellinBetaConvolution (2.5s)
+✔ [4362/4552] Built ConditionalGoldbach.Proofs.MellinCompactPositive (2.7s)
+✔ [4363/4552] Built ConditionalGoldbach.Proofs.MellinTestInversion (2.3s)
+✔ [4364/4552] Built ConditionalGoldbach.Proofs.HadamardDiskFactor (1.0s)
+✔ [4365/4552] Built ConditionalGoldbach.Proofs.HardyEvaluation (2.5s)
+✔ [4366/4552] Built ConditionalGoldbach.Proofs.HardyKernelOperator (6.4s)
+ℹ [4367/4552] Built ConditionalGoldbach.Proofs.SpectralCompletedLGrowth (4.6s)
+info: ConditionalGoldbach/Proofs/SpectralCompletedLGrowth.lean:202:88: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4368/4552] Built ConditionalGoldbach.Proofs.CharacterZeroCompactSets (1.8s)
+✔ [4369/4552] Built ConditionalGoldbach.Proofs.CharacterEulerCorrection (2.1s)
+✔ [4370/4552] Built ConditionalGoldbach.Proofs.CompletedLZeros (1.0s)
+✔ [4371/4552] Built ConditionalGoldbach.Proofs.SpectralRankOneSeries (2.7s)
+ℹ [4372/4552] Built ConditionalGoldbach.Proofs.CharacterZeroLocalBounds (3.8s)
+info: ConditionalGoldbach/Proofs/CharacterZeroLocalBounds.lean:83:36: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4373/4552] Built ConditionalGoldbach.Proofs.SpectralProductBasis (2.4s)
+✔ [4374/4552] Built ConditionalGoldbach.Proofs.SpectralBasisExistence (2.4s)
+✔ [4375/4552] Built ConditionalGoldbach.Proofs.MellinMoment (2.4s)
+✔ [4376/4552] Built ConditionalGoldbach.Proofs.CharacterJoint (2.4s)
+✔ [4377/4552] Built ConditionalGoldbach.Proofs.BaselineEuler (2.4s)
+✔ [4378/4552] Built ConditionalGoldbach.Proofs.DensityConvergence (2.1s)
+✔ [4379/4552] Built ConditionalGoldbach.Proofs.ResidualAnalytic (2.1s)
+✔ [4380/4552] Built ConditionalGoldbach.Proofs.GammaQuotientBound (2.3s)
+✔ [4381/4552] Built ConditionalGoldbach.Proofs.WidePrimePowerCount (2.3s)
+✔ [4382/4552] Built ConditionalGoldbach.Proofs.MellinConvolutionTransform (2.6s)
+✔ [4383/4552] Built ConditionalGoldbach.Proofs.FiniteMellin (2.6s)
+ℹ [4384/4552] Built ConditionalGoldbach.Proofs.QuadraticDensity (2.3s)
+info: ConditionalGoldbach/Proofs/QuadraticDensity.lean:116:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4385/4552] Built ConditionalGoldbach.Proofs.HadamardApproximation (2.5s)
+✔ [4386/4552] Built ConditionalGoldbach.Proofs.HardyReproducing (2.7s)
+✔ [4387/4552] Built ConditionalGoldbach.Proofs.HardyWeakLimit (3.7s)
+✔ [4388/4552] Built ConditionalGoldbach.Proofs.HardyKernelPairing (2.2s)
+✔ [4389/4552] Built ConditionalGoldbach.Proofs.CharacterEulerBounds (2.5s)
+✔ [4390/4552] Built ConditionalGoldbach.Proofs.CharacterGammaFactor (2.4s)
+✔ [4391/4552] Built ConditionalGoldbach.Proofs.SpectralHardyRankSeries (4.2s)
+✔ [4392/4552] Built ConditionalGoldbach.Proofs.CharacterZeroSummability (2.8s)
+✔ [4393/4552] Built ConditionalGoldbach.Proofs.SpectralPositiveFredholm (2.0s)
+✔ [4394/4552] Built ConditionalGoldbach.Proofs.SpectralHilbertSchmidtCompact (2.9s)
+✔ [4395/4552] Built ConditionalGoldbach.Proofs.SpectralNormAttainment (2.0s)
+✔ [4396/4552] Built ConditionalGoldbach.Proofs.MellinCharacterShift (2.9s)
+✔ [4397/4552] Built ConditionalGoldbach.Proofs.MellinDoubleSeries (2.5s)
+✔ [4398/4552] Built ConditionalGoldbach.Proofs.MellinModelSampling (2.2s)
+✔ [4399/4552] Built ConditionalGoldbach.Proofs.DensityArithmetic (2.3s)
+✔ [4400/4552] Built ConditionalGoldbach.Proofs.KernelRegularity (2.3s)
+✔ [4401/4552] Built ConditionalGoldbach.Proofs.SpectralModelBound (2.8s)
+✔ [4402/4552] Built ConditionalGoldbach.Proofs.WideMainIntegral (2.1s)
+✔ [4403/4552] Built ConditionalGoldbach.Proofs.FiniteMellinProjection (2.1s)
+✔ [4404/4552] Built ConditionalGoldbach.Proofs.MellinBetaRelation (2.4s)
+✔ [4405/4552] Built ConditionalGoldbach.Proofs.QuadraticRiesz (2.3s)
+✔ [4406/4552] Built ConditionalGoldbach.Proofs.HardyRawLines (2.7s)
+✔ [4407/4552] Built ConditionalGoldbach.Proofs.GammaSequenceBounds (1.9s)
+✔ [4408/4552] Built ConditionalGoldbach.Proofs.GammaResolventBounds (2.5s)
+✔ [4409/4552] Built ConditionalGoldbach.Proofs.SpectralPerronBounds (3.4s)
+✔ [4410/4552] Built ConditionalGoldbach.Proofs.CharacterZeroNormal (4.2s)
+✔ [4411/4552] Built ConditionalGoldbach.Proofs.SpectralZeroPower (2.7s)
+✔ [4412/4552] Built ConditionalGoldbach.Proofs.SpectralTraceBounds (2.0s)
+✔ [4413/4552] Built ConditionalGoldbach.Proofs.CharacterPoissonAnchor (13s)
+✔ [4414/4552] Built ConditionalGoldbach.Proofs.SpectralL2Kernel (3.2s)
+✔ [4415/4552] Built ConditionalGoldbach.Proofs.MellinMomentComplete (2.1s)
+✔ [4416/4552] Built ConditionalGoldbach.Proofs.MellinDiagonal (2.4s)
+✔ [4417/4552] Built ConditionalGoldbach.Proofs.SpectralCompression (9.8s)
+✔ [4418/4552] Built ConditionalGoldbach.Proofs.DensityEulerIdentity (2.1s)
+✔ [4419/4552] Built ConditionalGoldbach.Proofs.HardyKernelResidual (4.0s)
+✔ [4420/4552] Built ConditionalGoldbach.Proofs.FiniteExperimentSpectrum (5.1s)
+✔ [4421/4552] Built ConditionalGoldbach.Proofs.WideCounting (2.0s)
+✔ [4422/4552] Built ConditionalGoldbach.Proofs.FiniteModelBasic (3.2s)
+✔ [4423/4552] Built ConditionalGoldbach.Proofs.FiniteMellinDouble (3.2s)
+✔ [4424/4552] Built ConditionalGoldbach.Proofs.FiniteCharacterShift (3.0s)
+ℹ [4425/4552] Built ConditionalGoldbach.Proofs.FiniteFunctional (3.2s)
+info: ConditionalGoldbach/Proofs/FiniteFunctional.lean:118:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4426/4552] Built ConditionalGoldbach.Proofs.HardyContourShift (2.0s)
+✔ [4427/4552] Built ConditionalGoldbach.Proofs.QuadraticNormChange (3.7s)
+✔ [4428/4552] Built ConditionalGoldbach.Proofs.GammaDerivativeLimit (2.7s)
+✔ [4429/4552] Built ConditionalGoldbach.Proofs.CharacterZeroShiftNormal (2.6s)
+✔ [4430/4552] Built ConditionalGoldbach.Proofs.CharacterZeroMultiplicity (2.8s)
+✔ [4431/4552] Built ConditionalGoldbach.Proofs.HilbertSchmidtTriangle (3.2s)
+✔ [4432/4552] Built ConditionalGoldbach.Proofs.SpectralL2KernelAdjoint (2.5s)
+✔ [4433/4552] Built ConditionalGoldbach.Proofs.SpectralL2KernelBasis (2.5s)
+✔ [4434/4552] Built ConditionalGoldbach.Proofs.MellinModelRemovable (2.2s)
+✔ [4435/4552] Built ConditionalGoldbach.Proofs.BaselineProductLink (2.4s)
+✔ [4436/4552] Built ConditionalGoldbach.Proofs.SpectralModelEuler (3.3s)
+✔ [4437/4552] Built ConditionalGoldbach.Proofs.ZetaGrowth (3.3s)
+✔ [4438/4552] Built ConditionalGoldbach.Proofs.WideMoments (3.8s)
+✔ [4439/4552] Built ConditionalGoldbach.Proofs.WideModelData (3.4s)
+✔ [4440/4552] Built ConditionalGoldbach.Proofs.FiniteModelBetaPairing (3.0s)
+✔ [4441/4552] Built ConditionalGoldbach.Proofs.FiniteModelConvolution (4.7s)
+✔ [4442/4552] Built ConditionalGoldbach.Proofs.WideFunctional (3.6s)
+✔ [4443/4552] Built ConditionalGoldbach.Proofs.QuadraticFunctional (3.9s)
+✔ [4444/4552] Built ConditionalGoldbach.Proofs.VariableWeightNorm (5.3s)
+✔ [4445/4552] Built ConditionalGoldbach.Proofs.SpectralPerronIntegral (4.6s)
+✔ [4446/4552] Built ConditionalGoldbach.Proofs.GammaDifference (2.0s)
+✔ [4447/4552] Built ConditionalGoldbach.Proofs.HardyGaussian (3.8s)
+✔ [4448/4552] Built ConditionalGoldbach.Proofs.HadamardLimit (3.8s)
+✔ [4449/4552] Built ConditionalGoldbach.Proofs.SpectralBoundaryBlocks (5.6s)
+✔ [4450/4552] Built ConditionalGoldbach.Proofs.MellinModelShift (4.1s)
+✔ [4451/4552] Built ConditionalGoldbach.Proofs.PoleModel (5.8s)
+✔ [4452/4552] Built ConditionalGoldbach.Proofs.KernelGrowthBounds (4.0s)
+✔ [4453/4552] Built ConditionalGoldbach.Proofs.TotientLogLog (4.6s)
+✔ [4454/4552] Built ConditionalGoldbach.Proofs.MomentError (2.7s)
+✔ [4455/4552] Built ConditionalGoldbach.Proofs.ZetaTruncation (7.0s)
+✔ [4456/4552] Built ConditionalGoldbach.Proofs.WideMellinArithmetic (3.9s)
+✔ [4457/4552] Built ConditionalGoldbach.Proofs.FiniteModelBetaConvolution (3.5s)
+✔ [4458/4552] Built ConditionalGoldbach.Proofs.FiniteModelSampling (2.4s)
+ℹ [4459/4552] Built ConditionalGoldbach.Proofs.VariableWeightAsymptotic (4.5s)
+info: ConditionalGoldbach/Proofs/VariableWeightAsymptotic.lean:64:94: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4460/4552] Built ConditionalGoldbach.Proofs.BalanceBounds (3.4s)
+✔ [4461/4552] Built ConditionalGoldbach.Proofs.SpectralPerronPoleIntegral (4.4s)
+ℹ [4462/4552] Built ConditionalGoldbach.Proofs.HardyGaussianDensity (4.1s)
+info: ConditionalGoldbach/Proofs/HardyGaussianDensity.lean:121:2: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4463/4552] Built ConditionalGoldbach.Proofs.CharacterZeroExpansion (2.8s)
+✔ [4464/4552] Built ConditionalGoldbach.Proofs.SpectralHardyCompression (2.9s)
+✔ [4465/4552] Built ConditionalGoldbach.Proofs.MellinModelSingle (2.3s)
+✔ [4466/4552] Built ConditionalGoldbach.Proofs.WideError (2.4s)
+✔ [4467/4552] Built ConditionalGoldbach.Proofs.FiniteModelBetaTransform (3.3s)
+✔ [4468/4552] Built ConditionalGoldbach.Proofs.SpectralModelGrowth (4.5s)
+✔ [4469/4552] Built ConditionalGoldbach.Proofs.FiniteModelRemovable (2.3s)
+✔ [4470/4552] Built ConditionalGoldbach.Proofs.BalanceLimits (2.7s)
+✔ [4471/4552] Built ConditionalGoldbach.Proofs.HardyGaussianSpace (3.6s)
+✔ [4472/4552] Built ConditionalGoldbach.Proofs.PoleLogDerivative (3.7s)
+✔ [4473/4552] Built ConditionalGoldbach.CharacterEstimatePrerequisites (2.6s)
+✔ [4474/4552] Built ConditionalGoldbach.Proofs.CharacterPoissonIdentity (3.5s)
+✔ [4475/4552] Built ConditionalGoldbach.Proofs.SpectralL2BasisExistence (3.6s)
+✔ [4476/4552] Built ConditionalGoldbach.Proofs.MellinModelBound (4.2s)
+✔ [4477/4552] Built ConditionalGoldbach.Proofs.FiniteModelBetaRelation (3.4s)
+✔ [4478/4552] Built ConditionalGoldbach.Proofs.FiniteModelShift (2.5s)
+ℹ [4479/4552] Built ConditionalGoldbach.Proofs.HardyGaussianRepresentation (3.4s)
+info: ConditionalGoldbach/Proofs/HardyGaussianRepresentation.lean:55:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: ConditionalGoldbach/Proofs/HardyGaussianRepresentation.lean:64:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4480/4552] Built ConditionalGoldbach.Proofs.PoleZeta (3.2s)
+✔ [4481/4552] Built ConditionalGoldbach.Proofs.PoleCharacterKernel (3.2s)
+✔ [4482/4552] Built ConditionalGoldbach.Proofs.FiniteModelBound (3.6s)
+✔ [4483/4552] Built ConditionalGoldbach.Proofs.MellinModelDouble (3.7s)
+✔ [4484/4552] Built ConditionalGoldbach.Proofs.FiniteModelSingle (3.1s)
+✔ [4485/4552] Built ConditionalGoldbach.Proofs.HardyConverse (2.7s)
+✔ [4486/4552] Built ConditionalGoldbach.ModelMellinPrerequisites (2.6s)
+✔ [4487/4552] Built ConditionalGoldbach.Proofs.FiniteModelDouble (3.6s)
+✔ [4488/4552] Built ConditionalGoldbach.Proofs.HardyContinuousBoundary (4.6s)
+✔ [4489/4552] Built ConditionalGoldbach.Proofs.MellinResidual (3.8s)
+✔ [4490/4552] Built ConditionalGoldbach.Proofs.WideMellinModel (2.0s)
+✔ [4491/4552] Built ConditionalGoldbach.Proofs.SpectralDiagonalVector (4.2s)
+✔ [4492/4552] Built ConditionalGoldbach.Proofs.HardyKernelColumns (5.3s)
+✔ [4493/4552] Built ConditionalGoldbach.ResidualMellinPrerequisites (2.5s)
+✔ [4494/4552] Built ConditionalGoldbach.Proofs.SpectralDiagonalTrace (3.0s)
+✔ [4495/4552] Built ConditionalGoldbach.Proofs.HardyKernelMajorant (2.9s)
+✔ [4496/4552] Built ConditionalGoldbach.Proofs.SpectralDiagonalOperator (3.3s)
+✔ [4497/4552] Built ConditionalGoldbach.Proofs.SpectralPerronFubini (5.2s)
+✔ [4498/4552] Built ConditionalGoldbach.Proofs.VariableStripOperators (5.0s)
+✔ [4499/4552] Built ConditionalGoldbach.Proofs.ArithmeticKernelRealization (3.5s)
+✔ [4500/4552] Built ConditionalGoldbach.Proofs.SpectralDiagonalBound (4.0s)
+ℹ [4501/4552] Built ConditionalGoldbach.Proofs.SpectralPerronGamma (5.5s)
+info: ConditionalGoldbach/Proofs/SpectralPerronGamma.lean:79:18: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4502/4552] Built ConditionalGoldbach.Proofs.PoleLowerBound (4.8s)
+✔ [4503/4552] Built ConditionalGoldbach.Proofs.HardyArithmeticTheorems (3.9s)
+✔ [4504/4552] Built ConditionalGoldbach.EarlyAnalyticPrerequisites (2.5s)
+✔ [4505/4552] Built ConditionalGoldbach.Proofs.WeightedComponentKernel (3.4s)
+✔ [4506/4552] Built ConditionalGoldbach.Proofs.CharacterHardyVectors (2.9s)
+✔ [4507/4552] Built ConditionalGoldbach.Proofs.QuadraticIdentity (4.5s)
+✔ [4508/4552] Built ConditionalGoldbach.Proofs.SpectralModelOperator (4.7s)
+✔ [4509/4552] Built ConditionalGoldbach.Proofs.ArithmeticComponentOperators (4.0s)
+✔ [4510/4552] Built ConditionalGoldbach.Proofs.HardyFiniteGram (4.0s)
+✔ [4511/4552] Built ConditionalGoldbach.AnalyticPrerequisites (2.9s)
+✔ [4512/4552] Built ConditionalGoldbach.Proofs.VariableComponentOperators (3.4s)
+✔ [4513/4552] Built ConditionalGoldbach.Proofs.FiniteQuadratic (4.4s)
+✔ [4514/4552] Built ConditionalGoldbach.Proofs.CharacterGramOperator (5.2s)
+✔ [4515/4552] Built ConditionalGoldbach.Proofs.DictionaryApplication (5.2s)
+✔ [4516/4552] Built ConditionalGoldbach.Proofs.WideQuadratic (3.4s)
+✔ [4517/4552] Built ConditionalGoldbach.Proofs.CharacterTraceBounds (4.9s)
+✔ [4518/4552] Built ConditionalGoldbach.Proofs.VariableQuadratic (5.3s)
+✔ [4519/4552] Built ConditionalGoldbach.Proofs.Main (4.8s)
+✔ [4520/4552] Built ConditionalGoldbach.Proofs.SpectralConsequences (4.1s)
+✔ [4521/4552] Built ConditionalGoldbach.Proofs.WideMellinResidual (4.6s)
+✔ [4522/4552] Built ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy (7.3s)
+✔ [4523/4552] Built ConditionalGoldbach.Proofs.CharacterShortPolynomial (5.8s)
+✔ [4524/4552] Built ConditionalGoldbach.Proofs.CharacterStripTrace (6.1s)
+✔ [4525/4552] Built ConditionalGoldbach.Proofs.PoleSpectralObstruction (12s)
+✔ [4526/4552] Built ConditionalGoldbach.Proofs.QuadraticEstimates (7.0s)
+✔ [4527/4552] Built ConditionalGoldbach.Proofs.SpectralCompletion (3.1s)
+✔ [4528/4552] Built ConditionalGoldbach.Proofs.PrimePairs (3.5s)
+✔ [4529/4552] Built ConditionalGoldbach.Proofs.HalfPlanePoisson (3.9s)
+✔ [4530/4552] Built ConditionalGoldbach.Proofs.SpectralPerronEuler (3.7s)
+✔ [4531/4552] Built ConditionalGoldbach.Proofs.SpectralPerronSeries (3.0s)
+✔ [4532/4552] Built ConditionalGoldbach.Proofs.CharacterReferencePolynomial (4.3s)
+✔ [4533/4552] Built ConditionalGoldbach.Proofs.ComponentNormBounds (4.1s)
+✔ [4534/4552] Built ConditionalGoldbach.Proofs.PoleObstruction (3.9s)
+✔ [4535/4552] Built ConditionalGoldbach.Proofs.SpectralCompletionUniform (3.3s)
+ℹ [4536/4552] Built ConditionalGoldbach.Proofs.SpectralPerronTruncation (5.1s)
+info: ConditionalGoldbach/Proofs/SpectralPerronTruncation.lean:162:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+✔ [4537/4552] Built ConditionalGoldbach.Proofs.CharacterReferenceEnergy (5.7s)
+✔ [4538/4552] Built ConditionalGoldbach.Proofs.SpectralQuantitative (6.5s)
+✔ [4539/4552] Built ConditionalGoldbach.Proofs.SpectralCompletionZeros (7.4s)
+✔ [4540/4552] Built ConditionalGoldbach.Proofs.CharacterHalfPlane (3.8s)
+✔ [4541/4552] Built ConditionalGoldbach.Proofs.SpectralCompletionIdentities (9.7s)
+✔ [4542/4552] Built ConditionalGoldbach.Proofs.PoissonWeightedEnergy (3.5s)
+✔ [4543/4552] Built ConditionalGoldbach.Proofs.SpectralCompletionDeterminant (2.9s)
+✔ [4544/4552] Built ConditionalGoldbach.Proofs.CharacterPoissonComparison (4.0s)
+✔ [4545/4552] Built ConditionalGoldbach.Proofs.SpectralCompletionMultiplicities (3.1s)
+✔ [4546/4552] Built ConditionalGoldbach.Proofs.CharacterAverageAssembly (12s)
+✔ [4547/4552] Built ConditionalGoldbach.Proofs.CharacterAverage (3.3s)
+✔ [4548/4552] Built ConditionalGoldbach.Proofs.QuantitativeBounds (2.0s)
+✔ [4549/4552] Built ConditionalGoldbach.Proofs.VariableConsequences (2.7s)
+✔ [4550/4552] Built ConditionalGoldbach.Remaining (2.0s)
+✔ [4551/4552] Built ConditionalGoldbach (2.1s)
+Build completed successfully (4552 jobs).

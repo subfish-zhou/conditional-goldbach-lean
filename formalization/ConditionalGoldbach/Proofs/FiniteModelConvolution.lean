@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.FiniteModelBasic
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelBasic
 
 /-! C6 convolution densities with general positive compact support and nonsymmetric mass. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

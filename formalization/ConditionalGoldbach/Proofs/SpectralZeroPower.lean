@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroSummability
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroSummability
 
 /-! Fractional-power summability of the multiplicity-indexed zeros, for Perron--Hadamard Fubini. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -51,7 +55,7 @@ lemma primitive_zero_floor_five_quarters_summable {d : ℕ} [NeZero d] (χ : Cha
   have hfinite (k : ℤ) : (zeroWindow χ k).Finite := (hc k).1
   have hsums (k : ℤ) : (∑' p : zeroWindow χ k, f p) =
       ((zeroWindow χ k).ncard : ℝ) * (1 + |(k : ℝ)|)^(-(5 / 4 : ℝ)) := by
-    letI := (hfinite k).fintype
+    let := (hfinite k).fintype
     have he (p : zeroWindow χ k) : f p = (1 + |(k : ℝ)|)^(-(5 / 4 : ℝ)) := by
       dsimp [f]
       rw [Int.floor_eq_iff.mpr p.property]
@@ -59,7 +63,7 @@ lemma primitive_zero_floor_five_quarters_summable {d : ℕ} [NeZero d] (χ : Cha
     rw [tsum_fintype, Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
     congr 2
     exact (Nat.card_eq_fintype_card).symm
-  refine ⟨fun k => by letI := (hfinite k).fintype; exact (hasSum_fintype _).summable, ?_⟩
+  refine ⟨fun k => by let := (hfinite k).fintype; exact (hasSum_fintype _).summable, ?_⟩
   simp_rw [hsums]
   have hs := (summable_logarithmic_zero_five_quarters d
     (Nat.one_le_iff_ne_zero.mpr (NeZero.ne d))).mul_left C
@@ -69,7 +73,7 @@ lemma primitive_zero_floor_five_quarters_summable {d : ℕ} [NeZero d] (χ : Cha
   intro k
   have hb := mul_le_mul_of_nonneg_right (hc k).2
     (Real.rpow_nonneg (show 0 ≤ 1 + |(k : ℝ)| by positivity) (-(5 / 4 : ℝ)))
-  convert hb using 1 <;> rw [Real.rpow_neg (by positivity), div_eq_mul_inv] <;> ring
+  convert hb using 1; rw [Real.rpow_neg (by positivity), div_eq_mul_inv]; ring
 
 lemma negative_rpow_comparison {A B C : ℝ} (hA : 0 < A) (hB : 0 < B) (hC : 0 < C)
     (h : A ≤ C * B) {r : ℝ} (hr : 0 ≤ r) :

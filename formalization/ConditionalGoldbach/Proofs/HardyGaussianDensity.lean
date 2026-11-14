@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyGaussian
+module
+
+public import ConditionalGoldbach.Proofs.HardyGaussian
 
 /-! The classical Fourier density of a Gaussian-regularized Hardy function. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -68,7 +72,6 @@ lemma hardyGaussianDensity_eq_fourier {a b x ε : ℝ} (hab : a < b) {f : ℂ �
     have hphase : -2 * Real.pi * inner ℝ t (τ / (2 * Real.pi)) = -t * τ := by
       simp only [Real.inner_apply]
       field_simp
-      <;> ring
     rw [hphase, smul_eq_mul]
   rw [hfourier]
   unfold hardyGaussianDensity

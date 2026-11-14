@@ -1,6 +1,6 @@
 """Render the current independent audit as an offline English or Chinese page."""
 from pathlib import Path
-import argparse, base64, hashlib, html, json, re, subprocess
+import argparse, base64, hashlib, html, json, re, subprocess, sys
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
@@ -13,6 +13,9 @@ suffix='' if is_en else '.zh'
 audit=Path(__file__).resolve().parent
 project=audit.parents[1]
 root=project.parent
+sys.path.insert(0, str(project/'scripts'))
+from project_sources import declaration_source
+from update_verification import verify_comparator_inputs
 read=lambda p:json.loads(p.read_text())
 esc=html.escape
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -23,6 +26,7 @@ assert result['library_sources_unchanged'] and result['reference_sources_unchang
 build=read(project/'verification/current-build.json')
 assert build['exit_code']==0, 'Current project build has not passed'
 manifest=read(audit/'comparator-manifest.json')
+verify_comparator_inputs(result, manifest)
 checks=read(audit/'independent-full-types.json')
 assert len(checks)==103 and all(r['full_type_definitionally_equal'] for r in checks)
 assert {(r['expected'],r['actual']) for r in checks}=={(r['expected'],r['actual']) for r in manifest['statements']}
@@ -94,7 +98,7 @@ for r in manifest['statements']:
         r'先固定 \(c>0\)，再选择常数与阈值；统一谱估计的常数独立于权函数 \(\phi\) 和增长函数 \(h\)。')
     expected=snippet(audit/r['audit_group']/ref_file[r['audit_group']],r['expected'])
     live=source_decl[r['actual']]
-    livecode=snippet(project/live['file'],line=live['line'])
+    livecode=declaration_source(project/live['file'],live['source_range'])
     note=''
     if not is_en:
         info=fresh.get(r['actual'],{})
@@ -138,8 +142,9 @@ if is_en:
 <p>The TeX-to-Lean correspondence is checked by mathematical review. Lean checks equality between the independent references and the proved statements, and the comparator replays the proof dependencies.</p>
 <h2>Current source and verification</h2><table><tr><th>Measure</th><th>Result</th></tr>
 <tr><td>Proof source, including the entry point</td><td>{len(source_files)} files; {source_lines:,} lines; {nonempty_lines:,} nonempty lines</td></tr>
-<tr><td>Current project build</td><td>{build['wall_seconds']:.2f} seconds · passed · <a href="../current-build.json">build record</a></td></tr>
+<tr><td>Latest build check</td><td>{build['wall_seconds']:.2f} seconds · passed · <a href="../current-build.json">build record</a></td></tr>
 <tr><td>Comparator run</td><td>{cmp['wall_seconds']:.2f} seconds · Lean kernel replay with dependency checks</td></tr></table>
+<p><a href="../../../docs/quality-refactor.md">Refactor measurements: source size, imports, and full rebuild timings</a></p>
 <h2>Mechanical checks</h2><p class="pass">103 complete proposition types match; 96 independent definition-body equalities and {len(manifest['semantic_bridges'])} semantic bridges pass. The direct enumeration certificate establishes 905 unordered prime pairs. All {manifest['target_count']} comparator targets pass with only propext, Classical.choice, and Quot.sound permitted.</p>
 <p>The 103 propositions comprise the original 102 and Appendix A.2's constant-independence result. The 96 definition comparisons include repeated checks across sections. Negative controls changing a condition, swapping quantifiers, or replacing a definition are rejected.</p>
 <p>Challenge declarations specify comparison targets. Solution declarations provide the proofs, whose transitive axiom sets are checked by the comparator.</p>
@@ -156,8 +161,9 @@ else:
 <p>TeX到独立Lean参考的对应经过数学语义审阅；Lean检查独立参考与实际证明的完整类型等同性，comparator重放证明依赖。</p>
 <h2>当前源码与验证</h2><table><tr><th>项目</th><th>结果</th></tr>
 <tr><td>含入口的证明源码</td><td>{len(source_files)}个文件；{source_lines:,}行；非空行{nonempty_lines:,}</td></tr>
-<tr><td>本次项目编译</td><td>{build['wall_seconds']:.2f}秒 · 通过 · <a href="../current-build.json">构建记录</a></td></tr>
+<tr><td>最近一次构建检查</td><td>{build['wall_seconds']:.2f}秒 · 通过 · <a href="../current-build.json">构建记录</a></td></tr>
 <tr><td>Comparator</td><td>{cmp['wall_seconds']:.2f}秒 · Lean内核重放与传递依赖检查</td></tr></table>
+<p><a href="../../../docs/quality-refactor.zh.md">本轮改造：源码规模、导入闭包与全量重编译耗时</a></p>
 <h2>机械检查</h2><p class="pass">103项完整命题类型一致；96项独立定义体等式；{len(manifest['semantic_bridges'])}项语义桥梁；直接枚举认证905个无序素数对。全部{manifest['target_count']}个comparator目标通过，仅允许propext、Classical.choice、Quot.sound。</p>
 <p>103项包括原102项与附录A.2的常数独立性结果。96项定义对照含跨章节重复核查。改变条件、交换量词、替换定义的对照实验均被拒绝。</p>
 <h2>接口与语义桥梁</h2><ul><li>PositiveKernel的实部非负性结合Hermitian定理与二次型实值性，对应复正核。</li><li>Module.finrank上界与有限维定理共同使用。</li><li>completedL的整延拓在适用域与Gamma公式一致，零点及重数与原L函数对应。</li><li>加权L²实现通过唯一表示、边界极限、闭迹空间和积分算子的存在唯一性连接原文Hardy空间；补零特征值保持谱乘积与平方和。</li><li>variable_uniform_spectral_bound给出独立于权函数的常数；字符和截断经过语义审阅，独立等式桥梁列于清单。</li></ul>
@@ -174,6 +180,6 @@ page=f'''<!doctype html><html lang="{choose('en','zh-CN')}"><meta charset="utf-8
 <script>document.getElementById('search').addEventListener('input',function(){{const q=this.value.toLowerCase().trim();document.querySelectorAll('.item').forEach(e=>e.hidden=!e.dataset.search.includes(q));}});</script></html>'''
 output=audit/f'report{suffix}.html'
 output.write_text(page)
-record=dict(language=args.lang,html_sha256=sha(output),bytes=len(page.encode()),statement_cards=len(cards),math_count=len(formulas),math_errors=rendered['errors'],current_build_sha256=sha(project/'verification/current-build.json'))
+record=dict(language=args.lang,html_sha256=sha(output),bytes=len(page.encode()),statement_cards=len(cards),math_count=len(formulas),math_errors=rendered['errors'],current_build_sha256=sha(project/'verification/current-build.json'), comparator_result_sha256=sha(audit/'comparator-result.json'), proof_status_sha256=sha(project/'proof-status.json'))
 (audit/choose('report-build.json','report-zh-build.json')).write_text(json.dumps(record,indent=2)+'\n')
 print(json.dumps(dict(report=str(output),**record),indent=2))

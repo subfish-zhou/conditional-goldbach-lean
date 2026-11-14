@@ -1,10 +1,14 @@
-import ConditionalGoldbach.Proofs.CharacterPoissonIdentity
-import ConditionalGoldbach.Proofs.CharacterPoissonAnchor
-import ConditionalGoldbach.Proofs.CharacterHalfPlane
-import ConditionalGoldbach.Proofs.GammaDifference
-import ConditionalGoldbach.Proofs.CharacterEulerBounds
+module
+
+public import ConditionalGoldbach.Proofs.CharacterPoissonIdentity
+public import ConditionalGoldbach.Proofs.CharacterPoissonAnchor
+public import ConditionalGoldbach.Proofs.CharacterHalfPlane
+public import ConditionalGoldbach.Proofs.GammaDifference
+public import ConditionalGoldbach.Proofs.CharacterEulerBounds
 
 /-! The uniform logarithmic error between the positive zero sum and the real part of L'/L. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology
@@ -42,7 +46,7 @@ lemma zeroPoisson_logDerivative_comparison : ∃ C : ℝ, 0 < C ∧
   have he' : zeroPoisson χ x t-(logDerivative χ (line x t)).re =
       zeroPoisson χ (3/2) t+W.re := by
     dsimp [W]
-    simp only [add_re,sub_re,neg_re] at he ⊢
+    simp only [add_re,sub_re] at he ⊢
     linarith
   have hQ0 : 0 ≤ zeroPoisson χ (3/2) t := tsum_nonneg (fun _ => by positivity)
   have hW : ‖W‖ ≤ B+8*Real.log N := by

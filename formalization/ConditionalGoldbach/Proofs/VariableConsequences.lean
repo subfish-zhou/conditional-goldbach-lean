@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.QuantitativeBounds
+module
+
+public import ConditionalGoldbach.Proofs.QuantitativeBounds
 
 /-! The full parameterized spectral and arithmetic conclusions, with their shared constant. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open Set Filter
@@ -60,7 +64,7 @@ theorem proposition_A_2 (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : ℝ) (hc : 0
       refine ⟨k,?_⟩
       intro N hNk hN hGRH
       obtain ⟨hwidth,hηsmall,hN4,hlarge⟩ := hk N hNk hN
-      letI : NeZero N := ⟨by omega⟩
+      let : NeZero N := ⟨by omega⟩
       have hNp : 0<(N:ℝ) := by exact_mod_cast (show 0<N by omega)
       have hlog : 0<Real.log N := Real.log_pos (by exact_mod_cast (show 1<N by omega))
       have hh : 0<h N := hS.1.1 N hN hN4
@@ -77,7 +81,7 @@ theorem proposition_A_2 (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : ℝ) (hc : 0
       refine ⟨k,?_⟩
       intro N hNk hN hGRH
       obtain ⟨hR',hN4,hlarge⟩ := hk N hNk hN
-      letI : NeZero N := ⟨by omega⟩
+      let : NeZero N := ⟨by omega⟩
       have hNp : 0<(N:ℝ) := by exact_mod_cast (show 0<N by omega)
       have hlog : 0<Real.log N := Real.log_pos (by exact_mod_cast (show 1<N by omega))
       have ha10 := (variable_parameters N hN4 c hc hlarge).2.1

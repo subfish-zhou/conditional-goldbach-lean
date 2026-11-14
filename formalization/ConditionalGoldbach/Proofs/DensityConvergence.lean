@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.DensityResidue
-import ConditionalGoldbach.Proofs.SingularLower
+module
+
+public import ConditionalGoldbach.Proofs.DensityResidue
+public import ConditionalGoldbach.Proofs.SingularLower
 
 /-! Absolute convergence of the density Dirichlet series via a divisor majorant. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff LSeries.notation

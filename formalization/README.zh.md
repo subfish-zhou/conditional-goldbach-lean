@@ -2,7 +2,7 @@
 
 [English](README.md) · [证明浏览页](progress.html) · [公理台账](proof-status.json)
 
-原审阅的102条声明全部证明闭合，包含正文及附录A/B。公共定理与辅助结果共1354条。主结论在GRH和谱条件S/R下给出充分大偶数的渐近式，常数与h的量词顺序与原文一致；171个原定义通过定义体检查。
+原审阅的102条声明全部证明闭合，包含正文及附录A/B。公共定理与辅助结果共1386条。主结论在GRH和谱条件S/R下给出充分大偶数的渐近式，常数与h的量词顺序与原文一致；171个原定义通过定义体检查。
 
 `theorem_1_1`、`theorem_1_2` 和 `primePair_consequence` 的传递证明依赖均已闭合。
 
@@ -15,7 +15,8 @@
 ```bash
 lake update
 lake exe cache get
-lake build
+lake --wfail build
+python3 scripts/check_entrypoints.py
 python3 scripts/audit_proofs.py
 python3 scripts/check_reviewed_types.py
 python3 scripts/check_definitions.py
@@ -24,6 +25,8 @@ python3 scripts/build_progress.py
 ```
 
 工具链固定Lean 4.35.0。Lake使用固定提交的Git依赖，详见[依赖说明](../docs/dependencies.zh.md)。HTML生成所需可选依赖列于 `requirements-review.txt` 和 `package.json`；现成页面可离线阅读。
+
+[按用途选择导入入口](../docs/imports.zh.md)列出独立消费者及其依赖边界检查。
 
 ## 验证材料
 
@@ -34,3 +37,7 @@ python3 scripts/build_progress.py
 - [独立审计页](verification/independent-audit/report.html)：原始TeX审阅、表示桥梁与比较器结果。
 
 `reference/Reviewed.lean` 保存早期陈述审阅快照。当前主库导入完成的证明模块。完整模块索引及102条声明的源码链接见[英文README](README.md)。
+
+## 定义分层
+
+`Definitions/` 按 14 个数学主题组织原定义，`BaseDefinitions.lean` 和 `Definitions.lean` 保留原有导出入口。`SpectralDataAlgebra` 提供纯 Hilbert 空间的谱数据引理，`MellinDoubleDiagonal` 共用于主文和附录 B。详见[改造与性能对比](../docs/quality-refactor.zh.md)。

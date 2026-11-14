@@ -1,0 +1,12 @@
+{
+  "label": "summary",
+  "command": [
+    "python3",
+    "scripts/refresh_audit_summary.py"
+  ],
+  "exit_code": 0,
+  "start_utc": "2026-11-14T11:56:22.390711+00:00",
+  "wall_seconds": 0.4054553098976612,
+  "log": "verification/current-summary.log",
+  "log_sha256": "9aa5595cabbc20217d6ba4433506c389b8b01b02e8f71748fed8b677f40587b6"
+}

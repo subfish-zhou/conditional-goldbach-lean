@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyGaussianSpace
+module
+
+public import ConditionalGoldbach.Proofs.HardyGaussianSpace
 
 /-! Fourier inversion identifies each Gaussian density with its holomorphic regularization. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -47,7 +51,6 @@ lemma fourierLaplace_of_classical_fourier_density {a b x : ℝ} (hx : x ∈ Ioo 
     apply (integrable_comp_mul_left_iff (𝓕 g) hc).mp
     convert hscaled using 1
     funext τ
-    congr 1
     dsimp [c]
     ring
   have hf : 𝓕 (fun τ : ℝ => (Real.exp (x * τ) : ℂ) * ψ τ) (-t / (2 * Real.pi)) =

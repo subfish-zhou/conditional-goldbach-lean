@@ -1,11 +1,14 @@
-import ConditionalGoldbach.Proofs.HardyKernelResidual
-import ConditionalGoldbach.Proofs.CharacterGrowth
-import ConditionalGoldbach.Proofs.ZetaTruncation
-import ConditionalGoldbach.Proofs.KernelGrowthBounds
-import ConditionalGoldbach.Proofs.KernelRegularity
-import ConditionalGoldbach.Proofs.HardyKernelMajorant
+module
+
+public import ConditionalGoldbach.Proofs.HardyKernelResidual
+public import ConditionalGoldbach.Proofs.CharacterGrowth
+public import ConditionalGoldbach.Proofs.ZetaTruncation
+public import ConditionalGoldbach.Proofs.KernelGrowthBounds
+public import ConditionalGoldbach.Proofs.HardyKernelMajorant
 
 /-! The arithmetic Hardy realization from its two explicit vertical growth estimates. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -148,8 +151,15 @@ lemma residualOperator_spec_at (a : ℝ) (N : ℕ) [NeZero N] (ha0 : 0 < a) (hN4
   obtain ⟨L, Z, hL, hZ, hlog, hζ⟩ := arithmeticKernel_growth_inputs_at a N ha0 hN4 hGRH ha
   exact residualOperator_spec_of_growth_at a N ha0 hN4 hGRH ha L Z hL hZ hlog hζ
 
-theorem proposition_A_1_operator_spec (N : ℕ) [NeZero N] (hN : Even N)
-    (hN4 : 4 ≤ N) (c : ℝ) (hc : 0 < c) (hlarge : Real.exp (10 * c) < (N : ℝ))
+/-- The spectral realization on a strip with a variable left boundary. -/
+lemma residualOperator_has_spectral_data_at (a : ℝ) (N : ℕ) [NeZero N]
+    (ha0 : 0 < a) (hN4 : 4 ≤ N) (hGRH : GRH N) (ha : a < beta) :
+    Nonempty (SpectralData (residualOperator ha N)) := by
+  obtain ⟨_, _, _, _, _, hspectral, _⟩ := residualOperator_spec_at a N ha0 hN4 hGRH ha
+  exact hspectral
+
+theorem proposition_A_1_operator_spec (N : ℕ) [NeZero N] (_hN : Even N)
+    (hN4 : 4 ≤ N) (c : ℝ) (hc : 0 < c) (_hlarge : Real.exp (10 * c) < (N : ℝ))
     (hGRH : GRH N) (ha : alpha N c < beta) :
     (∀ x ∈ ({alpha N c, beta} : Finset ℝ), ∀ y ∈ ({alpha N c, beta} : Finset ℝ),
       MemLp (fun p : ℝ × ℝ => weightedKernel N (line x p.1) (line y p.2)) 2 volume) ∧
@@ -163,8 +173,9 @@ theorem proposition_A_1_operator_spec (N : ℕ) [NeZero N] (hN : Even N)
   have ha0 := alpha_pos_at N hN4 c hc
   obtain ⟨L,Z,hL,hZ,hlog,hζ⟩ := arithmeticKernel_growth_inputs_at (alpha N c) N ha0 hN4 hGRH ha
   obtain ⟨hK,hcol⟩ := weightedKernel_inputs_of_growth_at (alpha N c) N ha0 hN4 hGRH ha L Z hL hZ hlog hζ
-  have hs := residualOperator_spec_at (alpha N c) N ha0 hN4 hGRH ha
-  exact ⟨hK,hs.2.1,hs.2.2.2.2.2.1,
+  obtain ⟨_, hRepresents, _, _, _, hSpectral, _⟩ :=
+    residualOperator_spec_at (alpha N c) N ha0 hN4 hGRH ha
+  exact ⟨hK, hRepresents, hSpectral,
     kernelAction_integrable_of_hardyColumns ha (weightedKernel N) (weightedKernel_hermitian N) hcol⟩
 
 end ConditionalGoldbach

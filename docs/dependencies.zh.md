@@ -2,15 +2,19 @@
 
 本项目在 Lake 配置中额外固定一个数学工程：[`subfish-zhou/goldbach-lean`](https://github.com/subfish-zhou/goldbach-lean/tree/24490c2ab7787238f816d771c9176411dcbda503)。该仓库也包含 Chen 与 Li–Liu 1+1.9 的形式化，但本项目没有导入那些结论或其数值证书模块，也不依赖独立的三素数定理工程。
 
-这里必须区分三种口径：包依赖、编译时导入的模块、证明表达式实际引用的声明。我们同时遍历了源码导入图与 Lean 环境的声明类型/证明值闭包，二者的模块清单完全一致。
+审计分别记录 Lake 包、编译时加载的模块和证明项引用的声明。
 
 ## 编译时加载
+
+`ConditionalGoldbach` 入口加载 6,803 个模块，其中 3,801 个来自 Mathlib。源码扫描与 Lean 编译后的导入图给出的模块集合一致。
+
+本轮定义拆分前分别为 6,914 和 3,929 个模块。Hardy 边界与纯 Hilbert–Schmidt 迹模块的导入闭包均已去掉 `goldbach-lean` 数论依赖；完整项目的外部数学依赖保持如下范围。完整计时、源码快照和测量方法见[改造报告](quality-convolution.zh.md)。
 
 本项目直接导入4个非Mathlib数学模块：
 
 | 模块 | 用途 | 本项目导入处 |
 |---|---|---|
-| `MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries` | 奇异级数的定义、正性和欧拉积基础 | `BaseDefinitions.lean` |
+| `MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries` | 奇异级数的定义、正性和欧拉积基础 | `Definitions/Arithmetic.lean` |
 | `MathlibNt.SieveTheory.Arithmetic.MertensTheorem` | Mertens乘积估计，进而控制 `N / φ(N)` | `Proofs/TotientLogLog.lean` |
 | `MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries` | Dirichlet L函数级数及周期抵消估计 | `Proofs/CharacterGrowthFoundation.lean` |
 | `MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds` | 右半平面增长界 | 同上 |

@@ -1,6 +1,6 @@
 {
   "root_count": 102,
-  "reachable_declaration_count": 89637,
+  "reachable_declaration_count": 85220,
   "external_project_declaration_count": 839,
   "external_project_module_count": 22,
   "external_project_modules": {
@@ -892,7 +892,7 @@
   "external_direct_boundary_edges": [
     {
       "source": "ConditionalGoldbach.C2",
-      "source_module": "ConditionalGoldbach.BaseDefinitions",
+      "source_module": "ConditionalGoldbach.Definitions.Arithmetic",
       "edge_kind": "value_refs",
       "target": "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct",
       "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
@@ -1298,7 +1298,7 @@
     },
     {
       "source": "ConditionalGoldbach.singularSeries",
-      "source_module": "ConditionalGoldbach.BaseDefinitions",
+      "source_module": "ConditionalGoldbach.Definitions.Arithmetic",
       "edge_kind": "value_refs",
       "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
       "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"

@@ -1,6 +1,16 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.Arithmetic
+public import ConditionalGoldbach.Definitions.Weights
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+public import Mathlib.Tactic.NormNum.RealSqrt
+public import Mathlib.Topology.UniformSpace.Uniformizable
 
 /-! Smooth weights, positive mass, and the elementary support separation. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -28,12 +38,15 @@ theorem IsWeight.mem_support_interval {φ : ℝ → ℝ} (hφ : IsWeight φ)
 theorem weightMass_nonneg (φ : ℝ → ℝ) : 0 ≤ weightMass φ := by
   exact intervalIntegral.integral_nonneg_of_forall (by norm_num) (fun u => sq_nonneg (φ u))
 
+/-- An admissible main weight is nonzero at some point. -/
+lemma IsWeight.exists_ne_zero {φ : ℝ → ℝ} (hφ : IsWeight φ) : ∃ u, φ u ≠ 0 := by
+  obtain ⟨_, _, _, _, hNonzero⟩ := hφ
+  by_contra h
+  push Not at h
+  exact hNonzero (funext h)
+
 theorem weightMass_pos {φ : ℝ → ℝ} (hφ : IsWeight φ) : 0 < weightMass φ := by
-  have hne : ∃ u, φ u ≠ 0 := by
-    by_contra h
-    push Not at h
-    exact hφ.2.2.2.2 (funext h)
-  obtain ⟨u, hu⟩ := hne
+  obtain ⟨u, hu⟩ := hφ.exists_ne_zero
   have hs := hφ.mem_support_interval hu
   have hpos := intervalIntegral.integral_lt_integral_of_continuousOn_of_le_of_exists_lt
     (a := (0 : ℝ)) (b := 1) (f := fun _ => (0 : ℝ)) (g := fun x => φ x ^ 2)
@@ -105,7 +118,6 @@ theorem weightEnergy_nonneg (φ : ℝ → ℝ) : 0 ≤ weightEnergy φ := by
   apply mul_nonneg (inv_nonneg.mpr (mul_nonneg (by norm_num) Real.pi_pos.le))
   exact setIntegral_nonneg measurableSet_Ioi (fun u hu => div_nonneg (sq_nonneg _) hu.le)
 
-
 theorem IsWeight.eq_zero_of_nonpos {φ : ℝ → ℝ} (hφ : IsWeight φ)
     {u : ℝ} (hu : u ≤ 0) : φ u = 0 := by
   by_contra h
@@ -151,7 +163,6 @@ theorem lemma_7_2_convolutions (φ : ℝ → ℝ) (hφ : IsWeight φ) :
     intro u _
     change φ u * φ (1 - u) = φ u ^ 2
     rw [← hφ.2.2.2.1 u, pow_two]
-
 
 
 theorem companion_contDiff {φ : ℝ → ℝ} (hφ : IsWeight φ) :
@@ -237,6 +248,5 @@ theorem proposition_7_4_norm_integrals (N : ℕ) (hN : 0 < N)
       exact ne_of_gt (add_pos zero_lt_one (Real.rpow_pos_of_pos hNu _))
     exact (((hp _).mul (hd.continuousAt.pow 2)).div (continuousAt_const.add (hp _)) hden
       |>.div continuousAt_id hu0.ne').continuousWithinAt
-
 
 end ConditionalGoldbach

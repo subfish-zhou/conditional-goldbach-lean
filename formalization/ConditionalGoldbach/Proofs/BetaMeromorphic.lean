@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.BetaIdentity
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Proofs.BetaIdentity
+public import Mathlib.AlgebraicTopology.FundamentalGroupoid.SimplyConnected
 
 /-! Entire numerators and a common denominator for both beta-kernel formulas. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -82,7 +86,7 @@ private lemma betaNum_div {p : ℂ × ℂ} (hp : betaDen p ≠ 0) :
   simp only [betaGamma, betaNum, betaDen, div_eq_mul_inv, mul_inv, inv_inv]
   exact halg _ _ _ _ _ _ ha hb hc
 
-private lemma gammaNum_div {p : ℂ × ℂ} (hp : gammaDen p ≠ 0) :
+private lemma gammaNum_div {p : ℂ × ℂ} (_hp : gammaDen p ≠ 0) :
     (2 : ℂ)^(1-(p.1+p.2)) * Gamma (p.1+p.2) *
       Complex.cos (Real.pi*(p.1+p.2)/2) * gammaQuotient p.1 * gammaQuotient p.2 =
       gammaNum p / gammaDen p := by

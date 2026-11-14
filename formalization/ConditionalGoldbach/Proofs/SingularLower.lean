@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.Elementary
+module
+
+public import Mathlib.Tactic.NormNum.Prime
+public import ConditionalGoldbach.Proofs.Elementary
 
 /-! A rational lower bound for the universal odd-prime Euler product. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

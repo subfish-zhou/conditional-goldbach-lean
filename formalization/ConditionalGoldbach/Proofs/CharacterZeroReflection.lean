@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZerosCompact
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZerosCompact
 
 /-! Functional-equation reflection preserves the paper's zero multiplicities. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -48,7 +52,7 @@ lemma primitive_rootNumber_ne_zero {d : ℕ} [NeZero d] (χ : Character d)
   have hh := hprim.completedLFunction_one_sub (-2)
   simp only [hzero, mul_zero, zero_mul] at hh
   apply hC
-  convert hh using 1 <;> norm_num
+  convert hh using 1; norm_num
 
 lemma LFunction_order_reflection {d : ℕ} [NeZero d] (χ : Character d)
     (hχ : χ ≠ 1) (hprim : χ.IsPrimitive) {z : ℂ} (hz0 : 0 < z.re) (hz1 : z.re < 1) :

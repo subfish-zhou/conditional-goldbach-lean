@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroExpansion
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroExpansion
 
 /-! Actual principal parts of logarithmic derivatives, with their multiplicities retained. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology

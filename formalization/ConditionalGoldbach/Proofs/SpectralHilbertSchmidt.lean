@@ -1,9 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralCompletionTrace
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Adjoint
+public import ConditionalGoldbach.Proofs.SpectralCompletionTrace
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex InnerProductSpace
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
@@ -24,15 +29,12 @@ theorem hs_adjoint_basis_relation (T : H →L[ℂ] H)
   have hp : Summable (Function.uncurry f) := by
     apply (summable_prod_of_nonneg (fun p => sq_nonneg _)).2
     refine ⟨fun i => (hrow i).summable, ?_⟩
-    convert hb using 1
-    funext i
-    exact (hrow i).tsum_eq
+    exact hb.congr (fun i => (hrow i).tsum_eq.symm)
+  -- Fix the summand before reindexing to avoid higher-order unification through `Summable`.
   have hp' : Summable (fun p : ℕ × ℕ => f p.2 p.1) :=
-    (Equiv.prodComm ℕ ℕ).summable_iff.2 hp
+    ((Equiv.prodComm ℕ ℕ).summable_iff (f := Function.uncurry f)).2 hp
   refine ⟨?_, ?_⟩
-  · convert hp'.prod using 1
-    funext j
-    exact (hcol j).tsum_eq.symm
+  · exact hp'.prod.congr (fun j => (hcol j).tsum_eq)
   · calc
       (∑' j, ‖T (b j)‖ ^ 2) = ∑' i, ∑' j, f i j := by simp only [(hrow _).tsum_eq]
       _ = ∑' j, ∑' i, f i j := hp.tsum_comm.symm

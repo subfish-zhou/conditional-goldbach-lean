@@ -1,25 +1,98 @@
-{"name": "independent-full-types-build", "command": ["lake", "--no-cache", "build", "TexAuditComparator.CheckTypes"], "exit_code": 0, "start_utc": "2026-11-13T19:27:39.719487+00:00", "wall_seconds": 32.92037396505475, "log": "independent-full-types-build.log", "log_sha256": "455f17ae8e233211a56610b35c1b952c8aae7209122cf3dac961b3d43c65995d"}
-{"name": "comparator", "command": ["lake", "comparator", "--config", "comparator.json"], "exit_code": 0, "start_utc": "2026-11-13T19:28:12.640571+00:00", "wall_seconds": 585.2013556957245, "log": "comparator.log", "log_sha256": "044edd66aa7308bb80a1d8d8f013dd0de02fa630d6ea05941c16db48197c0963"}
-{"name": "control-condition", "command": ["lake", "comparator", "--config", "control-condition.json"], "exit_code": 1, "start_utc": "2026-11-13T19:37:57.843613+00:00", "wall_seconds": 5.125753439962864, "log": "control-condition.log", "log_sha256": "8f9fb6fd42921a76414a36b19e1a135c1c63b8761d93fbbdc731ad732d9495ca"}
-{"name": "control-quantifier", "command": ["lake", "comparator", "--config", "control-quantifier.json"], "exit_code": 1, "start_utc": "2026-11-13T19:38:02.969839+00:00", "wall_seconds": 4.883600477129221, "log": "control-quantifier.log", "log_sha256": "7544401e2866e1845265bc899655d678f9f92aabc7a9f3c3ca7ce4c58b89edc7"}
-{"name": "control-definition", "command": ["lake", "comparator", "--config", "control-definition.json"], "exit_code": 1, "start_utc": "2026-11-13T19:38:07.853903+00:00", "wall_seconds": 5.347425226122141, "log": "control-definition.log", "log_sha256": "02e44430300335c7f3fe4f56f98b52c2847d7bd0dbe4377e83c83e33fe30788b"}
+{"name": "independent-full-types-build", "command": ["lake", "lean", "TexAuditComparator/CheckTypes.lean"], "exit_code": 0, "start_utc": "2026-11-14T11:44:29.715672+00:00", "wall_seconds": 32.775805581361055, "log": "independent-full-types-build.log", "log_sha256": "ed6ec65d4174b72cf60426b381475f28aeeec18f6401c4de974995c403d1fa27"}
+{"name": "comparator", "command": ["lake", "comparator", "--config", "comparator.json"], "exit_code": 0, "start_utc": "2026-11-14T11:45:02.492008+00:00", "wall_seconds": 663.503922663629, "log": "comparator.log", "log_sha256": "58b58d08bb2cbea1c669262e32fdf3bf090a58ac63d9a6c22a609bd92b1d31e2"}
+{"name": "control-condition", "command": ["lake", "comparator", "--config", "control-condition.json"], "exit_code": 1, "start_utc": "2026-11-14T11:56:05.997914+00:00", "wall_seconds": 6.178727671504021, "log": "control-condition.log", "log_sha256": "329974fc76fb59db39089b88c43d666186eb7cf7f89badcf4bc8461e5d6f8cbd"}
+{"name": "control-quantifier", "command": ["lake", "comparator", "--config", "control-quantifier.json"], "exit_code": 1, "start_utc": "2026-11-14T11:56:12.176773+00:00", "wall_seconds": 5.133291199803352, "log": "control-quantifier.log", "log_sha256": "836832c50967babd1c28f3ac44ccb5e3ad40cd35e22394addcb9ab4c2299cc87"}
+{"name": "control-definition", "command": ["lake", "comparator", "--config", "control-definition.json"], "exit_code": 1, "start_utc": "2026-11-14T11:56:17.310224+00:00", "wall_seconds": 4.529286839067936, "log": "control-definition.log", "log_sha256": "f6cbe1c5e0df8a9aeb885a9904c1beed7bf1e6a02cd3df3f60b2a911592f60eb"}
 {
   "tool": "Lean 4.35.0 built-in lake comparator",
   "sandbox": "bwrap enabled; discovered dependency caches mounted read-only",
   "sandbox_adapter_sha256": "be9a4cf85fa4369af3aae49f6c3c4e99e20a9e46b970393a2b39b7f5f1c1c283",
   "permitted_axioms": [
-    "propext",
+    "Classical.choice",
     "Quot.sound",
-    "Classical.choice"
+    "propext"
   ],
+  "runs": [
+    {
+      "name": "independent-full-types-build",
+      "command": [
+        "lake",
+        "lean",
+        "TexAuditComparator/CheckTypes.lean"
+      ],
+      "exit_code": 0,
+      "start_utc": "2026-11-14T11:44:29.715672+00:00",
+      "wall_seconds": 32.775805581361055,
+      "log": "independent-full-types-build.log",
+      "log_sha256": "ed6ec65d4174b72cf60426b381475f28aeeec18f6401c4de974995c403d1fa27"
+    },
+    {
+      "name": "comparator",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "comparator.json"
+      ],
+      "exit_code": 0,
+      "start_utc": "2026-11-14T11:45:02.492008+00:00",
+      "wall_seconds": 663.503922663629,
+      "log": "comparator.log",
+      "log_sha256": "58b58d08bb2cbea1c669262e32fdf3bf090a58ac63d9a6c22a609bd92b1d31e2"
+    },
+    {
+      "name": "control-condition",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-condition.json"
+      ],
+      "exit_code": 1,
+      "start_utc": "2026-11-14T11:56:05.997914+00:00",
+      "wall_seconds": 6.178727671504021,
+      "log": "control-condition.log",
+      "log_sha256": "329974fc76fb59db39089b88c43d666186eb7cf7f89badcf4bc8461e5d6f8cbd"
+    },
+    {
+      "name": "control-quantifier",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-quantifier.json"
+      ],
+      "exit_code": 1,
+      "start_utc": "2026-11-14T11:56:12.176773+00:00",
+      "wall_seconds": 5.133291199803352,
+      "log": "control-quantifier.log",
+      "log_sha256": "836832c50967babd1c28f3ac44ccb5e3ad40cd35e22394addcb9ab4c2299cc87"
+    },
+    {
+      "name": "control-definition",
+      "command": [
+        "lake",
+        "comparator",
+        "--config",
+        "control-definition.json"
+      ],
+      "exit_code": 1,
+      "start_utc": "2026-11-14T11:56:17.310224+00:00",
+      "wall_seconds": 4.529286839067936,
+      "log": "control-definition.log",
+      "log_sha256": "f6cbe1c5e0df8a9aeb885a9904c1beed7bf1e6a02cd3df3f60b2a911592f60eb"
+    }
+  ],
+  "build_sha256": "34c9789da4bb576c53e3f771eca570068ad309e441be11311deee41b5780b14b",
+  "independent_full_types_sha256": "644ca199c61055bc9de2ae941b868c3161239740ce81e8377021959e7ca65b22",
   "library_sources_unchanged": true,
   "reference_sources_unchanged": true,
+  "staged_references_match_frozen_sources": true,
   "statement_count": 103,
   "definition_body_count": 96,
   "semantic_bridge_count": 18,
   "comparator_target_count": 218,
   "all_independent_full_types_equal": true,
-  "staged_references_match_frozen_sources": true,
   "accepted": true,
   "negative_controls_rejected": true
 }

@@ -1,7 +1,13 @@
-import ConditionalGoldbach.Proofs.ResidualAnalytic
-import ConditionalGoldbach.Proofs.Elementary
+module
+
+public import ConditionalGoldbach.Definitions.Operators
+public import ConditionalGoldbach.Definitions.Spectral
+public import ConditionalGoldbach.Proofs.ResidualAnalytic
+public import ConditionalGoldbach.Proofs.Elementary
 
 /-! The complete strip geometry and the holomorphic/antiholomorphic kernel interface. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -92,7 +98,7 @@ lemma large_closed_strip_subset {N : ℕ} (hlarge : Real.exp 10 < (N : ℝ)) :
   exact ⟨lt_of_lt_of_le ha hp.1, lt_of_le_of_lt hp.2.1 (by norm_num [beta]),
     lt_of_lt_of_le ha hp.2.2.1, lt_of_le_of_lt hp.2.2.2 (by norm_num [beta])⟩
 
-theorem proposition_5_1 (N : ℕ) [NeZero N] (hN : Even N)
+theorem proposition_5_1 (N : ℕ) [NeZero N] (_hN : Even N)
     (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) :
     HermitianKernel (weightedKernel N) ∧
     HermitianKernel (fun s z => residual N s (conj z)) ∧
@@ -141,7 +147,7 @@ lemma weightedKernel_closed_column_regular (N : ℕ) [NeZero N]
   refine ⟨fun s hs => (hd s ⟨hs.1.le, hs.2.le⟩).differentiableWithinAt,
     fun s hs => (hd s hs).continuousAt.continuousWithinAt⟩
 
-theorem proposition_5_1_fueter_equation (N : ℕ) [NeZero N] (hN : Even N)
+theorem proposition_5_1_fueter_equation (N : ℕ) [NeZero N] (_hN : Even N)
     (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (s z : ℂ)
     (hsz : (s, conj z) ∈ analyticDomain) :
     fueterOperator (fun u v => residual N u (conj v)) s z = 0 := by

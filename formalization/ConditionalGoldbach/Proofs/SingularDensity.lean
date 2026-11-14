@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.Arithmetic
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Exact local factors and arithmetic bounds for the source singular series. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -14,7 +19,7 @@ lemma localDensityFactor_eq_liu {p h : ℕ} (hp : 2 < p) :
     have : (2 : ℝ) < p := by exact_mod_cast hp
     linarith
   unfold localDensityFactor MathlibNt.SieveTheory.SingularSeries.liuLocalFactor
-  split_ifs <;> field_simp <;> ring
+  split_ifs <;> field_simp
 
 lemma localDensityFactor_two {h : ℕ} (hh : Even h) : localDensityFactor 2 h = 2 := by
   norm_num [localDensityFactor, hh.two_dvd]
@@ -29,8 +34,8 @@ lemma localDensityFactor_factorization (h : ℕ) (hh : Even h) (hpos : 0 < h) (p
     · subst p
       simp [localDensityFactor_two hh, MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation, Nat.prime_two]
     · have hpgt : 2 < p := lt_of_le_of_ne hp.two_le (Ne.symm hp2)
-      rw [if_pos hp, localDensityFactor_eq_liu hpgt,
-        MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_eq_correction_mul_base hp hpgt, if_neg hp2, one_mul]
+      rw [ite_eq_left hp, localDensityFactor_eq_liu hpgt,
+        MathlibNt.SieveTheory.SingularSeries.liuLocalFactor_eq_correction_mul_base hp hpgt, ite_eq_right hp2, one_mul]
       simp [Finset.mem_filter, Nat.mem_primeFactors, hp, hpgt, hpos.ne']
   · have hp2 : p ≠ 2 := by rintro rfl; exact hp Nat.prime_two
     have hpm : p ∉ h.primeFactors.filter (fun p => 2 < p) := by
@@ -46,7 +51,7 @@ lemma localDensity_hasProd (h : ℕ) (hh : Even h) (hpos : 0 < h) :
     convert hasProd_prod_of_ne_finset_one
       (s := h.primeFactors.filter (fun p => 2 < p))
       (f := fun p => if p ∈ h.primeFactors.filter (fun p => 2 < p) then MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor p else 1)
-      (fun p hp => if_neg hp) using 1
+      (fun p hp => ite_eq_right hp) using 1
     · unfold MathlibNt.SieveTheory.SingularSeries.liuCorrection
       apply Finset.prod_congr rfl
       intro p hp

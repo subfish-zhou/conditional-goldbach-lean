@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.SingularDensity
-import ConditionalGoldbach.Proofs.Elementary
+module
+
+public import ConditionalGoldbach.Proofs.SingularDensity
+public import ConditionalGoldbach.Proofs.Elementary
 
 /-! Arithmetic comparison of the source singular series with N / φ(N). -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

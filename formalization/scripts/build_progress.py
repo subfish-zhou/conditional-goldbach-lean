@@ -5,6 +5,7 @@ from pygments import lex
 from pygments.lexers import get_lexer_by_name
 from pygments.lexer import bygroups,inherit,words
 from pygments.token import Comment,Generic,Keyword,Name,Number,Operator,String,Text
+from project_sources import declaration_source
 FORM=Path(__file__).resolve().parents[1];ROOT=FORM.parent;WORK=ROOT/'work/html';REF=FORM/'reference';NODEMODULES=FORM/'node_modules'
 if not (NODEMODULES/'katex').exists():NODEMODULES=WORK/'runtime/node_modules'
 parser=argparse.ArgumentParser();parser.add_argument('--input',type=Path,default=FORM/'proof-status.json');parser.add_argument('--output',type=Path);parser.add_argument('--lang',choices=['en','zh'],default='en');args=parser.parse_args()
@@ -67,7 +68,10 @@ def highlighted(code,line):
  return ''.join(f'<span class="code-line" data-line="{line+i}">{v}</span>' for i,v in enumerate(parts))
 commands=re.compile(r'^(?:(?:noncomputable|private|protected|local)\s+)*(?:def|abbrev|theorem|lemma|structure|instance|namespace|end|open|attribute|set_option|section|import)\b')
 def snippet(row):
- p=FORM/row['file'];lines=p.read_text().splitlines();i=row['line']-1
+ p=FORM/row['file']
+ if span:=row.get('source_range'):
+  return declaration_source(p,span)
+ lines=p.read_text().splitlines();i=row['line']-1
  assert 0<=i<len(lines),(row['name'],i)
  assert re.match(r'^(?:(?:noncomputable|private|protected|local)\s+)*(?:def|abbrev|theorem|lemma|structure)\s+',lines[i]),(row['name'],lines[i])
  j=i+1

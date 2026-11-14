@@ -1,9 +1,11 @@
 {
   "language": "en",
-  "html_sha256": "5a449f5fd28a16e205e995c006835e7ceb8ebaac1e35cc52e923a0e3406cbecf",
-  "bytes": 4798898,
+  "html_sha256": "e85ef0ddbfc8a5ea502885c02153ff55009e98f7277cff32043d7f609125f1a0",
+  "bytes": 4796947,
   "statement_cards": 103,
   "math_count": 885,
   "math_errors": [],
-  "current_build_sha256": "770b4ad5cc69e81ab2725272bffe067c5acb079691b6cc2253f0989346855f45"
+  "current_build_sha256": "34c9789da4bb576c53e3f771eca570068ad309e441be11311deee41b5780b14b",
+  "comparator_result_sha256": "08f241a7693773d6ad28a4c4da250f3156bbc59650875eca8440448e4d2ef8e9",
+  "proof_status_sha256": "a90d1830f3031c71927b26f3d2f7cebe522cb9593b9a24f37ee74e4fdabf834a"
 }

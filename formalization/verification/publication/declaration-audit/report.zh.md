@@ -8,9 +8,9 @@
 
 ## 检查方法与范围
 
-`DeclarationAudit.lean` 加载 `ConditionalGoldbach` 后，对本项目所属模块中的声明递归追踪其类型、证明/定义值（包括 opaque 值），并在归纳类型处加入构造子。外部声明的模块来源由 Lean 环境的 `getModuleIdxFor?` 确定，不能用声明名称的前缀代替。保存的每条节点列出了 `type_refs`、`value_refs`、`constructor_refs`。整个检查遍历 90,420 条可达声明，没有找不到的常量。
+`DeclarationAudit.lean` 加载 `ConditionalGoldbach` 后，对本项目所属模块中的声明递归追踪其类型、证明/定义值（包括 opaque 值），并在归纳类型处加入构造子。外部声明的模块来源由 Lean 环境的 `getModuleIdxFor?` 确定，不能用声明名称的前缀代替。保存的每条节点列出了 `type_refs`、`value_refs`、`constructor_refs`。整个检查遍历 90,951 条可达声明，没有找不到的常量。
 
-“公共库”以声明所属模块是 `ConditionalGoldbach*` 且 `isPrivateName = false` 为根，共 2,869 个声明，包含 Lean 自动生成的辅助声明。另对全部 2,938 个本项目声明做了校验，外部依赖集合相同。102 条审阅名单取自此次工程的 `reviewed-types.json`。
+“公共库”以声明所属模块是 `ConditionalGoldbach*` 且 `isPrivateName = false` 为根，共 1,915 个声明，包含 Lean 自动生成的辅助声明。另对全部 2,934 个本项目声明做了校验，外部依赖集合相同。102 条审阅名单取自此次工程的 `reviewed-types.json`。
 
 | 范围 | 外部项目声明 | 外部项目模块 | 本地直接引用的外部声明 |
 |---|---:|---:|---:|
@@ -145,4 +145,4 @@ ConditionalGoldbach.lemma_4_3_uniform
 - `theorem_1_1.json`、`theorem_1_2.json`、`primePair_consequence.json`、`reviewed_102.json`、`public_library.json`：完整外部声明列表、直接边界引用、每个外部声明的实际引用路径。
 - 各 `*-external-declarations.tsv`：便于人工查看的逐条名称、所属模块、声明类型与私有标记。
 - `reviewed-requiring-mertens.json`：102 条中真正依赖 Mertens 的声明列表。
-- `imported-modules.json`：独立的环境模块导入列表，共 11,731 个；它与证明常量依赖图是不同的材料。
+- `imported-modules.json`：独立的环境模块导入列表，共 6,914 个；它与证明常量依赖图是不同的材料。

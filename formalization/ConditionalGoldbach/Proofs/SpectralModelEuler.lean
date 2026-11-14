@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.DensityResidue
-import ConditionalGoldbach.Proofs.DensityEulerIdentity
+module
+
+public import ConditionalGoldbach.Proofs.DensityEulerIdentity
+import Mathlib.Topology.Algebra.InfiniteSum.Field
 
 /-! Uniform arithmetic cancellation in the model kernel. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -11,7 +15,7 @@ namespace ConditionalGoldbach
 open MathlibNt.SieveTheory.SingularSeries hiding singularSeries
 attribute [local instance] Classical.propDecidable
 
-lemma model_euler_unramified_bound {p q : ℝ} (hp : 2 < p) (hq0 : 0 ≤ q) (hq1 : q ≤ 1) :
+lemma model_euler_unramified_bound {p q : ℝ} (hp : 2 < p) (_hq0 : 0 ≤ q) (hq1 : q ≤ 1) :
     (p * (p - 2) / (p - 1)^2) * (1 + q / (p - 2)) ≤ (1 - q / p)⁻¹ := by
   have hp0 : 0 < p := by linarith
   have hden : 0 < 1 - q / p := by rw [sub_pos, div_lt_one hp0]; linarith
@@ -19,8 +23,7 @@ lemma model_euler_unramified_bound {p q : ℝ} (hp : 2 < p) (hq0 : 0 ≤ q) (hq1
   have hsq : 0 ≤ (1 - q)^2 := sq_nonneg _
   have he : (p * (p - 2) / (p - 1)^2) * (1 + q / (p - 2)) * (1 - q / p) =
       1 - (1 - q)^2 / (p - 1)^2 := by
-    field_simp [show p - 1 ≠ 0 by linarith, show p - 2 ≠ 0 by linarith]
-    <;> ring
+    field_simp [show p - 1 ≠ 0 by linarith, show p - 2 ≠ 0 by linarith]; ring
   rw [he]
   exact sub_le_self _ (div_nonneg hsq (sq_nonneg _))
 
@@ -63,19 +66,18 @@ lemma model_euler_factor_bound (N p : ℕ) (hN : 0 < N) {w : ℂ} (hw : 0 < w.re
       ‖if p.Prime then (1 - (p : ℂ)^(-((1 + w.re : ℝ) : ℂ)))⁻¹ else 1‖ := by
   have hb : 0 < 1 + liuBaseDeviation p := one_add_liuBaseDeviation_pos p
   have hmem : p ∈ N.primeFactors.filter (fun p => 2 < p) ↔ p.Prime ∧ 2 < p ∧ p ∣ N := by
-    simp only [Finset.mem_filter, Nat.mem_primeFactors, hN.ne', and_true]
+    simp only [Finset.mem_filter, Nat.mem_primeFactors]
     have hn : N ≠ 0 := hN.ne'
     tauto
   by_cases hp : p.Prime
   · have hp0 : (0 : ℝ) < p := by exact_mod_cast hp.pos
     have hp1 : (1 : ℝ) < p := by exact_mod_cast hp.one_lt
-    rw [if_pos hp, model_zeta_factor_eq p hp w.re hw]
+    rw [ite_eq_left hp, model_zeta_factor_eq p hp w.re hw]
     by_cases hp2 : 2 < p
     · have hp2r : (2 : ℝ) < p := by exact_mod_cast hp2
       have hbase : 1 + liuBaseDeviation p = p * (p - 2) / ((p : ℝ) - 1)^2 := by
         rw [one_add_liuBaseDeviation_eq_baseFactor hp hp2]
-        field_simp [show (p : ℝ) - 1 ≠ 0 by linarith]
-        <;> ring
+        field_simp [show (p : ℝ) - 1 ≠ 0 by linarith]; ring
       have hq0 : 0 ≤ (p : ℝ)^(-w.re) := Real.rpow_nonneg hp0.le _
       have hq1 : (p : ℝ)^(-w.re) ≤ 1 :=
         Real.rpow_le_one_of_one_le_of_nonpos hp1.le (by linarith)
@@ -94,7 +96,7 @@ lemma model_euler_factor_bound (N p : ℕ) (hN : 0 < N) {w : ℂ} (hw : 0 < w.re
         simp only [hm, ite_false, mul_one, one_mul]
         rw [norm_mul, Complex.norm_real, Real.norm_eq_abs, abs_of_pos hb]
         apply (mul_le_mul_of_nonneg_left (norm_add_le 1 (densityEulerTerm N p w)) hb.le).trans
-        rw [norm_one, densityEulerTerm, if_pos ⟨hp, hp2, hpd⟩, norm_div,
+        rw [norm_one, densityEulerTerm, ite_eq_left ⟨hp, hp2, hpd⟩, norm_div,
           Complex.norm_natCast_cpow_of_pos hp.pos, Complex.neg_re]
         have hd : ‖(p : ℂ) - 2‖ = (p : ℝ) - 2 := by
           rw [show (p : ℂ) - 2 = (((p : ℝ) - 2 : ℝ) : ℂ) by push_cast; rfl,

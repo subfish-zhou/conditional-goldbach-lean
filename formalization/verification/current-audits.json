@@ -1,15 +1,33 @@
 [
   {
+    "label": "entrypoints",
+    "command": [
+      "python3",
+      "scripts/check_entrypoints.py"
+    ],
+    "exit_code": 0,
+    "start_utc": "2026-11-14T11:41:16.586236+00:00",
+    "wall_seconds": 38.66539642214775,
+    "log": "verification/current-entrypoints.log",
+    "log_sha256": "17f6b6318de8b8454f0f06ab67d742177da341b05ca1f7d21d2efe6d60278388",
+    "output_hashes": {
+      "verification/entrypoints.json": "1cdf3b1021c7a015e5f0e47f8e43d4f4790fc0742b6cd1cd2a6d4edc8dbe3a82"
+    }
+  },
+  {
     "label": "definitions",
     "command": [
       "python3",
       "scripts/check_definitions.py"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:26:07.514847+00:00",
-    "wall_seconds": 0.040838103741407394,
+    "start_utc": "2026-11-14T11:41:55.254171+00:00",
+    "wall_seconds": 0.27838513255119324,
     "log": "verification/current-definitions.log",
-    "log_sha256": "385d0f52bf07b1125d471415a4551fccf8dceb5b971ea093b5576cb6783927e6"
+    "log_sha256": "385d0f52bf07b1125d471415a4551fccf8dceb5b971ea093b5576cb6783927e6",
+    "output_hashes": {
+      "reviewed-definitions.json": "a0c37d15a19c1ccad8509b8b504340204f2f05b4a4829b88f9b118eea4334f9f"
+    }
   },
   {
     "label": "types",
@@ -18,10 +36,13 @@
       "scripts/check_reviewed_types.py"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:26:07.556085+00:00",
-    "wall_seconds": 14.705430004745722,
+    "start_utc": "2026-11-14T11:41:55.533409+00:00",
+    "wall_seconds": 28.477454021573067,
     "log": "verification/current-types.log",
-    "log_sha256": "ff891d8cb5ebe5c0e8336a1b88324aeb77ab571776a7d907946ec1b0eb87f046"
+    "log_sha256": "ff891d8cb5ebe5c0e8336a1b88324aeb77ab571776a7d907946ec1b0eb87f046",
+    "output_hashes": {
+      "reviewed-types.json": "7848d63a0ac700f7a3744ca9596ca9071a7f13d5800295d5cded2c2a95b60173"
+    }
   },
   {
     "label": "axioms",
@@ -30,10 +51,14 @@
       "scripts/audit_proofs.py"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:26:22.261935+00:00",
-    "wall_seconds": 11.458341661840677,
+    "start_utc": "2026-11-14T11:42:24.011584+00:00",
+    "wall_seconds": 12.144106153398752,
     "log": "verification/current-axioms.log",
-    "log_sha256": "f09d49204b0e570d83094edef625c873840f7fafd49a5621293136ae2a807fae"
+    "log_sha256": "3cfc6b54cead0ff58940eab0080af3448e49dbdf0823c332f324ff3bed5632b4",
+    "output_hashes": {
+      "proof-status-raw.json": "b5ae701c3afc18664b723231c850ee724b9af7d9cec13d30812ea1402e8bc67e",
+      "proof-status.json": "a90d1830f3031c71927b26f3d2f7cebe522cb9593b9a24f37ee74e4fdabf834a"
+    }
   },
   {
     "label": "dependency-graph",
@@ -44,10 +69,13 @@
       "verification/publication/declaration-audit/DeclarationAudit.lean"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:26:33.720749+00:00",
-    "wall_seconds": 24.946267265826464,
+    "start_utc": "2026-11-14T11:42:36.217406+00:00",
+    "wall_seconds": 37.453650526702404,
     "log": "verification/publication/declaration-audit/compile.log",
-    "log_sha256": "c0c4d0a0505bb5b58826ebb3ac71cd68446124c5296eca4ef74bd0adbe8a6668"
+    "log_sha256": "79f6c71250a16b736e052856a76baa3f58fa69c44875fda6f4807e205f2a8abc",
+    "output_hashes": {
+      "verification/publication/declaration-audit/imported-modules.json": "11541d5798bb4644ab5d8dd3889ad817d71c3a674f08a8cbb3ebfd36350bfc00"
+    }
   },
   {
     "label": "dependency-analysis",
@@ -56,10 +84,13 @@
       "verification/publication/declaration-audit/analyze.py"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:26:58.667522+00:00",
-    "wall_seconds": 6.08587047085166,
+    "start_utc": "2026-11-14T11:43:13.674821+00:00",
+    "wall_seconds": 9.713427133858204,
     "log": "verification/publication/declaration-audit/analyze-recheck.log",
-    "log_sha256": "81c8e457dc991eb7ebf5530e59c6b36aa0fc238ae66a6113b46b5897fac967e4"
+    "log_sha256": "845be079691e11d1131c9eb5d8c83757192aae7f338cd8b5fe52685985224bd6",
+    "output_hashes": {
+      "verification/publication/declaration-audit/summary.json": "845be079691e11d1131c9eb5d8c83757192aae7f338cd8b5fe52685985224bd6"
+    }
   },
   {
     "label": "dependency-imports",
@@ -68,10 +99,13 @@
       "verification/publication/audit_imports.py"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:27:04.753910+00:00",
-    "wall_seconds": 34.827970024198294,
+    "start_utc": "2026-11-14T11:43:23.393001+00:00",
+    "wall_seconds": 65.37733612954617,
     "log": "verification/publication/imports-recheck.log",
-    "log_sha256": "a9b82b2d24b49706297e849988bc410ff8e7c79be3410d956e326d5b16e6e007"
+    "log_sha256": "89f05583b40ce1a06f12fc25fb4db2e5a00f86a83bd3e61ed2edd76d8d8ee4f2",
+    "output_hashes": {
+      "verification/publication/dependencies-imports.json": "f63669b85860075fd42aa092314df58a2c2350a598411fb38cc9747d408d47e9"
+    }
   },
   {
     "label": "comparator-prepare",
@@ -80,8 +114,8 @@
       "verification/independent-audit/prepare_comparator.py"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:27:39.639039+00:00",
-    "wall_seconds": 0.04841959848999977,
+    "start_utc": "2026-11-14T11:44:28.965992+00:00",
+    "wall_seconds": 0.1073235534131527,
     "log": "verification/current-comparator-prepare.log",
     "log_sha256": "4b38aaf12655d2770b15ae55185f81911aa317b2f4966ccbebd926846d6c477f"
   },
@@ -92,9 +126,13 @@
       "verification/independent-audit/run_comparator.py"
     ],
     "exit_code": 0,
-    "start_utc": "2026-11-13T19:27:39.687893+00:00",
-    "wall_seconds": 633.5305093675852,
+    "start_utc": "2026-11-14T11:44:29.074084+00:00",
+    "wall_seconds": 713.1049978174269,
     "log": "verification/current-comparator.log",
-    "log_sha256": "6f8047aa1b6c8b26974f728f0e393c749e8341b070035cdcb9e4e291820e48d8"
+    "log_sha256": "927db262c469f8ae6cd5c2150188adaa968a7b4bf64d51fc640ddefddd8c607f",
+    "output_hashes": {
+      "verification/independent-audit/comparator-result.json": "08f241a7693773d6ad28a4c4da250f3156bbc59650875eca8440448e4d2ef8e9",
+      "verification/independent-audit/independent-full-types.json": "644ca199c61055bc9de2ae941b868c3161239740ce81e8377021959e7ca65b22"
+    }
   }
 ]

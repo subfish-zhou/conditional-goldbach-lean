@@ -1,6 +1,12 @@
-import ConditionalGoldbach.Proofs.MellinDifferentiation
+module
+
+public import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+public import Mathlib.Analysis.MellinInversion
+public import ConditionalGoldbach.Proofs.MellinDifferentiation
 
 /-! Mellin inversion also applies to signed derivative weights. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff FourierTransform SchwartzMap

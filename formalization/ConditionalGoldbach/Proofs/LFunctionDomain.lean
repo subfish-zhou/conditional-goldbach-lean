@@ -1,4 +1,9 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.Characters
+public import Mathlib.Analysis.Calculus.Deriv.Star
+public import Mathlib.NumberTheory.LSeries.Nonvanishing
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-!
 # L-function nonvanishing on the GRH half-plane
@@ -13,6 +18,8 @@ This module also proves analyticity of the logarithmic derivative and the joint
 holomorphy clause of Proposition 3.2 under GRH. It does not claim the remaining
 Dirichlet-series or joint meromorphic continuation clauses of that proposition.
 -/
+
+public section
 
 set_option autoImplicit false
 noncomputable section

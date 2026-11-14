@@ -1,11 +1,14 @@
-import ConditionalGoldbach.Proofs.PoleCharacterKernel
-import ConditionalGoldbach.Proofs.PoleDiagonalComparison
-import ConditionalGoldbach.Proofs.PoleZeta
-import ConditionalGoldbach.Proofs.PoleModel
-import ConditionalGoldbach.Proofs.VariableStripOperators
-import ConditionalGoldbach.Proofs.HardyKernelResidual
+module
+
+public import ConditionalGoldbach.Proofs.PoleCharacterKernel
+public import ConditionalGoldbach.Proofs.PoleDiagonalComparison
+public import ConditionalGoldbach.Proofs.PoleZeta
+public import ConditionalGoldbach.Proofs.PoleModel
+public import ConditionalGoldbach.Proofs.VariableStripOperators
 
 /-! A convergent scalar lower bound for the varying-strip residual operator. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

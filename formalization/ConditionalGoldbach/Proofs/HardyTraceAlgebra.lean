@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.HardyTraces
+public import ConditionalGoldbach.Definitions.Hilbert
 
 /-! Linear boundary representation and its exact norm normalization. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -32,7 +37,7 @@ lemma fourierLaplace_add {a b : ℝ} (ψ χ : HardySpace a b) {s : ℂ}
   simp only [ht, Pi.add_apply, add_mul]
 
 lemma fourierLaplace_smul {a b : ℝ} (c : ℂ) (ψ : HardySpace a b) {s : ℂ}
-    (hs : s ∈ strip a b) : fourierLaplace (c • ψ) s = c * fourierLaplace ψ s := by
+    (_hs : s ∈ strip a b) : fourierLaplace (c • ψ) s = c * fourierLaplace ψ s := by
   unfold fourierLaplace
   calc
     _ = (Real.sqrt (2 * Real.pi) : ℂ)⁻¹ * ∫ τ : ℝ, c * (ψ τ * Complex.exp (s * τ)) := by
@@ -84,10 +89,10 @@ lemma interiorLine_smul {a b : ℝ} (hab : a < b) (c : ℂ) (ψ : HardySpace a b
 lemma boundaryTraces_unique {a b : ℝ} (hab : a < b) (ψ : HardySpace a b)
     (p q : Lp ℂ 2 (volume : Measure ℝ) × Lp ℂ 2 (volume : Measure ℝ))
     (hp : IsBoundaryTrace hab ψ p.1 p.2) (hq : IsBoundaryTrace hab ψ q.1 q.2) : p = q := by
-  haveI : NeBot (comap (Subtype.val : Ioo a b → ℝ) (nhdsWithin a (Ioo a b))) :=
+  have : NeBot (comap (Subtype.val : Ioo a b → ℝ) (nhdsWithin a (Ioo a b))) :=
     (left_nhdsWithin_Ioo_neBot hab).comap_of_range_mem
       (by simpa only [Subtype.range_coe] using (self_mem_nhdsWithin : Ioo a b ∈ nhdsWithin a (Ioo a b)))
-  haveI : NeBot (comap (Subtype.val : Ioo a b → ℝ) (nhdsWithin b (Ioo a b))) :=
+  have : NeBot (comap (Subtype.val : Ioo a b → ℝ) (nhdsWithin b (Ioo a b))) :=
     (right_nhdsWithin_Ioo_neBot hab).comap_of_range_mem
       (by simpa only [Subtype.range_coe] using (self_mem_nhdsWithin : Ioo a b ∈ nhdsWithin b (Ioo a b)))
   exact Prod.ext (tendsto_nhds_unique hp.1 hq.1) (tendsto_nhds_unique hp.2 hq.2)
@@ -143,7 +148,6 @@ theorem lemma_5_2_representation_spec (a b : ℝ) (hab : a < b) :
     fun c ψ _ hs => fourierLaplace_smul c ψ hs,
     boundaryTraces_add hab, boundaryTraces_smul hab, boundaryTraces_norm_sq_sub hab⟩
 
-
 lemma boundaryTraces_lipschitz {a b : ℝ} (hab : a < b) :
     LipschitzWith 1 (boundaryTraces hab) := by
   apply LipschitzWith.of_dist_le_mul
@@ -182,7 +186,6 @@ theorem lemma_5_2_closed_trace_space (a b : ℝ) (hab : a < b) :
     IsClosed (Set.range (fun ψ : HardySpace a b => boundaryTraces hab ψ)) :=
   (boundaryTraces_antilipschitz hab).isClosed_range (boundaryTraces_lipschitz hab).uniformContinuous
 
-
 /-- The original trace pair, now viewed with its Hilbert direct-sum norm. -/
 def hardyTraceIsometry {a b : ℝ} (hab : a < b) :
     HardySpace a b →ₗᵢ[ℂ] WithLp 2
@@ -202,11 +205,9 @@ theorem lemma_5_2_boundary_inner (a b : ℝ) (hab : a < b) (h g : HardySpace a b
   have hi := (hardyTraceIsometry hab).inner_map_map g h
   change inner ℂ (WithLp.toLp 2 (boundaryTraces hab g))
     (WithLp.toLp 2 (boundaryTraces hab h)) = inner ℂ g h at hi
-  simp only [WithLp.prod_inner_apply, WithLp.ofLp_toLp] at hi
+  simp only [WithLp.prod_inner_apply] at hi
   rw [paperInner, ← hi, L2.inner_def, L2.inner_def]
-  congr 1 <;> apply integral_congr_ae <;> exact Eventually.of_forall (fun t => by
-    simp only [RCLike.inner_apply, mul_comm])
-
+  congr 1
 
 lemma fourierLaplace_injective_strip {a b : ℝ} (hab : a < b) (ψ χ : HardySpace a b)
     (h : ∀ s ∈ strip a b, fourierLaplace ψ s = fourierLaplace χ s) : ψ = χ := by

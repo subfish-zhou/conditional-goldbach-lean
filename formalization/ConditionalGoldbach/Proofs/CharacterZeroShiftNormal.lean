@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.CharacterZeroNormal
-import ConditionalGoldbach.Proofs.CompletedLZeros
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroNormal
+public import ConditionalGoldbach.Proofs.CompletedLZeros
 
 /-! The exact shifted zero-resolvent convergence under GRH. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -24,7 +28,7 @@ lemma NormallySummableOn.comp {ι X Y : Type*} [TopologicalSpace X] [Topological
 
 attribute [local instance] conductorNeZero in
 theorem lemma_3_4_normal_convergence (N : ℕ) [NeZero N]
-    (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N)
+    (_hN : Even N) (_hN4 : 4 ≤ N) (hGRH : GRH N)
     (χ : Character N) (hχ : χ ∈ oddCharacters N) :
     NormallySummableOn (fun p : ZeroIndex χ.primitiveCharacter => fun s : ℂ =>
       1 / (s - p.val.1.im * I) - 1 / (3 / 2 - p.val.1.im * I))

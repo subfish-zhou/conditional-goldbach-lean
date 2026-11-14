@@ -1,9 +1,12 @@
-import ConditionalGoldbach.Proofs.WideMellinArithmetic
-import ConditionalGoldbach.Proofs.MellinResidual
-import ConditionalGoldbach.Proofs.WideMellinModel
-import ConditionalGoldbach.Proofs.WideQuadratic
+module
+
+public import ConditionalGoldbach.Proofs.WideMellinArithmetic
+public import ConditionalGoldbach.Proofs.WideMellinModel
+public import ConditionalGoldbach.Proofs.WideQuadratic
 
 /-! The exact wide-weight residual and the full Appendix B.4 conclusion. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

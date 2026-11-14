@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
-import ConditionalGoldbach.Proofs.HardyContourShift
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
+public import ConditionalGoldbach.Proofs.HardyContourShift
 
 /-! Fourier inversion of the one-sided exponential supplies the smoothed Perron kernel. -/
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -61,17 +65,16 @@ lemma perronExponential_convolution (c x : ℝ) :
     · simp [perronExponential, hu, Set.indicator]
   rw [he, integral_indicator measurableSet_Ioo, setIntegral_const]
   simp only [Measure.real, Real.volume_Ioo, sub_zero, ENNReal.toReal_ofReal',
-    Complex.real_smul, max_comm 0 x]
+    Complex.real_smul]
 
 lemma perronCauchySquare_integrable {c : ℝ} (hc : 0 < c) :
     Integrable (fun t : ℝ => (((c : ℂ) + (2 * Real.pi * t : ℝ) * I)⁻¹)^2) := by
   have hnorm (t : ℝ) : ‖(((c : ℂ) + (2 * Real.pi * t : ℝ) * I)⁻¹)^2‖ =
       c⁻¹^2 * (1 + ((2 * Real.pi / c) * t)^2)⁻¹ := by
     rw [norm_pow, norm_inv, inv_pow, Complex.sq_norm, Complex.normSq_apply]
-    simp only [add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero, zero_mul,
+    simp only [add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im, mul_zero,
       sub_zero, add_zero, add_im, mul_im, mul_one, zero_add]
     field_simp
-    <;> ring
   apply (integrable_norm_iff (by fun_prop)).mp
   simp_rw [hnorm]
   exact (integrable_inv_one_add_mul_sq (div_ne_zero (by positivity) hc.ne')).const_mul _
@@ -173,8 +176,7 @@ lemma smoothedPerronWeight_positiveParts {X : ℝ} (hX : 1 < X) (n : ℕ) (hn : 
   · have hln : Real.log n ≤ Real.log (Real.sqrt X) := Real.log_le_log hnR hsmall
     rw [max_eq_left (by linarith), max_eq_left (by linarith)]
     rw [hsq]
-    field_simp
-    <;> ring
+    field_simp; ring
   · have hln : Real.log (Real.sqrt X) < Real.log n := Real.log_lt_log (by linarith) (lt_of_not_ge hsmall)
     have hlnX : Real.log n ≤ Real.log X := Real.log_le_log hnR hlarge
     rw [max_eq_left (by linarith), max_eq_right (by linarith), sub_zero,

@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinDoubleSeries
-import ConditionalGoldbach.Proofs.DensitySeries
+module
+
+public import ConditionalGoldbach.Proofs.MellinDoubleSeries
+public import ConditionalGoldbach.Proofs.DensitySeries
 
 /-! The diagonal term in Lemma 7.2, evaluated by absolute double Mellin inversion. -/
+public section
+
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

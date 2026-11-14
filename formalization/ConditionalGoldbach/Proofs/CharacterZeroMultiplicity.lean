@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.CharacterZeroNormal
-import ConditionalGoldbach.Proofs.CompletedLZeros
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroNormal
+public import ConditionalGoldbach.Proofs.CompletedLZeros
 
 /-! Finite divisor sums agree exactly with the multiplicity-indexed zeros from the paper. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

@@ -1,9 +1,20 @@
-import ConditionalGoldbach.Proofs.SpectralCompletionTrace
+module
+
+public import Mathlib.Analysis.InnerProductSpace.StarOrder
+public import Mathlib.Analysis.InnerProductSpace.Positive
+public import Mathlib.Analysis.InnerProductSpace.LinearMap
+public import Mathlib.Analysis.Normed.Operator.Compact.Basic
+public import ConditionalGoldbach.Proofs.SpectralCompletionTrace
+import Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic
+import Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Basic
+import Mathlib.Analysis.CStarAlgebra.ContinuousLinearMap
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex InnerProductSpace
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]

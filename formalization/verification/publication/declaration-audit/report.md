@@ -4,13 +4,13 @@
 
 This audit traces the declarations actually referenced by proof terms. The project uses singular-series and Dirichlet L-function foundations from the pinned `goldbach-lean` package. Across the full reviewed library, `lemma_4_3_uniform` additionally uses the Mertens product lower bound and its prime-number-theorem dependencies.
 
-Recorded environment: Lean **v4.35.0**, `goldbach-lean` revision **24490c2ab7787238f816d771c9176411dcbda503**. Historical source hashes are in `source-hashes.json`; graph hashes, collection time, and counting conventions are in `metadata.json`.
+Recorded environment: Lean **v4.35.0**, `goldbach-lean` revision **24490c2ab7787238f816d771c9176411dcbda503**. The audited source hashes are in `source-hashes.json`; graph hashes, collection time, and counting conventions are in `metadata.json`.
 
 ## Method and counts
 
-`DeclarationAudit.lean` loads `ConditionalGoldbach`, follows declaration types and proof or definition values, including opaque values, and adds constructors for inductive types. Lean's module metadata identifies each declaration's source. The recorded traversal reached **90,420 declarations**, resolving every referenced constant.
+`DeclarationAudit.lean` loads `ConditionalGoldbach`, follows declaration types and proof or definition values, including opaque values, and adds constructors for inductive types. Lean's module metadata identifies each declaration's source. The recorded traversal reached **90,951 declarations**, resolving every referenced constant.
 
-The public-library roots are **2,869 nonprivate declarations**, including Lean-generated helpers. Checking all **2,938 local declarations**, including private declarations, produced the same external dependency set. The 102 reviewed roots come from `reviewed-types.json`.
+The public-library roots are **1,915 nonprivate declarations**, including Lean-generated helpers. Checking all **2,934 local declarations**, including private declarations, produced the same external dependency set. The 102 reviewed roots come from `reviewed-types.json`.
 
 | Roots | External declarations | External modules | Direct external targets |
 |---|---:|---:|---:|
@@ -76,4 +76,4 @@ python3 verification/publication/declaration-audit/analyze.py
 | `reviewed_102.json`, `public_library.json` | Combined closures and direct boundary targets |
 | `*-external-declarations.tsv` | Declaration names, modules, types, and private flags |
 | `reviewed-requiring-mertens.json` | Reviewed declarations reaching Mertens |
-| `imported-modules.json` | Independently collected module import list: 11,731 modules in the recorded environment |
+| `imported-modules.json` | Independently collected module import list: 6,914 modules in the recorded environment |

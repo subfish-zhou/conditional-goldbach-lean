@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.VariableQuadratic
-import ConditionalGoldbach.Proofs.ComponentNormBounds
+module
+
+public import ConditionalGoldbach.Proofs.VariableQuadratic
+public import ConditionalGoldbach.Proofs.ComponentNormBounds
+
+public section
 
 set_option autoImplicit false
 noncomputable section
@@ -55,8 +59,7 @@ lemma spectralZeroFree_of_log_square_bound (a : ℝ) (N : ℕ) [NeZero N]
   have he : (C*Real.log N^2)^2*4*η=spectralScale N^2/4 := by
     rw [spectralScale_sq N hn hSp.le hln.le]
     dsimp [η]
-    field_simp
-    <;> ring
+    field_simp; ring
   calc
     _ = (C*Real.log N^2)^2*4*Real.sqrt (η*(1-η))^2 := by ring
     _ = ((C*Real.log N^2)^2*4*η)*(1-η) := by rw [hsqrt]; ring

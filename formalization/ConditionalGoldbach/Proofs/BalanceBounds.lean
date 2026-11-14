@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.VariableWeightNorm
-import ConditionalGoldbach.Proofs.SpectralAlgebra
+module
+
+public import ConditionalGoldbach.Proofs.VariableWeightNorm
+public import ConditionalGoldbach.Proofs.SpectralAlgebra
 
 /-! Uniform comparison of the functional norm, baseline bound, and spectral widths. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -30,8 +34,8 @@ lemma normFunctional_baseline_bounds (φ : ℝ → ℝ) (hφ : IsWeight φ) (C :
   rw [baselineBound_alpha] at hl hu ⊢
   unfold balanceFactor
   constructor
-  · convert hl using 1 <;> ring
-  · convert hu using 1 <;> ring
+  · convert hl using 1; ring
+  · convert hu using 1; ring
 
 theorem lemma_A_3_balance (φ : ℝ → ℝ) (hφ : IsWeight φ) (C : ℝ) (hC : 0 < C) :
     ∃ L U : ℝ, 0 < L ∧ 0 < U ∧ EvenEventually (fun N =>
@@ -82,14 +86,12 @@ lemma spectralWidth_ratio_bounds (N : ℕ) (r s : ℝ)
   constructor
   · have hh := div_le_div₀ her0.le hrl hes0 hsu
     have he : (spectralScale N^2/(4*r^2))/(spectralScale N^2/(2*s^2)) = s^2/(2*r^2) := by
-      field_simp
-      <;> ring
+      field_simp; ring
     rwa [he] at hh
   · have hh := div_le_div₀ (by positivity : 0 ≤ spectralScale N^2/(2*r^2)) hru
       (by positivity : 0 < spectralScale N^2/(4*s^2)) hsl
     have he : (spectralScale N^2/(2*r^2))/(spectralScale N^2/(4*s^2)) = 2*s^2/r^2 := by
-      field_simp
-      <;> ring
+      field_simp; ring
     rwa [he] at hh
 
 theorem lemma_A_3_width_ratio (φ : ℝ → ℝ) (hφ : IsWeight φ)
@@ -119,7 +121,6 @@ theorem lemma_A_3_width_ratio (φ : ℝ → ℝ) (hφ : IsWeight φ)
   have hS : singularSeries N ≠ 0 := by intro he; simp [he] at hr0
   have he : B^2/(singularSeries N/(h*Q))^2 = h^2*(Q*B)^2/singularSeries N^2 := by
     field_simp
-    <;> ring
   obtain ⟨hl,hu⟩ := (hbound N hN heven c hc ha).2.2 (fun _ => h) hh
   obtain ⟨hrl,hru⟩ := spectralWidth_ratio_bounds N (singularSeries N/(h*Q)) B hd hr hs
   change _ ≤ spectralWidthFromBound N (singularSeries N/(h*Q))/spectralWidthFromBound N B ∧
@@ -132,8 +133,8 @@ theorem lemma_A_3_width_ratio (φ : ℝ → ℝ) (hφ : IsWeight φ)
   rw [heu] at hru
   constructor
   · have hl' := div_le_div_of_nonneg_right hl (by norm_num : (0:ℝ) ≤ 2)
-    convert hl'.trans hrl using 1 <;> ring
+    convert hl'.trans hrl using 1; ring
   · have hu' := mul_le_mul_of_nonneg_left hu (by norm_num : (0:ℝ) ≤ 2)
-    convert hru.trans hu' using 1 <;> ring
+    convert hru.trans hu' using 1; ring
 
 end ConditionalGoldbach

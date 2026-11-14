@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.LFunctionDomain
+module
+
+public import ConditionalGoldbach.Proofs.LFunctionDomain
 
 /-! Local finiteness of the paper's zeros with multiplicity, using the actual entire L-function. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

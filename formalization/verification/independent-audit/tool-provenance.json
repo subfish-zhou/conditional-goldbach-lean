@@ -8,9 +8,5 @@
   },
   "local_dependency_revision": "24490c2ab7787238f816d771c9176411dcbda503",
   "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-  "comparison_mode": "Actual Lean toolchain lake comparator; no external kernel flags; standard Lean kernel replay; bwrap kept with two extra read-only dependency mounts.",
-  "read_only_dependency_paths": [
-    "/home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization",
-    "/home/azureuser/goldbach-lean"
-  ]
+  "comparison_mode": "Lake comparator with Lean kernel replay and read-only sandbox mounts for the project and resolved dependency caches."
 }

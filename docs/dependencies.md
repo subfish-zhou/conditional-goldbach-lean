@@ -6,11 +6,15 @@ The project pins [`subfish-zhou/goldbach-lean`](https://github.com/subfish-zhou/
 
 ## Imported modules
 
+The `ConditionalGoldbach` entry point loads 6,803 modules, including 3,801 from Mathlib. The source scan and Lean's compiled import graph agree on the current closure.
+
+Before the definition split, these counts were 6,914 and 3,929. The Hardy boundary and pure Hilbert–Schmidt trace closures now have no `goldbach-lean` number-theory dependencies. The full project retains the external mathematical dependencies listed below. See the [refactor measurements](quality-convolution.md) for timings, the baseline source snapshot, and measurement details.
+
 Four mathematical modules are imported directly in addition to Mathlib:
 
 | Module | Purpose | Local importer |
 |---|---|---|
-| `MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries` | Singular series, positivity, and Euler products | `BaseDefinitions.lean` |
+| `MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries` | Singular series, positivity, and Euler products | `Definitions/Arithmetic.lean` |
 | `MathlibNt.SieveTheory.Arithmetic.MertensTheorem` | Mertens product estimate and bounds for `N / φ(N)` | `Proofs/TotientLogLog.lean` |
 | `MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries` | Dirichlet L-series and periodic cancellation estimates | `Proofs/CharacterGrowthFoundation.lean` |
 | `MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds` | Growth bounds in the right half-plane | `Proofs/CharacterGrowthFoundation.lean` |

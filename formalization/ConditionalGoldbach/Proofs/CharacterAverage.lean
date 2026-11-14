@@ -1,10 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralPerronGamma
-import ConditionalGoldbach.Proofs.SpectralPerronTruncation
-import ConditionalGoldbach.Proofs.CharacterPoissonComparison
-import ConditionalGoldbach.Proofs.CharacterReferenceEnergy
-import ConditionalGoldbach.Proofs.CharacterAverageAssembly
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPerronGamma
+public import ConditionalGoldbach.Proofs.SpectralPerronTruncation
+public import ConditionalGoldbach.Proofs.CharacterPoissonComparison
+public import ConditionalGoldbach.Proofs.CharacterAverageAssembly
 
 /-! The full uniform character average in Lemma 6.4. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

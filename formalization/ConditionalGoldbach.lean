@@ -1,1 +1,3 @@
-import ConditionalGoldbach.Remaining
+module
+
+public import ConditionalGoldbach.Remaining

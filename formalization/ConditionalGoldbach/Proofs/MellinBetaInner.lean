@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.BetaIntegrals
-import ConditionalGoldbach.Proofs.BetaIdentity
+module
+
+public import ConditionalGoldbach.Proofs.BetaIntegrals
+public import ConditionalGoldbach.Proofs.BetaIdentity
 
 /-! The inner Beta integrals in the convolution–Mellin calculation, including norm integrals. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -24,7 +28,7 @@ lemma beta_difference_norm_integral (r : ℝ) (hr : 0 < r) (s z : ℂ)
     (∫ u in Ioi (0 : ℝ), ‖(u : ℂ)^(-1/2-s) * (u+r : ℂ)^(-1/2-z)‖) =
       r ^ (-(s.re+z.re)) * (betaIntegral ((1/2 : ℝ)-s.re) (s.re+z.re)).re := by
   have hd' : ((s.re : ℂ),(z.re : ℂ)) ∈ betaDomain := by
-    simpa only [betaDomain, mem_setOf_eq, ofReal_re, add_re] using hd
+    simpa only [betaDomain, Set.mem_ofPred_eq, ofReal_re, add_re] using hd
   calc
     _ = ∫ u in Ioi (0 : ℝ),
         ((u : ℂ)^(-1/2-(s.re : ℂ)) * (u+r : ℂ)^(-1/2-(z.re : ℂ))).re := by
@@ -39,14 +43,14 @@ lemma beta_difference_norm_integral (r : ℝ) (hr : 0 < r) (s z : ℂ)
       have he : -((s.re : ℂ)+(z.re : ℂ)) = (-(s.re+z.re) : ℝ) := by push_cast; rfl
       rw [he, ← Complex.ofReal_cpow hr.le]
       simp only [Complex.mul_re, ofReal_re, ofReal_im, zero_mul, sub_zero]
-      congr 2 <;> push_cast <;> rfl
+      congr 2; push_cast; rfl
 
 lemma beta_sum_norm_integral (r : ℝ) (hr : 0 < r) (s z : ℂ)
     (hd : (s,z) ∈ betaDomain) :
     (∫ u in Ioo (0 : ℝ) r, ‖(u : ℂ)^(-1/2-s) * (r-u : ℂ)^(-1/2-z)‖) =
       r ^ (-(s.re+z.re)) * (betaIntegral ((1/2 : ℝ)-s.re) ((1/2 : ℝ)-z.re)).re := by
   have hd' : ((s.re : ℂ),(z.re : ℂ)) ∈ betaDomain := by
-    simpa only [betaDomain, mem_setOf_eq, ofReal_re, add_re] using hd
+    simpa only [betaDomain, Set.mem_ofPred_eq, ofReal_re, add_re] using hd
   calc
     _ = ∫ u in Ioo (0 : ℝ) r,
         ((u : ℂ)^(-1/2-(s.re : ℂ)) * (r-u : ℂ)^(-1/2-(z.re : ℂ))).re := by
@@ -61,7 +65,7 @@ lemma beta_sum_norm_integral (r : ℝ) (hr : 0 < r) (s z : ℂ)
       have he : -((s.re : ℂ)+(z.re : ℂ)) = (-(s.re+z.re) : ℝ) := by push_cast; rfl
       rw [he, ← Complex.ofReal_cpow hr.le]
       simp only [Complex.mul_re, ofReal_re, ofReal_im, zero_mul, sub_zero]
-      congr 2 <;> push_cast <;> rfl
+      congr 2; push_cast; rfl
 
 lemma convolution_betaDomain (σ : ℝ) (hσ : 0 < σ) (hσupper : σ ≤ 1/9)
     (s w : ℂ) (hs : s.re = σ) (hw : w.re = 2*σ) :

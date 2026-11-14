@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.HardyGaussianRepresentation
-import ConditionalGoldbach.Proofs.HardyWeakLimit
+module
+
+public import ConditionalGoldbach.Proofs.HardyGaussianRepresentation
+public import ConditionalGoldbach.Proofs.HardyWeakLimit
 
 /-! The full strip Paley–Wiener theorem, including surjectivity from the original raw Hardy condition.
 The inverse direction uses Gaussian regularization, contour shifting, Fourier inversion, Fatou,
 and weak compactness. No boundary regularity or distributional identity is assumed. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false

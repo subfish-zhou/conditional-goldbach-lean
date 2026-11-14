@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.FiniteMellinProjection
-import ConditionalGoldbach.Proofs.MellinMoment
+module
+
+public import ConditionalGoldbach.Proofs.FiniteMellinProjection
+public import ConditionalGoldbach.Proofs.MellinMoment
 
 /-! Absolutely convergent double Mellin inversion for a common sampling sequence. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

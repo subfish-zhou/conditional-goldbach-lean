@@ -1,6 +1,12 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Complex.CauchyIntegral
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Derivative convergence from pointwise convergence and a common circular majorant. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped Topology
@@ -27,7 +33,7 @@ lemma deriv_tendsto_of_bounded_circle (F : ℕ → ℂ → ℂ) (f : ℂ → ℂ
         (fun θ => pow_ne_zero _ (hne θ)))
   have hKb : ∀θ, ‖K θ‖ = r*(1/r^2) := by
     intro θ
-    simp [K,deriv_circleMap,norm_mul,norm_div,norm_pow,circleMap_sub_center,
+    simp [K,deriv_circleMap,norm_pow,circleMap_sub_center,
       norm_circleMap_zero,abs_of_pos hr]
   have hcF : ∀ᶠ n in atTop, Continuous (fun θ => K θ * F n (circleMap c r θ)) := by
     filter_upwards [hF] with n hn

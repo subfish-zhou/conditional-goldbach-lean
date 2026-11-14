@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.SpectralPerronPoleIntegral
-import ConditionalGoldbach.Proofs.SpectralZeroPower
-import ConditionalGoldbach.Proofs.HardyKernelMajorant
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPerronPoleIntegral
+public import ConditionalGoldbach.Proofs.SpectralZeroPower
+public import ConditionalGoldbach.Proofs.HardyKernelMajorant
 
 /-! Absolute integral majorants for exchanging the Hadamard zero sum with Perron integration. -/
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -154,7 +158,6 @@ lemma perron_resolvent_difference_norm_bound {X c σ : ℝ} (hX : 1 < X) (hc : 0
       (mul_nonneg (mul_nonneg (norm_nonneg _) (norm_nonneg _)) (norm_nonneg _))).trans_eq
     rw [norm_inv, norm_inv, norm_inv]
     field_simp [norm_ne_zero_iff.mpr hv]
-    <;> ring
   apply hbase.trans
   have hB := (perronKernelNormConstant_pos hX c).le
   have h₁ := perron_line_inverse_bound hc t
@@ -167,7 +170,6 @@ lemma perron_resolvent_difference_norm_bound {X c σ : ℝ} (hX : 1 < X) (hc : 0
         ((σ⁻¹ + (2 * Real.pi)⁻¹) * (1 + |δ|)⁻¹) *
         (((c + σ)⁻¹ + (2 * Real.pi)⁻¹) * (1 + |t + δ|)⁻¹) := by
       gcongr
-      all_goals positivity
     _ = _ := by ring
 
 lemma smoothedPerronKernel_integral {X c : ℝ} (hX : 1 < X) (hc : 0 < c) :

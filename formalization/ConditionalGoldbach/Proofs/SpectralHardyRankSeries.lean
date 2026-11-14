@@ -1,10 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralRankOneSeries
-import ConditionalGoldbach.Proofs.HardyEvaluation
-import Mathlib.MeasureTheory.Function.LpSpace.InfiniteSum
+module
+
+public import ConditionalGoldbach.Proofs.SpectralRankOneSeries
+public import ConditionalGoldbach.Proofs.HardyEvaluation
+public import Mathlib.MeasureTheory.Function.LpSpace.InfiniteSum
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

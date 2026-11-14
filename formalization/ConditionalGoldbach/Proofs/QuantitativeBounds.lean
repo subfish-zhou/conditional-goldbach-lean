@@ -1,7 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterAverage
-import ConditionalGoldbach.Proofs.SpectralQuantitative
-import ConditionalGoldbach.Proofs.BalanceBounds
-import ConditionalGoldbach.Proofs.BalanceLimits
+module
+
+public import ConditionalGoldbach.Proofs.CharacterAverage
+public import ConditionalGoldbach.Proofs.SpectralQuantitative
+public import ConditionalGoldbach.Proofs.BalanceLimits
+
+public section
 
 set_option autoImplicit false
 noncomputable section

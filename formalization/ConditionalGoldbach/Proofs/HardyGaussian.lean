@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyContourShift
+module
+
+public import ConditionalGoldbach.Proofs.HardyContourShift
 
 /-! Gaussian regularization of raw strip-Hardy functions. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -61,7 +65,7 @@ lemma hardyGaussian_line_norm (f : ℂ → ℂ) (ε τ x t : ℝ) :
   have hre : (line x t ^ 2).re = x ^ 2 - t ^ 2 := by
     simp only [pow_two, Complex.mul_re, line, Complex.add_re, Complex.ofReal_re,
       Complex.mul_re, Complex.ofReal_im, Complex.I_re, Complex.I_im, mul_zero,
-      zero_mul, sub_zero, add_zero, Complex.add_im, Complex.mul_im, mul_one, zero_add]
+      sub_zero, add_zero, Complex.add_im, Complex.mul_im, mul_one, zero_add]
   rw [hre]
   simp only [line, Complex.add_re, Complex.ofReal_re, Complex.mul_re, Complex.ofReal_im,
     Complex.I_re, Complex.I_im, mul_zero, zero_mul, sub_zero, add_zero]
@@ -114,9 +118,11 @@ lemma hardyGaussian_horizontal_integrable {a b x y ε : ℝ} (hab : a < b) {f : 
 lemma hardyGaussian_differentiableOn {a b : ℝ} {f : ℂ → ℂ}
     (hf : DifferentiableOn ℂ f (strip a b)) (ε τ : ℝ) :
     DifferentiableOn ℂ (hardyGaussian f ε τ) (strip a b) := by
-  intro s hs
-  apply (hf s hs).mul
-  fun_prop
+  have hfactor : Differentiable ℂ (fun s : ℂ =>
+      Complex.exp ((ε : ℂ) * s ^ 2 - (τ : ℂ) * s)) :=
+    ((differentiable_id.pow 2).const_mul (ε : ℂ) |>.sub
+      (differentiable_id.const_mul (τ : ℂ))).cexp
+  exact hf.mul hfactor.differentiableOn
 
 /-- The Gaussian-regularized inverse Laplace density is independent of the vertical line. -/
 lemma hardyGaussian_vertical_integral_eq {a b x y ε : ℝ} (hab : a < b) {f : ℂ → ℂ}

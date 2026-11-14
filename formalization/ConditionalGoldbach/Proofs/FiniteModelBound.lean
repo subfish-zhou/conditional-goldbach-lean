@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.FiniteModelBasic
-import ConditionalGoldbach.Proofs.MellinModelBound
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelBasic
+public import ConditionalGoldbach.Proofs.MellinModelBound
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

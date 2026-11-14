@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.SpectralDictionary
-import ConditionalGoldbach.Proofs.Elementary
-import ConditionalGoldbach.AnalyticPrerequisites
+module
+
+public import ConditionalGoldbach.Proofs.SpectralDictionary
+public import ConditionalGoldbach.AnalyticPrerequisites
+
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff Quaternion
@@ -43,7 +47,7 @@ theorem theorem_6_1 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (
   have hparam := large_parameters hlarge
   have hNpos : 0 < (N : ℝ) := by exact_mod_cast (show 0 < N by omega)
   have hδ := spectralScale_pos N hNpos (singularSeries_pos N) hparam.2.1
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   have hd := theorem_6_1_abstract_dictionary N (residualOperator ha N) hT hδ
   refine ⟨hd.1, hd.2, ?_⟩
   intro M hM hnorm

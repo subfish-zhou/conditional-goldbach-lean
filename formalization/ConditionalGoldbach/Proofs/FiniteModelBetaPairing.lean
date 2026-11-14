@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.FiniteModelBasic
-import ConditionalGoldbach.Proofs.MellinBetaPairing
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelBasic
+public import ConditionalGoldbach.Proofs.MellinBetaPairing
+
+public section
 
 set_option autoImplicit false
 noncomputable section
@@ -49,7 +53,7 @@ lemma mellinWeight_pairing (φ : ℝ → ℝ) (hφ : FiniteModelWeight φ)
   · simpa only [mul_assoc, integral_const_mul] using hF.integral_prod_left
   · have hs := integral_integral_swap (f := fun t u : ℝ =>
       mellinWeight φ (line σ t) * (u : ℂ) ^ (-line σ t) * g u) hF
-    simp only [← mul_assoc, integral_mul_const] at hs
+    simp only [integral_mul_const] at hs
     unfold verticalMellin
     simp only [mul_assoc, integral_const_mul] at hs
     rw [hs]

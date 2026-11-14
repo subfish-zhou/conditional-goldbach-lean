@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.HadamardApproximation
-import ConditionalGoldbach.Proofs.CharacterZeroMultiplicity
-import ConditionalGoldbach.Proofs.SpectralCompletedLGrowth
+module
+
+public import ConditionalGoldbach.Proofs.HadamardApproximation
+public import ConditionalGoldbach.Proofs.CharacterZeroMultiplicity
+public import ConditionalGoldbach.Proofs.SpectralCompletedLGrowth
 
 /-! The full Hadamard difference identity, as the limit of actual finite zero factorizations. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

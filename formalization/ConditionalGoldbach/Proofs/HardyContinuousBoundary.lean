@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyConverse
+module
+
+public import ConditionalGoldbach.Proofs.HardyConverse
 
 /-! Exact traces for holomorphic strip functions with a common integrable square majorant. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -76,7 +80,7 @@ lemma closedStrip_toLp_continuous {a b : ℝ} {f : ℂ → ℂ} {M : ℝ → ℝ
   change ‖fx - fy‖ = Real.sqrt (∫ t : ℝ, ‖f (line x t) - f (line y t)‖ ^ 2)
   rw [← he, Real.sqrt_sq (norm_nonneg _)]
 
-lemma rawHardy_of_closedStrip_majorant {a b : ℝ} (hab : a < b) {f : ℂ → ℂ} {M : ℝ → ℝ}
+lemma rawHardy_of_closedStrip_majorant {a b : ℝ} (_hab : a < b) {f : ℂ → ℂ} {M : ℝ → ℝ}
     (hhol : DifferentiableOn ℂ f (strip a b))
     (hc : ContinuousOn f {s : ℂ | s.re ∈ Icc a b}) (hM : Integrable M)
     (hbound : ∀ x ∈ Icc a b, ∀ t : ℝ, ‖f (line x t)‖ ^ 2 ≤ M t) : IsRawHardy a b f := by

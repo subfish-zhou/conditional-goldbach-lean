@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.VariableComponentOperators
-import ConditionalGoldbach.Proofs.CharacterStripTrace
-import ConditionalGoldbach.Proofs.SpectralDiagonalBound
-import ConditionalGoldbach.Proofs.HilbertSchmidtTriangle
+module
+
+public import ConditionalGoldbach.Proofs.VariableComponentOperators
+public import ConditionalGoldbach.Proofs.CharacterStripTrace
+public import ConditionalGoldbach.Proofs.SpectralDiagonalBound
+public import ConditionalGoldbach.Proofs.HilbertSchmidtTriangle
+
+public section
 
 set_option autoImplicit false
 noncomputable section

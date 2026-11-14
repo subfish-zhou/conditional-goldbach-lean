@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.PoleLogDerivative
+module
+
+public import ConditionalGoldbach.Proofs.PoleLogDerivative
 
 /-! The exact leading quadratic singularity of the finite character kernel. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -56,7 +60,7 @@ lemma characterKernel_double_pole {N : ℕ} [NeZero N] (γ : ℝ) :
       ring
     · simp
       ring
-  have hsum := (tendsto_finset_sum (oddCharacters N) hterm).const_mul ((2:ℂ)/(N.totient:ℂ))
+  have hsum := (tendsto_finsetSum (oddCharacters N) hterm).const_mul ((2:ℂ)/(N.totient:ℂ))
   convert hsum using 1
   · funext x
     unfold characterKernel

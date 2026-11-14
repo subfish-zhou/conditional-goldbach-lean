@@ -1,6 +1,6 @@
 {
   "root_count": 1,
-  "reachable_declaration_count": 77134,
+  "reachable_declaration_count": 76677,
   "external_project_declaration_count": 68,
   "external_project_module_count": 5,
   "external_project_modules": {
@@ -234,7 +234,7 @@
     },
     {
       "source": "ConditionalGoldbach.singularSeries",
-      "source_module": "ConditionalGoldbach.BaseDefinitions",
+      "source_module": "ConditionalGoldbach.Definitions.Arithmetic",
       "edge_kind": "value_refs",
       "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
       "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
@@ -382,6 +382,7 @@
     "AnalyticNumberTheory.LargeSieve.tsum_nat_add_one_rpow_neg_le": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -393,6 +394,7 @@
     "AnalyticNumberTheory.LargeSieve.tsum_nat_rpow_neg_le": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -403,6 +405,7 @@
     "DirichletLAbelWeightVariation.cpowWeight": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -412,6 +415,7 @@
     "DirichletLAbelWeightVariation.cpowWeight.eq_1": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -422,6 +426,7 @@
     "DirichletLAbelWeightVariation.cpowWeightDeriv": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -437,6 +442,7 @@
     "DirichletLAbelWeightVariation.cpowWeightDeriv.eq_1": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -453,6 +459,7 @@
     "DirichletLAbelWeightVariation.hasDerivAt_cpowWeight": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -468,6 +475,7 @@
     "DirichletLAbelWeightVariation.norm_cpowWeightDeriv": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -483,6 +491,7 @@
     "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -496,6 +505,7 @@
     "DirichletLAbelWeightVariation.norm_cpowWeight_succ_sub_le_integral": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -510,6 +520,7 @@
     "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -521,6 +532,7 @@
     "DirichletLAbelWeightVariation.sum_norm_cpowWeight_sub_le_sub": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -533,6 +545,7 @@
     "DirichletLConditionalValueSeries.cauchySeq_sum_range_cpowWeight_character": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -544,6 +557,7 @@
     "DirichletLConditionalValueSeries.character_nat_zero_of_ne_one": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -553,6 +567,7 @@
     "DirichletLConditionalValueSeries.compactValueTailMajorant": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -566,6 +581,7 @@
     "DirichletLConditionalValueSeries.cpowWeight_nat_eq": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -577,6 +593,7 @@
     "DirichletLConditionalValueSeries.differentiableOn_orderedValueFunction": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -587,6 +604,7 @@
     "DirichletLConditionalValueSeries.exists_tendsto_sum_range_cpowWeight_character": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -597,6 +615,7 @@
     "DirichletLConditionalValueSeries.norm_orderedValueSeries_sub_sum_range_le": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -606,6 +625,7 @@
     "DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -616,6 +636,7 @@
     "DirichletLConditionalValueSeries.orderedValueFunction": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -626,6 +647,7 @@
     "DirichletLConditionalValueSeries.orderedValueFunction_eq": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -636,6 +658,7 @@
     "DirichletLConditionalValueSeries.orderedValueSeries": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -645,6 +668,7 @@
     "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -655,6 +679,7 @@
     "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction._proof_1": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -666,6 +691,7 @@
     "DirichletLConditionalValueSeries.orderedValueSeries_eq_LFunction_of_re_pos": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -675,6 +701,7 @@
     "DirichletLConditionalValueSeries.rightHalfPlane": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -685,6 +712,7 @@
     "DirichletLConditionalValueSeries.rightHalfPlane.eq_1": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -695,6 +723,7 @@
     "DirichletLConditionalValueSeries.tendstoLocallyUniformlyOn_valuePartialSum": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -706,6 +735,7 @@
     "DirichletLConditionalValueSeries.tendsto_cpowVariationBudget_nat_atTop": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -718,6 +748,7 @@
     "DirichletLConditionalValueSeries.tendsto_norm_cpowWeight_nat_atTop": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -728,6 +759,7 @@
     "DirichletLConditionalValueSeries.tendsto_sum_range_orderedValueSeries": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -738,6 +770,7 @@
     "DirichletLConditionalValueSeries.valuePartialSum": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -749,6 +782,7 @@
     "DirichletLWeakStripDerivative.abel_Ico": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -761,6 +795,7 @@
     "DirichletLWeakStripDerivative.character_norm_le_one": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -773,6 +808,7 @@
     "DirichletLWeakStripDerivative.dirichlet_cpow_abel_Ico": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -784,6 +820,7 @@
     "DirichletLWeakStripDerivative.norm_sum_range_character_le_modulus": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -795,6 +832,7 @@
     "DirichletLWeakStripDerivative.sum_aligned_period_eq_zero": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -808,6 +846,7 @@
     "DirichletLWeakStripDerivative.sum_mul_period_eq_zero": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -820,6 +859,7 @@
     "DirichletLWeakStripDerivative.sum_one_period_eq_zero": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -1045,6 +1085,7 @@
     "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -1057,6 +1098,7 @@
     "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.compact_uniform_value_tail._simp_1_1": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -1070,6 +1112,7 @@
     "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.differentiable_valuePartialSum": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -1081,6 +1124,7 @@
     "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.norm_sum_Ico_cpowWeight_character_le._simp_1_1": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",
@@ -1092,6 +1136,7 @@
     "_private.MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries.0.DirichletLConditionalValueSeries.tendsto_compactValueTailMajorant": [
       "ConditionalGoldbach.theorem_1_2",
       "ConditionalGoldbach.theorem_6_1",
+      "ConditionalGoldbach.residualOperator_has_spectral_data",
       "ConditionalGoldbach.proposition_5_3",
       "ConditionalGoldbach.arithmeticKernel_growth_inputs",
       "ConditionalGoldbach.logDerivative_uniform_bound",

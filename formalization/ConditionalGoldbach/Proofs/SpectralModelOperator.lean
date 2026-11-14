@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.SpectralModelGrowth
-import ConditionalGoldbach.Proofs.WeightedComponentKernel
-import ConditionalGoldbach.Proofs.SpectralTraceBounds
+module
+
+public import ConditionalGoldbach.Proofs.SpectralModelGrowth
+public import ConditionalGoldbach.Proofs.WeightedComponentKernel
+public import ConditionalGoldbach.Proofs.SpectralTraceBounds
 
 /-! Uniform Hilbert--Schmidt estimates for the genuine model operator. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 set_option backward.isDefEq.respectTransparency false
@@ -48,7 +52,7 @@ lemma boundaryKernelSquareIntegral_power_bound {a b : ℝ} (hab : a < b)
     (K : ℂ → ℂ → ℂ)
     (hK : ∀ x ∈ ({a, b} : Finset ℝ), ∀ y ∈ ({a, b} : Finset ℝ),
       MemLp (fun p : ℝ × ℝ => K (line x p.1) (line y p.2)) 2 volume)
-    (C : ℝ) (hC : 0 ≤ C)
+    (C : ℝ) (_hC : 0 ≤ C)
     (hbound : ∀ x ∈ Icc a b, ∀ y ∈ Icc a b, ∀ v t : ℝ,
       ‖K (line x v) (line y t)‖ ^ 2 ≤
         C * (1 + |v|)^(-(3 / 2 : ℝ)) * (1 + |t|)^(-(3 / 2 : ℝ))) :
@@ -93,7 +97,7 @@ theorem modelOperator_uniform_hs_bound :
   let J : ℝ := ∫ t : ℝ, (1 + |t|)^(-(3 / 2 : ℝ))
   refine ⟨8 * B * (|J| + 1), by positivity, ?_⟩
   intro a ha0 ha N hNZ
-  letI := hNZ
+  let := hNZ
   have hN : 0 < N := Nat.pos_of_ne_zero (NeZero.ne N)
   let Q := B * (a⁻¹)^2
   have hQ : 0 ≤ Q := by dsimp [Q]; positivity
@@ -104,10 +108,12 @@ theorem modelOperator_uniform_hs_bound :
     apply weightedAnalyticKernel_hermitian
     intro s z
     rw [continuedModel_conj, Complex.conj_conj, continuedModel_symmetric]
-  have hs := kernelOperator_spec_of_hardyColumns ha N _ hherm hK hcol
-  have hhs : IsHilbertSchmidt (modelOperator ha N) := hs.2.2.2.1
+  obtain ⟨_, _, _, hHilbertSchmidt, _, _, hSquareIntegral, _⟩ :=
+    kernelOperator_spec_of_hardyColumns ha N _ hherm hK hcol
+  have hhs : IsHilbertSchmidt (modelOperator ha N) := hHilbertSchmidt
   have he : hsNorm (modelOperator ha N)^2 =
-      BoundaryKernelSquareIntegral a beta (weightedAnalyticKernel (continuedModel N)) := hs.2.2.2.2.2.2.1
+      BoundaryKernelSquareIntegral a beta (weightedAnalyticKernel (continuedModel N)) :=
+    hSquareIntegral
   refine ⟨hhs, ?_⟩
   have henergy := boundaryKernelSquareIntegral_power_bound ha _ hK (16 * Q^2) (by positivity)
     (weightedAnalyticKernel_power_bound ha0.le (continuedModel N) Q hQ hbound)

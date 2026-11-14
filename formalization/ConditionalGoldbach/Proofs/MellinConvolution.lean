@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.Weights
+module
+
+public import ConditionalGoldbach.Proofs.Weights
 
 /-! Smooth convolution densities, their support, sampled values, and pole cancellation. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff Convolution

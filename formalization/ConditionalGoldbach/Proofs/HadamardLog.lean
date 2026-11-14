@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.LogDerivativeDisk
+module
+
+public import ConditionalGoldbach.Proofs.LogDerivativeDisk
 
 /-! The vanishing error in Hadamard's difference formula: Cauchy estimates for a holomorphic logarithm. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

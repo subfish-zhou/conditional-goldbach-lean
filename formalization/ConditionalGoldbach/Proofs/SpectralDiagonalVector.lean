@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.HardyContinuousBoundary
-import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
+module
+
+public import ConditionalGoldbach.Proofs.HardyContinuousBoundary
+public import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -22,7 +26,7 @@ theorem diagonalVector_norm_sq (n : ℕ) (hn : 1 ≤ n) (x t : ℝ) :
   rw [hpow]
   congr 1
   simp only [Complex.normSq_apply, line, add_re, ofReal_re, mul_re, ofReal_im, I_re, I_im,
-    one_re, one_im, mul_zero, zero_mul, sub_zero, add_zero, add_im, mul_im, mul_one, zero_add]
+    one_re, one_im, mul_zero, sub_zero, add_zero, add_im, mul_im, mul_one, zero_add]
   ring
 
 /-- A common integrable square majorant for all closed strips in the right half-plane. -/

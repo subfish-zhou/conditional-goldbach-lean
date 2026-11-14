@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralHilbertSchmidtCompact
+module
+
+public import ConditionalGoldbach.Proofs.SpectralHilbertSchmidtCompact
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex InnerProductSpace
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {E H : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E] [CompleteSpace E]
@@ -53,7 +57,7 @@ theorem isometricCompression_hilbertSchmidt (J : E →ₗᵢ[ℂ] H) (B : H →L
     convert hc using 1
     funext j
     exact (hcol j).tsum_eq
-  have hp : Summable (Function.uncurry f) := (Equiv.prodComm ℕ ℕ).summable_iff.mpr hp'
+  have hp : Summable (Function.uncurry f) := ((Equiv.prodComm ℕ ℕ).summable_iff (f := Function.uncurry f)).mp hp'
   have hA : Summable (fun i => ‖A (b i)‖ ^ 2) := by
     convert hp.prod using 1
     funext i

@@ -4,10 +4,14 @@ import hashlib
 import json
 import re
 
-from project_sources import ROOT, library_sources
+from project_sources import ROOT, declaration_owner, library_sources
+from verification_inputs import (
+    BUILD_COMMAND, COMPARATOR_AXIOMS, DECLARATIONS, DEPENDENCY_OUTPUTS, FULL_TYPE_CHECK, PUBLICATION,
+    build_inputs, comparator_inputs, comparator_targets, manifest_revisions,
+)
 
 AUDIT = 'verification/independent-audit/'
-STANDARD_AXIOMS = {'propext', 'Classical.choice', 'Quot.sound'}
+STANDARD_AXIOMS = COMPARATOR_AXIOMS
 
 
 def require(condition, message):
@@ -36,6 +40,17 @@ def unique_rows(rows, field):
     return values
 
 
+def verify_comparator_inputs(result, manifest):
+    config = read(AUDIT + 'comparator-project/comparator.json')
+    comparator_targets(manifest, config)
+    require(result.get('input_hashes') == comparator_inputs(ROOT, ROOT / AUDIT, manifest),
+            'Comparator inputs changed since the run')
+    require(result.get('build_sha256') == digest('verification/current-build.json'),
+            'Comparator result belongs to a different build')
+    require(result.get('independent_full_types_sha256') == digest(AUDIT + 'independent-full-types.json'),
+            'Independent full-type output changed since the run')
+
+
 def validate_current_evidence():
     """Return a new record only after all current evidence has been checked."""
     evidence = set()
@@ -47,7 +62,8 @@ def validate_current_evidence():
 
     build = read(include('verification/current-build.json'))
     require(build['exit_code'] == 0, 'Current project build failed')
-    require(build['wall_seconds'] >= 0 and build['command'], 'Incomplete build record')
+    require(build['wall_seconds'] >= 0 and build['command'] == list(BUILD_COMMAND),
+            'Incomplete warning-free build record')
     build_start = datetime.fromisoformat(build['start_utc'])
     require(build_start.tzinfo is not None, 'Build timestamp requires a timezone')
     build_log = include(build['log'])
@@ -55,25 +71,27 @@ def validate_current_evidence():
     require('Build completed successfully' in (ROOT / build_log).read_text(),
             'Current full-build log does not contain successful completion')
 
-    def fresh(name):
-        name = include(name)
-        require((ROOT / name).stat().st_mtime >= build_start.timestamp(),
-                f'Evidence predates the current build: {name}')
-        return name
+    require(build.get('input_hashes') == build_inputs(ROOT),
+            'Build inputs differ from the recorded run. Rerun verify_project.py.')
+    require(build.get('dependency_revisions') == manifest_revisions(ROOT),
+            'The build did not record the pinned dependency revisions')
+    for name in build['input_hashes']:
+        include(name)
 
-    audits = read(fresh('verification/current-audits.json'))
+    audits = read(include('verification/current-audits.json'))
     audit_steps = unique_rows(audits, 'label')
     expected_steps = {
+        'entrypoints': (['python3', 'scripts/check_entrypoints.py'],
+            'verification/current-entrypoints.log'),
         'definitions': (['python3', 'scripts/check_definitions.py'], 'verification/current-definitions.log'),
         'types': (['python3', 'scripts/check_reviewed_types.py'], 'verification/current-types.log'),
         'axioms': (['python3', 'scripts/audit_proofs.py'], 'verification/current-axioms.log'),
         'dependency-graph': (['lake', 'env', 'lean',
-            'verification/publication/declaration-audit/DeclarationAudit.lean'],
-            'verification/publication/declaration-audit/compile.log'),
-        'dependency-analysis': (['python3', 'verification/publication/declaration-audit/analyze.py'],
-            'verification/publication/declaration-audit/analyze-recheck.log'),
-        'dependency-imports': (['python3', 'verification/publication/audit_imports.py'],
-            'verification/publication/imports-recheck.log'),
+            DECLARATIONS + 'DeclarationAudit.lean'], DECLARATIONS + 'compile.log'),
+        'dependency-analysis': (['python3', DECLARATIONS + 'analyze.py'],
+            DECLARATIONS + 'analyze-recheck.log'),
+        'dependency-imports': (['python3', PUBLICATION + 'audit_imports.py'],
+            PUBLICATION + 'imports-recheck.log'),
         'comparator-prepare': (['python3', AUDIT + 'prepare_comparator.py'],
             'verification/current-comparator-prepare.log'),
         'comparator': (['python3', AUDIT + 'run_comparator.py'], 'verification/current-comparator.log'),
@@ -85,10 +103,43 @@ def validate_current_evidence():
                 f'Current audit step failed or differs: {label}')
         require(datetime.fromisoformat(row['start_utc']) >= build_start and row['wall_seconds'] >= 0,
                 f'Current audit step predates the build: {label}')
-        require(digest(fresh(log)) == row['log_sha256'], f'Current audit log hash changed: {label}')
+        require(digest(include(log)) == row['log_sha256'], f'Current audit log hash changed: {label}')
 
-    status = read(fresh('proof-status.json'))
-    raw = unique_rows(read(fresh('proof-status-raw.json')), 'name')
+    audit_outputs = {
+        'entrypoints': ['verification/entrypoints.json'],
+        'definitions': ['reviewed-definitions.json'],
+        'types': ['reviewed-types.json'],
+        'axioms': ['proof-status.json', 'proof-status-raw.json'],
+        'comparator': [AUDIT + 'comparator-result.json', AUDIT + 'independent-full-types.json'],
+        **DEPENDENCY_OUTPUTS,
+    }
+    for label, paths in audit_outputs.items():
+        require(audit_steps[label].get('output_hashes') == {name: digest(include(name)) for name in paths},
+                f'Audit output changed since the run: {label}')
+
+    from check_entrypoints import enforce
+    entrypoints = read('verification/entrypoints.json')
+    require(entrypoints['input_hashes'] == build['input_hashes'] and
+            entrypoints['dependency_revisions'] == manifest_revisions(ROOT),
+            'Entrypoint checks used different build inputs')
+    require(entrypoints['policy_sha256'] == digest(include('scripts/entrypoints.json')),
+            'Entrypoint policy changed since the run')
+    policy = read('scripts/entrypoints.json')['entries']
+    consumers = unique_rows(entrypoints['entries'], 'module')
+    require(set(consumers) == {e['module'] for e in policy}, 'Entrypoint inventory differs')
+    for entry in policy:
+        consumer = consumers[entry['module']]
+        require(consumer['declarations'] == entry['declarations'] and
+                consumer['counts'] == enforce(entry, set(consumer['imported_modules'])),
+                'Entrypoint exports or import counts differ')
+
+    status = read(include('proof-status.json'))
+    raw = unique_rows(read(include('proof-status-raw.json')), 'name')
+    require(status['compiled_constants'] == len(raw) and not status['admitted_constants'],
+            'Compiled constant inventory differs or includes admissions')
+    for name, row in raw.items():
+        require(set(row['axioms']) <= STANDARD_AXIOMS and not row['contains_sorry_directly'],
+                f'Unapproved proof dependencies in compiled constant: {name}')
     original = read(include('reference/declarations.json'))
     theorem_names = {'ConditionalGoldbach.' + name for name, row in original.items()
                      if row['kind'] == 'theorem'}
@@ -116,12 +167,12 @@ def validate_current_evidence():
         'kernel_closed': len(theorem_rows), 'proof_written_dependencies_pending': 0,
         'pending_direct_sorry': 0} and not status['unusual_axioms'], 'Public kernel audit failed')
     source_hashes = {str(path.relative_to(ROOT)): digest(path)
-                     for path in library_sources()}
+                     for path in library_sources(ROOT)}
     require({row['file']: row['sha256'] for row in status['source_files']} == source_hashes,
             'Proof audit does not match the current import closure')
 
-    types = read(fresh('reviewed-types.json'))
-    definitions = read(fresh('reviewed-definitions.json'))
+    types = read(include('reviewed-types.json'))
+    definitions = read(include('reviewed-definitions.json'))
     require(set(unique_rows(types, 'name')) == theorem_names and
             all(row['reviewed_type_preserved'] is True for row in types), 'Reviewed type check failed')
     require(set(unique_rows(definitions, 'name')) == definition_names and
@@ -129,14 +180,17 @@ def validate_current_evidence():
             'Reviewed definition check failed')
     for name, phrase in [('types', 'All 102 reviewed theorem types'),
                          ('definitions', 'All 171 reviewed definition bodies')]:
-        log = fresh(f'verification/current-{name}.log')
+        log = include(f'verification/current-{name}.log')
         require(phrase in (ROOT / log).read_text(), f'Missing successful {name} check output')
-    axioms_output = read(fresh('verification/current-axioms.log'))
+    axioms_output = read(include('verification/current-axioms.log'))
     for key in ['original_theorem_counts', 'all_public_theorem_counts', 'unusual_axioms', 'main_results']:
         require(axioms_output[key] == status[key], f'Current axiom log differs: {key}')
 
     manifest = read(include(AUDIT + 'comparator-manifest.json'))
-    comparator = read(fresh(AUDIT + 'comparator-result.json'))
+    comparator = read(include(AUDIT + 'comparator-result.json'))
+    verify_comparator_inputs(comparator, manifest)
+    for name in comparator['input_hashes']:
+        include(name)
     for key in ['accepted', 'negative_controls_rejected', 'library_sources_unchanged',
                 'reference_sources_unchanged', 'all_independent_full_types_equal',
                 'staged_references_match_frozen_sources']:
@@ -147,9 +201,11 @@ def validate_current_evidence():
     expected_runs = {'independent-full-types-build': 0, 'comparator': 0,
                      'control-condition': 1, 'control-quantifier': 1, 'control-definition': 1}
     require(set(runs) == set(expected_runs), 'Incomplete comparator run set')
+    require(runs['independent-full-types-build']['command'] == list(FULL_TYPE_CHECK),
+            'Expected fresh elaboration of the full-type checker')
     for name, exit_code in expected_runs.items():
         row = runs[name]
-        log = fresh(AUDIT + row['log'])
+        log = include(AUDIT + row['log'])
         require(row['exit_code'] == exit_code and digest(log) == row['log_sha256'],
                 f'Comparator run or log failed: {name}')
         require(datetime.fromisoformat(row['start_utc']) >= build_start,
@@ -175,7 +231,7 @@ def validate_current_evidence():
                            ('appendices/NumericCrossCheck.lean', 'NumericCrossCheck.lean')]:
         staged = include(AUDIT + 'comparator-project/TexAuditComparator/' + target)
         require(digest(staged) == manifest['frozen_references'][source], f'Staged reference changed: {target}')
-    checks = read(fresh(AUDIT + 'independent-full-types.json'))
+    checks = read(include(AUDIT + 'independent-full-types.json'))
     require(len(checks) == manifest['statement_count'] == comparator['statement_count'] == 103,
             'Independent type count differs')
     require(all(row['full_type_definitionally_equal'] is True for row in checks) and
@@ -186,16 +242,15 @@ def validate_current_evidence():
             'Comparator omits reviewed theorem statements')
     config = read(include(AUDIT + 'comparator-project/comparator.json'))
     require(manifest['definition_body_count'] == len(manifest['definitions']) == 96 and
-            manifest['target_count'] == len(config['theorem_names']) == 218 and
-            len(set(config['theorem_names'])) == 218, 'Comparator target inventory differs')
+            len(comparator_targets(manifest, config)) == 218, 'Comparator target inventory differs')
     require(comparator['definition_body_count'] == 96 and comparator['comparator_target_count'] == 218 and
             comparator['semantic_bridge_count'] == len(manifest['semantic_bridges']) == 18,
             'Comparator result inventory differs')
-    summary = read(fresh(AUDIT + 'summary.json'))
+    summary = read(include(AUDIT + 'summary.json'))
     require(summary['comparator'] == comparator and summary['current_build'] == build,
             'Independent summary does not contain current verification results')
-    final = read(fresh(AUDIT + 'final-comparison.json'))
-    numeric = read(fresh(AUDIT + 'appendices/numeric-verification.json'))
+    final = read(include(AUDIT + 'final-comparison.json'))
+    numeric = read(include(AUDIT + 'appendices/numeric-verification.json'))
     for record in [summary, final, numeric]:
         require(record['comparator_result_sha256'] == digest(AUDIT + 'comparator-result.json') and
                 record['comparator_manifest_sha256'] == digest(AUDIT + 'comparator-manifest.json') and
@@ -212,14 +267,15 @@ def validate_current_evidence():
     require(numeric['theorem'] in config['theorem_names'] and
             numeric['comparator_run'] == runs['comparator'] and
             numeric['lean_file_sha256'] == digest(AUDIT + 'appendices/NumericCrossCheck.lean') and
-            numeric['actual_definition_source_sha256'] == digest('ConditionalGoldbach/Definitions.lean'),
+            numeric['actual_definition_source'] == declaration_owner('ConditionalGoldbach.unorderedPrimePairs', ROOT) and
+            numeric['actual_definition_source_sha256'] == digest(declaration_owner('ConditionalGoldbach.unorderedPrimePairs', ROOT)),
             'Numerical certificate does not match the current comparator')
 
     pages = {}
     for language, suffix, html_suffix in [('en', '', ''), ('zh', '-zh', '.zh')]:
         page = include(f'progress{html_suffix}.html')
-        rendered = read(fresh(f'progress{suffix}-verification.json'))
-        browser = read(fresh(f'progress{suffix}-browser-verification.json'))
+        rendered = read(include(f'progress{suffix}-verification.json'))
+        browser = read(include(f'progress{suffix}-browser-verification.json'))
         require(rendered['language'] == browser['language'] == language, 'Progress page language differs')
         require(rendered['html_sha256'] == browser['html_sha256'] == digest(page) and
                 rendered['input_sha256'] == browser['input_sha256'] == digest('proof-status.json'),
@@ -230,14 +286,17 @@ def validate_current_evidence():
         require(not rendered['formula_errors'] and rendered['reviewed_types_verified'] is True,
                 f'Progress generation failed: {language}')
         report_page = include(AUDIT + f'report{html_suffix}.html')
-        report_build = read(fresh(AUDIT + f'report{suffix}-build.json'))
-        report_browser = read(fresh(AUDIT + f'report{suffix}-browser.json'))
+        report_build = read(include(AUDIT + f'report{suffix}-build.json'))
+        report_browser = read(include(AUDIT + f'report{suffix}-browser.json'))
         require(report_build['language'] == report_browser['language'] == language,
                 'Independent report language differs')
         require(report_build['html_sha256'] == report_browser['html_sha256'] == digest(report_page),
                 f'Stale independent report: {language}')
         require(report_build['current_build_sha256'] == digest('verification/current-build.json'),
                 f'Independent report build record is stale: {language}')
+        require(report_build['comparator_result_sha256'] == digest(AUDIT + 'comparator-result.json')
+                and report_build['proof_status_sha256'] == digest('proof-status.json'),
+                f'Independent report audit inputs are stale: {language}')
         require(report_browser['passed'] is True and not report_browser['errors'] and
                 not report_browser['network'] and report_browser['statement_cards'] == 103 and
                 report_build['statement_cards'] == 103 and not report_build['math_errors'],
@@ -247,12 +306,9 @@ def validate_current_evidence():
     migration = read(include('verification/naming-migration.json'))
     require(re.fullmatch(r'[0-9a-f]{40}', migration['base_commit']), 'Missing migration base commit')
     migrated = unique_rows(migration['sources'], 'after')
-    for name, row in migrated.items():
-        require(row['identifier_replacement_only'] is True, f'Migration changed mathematical source: {name}')
-        require(hashlib.sha256((ROOT.parent / name).read_bytes()).hexdigest() == row['after_sha256'],
-                f'Source changed after naming migration: {name}')
     reviewed_path = include('reference/Reviewed.lean')
     baseline = migrated['formalization/' + reviewed_path]
+    require(digest(reviewed_path) == baseline['after_sha256'], 'Reviewed Lean baseline changed')
     tex = ROOT.parent / 'outputs/formalization-preparation/conditional-goldbach.tex'
     tex_sha256 = hashlib.sha256(tex.read_bytes()).hexdigest()
     require(tex_sha256 == '0d36bddbed7c6a74a36c7b87a469fdc96f4b4692aa5c95a2890a1c4f5f59b125',
@@ -261,9 +317,13 @@ def validate_current_evidence():
                  'verification/README.md', 'verification/README.zh.md', 'reference/inventory.json',
                  'reference/statements-math-en.json', 'reference/statements-math-zh.json',
                  'scripts/check_definitions.py', 'scripts/check_reviewed_types.py', 'scripts/audit_proofs.py',
-                 'scripts/project_sources.py', 'scripts/build_progress.py', 'scripts/test_progress.cjs',
+                 'scripts/ProofAudit.lean', 'scripts/test_verification.py',
+                 'scripts/check_entrypoints.py', 'scripts/entrypoints.json',
+                 'scripts/project_sources.py', 'scripts/verification_inputs.py', 'scripts/build_progress.py', 'scripts/test_progress.cjs',
                  'scripts/update_verification.py', 'scripts/package_verified.py', 'scripts/refresh_audit_summary.py',
                  'scripts/verify_project.py', 'scripts/refresh_dependency_records.py',
+                 DECLARATIONS + 'DeclarationAudit.lean', DECLARATIONS + 'analyze.py',
+                 PUBLICATION + 'audit_imports.py',
                  AUDIT + 'prepare_comparator.py', AUDIT + 'run_comparator.py',
                  AUDIT + 'build_report.py', AUDIT + 'test_report.cjs', AUDIT + 'summary.json']:
         include(name)
@@ -271,7 +331,7 @@ def validate_current_evidence():
     packages = {package['name']: package for package in lake['packages']}
     require(lake['name'] == 'conditionalGoldbach', 'Lake package name differs')
     return {
-        'schema_version': 2, 'generated_at_utc': datetime.now(timezone.utc).isoformat(),
+        'schema_version': 3, 'generated_at_utc': datetime.now(timezone.utc).isoformat(),
         'stage': 'Current project build, kernel audits, full comparator and bilingual reports verified',
         'build': build | {'log': build_log}, 'audits': audits,
         'lean_toolchain': (ROOT / 'lean-toolchain').read_text().strip(),

@@ -1,14 +1,16 @@
-"""Check the library rename against the recorded pre-migration Git blobs."""
+"""Check the historical library rename using the two Git snapshots."""
 from pathlib import Path
 import hashlib,json,re,subprocess
 
 PROJECT=Path(__file__).resolve().parents[1]
 REPOSITORY=PROJECT.parent
+MIGRATION_COMMIT = '14c132a382c52f89d2403ff7ba9397a0432bc1d3'
 record=json.loads((PROJECT/'verification/naming-migration.json').read_text())
 sha=lambda b:hashlib.sha256(b).hexdigest()
 for row in record['sources']:
     before=subprocess.check_output(['git','cat-file','blob',row['before_git_blob']],cwd=REPOSITORY)
-    after=(REPOSITORY/row['after']).read_bytes()
+    after=subprocess.check_output(
+        ['git', 'show', f"{MIGRATION_COMMIT}:{row['after']}"], cwd=REPOSITORY)
     assert sha(before)==row['before_sha256'],row['after']
     assert sha(after)==row['after_sha256'],row['after']
     # The two original identities are read from the source, avoiding a legacy

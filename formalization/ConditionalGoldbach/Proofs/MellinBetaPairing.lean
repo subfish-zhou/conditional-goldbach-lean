@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinBasic
-import ConditionalGoldbach.Proofs.BetaIntegrals
+module
+
+public import ConditionalGoldbach.Proofs.MellinBasic
+public import ConditionalGoldbach.Proofs.BetaIntegrals
 
 /-! Absolute Fubini pairing for Mellin inversion, used in the Beta–Mellin identity. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -49,7 +53,7 @@ lemma mellinWeight_pairing (φ : ℝ → ℝ) (hφ : IsWeight φ)
   · simpa only [mul_assoc, integral_const_mul] using hF.integral_prod_left
   · have hs := integral_integral_swap (f := fun t u : ℝ =>
       mellinWeight φ (line σ t) * (u : ℂ) ^ (-line σ t) * g u) hF
-    simp only [← mul_assoc, integral_mul_const] at hs
+    simp only [integral_mul_const] at hs
     unfold verticalMellin
     simp only [mul_assoc, integral_const_mul] at hs
     rw [hs]

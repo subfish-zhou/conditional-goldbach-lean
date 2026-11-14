@@ -1,11 +1,15 @@
-import ConditionalGoldbach.Proofs.SpectralDiagonalOperator
-import ConditionalGoldbach.Proofs.SpectralTraceBounds
-import Mathlib.NumberTheory.Chebyshev
-import Mathlib.NumberTheory.LSeries.SumCoeff
+module
+
+public import ConditionalGoldbach.Proofs.SpectralDiagonalOperator
+public import ConditionalGoldbach.Proofs.SpectralTraceBounds
+public import Mathlib.NumberTheory.Chebyshev
+public import Mathlib.NumberTheory.LSeries.SumCoeff
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace Asymptotics
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

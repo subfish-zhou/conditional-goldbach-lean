@@ -1,6 +1,6 @@
 {
-  "root_count": 2938,
-  "reachable_declaration_count": 90420,
+  "root_count": 2965,
+  "reachable_declaration_count": 86003,
   "external_project_declaration_count": 839,
   "external_project_module_count": 22,
   "external_project_modules": {
@@ -892,7 +892,7 @@
   "external_direct_boundary_edges": [
     {
       "source": "ConditionalGoldbach.C2",
-      "source_module": "ConditionalGoldbach.BaseDefinitions",
+      "source_module": "ConditionalGoldbach.Definitions.Arithmetic",
       "edge_kind": "value_refs",
       "target": "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct",
       "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
@@ -1319,7 +1319,7 @@
     },
     {
       "source": "ConditionalGoldbach.singularSeries",
-      "source_module": "ConditionalGoldbach.BaseDefinitions",
+      "source_module": "ConditionalGoldbach.Definitions.Arithmetic",
       "edge_kind": "value_refs",
       "target": "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries",
       "target_module": "MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries"
@@ -4018,7 +4018,7 @@
       "MathlibNt.SieveTheory.MertensTheorem.mertens_second_theorem"
     ],
     "MathlibNt.SieveTheory.MertensTheorem.primeProduct": [
-      "ConditionalGoldbach.small_prime_ratio_product",
+      "ConditionalGoldbach.totient_ratio_loglog_large",
       "MathlibNt.SieveTheory.MertensTheorem.primeProduct"
     ],
     "MathlibNt.SieveTheory.MertensTheorem.primeProduct_asymptotic_order": [
@@ -4037,7 +4037,7 @@
       "MathlibNt.SieveTheory.MertensTheorem.primeReciprocalSum"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation": [
-      "ConditionalGoldbach.densityEuler_factor_at_one",
+      "ConditionalGoldbach.localDensity_hasProd",
       "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation.eq_1": [
@@ -4046,15 +4046,15 @@
       "MathlibNt.SieveTheory.SingularSeries.liuBaseDeviation.eq_1"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuCorrection": [
-      "ConditionalGoldbach.singularSeries_mul_factorization",
+      "ConditionalGoldbach.localDensity_hasProd",
       "MathlibNt.SieveTheory.SingularSeries.liuCorrection"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor": [
-      "ConditionalGoldbach.singularSeries_mul_factorization",
+      "ConditionalGoldbach.localDensity_hasProd",
       "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor_pos": [
-      "ConditionalGoldbach.densityMultiplier_pos",
+      "ConditionalGoldbach.model_euler_factor_bound",
       "MathlibNt.SieveTheory.SingularSeries.liuCorrectionFactor_pos"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuCorrection_pos": [
@@ -4062,11 +4062,11 @@
       "MathlibNt.SieveTheory.SingularSeries.liuCorrection_pos"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor": [
-      "ConditionalGoldbach.localDensityFactor_factorization",
+      "ConditionalGoldbach.singularSeries_mul_densityEuler_one",
       "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1": [
-      "ConditionalGoldbach.density_prime_power_sum",
+      "ConditionalGoldbach.singularSeries_mul_densityEuler_one",
       "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor._proof_1"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuLocalFactor.eq_1": [
@@ -4101,11 +4101,11 @@
       "MathlibNt.SieveTheory.SingularSeries.liuSingularSeries_pos"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct": [
-      "ConditionalGoldbach.singularSeries_mul_factorization",
+      "ConditionalGoldbach.C2",
       "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuUniversalProductTruncated": [
-      "MathlibNt.SieveTheory.SingularSeries.liuUniversalProductTruncated.eq_1",
+      "ConditionalGoldbach.liuUniversalProductTruncated_lower",
       "MathlibNt.SieveTheory.SingularSeries.liuUniversalProductTruncated"
     ],
     "MathlibNt.SieveTheory.SingularSeries.liuUniversalProductTruncated_pos": [
@@ -4130,11 +4130,11 @@
       "MathlibNt.SieveTheory.SingularSeries.liuUniversalProduct_pos"
     ],
     "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation": [
-      "ConditionalGoldbach.densityEuler_at_one_mul_C2",
+      "ConditionalGoldbach.localDensity_hasProd",
       "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation"
     ],
     "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_eq_baseFactor": [
-      "ConditionalGoldbach.densityEuler_factor_at_one",
+      "ConditionalGoldbach.singularSeries_mul_densityEuler_one",
       "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_eq_baseFactor"
     ],
     "MathlibNt.SieveTheory.SingularSeries.one_add_liuBaseDeviation_le_one": [
@@ -4157,13 +4157,13 @@
       "MathlibNt.SieveTheory.SingularSeries.one_le_liuCorrectionFactor"
     ],
     "MathlibNt.SieveTheory.SingularSeries.summable_liuBaseDeviation_bound": [
-      "ConditionalGoldbach.densityEuler_at_one_mul_C2",
+      "ConditionalGoldbach.localDensity_hasProd",
       "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation",
       "MathlibNt.SieveTheory.SingularSeries.summable_norm_liuBaseDeviation",
       "MathlibNt.SieveTheory.SingularSeries.summable_liuBaseDeviation_bound"
     ],
     "MathlibNt.SieveTheory.SingularSeries.summable_norm_liuBaseDeviation": [
-      "ConditionalGoldbach.densityEuler_at_one_mul_C2",
+      "ConditionalGoldbach.localDensity_hasProd",
       "MathlibNt.SieveTheory.SingularSeries.multipliable_one_add_liuBaseDeviation",
       "MathlibNt.SieveTheory.SingularSeries.summable_norm_liuBaseDeviation"
     ],

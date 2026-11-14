@@ -1,4 +1,9 @@
-import ConditionalGoldbach.Proofs.DensityResidue
+module
+
+public import Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn
+public import ConditionalGoldbach.Proofs.DensityResidue
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section
@@ -25,7 +30,6 @@ lemma baselineEulerTerm_eq (N p : ℕ) (w : ℂ) :
     rw [show -(1+w)=(-1)+(-w) by ring,show -(1+2*w)=(-1)+(-2*w) by ring,
       Complex.cpow_add _ _ hp0,Complex.cpow_add _ _ hp0,Complex.cpow_neg_one]
     field_simp
-    <;> ring
   · simp
 
 lemma baselineEulerTerm_bound (N p : ℕ) (w : ℂ) (hw : -(1/4:ℝ)<w.re) :
@@ -66,7 +70,7 @@ lemma baselineEulerProduct_differentiableOn (N : ℕ) :
   apply hu.differentiableOn _ ho
   filter_upwards with k
   apply Differentiable.differentiableOn
-  apply Differentiable.fun_finset_prod
+  apply Differentiable.fun_finsetProd
   intro p hp
   exact (differentiable_const (1:ℂ)).add (baselineEulerTerm_differentiable N p)
 
@@ -81,7 +85,7 @@ lemma baselineProductR_differentiableOn (N : ℕ) :
   rw [he]
   apply DifferentiableOn.mul _ (baselineEulerProduct_differentiableOn N)
   apply Differentiable.differentiableOn
-  apply Differentiable.fun_finset_prod
+  apply Differentiable.fun_finsetProd
   intro p hp
   have hp0 : (p:ℂ) ≠ 0 := by exact_mod_cast (Nat.prime_of_mem_primeFactors hp).ne_zero
   intro w
@@ -112,7 +116,6 @@ lemma baselineProductR_zero (N : ℕ) (hN : Even N) (hpos : 0<N) :
         linarith
       simp only [sub_zero,Complex.cpow_neg_one]
       field_simp
-      <;> ring
     simp_rw [Finset.prod_congr rfl he,Finset.prod_const_one]
   unfold baselineProductR
   rw [hp]

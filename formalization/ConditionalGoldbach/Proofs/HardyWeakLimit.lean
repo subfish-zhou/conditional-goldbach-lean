@@ -1,7 +1,13 @@
-import ConditionalGoldbach.Proofs.HardyEvaluation
-import Mathlib.Analysis.Normed.Module.WeakDual
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Dual
+
+public import ConditionalGoldbach.Proofs.HardyEvaluation
+public import Mathlib.Analysis.Normed.Module.WeakDual
 
 /-! Weak compactness closes uniformly bounded Fourier–Laplace families under pointwise limits. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -48,7 +54,7 @@ lemma hardy_bounded_pointwise_limit {a b C : ℝ} (ψ : ℕ → HardySpace a b)
       have he : E ∘ u = (fun n => fourierLaplace (ψ n) s) := funext hEψ
       rw [he]
       exact hlim s hs
-    haveI : NeBot (𝓝 v ⊓ Filter.map u atTop) := hcluster
+    have : NeBot (𝓝 v ⊓ Filter.map u atTop) := hcluster
     have heq : E v = f s := tendsto_nhds_unique
       (hE.continuousAt.tendsto.mono_left inf_le_left) (hEf.mono_left inf_le_right)
     exact hEχ.symm.trans heq

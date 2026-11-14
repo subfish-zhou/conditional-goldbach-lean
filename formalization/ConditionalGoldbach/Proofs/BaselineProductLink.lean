@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.BaselineEuler
-import ConditionalGoldbach.Proofs.DensityEulerIdentity
+module
+
+public import ConditionalGoldbach.Proofs.BaselineEuler
+public import ConditionalGoldbach.Proofs.DensityEulerIdentity
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000
@@ -23,18 +27,18 @@ lemma baselineProduct_factor (N p : ℕ) (hN : Even N) (hpos : 0 < N)
       intro he
       have he' : (p:ℂ)^(-(1+w))=1 := by linear_combination -he
       rw [he'] at hq
-      simpa only [norm_one,lt_self_iff_false] using hq
+      simp only [norm_one, lt_self_iff_false] at hq
     have hm : p∈N.primeFactors ↔ p∣N := by simp [Nat.mem_primeFactors,hp,hpos.ne']
     have he : -1-w=-(1+w) := by ring
-    rw [if_pos hp,he]
+    rw [ite_eq_left hp,he]
     by_cases hd : p∣N
-    · simp only [if_pos (hm.mpr hd),baselineEulerTerm,densityEulerTerm,hd,not_true_eq_false,
+    · simp only [ite_eq_left (hm.mpr hd),baselineEulerTerm,densityEulerTerm,hd,not_true_eq_false,
         and_false,ite_false,mul_zero,sub_zero,add_zero,inv_mul_cancel₀ hqn,mul_one]
     · have hp2 : 2<p := by
         have : p≠2 := by intro h; subst p; exact hd (even_iff_two_dvd.mp hN)
         have := hp.two_le
         omega
-      rw [if_neg (mt hm.mp hd),mul_one,baselineEulerTerm_eq]
+      rw [ite_eq_right (mt hm.mp hd),mul_one,baselineEulerTerm_eq]
       simp only [hp,hp2,hd,not_false_eq_true,and_self,ite_true,densityEulerTerm]
       have hp2c : (p:ℂ)-2 ≠ 0 := by
         intro h
@@ -50,8 +54,7 @@ lemma baselineProduct_factor (N p : ℕ) (hN : Even N) (hpos : 0 < N)
         convert hqn using 1
         rw [show -(1+w)=(-1)+(-w) by ring,Complex.cpow_add _ _ hp0,Complex.cpow_neg_one]
       rw [inv_mul_eq_div,div_eq_iff hqn']
-      field_simp
-      <;> ring
+      field_simp; ring
   · have hm : p∉N.primeFactors := fun h => hp (Nat.prime_of_mem_primeFactors h)
     simp [hp,hm,baselineEulerTerm,densityEulerTerm]
 

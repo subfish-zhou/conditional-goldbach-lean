@@ -1,8 +1,13 @@
-import ConditionalGoldbach.Proofs.MellinDifferentiation
-import ConditionalGoldbach.Proofs.MellinConvolution
-import ConditionalGoldbach.Proofs.MellinContourShift
+module
+
+public import Mathlib.Analysis.MellinInversion
+public import ConditionalGoldbach.Proofs.MellinDifferentiation
+public import ConditionalGoldbach.Proofs.MellinConvolution
+public import ConditionalGoldbach.Proofs.MellinContourShift
 
 /-! Mellin decay for smooth compact functions whose support can meet zero. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

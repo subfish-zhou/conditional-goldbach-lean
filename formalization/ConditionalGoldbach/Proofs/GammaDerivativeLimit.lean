@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.GammaSequenceBounds
-import ConditionalGoldbach.Proofs.CauchyBoundedLimit
+module
+
+public import ConditionalGoldbach.Proofs.GammaSequenceBounds
+public import ConditionalGoldbach.Proofs.CauchyBoundedLimit
 
 /-! Euler's Gamma products converge also at the level of logarithmic derivatives. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology

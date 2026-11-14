@@ -1,7 +1,12 @@
-import ConditionalGoldbach.Proofs.DictionaryApplication
+module
+
+public import ConditionalGoldbach.Proofs.DictionaryApplication
+
+public section
+
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff Quaternion
+open scoped BigOperators ComplexConjugate Topology Quaternion
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -43,7 +48,7 @@ theorem proposition_6_3 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10
   have hparam := large_parameters hlarge
   have hNpos : 0 < (N : ℝ) := by exact_mod_cast (show 0 < N by omega)
   have hδ := spectralScale_pos N hNpos (singularSeries_pos N) hparam.2.1
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   refine ⟨spectralQuaternion_eq_zero_iff N _ hT hδ.ne', ?_,
     spectral_real_zero_mem_Ioo N _ hT hδ, finite_large_eigenvalues _ hT _ hδ⟩
   intro q hzero hcrit
@@ -59,7 +64,7 @@ theorem proposition_6_1_all_slices (N : ℕ) [NeZero N] (hN : Even N)
     spectralQuaternion N (residualOperator ha N) ((z.re : Quaternion ℝ) + z.im • J) =
       ((spectralComplex N (residualOperator ha N) z).re : Quaternion ℝ) +
         (spectralComplex N (residualOperator ha N) z).im • J := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   exact spectralQuaternion_apply_algHom N _ hT (Complex.liftAux J (by simpa [pow_two] using hJsq)) z
 
 theorem proposition_6_1_complex_slice (N : ℕ) [NeZero N]
@@ -67,7 +72,7 @@ theorem proposition_6_1_complex_slice (N : ℕ) [NeZero N]
     (hGRH : GRH N) (ha : alpha N < beta) (q : ℂ) :
     spectralQuaternion N (residualOperator ha N) (complexQuaternion q) =
       complexQuaternion (spectralComplex N (residualOperator ha N) q) := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   exact spectralQuaternion_complex_slice N _ hT q
 
 end ConditionalGoldbach

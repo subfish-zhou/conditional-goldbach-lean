@@ -1,0 +1,96 @@
+{
+  "entries": [
+    {
+      "module": "ConditionalGoldbach",
+      "declarations": [
+        "ConditionalGoldbach.theorem_1_1",
+        "ConditionalGoldbach.theorem_1_2",
+        "ConditionalGoldbach.primePair_consequence",
+        "ConditionalGoldbach.proposition_B_5"
+      ],
+      "forbid_prefixes": [],
+      "max_imports": {
+        "total": 6803,
+        "local": 271,
+        "mathlib": 3801,
+        "goldbach": 57
+      }
+    },
+    {
+      "module": "ConditionalGoldbach.Definitions",
+      "declarations": [
+        "ConditionalGoldbach.IsWeight",
+        "ConditionalGoldbach.HypothesisS",
+        "ConditionalGoldbach.HypothesisR"
+      ],
+      "forbid_prefixes": [],
+      "max_imports": {
+        "total": 5469,
+        "local": 20,
+        "mathlib": 3510,
+        "goldbach": 3
+      },
+      "allowed_proof_modules": [
+        "ConditionalGoldbach.Proofs.HardyBoundary",
+        "ConditionalGoldbach.Proofs.HardyFourier",
+        "ConditionalGoldbach.Proofs.HardyInterior",
+        "ConditionalGoldbach.Proofs.HardyWeights"
+      ]
+    },
+    {
+      "module": "ConditionalGoldbach.Proofs.Main",
+      "declarations": [
+        "ConditionalGoldbach.theorem_1_1",
+        "ConditionalGoldbach.theorem_1_2",
+        "ConditionalGoldbach.theorem_7_1_uniform"
+      ],
+      "forbid_prefixes": [
+        "ConditionalGoldbach.Proofs.FiniteExperimentSpectrum",
+        "ConditionalGoldbach.Proofs.TotientLogLog",
+        "ConditionalGoldbach.Proofs.PrimePairs"
+      ],
+      "max_imports": {
+        "total": 6441,
+        "local": 141,
+        "mathlib": 3615,
+        "goldbach": 16
+      }
+    },
+    {
+      "module": "ConditionalGoldbach.Proofs.PrimePairs",
+      "declarations": [
+        "ConditionalGoldbach.primePair_consequence",
+        "ConditionalGoldbach.theorem_1_1",
+        "ConditionalGoldbach.theorem_1_2"
+      ],
+      "forbid_prefixes": [
+        "ConditionalGoldbach.Proofs.FiniteExperimentSpectrum",
+        "ConditionalGoldbach.Proofs.TotientLogLog"
+      ],
+      "max_imports": {
+        "total": 6444,
+        "local": 144,
+        "mathlib": 3615,
+        "goldbach": 16
+      }
+    },
+    {
+      "module": "ConditionalGoldbach.Proofs.FiniteExperimentSpectrum",
+      "declarations": [
+        "ConditionalGoldbach.proposition_B_5",
+        "ConditionalGoldbach.finiteEigenvalues_spec"
+      ],
+      "forbid_prefixes": [
+        "ConditionalGoldbach.Proofs.Main",
+        "ConditionalGoldbach.Proofs.PrimePairs",
+        "ConditionalGoldbach.Proofs.TotientLogLog"
+      ],
+      "max_imports": {
+        "total": 5512,
+        "local": 35,
+        "mathlib": 3538,
+        "goldbach": 3
+      }
+    }
+  ]
+}

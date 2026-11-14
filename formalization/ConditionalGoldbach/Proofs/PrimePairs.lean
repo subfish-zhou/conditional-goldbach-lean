@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.Main
-import ConditionalGoldbach.Proofs.Asymptotics
-import ConditionalGoldbach.Proofs.PrimePowers
+module
+
+public import ConditionalGoldbach.Proofs.Main
+public import ConditionalGoldbach.Proofs.Asymptotics
+public import ConditionalGoldbach.Proofs.PrimePowers
 
 /-! The paper's unnumbered prime-pair consequence, combining prime-power removal,
 counting inequalities, and the proved conditional asymptotic in Theorem 1.1. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped Topology

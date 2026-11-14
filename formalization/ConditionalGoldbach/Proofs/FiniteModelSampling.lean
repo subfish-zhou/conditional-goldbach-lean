@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.FiniteModelConvolution
-import ConditionalGoldbach.Proofs.MellinModelSampling
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelConvolution
+public import ConditionalGoldbach.Proofs.MellinModelSampling
 
 /-! C6 Mellin sampling with the nonsymmetric cross mass. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

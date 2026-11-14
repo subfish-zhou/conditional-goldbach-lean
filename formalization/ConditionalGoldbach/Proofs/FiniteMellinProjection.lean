@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.FiniteMellin
-import ConditionalGoldbach.Proofs.MellinProjection
+module
+
+public import ConditionalGoldbach.Proofs.FiniteMellin
+public import ConditionalGoldbach.Proofs.MellinProjection
+
+public section
 
 set_option autoImplicit false
 noncomputable section

@@ -1,10 +1,13 @@
-import ConditionalGoldbach.Proofs.CharacterGrowth
-import ConditionalGoldbach.Proofs.MellinContourShift
-import ConditionalGoldbach.Proofs.MellinDifferentiation
-import ConditionalGoldbach.Proofs.MellinMoment
-import ConditionalGoldbach.Proofs.LFunctionDomain
+module
+
+public import ConditionalGoldbach.Proofs.CharacterGrowth
+public import ConditionalGoldbach.Proofs.MellinContourShift
+public import ConditionalGoldbach.Proofs.MellinDifferentiation
+public import ConditionalGoldbach.Proofs.MellinMoment
 
 /-! Character projection shifted to the GRH half-plane. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -52,7 +55,7 @@ lemma mellin_character_uniform_bound (N : ℕ) (hN : 4 ≤ N) (φ : ℝ → ℝ)
       zero_add] using hb (line x t) (by simpa [line] using hx.1)
   have hg' : ‖g (line x t)‖ ≤ (4 * A * (N : ℝ) ^ 2) * (1 + |t|) ^ 2 := by
     have h := (hg x hx t).trans (mul_le_mul_of_nonneg_left (log_square_polynomial_bound N hN t) hA)
-    convert h using 1 <;> ring
+    convert h using 1; ring
   rw [norm_mul, norm_mul]
   calc
     _ ≤ ((N : ℝ) * (B * (1 + |t|)⁻¹ ^ 4)) *
@@ -62,7 +65,6 @@ lemma mellin_character_uniform_bound (N : ℕ) (hN : 4 ≤ N) (φ : ℝ → ℝ)
     _ = _ := by
       have ht : (1 + |t|) ≠ 0 := by positivity
       field_simp
-      <;> ring
 
 lemma character_mellin_shift_of_log_bound {N : ℕ} [NeZero N] (hN : 4 ≤ N)
     (hGRH : GRH N) (χ : Character N) (hχ : χ ∈ oddCharacters N)
@@ -93,7 +95,7 @@ lemma character_mellin_shift_of_log_bound {N : ℕ} [NeZero N] (hN : 4 ≤ N)
     (character_mellin_initial_integrable χ φ hφ 1 (by norm_num)) hc
   rw [characterPolynomial_mellin_initial χ φ hφ 1 (by norm_num), ← hs]
 
-lemma character_mellin_shift {N : ℕ} [NeZero N] (hN : Even N) (hN4 : 4 ≤ N)
+lemma character_mellin_shift {N : ℕ} [NeZero N] (_hN : Even N) (hN4 : 4 ≤ N)
     (hGRH : GRH N) (χ : Character N) (hχ : χ ∈ oddCharacters N)
     (φ : ℝ → ℝ) (hφ : IsWeight φ) (σ : ℝ) (hσ : 0 < σ) (hσ1 : σ ≤ 1) :
     Integrable (fun t : ℝ => (N : ℂ) ^ (line σ t) * mellinWeight φ (line σ t) *

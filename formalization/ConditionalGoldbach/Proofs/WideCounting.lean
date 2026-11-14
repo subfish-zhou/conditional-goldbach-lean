@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.WideWeight
-import ConditionalGoldbach.Proofs.FiniteMellinProjection
+module
+
+public import ConditionalGoldbach.Proofs.WideWeight
+public import ConditionalGoldbach.Proofs.FiniteMellinProjection
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

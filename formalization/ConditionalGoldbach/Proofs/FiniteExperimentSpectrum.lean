@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.KernelRegularity
-import ConditionalGoldbach.Proofs.SpectralDictionary
-import Mathlib.Analysis.Matrix.Spectrum
+module
+
+public import ConditionalGoldbach.Definitions.FiniteSpectrum
+public import ConditionalGoldbach.Proofs.KernelRegularity
+public import ConditionalGoldbach.Proofs.SpectralDictionary
+public import Mathlib.Analysis.Matrix.Spectrum
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 600000
@@ -30,8 +35,7 @@ lemma unitary_column_norm {n : Type*} [Fintype n] [DecidableEq n]
     (U : Matrix n n ℂ) (hU : star U * U = 1) (j : n) :
     ‖(WithLp.toLp 2 (fun i => U i j) : EuclideanSpace ℂ n)‖ = 1 := by
   have hh := congrArg (fun A : Matrix n n ℂ => (A j j).re) hU
-  simp only [Matrix.mul_apply,Matrix.star_apply,Matrix.one_apply_eq,star_def,Complex.mul_re,Complex.one_re,
-    Complex.conj_re,Complex.conj_im] at hh
+  simp only [Matrix.mul_apply,Matrix.star_apply,Matrix.one_apply_eq,star_def,Complex.one_re] at hh
   change Complex.reCLM (∑ k, conj (U k j)*U k j)=1 at hh
   rw [map_sum] at hh
   simp only [Complex.reCLM_apply,Complex.mul_re,Complex.conj_re,Complex.conj_im] at hh
@@ -93,7 +97,7 @@ lemma finiteSpectralFunction_product (q : ℂ) :
   rw [he,Matrix.det_mul,Matrix.det_mul]
   have hdiag : 1-k • (D*D) = Matrix.diagonal (fun i => 1-k*(finiteEigenvalues i : ℂ)^2) := by
     ext i j
-    simp [D,Matrix.mul_diagonal,Matrix.diagonal_apply,Matrix.one_apply,smul_eq_mul]
+    simp [D,Matrix.diagonal_apply,Matrix.one_apply,smul_eq_mul]
     split_ifs <;> simp_all [pow_two]
   rw [hdiag,Matrix.det_diagonal]
   calc
@@ -138,7 +142,7 @@ lemma finiteSpectralFunction_zero_critical (hb : finiteMatrixOpNorm ≤ spectral
   have hh : (q.re-1/2)^2=0 := by nlinarith [sq_nonneg (q.re-1/2)]
   exact hn (by nlinarith [sq_eq_zero_iff.mp hh])
 
-theorem proposition_B_5 (hGRH : GRH experimentN) :
+theorem proposition_B_5 (_hGRH : GRH experimentN) :
     IsFiniteSpectrum finiteEigenvalues ∧
     (∀ q : ℂ, finiteSpectralFunction q =
       ∏ j : Fin 2562, (1 - (4 * finiteEigenvalues j ^ 2 / spectralScale experimentN ^ 2 : ℝ) * q * (1 - q))) ∧

@@ -1,7 +1,14 @@
-import ConditionalGoldbach.Proofs.FiniteFunctional
-import ConditionalGoldbach.Proofs.WideWeight
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Dual
+
+public import Mathlib.Analysis.Complex.ExponentialBounds
+public import ConditionalGoldbach.Proofs.FiniteFunctional
+public import ConditionalGoldbach.Proofs.WideWeight
 
 /-! The actual finite-smooth wide weight defines a bounded Hardy functional and its Riesz vector. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -12,7 +19,7 @@ namespace ConditionalGoldbach
 lemma experimentN_large : Real.exp 10 < (experimentN : ℝ) := by
   have he : Real.exp 1 < (11/4 : ℝ) := lt_trans Real.exp_one_lt_d9 (by norm_num)
   calc
-    Real.exp 10 = Real.exp 1^10 := by simpa using Real.exp_nat_mul (1 : ℝ) 10
+    Real.exp 10 = Real.exp 1^10 := by simp
     _ < (11/4 : ℝ)^10 := pow_lt_pow_left₀ he (Real.exp_pos _).le (by norm_num)
     _ < experimentN := by norm_num [experimentN]
 
@@ -45,7 +52,7 @@ lemma wideFunctional_riesz_exists : ∃ v : HardySpace (alpha experimentN) beta,
 lemma wideRieszVector_spec (ψ : HardySpace (alpha experimentN) beta) :
     wideFunctional ψ = paperInner ψ wideRieszVector := by
   unfold wideRieszVector
-  rw [dif_pos wideFunctional_riesz_exists]
+  rw [dite_eq_left wideFunctional_riesz_exists]
   exact Classical.choose_spec wideFunctional_riesz_exists ψ
 
 lemma wideFunctional_continuousLinearMap :

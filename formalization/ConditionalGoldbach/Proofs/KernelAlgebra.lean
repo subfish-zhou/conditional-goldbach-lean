@@ -1,10 +1,15 @@
-import ConditionalGoldbach.Proofs.Characters
+module
+
+public import ConditionalGoldbach.Definitions.Asymptotics
+public import ConditionalGoldbach.Proofs.Characters
 
 /-!
 # Algebraic properties of the character kernel
 
 These finite Gram arguments make no assumptions about the zeros of L-functions.
 -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -104,7 +109,7 @@ lemma characterKernel_sections_le (N : ℕ) [NeZero N] :
   exact Submodule.subset_span ⟨χ, rfl⟩
 
 theorem proposition_3_2_finite_rank (N : ℕ) [NeZero N]
-    (hN : Even N) (hN4 : 4 ≤ N) :
+    (_hN : Even N) (_hN4 : 4 ≤ N) :
     FiniteDimensional ℂ (Submodule.span ℂ (Set.range
       (fun z : ℂ => fun s : ℂ => characterKernel N s (conj z)))) := by
   let : FiniteDimensional ℂ (Submodule.span ℂ

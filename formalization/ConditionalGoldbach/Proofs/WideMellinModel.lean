@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.FiniteModelDouble
-import ConditionalGoldbach.Proofs.WideModelData
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelDouble
+public import ConditionalGoldbach.Proofs.WideModelData
 
 /-! The actual model term for the paper's finitely smooth wide companion. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

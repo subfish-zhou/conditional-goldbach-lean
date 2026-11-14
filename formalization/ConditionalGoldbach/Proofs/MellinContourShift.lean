@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinBasic
+module
+
+public import Mathlib.Analysis.Complex.CauchyIntegral
+public import ConditionalGoldbach.Proofs.MellinBasic
 
 /-! Contour shifting on a closed vertical strip with integrable boundary lines. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

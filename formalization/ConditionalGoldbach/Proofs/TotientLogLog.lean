@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.ZetaGrowth
-import MathlibNt.SieveTheory.Arithmetic.MertensTheorem
+module
+
+public import ConditionalGoldbach.Proofs.ZetaGrowth
+public import MathlibNt.SieveTheory.Arithmetic.MertensTheorem
 
 /-! The elementary large-prime split upgrading Mertens' product bound to N/φ(N). -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -79,8 +83,7 @@ lemma large_prime_ratio_product (N M : ℕ) (hN : 0 < N) (hM : 1 ≤ M)
     calc
       _ = 1+1/((p : ℝ)-1) := by
         have hn : (p : ℝ)-1 ≠ 0 := by linarith
-        field_simp
-        <;> ring
+        field_simp; ring
       _ ≤ 1+2/(M : ℝ) := by linarith
       _ ≤ _ := by simpa [add_comm] using Real.add_one_le_exp (2/(M : ℝ))
   calc

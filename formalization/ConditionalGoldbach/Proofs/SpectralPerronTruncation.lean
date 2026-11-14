@@ -1,10 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralPerronFubini
-import ConditionalGoldbach.Proofs.SpectralPerronBounds
-import ConditionalGoldbach.Proofs.SpectralPerronEuler
-import ConditionalGoldbach.Proofs.SpectralPerronSeries
-import ConditionalGoldbach.Proofs.CharacterZeroExpansion
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPerronFubini
+public import ConditionalGoldbach.Proofs.SpectralPerronBounds
+public import ConditionalGoldbach.Proofs.SpectralPerronEuler
+public import ConditionalGoldbach.Proofs.SpectralPerronSeries
+public import ConditionalGoldbach.Proofs.CharacterZeroExpansion
 
 /-! Perron integration of the actual Hadamard zero expansion. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -67,7 +71,7 @@ lemma perron_zeroDifference_integral {N : ℕ} [NeZero N] (hGRH : GRH N)
   let δ := fun p : ZeroIndex χ.primitiveCharacter => (t-p.val.1.im)/(2*Real.pi)
   have hs := primitive_zero_shift_five_quarters_summable χ.primitiveCharacter
     (primitiveCharacter_ne_one_of_ne_one χ hχ) χ.primitiveCharacter_isPrimitive t
-  letI : Countable (ZeroIndex χ.primitiveCharacter) := by
+  let : Countable (ZeroIndex χ.primitiveCharacter) := by
     apply Set.countable_univ_iff.mp
     convert hs.countable_support using 1
     ext p

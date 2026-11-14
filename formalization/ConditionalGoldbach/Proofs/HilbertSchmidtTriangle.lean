@@ -1,4 +1,8 @@
-import ConditionalGoldbach.Proofs.SpectralTraceBounds
+module
+
+public import ConditionalGoldbach.Proofs.SpectralTraceBounds
+
+public section
 
 set_option autoImplicit false
 noncomputable section

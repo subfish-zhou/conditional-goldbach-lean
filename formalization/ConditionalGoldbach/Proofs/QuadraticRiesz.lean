@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.QuadraticDensity
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Dual
+public import ConditionalGoldbach.Proofs.QuadraticDensity
 
 /-! Explicit Riesz vectors for compactly supported density functionals. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -69,7 +74,7 @@ lemma weightedTestVector_norm_sq (a b : ℝ) (g : ℝ → ℝ) (hg : Continuous 
   have hw := (hardyWeight_pos a b τ).ne'
   field_simp
 
-lemma derivativeDensity_continuous (N : ℕ) (hN : 0 < N)
+lemma derivativeDensity_continuous (N : ℕ) (_hN : 0 < N)
     (φ : ℝ → ℝ) (hφ : IsWeight φ) :
     Continuous (fun τ : ℝ => derivativeWeight φ (Real.exp (-τ) / N)) := by
   apply (derivativeWeight_continuous hφ).comp
@@ -131,7 +136,7 @@ theorem rieszVector_density_spec {a : ℝ} (N : ℕ) (hN : 0 < N)
   have hspec : ∀ ψ : HardySpace a beta,
       functionalValue N φ sigmaStar ψ = paperInner ψ (rieszVector N φ) := by
     unfold rieszVector
-    rw [dif_pos hex]
+    rw [dite_eq_left hex]
     exact Classical.choose_spec hex
   have heq : (rieszVector N φ : HardySpace a beta) = v := by
     apply ext_inner_right ℂ

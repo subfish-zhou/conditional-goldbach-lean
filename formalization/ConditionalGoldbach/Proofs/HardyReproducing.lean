@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.HardyEvaluation
-import ConditionalGoldbach.Proofs.BetaIntegrals
+module
+
+public import ConditionalGoldbach.Proofs.HardyEvaluation
+public import ConditionalGoldbach.Proofs.BetaIntegrals
 
 /-! Exact evaluation of the strip reproducing kernel, including its normalization. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -113,8 +117,7 @@ lemma evaluationVector_reproducingKernel {a b : ℝ} (hab : a < b) {s z : ℂ}
       (4 * (b - a : ℝ) : ℂ)⁻¹ := by
     have hp : (Real.pi : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr Real.pi_ne_zero
     have hd : ((b - a : ℝ) : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr (sub_ne_zero.mpr hab.ne.symm)
-    field_simp
-    <;> ring
+    field_simp; ring
   rw [← mul_assoc, ← mul_div_assoc, hc]
   congr 2
   ring
@@ -122,7 +125,7 @@ lemma evaluationVector_reproducingKernel {a b : ℝ} (hab : a < b) {s z : ℂ}
 lemma reproducingKernel_diag {a b : ℝ} (hab : a < b) (s : ℂ) :
     reproducingKernel a b s s =
       ((1 / (4 * (b - a) * Real.sin (Real.pi * (s.re - a) / (b - a))) : ℝ) : ℂ) := by
-  have hs : s + conj s = (2 * s.re : ℝ) := by apply Complex.ext <;> simp <;> ring
+  have hs : s + conj s = (2 * s.re : ℝ) := by apply Complex.ext <;> simp; ring
   unfold reproducingKernel
   rw [hs]
   have he : (Real.pi : ℂ) * ((2 * s.re : ℝ) - 2 * a) / (2 * (b - a : ℝ)) =
@@ -130,10 +133,9 @@ lemma reproducingKernel_diag {a b : ℝ} (hab : a < b) (s : ℂ) :
     have hd : (b : ℂ) - a ≠ 0 := by exact_mod_cast (sub_ne_zero.mpr hab.ne.symm)
     push_cast
     field_simp
-    <;> ring
   rw [he, ← Complex.ofReal_sin]
-  simp only [Complex.ofReal_div, Complex.ofReal_mul, Complex.ofReal_sub, Complex.ofReal_one,
-    Complex.ofReal_ofNat, Complex.ofReal_inv, one_mul, one_div, mul_inv, div_eq_mul_inv]
+  simp only [Complex.ofReal_mul, Complex.ofReal_sub,
+    Complex.ofReal_ofNat, Complex.ofReal_inv, one_mul, mul_inv, div_eq_mul_inv]
 
 theorem proposition_5_4_exact_norm (a b : ℝ) (hab : a < b)
     (s : ℂ) (hs : s ∈ strip a b) :
@@ -171,7 +173,7 @@ lemma evaluationVector_norm_sq_le {a b : ℝ} (hab : a < b) {s : ℂ}
   have hdist : pointDistance a b s = (b - a) * min t (1 - t) := by
     rw [mul_min_of_nonneg _ _ hd.le]
     unfold pointDistance
-    congr 1 <;> dsimp [t] <;> field_simp <;> ring
+    congr 1 <;> dsimp [t] <;> field_simp; ring
   have hp : 0 < pointDistance a b s := lt_min (sub_pos.mpr hs.1) (sub_pos.mpr hs.2)
   have hden : 8 * pointDistance a b s ≤
       4 * (b - a) * Real.sin (Real.pi * (s.re - a) / (b - a)) := by

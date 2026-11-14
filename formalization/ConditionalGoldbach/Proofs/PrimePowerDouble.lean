@@ -1,4 +1,8 @@
-import ConditionalGoldbach.Proofs.PrimePowerReindex
+module
+
+public import ConditionalGoldbach.Proofs.PrimePowerReindex
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000

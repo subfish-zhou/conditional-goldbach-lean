@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.FiniteFunctional
-import ConditionalGoldbach.Proofs.QuadraticIdentity
+module
+
+public import ConditionalGoldbach.Proofs.FiniteFunctional
+public import ConditionalGoldbach.Proofs.QuadraticIdentity
 
 /-! Recovery of a kernel quadratic form from any represented finite-smooth Mellin functional. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -96,7 +100,6 @@ lemma finite_quadratic_residual_integral {a : ℝ} (N : ℕ) [NeZero N]
     ((N : ℂ)^z*mellin (fun u => (f u : ℂ)) z*(1+z)*weightedKernel N s (conj z)) = _
   simp only [weightedKernel,conj_conj]
   rw [cpow_add _ _ hNz]
-  field_simp
-  <;> ring
+  field_simp; ring
 
 end ConditionalGoldbach

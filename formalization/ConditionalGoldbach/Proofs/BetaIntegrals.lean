@@ -1,6 +1,12 @@
-import ConditionalGoldbach.BaseDefinitions
+module
+
+public import ConditionalGoldbach.Definitions.Model
+public import Mathlib.Analysis.LocallyConvex.AbsConvexOpen
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! The three exact beta integrals and their absolute convergence. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -23,8 +29,8 @@ lemma beta_substitution_image (h : ℝ) (hh : 0 < h) :
       have hx' : 1 - x / (h + x) ≠ 0 := by
         apply ne_of_gt
         exact sub_pos.mpr ((div_lt_one (by linarith)).2 (by linarith))
-      field_simp [hh.ne']
-      <;> ring
+      field_simp [hh.ne'];
+      ring
 
 lemma beta_substitution_injective (h : ℝ) (hh : 0 < h) :
     Set.InjOn (fun u : ℝ => h * u / (1 - u)) (Ioo 0 1) := by
@@ -37,7 +43,7 @@ lemma beta_substitution_injective (h : ℝ) (hh : 0 < h) :
 lemma beta_substitution_deriv (h u : ℝ) (hu : u ∈ Ioo (0 : ℝ) 1) :
     HasDerivAt (fun u : ℝ => h * u / (1 - u)) (h / (1 - u) ^ 2) u := by
   convert ((hasDerivAt_id u).const_mul h).fun_div ((hasDerivAt_const u 1).sub (hasDerivAt_id u))
-    (ne_of_gt (sub_pos.mpr hu.2)) using 1 <;> simp only [Pi.div_apply, Pi.sub_apply, id_eq] <;> ring
+    (ne_of_gt (sub_pos.mpr hu.2)) using 1 <;> simp only [Pi.sub_apply, id_eq]; ring
 
 lemma beta_substitution_integrand (h : ℝ) (hh : 0 < h) (s z : ℂ)
     (u : ℝ) (hu : u ∈ Ioo (0 : ℝ) 1) :
@@ -144,7 +150,6 @@ lemma beta_sum_integrable (h : ℝ) (hh : 0 < h) (s z : ℂ)
   simp only [zero_div, one_div, inv_inv, ← div_eq_mul_inv] at hi'
   have he1 : (1 / 2 - s : ℂ) - 1 = -1 / 2 - s := by ring
   have he2 : (1 / 2 - z : ℂ) - 1 = -1 / 2 - z := by ring
-  try simp only [he1, he2] at hi'
   apply IntegrableOn.congr_fun ((hi'.1.mono_set Ioo_subset_Ioc_self).const_mul
     ((h : ℂ) ^ ((-1 / 2 - s) + (-1 / 2 - z))))
   · intro x hx
@@ -169,7 +174,7 @@ lemma beta_sum_integrable (h : ℝ) (hh : 0 < h) (s z : ℂ)
           field_simp
   · exact measurableSet_Ioo
 
-theorem lemma_4_1 (h : ℝ) (hh : 0 < h) (s z : ℂ) (hd : (s, z) ∈ betaDomain) :
+theorem lemma_4_1 (h : ℝ) (hh : 0 < h) (s z : ℂ) (_hd : (s, z) ∈ betaDomain) :
     (∫ x in Ioi (0 : ℝ), (x : ℂ) ^ (-1 / 2 - s) * (x + h : ℂ) ^ (-1 / 2 - z)) =
       (h : ℂ) ^ (-(s + z)) * betaIntegral (1 / 2 - s) (s + z) ∧
     (∫ x in Ioi (0 : ℝ), (x : ℂ) ^ (-1 / 2 - z) * (x + h : ℂ) ^ (-1 / 2 - s)) =

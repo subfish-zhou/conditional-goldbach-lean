@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroSummability
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroSummability
 
 /-! A uniform logarithmic bound for the zero Poisson sum at a fixed positive width. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1000000
 set_option autoImplicit false
@@ -41,7 +45,7 @@ lemma shifted_logarithm_bound (d : ℕ) (hd : 1 ≤ d) (t : ℝ) (k : ℤ) :
       mul_le_mul_of_nonneg_left hh (by linarith : (0 : ℝ) ≤ d),
       mul_nonneg (by linarith : (0 : ℝ) ≤ d) (mul_nonneg (abs_nonneg t) (abs_nonneg (k : ℝ)))]
   have hlogr : Real.log r ≤ 2*r^(1/2 : ℝ) := by
-    convert Real.log_le_rpow_div hr0.le (by norm_num : (0 : ℝ)<1/2) using 1 <;> ring
+    convert Real.log_le_rpow_div hr0.le (by norm_num : (0 : ℝ)<1/2) using 1; ring
   have hs : 1 ≤ r^(1/2 : ℝ) := Real.one_le_rpow hr (by norm_num)
   have hh := Real.log_le_log (by positivity : 0 < (d : ℝ)*(|t+k|+2)) harg
   rw [Real.log_mul hA0.ne' hr0.ne'] at hh
@@ -88,7 +92,7 @@ lemma primitive_poisson_anchor_bound : ∃ C : ℝ, 0 < C ∧
   have hpart := shifted_zeroWindow_partition χ t
   have hfinite (k : ℤ) : (S k).Finite := (hcount d inferInstance χ hχ hprim (t+k)).1
   have hs (k : ℤ) : (∑' p : S k, q p) ≤ 70*C*L*w k := by
-    letI := (hfinite k).fintype
+    let := (hfinite k).fintype
     have ht : (∑' p : S k, q p) ≤ ((S k).ncard : ℝ) * (14/(1+|(k : ℝ)|)^2) := by
       rw [tsum_fintype]
       calc
@@ -99,7 +103,7 @@ lemma primitive_poisson_anchor_bound : ∃ C : ℝ, 0 < C ∧
     have hl := shifted_logarithm_bound d hd t k
     have hcard : ((S k).ncard : ℝ) ≤ 5*C*L*(1+|(k : ℝ)|)^(1/2 : ℝ) := by
       apply hc.trans
-      convert mul_le_mul_of_nonneg_left hl hC.le using 1 <;> dsimp [L]; ring
+      convert mul_le_mul_of_nonneg_left hl hC.le using 1; dsimp [L]; ring
     apply ht.trans
     apply (mul_le_mul_of_nonneg_right hcard (by positivity : 0 ≤ 14/(1+|(k : ℝ)|)^2)).trans_eq
     dsimp [w]
@@ -110,10 +114,10 @@ lemma primitive_poisson_anchor_bound : ∃ C : ℝ, 0 < C ∧
     calc
       _ = 70*C*L*((1+|(k : ℝ)|)^(1/2 : ℝ)/(1+|(k : ℝ)|)^2) := by ring
       _ = _ := by rw [hp]
-  have hσ : Summable (fun p : (k : ℤ) × S k => q p.2) := (Set.sigmaEquiv S hpart).summable_iff.mpr hq
+  have hσ : Summable (fun p : (k : ℤ) × S k => q p.2) := ((Set.sigmaEquiv S hpart).summable_iff (f := q)).mpr hq
   have he : (∑' p, q p) = ∑' k, ∑' p : S k, q p := by
     rw [← (Set.sigmaEquiv S hpart).tsum_eq q]
-    exact hσ.tsum_sigma' (fun k => by letI := (hfinite k).fintype; exact (hasSum_fintype _).summable)
+    exact hσ.tsum_sigma' (fun k => by let := (hfinite k).fintype; exact (hasSum_fintype _).summable)
   change (∑' p, q p) ≤ _
   rw [he]
   calc

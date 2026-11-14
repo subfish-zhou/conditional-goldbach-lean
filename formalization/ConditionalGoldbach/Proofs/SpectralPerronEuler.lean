@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.SpectralPerronIntegral
-import ConditionalGoldbach.Proofs.CharacterEulerBounds
-import ConditionalGoldbach.Proofs.CharacterShortPolynomial
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPerronIntegral
+public import ConditionalGoldbach.Proofs.CharacterEulerBounds
+public import ConditionalGoldbach.Proofs.CharacterShortPolynomial
 
 /-! The absolutely convergent finite Euler factors in the smoothed Perron integral. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1000000
 set_option autoImplicit false
@@ -127,7 +131,7 @@ lemma euler_correction_geometric_series {d : ℕ} [NeZero d] (χ : Character d)
   have hne : 1-r ≠ 0 := by
     intro he
     have he' : r = 1 := by linear_combination -he
-    simpa [he'] using hr
+    simp [he'] at hr
   have hden : (p : ℂ)^(u+v)-χ p ≠ 0 := by
     have he : (1-r)*(p : ℂ)^(u+v) = (p : ℂ)^(u+v)-χ p := by rw [hratio]; field_simp
     rw [← he]

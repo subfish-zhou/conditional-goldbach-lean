@@ -1,6 +1,14 @@
-import ConditionalGoldbach.Proofs.DensityEulerIdentity
+module
+
+public import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+public import Mathlib.NumberTheory.LSeries.SumCoeff
+public import ConditionalGoldbach.Proofs.DensityEulerIdentity
+import Mathlib.MeasureTheory.Function.Floor
+import Mathlib.Topology.Algebra.InfiniteSum.Field
 
 /-! Euler summation in the right half-plane and vertical growth estimates. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff LSeries.notation

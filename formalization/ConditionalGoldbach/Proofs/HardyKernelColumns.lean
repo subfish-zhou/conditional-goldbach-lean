@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.HardyContinuousBoundary
-import ConditionalGoldbach.Proofs.HardyKernelPairing
-import ConditionalGoldbach.Proofs.SpectralL2BasisExistence
+module
+
+public import ConditionalGoldbach.Proofs.HardyContinuousBoundary
+public import ConditionalGoldbach.Proofs.HardyKernelPairing
+public import ConditionalGoldbach.Proofs.SpectralL2BasisExistence
 
 /-! Hardy kernel columns determine the entire range and the exact action of the boundary operator. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -41,12 +45,12 @@ lemma hardyBoundary_inner_column {a b : ℝ} (hab : a < b) (K : ℂ → ℂ → 
   congr 1
   · apply integral_congr_ae
     filter_upwards [hga] with t ht
-    simp only [WithLp.ofLp_toLp, RCLike.inner_apply]
+    simp only [RCLike.inner_apply]
     rw [ht, ← hK s (line a t), mul_comm]
     rfl
   · apply integral_congr_ae
     filter_upwards [hgb] with t ht
-    simp only [WithLp.ofLp_toLp, RCLike.inner_apply]
+    simp only [RCLike.inner_apply]
     rw [ht, ← hK s (line b t), mul_comm]
     rfl
 

@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CutoffSmooth
-import Mathlib.Analysis.SpecialFunctions.Sqrt
-import Mathlib.Analysis.SpecialFunctions.Log.Deriv
+module
+
+public import ConditionalGoldbach.Proofs.CutoffSmooth
+public import Mathlib.Analysis.SpecialFunctions.Sqrt
+public import Mathlib.Analysis.SpecialFunctions.Log.Deriv
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000
@@ -62,7 +66,7 @@ lemma wideCompanion_support : Function.support wideCompanion ⊆
   by_contra hn
   apply hu
   unfold wideCompanion
-  exact if_neg hn
+  exact ite_eq_right hn
 
 lemma wideWeight_support : Function.support wideWeight ⊆
     Ioo (16/experimentN:ℝ) (1-16/experimentN:ℝ) := by
@@ -141,8 +145,8 @@ lemma wideWeight_product (u : ℝ) (hu : u∈Ioo (16/experimentN:ℝ) (1-16/expe
     exact (wideCutoff_reflection _).symm
   simp only [wideWeight,wideCompanion_formula,sub_sub_cancel,hc]
   rw [mul_comm (Real.log (experimentN*(1-u))) (Real.log (experimentN*u))]
-  field_simp
-  <;> rw [Real.sq_sqrt (show 0 ≤ Real.log (u*(experimentN:ℝ))*Real.log ((1-u)*(experimentN:ℝ)) from by simpa only [mul_comm] using hL.le)]
+  field_simp;
+  rw [Real.sq_sqrt (show 0 ≤ Real.log (u*(experimentN:ℝ))*Real.log ((1-u)*(experimentN:ℝ)) from by simpa only [mul_comm] using hL.le)]
 
 lemma wideWeight_product_integrable : IntervalIntegrable (fun u : ℝ => wideWeight u*wideWeight (1-u)) volume 0 1 :=
   (wideWeight_contDiff.continuous.mul (wideWeight_contDiff.continuous.comp (continuous_const.sub continuous_id))).intervalIntegrable _ _

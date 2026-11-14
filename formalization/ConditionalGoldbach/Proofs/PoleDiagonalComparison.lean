@@ -1,7 +1,12 @@
-import ConditionalGoldbach.Proofs.DensitySeries
-import Mathlib.NumberTheory.LSeries.Dirichlet
+module
+
+public import ConditionalGoldbach.Proofs.DensitySeries
+public import Mathlib.NumberTheory.LSeries.Dirichlet
+import Mathlib.Analysis.Complex.HalfPlane
 
 /-! A positive majorant for the diagonal term sufficient for the fixed-modulus obstruction. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology
@@ -57,12 +62,10 @@ lemma diagonalSeries_real_le_zeta_second (N : ℕ) {w : ℝ} (hw : 0 < w) :
   change (if 0<n ∧ Nat.Coprime n N then (mangoldt n:ℂ)^2/(((n:ℝ)^(1+w):ℝ):ℂ) else 0).re ≤
     (((Real.log n:ℂ)*(mangoldt n:ℂ))/(((n:ℝ)^(1+w):ℝ):ℂ)).re
   by_cases hc : Nat.Coprime n N
-  · rw [if_pos ⟨Nat.pos_of_ne_zero hn,hc⟩]
+  · rw [ite_eq_left ⟨Nat.pos_of_ne_zero hn,hc⟩]
     simp only [← ofReal_pow,← ofReal_mul,← ofReal_div,ofReal_re]
-    change (mangoldt n)^2/(n:ℝ)^(1+w) ≤ Real.log n*mangoldt n/(n:ℝ)^(1+w)
     exact div_le_div_of_nonneg_right (by have hL : mangoldt n ≤ Real.log n := ArithmeticFunction.vonMangoldt_le_log; nlinarith) (by positivity)
   · simp only [hc,and_false,ite_false,zero_re,← ofReal_mul,← ofReal_div,ofReal_re]
-    change 0 ≤ Real.log n*mangoldt n/(n:ℝ)^(1+w)
     positivity
 
 end ConditionalGoldbach

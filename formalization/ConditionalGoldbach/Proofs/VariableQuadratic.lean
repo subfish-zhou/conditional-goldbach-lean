@@ -1,7 +1,10 @@
-import ConditionalGoldbach.Proofs.VariableStripOperators
-import ConditionalGoldbach.Proofs.VariableWeightAsymptotic
-import ConditionalGoldbach.Proofs.QuadraticIdentity
-import ConditionalGoldbach.Proofs.DictionaryApplication
+module
+
+public import ConditionalGoldbach.Proofs.VariableStripOperators
+public import ConditionalGoldbach.Proofs.VariableWeightAsymptotic
+public import ConditionalGoldbach.Proofs.DictionaryApplication
+
+public section
 
 set_option autoImplicit false
 noncomputable section
@@ -96,8 +99,9 @@ theorem proposition_A_1 (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : ℝ) (hc : 0
       rw [← normFunctional_density_integral N hNpos] at hnorm
       exact ⟨ℓ,hℓ,hnorm⟩
   · intro ha
-    have hs := residualOperator_spec_at (alpha N c) N ha0 hN4 hGRH ha
-    refine ⟨hs.2.2.1,hs.2.2.2.1,hs.2.2.2.2.1,?_,
+    obtain ⟨_, _, hCompact, hSelfAdjoint, hHilbertSchmidt, _⟩ :=
+      residualOperator_spec_at (alpha N c) N ha0 hN4 hGRH ha
+    refine ⟨hCompact, hSelfAdjoint, hHilbertSchmidt, ?_,
       residual_quadratic_at (alpha N c) ha0 ha10 N hN hN4 hGRH φ hφ ha⟩
     intro s z hs hz
     exact residual_norm_le_of_kernel_pairing ha ha0.le N (residualOperator ha N) s z hs hz
@@ -108,10 +112,10 @@ lemma variable_spectral_dictionary (a : ℝ) (ha0 : 0<a) (N : ℕ) [NeZero N]
     (SpectralR N a ha ↔ ‖residualOperator ha N‖ ≤ spectralScale N) ∧
     (∀ η : ℝ, 0 < η → η < 1/2 → (SpectralZeroFree N a ha η ↔
       ‖residualOperator ha N‖ ≤ spectralScale N/(2*Real.sqrt (η*(1-η))))) := by
-  have hs := (residualOperator_spec_at a N ha0 hN4 hGRH ha).2.2.2.2.2.1
+  have hSpectral := residualOperator_has_spectral_data_at a N ha0 hN4 hGRH ha
   have hδ := spectralScale_pos N (by exact_mod_cast (show 0<N by omega)) (singularSeries_pos N)
     (Real.log_pos (by exact_mod_cast (show 1<N by omega)))
-  exact theorem_6_1_abstract_dictionary N (residualOperator ha N) hs hδ
+  exact theorem_6_1_abstract_dictionary N (residualOperator ha N) hSpectral hδ
 
 theorem proposition_A_2_pointwise (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : ℝ) (hc : 0 < c) :
     ∃ C : ℝ, 0 < C ∧ ∀ N : ℕ, ∀ (_ : NeZero N), Even N → 4 ≤ N →
@@ -126,10 +130,12 @@ theorem proposition_A_2_pointwise (φ : ℝ → ℝ) (hφ : IsWeight φ) (c : �
   refine ⟨C,hC,?_⟩
   intro N hNZ hN hN4 hlarge hGRH ha
   have ha0 := alpha_pos_at N hN4 c hc
-  have hA := (proposition_A_1 φ hφ c hc).1 N hNZ hN hN4 hlarge hGRH
+  obtain ⟨_, _, _, _, _, _, hOperator, hNorm⟩ :=
+    (proposition_A_1 φ hφ c hc).1 N hNZ hN hN4 hlarge hGRH
+  obtain ⟨_, _, _, _, _, hQuadraticBound⟩ := hOperator ha
   have herr : |goldbach N φ-weightMass φ*singularSeries N| ≤ C*‖residualOperator ha N‖ := by
-    apply le_trans _ (mul_le_mul_of_nonneg_right hA.2.2.2.2.2.2.2 (norm_nonneg _))
-    simpa only [abs_sub_comm] using (hA.2.2.2.2.2.2.1 ha).2.2.2.2.2
+    apply le_trans _ (mul_le_mul_of_nonneg_right hNorm (norm_nonneg _))
+    simpa only [abs_sub_comm] using hQuadraticBound
   have hd := variable_spectral_dictionary (alpha N c) ha0 N hN4 hGRH ha
   constructor
   · intro h hh hη hη' hz

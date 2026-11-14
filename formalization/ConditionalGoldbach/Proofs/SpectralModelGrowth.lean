@@ -1,8 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralModelEuler
-import ConditionalGoldbach.Proofs.SpectralModelBound
-import ConditionalGoldbach.Proofs.ZetaTruncation
+module
+
+public import Mathlib.Analysis.Real.Pi.Bounds
+public import ConditionalGoldbach.Proofs.SpectralModelEuler
+public import ConditionalGoldbach.Proofs.SpectralModelBound
+public import ConditionalGoldbach.Proofs.ZetaTruncation
 
 /-! Uniform model-kernel growth as the left Hardy boundary tends to zero. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

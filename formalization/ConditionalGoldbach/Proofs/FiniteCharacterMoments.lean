@@ -1,4 +1,8 @@
-import ConditionalGoldbach.Proofs.Characters
+module
+
+public import ConditionalGoldbach.Proofs.Characters
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

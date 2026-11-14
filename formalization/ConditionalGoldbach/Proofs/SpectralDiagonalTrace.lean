@@ -1,11 +1,15 @@
-import ConditionalGoldbach.Proofs.SpectralDiagonalVector
-import ConditionalGoldbach.Proofs.SpectralRankOneSeries
-import ConditionalGoldbach.Proofs.SpectralL2BasisExistence
-import ConditionalGoldbach.Proofs.DensitySeries
+module
+
+public import ConditionalGoldbach.Proofs.SpectralDiagonalVector
+public import ConditionalGoldbach.Proofs.SpectralRankOneSeries
+public import ConditionalGoldbach.Proofs.SpectralL2BasisExistence
+public import ConditionalGoldbach.Proofs.DensitySeries
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

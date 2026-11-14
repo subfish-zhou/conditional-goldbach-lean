@@ -1,4 +1,8 @@
-import ConditionalGoldbach.Proofs.WideMoments
+module
+
+public import ConditionalGoldbach.Proofs.WideMoments
+
+public section
 
 set_option autoImplicit false
 noncomputable section

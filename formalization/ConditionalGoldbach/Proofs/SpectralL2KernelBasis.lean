@@ -1,8 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralL2Kernel
+module
+
+public import Mathlib.MeasureTheory.Function.L2Space
+public import Mathlib.MeasureTheory.Integral.DominatedConvergence
+public import ConditionalGoldbach.Proofs.SpectralL2Kernel
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

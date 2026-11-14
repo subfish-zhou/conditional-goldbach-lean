@@ -22,9 +22,23 @@ private def kind (i : ConstantInfo) : String :=
   | .inductInfo _ => "inductive"
   | .quotInfo _ => "quotient"
 
+/-- Follow the entry module's compiled imports, excluding imports used only by this audit. -/
+private def importClosure (env : Environment) (root : Name) : Except String (Array Name) := do
+  let mut todo := #[root]
+  let mut seen : NameSet := {}
+  while !todo.isEmpty do
+    let name := todo.back!
+    todo := todo.pop
+    if seen.contains name then continue
+    let some idx := env.getModuleIdx? name | throw s!"Missing imported module {name}"
+    seen := seen.insert name
+    todo := todo ++ env.header.moduleData[idx]!.imports.map (·.module)
+  return env.header.moduleNames.filter seen.contains
+
 run_cmd do
   let env := (← getEnv).setExporting false
   let modules := env.header.moduleNames
+  let productionModules ← ofExcept <| importClosure env `ConditionalGoldbach
   let localNames := env.constants.toList.toArray.filterMap fun (n, _) =>
     if "ConditionalGoldbach".isPrefixOf (origin env modules n).toString then some n else none
   let mut todo := localNames
@@ -53,11 +67,11 @@ run_cmd do
       ("constructor_refs", toJson (ctorRefs.map Name.toString))]
   let out := Json.mkObj [
     ("method", toJson "Transitive constant dependencies through declaration types and opaque-inclusive values; inductive constructors are included as in Lean.collectAxioms. Origins use Environment.getModuleIdxFor?."),
-    ("imported_modules", toJson (modules.map Name.toString)),
+    ("imported_modules", toJson (productionModules.map Name.toString)),
     ("local_roots", toJson (localNames.map Name.toString)),
     ("missing", toJson missing),
     ("declarations", Json.arr rows)]
   liftIO <| IO.FS.writeFile "verification/publication/declaration-audit/declaration-graph.json" out.compress
   liftIO <| IO.FS.writeFile "verification/publication/declaration-audit/imported-modules.json"
-    (toJson (modules.map Name.toString)).pretty
+    (toJson (productionModules.map Name.toString)).pretty
   logInfo m!"Audited {localNames.size} local declarations and {rows.size} reachable declarations; {missing.size} missing."

@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.FiniteModelShift
-import ConditionalGoldbach.Proofs.MellinModelSingle
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelShift
+public import ConditionalGoldbach.Proofs.MellinModelSingle
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000
@@ -15,8 +19,7 @@ lemma model_single_mellin (N : ℕ) (hN : Even N) (hpos : 0 < N)
     verticalMellin a (fun w => continuedDensity N w *
       mellin (fun y => (signedConvolution φ y : ℂ)) w) =
       -(modelMass φ * singularSeries N : ℝ) := by
-  obtain ⟨D, hD, hgrowth⟩ := continuedDensity_vertical_growth N ha (show a < a+2 by linarith)
-  exact model_single_mellin_shift_of_growth N hN hpos φ hφ a (a+2) ha
-    (by linarith) (by linarith) D hD hgrowth
+  obtain ⟨b, D, hab, hb, hD, hgrowth⟩ := exists_mellin_comparison_line N a ha
+  exact model_single_mellin_shift_of_growth N hN hpos φ hφ a b ha hab hb D hD hgrowth
 
 end ConditionalGoldbach.FiniteModel

@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.ArithmeticKernelRealization
+module
+
+public import ConditionalGoldbach.Proofs.ArithmeticKernelRealization
 
 /-! Reusable weighted component kernels on the same Hardy strip. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -48,7 +52,7 @@ lemma weightedAnalyticKernel_power_bound {a b : ℝ} (ha : 0 ≤ a)
             (1 + |t|) ^ (1 / 4 : ℝ) / (1 + |t|) := by
           rw [show - (3 / 4 : ℝ) = 1 / 4 - 1 by norm_num, Real.rpow_sub ht0, Real.rpow_one]
         rw [hv, ht]
-        field_simp <;> ring
+        field_simp; ring
   have hsq := (sq_le_sq₀ (norm_nonneg _) (by positivity)).mpr hnorm
   have hp (u : ℝ) (hu : 0 < 1 + |u|) :
       ((1 + |u|) ^ (- (3 / 4 : ℝ))) ^ 2 = (1 + |u|) ^ (- (3 / 2 : ℝ)) := by

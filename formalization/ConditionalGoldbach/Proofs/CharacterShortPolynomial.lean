@@ -1,7 +1,10 @@
-import ConditionalGoldbach.Proofs.Characters
-import ConditionalGoldbach.Proofs.CharacterTraceBounds
+module
+
+public import ConditionalGoldbach.Proofs.CharacterTraceBounds
 
 /-! Exact odd-character Parseval for complex coefficients supported strictly below N/2. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -92,7 +95,7 @@ lemma smoothedPerronWeight_eq_zero_of_le {X : ℝ} (hX : 1 < X) (n : ℕ) (hn : 
     nlinarith
   have hn' : ¬(n : ℝ) ≤ Real.sqrt X := by linarith
   unfold smoothedPerronWeight
-  rw [if_neg hn']
+  rw [ite_eq_right hn']
   split_ifs with hnX
   · have he : (n : ℝ) = X := le_antisymm hnX hn
     rw [he, div_self (by linarith : X ≠ 0), Real.log_one, zero_div]

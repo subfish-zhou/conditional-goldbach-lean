@@ -1,10 +1,12 @@
-import ConditionalGoldbach.EarlyAnalyticPrerequisites
-import ConditionalGoldbach.ResidualMellinPrerequisites
-import ConditionalGoldbach.Proofs.QuadraticFunctional
-import ConditionalGoldbach.Proofs.MellinMoment
-import ConditionalGoldbach.Proofs.HardyEvaluation
+module
+
+public import ConditionalGoldbach.EarlyAnalyticPrerequisites
+public import ConditionalGoldbach.ResidualMellinPrerequisites
+public import ConditionalGoldbach.Proofs.QuadraticFunctional
 
 /-! Recovering the exact residual quadratic form using the adjoint and scalar Mellin integrals. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -114,8 +116,7 @@ lemma quadratic_residual_integral {a : ℝ} (N : ℕ) [NeZero N]
       ((N : ℂ) ^ z * mellinWeight φ z * (1 + z) * weightedKernel N s (conj z)) = _
   simp only [weightedKernel, conj_conj]
   rw [cpow_add _ _ hNz]
-  field_simp
-  <;> ring
+  field_simp; ring
 
 theorem theorem_7_1 (N : ℕ) [NeZero N] (hN : Even N)
     (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N)

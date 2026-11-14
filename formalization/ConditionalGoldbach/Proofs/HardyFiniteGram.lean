@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterHardyVectors
+module
+
+public import ConditionalGoldbach.Proofs.CharacterHardyVectors
 
 /-! Finite Gram kernels are represented by finite sums of positive rank-one maps. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -42,11 +46,11 @@ lemma hardyFiniteGram_represents {ι : Type*} [Fintype ι] {a : ℝ} (ha : a < b
     intro j _
     rw [ht j]
     ring
-  rw [← hardyEvaluationFunctional_apply hs, ContinuousLinearMap.sum_apply, map_sum]
-  simp only [rankOne_apply, map_smul, smul_eq_mul, hardyEvaluationFunctional_apply hs, hf _ s hs]
+  rw [← hardyEvaluationFunctional_apply hs, sum_apply, map_sum]
+  simp only [rankOne_apply, hardyEvaluationFunctional_apply hs]
   unfold kernelAction
   rw [integral_congr_ae heL, integral_congr_ae heR,
-    integral_finset_sum _ (fun j _ => hIl j), integral_finset_sum _ (fun j _ => hIr j),
+    MeasureTheory.integral_finsetSum _ (fun j _ => hIl j), MeasureTheory.integral_finsetSum _ (fun j _ => hIr j),
     ← Finset.sum_add_distrib]
   apply Finset.sum_congr rfl
   intro j _

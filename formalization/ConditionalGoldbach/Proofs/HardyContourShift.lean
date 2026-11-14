@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyRawLines
+module
+
+public import ConditionalGoldbach.Proofs.HardyRawLines
 
 /-! Contour shifting with integrable horizontal slices, used for Gaussian regularizations. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -14,11 +18,11 @@ lemma integrable_exists_sequence_norm_zero {g : ℝ → ℂ} (hg : Integrable g)
   have he : ∀ n : ℕ, ∃ t : ℝ, n < t ∧ ‖g t‖ < 1 / (n + 1) := by
     intro n
     by_contra hn
-    push_neg at hn
+    push Not at hn
     have hpos : (0 : ℝ) < 1 / (n + 1) := by positivity
     have hs : Ioi (n : ℝ) ⊆ {t | 1 / (n + 1 : ℝ) ≤ ‖g t‖} := fun t ht => hn t ht
     have hlt := lt_of_le_of_lt (measure_mono hs) (hg.measure_norm_ge_lt_top hpos)
-    simpa only [Real.volume_Ioi, lt_self_iff_false] using hlt
+    simp only [Real.volume_Ioi, lt_self_iff_false] at hlt
   choose t ht hnorm using he
   refine ⟨t, tendsto_atTop_mono (fun n => (ht n).le) tendsto_natCast_atTop_atTop, ?_⟩
   have hlim : Tendsto (fun n : ℕ => 1 / (n + 1 : ℝ)) atTop (𝓝 0) :=

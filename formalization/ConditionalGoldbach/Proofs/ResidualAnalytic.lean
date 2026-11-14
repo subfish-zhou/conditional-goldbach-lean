@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.ModelContinuation
-import ConditionalGoldbach.Proofs.CharacterAnalytic
+module
+
+public import ConditionalGoldbach.Proofs.ModelContinuation
+public import ConditionalGoldbach.Proofs.CharacterAnalytic
 
 /-! Joint holomorphy and exact conjugation symmetries of the residual kernel. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -82,7 +86,7 @@ lemma residual_differentiableOn (N : ℕ) [NeZero N] (hN : 0 < N) (hGRH : GRH N)
       (f := fun q : ℂ × ℂ => q.1+q.2) p (diagonalSeries_differentiableAt N hs) (by fun_prop)).differentiableWithinAt
   exact (hK.sub hD).sub (continuedModel_differentiableOn N hN)
 
-theorem proposition_4_5 (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N) :
+theorem proposition_4_5 (N : ℕ) [NeZero N] (_hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N) :
     DifferentiableOn ℂ (fun p : ℂ × ℂ => residual N p.1 p.2) analyticDomain ∧
     (∀ s z : ℂ, residual N s z = residual N z s ∧
       conj (residual N s z) = residual N (conj s) (conj z)) ∧

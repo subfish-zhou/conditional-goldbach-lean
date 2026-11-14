@@ -3,8 +3,8 @@ from datetime import datetime, timezone
 import hashlib
 import json
 
-from project_sources import ROOT, library_sources
-from update_verification import AUDIT, STANDARD_AXIOMS, digest, read, require, unique_rows
+from project_sources import ROOT, declaration_owner, library_sources
+from update_verification import AUDIT, STANDARD_AXIOMS, digest, read, require, unique_rows, verify_comparator_inputs
 
 audit = ROOT / AUDIT
 build = read('verification/current-build.json')
@@ -36,6 +36,7 @@ require(digest(AUDIT + 'bwrap_local_dependencies.py') == result['sandbox_adapter
         'Comparator adapter changed')
 
 manifest = read(AUDIT + 'comparator-manifest.json')
+verify_comparator_inputs(result, manifest)
 config = read(AUDIT + 'comparator-project/comparator.json')
 types = read(AUDIT + 'independent-full-types.json')
 require(len(types) == 103 and all(row['full_type_definitionally_equal'] is True for row in types),
@@ -80,8 +81,8 @@ numeric = provenance | {
     'theorem_type': 'ConditionalGoldbach.unorderedPrimePairs = 905',
     'lean_file': 'NumericCrossCheck.lean',
     'lean_file_sha256': digest(AUDIT + 'appendices/NumericCrossCheck.lean'),
-    'actual_definition_source': 'ConditionalGoldbach/Definitions.lean',
-    'actual_definition_source_sha256': digest('ConditionalGoldbach/Definitions.lean'),
+    'actual_definition_source': declaration_owner('ConditionalGoldbach.unorderedPrimePairs', ROOT),
+    'actual_definition_source_sha256': digest(declaration_owner('ConditionalGoldbach.unorderedPrimePairs', ROOT)),
     'verification_method': 'The complete comparator run replays this target through the Lean kernel.',
     'comparator_record': '../comparator-result.json',
     'comparator_run': runs['comparator'],

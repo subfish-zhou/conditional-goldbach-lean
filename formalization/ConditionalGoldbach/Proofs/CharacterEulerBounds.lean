@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterEulerCorrection
+module
+
+public import ConditionalGoldbach.Proofs.CharacterEulerCorrection
 
 /-! Uniform conductor corrections on the closed right half of the critical strip. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology

@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.DensityEuler
-import ConditionalGoldbach.Proofs.BetaIdentity
+module
+
+public import ConditionalGoldbach.Proofs.DensityEuler
+public import ConditionalGoldbach.Proofs.BetaIdentity
 
 /-! Continuation of the beta model, with the original two-variable domain. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -62,7 +66,7 @@ lemma betaModel_eq_continuedModel (N : ℕ) (hN : 0 < N) (s z : ℂ)
     have : (0 : ℝ) ≤ n := Nat.cast_nonneg n
     simp only [add_re] at hw0
     linarith
-  have hne : s+z ≠ (1 : ℂ) := by intro he; simpa [he] using hw1
+  have hne : s+z ≠ (1 : ℂ) := by intro he; simp [he] at hw1
   have hzeta := riemannZeta_one_sub hneg hne
   have hN0 : (N : ℂ) ≠ 0 := by exact_mod_cast hN.ne'
   have hπ : (Real.pi : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr Real.pi_ne_zero
@@ -85,7 +89,7 @@ lemma betaModel_eq_continuedModel (N : ℕ) (hN : 0 < N) (s z : ℂ)
     -(singularSeries N : ℂ) * densityEulerProduct N (s+z) * riemannZeta (s+z) *
       Gamma (s+z) * Complex.cos (Real.pi*(s+z)/2) * gammaQuotient s * gammaQuotient z * hpow
 
-theorem proposition_4_4 (N : ℕ) (hN : Even N) (hN4 : 4 ≤ N) :
+theorem proposition_4_4 (N : ℕ) (_hN : Even N) (hN4 : 4 ≤ N) :
     (∀ s z : ℂ, (s, z) ∈ betaDomain → betaModel N s z = continuedModel N s z) ∧
     DifferentiableOn ℂ (fun p : ℂ × ℂ => continuedModel N p.1 p.2) analyticDomain := by
   exact ⟨fun s z hd => betaModel_eq_continuedModel N (by omega) s z hd,

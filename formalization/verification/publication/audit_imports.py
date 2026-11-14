@@ -183,3 +183,8 @@ if env_path.exists():
     }
 OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
 print(json.dumps({k: report[k] for k in ("summary_by_package", "direct_external_imports", "goldbach_package_modules", "goldbach_namespace_modules", "LeanArchitect_modules", "ternary_project_source_roots", "unresolved_imports")}, ensure_ascii=False, indent=2))
+if unresolved:
+    raise SystemExit(f"Unresolved imports: {', '.join(sorted(unresolved))}")
+if crosscheck := report.get("compiled_environment_crosscheck"):
+    if not crosscheck["exact_match"]:
+        raise SystemExit("Source and compiled import closures differ. See " + str(OUT))

@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.SpectralPerronFubini
-import ConditionalGoldbach.Proofs.GammaDifference
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPerronFubini
+public import ConditionalGoldbach.Proofs.GammaDifference
 
 /-! Absolute summation of the Gamma resolvents in the smoothed Perron integral. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1200000
 set_option autoImplicit false
@@ -26,7 +30,7 @@ lemma two_bounds_geometric_mean {d v m : ℝ} (hd : 0 ≤ d) (hv : 0 < v) (hm : 
   have hpos : 0 ≤ v/m^3 := by positivity
   simp only [inv_pow, ← div_eq_mul_inv]
   calc
-    d^2 ≤ 2*(v/m^3) := by convert hs using 1 <;> ring
+    d^2 ≤ 2*(v/m^3) := by convert hs using 1; ring
     _ ≤ 4*(v/m^3) := by nlinarith
     _ = _ := by ring
 

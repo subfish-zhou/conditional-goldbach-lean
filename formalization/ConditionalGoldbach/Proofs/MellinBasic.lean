@@ -1,6 +1,12 @@
-import ConditionalGoldbach.Proofs.Weights
+module
+
+public import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+public import Mathlib.Analysis.MellinInversion
+public import ConditionalGoldbach.Proofs.Weights
 
 /-! Mellin inversion of the paper's compact smooth companion weight. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff FourierTransform SchwartzMap

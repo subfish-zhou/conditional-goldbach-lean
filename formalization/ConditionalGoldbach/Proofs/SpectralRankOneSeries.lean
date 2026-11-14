@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralPositiveTrace
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPositiveTrace
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex InnerProductSpace
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
@@ -48,7 +52,7 @@ theorem rankOne_tsum_positiveTraceClass {ι : Type*} (v : ι → H)
     exact (hrow j).tsum_eq
   have hcol (k : ℕ) := rankOne_tsum_quadratic_hasSum v hv (b k)
   have hb : Summable (fun k => (paperInner ((∑' j, rankOne ℂ (v j) (v j)) (b k)) (b k)).re) := by
-    have hs := ((Equiv.prodComm ℕ ι).summable_iff.mpr hp).prod
+    have hs := (((Equiv.prodComm ℕ ι).summable_iff (f := Function.uncurry f)).mpr hp).prod
     convert hs using 1
     funext k
     exact (hcol k).tsum_eq.symm

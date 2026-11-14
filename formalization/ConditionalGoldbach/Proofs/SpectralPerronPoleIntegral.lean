@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.SpectralPerronIntegral
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPerronIntegral
 
 /-! The one-pole Perron transform, evaluated by Fourier inversion of exponential differences. -/
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -50,7 +54,7 @@ lemma complexFourier_sub {f g : ℝ → ℂ} (hf : Integrable f) (hg : Integrabl
     apply hk.norm.mono' ((show Continuous (fun u : ℝ =>
       Complex.exp ((-2 * Real.pi * (t * u) : ℝ) * I)) by fun_prop).aestronglyMeasurable.mul hk.aestronglyMeasurable)
     filter_upwards [] with u
-    simp [norm_mul, Complex.norm_exp]
+    simp [Complex.norm_exp]
   funext t
   simp only [Real.fourier_eq', RCLike.inner_apply, conj_trivial, smul_eq_mul, mul_sub]
   rw [integral_sub (hi f hf t) (hi g hg t)]
@@ -65,7 +69,7 @@ lemma perronComplexCauchySquare_integrable {a : ℂ} (ha : 0 < a.re) :
     have heR : 2 * Real.pi * (t + a.im / (2 * Real.pi)) = 2 * Real.pi * t + a.im := by
       field_simp [Real.pi_ne_zero]
     rw [heR]
-    apply Complex.ext <;> simp <;> ring
+    apply Complex.ext <;> simp; ring
   rw [he]
 
 lemma perronCauchyDifference_integrable {c : ℝ} (hc : 0 < c) {a : ℂ} (ha : 0 < a.re) :

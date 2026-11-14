@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.HadamardLog
-import Mathlib.Analysis.Meromorphic.FactorizedRational
+module
+
+public import ConditionalGoldbach.Proofs.HadamardLog
+public import Mathlib.Analysis.Meromorphic.FactorizedRational
 
 /-! Finite removal of zeros with an actual entire quotient, including removable point values. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

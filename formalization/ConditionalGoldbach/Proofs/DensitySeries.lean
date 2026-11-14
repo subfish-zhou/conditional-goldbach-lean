@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.Model
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Absolute convergence and holomorphy of the diagonal Dirichlet series. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -34,8 +39,7 @@ lemma diagonalSeries_eq_LSeries (N : ℕ) (w : ℂ) :
   by_cases hn : n = 0
   · subst n
     simp [LSeries.term]
-  · simp only [LSeries.term, hn, ite_false, Nat.pos_iff_ne_zero, hn, not_false_eq_true,
-      true_and]
+  · simp only [LSeries.term, ite_false, Nat.pos_iff_ne_zero, hn]
     split_ifs <;> simp_all
 
 lemma diagonalSeries_summable (N : ℕ) {w : ℂ} (hw : 0 < w.re) :
@@ -47,8 +51,7 @@ lemma diagonalSeries_summable (N : ℕ) {w : ℂ} (hw : 0 < w.re) :
   by_cases hn : n = 0
   · subst n
     simp [LSeries.term]
-  · simp only [LSeries.term, hn, ite_false, Nat.pos_iff_ne_zero, hn, not_false_eq_true,
-      true_and]
+  · simp only [LSeries.term, ite_false, Nat.pos_iff_ne_zero, hn]
     split_ifs <;> simp_all
 
 lemma diagonalSeries_differentiableAt (N : ℕ) {w : ℂ} (hw : 0 < w.re) :

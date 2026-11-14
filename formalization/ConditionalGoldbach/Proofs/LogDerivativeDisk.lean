@@ -1,6 +1,15 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Complex.BorelCaratheodory
+public import Mathlib.Analysis.Complex.HasPrimitives
+public import Mathlib.Analysis.Complex.Liouville
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Quantitative logarithmic derivatives on a zero-free disk, via a genuine analytic logarithm. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -48,7 +57,7 @@ lemma logarithm_re_le_of_bounds (f g : ℂ → ℂ) (U l : ℝ) (hl : 0 < l)
     _ ≤ U / l := div_le_div_of_nonneg_left ((norm_nonneg _).trans hb) hl hlf
 
 lemma logDerivative_disk_bound (f : ℂ → ℂ) (R r U l : ℝ)
-    (hR : 0 < R) (hr : 0 ≤ r) (hrR : r < R) (hl : 0 < l) (hlU : l < U)
+    (hR : 0 < R) (_hr : 0 ≤ r) (hrR : r < R) (hl : 0 < l) (hlU : l < U)
     (hf : AnalyticOnNhd ℂ f (ball 0 R)) (hn : ∀ z ∈ ball 0 R, f z ≠ 0)
     (hlf : l ≤ ‖f 0‖) (hbound : ∀ z ∈ ball 0 R, ‖f z‖ ≤ U)
     (z : ℂ) (hz : ‖z‖ ≤ r) :

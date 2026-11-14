@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.SpectralPoisson
-import ConditionalGoldbach.Proofs.CharacterZeroSummability
-import ConditionalGoldbach.Proofs.Elementary
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPoisson
+public import ConditionalGoldbach.Proofs.CharacterZeroSummability
+public import ConditionalGoldbach.Proofs.Elementary
 
 /-! Quantitative residue bounds and the reference-line absorption for the smoothed Perron kernel. -/
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -134,7 +138,7 @@ lemma perron_reference_coefficient (N : ℕ) (hlarge : Real.exp 10 < (N : ℝ)) 
   exact perron_exponential_coefficient_lt ha
 
 lemma perron_absorb {g P : ℂ} {Q E ε C₁ C₂ : ℝ} (hE : 0 ≤ E)
-    (hε0 : 0 ≤ ε) (hε : ε ≤ 2 / 3) (hC₁ : 0 ≤ C₁) (hC₂ : 0 ≤ C₂)
+    (hε0 : 0 ≤ ε) (hε : ε ≤ 2 / 3) (_hC₁ : 0 ≤ C₁) (hC₂ : 0 ≤ C₂)
     (htrunc : ‖-g - P‖ ≤ ε * Q + C₁ * E) (hQ : Q ≤ ‖g‖ + C₂ * E) :
     ‖g‖ ≤ 3 * (‖P‖ + (C₁ + C₂) * E) := by
   have htriangle : ‖g‖ ≤ ‖-g - P‖ + ‖P‖ := by

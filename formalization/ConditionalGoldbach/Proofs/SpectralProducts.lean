@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.SpectralAlgebra
+module
+
+public import ConditionalGoldbach.Proofs.SpectralAlgebra
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

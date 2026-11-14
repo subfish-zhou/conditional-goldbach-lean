@@ -1,15 +1,19 @@
-import ConditionalGoldbach.Proofs.GammaQuotientBound
-import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
+module
+
+public import ConditionalGoldbach.Proofs.GammaQuotientBound
+public import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 
 /-- Taking real parts of the Beta parameters gives a sharp modulus majorant. -/
-theorem betaIntegral_norm_le_real (u v : ℂ) (hu : 0 < u.re) (hv : 0 < v.re) :
+theorem betaIntegral_norm_le_real (u v : ℂ) (_hu : 0 < u.re) (_hv : 0 < v.re) :
     ‖betaIntegral u v‖ ≤ ‖betaIntegral (u.re : ℂ) (v.re : ℂ)‖ := by
   let F : ℝ → ℂ := fun t => (t : ℂ) ^ (u - 1) * (1 - (t : ℂ)) ^ (v - 1)
   have heq : ((∫ t : ℝ in 0..1, ‖F t‖ : ℝ) : ℂ) = betaIntegral (u.re : ℂ) (v.re : ℂ) := by
@@ -39,10 +43,10 @@ theorem gammaQuotient_norm_le_real (s : ℂ) (hs : 0 < s.re) (hs' : s.re < 3 / 2
     gammaQuotient_norm_beta (s.re : ℂ) hs hs']
   apply mul_le_mul_of_nonneg_right _ (norm_nonneg _)
   have h := betaIntegral_norm_le_real ((3 / 2 - conj s) / 2) (s.re : ℂ) hp hs
-  convert h using 1 <;> congr 2 <;> apply Complex.ext <;> simp <;> ring
+  convert h using 1; congr 2; apply Complex.ext <;> simp
 
 /-- A single uniform Gamma-quotient bound remains valid down to the imaginary axis. -/
-theorem gammaQuotient_uniform_nonnegative (b : ℝ) (hb0 : 0 ≤ b) (hb : b < 3 / 2) :
+theorem gammaQuotient_uniform_nonnegative (b : ℝ) (_hb0 : 0 ≤ b) (hb : b < 3 / 2) :
     ∃ C : ℝ, 0 < C ∧ ∀ s : ℂ, s.re ∈ Icc 0 b → ‖gammaQuotient s‖ ≤ C := by
   have hc : ContinuousOn (fun x : ℝ => gammaQuotient (x : ℂ)) (Icc 0 b) := by
     intro x hx
@@ -67,7 +71,7 @@ theorem gammaQuotient_uniform_nonnegative (b : ℝ) (hb0 : 0 ≤ b) (hb : b < 3 
   rcases hs.1.eq_or_lt with hzero | hpos
   · have he : (3 / 2 - s) / 2 = conj ((3 / 2 + s) / 2) := by
       simp only [map_div₀, map_add, map_ofNat]
-      apply Complex.ext <;> simp <;> linarith
+      apply Complex.ext <;> simp; linarith
     have hd : Gamma ((3 / 2 + s) / 2) ≠ 0 := Complex.Gamma_ne_zero_of_re_pos (by simp; linarith)
     rw [gammaQuotient, he, Complex.Gamma_conj, norm_div, norm_conj, div_self (norm_ne_zero_iff.mpr hd)]
     exact le_max_right _ _

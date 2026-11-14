@@ -1,6 +1,12 @@
-import ConditionalGoldbach.Proofs.DensitySeries
+module
+
+public import ConditionalGoldbach.Definitions.Asymptotics
+public import Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn
+public import ConditionalGoldbach.Proofs.DensitySeries
 
 /-! Normal convergence of the density Euler correction in the full right half-plane. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -139,11 +145,11 @@ lemma densityEulerProduct_differentiableOn (N : ℕ) :
   apply hu.differentiableOn _ ho
   filter_upwards with k
   apply Differentiable.differentiableOn
-  apply Differentiable.fun_finset_prod
+  apply Differentiable.fun_finsetProd
   intro p hp
   exact (differentiable_const (1 : ℂ)).add (densityEulerTerm_differentiable N p)
 
-theorem lemma_4_3_euler_product_convergence (N : ℕ) (hN : Even N) (hN4 : 4 ≤ N) :
+theorem lemma_4_3_euler_product_convergence (N : ℕ) (_hN : Even N) (_hN4 : 4 ≤ N) :
     NormallySummableOn (fun p : ℕ => fun w : ℂ =>
       if p.Prime ∧ 2 < p ∧ ¬p ∣ N then (p : ℂ) ^ (-w) / ((p : ℂ) - 2) else 0)
       {w | 0 < w.re} ∧

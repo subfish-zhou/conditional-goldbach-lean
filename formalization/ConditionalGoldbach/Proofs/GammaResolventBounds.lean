@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.CharacterGammaFactor
-import Mathlib.Analysis.PSeries
+module
+
+public import ConditionalGoldbach.Proofs.CharacterGammaFactor
+public import Mathlib.Analysis.PSeries
 
 /-! Summable quantitative bounds for differences of Gamma resolvents. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology

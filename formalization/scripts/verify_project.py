@@ -11,9 +11,14 @@ import subprocess
 import time
 
 from project_sources import library_sources
+from verification_inputs import (
+    BUILD_COMMAND, DECLARATIONS, DEPENDENCY_OUTPUTS, PUBLICATION, build_inputs, fingerprints,
+    pinned_dependencies,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCK = '/tmp/conditional-goldbach-build.lock'
+RUN_LOCK = ROOT / '.lake/verify-project.lock'
 AUDIT = 'verification/independent-audit/'
 
 
@@ -36,7 +41,7 @@ def main():
     runs = []
     record_path = ROOT / 'verification/current-audits.json'
 
-    def run(label, command, log_path, *, audit_step=True):
+    def run(label, command, log_path, *, audit_step=True, outputs=()):
         log_path = ROOT / log_path
         log_path.parent.mkdir(parents=True, exist_ok=True)
         started = datetime.datetime.now(datetime.timezone.utc).isoformat()
@@ -49,18 +54,23 @@ def main():
             start_utc=started, wall_seconds=time.monotonic() - before,
             log=str(log_path.relative_to(ROOT)),
             log_sha256=hashlib.sha256(log_path.read_bytes()).hexdigest())
+        if completed.returncode == 0 and outputs:
+            record['output_hashes'] = fingerprints(ROOT, outputs)
         if audit_step:
             runs.append(record)
             write_json(record_path, runs)
         else:
             if label == 'build':
+                record['input_hashes'] = input_hashes
+                record['dependency_revisions'] = dependency_revisions
                 record['lean_num_threads'] = 2
                 record['lock_file'] = LOCK
                 jobs = re.search(r'Build completed successfully \((\d+) jobs\)', log_path.read_text())
                 if jobs:
                     record['jobs'] = int(jobs[1])
             write_json(ROOT / f'verification/current-{label}.json', record)
-        print(json.dumps(record), flush=True)
+        print(json.dumps({key: value for key, value in record.items() if key != 'input_hashes'}),
+              flush=True)
         if completed.returncode:
             raise SystemExit(completed.returncode)
         return record
@@ -69,28 +79,39 @@ def main():
     # run_comparator.py to avoid recursively locking through a child process.
     with open(LOCK, 'a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
+        input_hashes = build_inputs(ROOT)
+        dependency_revisions = pinned_dependencies(ROOT)
         write_json(record_path, runs)
-        run('build', ['lake', 'build'], 'verification/current-build.log', audit_step=False)
-        for label, script in [('definitions', 'check_definitions.py'),
-                              ('types', 'check_reviewed_types.py'), ('axioms', 'audit_proofs.py')]:
-            run(label, ['python3', 'scripts/' + script], f'verification/current-{label}.log')
+        run('build', list(BUILD_COMMAND), 'verification/current-build.log', audit_step=False)
+        run('entrypoints', ['python3', 'scripts/check_entrypoints.py'],
+            'verification/current-entrypoints.log', outputs=('verification/entrypoints.json',))
+        for label, script, outputs in [
+            ('definitions', 'check_definitions.py', ('reviewed-definitions.json',)),
+            ('types', 'check_reviewed_types.py', ('reviewed-types.json',)),
+            ('axioms', 'audit_proofs.py', ('proof-status.json', 'proof-status-raw.json')),
+        ]:
+            run(label, ['python3', 'scripts/' + script], f'verification/current-{label}.log',
+                outputs=outputs)
         run('dependency-graph', ['lake', 'env', 'lean',
-            'verification/publication/declaration-audit/DeclarationAudit.lean'],
-            'verification/publication/declaration-audit/compile.log')
-        run('dependency-analysis', ['python3', 'verification/publication/declaration-audit/analyze.py'],
-            'verification/publication/declaration-audit/analyze-recheck.log')
-        run('dependency-imports', ['python3', 'verification/publication/audit_imports.py'],
-            'verification/publication/imports-recheck.log')
+            DECLARATIONS + 'DeclarationAudit.lean'], DECLARATIONS + 'compile.log',
+            outputs=DEPENDENCY_OUTPUTS['dependency-graph'])
+        run('dependency-analysis', ['python3', DECLARATIONS + 'analyze.py'],
+            DECLARATIONS + 'analyze-recheck.log', outputs=DEPENDENCY_OUTPUTS['dependency-analysis'])
+        run('dependency-imports', ['python3', PUBLICATION + 'audit_imports.py'],
+            PUBLICATION + 'imports-recheck.log', outputs=DEPENDENCY_OUTPUTS['dependency-imports'])
         sources = sorted(set([ROOT / 'ConditionalGoldbach.lean', *library_sources()]))
-        if len(sources) != 254:
-            raise ValueError(f'Expected 254 files in the project import closure, found {len(sources)}')
+        if build_inputs(ROOT) != input_hashes:
+            raise ValueError('Build inputs changed while verification was running')
         frozen = {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
                   for path in sources}
         write_json(ROOT / AUDIT / 'frozen-source-hashes.json', frozen)
         run('comparator-prepare', ['python3', AUDIT + 'prepare_comparator.py'],
             'verification/current-comparator-prepare.log')
 
-    run('comparator', ['python3', AUDIT + 'run_comparator.py'], 'verification/current-comparator.log')
+    run('comparator', ['python3', AUDIT + 'run_comparator.py'], 'verification/current-comparator.log',
+        outputs=(AUDIT + 'comparator-result.json', AUDIT + 'independent-full-types.json'))
+    if build_inputs(ROOT) != input_hashes or pinned_dependencies(ROOT) != dependency_revisions:
+        raise ValueError('Build inputs changed during the comparator run')
     run('summary', ['python3', 'scripts/refresh_audit_summary.py'],
         'verification/current-summary.log', audit_step=False)
     run('dependency-records', ['python3', 'scripts/refresh_dependency_records.py'],
@@ -101,4 +122,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    RUN_LOCK.parent.mkdir(exist_ok=True)
+    with RUN_LOCK.open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        main()

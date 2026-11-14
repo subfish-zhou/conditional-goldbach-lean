@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.DensityArithmetic
+module
+
+public import Mathlib.Analysis.Meromorphic.Basic
+public import ConditionalGoldbach.Proofs.DensityArithmetic
 
 /-! The exact Euler product identity and the complete density lemma. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff LSeries.notation
@@ -42,7 +47,7 @@ lemma density_prime_power_sum (N p : ℕ) (hp : p.Prime) {w : ℂ} (hw : 1 < w.r
   have hqn : 1-q ≠ 0 := by
     intro he
     have : q = 1 := by linear_combination -he
-    simpa [this] using hq
+    simp [this] at hq
   by_cases hactive : 2 < p ∧ ¬p ∣ N
   · have hp2 : (2 : ℝ) < p := by exact_mod_cast hactive.1
     have hden : (p : ℂ)-2 ≠ 0 := by
@@ -84,7 +89,7 @@ lemma densityMultiplier_eulerProduct (N : ℕ) (hN : Even N) (hpos : 0 < N)
   convert hz.mul he using 1
   ext p
   by_cases hp : p.Prime
-  · simp only [Set.mulIndicator, Set.mem_setOf_eq, hp, ite_true,
+  · simp only [Set.mulIndicator, Set.mem_ofPred_eq, hp, ite_true,
       density_prime_power_sum N p hp hw]
   · simp [Set.mulIndicator, hp, densityEulerTerm]
 

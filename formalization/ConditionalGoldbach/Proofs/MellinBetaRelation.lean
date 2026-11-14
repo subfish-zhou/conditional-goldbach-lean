@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinConvolutionTransform
-import ConditionalGoldbach.Proofs.MellinCompactPositive
+module
+
+public import ConditionalGoldbach.Proofs.MellinConvolutionTransform
+public import ConditionalGoldbach.Proofs.MellinCompactPositive
 
 /-! The exact signed Beta–Mellin relation, with the three original Beta terms. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -10,7 +14,7 @@ namespace ConditionalGoldbach
 
 lemma line_sub_line_reflection (σ : ℝ) (w : ℂ) (hw : w.re = 2*σ) (t : ℝ) :
     w-line σ t = line σ (w.im-t) := by
-  apply Complex.ext <;> simp [line, hw] <;> ring
+  apply Complex.ext <;> simp [line, hw]; ring
 
 lemma verticalMellin_reflection (f : ℂ → ℂ) (σ : ℝ) (w : ℂ) (hw : w.re = 2*σ) :
     verticalMellin σ (fun s => f (w-s)) = verticalMellin σ f := by
@@ -75,8 +79,6 @@ lemma signedConvolution_mellin_beta (φ : ℝ → ℝ) (hφ : IsWeight φ)
     rw [integral_sub (f := fun t : ℝ => C₁ (line σ t) + C₂ (line σ t))
       (g := fun t : ℝ => J (line σ t)) (hCi.add hC₂i) hJi,
       integral_add (f := fun t : ℝ => C₁ (line σ t)) (g := fun t : ℝ => C₂ (line σ t)) hCi hC₂i]
-    change 2 * mellin (fun y => (differenceConvolution φ y : ℂ)) w -
-      mellin (fun y => (sumConvolution φ y : ℂ)) w = _
     have he : (2*(Real.pi : ℂ))⁻¹ *
         ((∫ t : ℝ, C₁ (line σ t)) + (∫ t : ℝ, C₂ (line σ t)) - (∫ t : ℝ, J (line σ t))) =
         verticalMellin σ C₁ + verticalMellin σ C₂ - verticalMellin σ J := by

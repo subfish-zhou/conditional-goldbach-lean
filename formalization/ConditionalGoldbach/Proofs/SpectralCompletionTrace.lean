@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralAlgebra
+module
+
+public import ConditionalGoldbach.Proofs.SpectralDataAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
@@ -33,15 +37,12 @@ theorem symmetric_hs_basis_independent (T : H →L[ℂ] H) (hT : T.IsSymmetric)
   have hp : Summable (Function.uncurry f) := by
     apply (summable_prod_of_nonneg (fun p => sq_nonneg _)).2
     refine ⟨fun i => (hrow i).summable, ?_⟩
-    convert hb using 1
-    funext i
-    exact (hrow i).tsum_eq
+    exact hb.congr (fun i => (hrow i).tsum_eq.symm)
+  -- Fix the summand before reindexing to avoid higher-order unification through `Summable`.
   have hp' : Summable (fun p : ℕ × ℕ => f p.2 p.1) :=
-    (Equiv.prodComm ℕ ℕ).summable_iff.2 hp
+    ((Equiv.prodComm ℕ ℕ).summable_iff (f := Function.uncurry f)).2 hp
   refine ⟨?_, ?_⟩
-  · convert hp'.prod using 1
-    funext j
-    exact (hcol j).tsum_eq.symm
+  · exact hp'.prod.congr (fun j => (hcol j).tsum_eq)
   · calc
       (∑' j, ‖T (b j)‖ ^ 2) = ∑' i, ∑' j, f i j := by simp only [(hrow _).tsum_eq]
       _ = ∑' j, ∑' i, f i j := hp.tsum_comm.symm
@@ -119,7 +120,7 @@ def SpectralData.square {T : H →L[ℂ] H} (d : SpectralData T) : SpectralData 
   diagonal := by
     intro j
     simp only [ContinuousLinearMap.comp_apply, d.diagonal, map_smul, smul_smul,
-      Complex.ofReal_pow, pow_two, Complex.ofReal_mul]
+      pow_two, Complex.ofReal_mul]
   squareSummable := by
     apply Summable.of_nonneg_of_le (fun j => sq_nonneg _) _
       (d.squareSummable.mul_left (‖T‖ ^ 2))

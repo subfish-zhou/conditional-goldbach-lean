@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.CharacterGammaFactor
-import Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup
-import Mathlib.Analysis.SpecialFunctions.Gamma.Beta
+module
+
+public import ConditionalGoldbach.Proofs.CharacterGammaFactor
+public import Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup
+public import Mathlib.Analysis.SpecialFunctions.Gamma.Beta
 
 /-! Uniform majorants for Euler's finite Gamma products. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology
@@ -54,7 +58,7 @@ lemma GammaSeq_differentiableAt {s : ℂ} (hs : 0 < s.re) {n : ℕ} (hn : n ≠ 
   have hd : DifferentiableAt ℂ (fun z : ℂ => (n:ℂ)^z * (n.factorial:ℂ)) s :=
     (differentiableAt_id.const_cpow (Or.inl (by exact_mod_cast hn))).mul_const _
   have hp : DifferentiableAt ℂ (fun z : ℂ => ∏ j ∈ Finset.range (n+1), (z+(j:ℂ))) s :=
-    DifferentiableAt.fun_finset_prod (fun j _ => differentiableAt_id.add_const _)
+    DifferentiableAt.fun_finsetProd (fun j _ => differentiableAt_id.add_const _)
   apply hd.div hp
   apply Finset.prod_ne_zero_iff.mpr
   intro j hj he

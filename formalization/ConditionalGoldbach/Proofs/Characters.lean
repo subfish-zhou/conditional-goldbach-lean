@@ -1,4 +1,11 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.Characters
+public import ConditionalGoldbach.Definitions.Weights
+public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.NumberTheory.Chebyshev
+public import Mathlib.RingTheory.SimpleRing.Principal
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-!
 # Finite character projection
@@ -7,6 +14,8 @@ This module proves the unconditional arithmetic input of Lemma 3.1.
 It uses finite character orthogonality and Mathlib's explicit Chebyshev bound.
 No pending analytic or spectral theorem is used.
 -/
+
+public section
 
 set_option autoImplicit false
 noncomputable section
@@ -56,13 +65,12 @@ lemma odd_character_selector {N : ℕ} [NeZero N] (a b : ZMod N) :
 /-- The general finite odd-character projector (original equation 2.1).
 The extra evenness and size hypotheses match the audited paper interface. -/
 theorem lemma_3_1_odd_orthogonality (N : ℕ) [NeZero N]
-    (hN : Even N) (hN4 : 4 ≤ N) (n m : ℕ) :
+    (_hN : Even N) (_hN4 : 4 ≤ N) (n m : ℕ) :
     (2 / (N.totient : ℂ)) * ∑ χ ∈ oddCharacters N, χ n * conj (χ m) =
       if Nat.Coprime (n * m) N then
         (if (n : ZMod N) = m then (1 : ℂ) else 0) -
           (if (n : ZMod N) = -(m : ZMod N) then 1 else 0)
       else 0 := by
-  clear hN hN4
   have hφ : (N.totient : ℂ) ≠ 0 := by exact_mod_cast (NeZero.ne N.totient)
   by_cases hnm : Nat.Coprime (n * m) N
   · rcases Nat.coprime_mul_iff_left.mp hnm with ⟨hn, hm⟩

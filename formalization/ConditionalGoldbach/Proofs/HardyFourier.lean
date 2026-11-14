@@ -1,7 +1,12 @@
-import ConditionalGoldbach.BaseDefinitions
+module
+
+public import Mathlib.Analysis.Fourier.LpSpace
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Compatibility of the classical Fourier integral with the `L²` Fourier isometry.
 This supplies the analytic interface needed for the Hardy-strip construction. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -49,7 +54,6 @@ lemma classical_fourier_eq_L2_ae {f : ℝ → ℂ} (hf : Integrable f) (hf2 : Me
 lemma classical_fourier_memLp {f : ℝ → ℂ} (hf : Integrable f) (hf2 : MemLp f 2) :
     MemLp (𝓕 f) 2 :=
   MemLp.ae_eq (classical_fourier_eq_L2_ae hf hf2).symm (Lp.memLp _)
-
 
 lemma memLp_comp_real_mul {f : ℝ → ℂ} (hf : MemLp f 2) {c : ℝ} (hc : c ≠ 0) :
     MemLp (fun t : ℝ => f (c * t)) 2 := by

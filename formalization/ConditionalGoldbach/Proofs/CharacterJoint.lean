@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterAnalytic
+module
+
+public import ConditionalGoldbach.Proofs.CharacterAnalytic
 
 /-! An explicit common entire denominator for the two-variable character kernel. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -13,7 +17,7 @@ lemma differentiable_product_two_variables {ι : Type*} (S : Finset ι)
     Differentiable ℂ (fun p => ∏ i ∈ S, f i p) := by
   classical
   induction S using Finset.induction_on with
-  | empty => simpa using (differentiable_const (c := (1 : ℂ)))
+  | empty => simp
   | @insert i S hi ih =>
     simp only [Finset.prod_insert hi]
     exact (hf i (Finset.mem_insert_self _ _)).mul
@@ -53,7 +57,7 @@ lemma odd_character_product_star (N : ℕ) [NeZero N] (f : Character N → ℂ) 
     rfl
 
 theorem proposition_3_2_joint_meromorphic (N : ℕ) [NeZero N]
-    (hN : Even N) (hN4 : 4 ≤ N) :
+    (_hN : Even N) (_hN4 : 4 ≤ N) :
     let B : ℂ × ℂ → ℂ := fun p => ∏ χ ∈ oddCharacters N,
       χ.LFunction (1 / 2 + p.1) * χ.LFunction (1 / 2 + p.2)
     Differentiable ℂ B ∧ B ≠ 0 ∧

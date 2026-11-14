@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.VariableQuadratic
+module
+
+public import ConditionalGoldbach.Proofs.VariableQuadratic
 
 /-! The spectral consequences of the genuine pole lower bound, with the original constants. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

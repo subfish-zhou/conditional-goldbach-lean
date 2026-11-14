@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.PrimePowers
-import Mathlib.Data.Nat.Prime.Int
+module
+
+public import ConditionalGoldbach.Proofs.PrimePowers
+public import Mathlib.Data.Nat.Prime.Int
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

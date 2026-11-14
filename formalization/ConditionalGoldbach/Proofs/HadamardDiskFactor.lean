@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HadamardFactors
+module
+
+public import ConditionalGoldbach.Proofs.HadamardFactors
 
 /-! Remove exactly the zeros in a disk, retaining an entire quotient and correct point values. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

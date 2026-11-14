@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.PoissonWeightedEnergy
-import ConditionalGoldbach.Proofs.CharacterPoissonAnchor
+module
+
+public import ConditionalGoldbach.Proofs.PoissonWeightedEnergy
+public import ConditionalGoldbach.Proofs.CharacterPoissonAnchor
 
 /-! The final uniform mean-square estimate, with its two analytic inputs exposed. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1200000
 set_option autoImplicit false
@@ -81,7 +85,7 @@ lemma logDerivative_energy_left_comparison (N : ℕ) [NeZero N] (hN4 : 4 ≤ N) 
     have hb : (logDerivative χ (line σ t)).re^2 ≤
         2*(r/σ)^2*‖logDerivative χ (line r t)‖^2+
         8*(r/σ)^2*C^2*Real.log ((N : ℝ)*(|t|+2))^2 := by nlinarith
-    convert div_le_div_of_nonneg_right hb (by positivity : 0 ≤ 1+t^2) using 1 <;> ring
+    convert div_le_div_of_nonneg_right hb (by positivity : 0 ≤ 1+t^2) using 1; ring
   have hi := integral_mono hbase.1
     ((hri.const_mul (2*(r/σ)^2)).add (hlogi.const_mul (8*(r/σ)^2*C^2))) hp
   simp only [Pi.add_apply] at hi
@@ -172,16 +176,16 @@ lemma lemma_6_4_of_reference_and_comparison
     have hi1 : 1 ≤ σ⁻¹ := by
       rw [inv_eq_one_div]
       exact (one_le_div hσ).mpr (hσβ.trans (by norm_num [beta]))
-    have hisq : 1 ≤ σ⁻¹^2 := by nlinarith
+    have hisq : 1 ≤ σ⁻¹^2 := by nlinarith only [hi1, sq_nonneg (σ⁻¹-1)]
     have hbound : averagedLogDerivative N σ ≤ D*σ⁻¹^2 := by
       apply hh.trans
       have hb := mul_le_mul_of_nonneg_left hisq hB
       dsimp [D]
-      nlinarith
+      nlinarith only [hb]
     apply hbound.trans
     have hnon1 : 0 ≤ (2*A+D)*Real.log N^2 := by positivity
     have hnon2 : 0 ≤ 2*A*σ⁻¹^2 := by positivity
-    nlinarith
+    nlinarith only [hnon1, hnon2]
   · have hle : 0 ≤ σ-r := sub_nonneg.mpr (le_of_lt (lt_of_not_ge hσr))
     have hshift := averagedLogDerivative_shift N hN4 hGRH r (σ-r) hr hle
     rw [add_sub_cancel] at hshift
@@ -197,6 +201,6 @@ lemma lemma_6_4_of_reference_and_comparison
     apply hright.trans
     have hnon1 : 0 ≤ D*Real.log N^2 := by positivity
     have hnon2 : 0 ≤ (2*A+D)*σ⁻¹^2 := by positivity
-    nlinarith
+    nlinarith only [hnon1, hnon2]
 
 end ConditionalGoldbach

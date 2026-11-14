@@ -1,10 +1,14 @@
-import ConditionalGoldbach.Proofs.FiniteCharacterShift
-import ConditionalGoldbach.Proofs.FiniteMellinDouble
-import ConditionalGoldbach.Proofs.MellinDiagonal
-import ConditionalGoldbach.Proofs.WideMoments
-import ConditionalGoldbach.Proofs.WideModelData
+module
+
+public import ConditionalGoldbach.Proofs.FiniteCharacterShift
+public import ConditionalGoldbach.Proofs.FiniteMellinDouble
+public import ConditionalGoldbach.Proofs.MellinDiagonal
+public import ConditionalGoldbach.Proofs.WideMoments
+public import ConditionalGoldbach.Proofs.WideModelData
 
 /-! The finite-smooth arithmetic double Mellin projections for Appendix B. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -93,7 +97,7 @@ lemma wide_diagonal_tsum :
     · exact wide_diagonal_term _
     · simp
   simp_rw [ht]
-  have h0 : f 0=0 := by simp [f,countingCoefficient_zero]
+  have h0 : f 0=0 := by simp [f]
   rw [← zero_add (∑' k, f (k+1)),← h0,← hf.tsum_eq_zero_add,tsum_eq_sum hz]
   simp only [diagonalCountingMoment,Complex.ofReal_sum,apply_ite Complex.ofReal,Complex.ofReal_pow,Complex.ofReal_zero,f]
 

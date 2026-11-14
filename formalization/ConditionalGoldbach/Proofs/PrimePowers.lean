@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.Weights
+module
+
+public import Mathlib.NumberTheory.Chebyshev
+public import ConditionalGoldbach.Proofs.Weights
 
 /-! Removal of pairs containing a proper prime power from the weighted correlation. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

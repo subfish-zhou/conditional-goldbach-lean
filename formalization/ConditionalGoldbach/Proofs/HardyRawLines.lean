@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyReproducing
+module
+
+public import ConditionalGoldbach.Proofs.HardyReproducing
 
 /-! Interior-line estimates for the converse Paley–Wiener theorem. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -17,7 +21,7 @@ lemma rawHardy_line_continuous {a b : ℝ} {f : ℂ → ℂ} (hf : IsRawHardy a 
     Complex.mul_re, Complex.ofReal_im, Complex.I_re, Complex.I_im, mul_zero,
     zero_mul, sub_zero, add_zero, Set.mem_Ioo] using hx
 
-lemma rawHardy_line_integral_bound_of_ne_midpoint {a b C : ℝ} (hab : a < b)
+lemma rawHardy_line_integral_bound_of_ne_midpoint {a b C : ℝ} (_hab : a < b)
     (f : ℂ → ℂ) (hf : DifferentiableOn ℂ f (strip a b))
     (hC : ∀ ε : ℝ, 0 < ε → ε < (b - a) / 2 →
       Integrable (fun t : ℝ => ‖f (line (a + ε) t)‖ ^ 2 + ‖f (line (b - ε) t)‖ ^ 2) ∧

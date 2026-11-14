@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.FiniteMellinProjection
-import ConditionalGoldbach.Proofs.MellinCharacterShift
+module
+
+public import ConditionalGoldbach.Proofs.FiniteMellinProjection
+public import ConditionalGoldbach.Proofs.MellinCharacterShift
 
 /-! Character Mellin contour shifts requiring only four derivatives. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -32,7 +36,7 @@ lemma finite_mellin_character_uniform_bound (N : ℕ) (hN : 4 ≤ N) (f : ℝ �
       zero_add] using hb (line x t) (by simpa [line] using hx)
   have hg' : ‖g (line x t)‖ ≤ (4 * A * (N : ℝ) ^ 2) * (1 + |t|) ^ 2 := by
     have h := (hg x hx t).trans (mul_le_mul_of_nonneg_left (log_square_polynomial_bound N hN t) hA)
-    convert h using 1 <;> ring
+    convert h using 1; ring
   rw [norm_mul, norm_mul]
   calc
     _ ≤ ((N : ℝ) * (B * (1 + |t|)⁻¹ ^ 4)) *
@@ -42,7 +46,6 @@ lemma finite_mellin_character_uniform_bound (N : ℕ) (hN : 4 ≤ N) (f : ℝ �
     _ = _ := by
       have ht : (1 + |t|) ≠ 0 := by positivity
       field_simp
-      <;> ring
 
 
 lemma finite_character_mellin_shift {N : ℕ} [NeZero N] (hN4 : 4≤N) (hGRH : GRH N)

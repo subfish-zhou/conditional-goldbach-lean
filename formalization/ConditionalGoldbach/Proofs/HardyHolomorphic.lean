@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.HardyTraceAlgebra
+module
+
+public import Mathlib.Analysis.Calculus.ParametricIntegral
+public import ConditionalGoldbach.Proofs.HardyTraceAlgebra
 
 /-! Holomorphy of the Fourier–Laplace representation on its open strip. -/
+public section
+
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000

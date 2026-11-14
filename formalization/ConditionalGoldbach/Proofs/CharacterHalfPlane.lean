@@ -1,8 +1,11 @@
-import ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy
-import ConditionalGoldbach.Proofs.CharacterReferenceEnergy
-import ConditionalGoldbach.Proofs.CharacterSeries
+module
+
+public import ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy
+public import ConditionalGoldbach.Proofs.CharacterReferenceEnergy
 
 /-! The half-plane weighted real-part estimate for actual logarithmic derivatives. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1000000
 set_option autoImplicit false
@@ -21,7 +24,7 @@ lemma logDerivative_right_bound (N : ℕ) [NeZero N] (χ : Character N)
   simp only [mangoldt, ArithmeticFunction.map_zero, Complex.ofReal_zero, zero_mul, zero_div, zero_add]
   apply (norm_tsum_le_tsum_norm hshift.norm).trans
   apply (Summable.tsum_le_tsum _ hshift.norm hm.1).trans
-  · convert hm.2 using 1 <;> norm_num <;> ring
+  · convert hm.2 using 1; norm_num; ring
   intro j
   have hn : 0 < (j+1 : ℕ) := by omega
   have hn1 : (1 : ℝ) ≤ (j+1 : ℕ) := by exact_mod_cast hn
@@ -59,7 +62,7 @@ lemma shifted_logDerivative_growth (N : ℕ) [NeZero N] (hN4 : 4 ≤ N) (hGRH : 
   rw [he]
   apply hh.trans
   have hn1 : (1 : ℝ) ≤ N := by exact_mod_cast (by omega : 1 ≤ N)
-  convert mul_le_mul_of_nonneg_left (logarithm_square_le_quarter_power hn1 t) hL.le using 1 <;> ring
+  convert mul_le_mul_of_nonneg_left (logarithm_square_le_quarter_power hn1 t) hL.le using 1; ring
 
 lemma logDerivative_weighted_realPart_bound (N : ℕ) [NeZero N]
     (hN4 : 4 ≤ N) (hGRH : GRH N) (χ : Character N) (hχ : χ ∈ oddCharacters N)

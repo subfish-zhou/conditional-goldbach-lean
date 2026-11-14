@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroReflection
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroReflection
 
 /-! The completed function is entire and has exactly the multiplicity-indexed nontrivial zeros. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

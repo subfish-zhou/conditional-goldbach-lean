@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinBasic
-import ConditionalGoldbach.Proofs.CharacterSeries
+module
+
+public import ConditionalGoldbach.Proofs.MellinBasic
+public import ConditionalGoldbach.Proofs.CharacterSeries
 
 /-! Absolutely convergent interchange for weighted Mellin projections. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff FourierTransform

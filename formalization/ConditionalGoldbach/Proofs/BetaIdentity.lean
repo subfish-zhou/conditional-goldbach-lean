@@ -1,6 +1,11 @@
-import ConditionalGoldbach.BaseDefinitions
+module
+
+public import ConditionalGoldbach.Definitions.Model
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! The beta-kernel Gamma quotient, with all arguments in their original domain. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

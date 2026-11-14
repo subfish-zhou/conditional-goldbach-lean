@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.ArithmeticComponentOperators
-import ConditionalGoldbach.Proofs.VariableStripOperators
-import ConditionalGoldbach.Proofs.SpectralModelOperator
+module
+
+public import ConditionalGoldbach.Proofs.ArithmeticComponentOperators
+public import ConditionalGoldbach.Proofs.VariableStripOperators
+public import ConditionalGoldbach.Proofs.SpectralModelOperator
+
+public section
 
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000

@@ -1,9 +1,12 @@
-import ConditionalGoldbach.ModelMellinPrerequisites
-import ConditionalGoldbach.Proofs.MellinDiagonal
-import ConditionalGoldbach.Proofs.MellinCharacterShift
-import ConditionalGoldbach.Proofs.ModelContinuation
+module
+
+public import ConditionalGoldbach.ModelMellinPrerequisites
+public import ConditionalGoldbach.Proofs.MellinCharacterShift
+public import ConditionalGoldbach.Proofs.ModelContinuation
 
 /-! The arithmetic residual, with the signs of all three Mellin terms retained. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -31,7 +34,7 @@ lemma weighted_continuedModel_cancel (N : ℕ) (hN : 0 < N) (φ : ℝ → ℝ)
 
 lemma mellin_betaDomain_line (σ : ℝ) (hσ : 0 < σ) (hσ' : σ ≤ 1 / 9) (x y : ℝ) :
     (line σ x, line σ y) ∈ betaDomain := by
-  simp only [betaDomain, mem_setOf_eq, line, add_re, ofReal_re, mul_re, ofReal_im,
+  simp only [betaDomain, Set.mem_ofPred_eq, line, add_re, ofReal_re, mul_re, ofReal_im,
     I_re, I_im, mul_zero, zero_mul, sub_self, add_zero]
   constructor
   · linarith

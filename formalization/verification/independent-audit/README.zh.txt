@@ -8,7 +8,7 @@ summary.json 汇总数据，final-comparison.json 记录逐项比较结果。
 本目录包含独立参考、表示桥梁和905直接枚举证书。
 Challenge占位指定比较目标，Solution使用propext、Classical.choice、Quot.sound。
 
-在仓库根目录复跑：
+用 verify_project.py 生成当前构建记录后，在仓库根目录复跑。
   python3 formalization/verification/independent-audit/prepare_comparator.py
   python3 formalization/verification/independent-audit/run_comparator.py
   python3 formalization/scripts/refresh_audit_summary.py

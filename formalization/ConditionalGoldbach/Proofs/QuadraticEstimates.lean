@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.Main
+module
+
+public import ConditionalGoldbach.Proofs.Main
 
 /-! Relative error consequences of the exact quadratic form and the spectral dictionary. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

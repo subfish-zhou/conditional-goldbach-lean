@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.PoleLogDerivative
-import ConditionalGoldbach.Proofs.DensityResidue
-import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+module
+
+public import ConditionalGoldbach.Proofs.PoleLogDerivative
+public import ConditionalGoldbach.Proofs.DensityResidue
+public import Mathlib.NumberTheory.Harmonic.ZetaAsymp
 
 /-! The double pole of the derivative of zeta's logarithmic derivative. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped Topology

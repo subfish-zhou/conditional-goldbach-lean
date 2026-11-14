@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterGramOperator
+module
+
+public import ConditionalGoldbach.Proofs.CharacterGramOperator
 
 /-! Comparison of the arithmetic trace with the two averaged logarithmic-derivative energies. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -12,7 +16,7 @@ namespace ConditionalGoldbach
 lemma norm_one_add_line_sq (x t : ℝ) : ‖1 + line x t‖ ^ 2 = (1 + x) ^ 2 + t ^ 2 := by
   rw [← Complex.normSq_eq_norm_sq, Complex.normSq_apply]
   simp only [line, Complex.add_re, Complex.one_re, Complex.ofReal_re, Complex.mul_re,
-    Complex.ofReal_im, Complex.I_re, Complex.I_im, mul_zero, zero_mul, sub_zero, add_zero,
+    Complex.ofReal_im, Complex.I_re, Complex.I_im, mul_zero, sub_zero, add_zero,
     Complex.add_im, Complex.one_im, Complex.mul_im, mul_one, zero_add]
   ring
 

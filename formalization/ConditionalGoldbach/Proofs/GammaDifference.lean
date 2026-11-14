@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.GammaDerivativeLimit
-import ConditionalGoldbach.Proofs.GammaResolventBounds
+module
+
+public import ConditionalGoldbach.Proofs.GammaDerivativeLimit
+public import ConditionalGoldbach.Proofs.GammaResolventBounds
 
 /-! The absolutely convergent digamma difference series, derived from Euler's Gamma limit. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology

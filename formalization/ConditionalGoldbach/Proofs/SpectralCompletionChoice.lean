@@ -1,9 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralCompletionTrace
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Log.Summable
+public import ConditionalGoldbach.Proofs.SpectralCompletionTrace
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H]
@@ -69,7 +74,7 @@ theorem SpectralData.spectralStatistic_independent {T : H →L[ℂ] H}
     simp only [a, hsame, tsum_mul_left, ← Complex.ofReal_tsum, (hcol _).tsum_eq,
       Complex.ofReal_one, mul_one]
   have ha' : Summable (fun p : ℕ × ℕ => a p.2 p.1) :=
-    (Equiv.prodComm ℕ ℕ).summable_iff.2 ha
+    ((Equiv.prodComm ℕ ℕ).summable_iff (f := Function.uncurry a)).2 ha
   refine ⟨?_, ?_⟩
   · convert ha'.prod using 1
     funext j

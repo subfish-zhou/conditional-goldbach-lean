@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.WidePrimePowerCount
+module
+
+public import ConditionalGoldbach.Proofs.WidePrimePowerCount
 
 /-! Symmetry and scaling of the full wide-weight main integral. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 set_option backward.isDefEq.respectTransparency false
@@ -71,7 +75,7 @@ theorem lemma_B_3_main_integral :
     rw [← wideModelMass_scaled]
     ring
   refine ⟨hm, ?_⟩
-  rw [proposition_B_1.2.2.2.2,hm]
+  rw [unorderedPrimePairs_eq_corrected_wideCorrelation,hm]
   unfold wideResidual
   ring
 

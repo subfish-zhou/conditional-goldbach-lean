@@ -1,4 +1,8 @@
-import ConditionalGoldbach.Proofs.BalanceBounds
+module
+
+public import ConditionalGoldbach.Proofs.BalanceBounds
+
+public section
 
 set_option autoImplicit false
 noncomputable section

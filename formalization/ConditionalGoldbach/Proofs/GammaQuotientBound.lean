@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.ModelContinuation
+module
+
+public import ConditionalGoldbach.Proofs.ModelContinuation
 
 /-! Uniform boundedness of the Gamma quotient from the convergent Beta integral. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -40,7 +44,7 @@ lemma gammaQuotient_norm_beta (s : ℂ) (hs : 0 < s.re) (hs' : s.re < 3 / 2) :
   have hu : 0 < ((3 / 2 - conj s) / 2).re := by simp; linarith
   have hv : 0 < (s.re : ℂ).re := hs
   have he : (3 / 2 - conj s) / 2 + (s.re : ℂ) = (3 / 2 + s) / 2 := by
-    apply Complex.ext <;> simp <;> ring
+    apply Complex.ext <;> simp; ring
   rw [Complex.betaIntegral_eq_Gamma_mul_div _ _ hu hv, he, ← norm_mul]
   have hΓ : Gamma (s.re : ℂ) ≠ 0 := Complex.Gamma_ne_zero_of_re_pos hs
   rw [show Gamma ((3 / 2 - conj s) / 2) * Gamma (s.re : ℂ) /

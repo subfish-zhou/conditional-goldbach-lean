@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.MellinModelSampling
-import ConditionalGoldbach.Proofs.DensityEulerIdentity
-import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+module
+
+public import ConditionalGoldbach.Proofs.MellinModelSampling
+public import ConditionalGoldbach.Proofs.DensityEulerIdentity
+public import Mathlib.NumberTheory.Harmonic.ZetaAsymp
 
 /-! The precise removable extension of the density–convolution product at one. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

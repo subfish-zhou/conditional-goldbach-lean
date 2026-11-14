@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.QuadraticNormChange
-import ConditionalGoldbach.Proofs.QuadraticAsymptotic
+module
+
+public import ConditionalGoldbach.Proofs.QuadraticNormChange
+public import ConditionalGoldbach.Proofs.QuadraticAsymptotic
 
 /-! Complete Proposition 7.4: functional existence, norm, and quantitative asymptotic. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

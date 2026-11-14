@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinTestInversion
+module
+
+public import ConditionalGoldbach.Definitions.Operators
+public import ConditionalGoldbach.Proofs.MellinTestInversion
 
 /-! An absolutely convergent density formula for the Mellin functional. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

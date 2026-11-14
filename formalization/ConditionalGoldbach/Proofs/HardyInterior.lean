@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.HardyFourier
-import ConditionalGoldbach.Proofs.HardyWeights
+module
+
+public import ConditionalGoldbach.Proofs.HardyFourier
+public import ConditionalGoldbach.Proofs.HardyWeights
 
 /-! The Fourier–Laplace transform has an L² restriction to every interior vertical line. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 noncomputable section
 open MeasureTheory Filter Set Complex FourierTransform
@@ -16,16 +20,16 @@ lemma fourierLaplace_line_eq_classical_fourier {a b : ℝ} (ψ : HardySpace a b)
   apply integral_congr_ae
   filter_upwards [] with τ
   have phase : -2 * Real.pi * inner ℝ τ (-t / (2 * Real.pi)) = τ * t := by
-    simp only [real_inner_comm, Real.inner_apply]
+    simp only [Real.inner_apply]
     field_simp
   rw [phase, smul_eq_mul, Complex.ofReal_exp, ← mul_assoc, ← Complex.exp_add]
   rw [mul_comm (ψ τ)]
   congr 1
   congr 1
-  simp only [line, Complex.ofReal_mul, Complex.ofReal_add]
+  simp only [line, Complex.ofReal_mul]
   ring
 
-lemma hardy_interiorLine_memLp {a b x : ℝ} (hab : a < b)
+lemma hardy_interiorLine_memLp {a b x : ℝ} (_hab : a < b)
     (hx : x ∈ Ioo a b) (ψ : HardySpace a b) :
     MemLp (fun t : ℝ => fourierLaplace ψ (line x t)) 2 volume := by
   have hf := classical_fourier_memLp (hardy_weighted_line_integrable hx ψ)

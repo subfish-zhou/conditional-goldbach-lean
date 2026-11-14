@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.LogDerivativeDisk
-import ConditionalGoldbach.Proofs.CharacterGrowthFoundation
+module
+
+public import ConditionalGoldbach.Proofs.LogDerivativeDisk
+public import ConditionalGoldbach.Proofs.CharacterGrowthFoundation
 
 /-! The GRH logarithmic-derivative bound obtained from zero-free disks, independently of Hadamard products. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -57,7 +61,7 @@ lemma logDerivative_uniform_bound (δ M : ℝ) (hδ : 0 < δ) (hM : δ ≤ M) :
     have hpoly := LFunction_polynomial_bound χ hχ (c+u) (by linarith)
     have hinv : ‖c+u‖/(c+u).re ≤ 2*‖c+u‖ := by
       have h := div_le_div_of_nonneg_left (norm_nonneg (c+u)) (by norm_num : (0 : ℝ) < 1/2) hp.le
-      convert h using 1 <;> ring
+      convert h using 1; ring
     have hnorm := norm_add_le c u
     have hunorm := mem_ball_zero_iff.mp hu
     have hscl : 1+2*‖c+u‖ ≤ A*(|t|+2) := by
@@ -98,6 +102,6 @@ lemma logDerivative_uniform_bound (δ M : ℝ) (hδ : 0 < δ) (hM : δ ≤ M) :
     calc
       _ ≤ (2*A+1)*Real.log X := by linarith
       _ ≤ _ := mul_le_mul_of_nonneg_left hlogpow (by positivity)
-  exact hb.trans (by convert mul_le_mul_of_nonneg_left hlogbound hK.le using 1 <;> dsimp [X] <;> ring)
+  exact hb.trans (by convert mul_le_mul_of_nonneg_left hlogbound hK.le using 1; dsimp [X]; ring)
 
 end ConditionalGoldbach

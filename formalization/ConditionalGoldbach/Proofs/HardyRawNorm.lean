@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyHolomorphic
+module
+
+public import ConditionalGoldbach.Proofs.HardyHolomorphic
 
 /-! Paired vertical means and the original Hardy supremum norm. -/
+public section
+
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
@@ -111,7 +115,7 @@ lemma fourierLaplace_paired_integral_le {a b : ℝ} (hab : a < b) (ψ : HardySpa
 lemma fourierLaplace_isRawHardy {a b : ℝ} (hab : a < b) (ψ : HardySpace a b) :
     IsRawHardy a b (fourierLaplace ψ) :=
   ⟨fourierLaplace_differentiableOn ψ, ‖ψ‖ ^ 2,
-    fun ε hε hε' => fourierLaplace_paired_integral_le hab ψ hε hε'⟩
+    fun _ε hε hε' => fourierLaplace_paired_integral_le hab ψ hε hε'⟩
 
 
 lemma hardy_density_line_integrable {a b x : ℝ} (hx : x ∈ Icc a b) (ψ : HardySpace a b) :
@@ -133,7 +137,7 @@ lemma fourierLaplace_paired_integral_eq {a b : ℝ} (hab : a < b) (ψ : HardySpa
     ← integral_add (hardy_density_line_integrable ⟨hxa.1.le, hxa.2.le⟩ ψ)
       (hardy_density_line_integrable ⟨hxb.1.le, hxb.2.le⟩ ψ)]
   apply integral_congr_ae
-  exact Eventually.of_forall (fun τ => by simp only [Pi.add_apply, mul_add])
+  exact Eventually.of_forall (fun τ => by simp only [mul_add])
 
 lemma fourierLaplace_paired_integral_tendsto {a b : ℝ} (hab : a < b) (ψ : HardySpace a b) :
     Tendsto (fun ε : ℝ => ∫ t : ℝ, ‖fourierLaplace ψ (line (a + ε) t)‖ ^ 2 +

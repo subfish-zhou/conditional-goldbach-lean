@@ -1,7 +1,12 @@
-import ConditionalGoldbach.Proofs.BaselineProductLink
-import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+module
+
+public import ConditionalGoldbach.Proofs.BaselineProductLink
+public import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+import Mathlib.Analysis.Complex.HalfPlane
 
 /-! The negative quadratic principal part of the continued arithmetic model. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -58,7 +63,7 @@ lemma continuedModel_double_pole (N : ℕ) (hN : Even N) (hpos : 0 < N) (γ : �
       (hG'.comp (f := fun x : ℝ => conj (line x γ)) (by unfold line; fun_prop))
   have hF0 : F 0 = (-1/4:ℂ) := by
     dsimp [F]
-    simp only [ofReal_zero,mul_zero,zero_add,sub_zero,add_zero,cpow_zero,mul_one,riemannZeta₁_one]
+    simp only [mul_zero,sub_zero,add_zero,cpow_zero,mul_one,riemannZeta₁_one]
     calc
       _ = (-1/4:ℂ)*((singularSeries N:ℂ)*baselineProductR N 0)*
         (gammaQuotient (line 0 γ)*gammaQuotient (conj (line 0 γ))) := by ring

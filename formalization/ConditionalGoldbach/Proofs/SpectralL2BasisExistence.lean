@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralHardyCompression
-import Mathlib.MeasureTheory.Measure.SeparableMeasure
+module
+
+public import ConditionalGoldbach.Proofs.SpectralHardyCompression
+public import Mathlib.MeasureTheory.Measure.SeparableMeasure
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

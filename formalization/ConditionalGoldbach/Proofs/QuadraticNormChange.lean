@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.QuadraticRiesz
+module
+
+public import ConditionalGoldbach.Proofs.QuadraticRiesz
 
 /-! The real-variable change of variables in the exact functional norm. -/
+public section
+
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
 noncomputable section

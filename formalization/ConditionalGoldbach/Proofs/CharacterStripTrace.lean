@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterTraceBounds
+module
+
+public import ConditionalGoldbach.Proofs.CharacterTraceBounds
 
 /-! The arithmetic positive-trace construction on every positive Hardy strip. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false

@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinModelSingle
-import ConditionalGoldbach.Proofs.MellinBetaConvolution
+module
+
+public import ConditionalGoldbach.Proofs.MellinModelSingle
+public import ConditionalGoldbach.Proofs.MellinBetaConvolution
 
 /-! Absolute integrability of the model on the original product contour. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

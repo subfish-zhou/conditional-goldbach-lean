@@ -1,1 +1,3 @@
-import ConditionalGoldbach.Proofs.CharacterZeroExpansion
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroExpansion

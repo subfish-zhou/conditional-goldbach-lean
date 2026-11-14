@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinBetaConvolution
-import ConditionalGoldbach.Proofs.MellinConvolution
+module
+
+public import ConditionalGoldbach.Proofs.MellinBetaConvolution
+public import ConditionalGoldbach.Proofs.MellinConvolution
 
 /-! Absolute convolution pairing and the physical-variable changes in the Beta–Mellin relation. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff Convolution

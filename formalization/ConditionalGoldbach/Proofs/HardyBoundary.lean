@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyInterior
+module
+
+public import ConditionalGoldbach.Proofs.HardyInterior
 
 /-! Construction of the endpoint Fourier–Laplace traces by L² limits. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 noncomputable section
@@ -120,7 +124,6 @@ private lemma physicalFourierL2_coe_classical {f : ℝ → ℂ}
   have he := hq.ae_eq_comp (classical_fourier_eq_L2_ae hf hf2)
   filter_upwards [Lp.coeFn_smul ((Real.sqrt (2 * Real.pi) : ℂ)⁻¹)
     (rescaleL2 c hc (𝓕 (hf2.toLp f))), rescaleL2_coe c hc (𝓕 (hf2.toLp f)), he] with t ht hr he
-  change physicalFourierL2 (hf2.toLp f) t = _
   change (_ • rescaleL2 c hc (𝓕 (hf2.toLp f))) t = _
   rw [ht]
   simp only [Pi.smul_apply, smul_eq_mul, Function.comp_apply] at hr he ⊢
@@ -199,7 +202,6 @@ private lemma hardyCompletedLine_norm_sq {a b : ℝ} (ψ : HardySpace a b) (x : 
   rw [hardyCompletedLine, physicalFourierL2_norm_sq, L2_norm_sq_integral]
   apply integral_congr_ae
   filter_upwards [(hardy_weighted_line_memLp x.property ψ).coeFn_toLp] with τ ht
-  change ‖(hardyLineDensity ψ x) τ‖ ^ 2 = _
   dsimp only [hardyLineDensity]
   rw [ht]
   simp only [norm_mul, Complex.norm_real, Real.norm_eq_abs,
@@ -221,8 +223,8 @@ theorem hardy_boundary_norm_of_traces {a b : ℝ} (hab : a < b) (ψ : HardySpace
     (left_nhdsWithin_Ioo_neBot hab).comap_of_range_mem (by simpa only [Subtype.range_coe] using (self_mem_nhdsWithin : Ioo a b ∈ nhdsWithin a (Ioo a b)))
   have hb : NeBot (comap (Subtype.val : Ioo a b → ℝ) (nhdsWithin b (Ioo a b))) :=
     (right_nhdsWithin_Ioo_neBot hab).comap_of_range_mem (by simpa only [Subtype.range_coe] using (self_mem_nhdsWithin : Ioo a b ∈ nhdsWithin b (Ioo a b)))
-  letI := ha
-  letI := hb
+  let := ha
+  let := hb
   have hleft : Tendsto (fun x : Ioo a b =>
       (⟨x.val, ⟨x.property.1.le, x.property.2.le⟩⟩ : Icc a b))
       (comap Subtype.val (nhdsWithin a (Ioo a b))) (𝓝 ⟨a, ⟨le_rfl, hab.le⟩⟩) := by

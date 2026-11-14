@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.FiniteMellin
-import ConditionalGoldbach.Proofs.QuadraticRiesz
+module
+
+public import ConditionalGoldbach.Proofs.FiniteMellin
+public import ConditionalGoldbach.Proofs.QuadraticRiesz
 
 /-! An absolutely convergent density formula for the Mellin functional. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

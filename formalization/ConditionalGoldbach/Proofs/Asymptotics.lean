@@ -1,4 +1,9 @@
-import ConditionalGoldbach.Proofs.Elementary
+module
+
+public import ConditionalGoldbach.Definitions.Hypotheses
+public import ConditionalGoldbach.Proofs.Elementary
+
+public section
 
 set_option autoImplicit false
 noncomputable section

@@ -10,7 +10,7 @@ The independent references, representation bridges, and direct 905 counting
 certificate are in this directory. Challenge placeholders specify comparison
 targets. Solutions use only propext, Classical.choice, and Quot.sound.
 
-Run from the repository root after building the main library:
+Run from the repository root with a current build record from verify_project.py:
   python3 formalization/verification/independent-audit/prepare_comparator.py
   python3 formalization/verification/independent-audit/run_comparator.py
   python3 formalization/scripts/refresh_audit_summary.py

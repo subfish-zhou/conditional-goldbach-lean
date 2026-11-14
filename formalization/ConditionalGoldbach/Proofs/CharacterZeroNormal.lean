@@ -1,7 +1,12 @@
-import ConditionalGoldbach.Proofs.CharacterZeroSummability
-import ConditionalGoldbach.Proofs.CharacterZeroCompactSets
+module
+
+public import ConditionalGoldbach.Definitions.Asymptotics
+public import ConditionalGoldbach.Proofs.CharacterZeroSummability
+public import ConditionalGoldbach.Proofs.CharacterZeroCompactSets
 
 /-! Normal absolute convergence of the paper's paired zero resolvent. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -57,7 +62,7 @@ lemma primitive_zero_difference_normallySummable {d : ℕ} [NeZero d] (χ : Char
         (fun u hu => sub_ne_zero.mpr (zeroIndex_ne_of_completedL_ne χ (hKU hu).2 p))
   have he (p : ZeroIndex χ) : {r : ℝ | ∃ u ∈ K, r = F p u} = F p '' K := by
     ext r
-    simp only [mem_setOf_eq,mem_image]
+    simp only [Set.mem_ofPred_eq,mem_image]
     constructor <;> rintro ⟨u,hu,he⟩ <;> exact ⟨u,hu,he.symm⟩
   have hb (p : ZeroIndex χ) : BddAbove {r : ℝ | ∃ u ∈ K, r = F p u} := by
     rw [he]

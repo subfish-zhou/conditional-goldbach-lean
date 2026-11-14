@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroReflection
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroReflection
 
 /-! Compact sets in the multiplicity-indexed zero space and their completed-L exclusion. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

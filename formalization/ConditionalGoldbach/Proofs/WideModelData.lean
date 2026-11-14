@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.FiniteModelBasic
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelBasic
 
 /-! Exact compatibility of the Appendix B weight with the finite C6 model interfaces. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped Topology

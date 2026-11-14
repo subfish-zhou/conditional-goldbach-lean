@@ -1,10 +1,15 @@
-import ConditionalGoldbach.Proofs.HardyRawNorm
-import Mathlib.Analysis.InnerProductSpace.Adjoint
-import Mathlib.Analysis.Normed.Operator.Compact.Basic
+module
+
+public import ConditionalGoldbach.Definitions.Operators
+public import ConditionalGoldbach.Proofs.HardyRawNorm
+public import Mathlib.Analysis.InnerProductSpace.Adjoint
+public import Mathlib.Analysis.Normed.Operator.Compact.Basic
 
 /-! The uniquely represented Hardy kernel operator and compression from the boundary Hilbert space.
 These results keep the paper's chosen `kernelOperator` definition: the existence of an operator
 representing the actual kernel is a separate analytic obligation. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false

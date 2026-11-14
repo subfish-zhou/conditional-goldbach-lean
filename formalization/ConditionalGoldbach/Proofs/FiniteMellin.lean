@@ -1,4 +1,9 @@
-import ConditionalGoldbach.Proofs.MellinCompactPositive
+module
+
+public import Mathlib.Analysis.MellinInversion
+public import ConditionalGoldbach.Proofs.MellinCompactPositive
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

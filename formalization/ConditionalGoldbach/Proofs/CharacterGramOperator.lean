@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.HardyFiniteGram
-import ConditionalGoldbach.Proofs.WeightedComponentKernel
+module
+
+public import ConditionalGoldbach.Proofs.HardyFiniteGram
+public import ConditionalGoldbach.Proofs.WeightedComponentKernel
 
 /-! The arithmetic component is a finite positive Gram operator, with its exact boundary trace. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false

@@ -1,8 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralCompletion
+module
+
+public import Mathlib.Analysis.Normed.Module.MultipliableUniformlyOn
+public import ConditionalGoldbach.Proofs.SpectralCompletion
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -43,7 +48,7 @@ theorem spectralComplex_hasProdUniformlyOn (N : ℕ) (T : H →L[ℂ] H)
         ((norm_sub_le 1 q).trans (by simpa using add_le_add_left (hbound q hq) 1))
         (norm_nonneg _) (mul_nonneg (hc j) hB.le))
     (by intro j; fun_prop)
-  convert hu using 1 <;> ext <;> simp only [c, spectralComplex, sub_eq_add_neg]
+  convert hu using 1; ext; simp only [c, spectralComplex, sub_eq_add_neg]
 
 theorem spectralComplex_tendstoUniformlyOn (N : ℕ) (T : H →L[ℂ] H)
     (hT : Nonempty (SpectralData T)) (K : Set ℂ) (hK : IsCompact K) :

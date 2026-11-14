@@ -1,10 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralPoisson
-import Mathlib.Analysis.Fourier.Convolution
-import Mathlib.Analysis.Fourier.Inversion
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPoisson
+public import Mathlib.Analysis.Fourier.Convolution
+public import Mathlib.Analysis.Fourier.Inversion
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff FourierTransform Convolution
+open scoped BigOperators ComplexConjugate Topology FourierTransform Convolution
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.MellinCompactPositive
-import ConditionalGoldbach.Proofs.DensityConvergence
+module
+
+public import ConditionalGoldbach.Proofs.MellinCompactPositive
+public import ConditionalGoldbach.Proofs.DensityConvergence
 
 /-! Mellin sampling of the signed convolution on an absolutely convergent density line. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

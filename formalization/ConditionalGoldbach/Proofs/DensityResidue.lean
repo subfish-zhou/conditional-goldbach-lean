@@ -1,7 +1,12 @@
-import ConditionalGoldbach.Proofs.DensityEuler
-import ConditionalGoldbach.Proofs.SingularBounds
+module
+
+public import Mathlib.Analysis.Meromorphic.Basic
+public import ConditionalGoldbach.Proofs.DensityEuler
+public import ConditionalGoldbach.Proofs.SingularBounds
 
 /-! Exact Euler-factor cancellation at one and the density residue. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -41,7 +46,7 @@ lemma densityEuler_factor_at_one (N p : ℕ) (hN : 0 < N) :
       exact hp ⟨Nat.prime_of_mem_primeFactors (Finset.mem_filter.mp hm).1,
         (Finset.mem_filter.mp hm).2⟩
     simp only [densityEulerTerm, liuBaseDeviation, hp, ite_false, add_zero, Complex.ofReal_one,
-      hpm, one_mul]
+      hpm]
     rw [ite_eq_right (by tauto)]
     norm_num
 

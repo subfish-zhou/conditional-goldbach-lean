@@ -1,0 +1,6 @@
+ConditionalGoldbach {'total': 6803, 'local': 271, 'mathlib': 3801, 'goldbach': 57}
+ConditionalGoldbach.Definitions {'total': 5469, 'local': 20, 'mathlib': 3510, 'goldbach': 3}
+ConditionalGoldbach.Proofs.Main {'total': 6441, 'local': 141, 'mathlib': 3615, 'goldbach': 16}
+ConditionalGoldbach.Proofs.PrimePairs {'total': 6444, 'local': 144, 'mathlib': 3615, 'goldbach': 16}
+ConditionalGoldbach.Proofs.FiniteExperimentSpectrum {'total': 5512, 'local': 35, 'mathlib': 3538, 'goldbach': 3}
+All isolated consumers, import boundaries and budgets passed.

@@ -1,10 +1,10 @@
-Source import audit (recorded 2026-11-13)
+Source import audit (recorded 2026-11-14)
 
 Chinese version: dependencies-imports.zh.txt
 
 Entry point: formalization/ConditionalGoldbach.lean.
 
-The source import traversal resolved 11,731 modules. Its module set exactly
+The source import traversal resolved 6,914 modules. Its module set exactly
 matched the independent list exported from Lean's compiled environment.
 Source hashes, import locations, edges, and the complete module list are in
 dependencies-imports.json.
@@ -36,13 +36,13 @@ importGraph, LeanSearchClient, and plausible. Lean/Lake belong to the toolchain.
 
 2. Four direct mathematical imports beyond Mathlib
 
-formalization/ConditionalGoldbach/BaseDefinitions.lean:2
+formalization/ConditionalGoldbach/BaseDefinitions.lean:6
   MathlibNt.SieveTheory.Arithmetic.LiuSingularSeries
-formalization/ConditionalGoldbach/Proofs/TotientLogLog.lean:2
+formalization/ConditionalGoldbach/Proofs/TotientLogLog.lean:4
   MathlibNt.SieveTheory.Arithmetic.MertensTheorem
-formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean:2
+formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean:4
   MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries
-formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean:3
+formalization/ConditionalGoldbach/Proofs/CharacterGrowthFoundation.lean:5
   MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds
 
 Their overlapping goldbach-package closures have 3, 52, 12, and 1 modules

@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.Weights
+module
+
+public import ConditionalGoldbach.Proofs.Weights
 
 /-! The uniform weight-functional bound, proved from its integral formula. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

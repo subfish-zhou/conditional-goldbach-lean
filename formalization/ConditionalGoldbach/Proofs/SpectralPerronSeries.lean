@@ -1,8 +1,11 @@
-import ConditionalGoldbach.Proofs.SpectralPerronIntegral
-import ConditionalGoldbach.Proofs.CharacterShortPolynomial
-import ConditionalGoldbach.Proofs.CharacterSeries
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPerronIntegral
+public import ConditionalGoldbach.Proofs.CharacterShortPolynomial
 
 /-! The smoothed Perron integral on its initial absolutely convergent line. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

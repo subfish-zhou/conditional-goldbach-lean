@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.WeightedComponentKernel
-import ConditionalGoldbach.Proofs.HardyArithmeticTheorems
+module
+
+public import ConditionalGoldbach.Proofs.WeightedComponentKernel
+public import ConditionalGoldbach.Proofs.HardyArithmeticTheorems
 
 /-! The three actual component operators and the exact residual decomposition. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false
@@ -105,7 +109,7 @@ lemma RepresentsKernel.sub_integrable {a : ℝ} (ha : a < beta) (N : ℕ) [NeZer
     integral_sub (hK h s hs).2 (hL h s hs).2]
   ring
 
-theorem proposition_6_5_components_spec (N : ℕ) [NeZero N] (hN : Even N)
+theorem proposition_6_5_components_spec (N : ℕ) [NeZero N] (_hN : Even N)
     (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta) :
     let α := alpha N
     let P := arithmeticOperator ha N

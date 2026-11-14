@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HardyGaussianDensity
+module
+
+public import ConditionalGoldbach.Proofs.HardyGaussianDensity
 
 /-! Weighted square-integrability of the Gaussian Fourier density, obtained by Fatou at both ends. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 700000
 set_option autoImplicit false

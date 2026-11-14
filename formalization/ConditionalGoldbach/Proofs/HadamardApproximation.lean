@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.HadamardDiskFactor
+module
+
+public import ConditionalGoldbach.Proofs.HadamardDiskFactor
 
 /-! Quantitative finite-zero approximation to the logarithmic-derivative difference. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

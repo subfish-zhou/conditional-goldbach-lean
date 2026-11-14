@@ -1,8 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralCompletionUniform
+module
+
+public import Mathlib.Topology.Algebra.InfiniteSum.UniformOn
+public import ConditionalGoldbach.Proofs.SpectralCompletionUniform
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -59,7 +64,7 @@ theorem proposition_6_1_enumeration (N : ℕ) [NeZero N]
     (∀ q : ℂ, (∏' j : ℕ,
       (1 - (4 * eigenvalues (residualOperator ha N) (e j) ^ 2 / spectralScale N ^ 2 : ℝ) *
         q * (1 - q))) = spectralComplex N (residualOperator ha N) q) := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   refine ⟨spectralQuaternion_reindexed_compactUniformLimit N _ hT e, ?_⟩
   intro q
   unfold spectralComplex
@@ -100,7 +105,7 @@ theorem proposition_6_2_centered_product (N : ℕ) [NeZero N]
     (hGRH : GRH N) (ha : alpha N < beta) :
     CompactUniformLimit (fun k ξ => centeredSpectralPartial N (residualOperator ha N) ξ k)
       (fun ξ => spectralQuaternion N (residualOperator ha N) (1 / 2 + ξ)) := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   exact spectralQuaternion_centered_compactUniformLimit N _ hT
 
 /-- The critical-hyperplane product is real and independent of the imaginary unit. -/
@@ -125,11 +130,9 @@ theorem spectralQuaternion_critical_values (N : ℕ) (T : H →L[ℂ] H)
   have hz : z * (1 - z) = ((1 + 4 * t ^ 2) / 4 : ℝ) := by
     apply Complex.ext
     · change (z * (1 - z)).re = (1 + 4 * t ^ 2) / 4
-      simp [z]
-      <;> ring
+      simp [z]; ring
     · change (z * (1 - z)).im = 0
-      simp [z]
-      <;> ring
+      simp [z]; ring
   have hs := (((eigenvalues_square_summable T hT).mul_right
     (spectralScale N ^ 2)⁻¹).mul_right (1 + 4 * t ^ 2)).neg
   have hm : Multipliable (fun j : ℕ => (1 - eigenvalues T j ^ 2 /
@@ -160,7 +163,7 @@ theorem proposition_6_2_critical_values (N : ℕ) [NeZero N]
     spectralQuaternion N (residualOperator ha N) ((1 / 2 : Quaternion ℝ) + t • J) =
       ((∏' j : ℕ, (1 - eigenvalues (residualOperator ha N) j ^ 2 /
         spectralScale N ^ 2 * (1 + 4 * t ^ 2)) : ℝ) : Quaternion ℝ) := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   exact spectralQuaternion_critical_values N _ hT J hJre hJnorm t
 
 end ConditionalGoldbach

@@ -1,11 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralHilbertSchmidt
-import ConditionalGoldbach.Proofs.SpectralPositiveTrace
-import ConditionalGoldbach.Proofs.SpectralBasisExistence
+module
+
+public import Mathlib.Analysis.Normed.Operator.Compact.Basic
+public import ConditionalGoldbach.Proofs.SpectralBasisExistence
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex InnerProductSpace
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]

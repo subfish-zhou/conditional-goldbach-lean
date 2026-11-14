@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroExpansion
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroExpansion
 
 /-! Exact real-part identities relating the positive Poisson zero sum to L'/L. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators Topology

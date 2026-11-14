@@ -1,11 +1,17 @@
-import ConditionalGoldbach.Proofs.SpectralL2KernelBasis
-import ConditionalGoldbach.Proofs.SpectralL2KernelAdjoint
-import ConditionalGoldbach.Proofs.SpectralProductBasis
+module
+
+public import ConditionalGoldbach.Definitions.Asymptotics
+public import Mathlib.MeasureTheory.Function.L2Space
+public import ConditionalGoldbach.Proofs.SpectralL2KernelBasis
+public import ConditionalGoldbach.Proofs.SpectralL2KernelAdjoint
+public import ConditionalGoldbach.Proofs.SpectralProductBasis
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

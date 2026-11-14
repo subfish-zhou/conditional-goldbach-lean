@@ -1,6 +1,12 @@
-import ConditionalGoldbach.Proofs.ZetaGrowth
+module
+
+public import Mathlib.Analysis.SumIntegralComparisons
+public import Mathlib.NumberTheory.AbelSummation
+public import ConditionalGoldbach.Proofs.ZetaGrowth
 
 /-! A truncated Euler formula, retaining the fractional-part remainder explicitly. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -70,10 +76,10 @@ lemma zeta_partial_abel (m : ℕ) (hm : 1 ≤ m) (s : ℂ) (hs : s ≠ 0) :
       ∑ k ∈ Finset.Icc 1 m, (k : ℂ)^(-s) := by
     rw [← Finset.insert_Icc_add_one_left_eq_Icc (Nat.zero_le m)]
     rw [Finset.sum_insert (by simp)]
-    simp only [c, if_pos rfl, mul_zero, zero_add]
+    simp only [c, ite_eq_left rfl, mul_zero, zero_add]
     apply Finset.sum_congr rfl
     intro k hk
-    rw [if_neg (by have := (Finset.mem_Icc.mp hk).1; omega), mul_one]
+    rw [ite_eq_right (by have := (Finset.mem_Icc.mp hk).1; omega), mul_one]
   rw [hleft] at he
   have hpow : (m : ℂ)^(-s)*(m : ℂ) = (m : ℂ)^(1-s) := by
     nth_rw 2 [← Complex.cpow_one (m : ℂ)]
@@ -138,8 +144,7 @@ lemma zeta_truncated_formula (m : ℕ) (hm : 1 ≤ m) {s : ℂ}
   rw [riemannZeta_fraction_formula hs hs1, zetaFractionTail_split hs hmR, hab]
   have hn : s-1 ≠ 0 := sub_ne_zero.mpr hs1
   rw [show 1-s = -(s-1) by ring, div_neg]
-  field_simp
-  <;> ring
+  field_simp; ring
 
 lemma zeta_partial_three_quarter_bound (m : ℕ) (hm : 1 ≤ m) :
     (∑ n ∈ Finset.Icc 1 m, (n : ℝ)^(-(3/4 : ℝ))) ≤ 4*(m : ℝ)^(1/4 : ℝ) := by

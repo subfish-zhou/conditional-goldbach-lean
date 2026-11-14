@@ -2,11 +2,11 @@
   "external_repo": "https://github.com/subfish-zhou/goldbach-lean",
   "external_commit": "24490c2ab7787238f816d771c9176411dcbda503",
   "lean_toolchain": "leanprover/lean4:v4.35.0",
-  "graph_sha256": "245cdb53bc02805d28e5e8c384159531477ecd5585004910bfc65ae079bec85f",
-  "collected_at_utc": "2026-11-13T19:26:33.720749+00:00",
+  "graph_sha256": "dd7f59ee736f37fb288cbf3303ac612e49c67660f2b58a3a32c462bdf335a2ee",
+  "collected_at_utc": "2026-11-14T11:42:36.217406+00:00",
   "source_hashes": "source-hashes.json",
   "root_policy": "Imported constants whose origin module starts with ConditionalGoldbach; public_library excludes isPrivateName, and includes compiler-generated declarations.",
   "dependency_policy": "Declaration types and values, including opaque values; inductive constructors. Declaration ownership is determined by Environment.getModuleIdxFor?, not namespace text.",
   "missing_constants": [],
-  "imported_module_count": 11731
+  "imported_module_count": 6803
 }

@@ -1,5 +1,9 @@
+warning: goldbach: repository has local changes:
+  /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/comparator-project/.lake/packages/goldbach
 Resolving dependencies
 Building TexAuditComparator.ControlQuantifierChallenge
+warning: goldbach: repository has local changes:
+  /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/comparator-project/.lake/packages/goldbach
 ⚠ [2/2] Replayed TexAuditComparator.ControlQuantifierChallenge
 warning: TexAuditComparator/ControlQuantifierChallenge.lean:2:18: Variable name `n` is not explicitly referenced.
 
@@ -10,6 +14,8 @@ Note: This linter can be disabled with `set_option linter.unusedVariables false`
 Build completed successfully (2 jobs).
 Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ComparatorControl.check, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from TexAuditComparator.ControlQuantifierChallenge
 Building TexAuditComparator.ControlQuantifierSolution
+warning: goldbach: repository has local changes:
+  /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/comparator-project/.lake/packages/goldbach
 ⚠ [2/2] Replayed TexAuditComparator.ControlQuantifierSolution
 warning: TexAuditComparator/ControlQuantifierSolution.lean:2:29: Variable name `n` is not explicitly referenced.
 

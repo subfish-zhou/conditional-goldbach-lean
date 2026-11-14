@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.WideCounting
-import ConditionalGoldbach.Proofs.FiniteCharacterMoments
+module
+
+public import ConditionalGoldbach.Proofs.WideCounting
+public import ConditionalGoldbach.Proofs.FiniteCharacterMoments
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

@@ -1,6 +1,11 @@
-import ConditionalGoldbach.Proofs.HardyRawNorm
+module
+
+public import ConditionalGoldbach.Definitions.Operators
+public import ConditionalGoldbach.Proofs.HardyRawNorm
 
 /-! Evaluation vectors in the weighted Fourier realization of the strip Hardy space. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false

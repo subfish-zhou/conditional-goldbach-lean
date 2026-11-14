@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.FiniteModelBetaConvolution
-import ConditionalGoldbach.Proofs.FiniteModelConvolution
+module
+
+public import ConditionalGoldbach.Proofs.FiniteModelBetaConvolution
+public import ConditionalGoldbach.Proofs.FiniteModelConvolution
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section

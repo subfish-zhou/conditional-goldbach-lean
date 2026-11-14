@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.QuadraticNormChange
-import ConditionalGoldbach.Proofs.Asymptotics
+module
+
+public import ConditionalGoldbach.Proofs.QuadraticNormChange
+public import ConditionalGoldbach.Proofs.Asymptotics
 
 /-! Strict energy positivity and uniform norm bounds for arbitrary strip widths. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -11,11 +15,7 @@ attribute [local instance] Classical.propDecidable
 
 lemma derivativeWeight_nonzero_of_weight {φ : ℝ → ℝ} (hφ : IsWeight φ) :
     ∃ u : ℝ, 0 < u ∧ derivativeWeight φ u ≠ 0 := by
-  have hne : ∃ u, φ u ≠ 0 := by
-    by_contra he
-    push Not at he
-    exact hφ.2.2.2.2 (funext he)
-  obtain ⟨u,hu⟩ := hne
+  obtain ⟨u, hu⟩ := hφ.exists_ne_zero
   have hus := hφ.mem_support_interval hu
   have hu0 : 0 < u := by linarith [hus.1]
   have hψu : 0 < companion φ u := mul_pos (Real.sqrt_pos.mpr hu0)
@@ -105,7 +105,7 @@ lemma normFunctional_uniform_upper (N : ℕ) (hN : 0 < N) (φ : ℝ → ℝ) (h�
   have hh := mul_le_mul_of_nonneg_left hb (show 0 ≤ (2*Real.pi)⁻¹ by positivity)
   unfold normFunctional weightEnergy
   simp only [Real.rpow_eq_pow]
-  convert hh using 1 <;> ring
+  convert hh using 1; ring
 
 lemma normFunctional_uniform_lower (N : ℕ) (hN : 3 ≤ N) (φ : ℝ → ℝ) (hφ : IsWeight φ)
     (a : ℝ) (ha : 0 < a) (ha' : a < 1/10) :
@@ -145,12 +145,12 @@ lemma normFunctional_uniform_lower (N : ℕ) (hN : 3 ≤ N) (φ : ℝ → ℝ) (
         nlinarith
       have hh := mul_le_mul_of_nonneg_right hfrac
         (div_nonneg (sq_nonneg (derivativeWeight φ u)) hu.le)
-      convert hh using 1 <;> ring
+      convert hh using 1; ring
   rw [integral_const_mul] at hb
   have hh := mul_le_mul_of_nonneg_left hb (show 0 ≤ (2*Real.pi)⁻¹ by positivity)
   unfold normFunctional weightEnergy
   simp only [Real.rpow_eq_pow]
-  convert hh using 1 <;> ring
+  convert hh using 1; ring
 
 lemma nat_rpow_alpha (N : ℕ) (hN : 1 < N) (c : ℝ) :
     (N : ℝ)^(2*alpha N c) = Real.exp (2*c) := by

@@ -1,8 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralCompletionDeterminant
+module
+
+public import ConditionalGoldbach.Proofs.SpectralCompletionDeterminant
+import Mathlib.Analysis.Calculus.Deriv.Star
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -94,7 +99,7 @@ theorem proposition_6_3_multiplicities (N : ℕ) [NeZero N]
     (∀ q u : Quaternion ℝ, ‖u‖ = 1 →
       spectralQuaternion N (residualOperator ha N) q = 0 →
       spectralQuaternion N (residualOperator ha N) (u * q * star u) = 0) := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   have hf := spectralComplex_differentiable N _ hT
   refine ⟨analyticOrderNatAt_reflection _ (spectralComplex_one_sub N _),
     analyticOrderNatAt_conjugate _ hf (spectralComplex_conj N _ hT),

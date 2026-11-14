@@ -1,4 +1,10 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.Asymptotics
+public import ConditionalGoldbach.Definitions.Characters
+public import Mathlib.Tactic.NormNum.RealSqrt
+
+public section
 
 set_option autoImplicit false
 noncomputable section

@@ -1,6 +1,12 @@
-import ConditionalGoldbach.BaseDefinitions
+module
+
+public import ConditionalGoldbach.Definitions.Hardy
+public import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+public import Mathlib.Tactic.NormNum.RealSqrt
 
 /-! Weighted square-integrability on the closed Hardy strip. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 noncomputable section
 open MeasureTheory Filter Set Complex
@@ -55,14 +61,13 @@ lemma hardy_weighted_line_memLp {a b x : ℝ} (hx : x ∈ Icc a b) (ψ : HardySp
   apply (hardySpace_integrable_weighted_sq ψ).mono' (hm.norm.pow 2)
   filter_upwards [] with τ
   change ‖‖(Real.exp (x * τ) : ℂ) * ψ τ‖ ^ 2‖ ≤ _
-  simp only [Real.norm_eq_abs, abs_of_nonneg (sq_nonneg (‖(Real.exp (x * τ) : ℂ) * ψ τ‖)),
+  simp only [Real.norm_eq_abs,
     norm_mul, Complex.norm_real, Real.norm_eq_abs, abs_of_pos (Real.exp_pos _), mul_pow]
   simp only [abs_of_nonneg (sq_nonneg (Real.exp (x * τ))), abs_of_nonneg (sq_nonneg (‖ψ τ‖))]
   calc
     Real.exp (x * τ) ^ 2 * ‖ψ τ‖ ^ 2 ≤ hardyWeight a b τ * ‖ψ τ‖ ^ 2 :=
       mul_le_mul_of_nonneg_right (hardy_exp_sq_le_weight hx τ) (sq_nonneg _)
     _ = _ := mul_comm _ _
-
 
 lemma hardy_exp_memLp_Iic {c : ℝ} (hc : 0 < c) :
     MemLp (fun τ : ℝ => (Real.exp (c * τ) : ℂ)) 2 (volume.restrict (Iic 0)) := by
@@ -99,10 +104,9 @@ lemma hardy_weighted_line_integrable {a b x : ℝ} (hx : x ∈ Ioo a b)
     (Real.exp ((x - a) * τ) : ℂ)) (volume.restrict (Iic 0)) at hl
   change Integrable (fun τ : ℝ => ((Real.exp (b * τ) : ℂ) * ψ τ) *
     (Real.exp ((x - b) * τ) : ℂ)) (volume.restrict (Ioi 0)) at hr
-  simp only [Pi.mul_apply, hardy_exp_mul_factor] at hl hr
+  simp only [hardy_exp_mul_factor] at hl hr
   have h := IntegrableOn.union hl hr
   simpa only [Iic_union_Ioi, IntegrableOn, Measure.restrict_univ] using h
-
 
 lemma hardySpace_norm_sq_integral {a b : ℝ} (ψ : HardySpace a b) :
     ‖ψ‖ ^ 2 = ∫ τ : ℝ, ‖ψ τ‖ ^ 2 * hardyWeight a b τ := by

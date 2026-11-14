@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.WidePrimePowerCount
-import ConditionalGoldbach.Proofs.MomentError
+module
+
+public import ConditionalGoldbach.Proofs.WidePrimePowerCount
+public import ConditionalGoldbach.Proofs.MomentError
+
+public section
 
 set_option autoImplicit false
 set_option maxRecDepth 10000
@@ -17,7 +21,7 @@ theorem lemma_B_3 (Ihat : Character experimentN → ℂ) (ε : ℝ) (hε : 0 ≤
       Icc (approxPrimeCount Ihat - countError Ihat ε) (approxPrimeCount Ihat + countError Ihat ε) ∩
         Set.range (fun k : ℤ => (k : ℝ)) := by
   have h := wideSignedMoment_error Ihat ε hε herr
-  have hcount := proposition_B_1.2.2.2.2
+  have hcount := unorderedPrimePairs_eq_corrected_wideCorrelation
   have he : (unorderedPrimePairs:ℝ)-approxPrimeCount Ihat=
       ((experimentN:ℝ)/2)*(wideCorrelation-approxSignedMoment Ihat) := by
     rw [hcount]

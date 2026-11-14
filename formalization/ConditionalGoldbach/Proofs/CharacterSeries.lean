@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.Characters
-import ConditionalGoldbach.Proofs.LFunctionDomain
+module
+
+public import ConditionalGoldbach.Proofs.Characters
+public import ConditionalGoldbach.Proofs.LFunctionDomain
 
 /-! Absolutely convergent Dirichlet expansions, with the original odd-character projector. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -61,8 +65,8 @@ lemma conjugate_logDerivative_eq_neg_tsum {N : ℕ} [NeZero N] (χ : Character N
 
 /-- GRH rewrites each actual zero, preserving its multiplicity index. -/
 theorem lemma_3_4_paired_zero_sum (N : ℕ) [NeZero N]
-    (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N)
-    (χ : Character N) (hχ : χ ∈ oddCharacters N) (s : ℂ) (hs : 0 < s.re) :
+    (_hN : Even N) (_hN4 : 4 ≤ N) (hGRH : GRH N)
+    (χ : Character N) (_hχ : χ ∈ oddCharacters N) (s : ℂ) (_hs : 0 < s.re) :
     zeroDifference χ.primitiveCharacter (1 / 2 + s) 2 = pairedZeroSum χ s := by
   unfold zeroDifference pairedZeroSum
   apply tsum_congr

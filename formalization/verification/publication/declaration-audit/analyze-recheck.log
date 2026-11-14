@@ -1,7 +1,7 @@
 {
   "theorem_1_1": {
     "root_count": 1,
-    "reachable_declaration_count": 77145,
+    "reachable_declaration_count": 76690,
     "external_project_declaration_count": 68,
     "external_project_module_count": 5,
     "external_direct_boundary_declaration_count": 20,
@@ -20,7 +20,7 @@
   },
   "theorem_1_2": {
     "root_count": 1,
-    "reachable_declaration_count": 77134,
+    "reachable_declaration_count": 76677,
     "external_project_declaration_count": 68,
     "external_project_module_count": 5,
     "external_direct_boundary_declaration_count": 20,
@@ -39,7 +39,7 @@
   },
   "primePair_consequence": {
     "root_count": 1,
-    "reachable_declaration_count": 77314,
+    "reachable_declaration_count": 76860,
     "external_project_declaration_count": 72,
     "external_project_module_count": 5,
     "external_direct_boundary_declaration_count": 22,
@@ -58,7 +58,7 @@
   },
   "reviewed_102": {
     "root_count": 102,
-    "reachable_declaration_count": 89637,
+    "reachable_declaration_count": 85220,
     "external_project_declaration_count": 839,
     "external_project_module_count": 22,
     "external_direct_boundary_declaration_count": 30,
@@ -93,8 +93,8 @@
     }
   },
   "public_library": {
-    "root_count": 2869,
-    "reachable_declaration_count": 90403,
+    "root_count": 1946,
+    "reachable_declaration_count": 85425,
     "external_project_declaration_count": 839,
     "external_project_module_count": 22,
     "external_direct_boundary_declaration_count": 30,
@@ -129,8 +129,8 @@
     }
   },
   "all_local_declarations": {
-    "root_count": 2938,
-    "reachable_declaration_count": 90420,
+    "root_count": 2965,
+    "reachable_declaration_count": 86003,
     "external_project_declaration_count": 839,
     "external_project_module_count": 22,
     "external_direct_boundary_declaration_count": 30,

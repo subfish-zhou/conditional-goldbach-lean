@@ -1,9 +1,12 @@
-import ConditionalGoldbach.Proofs.HardyKernelMajorant
-import ConditionalGoldbach.Proofs.CharacterTraceBounds
-import ConditionalGoldbach.Proofs.MellinContourShift
-import Mathlib.Analysis.Complex.RemovableSingularity
+module
+
+public import ConditionalGoldbach.Proofs.CharacterTraceBounds
+public import ConditionalGoldbach.Proofs.MellinContourShift
+public import Mathlib.Analysis.Complex.RemovableSingularity
 
 /-! A weighted Cauchy formula on a right half-plane, proved by removing the interior pole. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1000000
 set_option autoImplicit false
@@ -141,7 +144,7 @@ lemma halfPlaneDifference_tail_bound (f : ℂ → ℂ) {x C : ℝ} (hC : 0 ≤ C
 
 lemma halfPlaneDifference_strip_bound (f : ℂ → ℂ)
     (hd : ∀ z : ℂ, 0 ≤ z.re → DifferentiableAt ℂ f z)
-    {R C : ℝ} (hR : 0 ≤ R) (hC : 0 ≤ C)
+    {R C : ℝ} (_hR : 0 ≤ R) (hC : 0 ≤ C)
     (hb : ∀ x ∈ Icc 0 R, ∀ t : ℝ, ‖f (line x t)‖ ≤ C * (1 + |t|) ^ (1/2 : ℝ)) :
     ∃ M : ℝ, 0 ≤ M ∧ ∀ x ∈ Icc 0 R, ∀ t : ℝ,
       ‖halfPlaneDifference f (line x t)‖ ≤ M * (1 + |t|) ^ (-(3/2 : ℝ)) := by

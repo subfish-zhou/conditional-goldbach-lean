@@ -1,10 +1,14 @@
-import ConditionalGoldbach.Proofs.ArithmeticKernelRealization
-import ConditionalGoldbach.Proofs.HardyKernelResidual
-import ConditionalGoldbach.Proofs.CharacterGrowth
-import ConditionalGoldbach.Proofs.ZetaTruncation
+module
+
+public import ConditionalGoldbach.Proofs.ArithmeticKernelRealization
+public import ConditionalGoldbach.Proofs.HardyKernelResidual
+public import ConditionalGoldbach.Proofs.CharacterGrowth
+public import ConditionalGoldbach.Proofs.ZetaTruncation
 
 /-! Full arithmetic realization and point-evaluation conclusions from the proved growth estimates.
 The generic kernel foundations are independent of the application theorems. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 600000
 set_option autoImplicit false
@@ -30,7 +34,7 @@ lemma arithmeticKernel_growth_inputs (N : ℕ) [NeZero N]
   have he : line s.re s.im = s := by apply Complex.ext <;> simp [line]
   simpa only [he] using hh
 
-theorem proposition_5_3 (N : ℕ) [NeZero N] (hN : Even N)
+theorem proposition_5_3 (N : ℕ) [NeZero N] (_hN : Even N)
     (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta) :
     (∀ x ∈ ({alpha N, beta} : Finset ℝ), ∀ y ∈ ({alpha N, beta} : Finset ℝ),
       MemLp (fun p : ℝ × ℝ => weightedKernel N (line x p.1) (line y p.2)) 2 volume) ∧
@@ -44,7 +48,14 @@ theorem proposition_5_3 (N : ℕ) [NeZero N] (hN : Even N)
   obtain ⟨L, Z, hL, hZ, hlog, hζ⟩ := arithmeticKernel_growth_inputs N hlarge hGRH ha
   exact residualOperator_spec_of_growth N hlarge hGRH ha L Z hL hZ hlog hζ
 
-theorem proposition_5_4_kernel_pairing (N : ℕ) [NeZero N] (hN : Even N)
+/-- The spectral realization of the arithmetic residual operator from Proposition 5.3. -/
+theorem residualOperator_has_spectral_data (N : ℕ) [NeZero N] (hN : Even N)
+    (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta) :
+    Nonempty (SpectralData (residualOperator ha N)) := by
+  obtain ⟨_, _, _, _, _, hspectral, _⟩ := proposition_5_3 N hN hlarge hGRH ha
+  exact hspectral
+
+theorem proposition_5_4_kernel_pairing (N : ℕ) [NeZero N] (_hN : Even N)
     (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta)
     (s z : ℂ) (hs : s ∈ strip (alpha N) beta) (hz : z ∈ strip (alpha N) beta) :
     weightedKernel N s z =
@@ -52,7 +63,7 @@ theorem proposition_5_4_kernel_pairing (N : ℕ) [NeZero N] (hN : Even N)
   obtain ⟨L, Z, hL, hZ, hlog, hζ⟩ := arithmeticKernel_growth_inputs N hlarge hGRH ha
   exact residualOperator_pairing_of_growth N hlarge hGRH ha L Z hL hZ hlog hζ s z hs hz
 
-theorem proposition_5_3_kernel_integrability (N : ℕ) [NeZero N] (hN : Even N)
+theorem proposition_5_3_kernel_integrability (N : ℕ) [NeZero N] (_hN : Even N)
     (hlarge : Real.exp 10 < (N : ℝ)) (hGRH : GRH N) (ha : alpha N < beta) :
     ∀ (h : HardySpace (alpha N) beta) (s : ℂ), s ∈ strip (alpha N) beta →
       Integrable (fun t : ℝ => weightedKernel N s (line (alpha N) t) *

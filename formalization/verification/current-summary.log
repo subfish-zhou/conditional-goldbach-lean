@@ -1,0 +1,9 @@
+{
+  "refreshed": [
+    "final-comparison.json",
+    "appendices/numeric-verification.json",
+    "summary.json"
+  ],
+  "comparator_targets": 218,
+  "generated_at_utc": "2026-11-14T11:56:22.549935+00:00"
+}

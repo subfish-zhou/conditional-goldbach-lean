@@ -1,10 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralDiagonalTrace
-import ConditionalGoldbach.Proofs.SpectralHardyRankSeries
-import ConditionalGoldbach.Proofs.HardyKernelOperator
+module
+
+public import ConditionalGoldbach.Proofs.SpectralDiagonalTrace
+public import ConditionalGoldbach.Proofs.SpectralHardyRankSeries
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -42,7 +45,7 @@ theorem diagonalRankFunction_boundary {a : ℝ} (ha : a < beta) (ha0 : 0 ≤ a) 
     rfl
 
 /-- Conjugation of a diagonal vector introduces exactly the conjugate spectral variable. -/
-theorem diagonalVector_conj (n : ℕ) (hn : 1 ≤ n) (z : ℂ) :
+theorem diagonalVector_conj (n : ℕ) (_hn : 1 ≤ n) (z : ℂ) :
     conj (diagonalVector n z) = (n : ℂ) ^ (-conj z) / (1 + conj z) := by
   have harg : (n : ℂ).arg ≠ Real.pi := by
     rw [← Complex.ofReal_natCast, Complex.arg_ofReal_of_nonneg (Nat.cast_nonneg n)]

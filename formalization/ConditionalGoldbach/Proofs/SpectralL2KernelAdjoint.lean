@@ -1,15 +1,19 @@
-import ConditionalGoldbach.Proofs.SpectralL2Kernel
+module
+
+public import Mathlib.MeasureTheory.Function.L2Space
+public import ConditionalGoldbach.Proofs.SpectralL2Kernel
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {α β : Type*} [MeasurableSpace α] [MeasurableSpace β]
-variable {μ : Measure α} {ν : Measure β} [SFinite μ] [SFinite ν]
+variable {μ : Measure α} {ν : Measure β}
 
-omit [SFinite μ] [SFinite ν] in
 /-- Products of two scalar L² functions on separate variables remain L². -/
 theorem l2Kernel_product_memLp (f : Lp ℂ 2 μ) (g : Lp ℂ 2 ν) :
     MemLp (fun p : α × β => conj (f p.1) * g p.2) 2 (μ.prod ν) := by
@@ -20,13 +24,16 @@ theorem l2Kernel_product_memLp (f : Lp ℂ 2 μ) (g : Lp ℂ 2 ν) :
     (Lp.memLp f).norm.integrable_sq.mul_prod (Lp.memLp g).norm.integrable_sq
 
 /-- The mixed kernel pairing is absolutely integrable on the product measure. -/
-theorem l2Kernel_pairing_integrable {K : α × β → ℂ} (hK : MemLp K 2 (μ.prod ν))
+theorem l2Kernel_pairing_integrable [SFinite μ] [SFinite ν]
+    {K : α × β → ℂ} (hK : MemLp K 2 (μ.prod ν))
     (f : Lp ℂ 2 μ) (g : Lp ℂ 2 ν) :
     Integrable (fun p : α × β => conj (f p.1) * K p * g p.2) (μ.prod ν) := by
   have hi := memLp_one_iff_integrable.mp (hK.fun_mul (l2Kernel_product_memLp f g))
   convert hi using 1
   funext p
   ring
+
+variable [SFinite μ] [SFinite ν]
 
 /-- The bounded integral operator has the expected product-integral sesquilinear pairing. -/
 theorem l2KernelOperator_pairing {K : α × β → ℂ} (hK : MemLp K 2 (μ.prod ν))

@@ -1,10 +1,16 @@
-import ConditionalGoldbach.Proofs.SpectralHilbertSchmidt
-import ConditionalGoldbach.Proofs.SpectralPositiveTrace
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Spectrum
+public import ConditionalGoldbach.Proofs.SpectralHilbertSchmidt
+public import ConditionalGoldbach.Proofs.SpectralPositiveTrace
+import Mathlib.LinearAlgebra.Eigenspace.ContinuousLinearMap
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex InnerProductSpace
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 universe u

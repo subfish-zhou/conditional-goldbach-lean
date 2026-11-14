@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterReferencePolynomial
+module
+
+public import ConditionalGoldbach.Proofs.CharacterReferencePolynomial
 
 /-! The reference-line energy estimate from a pointwise smoothed-polynomial estimate. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1000000
 set_option autoImplicit false
@@ -49,7 +53,7 @@ lemma conductor_logarithm_energy_bound : ∃ C : ℝ, 0 < C ∧ ∀ n : ℝ, Rea
     rw [Real.log_mul hn0.ne' (by positivity : |t| + 2 ≠ 0)]
     have hs : (Real.log n + Real.log (|t| + 2)) ^ 2 ≤
         2 * Real.log n ^ 2 + 2 * Real.log (|t| + 2) ^ 2 := by nlinarith [sq_nonneg (Real.log n - Real.log (|t| + 2))]
-    convert div_le_div_of_nonneg_right hs (by positivity : 0 ≤ 1 + t ^ 2) using 1 <;> ring
+    convert div_le_div_of_nonneg_right hs (by positivity : 0 ≤ 1 + t ^ 2) using 1; ring
   have hi : Integrable (fun t : ℝ => 2 * Real.log n ^ 2 * (1 + t ^ 2)⁻¹ +
       2 * (Real.log (|t| + 2) ^ 2 / (1 + t ^ 2))) :=
     (integrable_inv_one_add_sq.const_mul _).add (logarithmic_height_square_integrable.const_mul 2)
@@ -81,7 +85,7 @@ lemma odd_character_average_mass (N : ℕ) [NeZero N] (hN : Even N) (hN4 : 4 ≤
 lemma smoothed_polynomial_continuous (N : ℕ) [NeZero N] (χ : Character N) (σ : ℝ) :
     Continuous (fun t : ℝ => smoothedDirichletPolynomial χ ((N : ℝ) / 2) (1 / 2 + line σ t)) := by
   unfold smoothedDirichletPolynomial
-  apply continuous_finset_sum
+  apply continuous_finsetSum
   intro n hn
   by_cases h0 : n = 0
   · subst n
@@ -110,7 +114,7 @@ lemma smoothed_polynomial_weighted_integrable (N : ℕ) [NeZero N]
         ‖smoothedDirichletPolynomial χ ((N : ℝ) / 2) (1 / 2 + line σ t)‖ ^ 2 ≤ D := hm.trans h
     have hh : ‖smoothedDirichletPolynomial χ ((N : ℝ) / 2) (1 / 2 + line σ t)‖ ^ 2 ≤ D / (2 / (N.totient : ℝ)) :=
       (le_div_iff₀ (by positivity : 0 < 2 / (N.totient : ℝ))).mpr (by simpa only [mul_comm] using hf)
-    convert hh using 1 <;> simp only [div_eq_mul_inv, mul_inv_rev, inv_inv]
+    convert hh using 1; simp only [div_eq_mul_inv, mul_inv_rev, inv_inv]
   refine (integrable_inv_one_add_sq.const_mul (D * ((N.totient : ℝ) / 2))).mono' ?_ ?_
   · exact (((smoothed_polynomial_continuous N χ σ).norm.pow 2).div (by fun_prop)
       (by intro t; positivity)).aestronglyMeasurable
@@ -127,7 +131,7 @@ lemma smoothed_polynomial_average_energy (N : ℕ) [NeZero N]
     ‖smoothedDirichletPolynomial χ ((N : ℝ) / 2) (1 / 2 + line σ t)‖ ^ 2 / (1 + t ^ 2)
   have hi (χ : Character N) (hχ : χ ∈ oddCharacters N) : Integrable (f χ) :=
     smoothed_polynomial_weighted_integrable N hN hN4 χ hχ σ hσ
-  rw [← integral_finset_sum _ hi, ← integral_const_mul]
+  rw [← MeasureTheory.integral_finsetSum _ hi, ← integral_const_mul]
   have hright := integrable_inv_one_add_sq.const_mul ((1 + σ) * (Real.log 4 + 4) / σ ^ 2)
   have hb (t : ℝ) : (2 / (N.totient : ℝ)) * ∑ χ ∈ oddCharacters N, f χ t ≤
       ((1 + σ) * (Real.log 4 + 4) / σ ^ 2) * (1 + t ^ 2)⁻¹ := by
@@ -135,13 +139,13 @@ lemma smoothed_polynomial_average_energy (N : ℕ) [NeZero N]
     rw [← Finset.sum_div, ← mul_div_assoc]
     simpa only [div_eq_mul_inv] using div_le_div_of_nonneg_right
       (smoothed_polynomial_average_bound N hN hN4 σ t hσ) (by positivity : 0 ≤ 1 + t ^ 2)
-  have h := integral_mono ((integrable_finset_sum _ hi).const_mul (2 / (N.totient : ℝ))) hright hb
+  have h := integral_mono ((MeasureTheory.integrable_finsetSum _ hi).const_mul (2 / (N.totient : ℝ))) hright hb
   simp only [integral_const_mul, integral_univ_inv_one_add_sq] at h
   simpa only [integral_const_mul, mul_comm] using h
 
 lemma averagedLogDerivative_bound_of_polynomial (N : ℕ) [NeZero N]
     (hN : Even N) (hN4 : 4 ≤ N) (hGRH : GRH N)
-    (σ A L : ℝ) (hσ : 0 < σ) (hA : 0 ≤ A)
+    (σ A L : ℝ) (hσ : 0 < σ) (_hA : 0 ≤ A)
     (hlogi : Integrable (fun t : ℝ => Real.log ((N : ℝ) * (|t| + 2)) ^ 2 / (1 + t ^ 2)))
     (hloge : (∫ t : ℝ, Real.log ((N : ℝ) * (|t| + 2)) ^ 2 / (1 + t ^ 2)) ≤ L)
     (hpoint : ∀ χ ∈ oddCharacters N, ∀ t : ℝ,
@@ -167,7 +171,7 @@ lemma averagedLogDerivative_bound_of_polynomial (N : ℕ) [NeZero N]
           (‖smoothedDirichletPolynomial χ ((N : ℝ) / 2) (1 / 2 + line σ t)‖ -
             Real.log ((N : ℝ) * (|t| + 2))))
         nlinarith
-      convert div_le_div_of_nonneg_right hv (by positivity : 0 ≤ 1 + t ^ 2) using 1 <;> ring
+      convert div_le_div_of_nonneg_right hv (by positivity : 0 ≤ 1 + t ^ 2) using 1; ring
     have hi := integral_mono hgi ((hpi.add hlogi).const_mul (2 * A ^ 2)) hb
     rw [integral_const_mul] at hi
     simp only [Pi.add_apply] at hi
@@ -221,6 +225,6 @@ lemma reference_line_energy_of_pointwise (A : ℝ) (hA : 0 < A)
       _ = _ := by rw [mul_assoc, mul_comm (Real.log N ^ 2), he]; ring
   have hh := mul_le_mul_of_nonneg_left
     (add_le_add (mul_le_mul_of_nonneg_left hD Real.pi_pos.le) (le_refl (L * Real.log N ^ 2))) (show 0 ≤ 2 * A ^ 2 by positivity)
-  convert hh using 1 <;> ring
+  convert hh using 1; ring
 
 end ConditionalGoldbach

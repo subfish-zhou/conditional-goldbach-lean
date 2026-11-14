@@ -3,8 +3,8 @@
   "errors": [],
   "network": [],
   "source_hashes_match": true,
-  "input_sha256": "047182b7e956e4aad2ecfd1ca750b7227e1d64a5adbab39af5bd08e58b780ac4",
-  "html_sha256": "288cd60956d2f2de56873b357492422c7ac79cec1c375b21d762b33455fdbe65",
+  "input_sha256": "a90d1830f3031c71927b26f3d2f7cebe522cb9593b9a24f37ee74e4fdabf834a",
+  "html_sha256": "eae1dfaed19ec7b77e5e95bfcf44eb380811c9b33a84895962b69927d2657cd2",
   "initial_visible": 102,
   "original_counts": [
     "102",
@@ -17,7 +17,7 @@
   "source_exact": true,
   "closed_visible": 102,
   "dependencies_pending_visible": 0,
-  "added_visible": 1252,
-  "definitions_visible": 231,
+  "added_visible": 1284,
+  "definitions_visible": 235,
   "mobile_width": 390
 }

@@ -1,9 +1,14 @@
-import ConditionalGoldbach.Proofs.CharacterZerosCompact
-import ConditionalGoldbach.Proofs.CharacterGrowthFoundation
-import Mathlib.Analysis.Complex.JensenFormula
-import Mathlib.Data.Set.Card.Arithmetic
+module
+
+public import Mathlib.Order.Interval.Set.Nat
+public import ConditionalGoldbach.Proofs.CharacterZerosCompact
+public import ConditionalGoldbach.Proofs.CharacterGrowthFoundation
+public import Mathlib.Analysis.Complex.JensenFormula
+public import Mathlib.Data.Set.Card.Arithmetic
 
 /-! Jensen bounds with the same multiplicity index as the paper. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -85,12 +90,12 @@ lemma LFunction_zero_count_right_half_closed {d : ℕ} [NeZero d] (χ : Characte
     have hpoly := LFunction_polynomial_bound χ hχ z (by linarith)
     have hdiv : ‖z‖/z.re ≤ 4*‖z‖ := by
       have hh := div_le_div_of_nonneg_left (norm_nonneg z) (by norm_num : (0 : ℝ)<1/4) hzre
-      convert hh using 1 <;> ring
+      convert hh using 1; ring
     have hnorm := norm_add_le (z-c) c
     rw [sub_add_cancel, hzdist] at hnorm
     apply hpoly.trans
     have hn : 1+‖z‖/z.re ≤ 13*(|t|+2) := by linarith [abs_nonneg t]
-    convert mul_le_mul_of_nonneg_left hn (by linarith : (0 : ℝ)≤d) using 1 <;> ring
+    convert mul_le_mul_of_nonneg_left hn (by linarith : (0 : ℝ)≤d) using 1; ring
   have hzero : χ.LFunction c ≠ 0 := by intro he; rw [he,norm_zero] at hlower; norm_num at hlower
   have hJ := ha.sum_divisor_le (r := 8/3) (R := 11/4) (M := 13*(d : ℝ)*(|t|+2))
     (by norm_num) (by norm_num) (by nlinarith [abs_nonneg t]) hzero hbound

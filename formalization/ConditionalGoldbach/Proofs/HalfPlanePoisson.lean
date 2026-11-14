@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy
-import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
+module
+
+public import ConditionalGoldbach.Proofs.HalfPlaneWeightedCauchy
+public import ConditionalGoldbach.Proofs.SpectralPoissonConvolution
 
 /-! Poisson representation and the square majorant on a right half-plane. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1000000
 set_option autoImplicit false
@@ -38,7 +42,7 @@ lemma halfPlane_affine_cauchy (f : ℂ → ℂ)
       nlinarith [abs_nonneg v, abs_nonneg t, mul_nonneg (abs_nonneg t) (abs_nonneg v)]
     have hp := Real.rpow_le_rpow (by positivity) hv (by norm_num : (0 : ℝ) ≤ 1/2)
     rw [Real.mul_rpow (by positivity) (by positivity)] at hp
-    convert mul_le_mul_of_nonneg_left hp hC using 1 <;> ring) (by
+    convert mul_le_mul_of_nonneg_left hp hC using 1; ring) (by
     obtain ⟨R₀,B,hb⟩ := hb
     refine ⟨R₀/ℓ, B, ?_⟩
     intro z hz
@@ -142,7 +146,7 @@ lemma poissonKernelReal_weight_bound {ℓ : ℝ} (hℓ : 0 < ℓ) (t : ℝ) :
   have hh := div_le_div_of_nonneg_left (show 0 ≤ ℓ / Real.pi by positivity)
     (show 0 < (1+v^2)/A from div_pos (by positivity) (by dsimp [A]; positivity))
     ((div_le_iff₀ (by dsimp [A]; positivity : 0 < A)).mpr (by simpa only [mul_comm] using hv))
-  convert hh using 1 <;> field_simp <;> ring
+  convert hh using 1 <;> field_simp
 
 lemma poissonKernelReal_translate_integral {ℓ : ℝ} (hℓ : 0 < ℓ) (t : ℝ) :
     Integrable (fun v : ℝ => poissonKernelReal ℓ (t-v)) ∧
@@ -181,7 +185,7 @@ lemma halfPlane_poisson_square_bound (f : ℂ → ℂ)
         (hc.norm.pow 2)).aestronglyMeasurable
     · filter_upwards [] with v
       rw [Real.norm_eq_abs, abs_of_nonneg (by unfold poissonKernelReal; positivity)]
-      convert mul_le_mul_of_nonneg_right (hbound v) (sq_nonneg ‖f (line 0 v)‖) using 1 <;> ring
+      convert mul_le_mul_of_nonneg_right (hbound v) (sq_nonneg ‖f (line 0 v)‖) using 1; ring
   refine ⟨hi, ?_⟩
   rw [← hf]
   exact weighted_complex_square_mean_le (fun v => poissonKernelReal ℓ (t-v)) (fun v => f (line 0 v))

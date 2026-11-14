@@ -1,9 +1,14 @@
-import ConditionalGoldbach.Proofs.CharacterGrowthFoundation
-import ConditionalGoldbach.Proofs.CharacterZeroReflection
-import Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup
+module
+
+public import Mathlib.Analysis.Real.Pi.Bounds
+public import ConditionalGoldbach.Proofs.CharacterGrowthFoundation
+public import ConditionalGoldbach.Proofs.CharacterZeroReflection
+public import Mathlib.Analysis.SpecialFunctions.Gamma.BohrMollerup
 
 /-! Growth of completed Dirichlet L-functions on expanding disks, from Euler's Gamma integral
 and the primitive functional equation. -/
+public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

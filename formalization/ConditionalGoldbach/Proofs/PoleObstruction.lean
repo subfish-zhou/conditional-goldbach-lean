@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.PoleLowerBound
-import ConditionalGoldbach.Proofs.PoleSpectralObstruction
+module
+
+public import ConditionalGoldbach.Proofs.PoleLowerBound
+public import ConditionalGoldbach.Proofs.PoleSpectralObstruction
 
 /-! The paper's fixed-modulus obstruction, including its sharp leading constant. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped Topology

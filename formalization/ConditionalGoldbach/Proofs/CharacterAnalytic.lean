@@ -1,7 +1,13 @@
-import ConditionalGoldbach.Proofs.CharacterSeries
-import ConditionalGoldbach.Proofs.KernelAlgebra
+module
+
+public import Mathlib.Analysis.Meromorphic.Basic
+public import ConditionalGoldbach.Proofs.CharacterSeries
+public import ConditionalGoldbach.Proofs.KernelAlgebra
+import Mathlib.Analysis.Calculus.Deriv.Star
 
 /-! Global conjugation and meromorphy of the character kernel. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

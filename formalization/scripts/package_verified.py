@@ -9,7 +9,7 @@ from update_verification import AUDIT, read, require, validate_current_evidence
 workspace = ROOT.parent
 verification = read('verification.json')
 current = validate_current_evidence()
-require(verification['schema_version'] == 2, 'Run update_verification.py first')
+require(verification['schema_version'] == 3, 'Run update_verification.py first')
 for key in current:
     if key != 'generated_at_utc':
         require(verification[key] == current[key], f'Verification is stale: {key}')
@@ -34,7 +34,13 @@ add(ROOT, [
     'reference/progress-language-en.json', 'reference/audit-numerics-en.json', 'scripts/render_math.cjs',
     'progress-desktop.png', 'progress-mobile.png', 'progress-zh-desktop.png', 'progress-zh-mobile.png',
 ])
-add(workspace, ['README.md', 'README.zh.md', 'docs/dependencies.md', 'docs/dependencies.zh.md'])
+add(workspace, ['README.md', 'README.zh.md', 'docs/dependencies.md', 'docs/dependencies.zh.md',
+                'docs/quality-refactor.md', 'docs/quality-refactor.zh.md',
+                'docs/quality-refactor.json', 'docs/quality-baseline.tar.gz',
+                'docs/quality-before-build.log', 'docs/quality-after-build.log',
+                'docs/quality-convolution.md', 'docs/quality-convolution.zh.md',
+                'docs/quality-convolution.json', 'docs/quality-convolution-baseline.tar.gz',
+                'docs/imports.md', 'docs/imports.zh.md'])
 audit = ROOT / AUDIT
 add(audit, [
     'README.txt', 'README.zh.txt', 'package_audit.py', 'measure_build.py',

@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.HadamardLimit
-import ConditionalGoldbach.Proofs.CharacterGammaFactor
-import ConditionalGoldbach.Proofs.CharacterEulerCorrection
-import ConditionalGoldbach.Proofs.CharacterGrowth
+module
+
+public import ConditionalGoldbach.Proofs.HadamardLimit
+public import ConditionalGoldbach.Proofs.CharacterGammaFactor
+public import ConditionalGoldbach.Proofs.CharacterEulerCorrection
+public import ConditionalGoldbach.Proofs.CharacterGrowth
 
 /-! The paper's complete logarithmic-derivative expansion, with its primitive zeros and Euler corrections. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

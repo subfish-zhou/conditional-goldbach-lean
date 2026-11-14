@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.DensityConvergence
+module
+
+public import ConditionalGoldbach.Proofs.DensityConvergence
 
 /-! Multiplicative coefficients of the density Euler product. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff LSeries.notation
@@ -27,8 +31,7 @@ lemma oddPrimeFactors_mul_disjoint (N k : ℕ) (hN : 0 < N) (hk : 0 < k) :
   have hk0 := hk.ne'
   have hkN0 := (Nat.mul_pos hk hN).ne'
   ext p
-  simp only [Finset.mem_filter, Finset.mem_union, Nat.mem_primeFactors,
-    (Nat.mul_pos hk hN).ne', hk.ne', hN.ne', not_false_eq_true, and_true]
+  simp only [Finset.mem_filter, Finset.mem_union, Nat.mem_primeFactors]
   by_cases hp : p.Prime
   · rw [hp.dvd_mul]
     tauto

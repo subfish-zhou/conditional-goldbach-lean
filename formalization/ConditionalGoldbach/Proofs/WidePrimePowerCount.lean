@@ -1,5 +1,9 @@
-import ConditionalGoldbach.Proofs.WidePrimePairs
-import ConditionalGoldbach.Proofs.PrimePowerDouble
+module
+
+public import ConditionalGoldbach.Proofs.WidePrimePairs
+public import ConditionalGoldbach.Proofs.PrimePowerDouble
+
+public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000
@@ -56,9 +60,9 @@ lemma wideCorrelation_double_sum : (experimentN:ℝ)*wideCorrelation=
     by_cases h0 : 0<n
     · by_cases hN : n<experimentN
       · by_cases hc : Nat.Coprime (n*(experimentN-n)) experimentN
-        · simp only [h0,hN,hc,he,true_and,ite_true]
+        · simp only [h0,hN,he,true_and]
           rw [mul_assoc (mangoldt n*mangoldt (experimentN-n)),wideWeight_discrete_product he]
-          split_ifs <;> ring
+          split_ifs; ring
         · simp [hc]
       · have hnE : n=experimentN := by omega
         subst n
@@ -153,5 +157,12 @@ theorem proposition_B_1 :
   have he := unorderedWidePrimeMass_add_edge
   norm_num only [experimentN,Nat.cast_ofNat] at h ⊢
   linarith
+
+/-- The exact prime-pair count obtained by the two corrections in Proposition B.1. -/
+lemma unorderedPrimePairs_eq_corrected_wideCorrelation :
+    (unorderedPrimePairs : ℝ) =
+      (experimentN : ℝ) / 2 * wideCorrelation - primePowerCorrection / 2 + edgeCorrection := by
+  obtain ⟨_, _, _, _, hCount⟩ := proposition_B_1
+  exact hCount
 
 end ConditionalGoldbach

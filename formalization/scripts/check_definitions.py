@@ -3,30 +3,31 @@ Whitespace and comments between declarations are ignored; the actual declaration
 text, including hypotheses and body, must match the reviewed snapshot.
 """
 from pathlib import Path
+from project_sources import library_sources, source_declarations
 import re,json,hashlib
 ROOT=Path(__file__).resolve().parents[1]
 base=json.loads((ROOT/'reference/declarations.json').read_text())
-source_paths=[ROOT/'ConditionalGoldbach/BaseDefinitions.lean',ROOT/'ConditionalGoldbach/Definitions.lean']
-lines=[]
-for source in source_paths:
- if source.exists():lines.extend(source.read_text().splitlines()+['end'])
 command=re.compile(r'^(?:(?:noncomputable|private|protected|local)\s+)*(?:def|abbrev|theorem|lemma|structure|instance|namespace|end|open|attribute|set_option|section|import)\b')
 current={}
-for i,l in enumerate(lines):
- m=re.match(r'^(def|abbrev|structure)\s+(\w+)',l)
- if not m:continue
- j=i+1
- while j<len(lines) and not command.match(lines[j]):j+=1
- c=lines[i:j]
- while c and not c[-1].strip():c.pop()
- while c and (c[-1].startswith('--') or c[-1].rstrip().endswith('-/')):
-  if c[-1].startswith('--'):c.pop()
-  else:
-   k=next((k for k in range(len(c)-1,0,-1) if c[k].lstrip().startswith('/-')),None)
-   if k is None:break
-   c=c[:k]
+for source in library_sources():
+ lines=source.read_text().splitlines()
+ for declaration in source_declarations(source):
+  name=declaration['name'].removeprefix('ConditionalGoldbach.')
+  if name not in base or base[name]['kind']=='theorem':continue
+  assert name not in current, f'Duplicate reviewed definition {name}'
+  i=declaration['line']-1
+  j=i+1
+  while j<len(lines) and not command.match(lines[j]):j+=1
+  c=lines[i:j]
   while c and not c[-1].strip():c.pop()
- current[m[2]]='\n'.join(c)
+  while c and (c[-1].startswith('--') or c[-1].rstrip().endswith('-/')):
+   if c[-1].startswith('--'):c.pop()
+   else:
+    k=next((k for k in range(len(c)-1,0,-1) if c[k].lstrip().startswith('/-')),None)
+    if k is None:break
+    c=c[:k]
+   while c and not c[-1].strip():c.pop()
+  current[name]='\n'.join(c)
 normal=lambda s:re.sub(r'\s+','',s)
 rows=[]
 for n,r in base.items():

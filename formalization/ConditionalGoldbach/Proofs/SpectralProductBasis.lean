@@ -1,9 +1,15 @@
-import ConditionalGoldbach.Proofs.SpectralHilbertSchmidt
+module
+
+public import Mathlib.Analysis.InnerProductSpace.ProdL2
+
+public import ConditionalGoldbach.Proofs.SpectralHilbertSchmidt
+
+@[expose] public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
-open MeasureTheory Filter Set Complex InnerProductSpace
+open scoped BigOperators ComplexConjugate Topology
+open Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 variable {E F : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E] [CompleteSpace E]

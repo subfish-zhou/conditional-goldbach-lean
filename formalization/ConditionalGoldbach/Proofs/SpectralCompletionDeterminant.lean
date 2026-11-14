@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralCompletionChoice
-import ConditionalGoldbach.Proofs.SpectralCompletionIdentities
+module
+
+public import ConditionalGoldbach.Proofs.SpectralCompletionChoice
+public import ConditionalGoldbach.Proofs.SpectralCompletionIdentities
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -41,7 +45,7 @@ theorem proposition_6_1_square_determinant (N : ℕ) [NeZero N] (hN : Even N)
     positiveTrace (T.comp T) = ∑' j, eigenvalues T j ^ 2 ∧
     (∀ t : ℂ, Multipliable (fun j : ℕ => 1 - t * (eigenvalues T j : ℂ) ^ 2) ∧
       fredholmSquareDet T t = ∏' j : ℕ, (1 - t * (eigenvalues T j : ℂ) ^ 2)) := by
-  exact spectralSquare_determinant_spec _ (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  exact spectralSquare_determinant_spec _ (residualOperator_has_spectral_data N hN hlarge hGRH ha)
 
 theorem proposition_6_1 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10 < (N : ℝ))
     (hGRH : GRH N) (ha : alpha N < beta) :
@@ -56,7 +60,7 @@ theorem proposition_6_1 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10
       hsNorm (residualOperator ha N) ^ 2 ∧
     (∀ q : ℂ, spectralComplex N (residualOperator ha N) q =
       fredholmSquareDet (residualOperator ha N) (4 / spectralScale N ^ 2 * q * (1 - q))) := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   let d := Classical.choice hT
   refine ⟨spectralQuaternion_compactUniformLimit N _ hT,
     spectralQuaternion_intrinsicEntire N _ hT, spectralComplex_multipliable N _ hT,

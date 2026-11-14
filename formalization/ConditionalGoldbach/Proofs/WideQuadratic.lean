@@ -1,8 +1,11 @@
-import ConditionalGoldbach.Proofs.WideFunctional
-import ConditionalGoldbach.Proofs.FiniteQuadratic
-import ConditionalGoldbach.Proofs.HardyArithmeticTheorems
+module
+
+public import ConditionalGoldbach.Proofs.WideFunctional
+public import ConditionalGoldbach.Proofs.FiniteQuadratic
 
 /-! Exact recovery of the Appendix B wide-weight residual from the actual Hardy operator. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -16,7 +19,7 @@ lemma wide_quadratic_residual_integral (hGRH : GRH experimentN) (ha : alpha expe
           mellin (fun u => (wideCompanion u : ℂ)) z*residual experimentN s z)) := by
   apply finite_quadratic_residual_integral experimentN wideCompanion sigmaStar wide_sigmaStar_mem
     (by norm_num [sigmaStar]) wideRieszVector wideRieszVector_spec (residualOperator ha experimentN)
-  exact proposition_5_4_kernel_pairing experimentN (by norm_num [experimentN]) experimentN_large hGRH ha
+  exact proposition_5_4_kernel_pairing experimentN ⟨15015, rfl⟩ experimentN_large hGRH ha
 
 lemma proposition_B_4_of_scalar_identity (hGRH : GRH experimentN) (ha : alpha experimentN < beta)
     (hscalar : verticalMellin sigmaStar (fun s => verticalMellin sigmaStar (fun z =>

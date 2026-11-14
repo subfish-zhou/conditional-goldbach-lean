@@ -1,8 +1,14 @@
-import ConditionalGoldbach.Proofs.SpectralBasisExistence
+module
+
+public import Mathlib.Analysis.Normed.Operator.Compact.Basic
+public import Mathlib.Analysis.SpecialFunctions.Log.Summable
+public import ConditionalGoldbach.Proofs.SpectralBasisExistence
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

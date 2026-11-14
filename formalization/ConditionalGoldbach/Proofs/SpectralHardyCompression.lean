@@ -1,11 +1,15 @@
-import ConditionalGoldbach.Proofs.SpectralBoundaryBlocks
-import ConditionalGoldbach.Proofs.SpectralCompression
-import ConditionalGoldbach.Proofs.HardyKernelOperator
-import ConditionalGoldbach.Proofs.SpectralNormAttainment
+module
+
+public import ConditionalGoldbach.Proofs.SpectralBoundaryBlocks
+public import ConditionalGoldbach.Proofs.SpectralCompression
+public import ConditionalGoldbach.Proofs.HardyKernelOperator
+public import ConditionalGoldbach.Proofs.SpectralNormAttainment
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex InnerProductSpace
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

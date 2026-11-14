@@ -38,7 +38,6 @@ for group, filename, module in groups:
 assert len({r['actual'] for r in rows}) == len(rows)
 numeric = audit/'appendices/NumericCrossCheck.lean'
 if numeric.exists():
-    evidence=json.loads((audit/'appendices/numeric-verification.json').read_text())
     shutil.copy2(numeric, modules/'NumericCrossCheck.lean')
     frozen[str(numeric.relative_to(audit))]=hashlib.sha256(numeric.read_bytes()).hexdigest()
     bridge_modules.append('NumericCrossCheck')

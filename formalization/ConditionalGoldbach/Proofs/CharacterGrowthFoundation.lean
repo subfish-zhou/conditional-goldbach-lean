@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.LFunctionDomain
-import MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries
-import MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds
+module
+
+public import ConditionalGoldbach.Proofs.LFunctionDomain
+public import MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLConditionalValueSeries
+public import MathlibNt.AnalyticNumberTheory.DirichletL.DirichletLRightHalfPlaneBounds
 
 /-! Quantitative L-function bounds used by the zero-free disk estimate. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -51,7 +55,7 @@ lemma LFunction_sub_one_norm_bound {q : ℕ} [NeZero q] (χ : Character q)
   intro n
   have hn : 0 < n+2 := by omega
   have hnR : 0 < ((n+2 : ℕ) : ℝ) := by exact_mod_cast hn
-  simp only [LSeries.term, ne_of_gt hn, ite_false, norm_div, norm_mul, norm_inv,
+  simp only [LSeries.term, ne_of_gt hn, ite_false, norm_mul, norm_inv,
     Complex.norm_natCast_cpow_of_pos hn, Real.rpow_neg hnR.le, div_eq_mul_inv]
   exact mul_le_of_le_one_left (inv_nonneg.mpr (Real.rpow_nonneg hnR.le _)) (χ.norm_le_one _)
 

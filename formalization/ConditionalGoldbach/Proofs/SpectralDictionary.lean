@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralProducts
+module
+
+public import ConditionalGoldbach.Proofs.SpectralProducts
 
 /-! The zero--operator-norm dictionary is proved from explicit spectral data.
 No Hardy realization or GRH theorem is used in this module. -/
+public section
+
 set_option autoImplicit false
-open scoped BigOperators ComplexConjugate Topology ContDiff Quaternion
+open scoped BigOperators ComplexConjugate Topology Quaternion
 open MeasureTheory Filter Set Complex
 noncomputable section
 namespace ConditionalGoldbach

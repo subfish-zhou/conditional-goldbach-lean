@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.CharacterZeroCounting
-import ConditionalGoldbach.Proofs.CharacterZeroReflection
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroCounting
+public import ConditionalGoldbach.Proofs.CharacterZeroReflection
 
 /-! Uniform, unconditional local zero counting, including multiplicities and both half-strips. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology
@@ -76,7 +80,7 @@ theorem primitive_local_zero_count : ∃ C : ℝ, 0 < C ∧
   have hsum := zeroWindow_count_le_right_counts χ hχ hprim t
   have hleft' : (({p : ZeroIndex χ⁻¹ | 1/2 ≤ p.val.1.re ∧ -t-1 ≤ p.val.1.im ∧ p.val.1.im ≤ -t} : Set _).ncard : ℝ) ≤
       Real.log (26*(d : ℝ)*(|-t-1|+2))/D := by
-    convert hleft using 2 <;> congr 3 <;> ring
+    convert hleft using 2; congr 3; ring
   have hlog := logarithm_zero_count_bound d hd t
   have hr : Real.log (26*(d : ℝ)*(|t|+2)) ≤ 79*Real.log ((d : ℝ)*(|t|+2)) := by
     apply (Real.log_le_log (by positivity) _).trans hlog

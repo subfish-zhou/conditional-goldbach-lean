@@ -1,7 +1,11 @@
-import ConditionalGoldbach.Proofs.FiniteMellinProjection
-import ConditionalGoldbach.Proofs.WideWeight
+module
+
+public import ConditionalGoldbach.Proofs.FiniteMellinProjection
+public import ConditionalGoldbach.Proofs.WideWeight
 
 /-! Finite C6 model weights with arbitrary compact support strictly inside (0,1). -/
+@[expose] public section
+
 set_option autoImplicit false
 set_option maxHeartbeats 800000
 noncomputable section

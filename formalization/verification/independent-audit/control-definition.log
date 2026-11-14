@@ -1,8 +1,14 @@
+warning: goldbach: repository has local changes:
+  /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/comparator-project/.lake/packages/goldbach
 Resolving dependencies
 Building TexAuditComparator.ControlDefinitionChallenge
+warning: goldbach: repository has local changes:
+  /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/comparator-project/.lake/packages/goldbach
 Build completed successfully (2 jobs).
 Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, ComparatorControl.check, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from TexAuditComparator.ControlDefinitionChallenge
 Building TexAuditComparator.ControlDefinitionSolution
+warning: goldbach: repository has local changes:
+  /home/azureuser/Documents/Codex/2026-11-13/files-mentioned-by-the-user-liliugoldbach16/formalization/verification/independent-audit/comparator-project/.lake/packages/goldbach
 ⚠ [2/2] Replayed TexAuditComparator.ControlDefinitionSolution
 warning: TexAuditComparator/ControlDefinitionSolution.lean:2:15: Variable name `n` is not explicitly referenced.
 

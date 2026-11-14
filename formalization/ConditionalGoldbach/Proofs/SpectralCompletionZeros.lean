@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.SpectralCompletionUniform
+module
+
+public import ConditionalGoldbach.Proofs.SpectralCompletionUniform
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -27,7 +31,7 @@ theorem quaternion_critical_quadratic (q : Quaternion ℝ) (d : ℝ)
   · simp only [Quaternion.re_coe]
     rw [hre, hnorm, hcrit]
     ring
-  all_goals simp [hcrit, -Quaternion.coe_div, -Quaternion.coe_inv] <;> ring
+  all_goals simp [hcrit, -Quaternion.coe_div, -Quaternion.coe_inv]; ring
 
 theorem quaternion_quadratic_three_cases (q : Quaternion ℝ) (d : ℝ) (hd : 0 < d) :
     q * (1 - q) = ((d / 4 : ℝ) : Quaternion ℝ) ↔
@@ -102,7 +106,7 @@ theorem proposition_6_3_three_cases (N : ℕ) [NeZero N]
   have hparam := large_parameters hlarge
   have hNpos : 0 < (N : ℝ) := by exact_mod_cast (show 0 < N by omega)
   have hδ := spectralScale_pos N hNpos (singularSeries_pos N) hparam.2.1
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   rw [spectralQuaternion_eq_zero_iff N _ hT hδ.ne' q]
   apply exists_congr
   intro j

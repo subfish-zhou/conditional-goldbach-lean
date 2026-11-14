@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.MellinBasic
+module
+
+public import ConditionalGoldbach.Proofs.MellinBasic
 
 /-! Integration by parts for the compact Mellin test functions. -/
+@[expose] public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -184,7 +188,7 @@ lemma mellin_test_rapid_decay (f : ℝ → ℝ) (hf : ContDiff ℝ ∞ f)
       _ ≤ _ := mul_le_mul_of_nonneg_left (by linarith) (by positivity)
 
 theorem mellinWeight_uniform_decay (φ : ℝ → ℝ) (hφ : IsWeight φ)
-    (lo hi : ℝ) (hlohi : lo ≤ hi) :
+    (lo hi : ℝ) (_hlohi : lo ≤ hi) :
     ∃ C : ℝ, 0 < C ∧ ∀ σ ∈ Icc lo hi, ∀ t : ℝ,
       ‖mellinWeight φ (line σ t)‖ ≤ C * (1 + |t|)⁻¹ ^ 6 := by
   obtain ⟨C, hC, hb⟩ := mellin_test_rapid_decay (companion φ)

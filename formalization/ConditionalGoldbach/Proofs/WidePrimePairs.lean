@@ -1,4 +1,10 @@
-import ConditionalGoldbach.Proofs.WideWeight
+module
+
+public import Mathlib.Tactic.NormNum.Prime
+
+public import ConditionalGoldbach.Proofs.WideWeight
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000
@@ -8,7 +14,7 @@ open scoped BigOperators
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
 
-lemma experiment_prime_pair_ne {p q : ℕ} (hp : p.Prime) (hq : q.Prime)
+lemma experiment_prime_pair_ne {p q : ℕ} (hp : p.Prime) (_hq : q.Prime)
     (he : p+q=experimentN) : p≠q := by
   intro hh
   have hpv : p=15015 := by norm_num [experimentN] at he; omega

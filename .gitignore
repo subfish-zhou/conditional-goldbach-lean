@@ -16,6 +16,7 @@
 /formalization/*Check.lean
 /formalization/ConditionalGoldbach/**/*Check.lean
 /formalization/scripts/*.lean
+!/formalization/scripts/ProofAudit.lean
 /formalization/*.log
 /formalization/verification/spectral-final-axioms.log
 /formalization/verification/publication/declaration-audit/declaration-graph.json

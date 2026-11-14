@@ -6,6 +6,7 @@ This checks preservation of the complete reviewed theorem statements.
 """
 from pathlib import Path
 import json,subprocess
+
 ROOT=Path(__file__).resolve().parents[1];WORK=ROOT/'reference'
 source=(WORK/'Reviewed.lean').read_text().replace('ConditionalGoldbach','ReviewBaseline')
 source='import ConditionalGoldbach\n'+source
@@ -39,6 +40,7 @@ run_cmd do
   liftIO <| IO.FS.writeFile "__OUTPUT__" (Json.arr rows).pretty
 '''.replace('__NAMES__',checks.rstrip(',\n')).replace('__OUTPUT__',str(ROOT/'reviewed-types.json'))
 path=ROOT/'scripts/ReviewedTypes.lean';path.write_text(source+'\n'+script)
+(ROOT/'reviewed-types.json').unlink(missing_ok=True)
 with (ROOT/'reviewed-types.log').open('w') as log:
  p=subprocess.run(['lake','env','lean',str(path.relative_to(ROOT))],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
 if p.returncode:raise SystemExit('Type preservation check failed; see reviewed-types.log')

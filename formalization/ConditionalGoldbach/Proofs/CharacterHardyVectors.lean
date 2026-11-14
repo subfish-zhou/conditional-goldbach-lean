@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.HardyArithmeticTheorems
-import ConditionalGoldbach.Proofs.SpectralRankOneSeries
-import ConditionalGoldbach.Proofs.SpectralTraceBounds
+module
+
+public import ConditionalGoldbach.Proofs.HardyArithmeticTheorems
+public import ConditionalGoldbach.Proofs.SpectralRankOneSeries
+public import ConditionalGoldbach.Proofs.SpectralTraceBounds
 
 /-! Hardy representatives of the finitely many logarithmic derivatives in the Gram kernel. -/
+@[expose] public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 800000
 set_option autoImplicit false

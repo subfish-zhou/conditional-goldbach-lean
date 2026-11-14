@@ -1,11 +1,12 @@
-import ConditionalGoldbach.Proofs.Elementary
-import ConditionalGoldbach.Proofs.WeightNorm
-import ConditionalGoldbach.Proofs.SpectralAlgebra
-import ConditionalGoldbach.Proofs.DictionaryApplication
+module
+
+public import ConditionalGoldbach.Proofs.DictionaryApplication
 
 /-! Assembly of the audited main statements from the proved Hardy operator realization,
 exact quadratic identity, and spectral dictionary. The paper's GRH and spectral
 hypotheses remain explicit in the conclusions. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff
@@ -64,21 +65,23 @@ theorem theorem_1_1 (φ : ℝ → ℝ) (hφ : IsWeight φ) :
   let C : ℝ := A + 1
   have hC : 0 < C := by dsimp [C]; linarith
   refine ⟨C, hC, fun h hGRH hS => ?_⟩
+  obtain ⟨⟨hPositive, hGrowth, hWidth⟩, hZeroFree⟩ := hS
   have hbound : EvenEventually (fun N =>
       |goldbach N φ - weightMass φ * singularSeries N| ≤ C * singularSeries N / h N) := by
-    obtain ⟨k, hk⟩ := hGRH.and (hS.2.and (hS.1.2.2.and evenEventually_large))
+    obtain ⟨k, hk⟩ := hGRH.and (hZeroFree.and (hWidth.and evenEventually_large))
     refine ⟨k, fun N hNk he => ?_⟩
     rcases hk N hNk he with ⟨hG, hSpectral, hwidth, hlarge⟩
     rcases large_parameters hlarge with ⟨hN4, hlog, ha⟩
     have hNpos : 0 < N := by omega
     have hNR : 0 < (N : ℝ) := by exact_mod_cast hNpos
     let : NeZero N := ⟨ne_of_gt hNpos⟩
-    have hh : 0 < h N := hS.1.1 N he hN4
+    have hh : 0 < h N := hPositive N he hN4
     have hsing := singularSeries_pos N
     have hη : 0 < zeroFreeWidth N h := by unfold zeroFreeWidth; positivity
     have hηhalf : zeroFreeWidth N h < 1 / 2 := by linarith
-    have hnorm := ((theorem_6_1 N he hlarge hG ha).2.1
-      (zeroFreeWidth N h) hη hηhalf).1 (hSpectral hG inferInstance ha)
+    obtain ⟨_, zeroFree_iff, _⟩ := theorem_6_1 N he hlarge hG ha
+    have hnorm := (zeroFree_iff (zeroFreeWidth N h) hη hηhalf).mp
+      (hSpectral hG inferInstance ha)
     have hnorm' : ‖residualOperator ha N‖ ≤ singularSeries N / h N :=
       hnorm.trans (spectralScale_div_sqrt_width_le N h hNR hsing hlog hh hwidth)
     have herr : |goldbach N φ - weightMass φ * singularSeries N| ≤
@@ -93,7 +96,7 @@ theorem theorem_1_1 (φ : ℝ → ℝ) (hφ : IsWeight φ) :
         exact (div_pos hsing hh).le
   exact ⟨hbound, evenAsymptotic_of_error_bound (fun N => goldbach N φ)
     singularSeries h (weightMass φ) C (weightMass_pos hφ) hC singularSeries_pos
-      hS.1.2.1 hbound⟩
+      hGrowth hbound⟩
 
 theorem theorem_1_2 (φ : ℝ → ℝ) (hφ : IsWeight φ)
     (hGRH : EvenEventually GRH) (hR : HypothesisR) :
@@ -109,8 +112,8 @@ theorem theorem_1_2 (φ : ℝ → ℝ) (hφ : IsWeight φ)
   have hNpos : 0 < N := by omega
   have hNR : 0 < (N : ℝ) := by exact_mod_cast hNpos
   let : NeZero N := ⟨ne_of_gt hNpos⟩
-  have hnorm := (theorem_6_1 N he hlarge hG ha).1.1
-    (hSpectral hG inferInstance ha)
+  obtain ⟨spectralR_iff, _, _⟩ := theorem_6_1 N he hlarge hG ha
+  have hnorm := spectralR_iff.mp (hSpectral hG inferInstance ha)
   have herr : |goldbach N φ - weightMass φ * singularSeries N| ≤
       A * ‖residualOperator ha N‖ := by
     simpa only [A, abs_sub_comm] using theorem_7_1_uniform N he hlarge hG φ hφ ha

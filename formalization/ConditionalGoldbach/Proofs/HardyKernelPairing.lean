@@ -1,9 +1,14 @@
-import ConditionalGoldbach.Proofs.HardyEvaluation
-import ConditionalGoldbach.Proofs.HardyKernelOperator
+module
+
+public import ConditionalGoldbach.Definitions.Asymptotics
+public import ConditionalGoldbach.Proofs.HardyEvaluation
+public import ConditionalGoldbach.Proofs.HardyKernelOperator
 
 /-! Double evaluation of a represented Hermitian kernel.
 The Hardy membership and exact boundary traces of each column are explicit hypotheses:
 these are the analytic inputs required before double reproduction can be used. -/
+public section
+
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 400000
 set_option autoImplicit false

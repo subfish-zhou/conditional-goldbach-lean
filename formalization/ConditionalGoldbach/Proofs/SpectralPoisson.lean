@@ -1,8 +1,15 @@
-import ConditionalGoldbach.Definitions
+module
+
+public import ConditionalGoldbach.Definitions.Characters
+public import ConditionalGoldbach.Definitions.Hardy
+public import Mathlib.Analysis.Meromorphic.Basic
+public import Mathlib.Tactic.NormNum.RealSqrt
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable

@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.MellinCharacterShift
+module
+
+public import ConditionalGoldbach.Proofs.MellinCharacterShift
 
 /-! Both audited contour regimes for the character moment, including absolute convergence. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology ContDiff

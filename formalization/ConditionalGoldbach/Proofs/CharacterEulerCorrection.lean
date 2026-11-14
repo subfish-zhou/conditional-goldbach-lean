@@ -1,6 +1,10 @@
-import ConditionalGoldbach.Proofs.CharacterZeroReflection
+module
+
+public import ConditionalGoldbach.Proofs.CharacterZeroReflection
 
 /-! Exact finite Euler corrections between a character and its primitive conductor. -/
+public section
+
 set_option autoImplicit false
 noncomputable section
 open scoped BigOperators ComplexConjugate Topology

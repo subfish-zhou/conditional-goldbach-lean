@@ -1,8 +1,12 @@
-import ConditionalGoldbach.Proofs.SpectralConsequences
+module
+
+public import ConditionalGoldbach.Proofs.SpectralConsequences
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
@@ -24,7 +28,7 @@ theorem quaternion_algHom_map_conj (f : ℂ →ₐ[ℝ] Quaternion ℝ) (z : ℂ
     simp only [map_add, map_mul, hreal]
     rw [Quaternion.coe_mul_eq_smul]
   rw [hsplit (conj z), hsplit z]
-  simp [Quaternion.star_smul, hstar]
+  simp [hstar]
 
 /-- Complex conjugation commutes with the scalar spectral product. -/
 theorem spectralComplex_conj (N : ℕ) (T : H →L[ℂ] H)
@@ -69,7 +73,7 @@ theorem spectralQuaternion_real_ge_one (N : ℕ) (T : H →L[ℂ] H)
         simp [spectralPartialQuaternion, List.range_succ, List.foldl_append]
       rw [hrec, ih, Finset.prod_range_succ]
       simp only [← Quaternion.coe_one, ← Quaternion.coe_sub, ← Quaternion.coe_mul,
-        Quaternion.smul_coe, smul_eq_mul, mul_assoc]
+        Quaternion.smul_coe, mul_assoc]
   have ht := Quaternion.continuous_re.continuousAt.tendsto.comp
     (spectralPartialQuaternion_tendsto N T hT x)
   apply ge_of_tendsto' ht
@@ -85,7 +89,7 @@ theorem proposition_6_2 (N : ℕ) [NeZero N] (hN : Even N) (hlarge : Real.exp 10
     (∀ q, X (star q) = star (X q)) ∧ (∀ q, X (1 - star q) = star (X q)) ∧
     (∀ ξ, X (1 / 2 + ξ) = X (1 / 2 - ξ)) ∧
     (∀ x : ℝ, x ∉ Ioo 0 1 → 1 ≤ (X x).re) := by
-  have hT := (proposition_5_3 N hN hlarge hGRH ha).2.2.2.2.2.1
+  have hT := residualOperator_has_spectral_data N hN hlarge hGRH ha
   refine ⟨spectralQuaternion_zero N _, spectralQuaternion_one N _,
     spectralQuaternion_one_sub N _, spectralQuaternion_star N _ hT, ?_,
     spectralQuaternion_centered_even N _, spectralQuaternion_real_ge_one N _ hT⟩

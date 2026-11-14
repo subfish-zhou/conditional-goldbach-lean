@@ -1,9 +1,13 @@
-import ConditionalGoldbach.Proofs.SpectralPositiveFredholm
-import ConditionalGoldbach.Proofs.SpectralHilbertSchmidtCompact
+module
+
+public import ConditionalGoldbach.Proofs.SpectralPositiveFredholm
+public import ConditionalGoldbach.Proofs.SpectralHilbertSchmidtCompact
+
+public section
 
 set_option autoImplicit false
 noncomputable section
-open scoped BigOperators ComplexConjugate Topology ContDiff
+open scoped BigOperators ComplexConjugate Topology
 open MeasureTheory Filter Set Complex
 namespace ConditionalGoldbach
 attribute [local instance] Classical.propDecidable
